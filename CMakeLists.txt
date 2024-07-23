@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(mag_compensation)
+project(mic_compensation)
 
 set (CMAKE_CXX_STANDARD 14)
 
@@ -31,31 +31,31 @@ set(INSTALL_LIB "${INSTALL_DIR}/lib")
 set(CMAKE_INSTALL_PREFIX ${INSTALL_DIR})
 
 set(SRC_FILES
-    ./src/common/mag_logger.cc
-    ./src/common/mag_config.cc
-    ./src/mag_ins/mag_ins.cc
-    ./src/mag_ins/impl/mag_kf_gins.cc
-    ./src/mag_compensator/mag_compensator.cc
-    ./src/mag_compensator/observer/mag_state_logger.cc
+    ./src/common/mic_logger.cc
+    ./src/common/mic_config.cc
+    ./src/mic_ins/mic_ins.cc
+    ./src/mic_ins/impl/mic_kf_gins.cc
+    ./src/mic_compensator/mic_compensator.cc
+    ./src/mic_compensator/observer/mic_state_logger.cc
 )
 
 SET(DEPEND_LIBS kf-gins)
 
-add_library(mag_compensation STATIC
+add_library(mic_compensation STATIC
     ${SRC_FILES}
 )
-target_compile_options(mag_compensation PRIVATE -std=c++11)
-target_link_libraries(mag_compensation ${DEPEND_LIBS})
+target_compile_options(mic_compensation PRIVATE -std=c++11)
+target_link_libraries(mic_compensation ${DEPEND_LIBS})
 
-add_executable(mag_test test/test.cc)
-target_compile_options(mag_test PRIVATE -std=c++11)
-target_link_libraries(mag_test
-    mag_compensation -pthread
+add_executable(mic_test test/test.cc)
+target_compile_options(mic_test PRIVATE -std=c++11)
+target_link_libraries(mic_test
+    mic_compensation -pthread
 )
 
 install(
     TARGETS
-    mag_test
+    mic_test
     DESTINATION
     ${INSTALL_BIN}
 )
@@ -69,7 +69,7 @@ install(
 
 install(
     TARGETS
-    mag_compensation
+    mic_compensation
     DESTINATION
     ${INSTALL_LIB}
 )

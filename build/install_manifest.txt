@@ -1,3 +1,0 @@
-/home/disk/workspace/mag/install/bin/mag_test
-/home/disk/workspace/mag/install/etc/default_config.json
-/home/disk/workspace/mag/install/lib/libmag_compensation.a

@@ -1,5 +1,0 @@
-{
-    "log_level": 2,
-    "time_sync_tolerance": 0.02, //second
-    "data_remain_time": 60.0 //second
-}

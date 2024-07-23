@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmag_compensation.a CMakeFiles/mag_compensation.dir/src/common/mag_logger.cc.o CMakeFiles/mag_compensation.dir/src/common/mag_config.cc.o CMakeFiles/mag_compensation.dir/src/mag_ins/mag_ins.cc.o CMakeFiles/mag_compensation.dir/src/mag_ins/impl/mag_kf_gins.cc.o CMakeFiles/mag_compensation.dir/src/mag_compensator/mag_compensator.cc.o CMakeFiles/mag_compensation.dir/src/mag_compensator/observer/mag_state_logger.cc.o
-/usr/bin/ranlib libmag_compensation.a

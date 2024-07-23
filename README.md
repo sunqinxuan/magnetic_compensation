@@ -1,1 +1,1 @@
-# magnetic compensation
+# magnetic interference compensation

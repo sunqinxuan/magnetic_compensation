@@ -1,2 +1,0 @@
-/usr/bin/ar qc libkf-gins.a "CMakeFiles/kf-gins.dir/kf-gins/gi_engine.cpp.o" "CMakeFiles/kf-gins.dir/kf-gins/insmech.cpp.o"
-/usr/bin/ranlib libkf-gins.a
