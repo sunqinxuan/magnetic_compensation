@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmic_compensation.a  CMakeFiles/mic_compensation.dir/src/common/mic_logger.cc.o CMakeFiles/mic_compensation.dir/src/common/mic_config.cc.o CMakeFiles/mic_compensation.dir/src/mic_ins/mic_ins.cc.o CMakeFiles/mic_compensation.dir/src/mic_ins/impl/mic_kf_gins.cc.o CMakeFiles/mic_compensation.dir/src/mic_compensator/mic_compensator.cc.o CMakeFiles/mic_compensation.dir/src/mic_compensator/observer/mic_state_logger.cc.o
+/usr/bin/ranlib libmic_compensation.a
