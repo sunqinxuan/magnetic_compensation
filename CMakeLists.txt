@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(mic_compensation)
+project(magnetic_compensation)
 
 set (CMAKE_CXX_STANDARD 14)
 
@@ -41,16 +41,16 @@ set(SRC_FILES
 
 SET(DEPEND_LIBS kf-gins)
 
-add_library(mic_compensation STATIC
+add_library(magnetic_compensation STATIC
     ${SRC_FILES}
 )
-target_compile_options(mic_compensation PRIVATE -std=c++11)
-target_link_libraries(mic_compensation ${DEPEND_LIBS})
+target_compile_options(magnetic_compensation PRIVATE -std=c++11)
+target_link_libraries(magnetic_compensation ${DEPEND_LIBS})
 
 add_executable(mic_test test/test.cc)
 target_compile_options(mic_test PRIVATE -std=c++11)
 target_link_libraries(mic_test
-    mic_compensation -pthread
+    magnetic_compensation -pthread
 )
 
 install(
@@ -69,7 +69,7 @@ install(
 
 install(
     TARGETS
-    mic_compensation
+    magnetic_compensation
     DESTINATION
     ${INSTALL_LIB}
 )

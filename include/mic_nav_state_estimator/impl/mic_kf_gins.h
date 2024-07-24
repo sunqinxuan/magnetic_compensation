@@ -37,10 +37,10 @@ public:
 
 protected:
 
-    virtual mic_pose_t update_pose(
-        const mic_pose_t& last_pose,
-        const mic_ins_data_t& last_ins_data,
-        const mic_ins_data_t& curr_ins_data) override;
+    virtual mic_pva_t update_pose(
+        const mic_pva_t& last_pose,
+        const mic_imu_t& last_ins_data,
+        const mic_imu_t& curr_ins_data) override;
 };
 
 MIC_NAMESPACE_END

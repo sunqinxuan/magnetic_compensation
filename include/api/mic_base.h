@@ -53,7 +53,7 @@ namespace mic
     struct MicMagFlux
     {
         float64_t time_stamp; // TODO
-        vector_3f_t data;
+        vector_3f_t vector;
         float32_t confidence;
     };
     using mic_mag_flux_t = MicMagFlux;
@@ -61,7 +61,7 @@ namespace mic
     struct MicMagOP
     {
         float64_t time_stamp; // TODO
-        float32_t data;
+        float32_t value;
         float32_t confidence;
     };
     using mic_mag_op_t = MicMagOP;
@@ -76,12 +76,12 @@ namespace mic
     };
     using mic_imu_t = MicIMU;
 
-    struct MicPVA
+    struct MicNavState
     {
         vector_3f_t position;
         quaternionf_t attitude;
         vector_3f_t velocity;
     };
-    using mic_pva_t = MicPVA;
+    using mic_nav_state_t = MicNavState;
 }
 #endif

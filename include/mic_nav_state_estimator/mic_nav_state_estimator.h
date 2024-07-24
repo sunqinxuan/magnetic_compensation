@@ -19,53 +19,53 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#ifndef MIC_INTERNAL_NAVIGATION_SYSTEM
-#define MIC_INTERNAL_NAVIGATION_SYSTEM
+#ifndef MIC_NAVIGATION_SYSTEM
+#define MIC_NAVIGATION_SYSTEM
 
 #include "common/mic_prerequisite.h"
 #include "data_storer/mic_data_storer.h"
 
 MIC_NAMESPACE_START
 
-using mic_ins_data_storer_t =
-    mic_data_storer_t<mic_ins_data_t, mic_pose_t>;
+using mic_nav_state_storer_t =
+    mic_data_storer_t<mic_nav_state_t>;
 
-class MicIns;
-using mic_ins_t = MicIns;
-using mic_ins_unique_ptr = std::unique_ptr<MicIns>;
+class MicNavStateEstimator;
+using mic_nav_state_estimator_t = MicNavStateEstimator;
+using mic_nav_state_estimator_unique_ptr = std::unique_ptr<MicNavStateEstimator>;
 
-class MicIns
+class MicNavStateEstimator
 {
 public:
-    MicIns() = default;
-    ~MicIns() = default;
+    MicNavStateEstimator() = default;
+    ~MicNavStateEstimator() = default;
 
-    mic_ins_data_storer_t& get_data();
+    mic_nav_state_storer_t& get_data();
 
     ret_t add_ins_data(
         const float64_t ts,
-        const mic_ins_data_t& ins_data);
+        const mic_imu_t& ins_data);
 
     ret_t set_pose(
         const float64_t ts,
-        const mic_pose_t& pose);
+        const mic_nav_state_t& pose);
 
     ret_t get_pose(
         const float64_t ts,
-        mic_pose_t& pose);
+        mic_nav_state_t& pose);
 
 protected:
 
-    virtual mic_pose_t update_pose(
-        const mic_pose_t& last_pose,
-        const mic_ins_data_t& last_ins_data,
-        const mic_ins_data_t& curr_ins_data) = 0;
+    virtual mic_nav_state_t update_pose(
+        const mic_nav_state_t& last_pose,
+        const mic_imu_t& last_ins_data,
+        const mic_imu_t& curr_ins_data) = 0;
 
     float64_t _time_stamp;
-    mic_pose_t _curr_pose;
+    mic_nav_state_t _curr_pose;
 
     /* data */
-    mic_ins_data_storer_t _data_storer;
+    mic_nav_state_storer_t _data_storer;
 };
 
 MIC_NAMESPACE_END

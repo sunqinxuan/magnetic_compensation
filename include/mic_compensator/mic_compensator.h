@@ -29,8 +29,8 @@
 
 MIC_NAMESPACE_START
 
-using mic_measure_storer_t =
-    mic_data_storer_t<mic_measure_vector_t, mic_measure_value_t>;
+using mic_mag_storer_t =
+    mic_data_storer_t<mic_mag_flux_t, mic_mag_op_t>;
 
 class MicCompensator;
 using mic_compensator_t = MicCompensator;
@@ -50,7 +50,7 @@ public:
     MicCompensator();
     ~MicCompensator();
 
-    mic_measure_storer_t& get_data();
+    mic_mag_storer_t& get_data();
     mic_ins_t& get_ins();
 
     ret_t calibrate();
@@ -64,7 +64,7 @@ protected:
     void init_ins();
 
     /* data processor*/
-    mic_measure_storer_t _data_storer;
+    mic_mag_storer_t _data_storer;
     /* state */
     mic_compensator_state_t _state;
     /* ins */

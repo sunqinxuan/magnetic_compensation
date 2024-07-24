@@ -28,16 +28,16 @@ MIC_NAMESPACE_START
 using pva_t = PVA;
 using imu_t = IMU;
 
-static mic_pose_t pva_to_mic_pose(const pva_t& pva)
+static mic_pva_t pva_to_mic_pva(const pva_t& pva)
 {
-    mic_pose_t pose;
+    mic_pva_t pose;
     pose.attitude = pva.att.qbn.cast<float32_t>();
     pose.position = pva.pos.cast<float32_t>();
     pose.velocity = pva.vel.cast<float32_t>();
     return pose;
 }
 
-static pva_t mic_pose_to_pva(const mic_pose_t& pose)
+static pva_t mic_pva_to_pva(const mic_pva_t& pose)
 {
     pva_t pva;
     pva.att.qbn = pose.attitude.cast<float64_t>();
@@ -49,9 +49,9 @@ static pva_t mic_pose_to_pva(const mic_pose_t& pose)
     return pva;
 }
 
-// static mic_ins_data_t imu_to_mic_ins_data(const imu_t& imu)
+// static mic_imu_t imu_to_mic_ins_data(const imu_t& imu)
 // {
-//     mic_ins_data_t data;
+//     mic_imu_t data;
 //     data.time_stamp = imu.time;
 //     data.acc = imu.dvel.cast<float32_t>();
 //     data.acc_bias = vector_3f_t::Zero();
@@ -60,7 +60,7 @@ static pva_t mic_pose_to_pva(const mic_pose_t& pose)
 //     return data;
 // }
 
-static imu_t mic_ins_data_to_imu(const mic_ins_data_t& ins_data)
+static imu_t mic_imu_to_imu(const mic_imu_t& ins_data)
 {
     imu_t imu;
     imu.dt = 0.;
@@ -71,17 +71,17 @@ static imu_t mic_ins_data_to_imu(const mic_ins_data_t& ins_data)
     return imu;
 }
 
-mic_pose_t MicKalmanFilterGlobalIns::update_pose(
-    const mic_pose_t& last_pose,
-    const mic_ins_data_t& last_ins_data,
-    const mic_ins_data_t& curr_ins_data)
+mic_pva_t MicKalmanFilterGlobalIns::update_pose(
+    const mic_pva_t& last_pose,
+    const mic_imu_t& last_ins_data,
+    const mic_imu_t& curr_ins_data)
 {
-    pva_t pva = mic_pose_to_pva(last_pose);
+    pva_t pva = mic_pva_to_pva(last_pose);
     pva_t curr_pva = pva;
-    imu_t last_imu = mic_ins_data_to_imu(last_ins_data);
-    imu_t curr_imu = mic_ins_data_to_imu(curr_ins_data);
+    imu_t last_imu = mic_imu_to_imu(last_ins_data);
+    imu_t curr_imu = mic_imu_to_imu(curr_ins_data);
     INSMech::insMech(pva, curr_pva, last_imu, curr_imu);
-    return pva_to_mic_pose(curr_pva);
+    return pva_to_mic_pva(curr_pva);
 }
 
 MIC_NAMESPACE_END

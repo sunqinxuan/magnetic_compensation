@@ -40,7 +40,7 @@ void MicCompensator::init_ins()
     _ins = std::make_unique<mic_kf_gins_t>();
 }
 
-mic_measure_storer_t& MicCompensator::get_data()
+mic_mag_storer_t& MicCompensator::get_data()
 {
     return _data_storer;
 }
