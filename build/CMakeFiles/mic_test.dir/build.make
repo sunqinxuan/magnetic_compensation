@@ -79,7 +79,7 @@ mic_test_EXTERNAL_OBJECTS =
 
 mic_test: CMakeFiles/mic_test.dir/test/test.cc.o
 mic_test: CMakeFiles/mic_test.dir/build.make
-mic_test: libmic_compensation.a
+mic_test: libmagnetic_compensation.a
 mic_test: 3rd_party/kf-gins/libkf-gins.a
 mic_test: CMakeFiles/mic_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sun/magnetic_compensation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mic_test"

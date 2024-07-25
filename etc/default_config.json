@@ -1,5 +1,5 @@
 {
     "log_level": 2, // 0: no log; 1: basic; 2: debug
-    "time_sync_tolerance": 0.02, //second
-    "data_remain_time": 60.0 //second
+    "time_sync_tolerance": 0.05, //second
+    "data_remain_time": 10000.0 //second
 }

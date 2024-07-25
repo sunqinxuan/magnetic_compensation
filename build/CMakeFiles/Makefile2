@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/sun/magnetic_compensation/build
 
 # The main recursive "all" target.
 all: CMakeFiles/mic_test.dir/all
-all: CMakeFiles/mic_compensation.dir/all
+all: CMakeFiles/magnetic_compensation.dir/all
 all: 3rd_party/kf-gins/all
 
 .PHONY : all
@@ -66,7 +66,7 @@ preinstall: 3rd_party/kf-gins/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/mic_test.dir/clean
-clean: CMakeFiles/mic_compensation.dir/clean
+clean: CMakeFiles/magnetic_compensation.dir/clean
 clean: 3rd_party/kf-gins/clean
 
 .PHONY : clean
@@ -93,7 +93,7 @@ clean: 3rd_party/kf-gins/clean
 # Target rules for target CMakeFiles/mic_test.dir
 
 # All Build rule for target.
-CMakeFiles/mic_test.dir/all: CMakeFiles/mic_compensation.dir/all
+CMakeFiles/mic_test.dir/all: CMakeFiles/magnetic_compensation.dir/all
 CMakeFiles/mic_test.dir/all: 3rd_party/kf-gins/CMakeFiles/kf-gins.dir/all
 	$(MAKE) -f CMakeFiles/mic_test.dir/build.make CMakeFiles/mic_test.dir/depend
 	$(MAKE) -f CMakeFiles/mic_test.dir/build.make CMakeFiles/mic_test.dir/build
@@ -118,31 +118,31 @@ CMakeFiles/mic_test.dir/clean:
 .PHONY : CMakeFiles/mic_test.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/mic_compensation.dir
+# Target rules for target CMakeFiles/magnetic_compensation.dir
 
 # All Build rule for target.
-CMakeFiles/mic_compensation.dir/all: 3rd_party/kf-gins/CMakeFiles/kf-gins.dir/all
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/depend
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun/magnetic_compensation/build/CMakeFiles --progress-num=4,5,6,7,8,9,10 "Built target mic_compensation"
-.PHONY : CMakeFiles/mic_compensation.dir/all
+CMakeFiles/magnetic_compensation.dir/all: 3rd_party/kf-gins/CMakeFiles/kf-gins.dir/all
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/depend
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun/magnetic_compensation/build/CMakeFiles --progress-num=4,5,6,7,8,9,10 "Built target magnetic_compensation"
+.PHONY : CMakeFiles/magnetic_compensation.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/mic_compensation.dir/rule: cmake_check_build_system
+CMakeFiles/magnetic_compensation.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sun/magnetic_compensation/build/CMakeFiles 10
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mic_compensation.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/magnetic_compensation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sun/magnetic_compensation/build/CMakeFiles 0
-.PHONY : CMakeFiles/mic_compensation.dir/rule
+.PHONY : CMakeFiles/magnetic_compensation.dir/rule
 
 # Convenience name for target.
-mic_compensation: CMakeFiles/mic_compensation.dir/rule
+magnetic_compensation: CMakeFiles/magnetic_compensation.dir/rule
 
-.PHONY : mic_compensation
+.PHONY : magnetic_compensation
 
 # clean rule for target.
-CMakeFiles/mic_compensation.dir/clean:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/clean
-.PHONY : CMakeFiles/mic_compensation.dir/clean
+CMakeFiles/magnetic_compensation.dir/clean:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/clean
+.PHONY : CMakeFiles/magnetic_compensation.dir/clean
 
 #=============================================================================
 # Target rules for target 3rd_party/kf-gins/CMakeFiles/kf-gins.dir

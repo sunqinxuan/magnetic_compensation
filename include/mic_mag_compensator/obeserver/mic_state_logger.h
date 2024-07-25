@@ -19,13 +19,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#include "mic_compensator/obeserver/mic_state_logger.h"
+#ifndef MIC_STATE_LOGGER
+#define MIC_STATE_LOGGER
+
+#include "common/mic_utils.h"
+
+#include "mic_mag_compensator/mic_mag_compensator.h"
 
 MIC_NAMESPACE_START
 
-void MicStateLogger::update(mic_compensator_t& comp)
+class MicStateLogger;
+using mic_state_logger_t = class MicStateLogger;
+
+class MicStateLogger : public MicObserver<MicMagCompensator>
 {
-    MIC_LOG_BASIC_INFO("output state!");
-}
+public:
+    MicStateLogger() = default;
+    ~MicStateLogger() = default;
+
+    virtual void update(mic_mag_compensator_t& comp) override;
+
+};
 
 MIC_NAMESPACE_END
+
+#endif

@@ -18,7 +18,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/sun/magnetic_compensation/build/CMakeFiles/mic_compensation.dir/DependInfo.cmake"
+  "/home/sun/magnetic_compensation/build/CMakeFiles/magnetic_compensation.dir/DependInfo.cmake"
   "/home/sun/magnetic_compensation/build/3rd_party/kf-gins/CMakeFiles/kf-gins.dir/DependInfo.cmake"
   )
 

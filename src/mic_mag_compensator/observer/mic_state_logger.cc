@@ -19,31 +19,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#ifndef MIC_KF_GLOBAL_INTERNAL_NAVIGATION_SYSTEM
-#define MIC_KF_GLOBAL_INTERNAL_NAVIGATION_SYSTEM
-
-#include "mic_nav_state_estimator/mic_nav_state_estimator.h"
+#include "mic_mag_compensator/obeserver/mic_state_logger.h"
 
 MIC_NAMESPACE_START
 
-class MicKalmanFilterGlobalIns;
-using mic_kf_gins_t = MicKalmanFilterGlobalIns;
-
-class MicKalmanFilterGlobalIns : public MicIns
+void MicStateLogger::update(mic_mag_compensator_t &comp)
 {
-public:
-    MicKalmanFilterGlobalIns() = default;
-    virtual ~MicKalmanFilterGlobalIns() = default;
+    MIC_LOG_BASIC_INFO("output state!");
 
-protected:
+    float64_t ts = comp.get_curr_time();
+    mic_mag_storer_t data_storer = comp.get_data_storer();
 
-    virtual mic_pva_t update_pose(
-        const mic_pva_t& last_pose,
-        const mic_imu_t& last_ins_data,
-        const mic_imu_t& curr_ins_data) override;
-};
+    char_t char_array[50];
+    sprintf(char_array, "current time: %f", ts);
+
+    // MIC_LOG_BASIC_INFO("current time: ", ts);
+    MIC_LOG_BASIC_INFO(char_array);
+}
 
 MIC_NAMESPACE_END
-
-#endif
-

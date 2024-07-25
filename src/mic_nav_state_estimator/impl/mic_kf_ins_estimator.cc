@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#include "mic_nav_state_estimator/impl/mic_kf_gins.h"
+#include "mic_nav_state_estimator/impl/mic_kf_ins_estimator.h"
 #include "kf-gins/insmech.h"
 #include "common/rotation.h"
 
@@ -28,16 +28,16 @@ MIC_NAMESPACE_START
 using pva_t = PVA;
 using imu_t = IMU;
 
-static mic_pva_t pva_to_mic_pva(const pva_t& pva)
+static mic_nav_state_t pva_to_mic_nav_state(const pva_t &pva)
 {
-    mic_pva_t pose;
+    mic_nav_state_t pose;
     pose.attitude = pva.att.qbn.cast<float32_t>();
     pose.position = pva.pos.cast<float32_t>();
     pose.velocity = pva.vel.cast<float32_t>();
     return pose;
 }
 
-static pva_t mic_pva_to_pva(const mic_pva_t& pose)
+static pva_t mic_nav_state_to_pva(const mic_nav_state_t &pose)
 {
     pva_t pva;
     pva.att.qbn = pose.attitude.cast<float64_t>();
@@ -60,7 +60,7 @@ static pva_t mic_pva_to_pva(const mic_pva_t& pose)
 //     return data;
 // }
 
-static imu_t mic_imu_to_imu(const mic_imu_t& ins_data)
+static imu_t mic_imu_to_imu(const mic_imu_t &ins_data)
 {
     imu_t imu;
     imu.dt = 0.;
@@ -71,17 +71,34 @@ static imu_t mic_imu_to_imu(const mic_imu_t& ins_data)
     return imu;
 }
 
-mic_pva_t MicKalmanFilterGlobalIns::update_pose(
-    const mic_pva_t& last_pose,
-    const mic_imu_t& last_ins_data,
-    const mic_imu_t& curr_ins_data)
+ret_t MicKFINSEstimator::propagate(
+    const float64_t ts,
+    const mic_imu_t &imu_data,
+    mic_nav_state_t &nav_state)
 {
-    pva_t pva = mic_pva_to_pva(last_pose);
-    pva_t curr_pva = pva;
-    imu_t last_imu = mic_imu_to_imu(last_ins_data);
-    imu_t curr_imu = mic_imu_to_imu(curr_ins_data);
-    INSMech::insMech(pva, curr_pva, last_imu, curr_imu);
-    return pva_to_mic_pva(curr_pva);
+    ret_t ret = ret_t::MIC_RET_FAILED;
+
+    mic_nav_state_t curr_nav_state;
+    mic_imu_t curr_imu;
+
+    bool_t res_nav = _data_storer.get_data<mic_nav_state_t>(_curr_time_stamp, curr_nav_state);
+    bool_t res_imu = _data_storer.get_data<mic_imu_t>(_curr_time_stamp, curr_imu);
+
+    if (res_nav && res_imu)
+    {
+        pva_t pvapre = mic_nav_state_to_pva(curr_nav_state);
+        pva_t pvacur = mic_nav_state_to_pva(nav_state);
+        imu_t imupre = mic_imu_to_imu(curr_imu);
+        imu_t imucur = mic_imu_to_imu(imu_data);
+
+        INSMech::insMech(pvapre, pvacur, imupre, imucur);
+
+        nav_state = pva_to_mic_nav_state(pvacur);
+
+        ret = ret_t::MIC_RET_SUCCESSED;
+    }
+
+    return ret;
 }
 
 MIC_NAMESPACE_END

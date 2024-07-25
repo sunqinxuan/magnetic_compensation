@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/sun/magnetic_compensation/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -67,6 +79,17 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -100,29 +123,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -170,17 +170,17 @@ mic_test/fast:
 .PHONY : mic_test/fast
 
 #=============================================================================
-# Target rules for targets named mic_compensation
+# Target rules for targets named magnetic_compensation
 
 # Build rule for target.
-mic_compensation: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mic_compensation
-.PHONY : mic_compensation
+magnetic_compensation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 magnetic_compensation
+.PHONY : magnetic_compensation
 
 # fast build rule for target.
-mic_compensation/fast:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/build
-.PHONY : mic_compensation/fast
+magnetic_compensation/fast:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/build
+.PHONY : magnetic_compensation/fast
 
 #=============================================================================
 # Target rules for targets named kf-gins
@@ -201,7 +201,7 @@ src/common/mic_config.o: src/common/mic_config.cc.o
 
 # target to build an object file
 src/common/mic_config.cc.o:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/common/mic_config.cc.o
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/common/mic_config.cc.o
 .PHONY : src/common/mic_config.cc.o
 
 src/common/mic_config.i: src/common/mic_config.cc.i
@@ -210,7 +210,7 @@ src/common/mic_config.i: src/common/mic_config.cc.i
 
 # target to preprocess a source file
 src/common/mic_config.cc.i:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/common/mic_config.cc.i
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/common/mic_config.cc.i
 .PHONY : src/common/mic_config.cc.i
 
 src/common/mic_config.s: src/common/mic_config.cc.s
@@ -219,7 +219,7 @@ src/common/mic_config.s: src/common/mic_config.cc.s
 
 # target to generate assembly for a file
 src/common/mic_config.cc.s:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/common/mic_config.cc.s
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/common/mic_config.cc.s
 .PHONY : src/common/mic_config.cc.s
 
 src/common/mic_logger.o: src/common/mic_logger.cc.o
@@ -228,7 +228,7 @@ src/common/mic_logger.o: src/common/mic_logger.cc.o
 
 # target to build an object file
 src/common/mic_logger.cc.o:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/common/mic_logger.cc.o
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/common/mic_logger.cc.o
 .PHONY : src/common/mic_logger.cc.o
 
 src/common/mic_logger.i: src/common/mic_logger.cc.i
@@ -237,7 +237,7 @@ src/common/mic_logger.i: src/common/mic_logger.cc.i
 
 # target to preprocess a source file
 src/common/mic_logger.cc.i:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/common/mic_logger.cc.i
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/common/mic_logger.cc.i
 .PHONY : src/common/mic_logger.cc.i
 
 src/common/mic_logger.s: src/common/mic_logger.cc.s
@@ -246,116 +246,116 @@ src/common/mic_logger.s: src/common/mic_logger.cc.s
 
 # target to generate assembly for a file
 src/common/mic_logger.cc.s:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/common/mic_logger.cc.s
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/common/mic_logger.cc.s
 .PHONY : src/common/mic_logger.cc.s
 
-src/mic_compensator/mic_compensator.o: src/mic_compensator/mic_compensator.cc.o
+src/mic_mag_compensator/mic_mag_compensator.o: src/mic_mag_compensator/mic_mag_compensator.cc.o
 
-.PHONY : src/mic_compensator/mic_compensator.o
-
-# target to build an object file
-src/mic_compensator/mic_compensator.cc.o:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_compensator/mic_compensator.cc.o
-.PHONY : src/mic_compensator/mic_compensator.cc.o
-
-src/mic_compensator/mic_compensator.i: src/mic_compensator/mic_compensator.cc.i
-
-.PHONY : src/mic_compensator/mic_compensator.i
-
-# target to preprocess a source file
-src/mic_compensator/mic_compensator.cc.i:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_compensator/mic_compensator.cc.i
-.PHONY : src/mic_compensator/mic_compensator.cc.i
-
-src/mic_compensator/mic_compensator.s: src/mic_compensator/mic_compensator.cc.s
-
-.PHONY : src/mic_compensator/mic_compensator.s
-
-# target to generate assembly for a file
-src/mic_compensator/mic_compensator.cc.s:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_compensator/mic_compensator.cc.s
-.PHONY : src/mic_compensator/mic_compensator.cc.s
-
-src/mic_compensator/observer/mic_state_logger.o: src/mic_compensator/observer/mic_state_logger.cc.o
-
-.PHONY : src/mic_compensator/observer/mic_state_logger.o
+.PHONY : src/mic_mag_compensator/mic_mag_compensator.o
 
 # target to build an object file
-src/mic_compensator/observer/mic_state_logger.cc.o:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_compensator/observer/mic_state_logger.cc.o
-.PHONY : src/mic_compensator/observer/mic_state_logger.cc.o
+src/mic_mag_compensator/mic_mag_compensator.cc.o:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/mic_mag_compensator.cc.o
+.PHONY : src/mic_mag_compensator/mic_mag_compensator.cc.o
 
-src/mic_compensator/observer/mic_state_logger.i: src/mic_compensator/observer/mic_state_logger.cc.i
+src/mic_mag_compensator/mic_mag_compensator.i: src/mic_mag_compensator/mic_mag_compensator.cc.i
 
-.PHONY : src/mic_compensator/observer/mic_state_logger.i
+.PHONY : src/mic_mag_compensator/mic_mag_compensator.i
 
 # target to preprocess a source file
-src/mic_compensator/observer/mic_state_logger.cc.i:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_compensator/observer/mic_state_logger.cc.i
-.PHONY : src/mic_compensator/observer/mic_state_logger.cc.i
+src/mic_mag_compensator/mic_mag_compensator.cc.i:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/mic_mag_compensator.cc.i
+.PHONY : src/mic_mag_compensator/mic_mag_compensator.cc.i
 
-src/mic_compensator/observer/mic_state_logger.s: src/mic_compensator/observer/mic_state_logger.cc.s
+src/mic_mag_compensator/mic_mag_compensator.s: src/mic_mag_compensator/mic_mag_compensator.cc.s
 
-.PHONY : src/mic_compensator/observer/mic_state_logger.s
+.PHONY : src/mic_mag_compensator/mic_mag_compensator.s
 
 # target to generate assembly for a file
-src/mic_compensator/observer/mic_state_logger.cc.s:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_compensator/observer/mic_state_logger.cc.s
-.PHONY : src/mic_compensator/observer/mic_state_logger.cc.s
+src/mic_mag_compensator/mic_mag_compensator.cc.s:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/mic_mag_compensator.cc.s
+.PHONY : src/mic_mag_compensator/mic_mag_compensator.cc.s
 
-src/mic_ins/impl/mic_kf_gins.o: src/mic_ins/impl/mic_kf_gins.cc.o
+src/mic_mag_compensator/observer/mic_state_logger.o: src/mic_mag_compensator/observer/mic_state_logger.cc.o
 
-.PHONY : src/mic_ins/impl/mic_kf_gins.o
+.PHONY : src/mic_mag_compensator/observer/mic_state_logger.o
 
 # target to build an object file
-src/mic_ins/impl/mic_kf_gins.cc.o:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_ins/impl/mic_kf_gins.cc.o
-.PHONY : src/mic_ins/impl/mic_kf_gins.cc.o
+src/mic_mag_compensator/observer/mic_state_logger.cc.o:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/observer/mic_state_logger.cc.o
+.PHONY : src/mic_mag_compensator/observer/mic_state_logger.cc.o
 
-src/mic_ins/impl/mic_kf_gins.i: src/mic_ins/impl/mic_kf_gins.cc.i
+src/mic_mag_compensator/observer/mic_state_logger.i: src/mic_mag_compensator/observer/mic_state_logger.cc.i
 
-.PHONY : src/mic_ins/impl/mic_kf_gins.i
+.PHONY : src/mic_mag_compensator/observer/mic_state_logger.i
 
 # target to preprocess a source file
-src/mic_ins/impl/mic_kf_gins.cc.i:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_ins/impl/mic_kf_gins.cc.i
-.PHONY : src/mic_ins/impl/mic_kf_gins.cc.i
+src/mic_mag_compensator/observer/mic_state_logger.cc.i:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/observer/mic_state_logger.cc.i
+.PHONY : src/mic_mag_compensator/observer/mic_state_logger.cc.i
 
-src/mic_ins/impl/mic_kf_gins.s: src/mic_ins/impl/mic_kf_gins.cc.s
+src/mic_mag_compensator/observer/mic_state_logger.s: src/mic_mag_compensator/observer/mic_state_logger.cc.s
 
-.PHONY : src/mic_ins/impl/mic_kf_gins.s
+.PHONY : src/mic_mag_compensator/observer/mic_state_logger.s
 
 # target to generate assembly for a file
-src/mic_ins/impl/mic_kf_gins.cc.s:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_ins/impl/mic_kf_gins.cc.s
-.PHONY : src/mic_ins/impl/mic_kf_gins.cc.s
+src/mic_mag_compensator/observer/mic_state_logger.cc.s:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/observer/mic_state_logger.cc.s
+.PHONY : src/mic_mag_compensator/observer/mic_state_logger.cc.s
 
-src/mic_ins/mic_ins.o: src/mic_ins/mic_ins.cc.o
+src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.o: src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.o
 
-.PHONY : src/mic_ins/mic_ins.o
+.PHONY : src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.o
 
 # target to build an object file
-src/mic_ins/mic_ins.cc.o:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_ins/mic_ins.cc.o
-.PHONY : src/mic_ins/mic_ins.cc.o
+src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.o:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.o
+.PHONY : src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.o
 
-src/mic_ins/mic_ins.i: src/mic_ins/mic_ins.cc.i
+src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.i: src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.i
 
-.PHONY : src/mic_ins/mic_ins.i
+.PHONY : src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.i
 
 # target to preprocess a source file
-src/mic_ins/mic_ins.cc.i:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_ins/mic_ins.cc.i
-.PHONY : src/mic_ins/mic_ins.cc.i
+src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.i:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.i
+.PHONY : src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.i
 
-src/mic_ins/mic_ins.s: src/mic_ins/mic_ins.cc.s
+src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.s: src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.s
 
-.PHONY : src/mic_ins/mic_ins.s
+.PHONY : src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.s
 
 # target to generate assembly for a file
-src/mic_ins/mic_ins.cc.s:
-	$(MAKE) -f CMakeFiles/mic_compensation.dir/build.make CMakeFiles/mic_compensation.dir/src/mic_ins/mic_ins.cc.s
-.PHONY : src/mic_ins/mic_ins.cc.s
+src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.s:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.s
+.PHONY : src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.s
+
+src/mic_nav_state_estimator/mic_nav_state_estimator.o: src/mic_nav_state_estimator/mic_nav_state_estimator.cc.o
+
+.PHONY : src/mic_nav_state_estimator/mic_nav_state_estimator.o
+
+# target to build an object file
+src/mic_nav_state_estimator/mic_nav_state_estimator.cc.o:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_nav_state_estimator/mic_nav_state_estimator.cc.o
+.PHONY : src/mic_nav_state_estimator/mic_nav_state_estimator.cc.o
+
+src/mic_nav_state_estimator/mic_nav_state_estimator.i: src/mic_nav_state_estimator/mic_nav_state_estimator.cc.i
+
+.PHONY : src/mic_nav_state_estimator/mic_nav_state_estimator.i
+
+# target to preprocess a source file
+src/mic_nav_state_estimator/mic_nav_state_estimator.cc.i:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_nav_state_estimator/mic_nav_state_estimator.cc.i
+.PHONY : src/mic_nav_state_estimator/mic_nav_state_estimator.cc.i
+
+src/mic_nav_state_estimator/mic_nav_state_estimator.s: src/mic_nav_state_estimator/mic_nav_state_estimator.cc.s
+
+.PHONY : src/mic_nav_state_estimator/mic_nav_state_estimator.s
+
+# target to generate assembly for a file
+src/mic_nav_state_estimator/mic_nav_state_estimator.cc.s:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_nav_state_estimator/mic_nav_state_estimator.cc.s
+.PHONY : src/mic_nav_state_estimator/mic_nav_state_estimator.cc.s
 
 test/test.o: test/test.cc.o
 
@@ -390,14 +390,14 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... mic_test"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... mic_test"
-	@echo "... install/strip"
-	@echo "... mic_compensation"
+	@echo "... magnetic_compensation"
 	@echo "... kf-gins"
 	@echo "... src/common/mic_config.o"
 	@echo "... src/common/mic_config.i"
@@ -405,18 +405,18 @@ help:
 	@echo "... src/common/mic_logger.o"
 	@echo "... src/common/mic_logger.i"
 	@echo "... src/common/mic_logger.s"
-	@echo "... src/mic_compensator/mic_compensator.o"
-	@echo "... src/mic_compensator/mic_compensator.i"
-	@echo "... src/mic_compensator/mic_compensator.s"
-	@echo "... src/mic_compensator/observer/mic_state_logger.o"
-	@echo "... src/mic_compensator/observer/mic_state_logger.i"
-	@echo "... src/mic_compensator/observer/mic_state_logger.s"
-	@echo "... src/mic_ins/impl/mic_kf_gins.o"
-	@echo "... src/mic_ins/impl/mic_kf_gins.i"
-	@echo "... src/mic_ins/impl/mic_kf_gins.s"
-	@echo "... src/mic_ins/mic_ins.o"
-	@echo "... src/mic_ins/mic_ins.i"
-	@echo "... src/mic_ins/mic_ins.s"
+	@echo "... src/mic_mag_compensator/mic_mag_compensator.o"
+	@echo "... src/mic_mag_compensator/mic_mag_compensator.i"
+	@echo "... src/mic_mag_compensator/mic_mag_compensator.s"
+	@echo "... src/mic_mag_compensator/observer/mic_state_logger.o"
+	@echo "... src/mic_mag_compensator/observer/mic_state_logger.i"
+	@echo "... src/mic_mag_compensator/observer/mic_state_logger.s"
+	@echo "... src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.o"
+	@echo "... src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.i"
+	@echo "... src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.s"
+	@echo "... src/mic_nav_state_estimator/mic_nav_state_estimator.o"
+	@echo "... src/mic_nav_state_estimator/mic_nav_state_estimator.i"
+	@echo "... src/mic_nav_state_estimator/mic_nav_state_estimator.s"
 	@echo "... test/test.o"
 	@echo "... test/test.i"
 	@echo "... test/test.s"

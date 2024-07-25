@@ -31,34 +31,51 @@ ret_t MicNavStateEstimator::add_imu_data(
     {
         return ret_t::MIC_RET_FAILED;
     }
-    _data_storer.add_data<mic_imu_t>(ts,imu_data);
-    
-    mic_imu_t last_imu_data;
-    bool_t res = _data_storer.get_data<mic_imu_t>(_curr_time_stamp, last_imu_data);
-    if (res)
+
+    mic_nav_state_t nav_state;
+    ret_t res = propagate(ts, imu_data, nav_state);
+
+    if (res == ret_t::MIC_RET_SUCCESSED)
     {
+        _data_storer.add_data<mic_imu_t>(ts, imu_data);
+        _data_storer.add_data<mic_nav_state_t>(ts, nav_state);
+
         _last_time_stamp = _curr_time_stamp;
         _curr_time_stamp = ts;
-        _curr_nav_state = update_nav_state();
     }
-    return ret_t::MIC_RET_SUCCESSED;
+
+    return res;
+
+    // mic_imu_t last_imu_data;
+    // bool_t res = _data_storer.get_data<mic_imu_t>(_last_time_stamp, last_imu_data);
+    // if (res)
+    // {
+    //     _curr_nav_state = update_nav_state();
+    // }
+    // return ret_t::MIC_RET_SUCCESSED;
 }
 
 ret_t MicNavStateEstimator::add_gnss_data(
     const float64_t ts,
     const mic_gnss_t &gnss_data)
 {
-    if (ts < _time_stamp)
-    {
-        return ret_t::MIC_RET_FAILED;
-    }
-    mic_imu_t last_imu_data;
-    bool_t res = _data_storer.get_data<mic_imu_t>(_time_stamp, last_imu_data);
-    if (res)
-    {
-        _curr_nav_state = update_nav_state();
-        _time_stamp = ts;
-    }
+    // TODO: 
+    // process gnss data;
+    // update();
+
+    /*     if (ts < _curr_time_stamp)
+        {
+            return ret_t::MIC_RET_FAILED;
+        }
+        mic_imu_t last_imu_data;
+        bool_t res = _data_storer.get_data<mic_imu_t>(_time_stamp, last_imu_data);
+        if (res)
+        {
+            _curr_nav_state = update_nav_state();
+            _time_stamp = ts;
+        } */
+
+    _data_storer.add_data<mic_gnss_t>(ts, gnss_data);
     return ret_t::MIC_RET_SUCCESSED;
 }
 
@@ -67,13 +84,13 @@ ret_t MicNavStateEstimator::set_nav_state(
     const mic_nav_state_t &nav_state)
 {
     ret_t ret = ret_t::MIC_RET_FAILED;
-    if (ts > _time_stamp)
+    if (ts > _curr_time_stamp)
     {
-        _time_stamp = ts;
-        _curr_nav_state = nav_state;
+        _data_storer.add_data<mic_nav_state_t>(ts, nav_state);
+        _last_time_stamp = _curr_time_stamp;
+        _curr_time_stamp = ts;
         ret = ret_t::MIC_RET_SUCCESSED;
     }
-    _data_storer.add_data<mic_nav_state_t>(ts, nav_state);
     return ret;
 }
 

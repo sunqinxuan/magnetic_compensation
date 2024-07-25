@@ -42,8 +42,6 @@ public:
 
     // mic_nav_state_storer_t& get_data();
 
-    ret_t updata_nav_state();
-
     ret_t add_imu_data(
         const float64_t ts,
         const mic_imu_t &imu_data);
@@ -61,12 +59,18 @@ public:
         mic_nav_state_t &nav_state);
 
 protected:
-    virtual mic_nav_state_t propagate() = 0;
-    virtual mic_nav_state_t update() = 0;
+    /* propagate from _curr_time_stamp to ts; */
+    virtual ret_t propagate(
+        const float64_t ts,
+        const mic_imu_t &imu_data,
+        mic_nav_state_t &nav_state) = 0;
+
+    // TODO:
+    // virtual mic_nav_state_t update() = 0;
 
     float64_t _curr_time_stamp;
     float64_t _last_time_stamp;
-    mic_nav_state_t _curr_nav_state;
+    // mic_nav_state_t _curr_nav_state;
 
     /* data */
     mic_nav_state_storer_t _data_storer;

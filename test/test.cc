@@ -4,41 +4,65 @@
 #include "common/mic_logger.h"
 #include "common/mic_config.h"
 #include "data_storer/mic_data_storer.h"
-#include "mic_compensator/mic_compensator.h"
-#include "mic_compensator/obeserver/mic_state_logger.h"
+#include "mic_mag_compensator/mic_mag_compensator.h"
+#include "mic_mag_compensator/obeserver/mic_state_logger.h"
 
 USING_NAMESPACE_MIC;
 
 int main(int argc, char *argv[])
 {
+    mic_logger_t::initialize(mic_logger_type_t::MIC_BASH_FILE_LOGGER, "./mic.log");
+    mic_config_t::initialize(mic_config_type_t::MIC_CONFIG_JSON,
+                             "../etc/default_config.json");
+    mic_logger_t::set_log_level(
+        static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
 
-    return 0;
-}
+    std::string filename = "output.txt";
+    if (argc != 1)
+        filename = argv[1];
 
-ret_t loadMITData(const std::string &filename)
-{
     std::ifstream infile(filename);
     if (!infile.is_open())
     {
         std::cerr << "Error: Could not open file " << filename << std::endl;
-        return ret_t::MIC_RET_FAILED;
+        return -1;
     }
 
-    // Variable to hold each line of the file
-    std::string line;
-
-    // Read the file line by line
-    while (std::getline(infile, line))
+    float64_t line, ts, flux_x, flux_y, flux_z, ins_pitch, ins_roll, ins_yaw;
+    mic_mag_flux_t mag_flux;
+    mic_nav_state_t nav_state;
+    // std::ofstream fp("debug.txt");
+    mic_mag_compensator_t mag_compensator;
+    auto comp_logger = std::make_shared<mic_state_logger_t>();
+    mag_compensator.subscrible(comp_logger);
+    while (true)
     {
-        // Process each line (e.g., print it to the console)
-        std::cout << line << std::endl;
+        infile >> line >> ts >> flux_x >> flux_y >> flux_z >> ins_pitch >> ins_roll >> ins_yaw;
+        if (infile.eof())
+            break;
+        if (line < 1002.10)
+        {
+            nav_state.time_stamp = ts;
+            nav_state.attitude = quaternionf_t(MicUtils::euler2dcm(ins_roll, ins_pitch, ins_yaw));
+            mag_flux.time_stamp = ts;
+            mag_flux.vector << flux_x, flux_y, flux_z;
+
+            mag_compensator.add_mag_flux(ts, mag_flux);
+            mag_compensator.get_nav_state_estimator().set_nav_state(ts, nav_state);
+        }
+
+        // fp << std::fixed << line << "\t" << ts << "\t"
+        //    << flux_x << "\t" << flux_y << "\t"
+        //    << flux_z << "\t" << ins_pitch << "\t"
+        //    << ins_roll << "\t" << ins_yaw << "\t"
+        //    << std::endl;
     }
-
-    // Close the file stream
     infile.close();
+    // fp.close();
 
-    // Inform the user that reading is complete
-    std::cout << "Finished reading from file " << filename << std::endl;
+    mag_compensator.calibrate();
+
+    return 0;
 }
 
 int main1()
@@ -74,13 +98,13 @@ int main1()
     std::cout << "res: " << res << std::endl;
     std::cout << "f: " << f << " i: " << i << " str: " << str << std::endl;
 
-    mic_compensator_t comp;
+    mic_mag_compensator_t comp;
     auto comp_logger = std::make_shared<mic_state_logger_t>();
     comp.subscrible(comp_logger);
 
     for (size_t i = 0; i < 100; i++)
     {
-        comp.compenste();
+        // comp.compenste();
     }
 
     return 0;

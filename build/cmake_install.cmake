@@ -75,14 +75,14 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/sun/magnetic_compensation/install/lib/libmic_compensation.a")
+   "/home/sun/magnetic_compensation/install/lib/libmagnetic_compensation.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/sun/magnetic_compensation/install/lib" TYPE STATIC_LIBRARY FILES "/home/sun/magnetic_compensation/build/libmic_compensation.a")
+file(INSTALL DESTINATION "/home/sun/magnetic_compensation/install/lib" TYPE STATIC_LIBRARY FILES "/home/sun/magnetic_compensation/build/libmagnetic_compensation.a")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

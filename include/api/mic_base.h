@@ -33,6 +33,7 @@ namespace mic
     using char_t = char;
     using vector_3f_t = Eigen::Vector3f;
     using quaternionf_t = Eigen::Quaternionf;
+    using matrix_3f_t = Eigen::Matrix3f;
 
     enum MicBool
     {

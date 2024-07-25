@@ -119,6 +119,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/mic_test.dir/DependInfo.cmake"
-  "CMakeFiles/mic_compensation.dir/DependInfo.cmake"
+  "CMakeFiles/magnetic_compensation.dir/DependInfo.cmake"
   "3rd_party/kf-gins/CMakeFiles/kf-gins.dir/DependInfo.cmake"
   )

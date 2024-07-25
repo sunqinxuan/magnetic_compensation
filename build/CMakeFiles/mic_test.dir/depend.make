@@ -199,8 +199,8 @@ CMakeFiles/mic_test.dir/test/test.cc.o: ../include/common/mic_logger.h
 CMakeFiles/mic_test.dir/test/test.cc.o: ../include/common/mic_prerequisite.h
 CMakeFiles/mic_test.dir/test/test.cc.o: ../include/common/mic_utils.h
 CMakeFiles/mic_test.dir/test/test.cc.o: ../include/data_storer/mic_data_storer.h
-CMakeFiles/mic_test.dir/test/test.cc.o: ../include/mic_compensator/mic_compensator.h
-CMakeFiles/mic_test.dir/test/test.cc.o: ../include/mic_compensator/obeserver/mic_state_logger.h
-CMakeFiles/mic_test.dir/test/test.cc.o: ../include/mic_ins/mic_ins.h
+CMakeFiles/mic_test.dir/test/test.cc.o: ../include/mic_mag_compensator/mic_mag_compensator.h
+CMakeFiles/mic_test.dir/test/test.cc.o: ../include/mic_mag_compensator/obeserver/mic_state_logger.h
+CMakeFiles/mic_test.dir/test/test.cc.o: ../include/mic_nav_state_estimator/mic_nav_state_estimator.h
 CMakeFiles/mic_test.dir/test/test.cc.o: ../test/test.cc
 

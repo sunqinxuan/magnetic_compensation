@@ -33,10 +33,10 @@ set(CMAKE_INSTALL_PREFIX ${INSTALL_DIR})
 set(SRC_FILES
     ./src/common/mic_logger.cc
     ./src/common/mic_config.cc
-    ./src/mic_ins/mic_ins.cc
-    ./src/mic_ins/impl/mic_kf_gins.cc
-    ./src/mic_compensator/mic_compensator.cc
-    ./src/mic_compensator/observer/mic_state_logger.cc
+    ./src/mic_nav_state_estimator/mic_nav_state_estimator.cc
+    ./src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc
+    ./src/mic_mag_compensator/mic_mag_compensator.cc
+    ./src/mic_mag_compensator/observer/mic_state_logger.cc
 )
 
 SET(DEPEND_LIBS kf-gins)

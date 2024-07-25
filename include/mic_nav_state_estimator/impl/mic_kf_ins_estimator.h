@@ -19,26 +19,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#ifndef MIC_STATE_LOGGER
-#define MIC_STATE_LOGGER
+#ifndef MIC_KF_INTERNAL_NAVIGATION_SYSTEM
+#define MIC_KF_INTERNAL_NAVIGATION_SYSTEM
 
-#include "common/mic_utils.h"
-
-#include "mic_compensator/mic_compensator.h"
+#include "mic_nav_state_estimator/mic_nav_state_estimator.h"
 
 MIC_NAMESPACE_START
 
-class MicStateLogger;
-using mic_state_logger_t = class MicStateLogger;
+class MicKFINSEstimator;
+using mic_kf_ins_estimator_t = MicKFINSEstimator;
 
-class MicStateLogger : public MicObserver<MicCompensator>
+class MicKFINSEstimator : public MicNavStateEstimator
 {
 public:
-    MicStateLogger() = default;
-    ~MicStateLogger() = default;
+    MicKFINSEstimator() = default;
+    virtual ~MicKFINSEstimator() = default;
 
-    virtual void update(mic_compensator_t& comp) override;
-
+protected:
+    virtual ret_t propagate(
+        const float64_t ts,
+        const mic_imu_t &imu_data,
+        mic_nav_state_t &nav_state) override;
 };
 
 MIC_NAMESPACE_END

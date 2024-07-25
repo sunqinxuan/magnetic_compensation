@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=mic_compensation
+CMAKE_PROJECT_NAME:STATIC=magnetic_compensation
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -210,13 +210,13 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-mic_compensation_BINARY_DIR:STATIC=/home/sun/magnetic_compensation/build
+magnetic_compensation_BINARY_DIR:STATIC=/home/sun/magnetic_compensation/build
 
 //Dependencies for the target
-mic_compensation_LIB_DEPENDS:STATIC=general;kf-gins;
+magnetic_compensation_LIB_DEPENDS:STATIC=general;kf-gins;
 
 //Value Computed by CMake
-mic_compensation_SOURCE_DIR:STATIC=/home/sun/magnetic_compensation
+magnetic_compensation_SOURCE_DIR:STATIC=/home/sun/magnetic_compensation
 
 
 ########################
