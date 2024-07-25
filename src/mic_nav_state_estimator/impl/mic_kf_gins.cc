@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#include "mic_ins/impl/mic_kf_gins.h"
+#include "mic_nav_state_estimator/impl/mic_kf_gins.h"
 #include "kf-gins/insmech.h"
 #include "common/rotation.h"
 

@@ -28,7 +28,7 @@
 MIC_NAMESPACE_START
 
 using mic_nav_state_storer_t =
-    mic_data_storer_t<mic_nav_state_t>;
+    mic_data_storer_t<mic_nav_state_t, mic_imu_t, mic_gnss_t>;
 
 class MicNavStateEstimator;
 using mic_nav_state_estimator_t = MicNavStateEstimator;
@@ -40,29 +40,33 @@ public:
     MicNavStateEstimator() = default;
     ~MicNavStateEstimator() = default;
 
-    mic_nav_state_storer_t& get_data();
+    // mic_nav_state_storer_t& get_data();
 
-    ret_t add_ins_data(
-        const float64_t ts,
-        const mic_imu_t& ins_data);
+    ret_t updata_nav_state();
 
-    ret_t set_pose(
+    ret_t add_imu_data(
         const float64_t ts,
-        const mic_nav_state_t& pose);
+        const mic_imu_t &imu_data);
 
-    ret_t get_pose(
+    ret_t add_gnss_data(
         const float64_t ts,
-        mic_nav_state_t& pose);
+        const mic_gnss_t &gnss_data);
+
+    ret_t set_nav_state(
+        const float64_t ts,
+        const mic_nav_state_t &nav_state);
+
+    ret_t get_nav_state(
+        const float64_t ts,
+        mic_nav_state_t &nav_state);
 
 protected:
+    virtual mic_nav_state_t propagate() = 0;
+    virtual mic_nav_state_t update() = 0;
 
-    virtual mic_nav_state_t update_pose(
-        const mic_nav_state_t& last_pose,
-        const mic_imu_t& last_ins_data,
-        const mic_imu_t& curr_ins_data) = 0;
-
-    float64_t _time_stamp;
-    mic_nav_state_t _curr_pose;
+    float64_t _curr_time_stamp;
+    float64_t _last_time_stamp;
+    mic_nav_state_t _curr_nav_state;
 
     /* data */
     mic_nav_state_storer_t _data_storer;
@@ -71,4 +75,3 @@ protected:
 MIC_NAMESPACE_END
 
 #endif
-

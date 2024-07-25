@@ -22,7 +22,7 @@
 #ifndef MIC_KF_GLOBAL_INTERNAL_NAVIGATION_SYSTEM
 #define MIC_KF_GLOBAL_INTERNAL_NAVIGATION_SYSTEM
 
-#include "mic_ins/mic_ins.h"
+#include "mic_nav_state_estimator/mic_nav_state_estimator.h"
 
 MIC_NAMESPACE_START
 

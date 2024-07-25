@@ -9,10 +9,8 @@
 
 USING_NAMESPACE_MIC;
 
-
 int main(int argc, char *argv[])
 {
-
 
     return 0;
 }
@@ -20,7 +18,8 @@ int main(int argc, char *argv[])
 ret_t loadMITData(const std::string &filename)
 {
     std::ifstream infile(filename);
-    if (!infile.is_open()) {
+    if (!infile.is_open())
+    {
         std::cerr << "Error: Could not open file " << filename << std::endl;
         return ret_t::MIC_RET_FAILED;
     }
@@ -29,7 +28,8 @@ ret_t loadMITData(const std::string &filename)
     std::string line;
 
     // Read the file line by line
-    while (std::getline(infile, line)) {
+    while (std::getline(infile, line))
+    {
         // Process each line (e.g., print it to the console)
         std::cout << line << std::endl;
     }
@@ -85,4 +85,3 @@ int main1()
 
     return 0;
 }
-

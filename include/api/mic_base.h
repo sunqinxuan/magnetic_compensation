@@ -69,19 +69,38 @@ namespace mic
     struct MicIMU
     {
         float64_t time_stamp; // TODO
-        vector_3f_t gyr;
-        vector_3f_t acc;
-        vector_3f_t gyr_bias;
-        vector_3f_t acc_bias;
+        float64_t dt;
+        vector_3f_t gyr; // incremental angle (rad)
+        vector_3f_t acc; // incremental velocity (m/s)
     };
     using mic_imu_t = MicIMU;
 
+    struct MicIMUError
+    {
+        vector_3f_t gyr_bias;
+        vector_3f_t acc_bias;
+        vector_3f_t gyr_scale;
+        vector_3f_t acc_scale;
+    };
+    using mic_imu_error_t = MicIMUError;
+
+    struct MicGNSS
+    {
+        float64_t time_stamp; 
+        vector_3f_t lat_lon_alt; // (rad,rad,m)
+        vector_3f_t pos_std; // north-east-down (m)
+    };
+    using mic_gnss_t=MicGNSS;
+
     struct MicNavState
     {
+        float64_t time_stamp; // TODO
         vector_3f_t position;
         quaternionf_t attitude;
         vector_3f_t velocity;
+        mic_imu_error_t imu_error;
     };
     using mic_nav_state_t = MicNavState;
 }
+
 #endif
