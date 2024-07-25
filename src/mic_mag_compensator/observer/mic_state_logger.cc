@@ -30,11 +30,11 @@ void MicStateLogger::update(mic_mag_compensator_t &comp)
     float64_t ts = comp.get_curr_time();
     mic_mag_storer_t data_storer = comp.get_data_storer();
 
-    char_t char_array[50];
-    sprintf(char_array, "current time: %f", ts);
+    // char_t char_array[50];
+    // sprintf(char_array, "current time: %f", ts);
 
-    // MIC_LOG_BASIC_INFO("current time: ", ts);
-    MIC_LOG_BASIC_INFO(char_array);
+    MIC_LOG_BASIC_INFO("current time: %f", ts);
+    // MIC_LOG_BASIC_INFO(char_array);
 }
 
 MIC_NAMESPACE_END
