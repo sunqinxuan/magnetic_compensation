@@ -1400,6 +1400,10 @@ map
 type_traits
 -
 
+../include/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h
+mic_mag_compensator/mic_mag_compensator.h
+../include/mic_mag_compensator/impl/mic_mag_compensator/mic_mag_compensator.h
+
 ../include/mic_mag_compensator/mic_mag_compensator.h
 common/mic_prerequisite.h
 ../include/mic_mag_compensator/common/mic_prerequisite.h
@@ -1410,29 +1414,13 @@ data_storer/mic_data_storer.h
 mic_nav_state_estimator/mic_nav_state_estimator.h
 ../include/mic_mag_compensator/mic_nav_state_estimator/mic_nav_state_estimator.h
 
-../include/mic_mag_compensator/obeserver/mic_state_logger.h
-common/mic_utils.h
-../include/mic_mag_compensator/obeserver/common/mic_utils.h
-mic_mag_compensator/mic_mag_compensator.h
-../include/mic_mag_compensator/obeserver/mic_mag_compensator/mic_mag_compensator.h
-
-../include/mic_nav_state_estimator/impl/mic_kf_ins_estimator.h
-mic_nav_state_estimator/mic_nav_state_estimator.h
-../include/mic_nav_state_estimator/impl/mic_nav_state_estimator/mic_nav_state_estimator.h
-
 ../include/mic_nav_state_estimator/mic_nav_state_estimator.h
 common/mic_prerequisite.h
 ../include/mic_nav_state_estimator/common/mic_prerequisite.h
 data_storer/mic_data_storer.h
 ../include/mic_nav_state_estimator/data_storer/mic_data_storer.h
 
-/home/sun/magnetic_compensation/src/mic_mag_compensator/mic_mag_compensator.cc
-mic_mag_compensator/mic_mag_compensator.h
-/home/sun/magnetic_compensation/src/mic_mag_compensator/mic_mag_compensator/mic_mag_compensator.h
-mic_nav_state_estimator/impl/mic_kf_ins_estimator.h
-/home/sun/magnetic_compensation/src/mic_mag_compensator/mic_nav_state_estimator/impl/mic_kf_ins_estimator.h
-
-/home/sun/magnetic_compensation/src/mic_mag_compensator/observer/mic_state_logger.cc
-mic_mag_compensator/obeserver/mic_state_logger.h
-/home/sun/magnetic_compensation/src/mic_mag_compensator/observer/mic_mag_compensator/obeserver/mic_state_logger.h
+/home/sun/magnetic_compensation/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc
+mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h
+/home/sun/magnetic_compensation/src/mic_mag_compensator/impl/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h
 

@@ -6,6 +6,7 @@
 #include "data_storer/mic_data_storer.h"
 #include "mic_mag_compensator/mic_mag_compensator.h"
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
+#include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
 
 USING_NAMESPACE_MIC;
 
@@ -32,7 +33,7 @@ int main(int argc, char *argv[])
     mic_mag_flux_t mag_flux;
     mic_nav_state_t nav_state;
     // std::ofstream fp("debug.txt");
-    mic_mag_compensator_t mag_compensator;
+    mic_ellipsoid_mag_compensator_t mag_compensator;
     auto comp_logger = std::make_shared<mic_state_logger_t>();
     mag_compensator.subscrible(comp_logger);
     while (true)
@@ -98,9 +99,9 @@ int main1()
     std::cout << "res: " << res << std::endl;
     std::cout << "f: " << f << " i: " << i << " str: " << str << std::endl;
 
-    mic_mag_compensator_t comp;
-    auto comp_logger = std::make_shared<mic_state_logger_t>();
-    comp.subscrible(comp_logger);
+    // mic_mag_compensator_t comp;
+    // auto comp_logger = std::make_shared<mic_state_logger_t>();
+    // comp.subscrible(comp_logger);
 
     for (size_t i = 0; i < 100; i++)
     {

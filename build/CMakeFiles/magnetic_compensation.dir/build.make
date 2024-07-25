@@ -135,6 +135,19 @@ CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/observer/mic_state_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/observer/mic_state_logger.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sun/magnetic_compensation/src/mic_mag_compensator/observer/mic_state_logger.cc -o CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/observer/mic_state_logger.cc.s
 
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: CMakeFiles/magnetic_compensation.dir/flags.make
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sun/magnetic_compensation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o -c /home/sun/magnetic_compensation/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc
+
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sun/magnetic_compensation/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc > CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.i
+
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sun/magnetic_compensation/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc -o CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.s
+
 # Object files for target magnetic_compensation
 magnetic_compensation_OBJECTS = \
 "CMakeFiles/magnetic_compensation.dir/src/common/mic_logger.cc.o" \
@@ -142,7 +155,8 @@ magnetic_compensation_OBJECTS = \
 "CMakeFiles/magnetic_compensation.dir/src/mic_nav_state_estimator/mic_nav_state_estimator.cc.o" \
 "CMakeFiles/magnetic_compensation.dir/src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.o" \
 "CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/mic_mag_compensator.cc.o" \
-"CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/observer/mic_state_logger.cc.o"
+"CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/observer/mic_state_logger.cc.o" \
+"CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o"
 
 # External object files for target magnetic_compensation
 magnetic_compensation_EXTERNAL_OBJECTS =
@@ -153,9 +167,10 @@ libmagnetic_compensation.a: CMakeFiles/magnetic_compensation.dir/src/mic_nav_sta
 libmagnetic_compensation.a: CMakeFiles/magnetic_compensation.dir/src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.o
 libmagnetic_compensation.a: CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/mic_mag_compensator.cc.o
 libmagnetic_compensation.a: CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/observer/mic_state_logger.cc.o
+libmagnetic_compensation.a: CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o
 libmagnetic_compensation.a: CMakeFiles/magnetic_compensation.dir/build.make
 libmagnetic_compensation.a: CMakeFiles/magnetic_compensation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sun/magnetic_compensation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libmagnetic_compensation.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sun/magnetic_compensation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libmagnetic_compensation.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/magnetic_compensation.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/magnetic_compensation.dir/link.txt --verbose=$(VERBOSE)
 

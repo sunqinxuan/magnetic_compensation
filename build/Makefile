@@ -249,6 +249,33 @@ src/common/mic_logger.cc.s:
 	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/common/mic_logger.cc.s
 .PHONY : src/common/mic_logger.cc.s
 
+src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.o: src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o
+
+.PHONY : src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.o
+
+# target to build an object file
+src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o
+.PHONY : src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o
+
+src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.i: src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.i
+
+.PHONY : src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.i
+
+# target to preprocess a source file
+src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.i:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.i
+.PHONY : src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.i
+
+src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.s: src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.s
+
+.PHONY : src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.s
+
+# target to generate assembly for a file
+src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.s:
+	$(MAKE) -f CMakeFiles/magnetic_compensation.dir/build.make CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.s
+.PHONY : src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.s
+
 src/mic_mag_compensator/mic_mag_compensator.o: src/mic_mag_compensator/mic_mag_compensator.cc.o
 
 .PHONY : src/mic_mag_compensator/mic_mag_compensator.o
@@ -405,6 +432,9 @@ help:
 	@echo "... src/common/mic_logger.o"
 	@echo "... src/common/mic_logger.i"
 	@echo "... src/common/mic_logger.s"
+	@echo "... src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.o"
+	@echo "... src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.i"
+	@echo "... src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.s"
 	@echo "... src/mic_mag_compensator/mic_mag_compensator.o"
 	@echo "... src/mic_mag_compensator/mic_mag_compensator.i"
 	@echo "... src/mic_mag_compensator/mic_mag_compensator.s"

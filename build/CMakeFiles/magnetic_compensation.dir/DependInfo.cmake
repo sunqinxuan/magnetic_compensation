@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sun/magnetic_compensation/src/common/mic_config.cc" "/home/sun/magnetic_compensation/build/CMakeFiles/magnetic_compensation.dir/src/common/mic_config.cc.o"
   "/home/sun/magnetic_compensation/src/common/mic_logger.cc" "/home/sun/magnetic_compensation/build/CMakeFiles/magnetic_compensation.dir/src/common/mic_logger.cc.o"
+  "/home/sun/magnetic_compensation/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc" "/home/sun/magnetic_compensation/build/CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o"
   "/home/sun/magnetic_compensation/src/mic_mag_compensator/mic_mag_compensator.cc" "/home/sun/magnetic_compensation/build/CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/mic_mag_compensator.cc.o"
   "/home/sun/magnetic_compensation/src/mic_mag_compensator/observer/mic_state_logger.cc" "/home/sun/magnetic_compensation/build/CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/observer/mic_state_logger.cc.o"
   "/home/sun/magnetic_compensation/src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc" "/home/sun/magnetic_compensation/build/CMakeFiles/magnetic_compensation.dir/src/mic_nav_state_estimator/impl/mic_kf_ins_estimator.cc.o"

@@ -1400,6 +1400,10 @@ map
 type_traits
 -
 
+../include/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h
+mic_mag_compensator/mic_mag_compensator.h
+../include/mic_mag_compensator/impl/mic_mag_compensator/mic_mag_compensator.h
+
 ../include/mic_mag_compensator/mic_mag_compensator.h
 common/mic_prerequisite.h
 ../include/mic_mag_compensator/common/mic_prerequisite.h
@@ -1439,4 +1443,6 @@ mic_mag_compensator/mic_mag_compensator.h
 /home/sun/magnetic_compensation/test/mic_mag_compensator/mic_mag_compensator.h
 mic_mag_compensator/obeserver/mic_state_logger.h
 /home/sun/magnetic_compensation/test/mic_mag_compensator/obeserver/mic_state_logger.h
+mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h
+/home/sun/magnetic_compensation/test/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h
 

@@ -68,27 +68,6 @@ ret_t MicMagCompensator::add_mag_op(
     return ret_t::MIC_RET_SUCCESSED;
 }
 
-ret_t MicMagCompensator::calibrate()
-{
-    notify(*this);
-    auto data_range = _data_storer.get_data_range<mic_mag_flux_t>(0.0,_curr_time_stamp);
-    
-    // how to get all the mag data in _data_storer?
-
-    if (true) // judge data size
-    {
-        // calibration
-    }
-    return ret_t::MIC_RET_FAILED;
-}
-
-// ret_t MicMagCompensator::compenste()
-// {
-//     // for observer updating
-//     notify(*this);
-//     return ret_t::MIC_RET_FAILED;
-// }
-
 ret_t MicMagCompensator::serialize(json_t &node)
 {
     return ret_t::MIC_RET_FAILED;
