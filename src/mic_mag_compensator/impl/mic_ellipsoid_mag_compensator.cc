@@ -26,15 +26,19 @@ MIC_NAMESPACE_START
 ret_t MicEllipsoidMagCompensator::calibrate()
 {
     notify(*this);
-    auto data_range = _data_storer.get_data_range<mic_mag_flux_t>(0.0,_curr_time_stamp);
-    
-    // how to get all the mag data in _data_storer?
+    ret_t ret = ret_t::MIC_RET_FAILED;
 
-    if (true) // judge data size
+    auto data_range = _data_storer.get_data_range<mic_mag_flux_t>(0.0, _curr_time_stamp + 1);
+    auto it_start = data_range.first;
+    auto it_end = data_range.second;
+
+    for (auto it = it_start; it != it_end; ++it)
     {
-        // calibration
+        mic_mag_flux_t mag_flux = it->second;
     }
-    return ret_t::MIC_RET_FAILED;
+
+
+    return ret;
 }
 
 ret_t MicEllipsoidMagCompensator::compenste()
@@ -43,6 +47,5 @@ ret_t MicEllipsoidMagCompensator::compenste()
     notify(*this);
     return ret_t::MIC_RET_FAILED;
 }
-
 
 MIC_NAMESPACE_END

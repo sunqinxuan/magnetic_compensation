@@ -28,13 +28,19 @@ void MicStateLogger::update(mic_mag_compensator_t &comp)
     MIC_LOG_BASIC_INFO("output state!");
 
     float64_t ts = comp.get_curr_time();
+    // MIC_LOG_BASIC_INFO("current time: %f", ts);
+
     mic_mag_storer_t data_storer = comp.get_data_storer();
+    auto data_range = data_storer.get_data_range<mic_mag_flux_t>(0.0, ts);
+    auto it_start = data_range.first;
+    auto it_end = data_range.second;
 
-    // char_t char_array[50];
-    // sprintf(char_array, "current time: %f", ts);
-
-    MIC_LOG_BASIC_INFO("current time: %f", ts);
-    // MIC_LOG_BASIC_INFO(char_array);
+    for (auto it = it_start; it != it_end; ++it)
+    {
+        float64_t time = it->first;
+        mic_mag_flux_t mag_flux = it->second;
+        // MIC_LOG_BASIC_INFO("%f\t%f\t%f\t%f", time, mag_flux.vector(0), mag_flux.vector(1), mag_flux.vector(2));
+    }
 }
 
 MIC_NAMESPACE_END
