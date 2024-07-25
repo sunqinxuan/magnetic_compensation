@@ -1,3 +1,0 @@
-/home/sun/magnetic_compensation/install/bin/mic_test
-/home/sun/magnetic_compensation/install/etc/default_config.json
-/home/sun/magnetic_compensation/install/lib/libmic_compensation.a
