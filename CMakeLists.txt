@@ -65,7 +65,7 @@ set(SRC_FILES
     ./src/mic_mag_compensator/impl/mic_tl_mag_compensator.cc
 )
 
-SET(DEPEND_LIBS kf-gins ceres gomp lapack
+SET(DEPEND_LIBS tolles-lawson kf-gins ceres gomp lapack
     f77blas atlas cholmod spqr cxsparse
     gfortran amd camd colamd ccolamd glog gflags)
 
