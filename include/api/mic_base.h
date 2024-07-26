@@ -31,9 +31,9 @@ namespace mic
     using float64_t = double;
     using float32_t = float;
     using char_t = char;
-    using vector_3f_t = Eigen::Vector3f;
-    using quaternionf_t = Eigen::Quaternionf;
-    using matrix_3f_t = Eigen::Matrix3f;
+    using vector_3f_t = Eigen::Vector3d;
+    using quaternionf_t = Eigen::Quaterniond;
+    using matrix_3f_t = Eigen::Matrix3d;
 
     enum MicBool
     {
