@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
         infile >> line >> ts >> flux_x >> flux_y >> flux_z >> ins_pitch >> ins_roll >> ins_yaw;
         if (infile.eof())
             break;
-        if (line < 1002.10)
+        // if (line < 1002.10)
         {
             nav_state.time_stamp = ts;
             nav_state.attitude = quaternionf_t(MicUtils::euler2dcm(ins_roll, ins_pitch, ins_yaw));

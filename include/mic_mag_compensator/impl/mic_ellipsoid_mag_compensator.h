@@ -22,6 +22,7 @@
 #ifndef MIC_ELLIPSOID_MAG_COMPENSATOR
 #define MIC_ELLIPSOID_MAG_COMPENSATOR
 
+#include <Eigen/Eigenvalues>
 #include "mic_mag_compensator/mic_mag_compensator.h"
 
 MIC_NAMESPACE_START
@@ -39,6 +40,25 @@ public:
     virtual ret_t compenste() override;
 
 protected:
+    /* % Ellipsoid fitting algorithm
+    %
+    % Inputs:
+    %   x = nx1 column vector of x coordinates of input data.
+    %   y = nx1 column vector of y coordinates of input data.
+    %   z = nx1 column vector of y coordinates of input data.
+    %
+    % Output:
+    %   u = [a,b,c,f,g,h,p,q,r,d], a vector corresponding to coefficients of
+    %       the general quadric surface given by equation,
+    %       ax2 + by2 + cz2 + 2fyz + 2gxz + 2hxy + 2px + 2qy + 2rz + d = 0.
+    %
+    % Source:
+    %   [1] Li - Least Square Ellipsoid Fitting (2004) */
+    ret_t ellipsoid_fitting(
+        const std::vector<float32_t> &x,
+        const std::vector<float32_t> &y,
+        const std::vector<float32_t> &z,
+        std::vector<float32_t> &coeffs);
 };
 
 MIC_NAMESPACE_END

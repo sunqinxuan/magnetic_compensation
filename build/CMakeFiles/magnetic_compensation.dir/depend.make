@@ -398,6 +398,7 @@ CMakeFiles/magnetic_compensation.dir/src/common/mic_logger.cc.o: ../src/common/m
 
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/Cholesky
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/Core
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/Eigenvalues
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/Geometry
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/Householder
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/Jacobi
@@ -538,6 +539,20 @@ CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Core/util/ReenableStupidWarnings.h
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Core/util/StaticAssert.h
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Core/util/XprHelper.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/ComplexEigenSolver.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/ComplexSchur.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/ComplexSchur_LAPACKE.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/EigenSolver.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/HessenbergDecomposition.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/RealQZ.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/RealSchur.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/RealSchur_LAPACKE.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/SelfAdjointEigenSolver_LAPACKE.h
+CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Eigenvalues/Tridiagonalization.h
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Geometry/AlignedBox.h
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Geometry/AngleAxis.h
 CMakeFiles/magnetic_compensation.dir/src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc.o: ../3rd_party/eigen-3.3.9/Eigen/src/Geometry/EulerAngles.h
