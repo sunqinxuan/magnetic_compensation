@@ -23,12 +23,72 @@
 #define MIC_ELLIPSOID_MAG_COMPENSATOR
 
 #include <Eigen/Eigenvalues>
+#include <Eigen/Dense>
+#include <ceres/ceres.h>
 #include "mic_mag_compensator/mic_mag_compensator.h"
 
 MIC_NAMESPACE_START
 
 class MicEllipsoidMagCompensator;
 using mic_ellipsoid_mag_compensator_t = MicEllipsoidMagCompensator;
+
+class CostFunctionCreator
+{
+public:
+    CostFunctionCreator(const Eigen::Matrix3d &coeff_D_tilde_inv,
+                        const Eigen::Vector3d &coeff_o_hat,
+                        const Eigen::Matrix3d &orientation_r_c,
+                        const Eigen::Vector3d &mag_r,
+                        const Eigen::Vector3d &mag_c)
+        : coeff_D_tilde_inv_(coeff_D_tilde_inv), coeff_o_hat_(coeff_o_hat),
+          orientation_r_c_(orientation_r_c), mag_r_(mag_r), mag_c_(mag_c) {}
+
+    template <typename T>
+    bool operator()(const T *const quaternion, T *residual_ptr) const
+    {
+        // Eigen::Map<const Eigen::Matrix<T, 3, 1>> p_i(position_i);
+        // Eigen::Map<const Eigen::Quaternion<T>> q_i(orientation_i);
+        //
+        // Eigen::Map<const Eigen::Matrix<T, 3, 1>> p_j(position_j);
+        // Eigen::Map<const Eigen::Quaternion<T>> q_j(orientation_j);
+        //
+        // Eigen::Quaternion<T> q_i_inv = q_i.conjugate();
+        // Eigen::Quaternion<T> q_ij = q_i_inv * q_j;
+        // Eigen::Matrix<T, 3, 1> p_ij = q_i_inv * (p_j - p_i);
+        //
+        // Eigen::Quaternion<T> q_ij_meas(pose_ij_meas_.linear().template
+        // cast<T>()); Eigen::Quaternion<T> delta_q = q_ij_meas * q_ij.conjugate();
+        //
+        // Eigen::Map<Eigen::Matrix<T, 6, 1>> residual(residual_ptr);
+        // Eigen::Map<Eigen::Matrix<T, 3, 1>> residual_trs(residual_ptr);
+        // Eigen::Map<Eigen::Matrix<T, 3, 1>> residual_rot(residual_ptr + 3);
+        //
+        // residual_trs = p_ij - pose_ij_meas_.translation().template cast<T>();
+        // residual_rot = T(2.0) * delta_q.vec();
+        // residual.applyOnTheLeft(sqrt_information_.template cast<T>());
+
+        return true;
+    }
+
+    static ceres::CostFunction *Create(const Eigen::Matrix3d &coeff_D_tilde_inv,
+                                       const Eigen::Vector3d &coeff_o_hat,
+                                       const Eigen::Matrix3d &orientation_r_c,
+                                       const Eigen::Vector3d &mag_r,
+                                       const Eigen::Vector3d &mag_c)
+    {
+        return new ceres::AutoDiffCostFunction<CostFunctionCreator, 3, 4>(
+            new CostFunctionCreator(coeff_D_tilde_inv, coeff_o_hat, orientation_r_c,
+                                    mag_r, mag_c));
+    }
+
+    EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+
+private:
+    Eigen::Matrix3d coeff_D_tilde_inv_;
+    Eigen::Vector3d coeff_o_hat_;
+    Eigen::Matrix3d orientation_r_c_; // rotation from b_k (c) to b_k+1 (r);
+    Eigen::Vector3d mag_r_, mag_c_;
+};
 
 class MicEllipsoidMagCompensator : public MicMagCompensator
 {
@@ -55,10 +115,8 @@ protected:
      * Source:
      *   [1] Li - Least Square Ellipsoid Fitting (2004)
      * */
-    ret_t ellipsoid_fitting(
-        const std::vector<float64_t> &x,
-        const std::vector<float64_t> &y,
-        const std::vector<float64_t> &z,
+    ret_t ellipsoid_fit(
+        const std::vector<vector_3f_t> &mag,
         std::vector<float64_t> &coeffs);
 
     // computation of the compensation model coefficients;
@@ -67,6 +125,32 @@ protected:
         const float64_t mag_earth_intensity,
         matrix_3f_t &D_tilde_inv,
         vector_3f_t &o_hat);
+
+    /* ceres optimization of orthogonal matrix R=V*R^{mb};
+     * mag - magnetic measurements (from flux);
+     * R_nb - rotations from body frame to navigation frame (from ins);
+     * D_tilde_inv, o_hat - model coefficients;
+     * quat - the orthogonal matrix to be optimized R=V*R^{mb};
+     */
+    ret_t ceres_optimize(
+        const std::vector<vector_3f_t> &mag,
+        const std::vector<matrix_3f_t> &R_nb,
+        const matrix_3f_t &D_tilde_inv,
+        const vector_3f_t &o_hat,
+        quaternionf_t &quat);
+
+    // estimate initial value of orthogonal matrix R=V*R^{mb};
+    ret_t init_value_estimate(
+        const std::vector<vector_3f_t> &mag_m,
+        const std::vector<vector_3f_t> &mag_n,
+        const std::vector<matrix_3f_t> &R_nb,
+        const matrix_3f_t &D_tilde_inv,
+        const vector_3f_t &o_hat,
+        vector_3f_t &R_hat);
+
+protected:
+    matrix_3f_t _D_tilde_inv;
+    vector_3f_t _o_hat;
 };
 
 MIC_NAMESPACE_END

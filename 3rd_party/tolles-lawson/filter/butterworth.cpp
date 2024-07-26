@@ -2,7 +2,8 @@
 #include "filter/butterworth.hpp"
 
 vector<double> ComputeDenCoeffs(int FilterOrder, double Lcutoff,
-                                double Ucutoff) {
+                                double Ucutoff)
+{
   int k;                                   // loop variables
   double theta;                            // PI * (Ucutoff - Lcutoff) / 2.0
   double cp;                               // cosine of phi
@@ -25,7 +26,8 @@ vector<double> ComputeDenCoeffs(int FilterOrder, double Lcutoff,
   s2t = 2.0 * st * ct;       // sine of 2*theta
   c2t = 2.0 * ct * ct - 1.0; // cosine of 2*theta
 
-  for (k = 0; k < FilterOrder; ++k) {
+  for (k = 0; k < FilterOrder; ++k)
+  {
     PoleAngle = PI * (double)(2 * k + 1) / (double)(2 * FilterOrder);
     SinPoleAngle = sin(PoleAngle);
     CosPoleAngle = cos(PoleAngle);
@@ -50,7 +52,8 @@ vector<double> ComputeDenCoeffs(int FilterOrder, double Lcutoff,
 }
 
 vector<double> TrinomialMultiply(int FilterOrder, vector<double> b,
-                                 vector<double> c) {
+                                 vector<double> c)
+{
   int i, j;
   vector<double> RetVal(4 * FilterOrder);
 
@@ -59,13 +62,15 @@ vector<double> TrinomialMultiply(int FilterOrder, vector<double> b,
   RetVal[0] = b[0];
   RetVal[1] = b[1];
 
-  for (i = 1; i < FilterOrder; ++i) {
+  for (i = 1; i < FilterOrder; ++i)
+  {
     RetVal[2 * (2 * i + 1)] += c[2 * i] * RetVal[2 * (2 * i - 1)] -
                                c[2 * i + 1] * RetVal[2 * (2 * i - 1) + 1];
     RetVal[2 * (2 * i + 1) + 1] += c[2 * i] * RetVal[2 * (2 * i - 1) + 1] +
                                    c[2 * i + 1] * RetVal[2 * (2 * i - 1)];
 
-    for (j = 2 * i; j > 1; --j) {
+    for (j = 2 * i; j > 1; --j)
+    {
       RetVal[2 * j] += b[2 * i] * RetVal[2 * (j - 1)] -
                        b[2 * i + 1] * RetVal[2 * (j - 1) + 1] +
                        c[2 * i] * RetVal[2 * (j - 2)] -
@@ -86,7 +91,8 @@ vector<double> TrinomialMultiply(int FilterOrder, vector<double> b,
 }
 
 vector<double> ComputeNumCoeffs(int FilterOrder, double Lcutoff, double Ucutoff,
-                                vector<double> DenC) {
+                                vector<double> DenC)
+{
   vector<double> TCoeffs;
   vector<double> NumCoeffs(2 * FilterOrder + 1);
   vector<complex<double>> NormalizedKernel(2 * FilterOrder + 1);
@@ -98,34 +104,38 @@ vector<double> ComputeNumCoeffs(int FilterOrder, double Lcutoff, double Ucutoff,
 
   TCoeffs = ComputeHP(FilterOrder);
 
-  for (i = 0; i < FilterOrder; ++i) {
+  for (i = 0; i < FilterOrder; ++i)
+  {
     NumCoeffs[2 * i] = TCoeffs[i];
     NumCoeffs[2 * i + 1] = 0.0;
   }
   NumCoeffs[2 * FilterOrder] = TCoeffs[FilterOrder];
 
   double cp[2];
-  double Bw, Wn;
+  double Wn;
   cp[0] = 2 * 2.0 * tan(PI * Lcutoff / 2.0);
   cp[1] = 2 * 2.0 * tan(PI * Ucutoff / 2.0);
 
-  Bw = cp[1] - cp[0];
+  // double Bw = cp[1] - cp[0];
   // center frequency
   Wn = sqrt(cp[0] * cp[1]);
   Wn = 2 * atan2(Wn, 4);
-  double kern;
+  // double kern;
   const std::complex<double> result = std::complex<double>(-1, 0);
 
-  for (int k = 0; k < FilterOrder * 2 + 1; k++) {
+  for (int k = 0; k < FilterOrder * 2 + 1; k++)
+  {
     NormalizedKernel[k] = std::exp(-sqrt(result) * Wn * Numbers[k]);
   }
   double b = 0;
   double den = 0;
-  for (int d = 0; d < FilterOrder * 2 + 1; d++) {
+  for (int d = 0; d < FilterOrder * 2 + 1; d++)
+  {
     b += real(NormalizedKernel[d] * NumCoeffs[d]);
     den += real(NormalizedKernel[d] * DenC[d]);
   }
-  for (int c = 0; c < FilterOrder * 2 + 1; c++) {
+  for (int c = 0; c < FilterOrder * 2 + 1; c++)
+  {
     NumCoeffs[c] = (NumCoeffs[c] * den) / b;
   }
 
@@ -135,7 +145,8 @@ vector<double> ComputeNumCoeffs(int FilterOrder, double Lcutoff, double Ucutoff,
   return NumCoeffs;
 }
 
-vector<double> ComputeLP(int FilterOrder) {
+vector<double> ComputeLP(int FilterOrder)
+{
   vector<double> NumCoeffs(FilterOrder + 1);
   int m;
   int i;
@@ -143,7 +154,8 @@ vector<double> ComputeLP(int FilterOrder) {
   NumCoeffs[0] = 1;
   NumCoeffs[1] = FilterOrder;
   m = FilterOrder / 2;
-  for (i = 2; i <= m; ++i) {
+  for (i = 2; i <= m; ++i)
+  {
     NumCoeffs[i] = (double)(FilterOrder - i + 1) * NumCoeffs[i - 1] / i;
     NumCoeffs[FilterOrder - i] = NumCoeffs[i];
   }
@@ -153,7 +165,8 @@ vector<double> ComputeLP(int FilterOrder) {
   return NumCoeffs;
 }
 
-vector<double> ComputeHP(int FilterOrder) {
+vector<double> ComputeHP(int FilterOrder)
+{
   vector<double> NumCoeffs;
   int i;
 
@@ -195,7 +208,8 @@ vector<double> ComputeHP(int FilterOrder) {
 //}
 
 vector<double> filter(vector<double> x, vector<double> coeff_b,
-                      vector<double> coeff_a) {
+                      vector<double> coeff_a)
+{
   int len_x = x.size();
   int len_b = coeff_b.size();
   int len_a = coeff_a.size();
@@ -204,17 +218,24 @@ vector<double> filter(vector<double> x, vector<double> coeff_b,
 
   vector<double> filter_x(len_x);
 
-  if (len_a == 1) {
-    for (int m = 0; m < len_x; m++) {
+  if (len_a == 1)
+  {
+    for (int m = 0; m < len_x; m++)
+    {
       filter_x[m] = coeff_b[0] * x[m] + zi[0];
-      for (int i = 1; i < len_b; i++) {
+      for (int i = 1; i < len_b; i++)
+      {
         zi[i - 1] = coeff_b[i] * x[m] + zi[i]; //-coeff_a[i]*filter_x[m];
       }
     }
-  } else {
-    for (int m = 0; m < len_x; m++) {
+  }
+  else
+  {
+    for (int m = 0; m < len_x; m++)
+    {
       filter_x[m] = coeff_b[0] * x[m] + zi[0];
-      for (int i = 1; i < len_b; i++) {
+      for (int i = 1; i < len_b; i++)
+      {
         zi[i - 1] = coeff_b[i] * x[m] + zi[i] - coeff_a[i] * filter_x[m];
       }
     }

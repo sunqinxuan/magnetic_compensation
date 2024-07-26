@@ -44,6 +44,7 @@ ret_t MicTLMagCompensator::calibrate()
         mag_y.push_back(mag_flux.vector(1));
         mag_z.push_back(mag_flux.vector(2));
     }
+    
 
     notify(*this);
     return ret;

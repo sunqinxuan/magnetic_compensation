@@ -23,6 +23,7 @@
 
 // debug
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 MIC_NAMESPACE_START
@@ -35,16 +36,22 @@ ret_t MicEllipsoidMagCompensator::calibrate()
     auto it_start = data_range.first;
     auto it_end = data_range.second;
 
-    // TODO: mag_x.resize(_data_storer.size())
-    std::vector<float64_t> mag_x, mag_y, mag_z, ellipsoid_coeffs;
+    std::vector<vector_3f_t> mag_vec;
+    std::vector<matrix_3f_t> R_nb;
     for (auto it = it_start; it != it_end; ++it)
     {
+        float64_t ts = it->first;
         mic_mag_flux_t mag_flux = it->second;
-        mag_x.push_back(mag_flux.vector(0));
-        mag_y.push_back(mag_flux.vector(1));
-        mag_z.push_back(mag_flux.vector(2));
+        mic_nav_state_t nav_state;
+        if (_nav_state_estimator->get_nav_state(ts, nav_state) == ret_t::MIC_RET_SUCCESSED)
+        {
+            mag_vec.push_back(mag_flux.vector);
+            R_nb.push_back(nav_state.attitude.matrix());
+        }
     }
-    ellipsoid_fitting(mag_x, mag_y, mag_z, ellipsoid_coeffs);
+
+    std::vector<float64_t> ellipsoid_coeffs;
+    ellipsoid_fit(mag_vec, ellipsoid_coeffs);
 
     // debug info
     MIC_LOG_DEBUG_INFO("ellipsoid coefficients:");
@@ -54,9 +61,16 @@ ret_t MicEllipsoidMagCompensator::calibrate()
     }
 
     double mag_earth_intensity = 54093.9956380105; // nT
-    matrix_3f_t D_tilde_inv;
-    vector_3f_t o_hat;
-    compute_model_coeffs(ellipsoid_coeffs, mag_earth_intensity, D_tilde_inv, o_hat);
+    // matrix_3f_t D_tilde_inv;
+    // vector_3f_t o_hat;
+    compute_model_coeffs(ellipsoid_coeffs, mag_earth_intensity, _D_tilde_inv, _o_hat);
+
+    // debug
+    ofstream fp_d("D_tilde_inv.txt"), fp_o("o_hat.txt");
+    fp_d << fixed << _D_tilde_inv;
+    fp_o << fixed << _o_hat;
+    fp_d.close();
+    fp_o.close();
 
     notify(*this);
     return ret;
@@ -69,30 +83,26 @@ ret_t MicEllipsoidMagCompensator::compenste()
     return ret_t::MIC_RET_FAILED;
 }
 
-ret_t MicEllipsoidMagCompensator::ellipsoid_fitting(
-    const std::vector<float64_t> &x,
-    const std::vector<float64_t> &y,
-    const std::vector<float64_t> &z,
+ret_t MicEllipsoidMagCompensator::ellipsoid_fit(
+    const std::vector<vector_3f_t> &mag,
     std::vector<float64_t> &coeffs)
 {
-
-    if (x.size() != y.size() || x.size() != z.size())
+    const int N = mag.size();
+    if (N < 20)
         return ret_t::MIC_RET_FAILED;
-
-    const int N = x.size();
 
     Eigen::MatrixXd design_matrix(10, N);
     for (int i = 0; i < N; i++)
     {
-        design_matrix(0, i) = x[i] * x[i];
-        design_matrix(1, i) = y[i] * y[i];
-        design_matrix(2, i) = z[i] * z[i];
-        design_matrix(3, i) = 2 * y[i] * z[i];
-        design_matrix(4, i) = 2 * x[i] * z[i];
-        design_matrix(5, i) = 2 * x[i] * y[i];
-        design_matrix(6, i) = 2 * x[i];
-        design_matrix(7, i) = 2 * y[i];
-        design_matrix(8, i) = 2 * z[i];
+        design_matrix(0, i) = mag[i](0) * mag[i](0);
+        design_matrix(1, i) = mag[i](1) * mag[i](1);
+        design_matrix(2, i) = mag[i](2) * mag[i](2);
+        design_matrix(3, i) = 2 * mag[i](1) * mag[i](2);
+        design_matrix(4, i) = 2 * mag[i](0) * mag[i](2);
+        design_matrix(5, i) = 2 * mag[i](0) * mag[i](1);
+        design_matrix(6, i) = 2 * mag[i](0);
+        design_matrix(7, i) = 2 * mag[i](1);
+        design_matrix(8, i) = 2 * mag[i](2);
         design_matrix(9, i) = 1.0;
     }
 
@@ -187,6 +197,108 @@ ret_t MicEllipsoidMagCompensator::compute_model_coeffs(
     D_tilde_inv = sqrt(fabs(alpha)) * sqrt_As_eval * As_evec.transpose();
     // std::cout << "D_tilde_inv = " << std::endl
     //           << D_tilde_inv << std::endl;
+    return ret_t::MIC_RET_SUCCESSED;
+}
+
+ret_t MicEllipsoidMagCompensator::ceres_optimize(
+    const std::vector<vector_3f_t> &mag,
+    const std::vector<matrix_3f_t> &R_nb,
+    const matrix_3f_t &D_tilde_inv,
+    const vector_3f_t &o_hat,
+    quaternionf_t &quat)
+{
+    ceres::Problem problem;
+    ceres::LossFunction *loss_function = new ceres::HuberLoss(1.0);
+    ceres::LocalParameterization *quat_param =
+        new ceres::EigenQuaternionParameterization;
+
+    Eigen::Matrix3d rotation_rc;
+    Eigen::Vector3d mag_rr, mag_cc;
+    // mag_r(0) = mag_x[0];
+    // mag_r(1) = mag_y[0];
+    // mag_r(2) = mag_z[0];
+    // mag_c(0) = mag_x[1];
+    // mag_c(1) = mag_y[1];
+    // mag_c(2) = mag_z[1];
+
+    ceres::CostFunction *cost_function = CostFunctionCreator::Create(
+        D_tilde_inv, o_hat, rotation_rc, mag_rr, mag_cc);
+
+    // Eigen::Quaterniond quat;
+    problem.AddResidualBlock(cost_function, loss_function, quat.coeffs().data());
+    problem.SetParameterization(quat.coeffs().data(), quat_param);
+
+    ceres::Solver::Summary summary;
+    ceres::Solver::Options options;
+    options.max_num_iterations = 10;
+    options.linear_solver_type = ceres::SPARSE_NORMAL_CHOLESKY;
+    options.trust_region_strategy_type = ceres::LEVENBERG_MARQUARDT;
+    options.minimizer_progress_to_stdout = true;
+
+    // ceres::Solve(options, &problem, &summary);
+    // if (minimizer_progress_to_stdout_) std::cout << summary.FullReport() <<
+    // std::endl;
+
+    if (summary.IsSolutionUsable())
+        return ret_t::MIC_RET_SUCCESSED;
+    else
+        return ret_t::MIC_RET_FAILED;
+}
+
+ret_t MicEllipsoidMagCompensator::init_value_estimate(
+    const std::vector<vector_3f_t> &mag_m,
+    const std::vector<vector_3f_t> &mag_n,
+    const std::vector<matrix_3f_t> &R_nb,
+    const matrix_3f_t &D_tilde_inv,
+    const vector_3f_t &o_hat,
+    vector_3f_t &R_hat)
+{
+    if (mag_m.size() != mag_n.size() || mag_m.size() != R_nb.size())
+        return ret_t::MIC_RET_FAILED;
+
+    const size_t N = mag_m.size();
+    std::vector<vector_3f_t> p_left(N), p_right(N);
+    for (size_t i = 0; i < N; ++i)
+    {
+        p_left[i] = D_tilde_inv * (mag_m[i] - o_hat);
+        p_right[i] = R_nb[i].transpose() * mag_n[i];
+    }
+
+    vector_3f_t p_left_mean = vector_3f_t::Zero();
+    vector_3f_t p_right_mean = vector_3f_t::Zero();
+    for (const auto &vec : p_left)
+        p_left_mean += vec;
+    for (const auto &vec : p_right)
+        p_right_mean += vec;
+    p_left_mean /= N;
+    p_right_mean /= N;
+
+    matrix_3f_t H;
+    for (size_t i = 0; i < N; ++i)
+    {
+        p_left[i] -= p_left_mean;
+        p_right[i] -= p_right_mean;
+        H += p_left[i] * p_right[i].transpose();
+    }
+
+    Eigen::JacobiSVD<matrix_3f_t> svd(H, Eigen::ComputeFullU | Eigen::ComputeFullV);
+    matrix_3f_t U = svd.matrixU();
+    matrix_3f_t S = svd.singularValues().asDiagonal();
+    matrix_3f_t V = svd.matrixV();
+
+    // debug
+    cout << "Matrix H:\n"
+         << H << endl;
+    cout << "\nU Matrix:\n"
+         << U << endl;
+    cout << "\nSingular Values (as a diagonal matrix):\n"
+         << S << endl;
+    cout << "\nV Matrix:\n"
+         << V << endl;
+    matrix_3f_t H_reconstructed = U * S * V.transpose();
+    cout << "\nReconstructed Matrix (U * S * V^T):\n"
+         << H_reconstructed << endl;
+
     return ret_t::MIC_RET_SUCCESSED;
 }
 

@@ -37,17 +37,17 @@ namespace mic
 
     enum MicBool
     {
-        MIC_FALSE               = 0,
-        MIC_TRUE                = 1
+        MIC_FALSE = 0,
+        MIC_TRUE = 1
     };
     using bool_t = MicBool;
-    #define true (mic::MIC_TRUE)
-    #define false (mic::MIC_FALSE)
+#define true (mic::MIC_TRUE)
+#define false (mic::MIC_FALSE)
 
     enum class MicRet : uint8_t
     {
-        MIC_RET_FAILED                = 0,
-        MIC_RET_SUCCESSED             = 1
+        MIC_RET_FAILED = 0,
+        MIC_RET_SUCCESSED = 1
     };
     using ret_t = MicRet;
 
@@ -87,16 +87,19 @@ namespace mic
 
     struct MicGNSS
     {
-        float64_t time_stamp; 
+        float64_t time_stamp;
         vector_3f_t lat_lon_alt; // (rad,rad,m)
-        vector_3f_t pos_std; // north-east-down (m)
+        vector_3f_t pos_std;     // north-east-down (m)
     };
-    using mic_gnss_t=MicGNSS;
+    using mic_gnss_t = MicGNSS;
 
     struct MicNavState
     {
         float64_t time_stamp; // TODO
         vector_3f_t position;
+        /* attitude
+         * of the body frame [nose, right wing, down]
+         * w.r.t. the navigation frame [north, east, down] */
         quaternionf_t attitude;
         vector_3f_t velocity;
         mic_imu_error_t imu_error;
