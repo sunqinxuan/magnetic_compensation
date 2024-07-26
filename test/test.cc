@@ -7,6 +7,7 @@
 #include "mic_mag_compensator/mic_mag_compensator.h"
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
 #include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
+#include "ceres/ceres.h"
 
 USING_NAMESPACE_MIC;
 
@@ -17,6 +18,12 @@ int main(int argc, char *argv[])
                              "../etc/default_config.json");
     mic_logger_t::set_log_level(
         static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
+
+    ceres::Solver::Options options;
+    ceres::Solver::Summary summary;
+    ceres::Problem problem;
+    ceres::Solve(options, &problem, &summary);
+    MIC_LOG_BASIC_INFO("final_cost: %lf!\n", summary.final_cost);
 
     std::string filename = "output.txt";
     if (argc != 1)
