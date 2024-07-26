@@ -94,6 +94,15 @@ public:
         return std::make_pair(start_it, end_it);
     }
 
+    // 用于获取数据size的模板
+    template<typename T>
+    size_t get_data_size()
+    {
+        constexpr std::size_t index = tuple_index<T, std::tuple<Types...>>::value;
+        auto& data_map = std::get<index>(_data_storage);
+        return data_map.size();
+    }
+
     // 用于获取数据的函数模板
     template<typename... Args>
     bool_t get_data(const float64_t ts, Args&... data)
