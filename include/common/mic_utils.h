@@ -123,6 +123,11 @@ public:
 
         return dcm;
     }
+
+    static float32_t deg2rad(float32_t deg)
+    {
+        return deg*MIC_PI/180.0;
+    }
 };
 
 MIC_NAMESPACE_END

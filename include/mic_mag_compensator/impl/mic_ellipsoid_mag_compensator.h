@@ -35,17 +35,30 @@ using mic_ellipsoid_mag_compensator_t = MicEllipsoidMagCompensator;
 class CostFunctionCreator
 {
 public:
-    CostFunctionCreator(const Eigen::Matrix3d &coeff_D_tilde_inv,
-                        const Eigen::Vector3d &coeff_o_hat,
-                        const Eigen::Matrix3d &orientation_r_c,
-                        const Eigen::Vector3d &mag_r,
-                        const Eigen::Vector3d &mag_c)
+    CostFunctionCreator(const matrix_3f_t &coeff_D_tilde_inv,
+                        const vector_3f_t &coeff_o_hat,
+                        const matrix_3f_t &rotation_r_c,
+                        const vector_3f_t &mag_r,
+                        const vector_3f_t &mag_c)
         : coeff_D_tilde_inv_(coeff_D_tilde_inv), coeff_o_hat_(coeff_o_hat),
-          orientation_r_c_(orientation_r_c), mag_r_(mag_r), mag_c_(mag_c) {}
+          rotation_r_c_(rotation_r_c), mag_r_(mag_r), mag_c_(mag_c) {}
 
     template <typename T>
     bool operator()(const T *const quaternion, T *residual_ptr) const
     {
+        Eigen::Map<const Eigen::Quaternion<T>> q(quaternion);
+        Eigen::Matrix<T, 3, 3> R = q.toRotationMatrix();
+
+        Eigen::Matrix<T, 3, 3> D_tilde_inv = coeff_D_tilde_inv_.template cast<T>();
+        Eigen::Matrix<T, 3, 1> o_hat = coeff_o_hat_.template cast<T>();
+        Eigen::Matrix<T, 3, 3> R_rc = rotation_r_c_.template cast<T>();
+        Eigen::Matrix<T, 3, 1> mag_r = mag_r_.template cast<T>();
+        Eigen::Matrix<T, 3, 1> mag_c = mag_c_.template cast<T>();
+
+        Eigen::Matrix<T, 3, 1> mag_r1 = D_tilde_inv.inverse() * R * R_rc * R.transpose() * D_tilde_inv * (mag_c - o_hat) + o_hat;
+        
+        Eigen::Map<Eigen::Matrix<T, 3, 1>> residual(residual_ptr);
+        residual=mag_r-mag_r1;
         // Eigen::Map<const Eigen::Matrix<T, 3, 1>> p_i(position_i);
         // Eigen::Map<const Eigen::Quaternion<T>> q_i(orientation_i);
         //
@@ -70,24 +83,24 @@ public:
         return true;
     }
 
-    static ceres::CostFunction *Create(const Eigen::Matrix3d &coeff_D_tilde_inv,
-                                       const Eigen::Vector3d &coeff_o_hat,
-                                       const Eigen::Matrix3d &orientation_r_c,
-                                       const Eigen::Vector3d &mag_r,
-                                       const Eigen::Vector3d &mag_c)
+    static ceres::CostFunction *Create(const matrix_3f_t &coeff_D_tilde_inv,
+                                       const vector_3f_t &coeff_o_hat,
+                                       const matrix_3f_t &rotation_r_c,
+                                       const vector_3f_t &mag_r,
+                                       const vector_3f_t &mag_c)
     {
         return new ceres::AutoDiffCostFunction<CostFunctionCreator, 3, 4>(
-            new CostFunctionCreator(coeff_D_tilde_inv, coeff_o_hat, orientation_r_c,
+            new CostFunctionCreator(coeff_D_tilde_inv, coeff_o_hat, rotation_r_c,
                                     mag_r, mag_c));
     }
 
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
 private:
-    Eigen::Matrix3d coeff_D_tilde_inv_;
-    Eigen::Vector3d coeff_o_hat_;
-    Eigen::Matrix3d orientation_r_c_; // rotation from b_k (c) to b_k+1 (r);
-    Eigen::Vector3d mag_r_, mag_c_;
+    matrix_3f_t coeff_D_tilde_inv_;
+    vector_3f_t coeff_o_hat_;
+    matrix_3f_t rotation_r_c_; // rotation from b_k (c) to b_k+1 (r);
+    vector_3f_t mag_r_, mag_c_;
 };
 
 class MicEllipsoidMagCompensator : public MicMagCompensator

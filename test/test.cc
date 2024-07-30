@@ -50,14 +50,18 @@ int main(int argc, char *argv[])
         // if (line < 1002.10)
         {
             nav_state.time_stamp = ts;
-            nav_state.attitude = quaternionf_t(MicUtils::euler2dcm(ins_roll, ins_pitch, ins_yaw));
+            nav_state.attitude = quaternionf_t(
+                MicUtils::euler2dcm(
+                    MicUtils::deg2rad(ins_roll),
+                    MicUtils::deg2rad(ins_pitch),
+                    MicUtils::deg2rad(ins_yaw)));
             mag_flux.time_stamp = ts;
             mag_flux.vector << flux_x, flux_y, flux_z;
             mag_flux_truth.time_stamp = ts;
             mag_flux_truth.vector << igrf_north, igrf_east, igrf_down;
 
             mag_compensator.add_mag_flux(ts, mag_flux);
-            mag_compensator.add_mag_flux_truth(ts,mag_flux_truth);
+            mag_compensator.add_mag_flux_truth(ts, mag_flux_truth);
             mag_compensator.get_nav_state_estimator().set_nav_state(ts, nav_state);
         }
 
