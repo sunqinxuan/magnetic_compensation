@@ -56,29 +56,9 @@ public:
         Eigen::Matrix<T, 3, 1> mag_c = mag_c_.template cast<T>();
 
         Eigen::Matrix<T, 3, 1> mag_r1 = D_tilde_inv.inverse() * R * R_rc * R.transpose() * D_tilde_inv * (mag_c - o_hat) + o_hat;
-        
+
         Eigen::Map<Eigen::Matrix<T, 3, 1>> residual(residual_ptr);
-        residual=mag_r-mag_r1;
-        // Eigen::Map<const Eigen::Matrix<T, 3, 1>> p_i(position_i);
-        // Eigen::Map<const Eigen::Quaternion<T>> q_i(orientation_i);
-        //
-        // Eigen::Map<const Eigen::Matrix<T, 3, 1>> p_j(position_j);
-        // Eigen::Map<const Eigen::Quaternion<T>> q_j(orientation_j);
-        //
-        // Eigen::Quaternion<T> q_i_inv = q_i.conjugate();
-        // Eigen::Quaternion<T> q_ij = q_i_inv * q_j;
-        // Eigen::Matrix<T, 3, 1> p_ij = q_i_inv * (p_j - p_i);
-        //
-        // Eigen::Quaternion<T> q_ij_meas(pose_ij_meas_.linear().template
-        // cast<T>()); Eigen::Quaternion<T> delta_q = q_ij_meas * q_ij.conjugate();
-        //
-        // Eigen::Map<Eigen::Matrix<T, 6, 1>> residual(residual_ptr);
-        // Eigen::Map<Eigen::Matrix<T, 3, 1>> residual_trs(residual_ptr);
-        // Eigen::Map<Eigen::Matrix<T, 3, 1>> residual_rot(residual_ptr + 3);
-        //
-        // residual_trs = p_ij - pose_ij_meas_.translation().template cast<T>();
-        // residual_rot = T(2.0) * delta_q.vec();
-        // residual.applyOnTheLeft(sqrt_information_.template cast<T>());
+        residual = mag_r - mag_r1;
 
         return true;
     }
