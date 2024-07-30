@@ -32,20 +32,23 @@ ret_t MicEllipsoidMagCompensator::calibrate()
 {
     ret_t ret = ret_t::MIC_RET_FAILED;
 
-    auto data_range = _data_storer.get_data_range<mic_mag_flux_t>(0.0, _curr_time_stamp + 1);
+    auto data_range = _mag_measure_storer.get_data_range<mic_mag_flux_t>(0.0, _curr_time_stamp + 1);
     auto it_start = data_range.first;
     auto it_end = data_range.second;
 
-    std::vector<vector_3f_t> mag_vec;
+    std::vector<vector_3f_t> mag_vec,mag_n_vec;
     std::vector<matrix_3f_t> R_nb;
     for (auto it = it_start; it != it_end; ++it)
     {
         float64_t ts = it->first;
         mic_mag_flux_t mag_flux = it->second;
         mic_nav_state_t nav_state;
+        mic_mag_flux_t mag_flux_truth;
+        _mag_truth_storer.get_data<mic_mag_flux_t>(ts,mag_flux_truth);
         if (_nav_state_estimator->get_nav_state(ts, nav_state) == ret_t::MIC_RET_SUCCESSED)
         {
             mag_vec.push_back(mag_flux.vector);
+            mag_n_vec.push_back(mag_flux_truth.vector);
             R_nb.push_back(nav_state.attitude.matrix());
         }
     }
@@ -60,7 +63,9 @@ ret_t MicEllipsoidMagCompensator::calibrate()
         MIC_LOG_DEBUG_INFO("%f", ellipsoid_coeffs[i]);
     }
 
-    double mag_earth_intensity = 54093.9956380105; // nT
+    // double mag_earth_intensity = 54093.9956380105; // nT
+    double mag_earth_intensity = MIC_CONFIG_GET(float64_t, "mag_earth_intensity");
+    MIC_LOG_DEBUG_INFO("mag_earth_intensity: %f", mag_earth_intensity);
     // matrix_3f_t D_tilde_inv;
     // vector_3f_t o_hat;
     compute_model_coeffs(ellipsoid_coeffs, mag_earth_intensity, _D_tilde_inv, _o_hat);
@@ -71,6 +76,14 @@ ret_t MicEllipsoidMagCompensator::calibrate()
     fp_o << fixed << _o_hat;
     fp_d.close();
     fp_o.close();
+
+    matrix_3f_t R_hat;
+    init_value_estimate(mag_vec,mag_n_vec,R_nb,_D_tilde_inv,_o_hat,R_hat);
+
+    // debug
+    ofstream fp_R("R_hat.txt");
+    fp_R<<fixed<<R_hat;
+    fp_R.close();
 
     notify(*this);
     return ret;
@@ -251,7 +264,7 @@ ret_t MicEllipsoidMagCompensator::init_value_estimate(
     const std::vector<matrix_3f_t> &R_nb,
     const matrix_3f_t &D_tilde_inv,
     const vector_3f_t &o_hat,
-    vector_3f_t &R_hat)
+    matrix_3f_t &R_hat)
 {
     if (mag_m.size() != mag_n.size() || mag_m.size() != R_nb.size())
         return ret_t::MIC_RET_FAILED;
@@ -285,6 +298,8 @@ ret_t MicEllipsoidMagCompensator::init_value_estimate(
     matrix_3f_t U = svd.matrixU();
     matrix_3f_t S = svd.singularValues().asDiagonal();
     matrix_3f_t V = svd.matrixV();
+
+    R_hat=V*U.transpose();
 
     // debug
     cout << "Matrix H:\n"

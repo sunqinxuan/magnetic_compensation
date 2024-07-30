@@ -146,7 +146,7 @@ protected:
         const std::vector<matrix_3f_t> &R_nb,
         const matrix_3f_t &D_tilde_inv,
         const vector_3f_t &o_hat,
-        vector_3f_t &R_hat);
+        matrix_3f_t &R_hat);
 
 protected:
     matrix_3f_t _D_tilde_inv;

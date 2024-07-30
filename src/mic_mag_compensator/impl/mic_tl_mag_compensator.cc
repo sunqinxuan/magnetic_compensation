@@ -31,7 +31,7 @@ ret_t MicTLMagCompensator::calibrate()
 {
     ret_t ret = ret_t::MIC_RET_FAILED;
 
-    auto data_range = _data_storer.get_data_range<mic_mag_flux_t>(0.0, _curr_time_stamp + 1);
+    auto data_range = _mag_measure_storer.get_data_range<mic_mag_flux_t>(0.0, _curr_time_stamp + 1);
     auto it_start = data_range.first;
     auto it_end = data_range.second;
 

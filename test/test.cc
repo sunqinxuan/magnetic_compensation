@@ -25,10 +25,7 @@ int main(int argc, char *argv[])
     ceres::Solve(options, &problem, &summary);
     MIC_LOG_BASIC_INFO("final_cost: %lf!\n", summary.final_cost);
 
-    std::string filename = "output.txt";
-    if (argc != 1)
-        filename = argv[1];
-
+    std::string filename = MIC_CONFIG_GET(std::string, "load_file_name");
     std::ifstream infile(filename);
     if (!infile.is_open())
     {
@@ -36,8 +33,10 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    float64_t line, ts, flux_x, flux_y, flux_z, ins_pitch, ins_roll, ins_yaw;
-    mic_mag_flux_t mag_flux;
+    float64_t ts, flux_x, flux_y, flux_z,
+        ins_pitch, ins_roll, ins_yaw,
+        igrf_north, igrf_east, igrf_down;
+    mic_mag_flux_t mag_flux, mag_flux_truth;
     mic_nav_state_t nav_state;
     // std::ofstream fp("debug.txt");
     mic_ellipsoid_mag_compensator_t mag_compensator;
@@ -45,7 +44,7 @@ int main(int argc, char *argv[])
     mag_compensator.subscrible(comp_logger);
     while (true)
     {
-        infile >> line >> ts >> flux_x >> flux_y >> flux_z >> ins_pitch >> ins_roll >> ins_yaw;
+        infile >> ts >> flux_x >> flux_y >> flux_z >> ins_pitch >> ins_roll >> ins_yaw >> igrf_north >> igrf_east >> igrf_down;
         if (infile.eof())
             break;
         // if (line < 1002.10)
@@ -54,8 +53,11 @@ int main(int argc, char *argv[])
             nav_state.attitude = quaternionf_t(MicUtils::euler2dcm(ins_roll, ins_pitch, ins_yaw));
             mag_flux.time_stamp = ts;
             mag_flux.vector << flux_x, flux_y, flux_z;
+            mag_flux_truth.time_stamp = ts;
+            mag_flux_truth.vector << igrf_north, igrf_east, igrf_down;
 
             mag_compensator.add_mag_flux(ts, mag_flux);
+            mag_compensator.add_mag_flux_truth(ts,mag_flux_truth);
             mag_compensator.get_nav_state_estimator().set_nav_state(ts, nav_state);
         }
 
