@@ -4,7 +4,7 @@ set (CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 
 file(GLOB_RECURSE SOURCE
-    tl/tolles-lawson.cpp
+    tl/tolles_lawson.cpp
     filter/filter.cpp
     filter/butterworth.cpp)
 

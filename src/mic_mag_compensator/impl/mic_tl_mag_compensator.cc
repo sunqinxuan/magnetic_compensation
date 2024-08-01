@@ -27,6 +27,11 @@ using namespace std;
 
 MIC_NAMESPACE_START
 
+MicTLMagCompensator::MicTLMagCompensator() : MicMagCompensator()
+{
+    _tl_model = std::make_shared<mic_tolles_lawson_t>();
+}
+
 ret_t MicTLMagCompensator::calibrate()
 {
     ret_t ret = ret_t::MIC_RET_FAILED;
@@ -36,15 +41,32 @@ ret_t MicTLMagCompensator::calibrate()
     auto it_end = data_range.second;
 
     // TODO: mag_x.resize(_data_storer.size())
-    std::vector<float64_t> mag_x, mag_y, mag_z, ellipsoid_coeffs;
+    std::vector<float64_t> mag_x, mag_y, mag_z;
+    std::vector<float64_t> mag_earth_x, mag_earth_y, mag_earth_z;
     for (auto it = it_start; it != it_end; ++it)
     {
+        float64_t ts = it->first;
         mic_mag_flux_t mag_flux = it->second;
+        mic_nav_state_t nav_state;
+        mic_mag_flux_t mag_flux_truth;
+        _mag_truth_storer.get_data<mic_mag_flux_t>(ts, mag_flux_truth);
         mag_x.push_back(mag_flux.vector(0));
         mag_y.push_back(mag_flux.vector(1));
         mag_z.push_back(mag_flux.vector(2));
+        mag_earth_x.push_back(mag_flux_truth.vector(0));
+        mag_earth_y.push_back(mag_flux_truth.vector(1));
+        mag_earth_z.push_back(mag_flux_truth.vector(2));
     }
-    
+
+    _tl_model->createCoeff_Vector(_tl_coeffs, mag_x, mag_y, mag_z, mag_earth_x, mag_earth_y, mag_earth_z);
+
+    // debug
+    ofstream fp_tl("TL_beta.txt");
+    for (size_t i = 0; i < _tl_coeffs.size(); ++i)
+    {
+        fp_tl << _tl_coeffs[i] << endl;
+    }
+    fp_tl.close();
 
     notify(*this);
     return ret;

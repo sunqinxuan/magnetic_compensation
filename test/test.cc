@@ -7,6 +7,7 @@
 #include "mic_mag_compensator/mic_mag_compensator.h"
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
 #include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
 #include "ceres/ceres.h"
 
 USING_NAMESPACE_MIC;
@@ -19,11 +20,11 @@ int main(int argc, char *argv[])
     mic_logger_t::set_log_level(
         static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
 
-    ceres::Solver::Options options;
-    ceres::Solver::Summary summary;
-    ceres::Problem problem;
-    ceres::Solve(options, &problem, &summary);
-    MIC_LOG_BASIC_INFO("final_cost: %lf!\n", summary.final_cost);
+    // ceres::Solver::Options options;
+    // ceres::Solver::Summary summary;
+    // ceres::Problem problem;
+    // ceres::Solve(options, &problem, &summary);
+    // MIC_LOG_BASIC_INFO("final_cost: %lf!\n", summary.final_cost);
 
     std::string filename = MIC_CONFIG_GET(std::string, "load_file_name");
     std::ifstream infile(filename);
@@ -39,9 +40,22 @@ int main(int argc, char *argv[])
     mic_mag_flux_t mag_flux, mag_flux_truth;
     mic_nav_state_t nav_state;
     // std::ofstream fp("debug.txt");
-    mic_ellipsoid_mag_compensator_t mag_compensator;
+    // mic_ellipsoid_mag_compensator_t mag_compensator;
+
+    mic_mag_compensator_shared_ptr mag_compensator_ptr;
+    if (MIC_CONFIG_GET(std::string, "compensation_method") == "tl")
+    {
+        mag_compensator_ptr = std::make_shared<mic_tl_mag_compensator_t>();
+    }
+    else // "ellipsoid"
+    {
+        mag_compensator_ptr = std::make_shared<mic_ellipsoid_mag_compensator_t>();
+    }
+
     auto comp_logger = std::make_shared<mic_state_logger_t>();
-    mag_compensator.subscrible(comp_logger);
+    // mag_compensator.subscrible(comp_logger);
+    mag_compensator_ptr->subscrible(comp_logger);
+
     while (true)
     {
         infile >> ts >> flux_x >> flux_y >> flux_z >> ins_pitch >> ins_roll >> ins_yaw >> igrf_north >> igrf_east >> igrf_down;
@@ -60,9 +74,13 @@ int main(int argc, char *argv[])
             mag_flux_truth.time_stamp = ts;
             mag_flux_truth.vector << igrf_north, igrf_east, igrf_down;
 
-            mag_compensator.add_mag_flux(ts, mag_flux);
-            mag_compensator.add_mag_flux_truth(ts, mag_flux_truth);
-            mag_compensator.get_nav_state_estimator().set_nav_state(ts, nav_state);
+            // mag_compensator.add_mag_flux(ts, mag_flux);
+            // mag_compensator.add_mag_flux_truth(ts, mag_flux_truth);
+            // mag_compensator.get_nav_state_estimator().set_nav_state(ts, nav_state);
+
+            mag_compensator_ptr->add_mag_flux(ts, mag_flux);
+            mag_compensator_ptr->add_mag_flux_truth(ts, mag_flux_truth);
+            mag_compensator_ptr->get_nav_state_estimator().set_nav_state(ts, nav_state);
         }
 
         // fp << std::fixed << line << "\t" << ts << "\t"
@@ -74,7 +92,8 @@ int main(int argc, char *argv[])
     infile.close();
     // fp.close();
 
-    mag_compensator.calibrate();
+    // mag_compensator.calibrate();
+    mag_compensator_ptr->calibrate();
 
     return 0;
 }

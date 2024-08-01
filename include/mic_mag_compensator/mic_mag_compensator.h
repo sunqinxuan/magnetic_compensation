@@ -34,6 +34,7 @@ using mic_mag_storer_t =
 
 class MicMagCompensator;
 using mic_mag_compensator_t = MicMagCompensator;
+using mic_mag_compensator_shared_ptr = std::shared_ptr<MicMagCompensator>;
 
 enum class MicMagCompensatorState : uint8_t
 {

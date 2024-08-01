@@ -23,22 +23,28 @@
 #define MIC_TL_MAG_COMPENSATOR
 
 #include "mic_mag_compensator/mic_mag_compensator.h"
+#include "tl/tolles_lawson.hpp"
 
 MIC_NAMESPACE_START
 
 class MicTLMagCompensator;
 using mic_tl_mag_compensator_t = MicTLMagCompensator;
 
+using mic_tolles_lawson_t = tl::TollesLawson;
+using mic_tolles_lawson_shared_ptr = std::shared_ptr<tl::TollesLawson>;
+
 class MicTLMagCompensator : public MicMagCompensator
 {
 public:
-    MicTLMagCompensator() : MicMagCompensator() {}
+    MicTLMagCompensator();
     virtual ~MicTLMagCompensator() = default;
 
     virtual ret_t calibrate() override;
     virtual ret_t compenste() override;
 
 protected:
+    mic_tolles_lawson_shared_ptr _tl_model;
+    std::vector<float64_t> _tl_coeffs;
 };
 
 MIC_NAMESPACE_END
