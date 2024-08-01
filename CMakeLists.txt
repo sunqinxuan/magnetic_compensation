@@ -49,13 +49,10 @@ install(DIRECTORY ${GFLAGS_DIR}/lib/ DESTINATION ${INSTALL_LIB})
 include_directories(${CMAKE_HOME_DIRECTORY}/3rd_party/kf-gins/)
 add_subdirectory(3rd_party/kf-gins)
 
-<<<<<<< HEAD
-=======
 ## tolles-lawson
 include_directories(${CMAKE_HOME_DIRECTORY}/3rd_party/tolles-lawson/)
 add_subdirectory(3rd_party/tolles-lawson)
 
->>>>>>> master
 
 set(SRC_FILES
     ./src/common/mic_logger.cc
@@ -68,11 +65,7 @@ set(SRC_FILES
     ./src/mic_mag_compensator/impl/mic_tl_mag_compensator.cc
 )
 
-<<<<<<< HEAD
-SET(DEPEND_LIBS kf-gins ceres gomp lapack
-=======
 SET(DEPEND_LIBS tolles-lawson kf-gins ceres gomp lapack
->>>>>>> master
     f77blas atlas cholmod spqr cxsparse
     gfortran amd camd colamd ccolamd glog gflags)
 

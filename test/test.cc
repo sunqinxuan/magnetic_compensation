@@ -24,13 +24,6 @@ int main(int argc, char *argv[])
     ceres::Problem problem;
     ceres::Solve(options, &problem, &summary);
     MIC_LOG_BASIC_INFO("final_cost: %lf!\n", summary.final_cost);
-<<<<<<< HEAD
-
-    std::string filename = "output.txt";
-    if (argc != 1)
-        filename = argv[1];
-=======
->>>>>>> master
 
     std::string filename = MIC_CONFIG_GET(std::string, "load_file_name");
     std::ifstream infile(filename);
