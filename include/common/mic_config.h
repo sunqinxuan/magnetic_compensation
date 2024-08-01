@@ -103,7 +103,7 @@ public:
     // set a new config file
     static void initialize(
         const mic_config_type_t type,
-        const std::string filename = "./etc/default_config.json");
+        const std::string filename = "../etc/default_config.json");
 
     static mic_config_t& get_instance();
 

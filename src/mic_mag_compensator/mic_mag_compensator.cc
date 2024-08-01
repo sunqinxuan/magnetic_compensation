@@ -41,7 +41,7 @@ void MicMagCompensator::init_nav_state_estimator()
 
 mic_mag_storer_t& MicMagCompensator::get_data_storer()
 {
-    return _data_storer;
+    return _mag_measure_storer;
 }
 
 mic_nav_state_estimator_t &MicMagCompensator::get_nav_state_estimator()
@@ -55,7 +55,7 @@ ret_t MicMagCompensator::add_mag_flux(
     const float64_t ts,
     const mic_mag_flux_t &mag_flux_data)
 {
-    _data_storer.add_data<mic_mag_flux_t>(ts, mag_flux_data);
+    _mag_measure_storer.add_data<mic_mag_flux_t>(ts, mag_flux_data);
     _curr_time_stamp=ts;
     return ret_t::MIC_RET_SUCCESSED;
 }
@@ -64,7 +64,24 @@ ret_t MicMagCompensator::add_mag_op(
     const float64_t ts,
     const mic_mag_op_t &mag_op_data)
 {
-    _data_storer.add_data<mic_mag_op_t>(ts, mag_op_data);
+    _mag_measure_storer.add_data<mic_mag_op_t>(ts, mag_op_data);
+    return ret_t::MIC_RET_SUCCESSED;
+}
+
+ret_t MicMagCompensator::add_mag_flux_truth(
+    const float64_t ts,
+    const mic_mag_flux_t &mag_flux_data)
+{
+    _mag_truth_storer.add_data<mic_mag_flux_t>(ts, mag_flux_data);
+    _curr_time_stamp=ts;
+    return ret_t::MIC_RET_SUCCESSED;
+}
+
+ret_t MicMagCompensator::add_mag_op_truth(
+    const float64_t ts,
+    const mic_mag_op_t &mag_op_data)
+{
+    _mag_truth_storer.add_data<mic_mag_op_t>(ts, mag_op_data);
     return ret_t::MIC_RET_SUCCESSED;
 }
 

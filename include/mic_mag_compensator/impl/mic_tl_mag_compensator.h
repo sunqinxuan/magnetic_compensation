@@ -19,28 +19,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#include "mic_mag_compensator/obeserver/mic_state_logger.h"
+#ifndef MIC_TL_MAG_COMPENSATOR
+#define MIC_TL_MAG_COMPENSATOR
+
+#include "mic_mag_compensator/mic_mag_compensator.h"
 
 MIC_NAMESPACE_START
 
-void MicStateLogger::update(mic_mag_compensator_t &comp)
+class MicTLMagCompensator;
+using mic_tl_mag_compensator_t = MicTLMagCompensator;
+
+class MicTLMagCompensator : public MicMagCompensator
 {
-    MIC_LOG_BASIC_INFO("output state!");
+public:
+    MicTLMagCompensator() : MicMagCompensator() {}
+    virtual ~MicTLMagCompensator() = default;
 
-    float64_t ts = comp.get_curr_time();
-    MIC_LOG_BASIC_INFO("current time: %f", ts);
+    virtual ret_t calibrate() override;
+    virtual ret_t compenste() override;
 
-    // mic_mag_storer_t data_storer = comp.get_data_storer();
-    // auto data_range = data_storer.get_data_range<mic_mag_flux_t>(0.0, ts);
-    // auto it_start = data_range.first;
-    // auto it_end = data_range.second;
-
-    // for (auto it = it_start; it != it_end; ++it)
-    // {
-    //     float64_t time = it->first;
-    //     mic_mag_flux_t mag_flux = it->second;
-    //     // MIC_LOG_BASIC_INFO("%f\t%f\t%f\t%f", time, mag_flux.vector(0), mag_flux.vector(1), mag_flux.vector(2));
-    // }
-}
+protected:
+};
 
 MIC_NAMESPACE_END
+
+#endif

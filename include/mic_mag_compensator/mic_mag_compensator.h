@@ -50,15 +50,23 @@ public:
     MicMagCompensator();
     ~MicMagCompensator();
 
-    mic_mag_storer_t& get_data_storer();
+    mic_mag_storer_t &get_data_storer();
     mic_nav_state_estimator_t &get_nav_state_estimator();
-    float64_t get_curr_time() {return _curr_time_stamp;}
+    float64_t get_curr_time() { return _curr_time_stamp; }
 
     ret_t add_mag_flux(
         const float64_t ts,
         const mic_mag_flux_t &mag_flux_data);
 
     ret_t add_mag_op(
+        const float64_t ts,
+        const mic_mag_op_t &mag_op_data);
+
+    ret_t add_mag_flux_truth(
+        const float64_t ts,
+        const mic_mag_flux_t &mag_flux_data);
+
+    ret_t add_mag_op_truth(
         const float64_t ts,
         const mic_mag_op_t &mag_op_data);
 
@@ -75,7 +83,8 @@ protected:
     float64_t _curr_time_stamp;
 
     /* data storer*/
-    mic_mag_storer_t _data_storer;
+    mic_mag_storer_t _mag_measure_storer;
+    mic_mag_storer_t _mag_truth_storer;
     /* working state */
     mic_mag_compensator_state_t _state;
     /* navigation state estimator */

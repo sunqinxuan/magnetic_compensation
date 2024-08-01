@@ -31,9 +31,9 @@ using imu_t = IMU;
 static mic_nav_state_t pva_to_mic_nav_state(const pva_t &pva)
 {
     mic_nav_state_t pose;
-    pose.attitude = pva.att.qbn.cast<float32_t>();
-    pose.position = pva.pos.cast<float32_t>();
-    pose.velocity = pva.vel.cast<float32_t>();
+    pose.attitude = pva.att.qbn.cast<float64_t>();
+    pose.position = pva.pos.cast<float64_t>();
+    pose.velocity = pva.vel.cast<float64_t>();
     return pose;
 }
 
