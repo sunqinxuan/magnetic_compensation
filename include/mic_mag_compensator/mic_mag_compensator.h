@@ -25,15 +25,17 @@
 #include "common/mic_prerequisite.h"
 #include "common/mic_utils.h"
 #include "data_storer/mic_data_storer.h"
-#include "mic_nav_state_estimator/mic_nav_state_estimator.h"
+// #include "mic_nav_state_estimator/mic_nav_state_estimator.h"
 
 MIC_NAMESPACE_START
 
 using mic_mag_storer_t =
     mic_data_storer_t<mic_mag_flux_t, mic_mag_op_t>;
+using mic_mag_nav_state_storer_t=mic_data_storer_t<mic_nav_state_t>;
 
 class MicMagCompensator;
 using mic_mag_compensator_t = MicMagCompensator;
+using mic_mag_compensator_shared_ptr = std::shared_ptr<MicMagCompensator>;
 
 enum class MicMagCompensatorState : uint8_t
 {
@@ -51,7 +53,7 @@ public:
     ~MicMagCompensator();
 
     mic_mag_storer_t &get_data_storer();
-    mic_nav_state_estimator_t &get_nav_state_estimator();
+    // mic_nav_state_estimator_t &get_nav_state_estimator();
     float64_t get_curr_time() { return _curr_time_stamp; }
 
     ret_t add_mag_flux(
@@ -70,25 +72,29 @@ public:
         const float64_t ts,
         const mic_mag_op_t &mag_op_data);
 
-    // ret_t calibrate();
+    ret_t add_nav_state(
+        const float64_t ts, 
+        const mic_nav_state_t &nav_state);
+
     virtual ret_t calibrate() = 0;
-    virtual ret_t compenste() = 0;
+    virtual ret_t compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out) = 0;
 
     ret_t serialize(json_t &node);
     ret_t deserialize(json_t &node);
 
 protected:
-    void init_nav_state_estimator();
+    // void init_nav_state_estimator();
 
     float64_t _curr_time_stamp;
 
     /* data storer*/
     mic_mag_storer_t _mag_measure_storer;
     mic_mag_storer_t _mag_truth_storer;
+    mic_mag_nav_state_storer_t _nav_state_storer;
     /* working state */
     mic_mag_compensator_state_t _state;
     /* navigation state estimator */
-    mic_nav_state_estimator_unique_ptr _nav_state_estimator;
+    // mic_nav_state_estimator_unique_ptr _nav_state_estimator;
 };
 
 MIC_NAMESPACE_END

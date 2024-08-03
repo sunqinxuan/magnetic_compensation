@@ -22,6 +22,8 @@
 #ifndef MIC_KF_INTERNAL_NAVIGATION_SYSTEM
 #define MIC_KF_INTERNAL_NAVIGATION_SYSTEM
 
+#include "kf-gins/insmech.h"
+#include "common/rotation.h"
 #include "mic_nav_state_estimator/mic_nav_state_estimator.h"
 
 MIC_NAMESPACE_START
@@ -36,7 +38,7 @@ public:
     virtual ~MicKFINSEstimator() = default;
 
 protected:
-    virtual ret_t propagate(
+    virtual ret_t update(
         const float64_t ts,
         const mic_imu_t &imu_data,
         mic_nav_state_t &nav_state) override;
