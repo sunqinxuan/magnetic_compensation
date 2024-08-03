@@ -33,7 +33,7 @@ ret_t MicNavStateEstimator::add_imu_data(
     }
 
     mic_nav_state_t nav_state;
-    ret_t res = propagate(ts, imu_data, nav_state);
+    ret_t res = update(ts, imu_data, nav_state);
 
     if (res == ret_t::MIC_RET_SUCCESSED)
     {

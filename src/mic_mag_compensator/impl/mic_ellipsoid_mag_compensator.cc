@@ -111,7 +111,7 @@ ret_t MicEllipsoidMagCompensator::calibrate()
     return ret;
 }
 
-ret_t MicEllipsoidMagCompensator::compenste()
+ret_t MicEllipsoidMagCompensator::compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
 {
     // for observer updating
     notify(*this);

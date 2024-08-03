@@ -40,11 +40,11 @@ public:
     virtual ~MicTLMagCompensator() = default;
 
     virtual ret_t calibrate() override;
-    virtual ret_t compenste() override;
+    virtual ret_t compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out) override;
 
 protected:
     mic_tolles_lawson_shared_ptr _tl_model;
-    std::vector<float64_t> _tl_coeffs;
+    vector_18f_t _tl_coeffs;
 };
 
 MIC_NAMESPACE_END

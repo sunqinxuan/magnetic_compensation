@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 {
     mic_logger_t::initialize(mic_logger_type_t::MIC_BASH_FILE_LOGGER, "./mic.log");
     mic_config_t::initialize(mic_config_type_t::MIC_CONFIG_JSON,
-                             "../etc/default_config.json");
+                             "./etc/default_config.json");
     mic_logger_t::set_log_level(
         static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
 
@@ -94,6 +94,9 @@ int main(int argc, char *argv[])
 
     // mag_compensator.calibrate();
     mag_compensator_ptr->calibrate();
+
+    mic_mag_flux_t mag_flux_comp;
+    mag_compensator_ptr->compenste(mag_flux, mag_flux_comp);
 
     return 0;
 }

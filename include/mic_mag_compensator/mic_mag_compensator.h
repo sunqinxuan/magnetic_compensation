@@ -71,9 +71,8 @@ public:
         const float64_t ts,
         const mic_mag_op_t &mag_op_data);
 
-    // ret_t calibrate();
     virtual ret_t calibrate() = 0;
-    virtual ret_t compenste() = 0;
+    virtual ret_t compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out) = 0;
 
     ret_t serialize(json_t &node);
     ret_t deserialize(json_t &node);

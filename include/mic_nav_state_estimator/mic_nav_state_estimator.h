@@ -60,7 +60,7 @@ public:
 
 protected:
     /* propagate from _curr_time_stamp to ts; */
-    virtual ret_t propagate(
+    virtual ret_t update(
         const float64_t ts,
         const mic_imu_t &imu_data,
         mic_nav_state_t &nav_state) = 0;
