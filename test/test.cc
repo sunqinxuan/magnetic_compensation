@@ -80,7 +80,8 @@ int main(int argc, char *argv[])
 
             mag_compensator_ptr->add_mag_flux(ts, mag_flux);
             mag_compensator_ptr->add_mag_flux_truth(ts, mag_flux_truth);
-            mag_compensator_ptr->get_nav_state_estimator().set_nav_state(ts, nav_state);
+            mag_compensator_ptr->add_nav_state(ts,nav_state);
+            // mag_compensator_ptr->get_nav_state_estimator().set_nav_state(ts, nav_state);
         }
 
         // fp << std::fixed << line << "\t" << ts << "\t"
