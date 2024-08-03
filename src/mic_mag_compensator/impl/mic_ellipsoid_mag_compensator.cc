@@ -45,7 +45,8 @@ ret_t MicEllipsoidMagCompensator::calibrate()
         mic_nav_state_t nav_state;
         mic_mag_flux_t mag_flux_truth;
         _mag_truth_storer.get_data<mic_mag_flux_t>(ts, mag_flux_truth);
-        if (_nav_state_estimator->get_nav_state(ts, nav_state) == ret_t::MIC_RET_SUCCESSED)
+        if(_nav_state_storer.get_data<mic_nav_state_t>(ts,nav_state))
+        // if (_nav_state_estimator->get_nav_state(ts, nav_state) == ret_t::MIC_RET_SUCCESSED)
         {
             mag_vec.push_back(mag_flux.vector);
             mag_n_vec.push_back(mag_flux_truth.vector);
@@ -111,7 +112,7 @@ ret_t MicEllipsoidMagCompensator::calibrate()
     return ret;
 }
 
-ret_t MicEllipsoidMagCompensator::compenste()
+ret_t MicEllipsoidMagCompensator::compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
 {
     // for observer updating
     notify(*this);

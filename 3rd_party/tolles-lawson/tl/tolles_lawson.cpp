@@ -269,12 +269,12 @@ bool TollesLawson::createMatrixA(std::vector<std::vector<double>> &TL_A_,
     Bt_sum += Bt[i];
   }
   Bt_sum = Bt_sum / double(N);
-  double Bt_mean = (Bt_sum) > 1e-6 ? Bt_sum : 1e-6;
+  // double Bt_mean = (Bt_sum) > 1e-6 ? Bt_sum : 1e-6;
 
-  // if use Bt_scale
-  if (false) {
-    Bt_mean = Bt_scale;
-  }
+  // // if use Bt_scale
+  // if (false) {
+  //   Bt_mean = Bt_scale;
+  // }
 
   std::vector<double> Bx_hat_Bx(N), Bx_hat_By(N), Bx_hat_Bz(N), By_hat_By(N),
       By_hat_Bz(N), Bz_hat_Bz(N), Bx_hat_Bx_dot(N), Bx_hat_By_dot(N),

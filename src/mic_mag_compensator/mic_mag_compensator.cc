@@ -27,36 +27,36 @@ MIC_NAMESPACE_START
 
 MicMagCompensator::MicMagCompensator()
 {
-    init_nav_state_estimator();
+    // init_nav_state_estimator();
 }
 
 MicMagCompensator::~MicMagCompensator()
 {
 }
 
-void MicMagCompensator::init_nav_state_estimator()
-{
-    _nav_state_estimator = std::make_unique<mic_kf_ins_estimator_t>();
-}
+// void MicMagCompensator::init_nav_state_estimator()
+// {
+//     _nav_state_estimator = std::make_unique<mic_kf_ins_estimator_t>();
+// }
 
-mic_mag_storer_t& MicMagCompensator::get_data_storer()
+mic_mag_storer_t &MicMagCompensator::get_data_storer()
 {
     return _mag_measure_storer;
 }
 
-mic_nav_state_estimator_t &MicMagCompensator::get_nav_state_estimator()
-{
-    if (_nav_state_estimator == nullptr)
-        init_nav_state_estimator();
-    return *_nav_state_estimator;
-}
+// mic_nav_state_estimator_t &MicMagCompensator::get_nav_state_estimator()
+// {
+//     if (_nav_state_estimator == nullptr)
+//         init_nav_state_estimator();
+//     return *_nav_state_estimator;
+// }
 
 ret_t MicMagCompensator::add_mag_flux(
     const float64_t ts,
     const mic_mag_flux_t &mag_flux_data)
 {
     _mag_measure_storer.add_data<mic_mag_flux_t>(ts, mag_flux_data);
-    _curr_time_stamp=ts;
+    _curr_time_stamp = ts;
     return ret_t::MIC_RET_SUCCESSED;
 }
 
@@ -73,7 +73,7 @@ ret_t MicMagCompensator::add_mag_flux_truth(
     const mic_mag_flux_t &mag_flux_data)
 {
     _mag_truth_storer.add_data<mic_mag_flux_t>(ts, mag_flux_data);
-    _curr_time_stamp=ts;
+    // _curr_time_stamp = ts;
     return ret_t::MIC_RET_SUCCESSED;
 }
 
@@ -82,6 +82,14 @@ ret_t MicMagCompensator::add_mag_op_truth(
     const mic_mag_op_t &mag_op_data)
 {
     _mag_truth_storer.add_data<mic_mag_op_t>(ts, mag_op_data);
+    return ret_t::MIC_RET_SUCCESSED;
+}
+
+ret_t MicMagCompensator::add_nav_state(
+    const float64_t ts,
+    const mic_nav_state_t &nav_state)
+{
+    _nav_state_storer.add_data<mic_nav_state_t>(ts, nav_state);
     return ret_t::MIC_RET_SUCCESSED;
 }
 

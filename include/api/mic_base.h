@@ -34,6 +34,8 @@ namespace mic
     using vector_3f_t = Eigen::Vector3d;
     using quaternionf_t = Eigen::Quaterniond;
     using matrix_3f_t = Eigen::Matrix3d;
+    using matrix_3_18f_t = Eigen::Matrix<double, 3, 18>;
+    using vector_18f_t = Eigen::Matrix<double, 18, 1>;
 
     enum MicBool
     {
@@ -41,6 +43,7 @@ namespace mic
         MIC_TRUE = 1
     };
     using bool_t = MicBool;
+
 #define true (mic::MIC_TRUE)
 #define false (mic::MIC_FALSE)
 

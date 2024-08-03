@@ -90,7 +90,7 @@ public:
     virtual ~MicEllipsoidMagCompensator() = default;
 
     virtual ret_t calibrate() override;
-    virtual ret_t compenste() override;
+    virtual ret_t compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out) override;
 
 protected:
     /* Ellipsoid fitting algorithm

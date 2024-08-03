@@ -26,6 +26,7 @@
 #include <Eigen/Dense>
 #include <unordered_set>
 #include <vector>
+#include <numeric> 
 
 #include "filter/butterworth.hpp"
 #include "filter/filter.hpp"

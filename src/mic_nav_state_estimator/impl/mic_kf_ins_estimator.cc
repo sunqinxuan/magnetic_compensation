@@ -20,8 +20,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 #include "mic_nav_state_estimator/impl/mic_kf_ins_estimator.h"
-#include "kf-gins/insmech.h"
-#include "common/rotation.h"
 
 MIC_NAMESPACE_START
 
@@ -71,7 +69,7 @@ static imu_t mic_imu_to_imu(const mic_imu_t &ins_data)
     return imu;
 }
 
-ret_t MicKFINSEstimator::propagate(
+ret_t MicKFINSEstimator::update(
     const float64_t ts,
     const mic_imu_t &imu_data,
     mic_nav_state_t &nav_state)
