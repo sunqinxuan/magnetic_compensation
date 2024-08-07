@@ -89,10 +89,13 @@ public:
     MicEllipsoidMagCompensator() : MicMagCompensator() {}
     virtual ~MicEllipsoidMagCompensator() = default;
 
-    virtual ret_t calibrate() override;
-    virtual ret_t compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out) override;
-
 protected:
+    virtual ret_t do_calibrate() override;
+    virtual ret_t do_compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out) override;
+
+    virtual ret_t serialize(json_t &node) override;
+    virtual ret_t deserialize(json_t &node) override;
+
     /* Ellipsoid fitting algorithm
      *
      * Inputs:

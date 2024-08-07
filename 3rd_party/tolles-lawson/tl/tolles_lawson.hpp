@@ -45,6 +45,13 @@ public:
 
   enum TLterm { PERMANENT, INDUCED, EDDY, FDM, BIAS };
 
+  struct HashTLterm {
+      size_t operator()(const TLterm& p) const
+      {
+          return size_t(p);
+      }
+  };
+
   TollesLawson() {}
 
   /*
@@ -56,13 +63,13 @@ public:
                      const std::vector<double> &Bx,
                      const std::vector<double> &By,
                      const std::vector<double> &Bz, std::vector<double> &Bt,
-                     const std::unordered_set<TLterm> &terms = {PERMANENT,
+                     const std::unordered_set<TLterm, HashTLterm> &terms = {PERMANENT,
                                                                 INDUCED, EDDY},
                      const double Bt_scale = 50000.0);
   bool createMatrixA_Vector(
       std::vector<std::vector<double>> &TL_A_, const std::vector<double> &Bx,
       const std::vector<double> &By, const std::vector<double> &Bz,
-      const std::unordered_set<TLterm> &terms = {PERMANENT, INDUCED, EDDY});
+      const std::unordered_set<TLterm, HashTLterm> &terms = {PERMANENT, INDUCED, EDDY});
 
   /*
    * createCoeff()
@@ -74,7 +81,7 @@ public:
       const std::vector<double> &By, const std::vector<double> &Bz,
       const std::vector<double> &B, const std::vector<double> &Be,
       std::vector<double> &Bt,
-      const std::unordered_set<TLterm> &terms = {PERMANENT, INDUCED, EDDY},
+      const std::unordered_set<TLterm, HashTLterm> &terms = {PERMANENT, INDUCED, EDDY},
       const double lambda = 0.0, const double pass1 = 0.1,
       const double pass2 = 0.9, const double fs = 10.0, const int pole = 4,
       const int trim = 20, const double Bt_scale = 50000.0);
@@ -83,7 +90,7 @@ public:
       const std::vector<double> &By, const std::vector<double> &Bz,
       const std::vector<double> &Bex, const std::vector<double> &Bey,
       const std::vector<double> &Bez,
-      const std::unordered_set<TLterm> &terms = {PERMANENT, INDUCED, EDDY});
+      const std::unordered_set<TLterm, HashTLterm> &terms = {PERMANENT, INDUCED, EDDY});
 
 private:
   /*

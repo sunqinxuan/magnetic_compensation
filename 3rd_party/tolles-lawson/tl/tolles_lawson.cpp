@@ -27,7 +27,7 @@ namespace tl {
 bool TollesLawson::createMatrixA_Vector(
     std::vector<std::vector<double>> &TL_A_, const std::vector<double> &Bx,
     const std::vector<double> &By, const std::vector<double> &Bz,
-    const std::unordered_set<TLterm> &terms) {
+    const std::unordered_set<TLterm, HashTLterm> &terms) {
   if (!(Bx.size() == By.size() && Bx.size() == Bz.size())) {
     return false;
   }
@@ -158,7 +158,7 @@ double TollesLawson::createCoeff_Vector(
     std::vector<double> &TL_beta_, const std::vector<double> &Bx,
     const std::vector<double> &By, const std::vector<double> &Bz,
     const std::vector<double> &Bex, const std::vector<double> &Bey,
-    const std::vector<double> &Bez, const std::unordered_set<TLterm> &terms) {
+    const std::vector<double> &Bez, const std::unordered_set<TLterm, HashTLterm> &terms) {
   if (!(Bx.size() == By.size() && Bx.size() == Bz.size())) {
     return false;
   }
@@ -226,7 +226,7 @@ bool TollesLawson::createMatrixA(std::vector<std::vector<double>> &TL_A_,
                                  const std::vector<double> &By,
                                  const std::vector<double> &Bz,
                                  std::vector<double> &Bt,
-                                 const std::unordered_set<TLterm> &terms,
+                                 const std::unordered_set<TLterm, HashTLterm> &terms,
                                  const double Bt_scale) {
   if (!(Bx.size() == By.size() && Bx.size() == Bz.size())) {
     return false;
@@ -354,7 +354,7 @@ double TollesLawson::createCoeff(
     std::vector<double> &TL_beta_, const std::vector<double> &Bx,
     const std::vector<double> &By, const std::vector<double> &Bz,
     const std::vector<double> &B, const std::vector<double> &Be,
-    std::vector<double> &Bt, const std::unordered_set<TLterm> &terms,
+    std::vector<double> &Bt, const std::unordered_set<TLterm, HashTLterm> &terms,
     const double lambda, const double pass1, const double pass2,
     const double fs, const int pole, const int trim, const double Bt_scale) {
   if (!(Bx.size() == By.size() && Bx.size() == Bz.size() &&

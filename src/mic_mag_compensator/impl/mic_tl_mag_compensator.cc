@@ -32,7 +32,7 @@ MicTLMagCompensator::MicTLMagCompensator() : MicMagCompensator()
     _tl_model = std::make_shared<mic_tolles_lawson_t>();
 }
 
-ret_t MicTLMagCompensator::calibrate()
+ret_t MicTLMagCompensator::do_calibrate()
 {
     ret_t ret = ret_t::MIC_RET_FAILED;
 
@@ -77,7 +77,7 @@ ret_t MicTLMagCompensator::calibrate()
     return ret;
 }
 
-ret_t MicTLMagCompensator::compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
+ret_t MicTLMagCompensator::do_compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
 {
     ret_t ret = ret_t::MIC_RET_FAILED;
 
@@ -105,6 +105,20 @@ ret_t MicTLMagCompensator::compenste(const mic_mag_flux_t &in, mic_mag_flux_t &o
     // for observer updating
     notify(*this);
     return ret;
+}
+
+ret_t MicTLMagCompensator::serialize(json_t &node)
+{
+    // TODO
+    // ...
+    return MicMagCompensator::serialize(node);
+}
+
+ret_t MicTLMagCompensator::deserialize(json_t &node)
+{
+    // TODO
+    // ...
+    return MicMagCompensator::deserialize(node);
 }
 
 MIC_NAMESPACE_END

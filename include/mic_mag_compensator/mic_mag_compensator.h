@@ -39,12 +39,10 @@ using mic_mag_compensator_shared_ptr = std::shared_ptr<MicMagCompensator>;
 
 enum class MicMagCompensatorState : uint8_t
 {
-    MIC_MAG_COMPENSATE_CALIBRATION = 0,
-    MIC_MAG_COMPENSATE_NORMAL = 1,
-    MIC_MAG_COMPENSATE_ABNORMAL = 2,
-    MIC_MAG_COMPENSATE_ERROR = 3
+    MIC_MAG_COMPENSATE_UNCALIBRATED = 0,
+    MIC_MAG_COMPENSATE_CALIBRATED = 1,
 };
-using mic_mag_compensator_state_t = MicMagCompensatorState;
+using mic_state_t = MicMagCompensatorState;
 
 class MicMagCompensator : public MicObservable<MicMagCompensator>
 {
@@ -73,16 +71,24 @@ public:
         const mic_mag_op_t &mag_op_data);
 
     ret_t add_nav_state(
-        const float64_t ts, 
+        const float64_t ts,
         const mic_nav_state_t &nav_state);
 
-    virtual ret_t calibrate() = 0;
-    virtual ret_t compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out) = 0;
+    ret_t calibrate();
+    ret_t compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out);
 
-    ret_t serialize(json_t &node);
-    ret_t deserialize(json_t &node);
+    ret_t load_model(const std::string filename);
+    ret_t save_model(const std::string filename);
 
 protected:
+    virtual ret_t do_calibrate() = 0;
+    virtual ret_t do_compenste(
+        const mic_mag_flux_t &in, mic_mag_flux_t &out) = 0;
+
+    virtual ret_t serialize(json_t &node);
+    virtual ret_t deserialize(json_t &node);
+
+
     // void init_nav_state_estimator();
 
     float64_t _curr_time_stamp;
@@ -92,9 +98,10 @@ protected:
     mic_mag_storer_t _mag_truth_storer;
     mic_mag_nav_state_storer_t _nav_state_storer;
     /* working state */
-    mic_mag_compensator_state_t _state;
+    mic_state_t _state;
     /* navigation state estimator */
     // mic_nav_state_estimator_unique_ptr _nav_state_estimator;
+    std::string _version;
 };
 
 MIC_NAMESPACE_END
