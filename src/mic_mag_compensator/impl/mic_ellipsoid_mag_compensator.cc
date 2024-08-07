@@ -28,7 +28,7 @@ using namespace std;
 
 MIC_NAMESPACE_START
 
-ret_t MicEllipsoidMagCompensator::calibrate()
+ret_t MicEllipsoidMagCompensator::do_calibrate()
 {
     ret_t ret = ret_t::MIC_RET_FAILED;
 
@@ -112,7 +112,7 @@ ret_t MicEllipsoidMagCompensator::calibrate()
     return ret;
 }
 
-ret_t MicEllipsoidMagCompensator::compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
+ret_t MicEllipsoidMagCompensator::do_compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
 {
     // for observer updating
     notify(*this);
@@ -181,6 +181,20 @@ ret_t MicEllipsoidMagCompensator::ellipsoid_fit(
         coeffs[i] = u(i);
     }
     return ret_t::MIC_RET_SUCCESSED;
+}
+
+ret_t MicEllipsoidMagCompensator::serialize(json_t &node)
+{
+    // TODO
+    // ...
+    return MicMagCompensator::serialize(node);
+}
+
+ret_t MicEllipsoidMagCompensator::deserialize(json_t &node)
+{
+    // TODO
+    // ...
+    return MicMagCompensator::deserialize(node);
 }
 
 ret_t MicEllipsoidMagCompensator::compute_model_coeffs(
