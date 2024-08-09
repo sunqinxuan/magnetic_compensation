@@ -10,6 +10,14 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-sign-compare \
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 
+set(ARM 0)
+
+set(LIB_DIR lib)
+if (ARM)
+    message("DEFINED ARM, USE LIB IN LIB-ARM!")
+    set(LIB_DIR lib-arm)
+endif()
+
 #####################################################################################
 set(INSTALL_DIR "${CMAKE_HOME_DIRECTORY}/install")
 set(INSTALL_BIN "${INSTALL_DIR}/bin")
@@ -30,20 +38,20 @@ include_directories(${CMAKE_HOME_DIRECTORY}/3rd_party/nlohmann/include)
 ## ceres
 set(CERES_DIR "${CMAKE_HOME_DIRECTORY}/3rd_party/ceres-1.12.0")
 include_directories(${CERES_DIR}/include/)
-link_directories(${CERES_DIR}/lib/)
-install(DIRECTORY ${CERES_DIR}/lib/ DESTINATION ${INSTALL_LIB})
+link_directories(${CERES_DIR}/${LIB_DIR}/)
+install(DIRECTORY ${CERES_DIR}/${LIB_DIR}/ DESTINATION ${INSTALL_LIB})
 
 ## glog
 set(GLOG_DIR "${CMAKE_HOME_DIRECTORY}/3rd_party/glog-0.4.0")
 include_directories(${GLOG_DIR}/include/)
-link_directories(${GLOG_DIR}/lib/)
-install(DIRECTORY ${GLOG_DIR}/lib/ DESTINATION ${INSTALL_LIB})
+link_directories(${GLOG_DIR}/${LIB_DIR}/)
+install(DIRECTORY ${GLOG_DIR}/${LIB_DIR}/ DESTINATION ${INSTALL_LIB})
 
 ## gflag
 set(GFLAGS_DIR "${CMAKE_HOME_DIRECTORY}/3rd_party/gflag-2.1.2")
 include_directories(${GFLAGS_DIR}/include/)
-link_directories(${GFLAGS_DIR}/lib/)
-install(DIRECTORY ${GFLAGS_DIR}/lib/ DESTINATION ${INSTALL_LIB})
+link_directories(${GFLAGS_DIR}/${LIB_DIR}/)
+install(DIRECTORY ${GFLAGS_DIR}/${LIB_DIR}/ DESTINATION ${INSTALL_LIB})
 
 ## kf-gins
 include_directories(${CMAKE_HOME_DIRECTORY}/3rd_party/kf-gins/)
