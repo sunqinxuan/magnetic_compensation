@@ -30,8 +30,6 @@ MIC_NAMESPACE_START
 
 ret_t MicEllipsoidMagCompensator::do_calibrate()
 {
-    ret_t ret = ret_t::MIC_RET_FAILED;
-
     auto data_range = _mag_measure_storer.get_data_range<mic_mag_flux_t>(0.0, _curr_time_stamp + 1);
     auto it_start = data_range.first;
     auto it_end = data_range.second;
@@ -45,7 +43,7 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
         mic_nav_state_t nav_state;
         mic_mag_flux_t mag_flux_truth;
         _mag_truth_storer.get_data<mic_mag_flux_t>(ts, mag_flux_truth);
-        if(_nav_state_storer.get_data<mic_nav_state_t>(ts,nav_state))
+        if (_nav_state_storer.get_data<mic_nav_state_t>(ts, nav_state))
         // if (_nav_state_estimator->get_nav_state(ts, nav_state) == ret_t::MIC_RET_SUCCESSED)
         {
             mag_vec.push_back(mag_flux.vector);
@@ -53,9 +51,15 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
             R_nb.push_back(nav_state.attitude.matrix());
         }
     }
+    if (mag_vec.size() < 20)
+        return ret_t::MIC_RET_FAILED;
 
     std::vector<float64_t> ellipsoid_coeffs;
-    ellipsoid_fit(mag_vec, ellipsoid_coeffs);
+    if (ellipsoid_fit(mag_vec, ellipsoid_coeffs) == ret_t::MIC_RET_FAILED)
+    {
+        MIC_LOG_ERR("ellipsoid fitting error!");
+        return ret_t::MIC_RET_FAILED;
+    }
 
     // debug info
     MIC_LOG_DEBUG_INFO("ellipsoid coefficients:");
@@ -69,8 +73,11 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     MIC_LOG_DEBUG_INFO("mag_earth_intensity = %f", mag_earth_intensity);
     // matrix_3f_t D_tilde_inv;
     // vector_3f_t o_hat;
-    compute_model_coeffs(ellipsoid_coeffs, mag_earth_intensity, _D_tilde_inv, _o_hat);
-
+    if (compute_model_coeffs(ellipsoid_coeffs, mag_earth_intensity, _D_tilde_inv, _o_hat) == ret_t::MIC_RET_FAILED)
+    {
+        MIC_LOG_ERR("failed to compute model coefficients!");
+        return ret_t::MIC_RET_FAILED;
+    }
     // debug
     ofstream fp_d("D_tilde_inv.txt"), fp_o("o_hat.txt");
     fp_d << fixed << _D_tilde_inv;
@@ -79,7 +86,11 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     fp_o.close();
 
     matrix_3f_t R_hat;
-    init_value_estimate(mag_vec, mag_n_vec, R_nb, _D_tilde_inv, _o_hat, R_hat);
+    if (init_value_estimate(mag_vec, mag_n_vec, R_nb, _D_tilde_inv, _o_hat, R_hat) == ret_t::MIC_RET_FAILED)
+    {
+        MIC_LOG_ERR("failed to compute intial R_hat!");
+        return ret_t::MIC_RET_FAILED;
+    }
 
     // debug
     ofstream fp_R("R_hat.txt");
@@ -93,30 +104,38 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     if (R_hat.determinant() > 0)
     {
         quat = quaternionf_t(R_hat);
-        ceres_optimize(mag_vec, R_nb, _D_tilde_inv, _o_hat, quat);
+        if (ceres_optimize(mag_vec, R_nb, _D_tilde_inv, _o_hat, quat) == ret_t::MIC_RET_FAILED)
+        {
+            MIC_LOG_ERR("failed to get R_opt by ceres optimization!");
+            return ret_t::MIC_RET_FAILED;
+        }
 
         // debug
-        matrix_3f_t R_opt = quat.toRotationMatrix();
+        _R_opt = quat.toRotationMatrix();
         cout << "R_opt = " << endl
-             << R_opt << endl;
+             << _R_opt << endl;
         ofstream fp_R("R_opt.txt");
-        fp_R << fixed << R_opt;
+        fp_R << fixed << _R_opt;
         fp_R.close();
     }
     else
     {
         MIC_LOG_ERR("det(R_hat) != 1");
+        return ret_t::MIC_RET_FAILED;
     }
 
     notify(*this);
-    return ret;
+    return ret_t::MIC_RET_SUCCESSED;
 }
 
 ret_t MicEllipsoidMagCompensator::do_compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
 {
-    // for observer updating
+    matrix_3f_t matrix = _R_opt.transpose() * _D_tilde_inv;
+    vector_3f_t offset = _o_hat;
+
+    out.vector = matrix * (in.vector - offset);
     notify(*this);
-    return ret_t::MIC_RET_FAILED;
+    return ret_t::MIC_RET_SUCCESSED;
 }
 
 ret_t MicEllipsoidMagCompensator::ellipsoid_fit(
@@ -185,15 +204,38 @@ ret_t MicEllipsoidMagCompensator::ellipsoid_fit(
 
 ret_t MicEllipsoidMagCompensator::serialize(json_t &node)
 {
-    // TODO
-    // ...
+    std::vector<double> D(9), R(9), o(3);
+    for (int i = 0; i < 3; i++)
+    {
+        o[i] = _o_hat(i);
+        for (int j = 0; j < 3; j++)
+        {
+            D[i * 3 + j] = _D_tilde_inv(i, j);
+            R[i * 3 + j] = _R_opt(i, j);
+        }
+    }
+    node["ellipsoid_model"]["coeff_D_inv"] = D;
+    node["ellipsoid_model"]["coeff_R"] = R;
+    node["ellipsoid_model"]["coeff_o"] = o;
     return MicMagCompensator::serialize(node);
 }
 
 ret_t MicEllipsoidMagCompensator::deserialize(json_t &node)
 {
-    // TODO
-    // ...
+    std::vector<double> D = node["ellipsoid_model"]["coeff_D_inv"];
+    std::vector<double> R = node["ellipsoid_model"]["coeff_R"];
+    std::vector<double> o = node["ellipsoid_model"]["coeff_o"];
+    if (D.size() != 9 || R.size() != 9 || o.size() != 3)
+        return ret_t::MIC_RET_FAILED;
+    for (int i = 0; i < 3; i++)
+    {
+        _o_hat(i) = o[i];
+        for (int j = 0; j < 3; j++)
+        {
+            _D_tilde_inv(i, j) = D[i * 3 + j];
+            _R_opt(i, j) = R[i * 3 + j];
+        }
+    }
     return MicMagCompensator::deserialize(node);
 }
 

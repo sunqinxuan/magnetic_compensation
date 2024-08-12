@@ -89,9 +89,21 @@ target_link_libraries(mic_test
     magnetic_compensation ${DEPEND_LIBS} -pthread
 )
 
+add_executable(mic_calibrate test/calibrate.cc)
+target_compile_options(mic_calibrate PRIVATE -std=c++11)
+target_link_libraries(mic_calibrate
+    magnetic_compensation ${DEPEND_LIBS} -pthread
+)
+
+add_executable(mic_compensate test/compensate.cc)
+target_compile_options(mic_compensate PRIVATE -std=c++11)
+target_link_libraries(mic_compensate
+    magnetic_compensation ${DEPEND_LIBS} -pthread
+)
+
 install(
     TARGETS
-    mic_test
+    mic_test mic_calibrate mic_compensate
     DESTINATION
     ${INSTALL_BIN}
 )

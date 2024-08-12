@@ -79,45 +79,52 @@ ret_t MicTLMagCompensator::do_calibrate()
 
 ret_t MicTLMagCompensator::do_compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
 {
-    ret_t ret = ret_t::MIC_RET_FAILED;
-
     matrix_3_18f_t A_matrix;
     std::vector<std::vector<double>> TL_A;
     std::vector<double> mag_x(1, in.vector(0)), mag_y(1, in.vector(1)), mag_z(1, in.vector(2));
 
-    // if only one measure is provided, 
+    // if only one measure is provided,
     // the derivative terms in matrix A will be zero;
     // that is to say, no eddy current interference is considered;
-    _tl_model->createMatrixA_Vector(TL_A,mag_x,mag_y,mag_z);
+    _tl_model->createMatrixA_Vector(TL_A, mag_x, mag_y, mag_z);
 
-    for(size_t i=0;i<TL_A.size();++i)
+    for (size_t i = 0; i < TL_A.size(); ++i)
     {
-        for(size_t j=0;j<TL_A[i].size();++j)
+        for (size_t j = 0; j < TL_A[i].size(); ++j)
         {
-            A_matrix(j,i)=TL_A[i][j];
+            A_matrix(j, i) = TL_A[i][j];
             // cout<<TL_A[i][j]<<"\t";
         }
         // cout<<endl;
     }
 
-    out.vector=A_matrix*_tl_coeffs;
+    out.vector = A_matrix * _tl_coeffs;
 
     // for observer updating
     notify(*this);
-    return ret;
+    return ret_t::MIC_RET_SUCCESSED;
 }
 
 ret_t MicTLMagCompensator::serialize(json_t &node)
 {
-    // TODO
-    // ...
+    std::vector<double> beta(18);
+    for (int i = 0; i < 18; i++)
+    {
+        beta[i] = _tl_coeffs(i);
+    }
+    node["tl_model"]["coeff_beta"] = beta;
     return MicMagCompensator::serialize(node);
 }
 
 ret_t MicTLMagCompensator::deserialize(json_t &node)
 {
-    // TODO
-    // ...
+    std::vector<double> beta = node["tl_model"]["coeff_beta"];
+    if (beta.size() != 18)
+        return ret_t::MIC_RET_FAILED;
+    for (int i = 0; i < 18; i++)
+    {
+        _tl_coeffs(i) = beta[i];
+    }
     return MicMagCompensator::deserialize(node);
 }
 

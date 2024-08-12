@@ -147,6 +147,7 @@ protected:
 protected:
     matrix_3f_t _D_tilde_inv;
     vector_3f_t _o_hat;
+    matrix_3f_t _R_opt;
 };
 
 MIC_NAMESPACE_END

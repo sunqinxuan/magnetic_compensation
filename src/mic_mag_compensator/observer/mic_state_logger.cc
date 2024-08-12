@@ -25,10 +25,10 @@ MIC_NAMESPACE_START
 
 void MicStateLogger::update(mic_mag_compensator_t &comp)
 {
-    MIC_LOG_BASIC_INFO("output state!");
+    // MIC_LOG_BASIC_INFO("output state!");
 
-    float64_t ts = comp.get_curr_time();
-    MIC_LOG_BASIC_INFO("current time: %f", ts);
+    // float64_t ts = comp.get_curr_time();
+    // MIC_LOG_BASIC_INFO("current time: %f", ts);
 
     // mic_mag_storer_t data_storer = comp.get_data_storer();
     // auto data_range = data_storer.get_data_range<mic_mag_flux_t>(0.0, ts);
