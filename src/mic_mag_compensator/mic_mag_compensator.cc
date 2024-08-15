@@ -134,7 +134,7 @@ ret_t MicMagCompensator::load_model(const std::string filename)
     if (is_load_map)
     {
         ret = deserialize(map_json);
-        MIC_LOG_BASIC_INFO("[MIC] load mic model:\n%s", map_json.dump().c_str());
+        MIC_LOG_BASIC_INFO("[MIC] load mic model:\n%s", map_json.dump(4).c_str());
     }
     if (is_load_map && ret == ret_t::MIC_RET_SUCCESSED)
     {
@@ -156,7 +156,7 @@ ret_t MicMagCompensator::save_model(const std::string filename)
     ret_t ret = serialize(map_json);
     if (ret == ret_t::MIC_RET_SUCCESSED)
     {
-        MIC_LOG_BASIC_INFO("[MIC] save mic model:\n%s", map_json.dump().c_str());
+        MIC_LOG_BASIC_INFO("[MIC] save mic model:\n%s", map_json.dump(4).c_str());
         auto cbor = json_t::to_cbor(map_json);
         map_file.write((char*)cbor.data(), cbor.size() * sizeof(uint8_t));
     }

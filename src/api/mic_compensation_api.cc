@@ -27,6 +27,7 @@
 #include "mic_mag_compensator/mic_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_cabin_mag_compensator.h"
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
 
 namespace mic
@@ -50,13 +51,17 @@ namespace mic
 
         auto comp_method = MIC_CONFIG_GET(std::string, "compensation_method");
 
-        if ("tl" == comp_method)  // "tl"
+        if ("tl" == comp_method)
         {
             _mic_compensator = std::make_shared<mic_tl_mag_compensator_t>();
         }
-        else if ("ellipsoid" == comp_method) // "ellipsoid"
+        else if ("ellipsoid" == comp_method)
         {
             _mic_compensator = std::make_shared<mic_ellipsoid_mag_compensator_t>();
+        }
+        else if ("cabin"==comp_method)
+        {
+            _mic_compensator=std::make_shared<mic_cabin_mag_compensator_t>();
         }
         else
         {

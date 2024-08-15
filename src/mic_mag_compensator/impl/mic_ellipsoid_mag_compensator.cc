@@ -28,6 +28,28 @@ using namespace std;
 
 MIC_NAMESPACE_START
 
+ret_t MicEllipsoidMagCompensator::fit_ellipsoid_model(
+    const std::vector<vector_3f_t> &mag,
+    const float64_t mag_earth_intensity,
+    matrix_3f_t &D_tilde_inv,
+    vector_3f_t &o_hat)
+{
+    std::vector<float64_t> coeffs;
+    if (ellipsoid_fit(mag, coeffs) == ret_t::MIC_RET_SUCCESSED)
+    {
+        return compute_model_coeffs(coeffs, mag_earth_intensity, D_tilde_inv, o_hat);
+    }
+    return ret_t::MIC_RET_FAILED;
+}
+
+ret_t MicEllipsoidMagCompensator::fit_ls_rotation(
+    const std::vector<vector_3f_t> &p_left,
+    const std::vector<vector_3f_t> &p_right,
+    matrix_3f_t &R_hat)
+{
+    return ls_fitting(p_left, p_right, R_hat);
+}
+
 ret_t MicEllipsoidMagCompensator::do_calibrate()
 {
     auto data_range = _mag_measure_storer.get_data_range<mic_mag_flux_t>(0.0, _curr_time_stamp + 1);
@@ -44,7 +66,6 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
         mic_mag_flux_t mag_flux_truth;
         _mag_truth_storer.get_data<mic_mag_flux_t>(ts, mag_flux_truth);
         if (_nav_state_storer.get_data<mic_nav_state_t>(ts, nav_state))
-        // if (_nav_state_estimator->get_nav_state(ts, nav_state) == ret_t::MIC_RET_SUCCESSED)
         {
             mag_vec.push_back(mag_flux.vector);
             mag_n_vec.push_back(mag_flux_truth.vector);
@@ -85,8 +106,16 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     fp_d.close();
     fp_o.close();
 
-    matrix_3f_t R_hat;
-    if (init_value_estimate(mag_vec, mag_n_vec, R_nb, _D_tilde_inv, _o_hat, R_hat) == ret_t::MIC_RET_FAILED)
+    matrix_3f_t R_hat = matrix_3f_t::Identity();
+    const size_t N = mag_vec.size();
+    std::vector<vector_3f_t> p_left(N), p_right(N);
+    for (size_t i = 0; i < N; ++i)
+    {
+        p_left[i] = _D_tilde_inv * (mag_vec[i] - _o_hat);
+        p_right[i] = R_nb[i].transpose() * mag_n_vec[i];
+    }
+    // if (init_value_estimate(mag_vec, mag_n_vec, R_nb, _D_tilde_inv, _o_hat, R_hat) == ret_t::MIC_RET_FAILED)
+    if (ls_fitting(p_left, p_right, R_hat) == ret_t::MIC_RET_FAILED)
     {
         MIC_LOG_ERR("failed to compute intial R_hat!");
         return ret_t::MIC_RET_FAILED;
@@ -96,12 +125,11 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     ofstream fp_R("R_hat.txt");
     fp_R << fixed << R_hat;
     fp_R.close();
-    MIC_LOG_DEBUG_INFO("det(R_hat) = %f", R_hat.determinant());
     cout << "R_hat = " << endl
          << R_hat << endl;
 
     quaternionf_t quat;
-    if (R_hat.determinant() > 0)
+    // if (R_hat.determinant() > 0)
     {
         quat = quaternionf_t(R_hat);
         if (ceres_optimize(mag_vec, R_nb, _D_tilde_inv, _o_hat, quat) == ret_t::MIC_RET_FAILED)
@@ -118,11 +146,11 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
         fp_R << fixed << _R_opt;
         fp_R.close();
     }
-    else
-    {
-        MIC_LOG_ERR("det(R_hat) != 1");
-        return ret_t::MIC_RET_FAILED;
-    }
+    // else
+    // {
+    //     MIC_LOG_ERR("det(R_hat) != 1");
+    //     return ret_t::MIC_RET_FAILED;
+    // }
 
     notify(*this);
     return ret_t::MIC_RET_SUCCESSED;
@@ -344,24 +372,87 @@ ret_t MicEllipsoidMagCompensator::ceres_optimize(
         return ret_t::MIC_RET_FAILED;
 }
 
-ret_t MicEllipsoidMagCompensator::init_value_estimate(
-    const std::vector<vector_3f_t> &mag_m,
-    const std::vector<vector_3f_t> &mag_n,
-    const std::vector<matrix_3f_t> &R_nb,
-    const matrix_3f_t &D_tilde_inv,
-    const vector_3f_t &o_hat,
+// ret_t MicEllipsoidMagCompensator::init_value_estimate(
+//     const std::vector<vector_3f_t> &mag_m,
+//     const std::vector<vector_3f_t> &mag_n,
+//     const std::vector<matrix_3f_t> &R_nb,
+//     const matrix_3f_t &D_tilde_inv,
+//     const vector_3f_t &o_hat,
+//     matrix_3f_t &R_hat)
+// {
+//     if (mag_m.size() != mag_n.size() || mag_m.size() != R_nb.size())
+//         return ret_t::MIC_RET_FAILED;
+
+//     const size_t N = mag_m.size();
+//     std::vector<vector_3f_t> p_left(N), p_right(N);
+//     for (size_t i = 0; i < N; ++i)
+//     {
+//         p_left[i] = D_tilde_inv * (mag_m[i] - o_hat);
+//         p_right[i] = R_nb[i].transpose() * mag_n[i];
+//     }
+
+//     vector_3f_t p_left_mean = vector_3f_t::Zero();
+//     vector_3f_t p_right_mean = vector_3f_t::Zero();
+//     for (const auto &vec : p_left)
+//         p_left_mean += vec;
+//     for (const auto &vec : p_right)
+//         p_right_mean += vec;
+//     p_left_mean /= N;
+//     p_right_mean /= N;
+
+//     matrix_3f_t H;
+//     for (size_t i = 0; i < N; ++i)
+//     {
+//         p_left[i] -= p_left_mean;
+//         p_right[i] -= p_right_mean;
+//         H += p_left[i] * p_right[i].transpose();
+//     }
+
+//     Eigen::JacobiSVD<matrix_3f_t> svd(H, Eigen::ComputeFullU | Eigen::ComputeFullV);
+//     matrix_3f_t U = svd.matrixU();
+//     matrix_3f_t S = svd.singularValues().asDiagonal();
+//     matrix_3f_t V = svd.matrixV();
+
+//     R_hat = V * U.transpose();
+
+//     if (R_hat.determinant() < 0)
+//     {
+//         MIC_LOG_DEBUG_INFO("det(R_hat) = %f", R_hat.determinant());
+//         V.block<3, 1>(0, 2) *= -1;
+//         R_hat = V * U.transpose();
+//     }
+
+//     // debug
+//     cout << "Matrix H:\n"
+//          << H << endl;
+//     cout << "\nU Matrix:\n"
+//          << U << endl;
+//     cout << "\nSingular Values (as a diagonal matrix):\n"
+//          << S << endl;
+//     cout << "\nV Matrix:\n"
+//          << V << endl;
+//     matrix_3f_t H_reconstructed = U * S * V.transpose();
+//     cout << "\nReconstructed Matrix (U * S * V^T):\n"
+//          << H_reconstructed << endl;
+
+//     return ret_t::MIC_RET_SUCCESSED;
+// }
+
+ret_t MicEllipsoidMagCompensator::ls_fitting(
+    const std::vector<vector_3f_t> &p_left,
+    const std::vector<vector_3f_t> &p_right,
     matrix_3f_t &R_hat)
 {
-    if (mag_m.size() != mag_n.size() || mag_m.size() != R_nb.size())
+    if (p_left.size() != p_right.size())
         return ret_t::MIC_RET_FAILED;
 
-    const size_t N = mag_m.size();
-    std::vector<vector_3f_t> p_left(N), p_right(N);
-    for (size_t i = 0; i < N; ++i)
-    {
-        p_left[i] = D_tilde_inv * (mag_m[i] - o_hat);
-        p_right[i] = R_nb[i].transpose() * mag_n[i];
-    }
+    const size_t N = p_left.size();
+    // std::vector<vector_3f_t> p_left(N), p_right(N);
+    // for (size_t i = 0; i < N; ++i)
+    // {
+    //     p_left[i] = D_tilde_inv * (mag_m[i] - o_hat);
+    //     p_right[i] = R_nb[i].transpose() * mag_n[i];
+    // }
 
     vector_3f_t p_left_mean = vector_3f_t::Zero();
     vector_3f_t p_right_mean = vector_3f_t::Zero();
@@ -372,12 +463,13 @@ ret_t MicEllipsoidMagCompensator::init_value_estimate(
     p_left_mean /= N;
     p_right_mean /= N;
 
-    matrix_3f_t H;
+    vector_3f_t q_left, q_right;
+    matrix_3f_t H = matrix_3f_t::Zero();
     for (size_t i = 0; i < N; ++i)
     {
-        p_left[i] -= p_left_mean;
-        p_right[i] -= p_right_mean;
-        H += p_left[i] * p_right[i].transpose();
+        q_left = p_left[i] - p_left_mean;
+        q_right = p_right[i] - p_right_mean;
+        H += q_left * q_right.transpose();
     }
 
     Eigen::JacobiSVD<matrix_3f_t> svd(H, Eigen::ComputeFullU | Eigen::ComputeFullV);
@@ -386,6 +478,13 @@ ret_t MicEllipsoidMagCompensator::init_value_estimate(
     matrix_3f_t V = svd.matrixV();
 
     R_hat = V * U.transpose();
+
+    // if (R_hat.determinant() < 0)
+    // {
+    //     MIC_LOG_DEBUG_INFO("det(R_hat) = %f", R_hat.determinant());
+    //     V.block<3, 1>(0, 2) *= -1;
+    //     R_hat = V * U.transpose();
+    // }
 
     // debug
     cout << "Matrix H:\n"

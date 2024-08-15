@@ -9,6 +9,7 @@
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
 #include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_cabin_mag_compensator.h"
 
 USING_NAMESPACE_MIC;
 
@@ -29,18 +30,22 @@ int main(int argc, char *argv[])
     }
 
     mic_mag_compensator_shared_ptr mag_compensator_ptr;
-    // std::string method = MIC_CONFIG_GET(std::string, "compensation_method");
-    if (MIC_CONFIG_GET(std::string, "compensation_method") == "tl")
+    auto comp_method = MIC_CONFIG_GET(std::string, "compensation_method");
+    if ("tl" == comp_method)
     {
         mag_compensator_ptr = std::make_shared<mic_tl_mag_compensator_t>();
     }
-    else if (MIC_CONFIG_GET(std::string, "compensation_method") == "ellipsoid")
+    else if ("ellipsoid" == comp_method)
     {
         mag_compensator_ptr = std::make_shared<mic_ellipsoid_mag_compensator_t>();
     }
+    else if ("cabin" == comp_method)
+    {
+        mag_compensator_ptr = std::make_shared<mic_cabin_mag_compensator_t>();
+    }
     else
     {
-        MIC_LOG_ERR("Error: please specify a correct model name!");
+        MIC_LOG_ERR("[MIC] MIC compensation method is not supported!");
         return -1;
     }
 
@@ -80,17 +85,18 @@ int main(int argc, char *argv[])
 
     mag_compensator_ptr->calibrate();
 
-    time_t tt = time(nullptr); // milliseconds from 1970;
-    struct tm *cur_tm = localtime(&tt);
-    std::stringstream tm_str;
-    tm_str << cur_tm->tm_year + 1900 << "-"
-           << cur_tm->tm_mon << "-"
-           << cur_tm->tm_mday << "-"
-           << cur_tm->tm_hour << "-"
-           << cur_tm->tm_min << "-"
-           << cur_tm->tm_sec;
+    // time_t tt = time(nullptr); // milliseconds from 1970;
+    // struct tm *cur_tm = localtime(&tt);
+    // std::stringstream tm_str;
+    // tm_str << cur_tm->tm_year + 1900 << "-"
+    //        << cur_tm->tm_mon << "-"
+    //        << cur_tm->tm_mday << "-"
+    //        << cur_tm->tm_hour << "-"
+    //        << cur_tm->tm_min << "-"
+    //        << cur_tm->tm_sec;
 
-    mag_compensator_ptr->save_model("./" + tm_str.str() + ".mdl");
+    // mag_compensator_ptr->save_model("./" + tm_str.str() + ".mdl");
+    mag_compensator_ptr->save_model("./mic_model_" + comp_method + ".mdl");
 
     // mic_mag_flux_t mag_flux_comp;
     // mag_compensator_ptr->compenste(mag_flux, mag_flux_comp);
