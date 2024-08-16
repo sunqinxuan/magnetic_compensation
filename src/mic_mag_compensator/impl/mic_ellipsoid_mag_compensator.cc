@@ -105,6 +105,7 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     fp_o << fixed << _o_hat;
     fp_d.close();
     fp_o.close();
+    MIC_LOG_DEBUG_INFO("det(D_tilde_inv) = %f", _D_tilde_inv.determinant());
 
     matrix_3f_t R_hat = matrix_3f_t::Identity();
     const size_t N = mag_vec.size();
@@ -129,7 +130,7 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
          << R_hat << endl;
 
     quaternionf_t quat;
-    // if (R_hat.determinant() > 0)
+    if (R_hat.determinant() > 0)
     {
         quat = quaternionf_t(R_hat);
         if (ceres_optimize(mag_vec, R_nb, _D_tilde_inv, _o_hat, quat) == ret_t::MIC_RET_FAILED)
@@ -146,11 +147,11 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
         fp_R << fixed << _R_opt;
         fp_R.close();
     }
-    // else
-    // {
-    //     MIC_LOG_ERR("det(R_hat) != 1");
-    //     return ret_t::MIC_RET_FAILED;
-    // }
+    else
+    {
+        MIC_LOG_ERR("det(R_hat) != 1");
+        return ret_t::MIC_RET_FAILED;
+    }
 
     notify(*this);
     return ret_t::MIC_RET_SUCCESSED;
@@ -164,6 +165,43 @@ ret_t MicEllipsoidMagCompensator::do_compenste(const mic_mag_flux_t &in, mic_mag
     out.vector = matrix * (in.vector - offset);
     notify(*this);
     return ret_t::MIC_RET_SUCCESSED;
+}
+
+ret_t MicEllipsoidMagCompensator::serialize(json_t &node)
+{
+    std::vector<double> D(9), R(9), o(3);
+    for (int i = 0; i < 3; i++)
+    {
+        o[i] = _o_hat(i);
+        for (int j = 0; j < 3; j++)
+        {
+            D[i * 3 + j] = _D_tilde_inv(i, j);
+            R[i * 3 + j] = _R_opt(i, j);
+        }
+    }
+    node["ellipsoid_model"]["coeff_D_inv"] = D;
+    node["ellipsoid_model"]["coeff_R"] = R;
+    node["ellipsoid_model"]["coeff_o"] = o;
+    return MicMagCompensator::serialize(node);
+}
+
+ret_t MicEllipsoidMagCompensator::deserialize(json_t &node)
+{
+    std::vector<double> D = node["ellipsoid_model"]["coeff_D_inv"];
+    std::vector<double> R = node["ellipsoid_model"]["coeff_R"];
+    std::vector<double> o = node["ellipsoid_model"]["coeff_o"];
+    if (D.size() != 9 || R.size() != 9 || o.size() != 3)
+        return ret_t::MIC_RET_FAILED;
+    for (int i = 0; i < 3; i++)
+    {
+        _o_hat(i) = o[i];
+        for (int j = 0; j < 3; j++)
+        {
+            _D_tilde_inv(i, j) = D[i * 3 + j];
+            _R_opt(i, j) = R[i * 3 + j];
+        }
+    }
+    return MicMagCompensator::deserialize(node);
 }
 
 ret_t MicEllipsoidMagCompensator::ellipsoid_fit(
@@ -210,9 +248,18 @@ ret_t MicEllipsoidMagCompensator::ellipsoid_fit(
     Eigen::MatrixXd evec = es_m.eigenvectors().real();
     Eigen::VectorXd eval = es_m.eigenvalues().real();
 
+    // debug
+    cout << "\nM:\n"
+         << M << endl;
+    cout << "\nevec:\n"
+         << evec << endl;
+    cout << "\neval:\n"
+         << eval.transpose() << endl;
+
     // Find the column index of the maximum eigenvalue
     int max_column_index;
     eval.maxCoeff(&max_column_index);
+    cout << "max_column_index = " << max_column_index << endl;
 
     // Get the corresponding eigenvector
     Eigen::VectorXd u1 = evec.col(max_column_index);
@@ -228,43 +275,6 @@ ret_t MicEllipsoidMagCompensator::ellipsoid_fit(
         coeffs[i] = u(i);
     }
     return ret_t::MIC_RET_SUCCESSED;
-}
-
-ret_t MicEllipsoidMagCompensator::serialize(json_t &node)
-{
-    std::vector<double> D(9), R(9), o(3);
-    for (int i = 0; i < 3; i++)
-    {
-        o[i] = _o_hat(i);
-        for (int j = 0; j < 3; j++)
-        {
-            D[i * 3 + j] = _D_tilde_inv(i, j);
-            R[i * 3 + j] = _R_opt(i, j);
-        }
-    }
-    node["ellipsoid_model"]["coeff_D_inv"] = D;
-    node["ellipsoid_model"]["coeff_R"] = R;
-    node["ellipsoid_model"]["coeff_o"] = o;
-    return MicMagCompensator::serialize(node);
-}
-
-ret_t MicEllipsoidMagCompensator::deserialize(json_t &node)
-{
-    std::vector<double> D = node["ellipsoid_model"]["coeff_D_inv"];
-    std::vector<double> R = node["ellipsoid_model"]["coeff_R"];
-    std::vector<double> o = node["ellipsoid_model"]["coeff_o"];
-    if (D.size() != 9 || R.size() != 9 || o.size() != 3)
-        return ret_t::MIC_RET_FAILED;
-    for (int i = 0; i < 3; i++)
-    {
-        _o_hat(i) = o[i];
-        for (int j = 0; j < 3; j++)
-        {
-            _D_tilde_inv(i, j) = D[i * 3 + j];
-            _R_opt(i, j) = R[i * 3 + j];
-        }
-    }
-    return MicMagCompensator::deserialize(node);
 }
 
 ret_t MicEllipsoidMagCompensator::compute_model_coeffs(
@@ -292,8 +302,18 @@ ret_t MicEllipsoidMagCompensator::compute_model_coeffs(
     vector_3f_t bs_hat;
     bs_hat << p, q, r;
     double cs_hat = d;
-    // std::cout << "As_hat = " << std::endl
-    //           << As_hat << std::endl;
+
+    if (As_hat.determinant() < 0)
+    {
+        As_hat *= -1;
+        bs_hat *= -1;
+        cs_hat *= -1;
+    }
+
+    // debug
+    MIC_LOG_DEBUG_INFO("det(As_hat) = %f", As_hat.determinant());
+    std::cout << "As_hat = " << std::endl
+              << As_hat << std::endl;
     // std::cout << "As_hat.inverse() = " << std::endl
     //           << As_hat.inverse() << std::endl;
     // std::cout << "bs_hat = " << bs_hat.transpose() << std::endl;
@@ -309,6 +329,17 @@ ret_t MicEllipsoidMagCompensator::compute_model_coeffs(
     Eigen::SelfAdjointEigenSolver<matrix_3f_t> es(As_hat);
     matrix_3f_t As_evec = es.eigenvectors();
     vector_3f_t As_eval = es.eigenvalues(); // increasing order;
+
+    if (As_evec.determinant() < 0)
+    {
+        As_evec.block<3, 1>(0, 2) *= -1;
+    }
+
+    // debug
+    cout << "\nMatrix As_evec:\n"
+         << As_evec << endl;
+    cout << "\nAs_eval:\n"
+         << As_eval.transpose() << endl;
 
     matrix_3f_t sqrt_As_eval;
     sqrt_As_eval << sqrt(fabs(As_eval[0])), 0, 0, 0, sqrt(fabs(As_eval[1])), 0, 0,
@@ -479,12 +510,12 @@ ret_t MicEllipsoidMagCompensator::ls_fitting(
 
     R_hat = V * U.transpose();
 
-    // if (R_hat.determinant() < 0)
-    // {
-    //     MIC_LOG_DEBUG_INFO("det(R_hat) = %f", R_hat.determinant());
-    //     V.block<3, 1>(0, 2) *= -1;
-    //     R_hat = V * U.transpose();
-    // }
+    MIC_LOG_DEBUG_INFO("det(R_hat) = %f", R_hat.determinant());
+    if (R_hat.determinant() < 0)
+    {
+        V.block<3, 1>(0, 2) *= -1;
+        R_hat = V * U.transpose();
+    }
 
     // debug
     cout << "Matrix H:\n"

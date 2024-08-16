@@ -54,7 +54,7 @@ public:
         Eigen::Matrix<T, 3, 1> mag_r = mag_r_.template cast<T>();
         Eigen::Matrix<T, 3, 1> mag_c = mag_c_.template cast<T>();
 
-        Eigen::Matrix<T, 3, 1> mag_r1 = D_tilde_inv * R * mag_c + o_hat;
+        Eigen::Matrix<T, 3, 1> mag_r1 = D_tilde_inv.inverse() * R * mag_c + o_hat;
 
         Eigen::Map<Eigen::Matrix<T, 3, 1>> residual(residual_ptr);
         residual = mag_r - mag_r1;
