@@ -75,7 +75,7 @@ public:
         const mic_nav_state_t &nav_state);
 
     ret_t calibrate();
-    ret_t compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out);
+    ret_t compenste(const float64_t ts, mic_mag_flux_t &out);
 
     ret_t load_model(const std::string filename);
     ret_t save_model(const std::string filename);
@@ -83,7 +83,7 @@ public:
 protected:
     virtual ret_t do_calibrate() = 0;
     virtual ret_t do_compenste(
-        const mic_mag_flux_t &in, mic_mag_flux_t &out) = 0;
+        const float64_t ts, mic_mag_flux_t &out) = 0;
 
     virtual ret_t serialize(json_t &node);
     virtual ret_t deserialize(json_t &node);

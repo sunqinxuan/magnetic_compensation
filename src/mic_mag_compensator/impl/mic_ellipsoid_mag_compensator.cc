@@ -157,10 +157,13 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     return ret_t::MIC_RET_SUCCESSED;
 }
 
-ret_t MicEllipsoidMagCompensator::do_compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
+ret_t MicEllipsoidMagCompensator::do_compenste(const float64_t ts, mic_mag_flux_t &out)
 {
     matrix_3f_t matrix = _R_opt.transpose() * _D_tilde_inv;
     vector_3f_t offset = _o_hat;
+
+    mic_mag_flux_t in;
+    _mag_measure_storer.get_data<mic_mag_flux_t>(ts,in);
 
     out.vector = matrix * (in.vector - offset);
     notify(*this);

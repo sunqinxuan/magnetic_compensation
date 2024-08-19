@@ -77,17 +77,34 @@ ret_t MicTLMagCompensator::do_calibrate()
     return ret;
 }
 
-ret_t MicTLMagCompensator::do_compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
+ret_t MicTLMagCompensator::do_compenste(const float64_t ts, mic_mag_flux_t &out)
 {
-    matrix_3_18f_t A_matrix;
+    // matrix_3_18f_t A_matrix;
+    Eigen::MatrixXd A_matrix;
     std::vector<std::vector<double>> TL_A;
-    std::vector<double> mag_x(1, in.vector(0)), mag_y(1, in.vector(1)), mag_z(1, in.vector(2));
+
+    std::vector<double> mag_x, mag_y, mag_z;
+    auto data_range = _mag_measure_storer.get_data_range<mic_mag_flux_t>(0.0, ts + 1);
+    auto it_start = data_range.first;
+    auto it_end = data_range.second;
+    for (auto it = it_start; it != it_end; ++it)
+    {
+        float64_t tt = it->first;
+        mic_mag_flux_t mag_flux = it->second;
+        // mic_mag_op_t mag_op;
+        // _mag_measure_storer.get_data<mic_mag_op_t>(tt,mag_op);
+        mag_x.push_back(mag_flux.vector(0));
+        mag_y.push_back(mag_flux.vector(1));
+        mag_z.push_back(mag_flux.vector(2));
+    }
+    // std::vector<double> mag_x(1, in.vector(0)), mag_y(1, in.vector(1)), mag_z(1, in.vector(2));
 
     // if only one measure is provided,
     // the derivative terms in matrix A will be zero;
     // that is to say, no eddy current interference is considered;
     _tl_model->createMatrixA_Vector(TL_A, mag_x, mag_y, mag_z);
 
+    A_matrix = Eigen::MatrixXd::Identity(mag_x.size() * 3, 18);
     for (size_t i = 0; i < TL_A.size(); ++i)
     {
         for (size_t j = 0; j < TL_A[i].size(); ++j)
@@ -98,7 +115,9 @@ ret_t MicTLMagCompensator::do_compenste(const mic_mag_flux_t &in, mic_mag_flux_t
         // cout<<endl;
     }
 
-    out.vector = A_matrix * _tl_coeffs;
+    Eigen::VectorXd out_vector=Eigen::VectorXd::Zero(A_matrix.rows());
+    out_vector = A_matrix * _tl_coeffs;
+    out.vector=out_vector.bottomRows(3);
 
     // for observer updating
     notify(*this);

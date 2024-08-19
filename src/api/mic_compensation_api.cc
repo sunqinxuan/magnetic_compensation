@@ -59,9 +59,9 @@ namespace mic
         {
             _mic_compensator = std::make_shared<mic_ellipsoid_mag_compensator_t>();
         }
-        else if ("cabin"==comp_method)
+        else if ("cabin" == comp_method)
         {
-            _mic_compensator=std::make_shared<mic_cabin_mag_compensator_t>();
+            _mic_compensator = std::make_shared<mic_cabin_mag_compensator_t>();
         }
         else
         {
@@ -77,16 +77,24 @@ namespace mic
         return ret_t::MIC_RET_SUCCESSED;
     }
 
-    ret_t mic_compensate(
-        const mic_mag_flux_t &in, mic_mag_flux_t &out)
+    ret_t mic_add_data(
+        const double timestamp,
+        const mic_mag_flux_t &mag_flux,
+        const mic_mag_op_t &mag_op)
+    {
+        _mic_compensator->add_mag_flux(timestamp, mag_flux);
+        _mic_compensator->add_mag_op(timestamp, mag_op);
+        return ret_t::MIC_RET_SUCCESSED;
+    }
+
+    ret_t mic_compensate(const double timestamp, mic_mag_flux_t &out)
     {
         if (_mic_compensator == nullptr)
         {
             MIC_LOG_ERR("[MIC] MIC worker is not initialized!");
             return ret_t::MIC_RET_FAILED;
         }
-        return _mic_compensator->compenste(in, out);
+        return _mic_compensator->compenste(timestamp, out);
     }
-
 
 }

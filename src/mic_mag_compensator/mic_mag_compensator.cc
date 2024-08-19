@@ -106,14 +106,14 @@ ret_t MicMagCompensator::calibrate()
 }
 
 ret_t MicMagCompensator::compenste(
-    const mic_mag_flux_t &in, mic_mag_flux_t &out)
+    const float64_t ts, mic_mag_flux_t &out)
 {
     if (_state == mic_state_t::MIC_MAG_COMPENSATE_UNCALIBRATED)
     {
         MIC_LOG_ERR("[MIC] mic compensator is not calirated!");
         return ret_t::MIC_RET_FAILED;
     }
-    return do_compenste(in, out);
+    return do_compenste(ts, out);
 }
 
 ret_t MicMagCompensator::load_model(const std::string filename)

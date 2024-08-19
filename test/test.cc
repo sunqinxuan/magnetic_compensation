@@ -97,8 +97,8 @@ int main(int argc, char *argv[])
     // mag_compensator.calibrate();
     mag_compensator_ptr->calibrate();
 
-    mic_mag_flux_t mag_flux_comp;
-    mag_compensator_ptr->compenste(mag_flux, mag_flux_comp);
+    // mic_mag_flux_t mag_flux_comp;
+    // mag_compensator_ptr->compenste(mag_flux, mag_flux_comp);
 
     return 0;
 }

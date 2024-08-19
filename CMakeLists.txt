@@ -111,7 +111,8 @@ install(
 
 install(
     FILES
-    ${CMAKE_HOME_DIRECTORY}/etc/default_config.json
+    ${CMAKE_HOME_DIRECTORY}/etc/config_calibration.json
+    ${CMAKE_HOME_DIRECTORY}/etc/config_compensation.json
     DESTINATION
     ${INSTALL_ETC}
 )

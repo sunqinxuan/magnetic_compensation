@@ -30,10 +30,16 @@ namespace mic
     ret_t mic_init_worker(
         const std::string model_file,
         const std::string log_file = "./data/mic.log",
-        const std::string config_file = "./etc/default_config.json");
+        const std::string config_file = "./etc/config_compensation.json");
+
+    ret_t mic_add_data(
+        const float64_t timestamp,
+        const mic_mag_flux_t &mag_flux,
+        const mic_mag_op_t &mag_op);
 
     ret_t mic_compensate(
-        const mic_mag_flux_t &in, mic_mag_flux_t &out);
+        const float64_t timestamp,
+        mic_mag_flux_t &out);
 
 }
 

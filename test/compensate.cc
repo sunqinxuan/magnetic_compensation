@@ -48,8 +48,9 @@ int main(int argc, char *argv[])
     float64_t ts, flux_x, flux_y, flux_z,
         ins_pitch, ins_roll, ins_yaw,
         igrf_north, igrf_east, igrf_down;
-    mic_mag_flux_t mag_flux, mag_flux_truth;
-    mic_nav_state_t nav_state;
+    mic_mag_flux_t mag_flux; //, mag_flux_truth;
+    mic_mag_op_t mag_op;
+    // mic_nav_state_t nav_state;
     while (true)
     {
         infile >> ts >> flux_x >> flux_y >> flux_z >>
@@ -57,22 +58,26 @@ int main(int argc, char *argv[])
             igrf_north >> igrf_east >> igrf_down;
         if (infile.eof())
             break;
-            
-        nav_state.time_stamp = ts;
-        nav_state.attitude = quaternionf_t(
-            MicUtils::euler2dcm(
-                MicUtils::deg2rad(ins_roll),
-                MicUtils::deg2rad(ins_pitch),
-                MicUtils::deg2rad(ins_yaw)));
+
+        // nav_state.time_stamp = ts;
+        // nav_state.attitude = quaternionf_t(
+        //     MicUtils::euler2dcm(
+        //         MicUtils::deg2rad(ins_roll),
+        //         MicUtils::deg2rad(ins_pitch),
+        //         MicUtils::deg2rad(ins_yaw)));
         mag_flux.time_stamp = ts;
         mag_flux.vector << flux_x, flux_y, flux_z;
-        mag_flux_truth.time_stamp = ts;
-        mag_flux_truth.vector << igrf_north, igrf_east, igrf_down;
+        mag_op.time_stamp = ts;
+        mag_op.value = mag_flux.vector.norm();
+        // mag_flux_truth.time_stamp = ts;
+        // mag_flux_truth.vector << igrf_north, igrf_east, igrf_down;
+
+        mic_add_data(ts, mag_flux, mag_op);
 
         // do compensation and save results to file;
         mic_mag_flux_t mag_out;
-        mic_compensate(mag_flux, mag_out);
-        outfile << mag_out.vector.transpose() << std::endl;
+        mic_compensate(ts, mag_out);
+        outfile << std::fixed<<ts<<"\t"<<mag_out.vector.transpose() << std::endl;
     }
     infile.close();
     outfile.close();
