@@ -89,8 +89,8 @@ ret_t MicTLMagCompensator::do_compenste(const float64_t ts, mic_mag_flux_t &out)
     auto it_end = data_range.second;
     for (auto it = it_start; it != it_end; ++it)
     {
-        float64_t tt = it->first;
         mic_mag_flux_t mag_flux = it->second;
+        // float64_t tt = it->first;
         // mic_mag_op_t mag_op;
         // _mag_measure_storer.get_data<mic_mag_op_t>(tt,mag_op);
         mag_x.push_back(mag_flux.vector(0));
@@ -114,10 +114,16 @@ ret_t MicTLMagCompensator::do_compenste(const float64_t ts, mic_mag_flux_t &out)
         }
         // cout<<endl;
     }
+    cout << "A_matrix = " << endl
+         << A_matrix << endl;
 
-    Eigen::VectorXd out_vector=Eigen::VectorXd::Zero(A_matrix.rows());
+    Eigen::VectorXd out_vector = Eigen::VectorXd::Zero(A_matrix.rows());
     out_vector = A_matrix * _tl_coeffs;
-    out.vector=out_vector.bottomRows(3);
+    out.vector = out_vector.bottomRows(3);
+    cout << "out_vector = " << endl
+         << out_vector.transpose() << endl;
+    cout << "out = " << endl
+         << out.vector.transpose() << endl;
 
     // for observer updating
     notify(*this);

@@ -51,7 +51,7 @@ ret_t MicCabinMagCompensator::do_calibrate()
         if (_nav_state_storer.get_data<mic_nav_state_t>(ts, nav_state))
         {
             mag_vec.push_back(mag_flux.vector);
-            mag_n_vec.push_back(nav_state.attitude.matrix().transpose()*mag_flux_truth.vector);
+            mag_n_vec.push_back(nav_state.attitude.matrix().transpose() * mag_flux_truth.vector);
             // R_nb.push_back(nav_state.attitude.matrix());
         }
     }
@@ -137,7 +137,7 @@ ret_t MicCabinMagCompensator::do_compenste(const float64_t ts, mic_mag_flux_t &o
     vector_3f_t offset = _o_hat;
 
     mic_mag_flux_t in;
-    _mag_measure_storer.get_data<mic_mag_flux_t>(ts,in);
+    _mag_measure_storer.get_data<mic_mag_flux_t>(ts, in);
 
     out.vector = matrix * (in.vector - offset);
     notify(*this);

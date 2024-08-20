@@ -107,7 +107,7 @@ int main1()
 {
     mic_logger_t::initialize(mic_logger_type_t::MIC_BASH_FILE_LOGGER, "./mic.log");
     mic_config_t::initialize(mic_config_type_t::MIC_CONFIG_JSON,
-                             "../etc/default_config.json");
+                             "../etc/config_calibration.json");
     mic_logger_t::set_log_level(
         static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
 
