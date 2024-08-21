@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_tl_component_mag_compensator.h"
 
 // debug
 #include <iostream>
@@ -27,12 +27,12 @@ using namespace std;
 
 MIC_NAMESPACE_START
 
-MicTLMagCompensator::MicTLMagCompensator() : MicMagCompensator()
-{
-    _tl_model = std::make_shared<mic_tolles_lawson_t>();
-}
+// MicTLComponentMagCompensator::MicTLComponentMagCompensator() : MicTLMagCompensator()
+// {
+//     _tl_model = std::make_shared<mic_tolles_lawson_t>();
+// }
 
-ret_t MicTLMagCompensator::do_calibrate()
+ret_t MicTLComponentMagCompensator::do_calibrate()
 {
     ret_t ret = ret_t::MIC_RET_FAILED;
 
@@ -48,13 +48,15 @@ ret_t MicTLMagCompensator::do_calibrate()
         float64_t ts = it->first;
         mic_mag_t mag = it->second;
         mic_mag_t mag_truth;
-        _mag_truth_storer.get_data<mic_mag_t>(ts, mag_truth);
-        mag_x.push_back(mag.vector(0));
-        mag_y.push_back(mag.vector(1));
-        mag_z.push_back(mag.vector(2));
-        mag_earth_x.push_back(mag_truth.vector(0));
-        mag_earth_y.push_back(mag_truth.vector(1));
-        mag_earth_z.push_back(mag_truth.vector(2));
+        if (_mag_truth_storer.get_data<mic_mag_t>(ts, mag_truth))
+        {
+            mag_x.push_back(mag.vector(0));
+            mag_y.push_back(mag.vector(1));
+            mag_z.push_back(mag.vector(2));
+            mag_earth_x.push_back(mag_truth.vector(0));
+            mag_earth_y.push_back(mag_truth.vector(1));
+            mag_earth_z.push_back(mag_truth.vector(2));
+        }
     }
 
     std::vector<float64_t> tl_beta;
@@ -76,7 +78,7 @@ ret_t MicTLMagCompensator::do_calibrate()
     return ret;
 }
 
-ret_t MicTLMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
+ret_t MicTLComponentMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
 {
     // matrix_3_18f_t A_matrix;
     Eigen::MatrixXd A_matrix;
@@ -129,27 +131,27 @@ ret_t MicTLMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
     return ret_t::MIC_RET_SUCCESSED;
 }
 
-ret_t MicTLMagCompensator::serialize(json_t &node)
-{
-    std::vector<double> beta(18);
-    for (int i = 0; i < 18; i++)
-    {
-        beta[i] = _tl_coeffs(i);
-    }
-    node["tl_model"]["coeff_beta"] = beta;
-    return MicMagCompensator::serialize(node);
-}
+// ret_t MicTLComponentMagCompensator::serialize(json_t &node)
+// {
+//     std::vector<double> beta(18);
+//     for (int i = 0; i < 18; i++)
+//     {
+//         beta[i] = _tl_coeffs(i);
+//     }
+//     node["tl_component_model"]["coeff_beta"] = beta;
+//     return MicMagCompensator::serialize(node);
+// }
 
-ret_t MicTLMagCompensator::deserialize(json_t &node)
-{
-    std::vector<double> beta = node["tl_model"]["coeff_beta"];
-    if (beta.size() != 18)
-        return ret_t::MIC_RET_FAILED;
-    for (int i = 0; i < 18; i++)
-    {
-        _tl_coeffs(i) = beta[i];
-    }
-    return MicMagCompensator::deserialize(node);
-}
+// ret_t MicTLComponentMagCompensator::deserialize(json_t &node)
+// {
+//     std::vector<double> beta = node["tl_component_model"]["coeff_beta"];
+//     if (beta.size() != 18)
+//         return ret_t::MIC_RET_FAILED;
+//     for (int i = 0; i < 18; i++)
+//     {
+//         _tl_coeffs(i) = beta[i];
+//     }
+//     return MicMagCompensator::deserialize(node);
+// }
 
 MIC_NAMESPACE_END

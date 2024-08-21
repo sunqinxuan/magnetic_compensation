@@ -71,6 +71,7 @@ set(SRC_FILES
     ./src/mic_mag_compensator/observer/mic_state_logger.cc
     ./src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc
     ./src/mic_mag_compensator/impl/mic_tl_mag_compensator.cc
+    ./src/mic_mag_compensator/impl/mic_tl_component_mag_compensator.cc
     ./src/mic_mag_compensator/impl/mic_cabin_mag_compensator.cc
     ./src/api/mic_compensation_api.cc
 )
@@ -84,11 +85,11 @@ add_library(magnetic_compensation SHARED
 )
 target_compile_options(magnetic_compensation PRIVATE -std=c++11)
 
-add_executable(mic_test test/test.cc)
-target_compile_options(mic_test PRIVATE -std=c++11)
-target_link_libraries(mic_test
-    magnetic_compensation ${DEPEND_LIBS} -pthread
-)
+#add_executable(mic_test test/test.cc)
+#target_compile_options(mic_test PRIVATE -std=c++11)
+#target_link_libraries(mic_test
+#    magnetic_compensation ${DEPEND_LIBS} -pthread
+#)
 
 add_executable(mic_calibrate test/calibrate.cc)
 target_compile_options(mic_calibrate PRIVATE -std=c++11)
@@ -104,7 +105,7 @@ target_link_libraries(mic_compensate
 
 install(
     TARGETS
-    mic_test mic_calibrate mic_compensate
+    mic_calibrate mic_compensate
     DESTINATION
     ${INSTALL_BIN}
 )

@@ -54,21 +54,14 @@ namespace mic
     };
     using ret_t = MicRet;
 
-    struct MicMagFlux
+    struct MicMag
     {
         float64_t time_stamp; // TODO
         vector_3f_t vector;
-        float32_t confidence;
+        float64_t value;
+        // float32_t confidence;
     };
-    using mic_mag_flux_t = MicMagFlux;
-
-    struct MicMagOP
-    {
-        float64_t time_stamp; // TODO
-        float32_t value;
-        float32_t confidence;
-    };
-    using mic_mag_op_t = MicMagOP;
+    using mic_mag_t = MicMag;
 
     struct MicIMU
     {
@@ -98,6 +91,10 @@ namespace mic
 
     struct MicNavState
     {
+        MicNavState()
+        {
+            time_stamp = -1;
+        }
         float64_t time_stamp; // TODO
         vector_3f_t position;
         /* attitude
@@ -105,7 +102,7 @@ namespace mic
          * w.r.t. the navigation frame [north, east, down] */
         quaternionf_t attitude;
         vector_3f_t velocity;
-        mic_imu_error_t imu_error;
+        // mic_imu_error_t imu_error;
     };
     using mic_nav_state_t = MicNavState;
 }

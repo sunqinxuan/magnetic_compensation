@@ -53,45 +53,26 @@ mic_mag_storer_t &MicMagCompensator::get_data_storer()
 //     return *_nav_state_estimator;
 // }
 
-ret_t MicMagCompensator::add_mag_flux(
+ret_t MicMagCompensator::add_data(
     const float64_t ts,
-    const mic_mag_flux_t &mag_flux_data)
-{
-    _mag_measure_storer.add_data<mic_mag_flux_t>(ts, mag_flux_data);
-    _curr_time_stamp = ts;
-    return ret_t::MIC_RET_SUCCESSED;
-}
-
-ret_t MicMagCompensator::add_mag_op(
-    const float64_t ts,
-    const mic_mag_op_t &mag_op_data)
-{
-    _mag_measure_storer.add_data<mic_mag_op_t>(ts, mag_op_data);
-    return ret_t::MIC_RET_SUCCESSED;
-}
-
-ret_t MicMagCompensator::add_mag_flux_truth(
-    const float64_t ts,
-    const mic_mag_flux_t &mag_flux_data)
-{
-    _mag_truth_storer.add_data<mic_mag_flux_t>(ts, mag_flux_data);
-    // _curr_time_stamp = ts;
-    return ret_t::MIC_RET_SUCCESSED;
-}
-
-ret_t MicMagCompensator::add_mag_op_truth(
-    const float64_t ts,
-    const mic_mag_op_t &mag_op_data)
-{
-    _mag_truth_storer.add_data<mic_mag_op_t>(ts, mag_op_data);
-    return ret_t::MIC_RET_SUCCESSED;
-}
-
-ret_t MicMagCompensator::add_nav_state(
-    const float64_t ts,
+    const mic_mag_t &mag_data,
     const mic_nav_state_t &nav_state)
 {
-    _nav_state_storer.add_data<mic_nav_state_t>(ts, nav_state);
+    _curr_time_stamp = ts;
+    _mag_measure_storer.add_data<mic_mag_t>(ts, mag_data);
+    if (nav_state.time_stamp > 0)
+        _mag_measure_storer.add_data<mic_nav_state_t>(ts, nav_state);
+    return ret_t::MIC_RET_SUCCESSED;
+}
+
+ret_t MicMagCompensator::add_data_truth(
+    const float64_t ts,
+    const mic_mag_t &mag_data,
+    const mic_nav_state_t &nav_state)
+{
+    _mag_truth_storer.add_data<mic_mag_t>(ts, mag_data);
+    if (nav_state.time_stamp > 0)
+        _mag_truth_storer.add_data<mic_nav_state_t>(ts, nav_state);
     return ret_t::MIC_RET_SUCCESSED;
 }
 
@@ -106,7 +87,7 @@ ret_t MicMagCompensator::calibrate()
 }
 
 ret_t MicMagCompensator::compenste(
-    const float64_t ts, mic_mag_flux_t &out)
+    const float64_t ts, mic_mag_t &out)
 {
     if (_state == mic_state_t::MIC_MAG_COMPENSATE_UNCALIBRATED)
     {
@@ -158,7 +139,7 @@ ret_t MicMagCompensator::save_model(const std::string filename)
     {
         MIC_LOG_BASIC_INFO("[MIC] save mic model:\n%s", map_json.dump(4).c_str());
         auto cbor = json_t::to_cbor(map_json);
-        map_file.write((char*)cbor.data(), cbor.size() * sizeof(uint8_t));
+        map_file.write((char *)cbor.data(), cbor.size() * sizeof(uint8_t));
     }
     map_file.close();
     return ret;

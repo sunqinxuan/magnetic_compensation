@@ -19,35 +19,34 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#ifndef MIC_TL_MAG_COMPENSATOR
-#define MIC_TL_MAG_COMPENSATOR
+#ifndef MIC_TL_COMPONENT_MAG_COMPENSATOR
+#define MIC_TL_COMPONENT_MAG_COMPENSATOR
 
-#include "mic_mag_compensator/mic_mag_compensator.h"
-#include "tl/tolles_lawson.hpp"
+#include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
 
 MIC_NAMESPACE_START
 
-class MicTLMagCompensator;
-using mic_tl_mag_compensator_t = MicTLMagCompensator;
+class MicTLComponentMagCompensator;
+using mic_tl_component_mag_compensator_t = MicTLComponentMagCompensator;
 
 using mic_tolles_lawson_t = tl::TollesLawson;
-using mic_tolles_lawson_shared_ptr = std::shared_ptr<mic_tolles_lawson_t>;
+using mic_tolles_lawson_shared_ptr = std::shared_ptr<tl::TollesLawson>;
 
-class MicTLMagCompensator : public MicMagCompensator
+class MicTLComponentMagCompensator : public MicTLMagCompensator
 {
 public:
-    MicTLMagCompensator();
-    virtual ~MicTLMagCompensator() = default;
+    MicTLComponentMagCompensator(): MicTLMagCompensator(){}
+    virtual ~MicTLComponentMagCompensator() = default;
 
 protected:
     virtual ret_t do_calibrate() override;
     virtual ret_t do_compenste(const float64_t ts, mic_mag_t &out) override;
 
-    virtual ret_t serialize(json_t &node) override;
-    virtual ret_t deserialize(json_t &node) override;
+    // virtual ret_t serialize(json_t &node) override;
+    // virtual ret_t deserialize(json_t &node) override;
 
-    mic_tolles_lawson_shared_ptr _tl_model;
-    vector_18f_t _tl_coeffs;
+    // mic_tolles_lawson_shared_ptr _tl_model;
+    // vector_18f_t _tl_coeffs;
 };
 
 MIC_NAMESPACE_END

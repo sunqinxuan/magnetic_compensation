@@ -25,13 +25,12 @@
 #include "common/mic_prerequisite.h"
 #include "common/mic_utils.h"
 #include "data_storer/mic_data_storer.h"
-// #include "mic_nav_state_estimator/mic_nav_state_estimator.h"
 
 MIC_NAMESPACE_START
 
 using mic_mag_storer_t =
-    mic_data_storer_t<mic_mag_flux_t, mic_mag_op_t>;
-using mic_mag_nav_state_storer_t=mic_data_storer_t<mic_nav_state_t>;
+    mic_data_storer_t<mic_mag_t, mic_nav_state_t>;
+// using mic_mag_nav_state_storer_t=mic_data_storer_t<mic_nav_state_t>;
 
 class MicMagCompensator;
 using mic_mag_compensator_t = MicMagCompensator;
@@ -54,28 +53,18 @@ public:
     // mic_nav_state_estimator_t &get_nav_state_estimator();
     float64_t get_curr_time() { return _curr_time_stamp; }
 
-    ret_t add_mag_flux(
+    ret_t add_data(
         const float64_t ts,
-        const mic_mag_flux_t &mag_flux_data);
+        const mic_mag_t &mag_data,
+        const mic_nav_state_t &nav_state = mic_nav_state_t());
 
-    ret_t add_mag_op(
+    ret_t add_data_truth(
         const float64_t ts,
-        const mic_mag_op_t &mag_op_data);
-
-    ret_t add_mag_flux_truth(
-        const float64_t ts,
-        const mic_mag_flux_t &mag_flux_data);
-
-    ret_t add_mag_op_truth(
-        const float64_t ts,
-        const mic_mag_op_t &mag_op_data);
-
-    ret_t add_nav_state(
-        const float64_t ts,
-        const mic_nav_state_t &nav_state);
+        const mic_mag_t &mag_data,
+        const mic_nav_state_t &nav_state = mic_nav_state_t());
 
     ret_t calibrate();
-    ret_t compenste(const float64_t ts, mic_mag_flux_t &out);
+    ret_t compenste(const float64_t ts, mic_mag_t &out);
 
     ret_t load_model(const std::string filename);
     ret_t save_model(const std::string filename);
@@ -83,11 +72,10 @@ public:
 protected:
     virtual ret_t do_calibrate() = 0;
     virtual ret_t do_compenste(
-        const float64_t ts, mic_mag_flux_t &out) = 0;
+        const float64_t ts, mic_mag_t &out) = 0;
 
     virtual ret_t serialize(json_t &node);
     virtual ret_t deserialize(json_t &node);
-
 
     // void init_nav_state_estimator();
 
@@ -96,11 +84,10 @@ protected:
     /* data storer*/
     mic_mag_storer_t _mag_measure_storer;
     mic_mag_storer_t _mag_truth_storer;
-    mic_mag_nav_state_storer_t _nav_state_storer;
+    // mic_mag_nav_state_storer_t _nav_state_storer;
+
     /* working state */
     mic_state_t _state;
-    /* navigation state estimator */
-    // mic_nav_state_estimator_unique_ptr _nav_state_estimator;
     std::string _version;
 };
 

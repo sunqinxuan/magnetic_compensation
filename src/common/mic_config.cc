@@ -30,9 +30,9 @@ MicConfig::MicConfig()
     REGISTER_PARAM("log_level", int32_t);
     REGISTER_PARAM("time_sync_tolerance", float64_t);
     REGISTER_PARAM("data_remain_time", float64_t);
-    REGISTER_PARAM("mag_earth_intensity", float64_t);
-    REGISTER_PARAM("load_file_name", std::string);
-    REGISTER_PARAM("compensation_method",std::string);
+    // REGISTER_PARAM("mag_earth_intensity", float64_t);
+    // REGISTER_PARAM("load_file_name", std::string);
+    // REGISTER_PARAM("compensation_method",std::string);
 }
 
 void MicConfig::initialize(

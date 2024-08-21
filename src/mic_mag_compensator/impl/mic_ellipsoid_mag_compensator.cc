@@ -52,24 +52,27 @@ ret_t MicEllipsoidMagCompensator::fit_ls_rotation(
 
 ret_t MicEllipsoidMagCompensator::do_calibrate()
 {
-    auto data_range = _mag_measure_storer.get_data_range<mic_mag_flux_t>(0.0, _curr_time_stamp + 1);
+    auto data_range = _mag_measure_storer.get_data_range<mic_mag_t>(0.0, _curr_time_stamp + 1);
     auto it_start = data_range.first;
     auto it_end = data_range.second;
 
     std::vector<vector_3f_t> mag_vec, mag_n_vec;
+    std::vector<float64_t> mag_n_value;
     std::vector<matrix_3f_t> R_nb;
     for (auto it = it_start; it != it_end; ++it)
     {
         float64_t ts = it->first;
-        mic_mag_flux_t mag_flux = it->second;
+        mic_mag_t mag = it->second;
         mic_nav_state_t nav_state;
-        mic_mag_flux_t mag_flux_truth;
-        _mag_truth_storer.get_data<mic_mag_flux_t>(ts, mag_flux_truth);
-        if (_nav_state_storer.get_data<mic_nav_state_t>(ts, nav_state))
+        mic_mag_t mag_truth;
+        if (_mag_measure_storer.get_data<mic_nav_state_t>(ts, nav_state) &&
+            _mag_truth_storer.get_data<mic_mag_t>(ts, mag_truth))
+        // if (_nav_state_storer.get_data<mic_nav_state_t>(ts, nav_state))
         {
-            mag_vec.push_back(mag_flux.vector);
-            mag_n_vec.push_back(mag_flux_truth.vector);
+            mag_vec.push_back(mag.vector);
+            mag_n_vec.push_back(mag_truth.vector);
             R_nb.push_back(nav_state.attitude.matrix());
+            mag_n_value.push_back(mag_truth.value);
         }
     }
     if (mag_vec.size() < 20)
@@ -90,7 +93,9 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     }
 
     // double mag_earth_intensity = 54093.9956380105; // nT
-    double mag_earth_intensity = MIC_CONFIG_GET(float64_t, "mag_earth_intensity");
+    double mag_earth_intensity = std::accumulate(mag_n_value.begin(), mag_n_value.end(), 0);
+    mag_earth_intensity /= mag_n_value.size();
+    // = MIC_CONFIG_GET(float64_t, "mag_earth_intensity");
     MIC_LOG_DEBUG_INFO("mag_earth_intensity = %f", mag_earth_intensity);
     // matrix_3f_t D_tilde_inv;
     // vector_3f_t o_hat;
@@ -157,13 +162,13 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     return ret_t::MIC_RET_SUCCESSED;
 }
 
-ret_t MicEllipsoidMagCompensator::do_compenste(const float64_t ts, mic_mag_flux_t &out)
+ret_t MicEllipsoidMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
 {
     matrix_3f_t matrix = _R_opt.transpose() * _D_tilde_inv;
     vector_3f_t offset = _o_hat;
 
-    mic_mag_flux_t in;
-    _mag_measure_storer.get_data<mic_mag_flux_t>(ts,in);
+    mic_mag_t in;
+    _mag_measure_storer.get_data<mic_mag_t>(ts, in);
 
     out.vector = matrix * (in.vector - offset);
     notify(*this);

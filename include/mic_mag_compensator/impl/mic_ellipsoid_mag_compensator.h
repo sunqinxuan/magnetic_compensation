@@ -103,7 +103,7 @@ public:
 
 protected:
     virtual ret_t do_calibrate() override;
-    virtual ret_t do_compenste(const float64_t ts, mic_mag_flux_t &out) override;
+    virtual ret_t do_compenste(const float64_t ts, mic_mag_t &out) override;
 
     virtual ret_t serialize(json_t &node) override;
     virtual ret_t deserialize(json_t &node) override;

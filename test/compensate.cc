@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <ctime>
+#include <gflags/gflags.h>
 #include "common/mic_prerequisite.h"
 #include "common/mic_logger.h"
 #include "common/mic_config.h"
@@ -9,16 +10,22 @@
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
 #include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_tl_component_mag_compensator.h"
 #include "api/mic_compensation_api.h"
+#include "fileio/fileio.h"
 
 USING_NAMESPACE_MIC;
 using namespace std;
 
+DEFINE_string(model, "ellipsoid", "ellipsoid, tl, tlc or cabin");
+DEFINE_string(file, "Flt1002_1002.2.txt", "file to load data");
+
 int main(int argc, char *argv[])
 {
+    google::ParseCommandLineFlags(&argc, &argv, true);
+
     // initialize the compensator;
-    auto comp_method = MIC_CONFIG_GET(std::string, "compensation_method");
-    mic_init_worker("./mic_model_" + comp_method + ".mdl");
+    mic_init_worker(FLAGS_model, "./mic_model_" + FLAGS_model + ".mdl");
 
     // create output file for compensation results;
     time_t tt = time(nullptr); // milliseconds from 1970;
@@ -38,49 +45,34 @@ int main(int argc, char *argv[])
     }
 
     // load data from file;
-    std::string filename = MIC_CONFIG_GET(std::string, "load_file_name");
-    std::ifstream infile(filename);
+    std::ifstream infile(FLAGS_file);
     if (!infile.is_open())
     {
-        MIC_LOG_ERR("Error: Could not open file %s", filename);
+        MIC_LOG_ERR("Error: Could not open file %s", FLAGS_file);
         return -1;
     }
-    float64_t ts, flux_x, flux_y, flux_z,
-        ins_pitch, ins_roll, ins_yaw,
-        igrf_north, igrf_east, igrf_down;
-    mic_mag_flux_t mag_flux; //, mag_flux_truth;
-    mic_mag_op_t mag_op;
-    // mic_nav_state_t nav_state;
     while (true)
     {
-        infile >> ts >> flux_x >> flux_y >> flux_z >>
-            ins_pitch >> ins_roll >> ins_yaw >>
-            igrf_north >> igrf_east >> igrf_down;
-        if (infile.eof())
+        std::vector<float64_t> data_line;
+        if (read_line(infile, data_line) == ret_t::MIC_RET_FAILED)
             break;
 
-        // nav_state.time_stamp = ts;
-        // nav_state.attitude = quaternionf_t(
-        //     MicUtils::euler2dcm(
-        //         MicUtils::deg2rad(ins_roll),
-        //         MicUtils::deg2rad(ins_pitch),
-        //         MicUtils::deg2rad(ins_yaw)));
-        mag_flux.time_stamp = ts;
-        mag_flux.vector << flux_x, flux_y, flux_z;
-        mag_op.time_stamp = ts;
-        mag_op.value = mag_flux.vector.norm();
-        // mag_flux_truth.time_stamp = ts;
-        // mag_flux_truth.vector << igrf_north, igrf_east, igrf_down;
+        mic_mag_t mag;
+        if (get_line_data(data_line, mag) == ret_t::MIC_RET_SUCCESSED)
+        {
+            float64_t ts = mag.time_stamp;
+            mic_add_data(ts, mag);
 
-        mic_add_data(ts, mag_flux, mag_op);
-
-        // do compensation and save results to file;
-        mic_mag_flux_t mag_out;
-        mic_compensate(ts, mag_out);
-        outfile << std::fixed<<ts<<"\t"<<mag_out.vector.transpose() << std::endl;
+            // do compensation and save results to file;
+            mic_mag_t mag_out;
+            mic_compensate(ts, mag_out);
+            outfile << std::fixed << ts << "\t" << mag_out.vector.transpose() << std::endl;
+            cout << std::fixed << ts << "\t" << mag_out.vector.transpose() << std::endl;
+        }
     }
     infile.close();
     outfile.close();
 
+    google::ShutDownCommandLineFlags();
     return 0;
 }
