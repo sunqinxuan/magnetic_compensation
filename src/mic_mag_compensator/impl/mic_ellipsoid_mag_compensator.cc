@@ -220,7 +220,7 @@ ret_t MicEllipsoidMagCompensator::ellipsoid_fit(
     if (N < 20)
         return ret_t::MIC_RET_FAILED;
 
-    Eigen::MatrixXd design_matrix(10, N);
+    matrix_xf_t design_matrix(10, N);
     for (int i = 0; i < N; i++)
     {
         design_matrix(0, i) = mag[i](0) * mag[i](0);

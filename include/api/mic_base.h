@@ -35,7 +35,9 @@ namespace mic
     using quaternionf_t = Eigen::Quaterniond;
     using matrix_3f_t = Eigen::Matrix3d;
     using matrix_3_18f_t = Eigen::Matrix<double, 3, 18>;
-    using vector_18f_t = Eigen::Matrix<double, 18, 1>;
+    // using vector_18f_t = Eigen::Matrix<double, 18, 1>;
+    using vector_xf_t = Eigen::VectorXd;
+    using matrix_xf_t = Eigen::MatrixXd;
 
     enum MicBool
     {

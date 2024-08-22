@@ -66,8 +66,8 @@ int main(int argc, char *argv[])
             // do compensation and save results to file;
             mic_mag_t mag_out;
             mic_compensate(ts, mag_out);
-            outfile << std::fixed << ts << "\t" << mag_out.vector.transpose() << std::endl;
-            cout << std::fixed << ts << "\t" << mag_out.vector.transpose() << std::endl;
+            outfile << std::fixed << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
+            cout << std::fixed << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
         }
     }
     infile.close();

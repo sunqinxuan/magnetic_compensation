@@ -34,8 +34,6 @@ MIC_NAMESPACE_START
 
 ret_t MicTLComponentMagCompensator::do_calibrate()
 {
-    ret_t ret = ret_t::MIC_RET_FAILED;
-
     auto data_range = _mag_measure_storer.get_data_range<mic_mag_t>(0.0, _curr_time_stamp + 1);
     auto it_start = data_range.first;
     auto it_end = data_range.second;
@@ -60,11 +58,16 @@ ret_t MicTLComponentMagCompensator::do_calibrate()
     }
 
     std::vector<float64_t> tl_beta;
-    _tl_model->createCoeff_Vector(tl_beta, mag_x, mag_y, mag_z,
-                                  mag_earth_x, mag_earth_y, mag_earth_z);
-    if (tl_beta.size() != 18)
-        return ret;
-    for (size_t i = 0; i < 18; ++i)
+    if (!_tl_model->createCoeff_component(tl_beta, mag_x, mag_y, mag_z,
+                                          mag_earth_x, mag_earth_y, mag_earth_z))
+    {
+        MIC_LOG_ERR("failed to calibrate TL model");
+        return ret_t::MIC_RET_FAILED;
+    }
+    // if (tl_beta.size() != 18)
+    //     return ret_t::MIC_RET_FAILED;
+    _tl_coeffs=vector_xf_t::Zero(tl_beta.size());
+    for (size_t i = 0; i < tl_beta.size(); ++i)
     {
         _tl_coeffs(i) = tl_beta[i];
     }
@@ -75,13 +78,13 @@ ret_t MicTLComponentMagCompensator::do_calibrate()
     fp_tl.close();
 
     notify(*this);
-    return ret;
+    return ret_t::MIC_RET_SUCCESSED;
 }
 
 ret_t MicTLComponentMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
 {
     // matrix_3_18f_t A_matrix;
-    Eigen::MatrixXd A_matrix;
+    matrix_xf_t A_matrix;
     std::vector<std::vector<double>> TL_A;
 
     std::vector<double> mag_x, mag_y, mag_z;
@@ -103,9 +106,13 @@ ret_t MicTLComponentMagCompensator::do_compenste(const float64_t ts, mic_mag_t &
     // if only one measure is provided,
     // the derivative terms in matrix A will be zero;
     // that is to say, no eddy current interference is considered;
-    _tl_model->createMatrixA_Vector(TL_A, mag_x, mag_y, mag_z);
+    if(!_tl_model->createMatrixA_component(TL_A, mag_x, mag_y, mag_z))
+    {
+        MIC_LOG_ERR("failed to construct TL matrix A!");
+        return ret_t::MIC_RET_FAILED;
+    }
 
-    A_matrix = Eigen::MatrixXd::Identity(mag_x.size() * 3, 18);
+    A_matrix = matrix_xf_t::Identity(mag_x.size() * 3, TL_A.size());
     for (size_t i = 0; i < TL_A.size(); ++i)
     {
         for (size_t j = 0; j < TL_A[i].size(); ++j)
@@ -117,10 +124,13 @@ ret_t MicTLComponentMagCompensator::do_compenste(const float64_t ts, mic_mag_t &
     }
     // cout << "A_matrix = " << endl
     //      << A_matrix << endl;
+    matrix_xf_t A_matrix_deltaN=A_matrix.bottomRows(3);
+    vector_3f_t mag(mag_x.back(),mag_y.back(),mag_z.back());
+    out.vector=mag-A_matrix_deltaN*_tl_coeffs;
 
-    Eigen::VectorXd out_vector = Eigen::VectorXd::Zero(A_matrix.rows());
-    out_vector = A_matrix * _tl_coeffs;
-    out.vector = out_vector.bottomRows(3);
+    // vector_xf_t out_vector = vector_xf_t::Zero(A_matrix.rows());
+    // out_vector = A_matrix * _tl_coeffs;
+    // out.vector = out_vector.bottomRows(3);
     // cout << "out_vector = " << endl
     //      << out_vector.transpose() << endl;
     // cout << "out = " << endl

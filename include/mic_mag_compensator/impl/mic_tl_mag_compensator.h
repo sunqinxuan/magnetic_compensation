@@ -47,7 +47,7 @@ protected:
     virtual ret_t deserialize(json_t &node) override;
 
     mic_tolles_lawson_shared_ptr _tl_model;
-    vector_18f_t _tl_coeffs;
+    vector_xf_t _tl_coeffs;
 };
 
 MIC_NAMESPACE_END
