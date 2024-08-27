@@ -1,0 +1,154 @@
+\hypertarget{class_eigen_1_1_matrix_logarithm_return_value}{}\doxysection{Eigen\+::Matrix\+Logarithm\+Return\+Value$<$ Derived $>$ Class Template Reference}
+\label{class_eigen_1_1_matrix_logarithm_return_value}\index{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}}
+
+
+Proxy for the matrix logarithm of some matrix (expression).  
+
+
+
+
+{\ttfamily \#include $<$Forward\+Declarations.\+h$>$}
+
+
+
+Collaboration diagram for Eigen\+::Matrix\+Logarithm\+Return\+Value$<$ Derived $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{class_eigen_1_1_matrix_logarithm_return_value__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Derived\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_ad79436b8ca8b20765dcd9ef6b6c832ad}{Scalar}}
+\item 
+typedef Derived\+::\+Index \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a736377749656a2d0f664cfb36805f521}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_adfd2417a3d6f671e156b4ab1b92f1837}{Matrix\+Logarithm\+Return\+Value}} (const Derived \&A)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Result\+Type $>$ }\\void \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_ac17537a51ce53a44746fabd7a83d29d3}{eval\+To}} (Result\+Type \&result) const
+\begin{DoxyCompactList}\small\item\em Compute the matrix logarithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a736377749656a2d0f664cfb36805f521}{Index}} \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a13acb69f8ba2d48f84e508a19605a2a6}{rows}} () const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a736377749656a2d0f664cfb36805f521}{Index}} \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a5f2f251989faf25e0cbbdfe6883ea50c}{cols}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{internal\+::ref\+\_\+selector}}$<$ Derived $>$\+::type \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a18e69d2302e53d0ab0ebcfceda3f64ae}{Derived\+Nested}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a18e69d2302e53d0ab0ebcfceda3f64ae}{Derived\+Nested}} \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a247cf69f98c5cb7457b0829cc74babf1}{m\+\_\+A}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Derived$>$\newline
+class Eigen\+::\+Matrix\+Logarithm\+Return\+Value$<$ Derived $>$}
+
+Proxy for the matrix logarithm of some matrix (expression). 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Derived} & Type of the argument to the matrix function.\\
+\hline
+\end{DoxyTemplParams}
+This class holds the argument to the matrix function until it is assigned or evaluated for some other reason (so the argument should not be changed in the meantime). It is the return type of Matrix\+Base\+::log() and most of the time this is the only way it is used. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_matrix_logarithm_return_value_a18e69d2302e53d0ab0ebcfceda3f64ae}\label{class_eigen_1_1_matrix_logarithm_return_value_a18e69d2302e53d0ab0ebcfceda3f64ae}} 
+\index{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}!DerivedNested@{DerivedNested}}
+\index{DerivedNested@{DerivedNested}!Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{DerivedNested}{DerivedNested}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{internal\+::ref\+\_\+selector}}$<$Derived$>$\+::type \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value}{Eigen\+::\+Matrix\+Logarithm\+Return\+Value}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a18e69d2302e53d0ab0ebcfceda3f64ae}{Derived\+Nested}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_matrix_logarithm_return_value_a736377749656a2d0f664cfb36805f521}\label{class_eigen_1_1_matrix_logarithm_return_value_a736377749656a2d0f664cfb36805f521}} 
+\index{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef Derived\+::\+Index \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value}{Eigen\+::\+Matrix\+Logarithm\+Return\+Value}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a736377749656a2d0f664cfb36805f521}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_matrix_logarithm_return_value_ad79436b8ca8b20765dcd9ef6b6c832ad}\label{class_eigen_1_1_matrix_logarithm_return_value_ad79436b8ca8b20765dcd9ef6b6c832ad}} 
+\index{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef Derived\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value}{Eigen\+::\+Matrix\+Logarithm\+Return\+Value}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_ad79436b8ca8b20765dcd9ef6b6c832ad}{Scalar}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_matrix_logarithm_return_value_adfd2417a3d6f671e156b4ab1b92f1837}\label{class_eigen_1_1_matrix_logarithm_return_value_adfd2417a3d6f671e156b4ab1b92f1837}} 
+\index{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}!MatrixLogarithmReturnValue@{MatrixLogarithmReturnValue}}
+\index{MatrixLogarithmReturnValue@{MatrixLogarithmReturnValue}!Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{MatrixLogarithmReturnValue()}{MatrixLogarithmReturnValue()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value}{Eigen\+::\+Matrix\+Logarithm\+Return\+Value}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value}{Matrix\+Logarithm\+Return\+Value}} (\begin{DoxyParamCaption}\item[{const Derived \&}]{A }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em A} & Matrix (expression) forming the argument of the matrix logarithm. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_matrix_logarithm_return_value_a5f2f251989faf25e0cbbdfe6883ea50c}\label{class_eigen_1_1_matrix_logarithm_return_value_a5f2f251989faf25e0cbbdfe6883ea50c}} 
+\index{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a736377749656a2d0f664cfb36805f521}{Index}} \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value}{Eigen\+::\+Matrix\+Logarithm\+Return\+Value}}$<$ Derived $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_matrix_logarithm_return_value_ac17537a51ce53a44746fabd7a83d29d3}\label{class_eigen_1_1_matrix_logarithm_return_value_ac17537a51ce53a44746fabd7a83d29d3}} 
+\index{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}!evalTo@{evalTo}}
+\index{evalTo@{evalTo}!Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{evalTo()}{evalTo()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$typename Result\+Type $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value}{Eigen\+::\+Matrix\+Logarithm\+Return\+Value}}$<$ Derived $>$\+::eval\+To (\begin{DoxyParamCaption}\item[{Result\+Type \&}]{result }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the matrix logarithm. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em result} & Logarithm of {\ttfamily A}, where {\ttfamily A} is as specified in the constructor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_eigen_1_1_matrix_logarithm_return_value_a13acb69f8ba2d48f84e508a19605a2a6}\label{class_eigen_1_1_matrix_logarithm_return_value_a13acb69f8ba2d48f84e508a19605a2a6}} 
+\index{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a736377749656a2d0f664cfb36805f521}{Index}} \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value}{Eigen\+::\+Matrix\+Logarithm\+Return\+Value}}$<$ Derived $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_matrix_logarithm_return_value_a247cf69f98c5cb7457b0829cc74babf1}\label{class_eigen_1_1_matrix_logarithm_return_value_a247cf69f98c5cb7457b0829cc74babf1}} 
+\index{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}!m\_A@{m\_A}}
+\index{m\_A@{m\_A}!Eigen::MatrixLogarithmReturnValue$<$ Derived $>$@{Eigen::MatrixLogarithmReturnValue$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{m\_A}{m\_A}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+const \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value_a18e69d2302e53d0ab0ebcfceda3f64ae}{Derived\+Nested}} \mbox{\hyperlink{class_eigen_1_1_matrix_logarithm_return_value}{Eigen\+::\+Matrix\+Logarithm\+Return\+Value}}$<$ Derived $>$\+::m\+\_\+A\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/util/\mbox{\hyperlink{_forward_declarations_8h}{Forward\+Declarations.\+h}}\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/src/\+Matrix\+Functions/\mbox{\hyperlink{_matrix_logarithm_8h}{Matrix\+Logarithm.\+h}}\end{DoxyCompactItemize}

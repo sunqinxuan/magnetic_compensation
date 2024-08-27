@@ -1,0 +1,120 @@
+\hypertarget{classdetail_1_1wide__string__input__adapter}{}\doxysection{detail\+::wide\+\_\+string\+\_\+input\+\_\+adapter$<$ Base\+Input\+Adapter, Wide\+Char\+Type $>$ Class Template Reference}
+\label{classdetail_1_1wide__string__input__adapter}\index{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}}
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter_ae213f84ba1b7e9db57ca8d6cdc8c241d}{char\+\_\+type}} = char
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdetail_1_1wide__string__input__adapter_a5deb0bdbced96a021ab968967a815773}{wide\+\_\+string\+\_\+input\+\_\+adapter}} (Base\+Input\+Adapter base)
+\item 
+std\+::char\+\_\+traits$<$ char $>$\+::int\+\_\+type \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter_ae36fc0c227da750a25d1e6d45dbcab3e}{get\+\_\+character}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t T$>$ }\\\mbox{\hyperlink{namespacedetail_af35a0fd8336e885df74b1a0100d2ec20}{void}} \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter_afaebf5106d919139ca4b330d9ed40da0}{fill\+\_\+buffer}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Base\+Input\+Adapter \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter_a53dd4fecb20b1358832c93758fb37378}{base\+\_\+adapter}}
+\item 
+std\+::array$<$ std\+::char\+\_\+traits$<$ char $>$\+::int\+\_\+type, 4 $>$ \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter_a378353ca4f8fa6ce681863db1a2ecd30}{utf8\+\_\+bytes}} = \{\{0, 0, 0, 0\}\}
+\begin{DoxyCompactList}\small\item\em a buffer for U\+T\+F-\/8 bytes \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter_af234031ee14448d536022847ab6bc885}{utf8\+\_\+bytes\+\_\+index}} = 0
+\begin{DoxyCompactList}\small\item\em index to the utf8\+\_\+codes array for the next valid byte \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter_a529076d03d62e56ec1ec12fe2da1e0c9}{utf8\+\_\+bytes\+\_\+filled}} = 0
+\begin{DoxyCompactList}\small\item\em number of valid bytes in the utf8\+\_\+codes array \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classdetail_1_1wide__string__input__adapter_ae213f84ba1b7e9db57ca8d6cdc8c241d}\label{classdetail_1_1wide__string__input__adapter_ae213f84ba1b7e9db57ca8d6cdc8c241d}} 
+\index{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}!char\_type@{char\_type}}
+\index{char\_type@{char\_type}!detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}}
+\doxysubsubsection{\texorpdfstring{char\_type}{char\_type}}
+{\footnotesize\ttfamily template$<$typename Base\+Input\+Adapter , typename Wide\+Char\+Type $>$ \\
+using \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter}{detail\+::wide\+\_\+string\+\_\+input\+\_\+adapter}}$<$ Base\+Input\+Adapter, Wide\+Char\+Type $>$\+::\mbox{\hyperlink{classdetail_1_1wide__string__input__adapter_ae213f84ba1b7e9db57ca8d6cdc8c241d}{char\+\_\+type}} =  char}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdetail_1_1wide__string__input__adapter_a5deb0bdbced96a021ab968967a815773}\label{classdetail_1_1wide__string__input__adapter_a5deb0bdbced96a021ab968967a815773}} 
+\index{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}!wide\_string\_input\_adapter@{wide\_string\_input\_adapter}}
+\index{wide\_string\_input\_adapter@{wide\_string\_input\_adapter}!detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}}
+\doxysubsubsection{\texorpdfstring{wide\_string\_input\_adapter()}{wide\_string\_input\_adapter()}}
+{\footnotesize\ttfamily template$<$typename Base\+Input\+Adapter , typename Wide\+Char\+Type $>$ \\
+\mbox{\hyperlink{classdetail_1_1wide__string__input__adapter}{detail\+::wide\+\_\+string\+\_\+input\+\_\+adapter}}$<$ Base\+Input\+Adapter, Wide\+Char\+Type $>$\+::\mbox{\hyperlink{classdetail_1_1wide__string__input__adapter}{wide\+\_\+string\+\_\+input\+\_\+adapter}} (\begin{DoxyParamCaption}\item[{Base\+Input\+Adapter}]{base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdetail_1_1wide__string__input__adapter_afaebf5106d919139ca4b330d9ed40da0}\label{classdetail_1_1wide__string__input__adapter_afaebf5106d919139ca4b330d9ed40da0}} 
+\index{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}!fill\_buffer@{fill\_buffer}}
+\index{fill\_buffer@{fill\_buffer}!detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}}
+\doxysubsubsection{\texorpdfstring{fill\_buffer()}{fill\_buffer()}}
+{\footnotesize\ttfamily template$<$typename Base\+Input\+Adapter , typename Wide\+Char\+Type $>$ \\
+template$<$size\+\_\+t T$>$ \\
+\mbox{\hyperlink{namespacedetail_af35a0fd8336e885df74b1a0100d2ec20}{void}} \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter}{detail\+::wide\+\_\+string\+\_\+input\+\_\+adapter}}$<$ Base\+Input\+Adapter, Wide\+Char\+Type $>$\+::fill\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdetail_1_1wide__string__input__adapter_ae36fc0c227da750a25d1e6d45dbcab3e}\label{classdetail_1_1wide__string__input__adapter_ae36fc0c227da750a25d1e6d45dbcab3e}} 
+\index{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}!get\_character@{get\_character}}
+\index{get\_character@{get\_character}!detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}}
+\doxysubsubsection{\texorpdfstring{get\_character()}{get\_character()}}
+{\footnotesize\ttfamily template$<$typename Base\+Input\+Adapter , typename Wide\+Char\+Type $>$ \\
+std\+::char\+\_\+traits$<$char$>$\+::int\+\_\+type \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter}{detail\+::wide\+\_\+string\+\_\+input\+\_\+adapter}}$<$ Base\+Input\+Adapter, Wide\+Char\+Type $>$\+::get\+\_\+character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdetail_1_1wide__string__input__adapter_a53dd4fecb20b1358832c93758fb37378}\label{classdetail_1_1wide__string__input__adapter_a53dd4fecb20b1358832c93758fb37378}} 
+\index{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}!base\_adapter@{base\_adapter}}
+\index{base\_adapter@{base\_adapter}!detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}}
+\doxysubsubsection{\texorpdfstring{base\_adapter}{base\_adapter}}
+{\footnotesize\ttfamily template$<$typename Base\+Input\+Adapter , typename Wide\+Char\+Type $>$ \\
+Base\+Input\+Adapter \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter}{detail\+::wide\+\_\+string\+\_\+input\+\_\+adapter}}$<$ Base\+Input\+Adapter, Wide\+Char\+Type $>$\+::base\+\_\+adapter\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdetail_1_1wide__string__input__adapter_a378353ca4f8fa6ce681863db1a2ecd30}\label{classdetail_1_1wide__string__input__adapter_a378353ca4f8fa6ce681863db1a2ecd30}} 
+\index{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}!utf8\_bytes@{utf8\_bytes}}
+\index{utf8\_bytes@{utf8\_bytes}!detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}}
+\doxysubsubsection{\texorpdfstring{utf8\_bytes}{utf8\_bytes}}
+{\footnotesize\ttfamily template$<$typename Base\+Input\+Adapter , typename Wide\+Char\+Type $>$ \\
+std\+::array$<$std\+::char\+\_\+traits$<$char$>$\+::int\+\_\+type, 4$>$ \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter}{detail\+::wide\+\_\+string\+\_\+input\+\_\+adapter}}$<$ Base\+Input\+Adapter, Wide\+Char\+Type $>$\+::utf8\+\_\+bytes = \{\{0, 0, 0, 0\}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+a buffer for U\+T\+F-\/8 bytes 
+
+\mbox{\Hypertarget{classdetail_1_1wide__string__input__adapter_a529076d03d62e56ec1ec12fe2da1e0c9}\label{classdetail_1_1wide__string__input__adapter_a529076d03d62e56ec1ec12fe2da1e0c9}} 
+\index{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}!utf8\_bytes\_filled@{utf8\_bytes\_filled}}
+\index{utf8\_bytes\_filled@{utf8\_bytes\_filled}!detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}}
+\doxysubsubsection{\texorpdfstring{utf8\_bytes\_filled}{utf8\_bytes\_filled}}
+{\footnotesize\ttfamily template$<$typename Base\+Input\+Adapter , typename Wide\+Char\+Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter}{detail\+::wide\+\_\+string\+\_\+input\+\_\+adapter}}$<$ Base\+Input\+Adapter, Wide\+Char\+Type $>$\+::utf8\+\_\+bytes\+\_\+filled = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+number of valid bytes in the utf8\+\_\+codes array 
+
+\mbox{\Hypertarget{classdetail_1_1wide__string__input__adapter_af234031ee14448d536022847ab6bc885}\label{classdetail_1_1wide__string__input__adapter_af234031ee14448d536022847ab6bc885}} 
+\index{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}!utf8\_bytes\_index@{utf8\_bytes\_index}}
+\index{utf8\_bytes\_index@{utf8\_bytes\_index}!detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$@{detail::wide\_string\_input\_adapter$<$ BaseInputAdapter, WideCharType $>$}}
+\doxysubsubsection{\texorpdfstring{utf8\_bytes\_index}{utf8\_bytes\_index}}
+{\footnotesize\ttfamily template$<$typename Base\+Input\+Adapter , typename Wide\+Char\+Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classdetail_1_1wide__string__input__adapter}{detail\+::wide\+\_\+string\+\_\+input\+\_\+adapter}}$<$ Base\+Input\+Adapter, Wide\+Char\+Type $>$\+::utf8\+\_\+bytes\+\_\+index = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+index to the utf8\+\_\+codes array for the next valid byte 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/nlohmann/include/\mbox{\hyperlink{json_8hpp}{json.\+hpp}}\end{DoxyCompactItemize}

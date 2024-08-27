@@ -1,0 +1,50 @@
+\hypertarget{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree}{}\doxysection{Eigen\+::internal\+::matrix\+\_\+log\+\_\+max\+\_\+pade\+\_\+degree$<$ Scalar $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree}\index{Eigen::internal::matrix\_log\_max\_pade\_degree$<$ Scalar $>$@{Eigen::internal::matrix\_log\_max\_pade\_degree$<$ Scalar $>$}}
+
+
+{\ttfamily \#include $<$Matrix\+Logarithm.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$ Scalar $>$\+::Real \mbox{\hyperlink{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree_a4ae64629bcb2b71681bc28d91bfff9c1}{Real\+Scalar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree_a38314459d0d863ceb1da1ab443d5083a}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree_a4ae64629bcb2b71681bc28d91bfff9c1}\label{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree_a4ae64629bcb2b71681bc28d91bfff9c1}} 
+\index{Eigen::internal::matrix\_log\_max\_pade\_degree$<$ Scalar $>$@{Eigen::internal::matrix\_log\_max\_pade\_degree$<$ Scalar $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::internal::matrix\_log\_max\_pade\_degree$<$ Scalar $>$@{Eigen::internal::matrix\_log\_max\_pade\_degree$<$ Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$typename Scalar $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$Scalar$>$\+::Real \mbox{\hyperlink{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree}{Eigen\+::internal\+::matrix\+\_\+log\+\_\+max\+\_\+pade\+\_\+degree}}$<$ Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree_a4ae64629bcb2b71681bc28d91bfff9c1}{Real\+Scalar}}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree_a38314459d0d863ceb1da1ab443d5083a}\label{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree_a38314459d0d863ceb1da1ab443d5083a}} 
+\index{Eigen::internal::matrix\_log\_max\_pade\_degree$<$ Scalar $>$@{Eigen::internal::matrix\_log\_max\_pade\_degree$<$ Scalar $>$}!value@{value}}
+\index{value@{value}!Eigen::internal::matrix\_log\_max\_pade\_degree$<$ Scalar $>$@{Eigen::internal::matrix\_log\_max\_pade\_degree$<$ Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename Scalar $>$ \\
+const int \mbox{\hyperlink{struct_eigen_1_1internal_1_1matrix__log__max__pade__degree}{Eigen\+::internal\+::matrix\+\_\+log\+\_\+max\+\_\+pade\+\_\+degree}}$<$ Scalar $>$\+::value\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= std::numeric\_limits<RealScalar>::digits<= 24?  5:  }
+\DoxyCodeLine{                           std::numeric\_limits<RealScalar>::digits<= 53?  7:  }
+\DoxyCodeLine{                           std::numeric\_limits<RealScalar>::digits<= 64?  8:  }
+\DoxyCodeLine{                           std::numeric\_limits<RealScalar>::digits<=106? 10:  }
+\DoxyCodeLine{                                                                         11}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/src/\+Matrix\+Functions/\mbox{\hyperlink{_matrix_logarithm_8h}{Matrix\+Logarithm.\+h}}\end{DoxyCompactItemize}

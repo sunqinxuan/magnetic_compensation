@@ -1,0 +1,388 @@
+\hypertarget{_eigen___colamd_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Ordering\+Methods/\+Eigen\+\_\+\+Colamd.h File Reference}
+\label{_eigen___colamd_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/OrderingMethods/Eigen\_Colamd.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/OrderingMethods/Eigen\_Colamd.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{_eigen___colamd_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structinternal_1_1colamd__col}{internal\+::colamd\+\_\+col$<$ Index\+Type $>$}}
+\item 
+struct \mbox{\hyperlink{structinternal_1_1_colamd___row}{internal\+::\+Colamd\+\_\+\+Row$<$ Index\+Type $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceinternal}{internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a38c21eb06ef9315d929d75aa9162b515}{C\+O\+L\+A\+M\+D\+\_\+\+N\+D\+E\+B\+UG}}
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_ae92bb10d09f7cd004f07d1baddf90548}{C\+O\+L\+A\+M\+D\+\_\+\+K\+N\+O\+BS}}~20
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a411703fc0a994b83ec0e00df1abfc0f7}{C\+O\+L\+A\+M\+D\+\_\+\+S\+T\+A\+TS}}~20
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a45a417439d08823fa620ca00d834dd61}{C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+N\+S\+E\+\_\+\+R\+OW}}~0
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_af92de54efdec91d7ab64e7bec07eb12c}{C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+N\+S\+E\+\_\+\+C\+OL}}~1
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_ababfabfa19364ec563aa9c15bcc9714e}{C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+F\+R\+A\+G\+\_\+\+C\+O\+U\+NT}}~2
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a6a4201ce55dfa3a6375b90097e8c747e}{C\+O\+L\+A\+M\+D\+\_\+\+S\+T\+A\+T\+US}}~3
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a569d56a773011e0b4e465b3f5830e80b}{C\+O\+L\+A\+M\+D\+\_\+\+I\+N\+F\+O1}}~4
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a2161fd78bbd688f943250d1d7583284b}{C\+O\+L\+A\+M\+D\+\_\+\+I\+N\+F\+O2}}~5
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a15d83814c573d742764ff83e9d1d67fc}{C\+O\+L\+A\+M\+D\+\_\+\+I\+N\+F\+O3}}~6
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_aa754fd30d924c5c8d2d402fa0a482d72}{C\+O\+L\+A\+M\+D\+\_\+\+OK}}~(0)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_ac0d7f3882e6e9e39527aa2195dd23789}{C\+O\+L\+A\+M\+D\+\_\+\+O\+K\+\_\+\+B\+U\+T\+\_\+\+J\+U\+M\+B\+L\+ED}}~(1)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a2347fb9e509c8bf9b97a50f96dea281c}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+\_\+not\+\_\+present}}~(-\/1)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a51d3f9714a4cb80c0f54dea5d0c5f95f}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+p\+\_\+not\+\_\+present}}~(-\/2)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a8e848cfde5cdf42fcb316695305f8002}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+nrow\+\_\+negative}}~(-\/3)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a2feedddbe535286cbea9eca9fca91f45}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+ncol\+\_\+negative}}~(-\/4)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a7147ea7a9d673f17ef856e9914f90c81}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+nnz\+\_\+negative}}~(-\/5)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a58b5d911cc825b4334ade136bad3afd3}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+p0\+\_\+nonzero}}~(-\/6)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a323108d44db4186fad5a2066139f70b7}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+\_\+too\+\_\+small}}~(-\/7)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a3b6df4a489ed0c7de8ad12251cdac5d6}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+col\+\_\+length\+\_\+negative}}~(-\/8)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a0559e0ff07deab1841e7aaee8cde51e6}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+row\+\_\+index\+\_\+out\+\_\+of\+\_\+bounds}}~(-\/9)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a703f11265b521c931cdd44709d141fca}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+out\+\_\+of\+\_\+memory}}~(-\/10)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_ae97b9ba07b455e4ce07c53a4d71c1169}{C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+internal\+\_\+error}}~(-\/999)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_af4201cc2809d450d2484680ee1b958ca}{O\+N\+E\+S\+\_\+\+C\+O\+M\+P\+L\+E\+M\+E\+NT}}(r)~(-\/(r)-\/1)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a1cf6ce8ce8192c19669e6c3533ca5189}{C\+O\+L\+A\+M\+D\+\_\+\+E\+M\+P\+TY}}~(-\/1)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}{A\+L\+I\+VE}}~(0)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a3c8793c7acb4598d2ebcd8288f29ee69}{D\+E\+AD}}~(-\/1)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_ac0adce1e7d70351cef4752f3373709af}{D\+E\+A\+D\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL}}~(-\/1)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a0f66923672bcc495333995f7d238945f}{D\+E\+A\+D\+\_\+\+N\+O\+N\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL}}~(-\/2)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_ae200d2ac8149305712af7230f9ee24d5}{R\+O\+W\+\_\+\+I\+S\+\_\+\+D\+E\+AD}}(r)~\mbox{\hyperlink{_eigen___colamd_8h_a0d68b03acc587c11fe6dffbfede78c2d}{R\+O\+W\+\_\+\+I\+S\+\_\+\+M\+A\+R\+K\+E\+D\+\_\+\+D\+E\+AD}} (Row\mbox{[}r\mbox{]}.shared2.\+mark)
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a0d68b03acc587c11fe6dffbfede78c2d}{R\+O\+W\+\_\+\+I\+S\+\_\+\+M\+A\+R\+K\+E\+D\+\_\+\+D\+E\+AD}}(row\+\_\+mark)~(row\+\_\+mark $<$ \mbox{\hyperlink{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}{A\+L\+I\+VE}})
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_abc775359cfa45ffaf6250522c521110d}{R\+O\+W\+\_\+\+I\+S\+\_\+\+A\+L\+I\+VE}}(r)~(Row \mbox{[}r\mbox{]}.shared2.\+mark $>$= \mbox{\hyperlink{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}{A\+L\+I\+VE}})
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_aa08664bd5b8133f28dbeedc9a030fc86}{C\+O\+L\+\_\+\+I\+S\+\_\+\+D\+E\+AD}}(c)~(Col \mbox{[}c\mbox{]}.start $<$ \mbox{\hyperlink{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}{A\+L\+I\+VE}})
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a50f9ca65904b13f345862cb46d08d84b}{C\+O\+L\+\_\+\+I\+S\+\_\+\+A\+L\+I\+VE}}(c)~(Col \mbox{[}c\mbox{]}.start $>$= \mbox{\hyperlink{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}{A\+L\+I\+VE}})
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a003c0e2dae54bcb7c680333304dd4dcb}{C\+O\+L\+\_\+\+I\+S\+\_\+\+D\+E\+A\+D\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL}}(c)~(Col \mbox{[}c\mbox{]}.start == \mbox{\hyperlink{_eigen___colamd_8h_ac0adce1e7d70351cef4752f3373709af}{D\+E\+A\+D\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL}})
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_adde21248544152df48ab70b6da1b38b5}{K\+I\+L\+L\+\_\+\+R\+OW}}(r)~\{ Row \mbox{[}r\mbox{]}.shared2.\+mark = \mbox{\hyperlink{_eigen___colamd_8h_a3c8793c7acb4598d2ebcd8288f29ee69}{D\+E\+AD}} ; \}
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a7882929a7898e09a3de9e7676ae1aa29}{K\+I\+L\+L\+\_\+\+P\+R\+I\+N\+C\+I\+P\+A\+L\+\_\+\+C\+OL}}(c)~\{ Col \mbox{[}c\mbox{]}.start = \mbox{\hyperlink{_eigen___colamd_8h_ac0adce1e7d70351cef4752f3373709af}{D\+E\+A\+D\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL}} ; \}
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a0458a358e752473d86e6f21a56b44a26}{K\+I\+L\+L\+\_\+\+N\+O\+N\+\_\+\+P\+R\+I\+N\+C\+I\+P\+A\+L\+\_\+\+C\+OL}}(c)~\{ Col \mbox{[}c\mbox{]}.start = \mbox{\hyperlink{_eigen___colamd_8h_a0f66923672bcc495333995f7d238945f}{D\+E\+A\+D\+\_\+\+N\+O\+N\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL}} ; \}
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a167385ed3f19291128ef55a4091030e8}{C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+B\+U\+G0}}(params)~;
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a83cdfbe06c7b06fac99cb9c729227626}{C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+B\+U\+G1}}(params)~;
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a46e403e99896b4bcb724d0bd495c0811}{C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+B\+U\+G2}}(params)~;
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a83c6006b9a5af0e406df254e4d0a3e7e}{C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+B\+U\+G3}}(params)~;
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a842cca702028f63329416ffb854e8693}{C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+B\+U\+G4}}(params)~;
+\item 
+\#define \mbox{\hyperlink{_eigen___colamd_8h_a07407c8b75dc7b958e2e8e1cb0ced945}{C\+O\+L\+A\+M\+D\+\_\+\+A\+S\+S\+E\+RT}}(expression)~((void) 0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Index\+Type $>$ }\\Index\+Type \mbox{\hyperlink{namespaceinternal_a9334b3273c8d552d9dce545771271df6}{internal\+::colamd\+\_\+c}} (Index\+Type n\+\_\+col)
+\item 
+{\footnotesize template$<$typename Index\+Type $>$ }\\Index\+Type \mbox{\hyperlink{namespaceinternal_a7aaab7bd925c78071c636749a9fe4fa8}{internal\+::colamd\+\_\+r}} (Index\+Type n\+\_\+row)
+\item 
+{\footnotesize template$<$typename Index\+Type $>$ }\\Index\+Type \mbox{\hyperlink{namespaceinternal_a6702fb80a0ef276ea3b9e2e65a8f12a1}{internal\+::colamd\+\_\+recommended}} (Index\+Type nnz, Index\+Type n\+\_\+row, Index\+Type n\+\_\+col)
+\begin{DoxyCompactList}\small\item\em Returns the recommended value of Alen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}\label{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!ALIVE@{ALIVE}}
+\index{ALIVE@{ALIVE}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{ALIVE}{ALIVE}}
+{\footnotesize\ttfamily \#define A\+L\+I\+VE~(0)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a50f9ca65904b13f345862cb46d08d84b}\label{_eigen___colamd_8h_a50f9ca65904b13f345862cb46d08d84b}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COL\_IS\_ALIVE@{COL\_IS\_ALIVE}}
+\index{COL\_IS\_ALIVE@{COL\_IS\_ALIVE}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COL\_IS\_ALIVE}{COL\_IS\_ALIVE}}
+{\footnotesize\ttfamily \#define C\+O\+L\+\_\+\+I\+S\+\_\+\+A\+L\+I\+VE(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~(Col \mbox{[}c\mbox{]}.start $>$= \mbox{\hyperlink{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}{A\+L\+I\+VE}})}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_aa08664bd5b8133f28dbeedc9a030fc86}\label{_eigen___colamd_8h_aa08664bd5b8133f28dbeedc9a030fc86}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COL\_IS\_DEAD@{COL\_IS\_DEAD}}
+\index{COL\_IS\_DEAD@{COL\_IS\_DEAD}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COL\_IS\_DEAD}{COL\_IS\_DEAD}}
+{\footnotesize\ttfamily \#define C\+O\+L\+\_\+\+I\+S\+\_\+\+D\+E\+AD(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~(Col \mbox{[}c\mbox{]}.start $<$ \mbox{\hyperlink{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}{A\+L\+I\+VE}})}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a003c0e2dae54bcb7c680333304dd4dcb}\label{_eigen___colamd_8h_a003c0e2dae54bcb7c680333304dd4dcb}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COL\_IS\_DEAD\_PRINCIPAL@{COL\_IS\_DEAD\_PRINCIPAL}}
+\index{COL\_IS\_DEAD\_PRINCIPAL@{COL\_IS\_DEAD\_PRINCIPAL}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COL\_IS\_DEAD\_PRINCIPAL}{COL\_IS\_DEAD\_PRINCIPAL}}
+{\footnotesize\ttfamily \#define C\+O\+L\+\_\+\+I\+S\+\_\+\+D\+E\+A\+D\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~(Col \mbox{[}c\mbox{]}.start == \mbox{\hyperlink{_eigen___colamd_8h_ac0adce1e7d70351cef4752f3373709af}{D\+E\+A\+D\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL}})}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a07407c8b75dc7b958e2e8e1cb0ced945}\label{_eigen___colamd_8h_a07407c8b75dc7b958e2e8e1cb0ced945}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ASSERT@{COLAMD\_ASSERT}}
+\index{COLAMD\_ASSERT@{COLAMD\_ASSERT}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ASSERT}{COLAMD\_ASSERT}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{expression }\end{DoxyParamCaption})~((void) 0)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a167385ed3f19291128ef55a4091030e8}\label{_eigen___colamd_8h_a167385ed3f19291128ef55a4091030e8}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_DEBUG0@{COLAMD\_DEBUG0}}
+\index{COLAMD\_DEBUG0@{COLAMD\_DEBUG0}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_DEBUG0}{COLAMD\_DEBUG0}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+B\+U\+G0(\begin{DoxyParamCaption}\item[{}]{params }\end{DoxyParamCaption})~;}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a83cdfbe06c7b06fac99cb9c729227626}\label{_eigen___colamd_8h_a83cdfbe06c7b06fac99cb9c729227626}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_DEBUG1@{COLAMD\_DEBUG1}}
+\index{COLAMD\_DEBUG1@{COLAMD\_DEBUG1}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_DEBUG1}{COLAMD\_DEBUG1}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+B\+U\+G1(\begin{DoxyParamCaption}\item[{}]{params }\end{DoxyParamCaption})~;}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a46e403e99896b4bcb724d0bd495c0811}\label{_eigen___colamd_8h_a46e403e99896b4bcb724d0bd495c0811}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_DEBUG2@{COLAMD\_DEBUG2}}
+\index{COLAMD\_DEBUG2@{COLAMD\_DEBUG2}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_DEBUG2}{COLAMD\_DEBUG2}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+B\+U\+G2(\begin{DoxyParamCaption}\item[{}]{params }\end{DoxyParamCaption})~;}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a83c6006b9a5af0e406df254e4d0a3e7e}\label{_eigen___colamd_8h_a83c6006b9a5af0e406df254e4d0a3e7e}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_DEBUG3@{COLAMD\_DEBUG3}}
+\index{COLAMD\_DEBUG3@{COLAMD\_DEBUG3}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_DEBUG3}{COLAMD\_DEBUG3}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+B\+U\+G3(\begin{DoxyParamCaption}\item[{}]{params }\end{DoxyParamCaption})~;}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a842cca702028f63329416ffb854e8693}\label{_eigen___colamd_8h_a842cca702028f63329416ffb854e8693}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_DEBUG4@{COLAMD\_DEBUG4}}
+\index{COLAMD\_DEBUG4@{COLAMD\_DEBUG4}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_DEBUG4}{COLAMD\_DEBUG4}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+B\+U\+G4(\begin{DoxyParamCaption}\item[{}]{params }\end{DoxyParamCaption})~;}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_ababfabfa19364ec563aa9c15bcc9714e}\label{_eigen___colamd_8h_ababfabfa19364ec563aa9c15bcc9714e}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_DEFRAG\_COUNT@{COLAMD\_DEFRAG\_COUNT}}
+\index{COLAMD\_DEFRAG\_COUNT@{COLAMD\_DEFRAG\_COUNT}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_DEFRAG\_COUNT}{COLAMD\_DEFRAG\_COUNT}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+F\+R\+A\+G\+\_\+\+C\+O\+U\+NT~2}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_af92de54efdec91d7ab64e7bec07eb12c}\label{_eigen___colamd_8h_af92de54efdec91d7ab64e7bec07eb12c}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_DENSE\_COL@{COLAMD\_DENSE\_COL}}
+\index{COLAMD\_DENSE\_COL@{COLAMD\_DENSE\_COL}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_DENSE\_COL}{COLAMD\_DENSE\_COL}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+N\+S\+E\+\_\+\+C\+OL~1}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a45a417439d08823fa620ca00d834dd61}\label{_eigen___colamd_8h_a45a417439d08823fa620ca00d834dd61}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_DENSE\_ROW@{COLAMD\_DENSE\_ROW}}
+\index{COLAMD\_DENSE\_ROW@{COLAMD\_DENSE\_ROW}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_DENSE\_ROW}{COLAMD\_DENSE\_ROW}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+D\+E\+N\+S\+E\+\_\+\+R\+OW~0}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a1cf6ce8ce8192c19669e6c3533ca5189}\label{_eigen___colamd_8h_a1cf6ce8ce8192c19669e6c3533ca5189}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_EMPTY@{COLAMD\_EMPTY}}
+\index{COLAMD\_EMPTY@{COLAMD\_EMPTY}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_EMPTY}{COLAMD\_EMPTY}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+M\+P\+TY~(-\/1)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a2347fb9e509c8bf9b97a50f96dea281c}\label{_eigen___colamd_8h_a2347fb9e509c8bf9b97a50f96dea281c}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_A\_not\_present@{COLAMD\_ERROR\_A\_not\_present}}
+\index{COLAMD\_ERROR\_A\_not\_present@{COLAMD\_ERROR\_A\_not\_present}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_A\_not\_present}{COLAMD\_ERROR\_A\_not\_present}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+\_\+not\+\_\+present~(-\/1)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a323108d44db4186fad5a2066139f70b7}\label{_eigen___colamd_8h_a323108d44db4186fad5a2066139f70b7}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_A\_too\_small@{COLAMD\_ERROR\_A\_too\_small}}
+\index{COLAMD\_ERROR\_A\_too\_small@{COLAMD\_ERROR\_A\_too\_small}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_A\_too\_small}{COLAMD\_ERROR\_A\_too\_small}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+\_\+too\+\_\+small~(-\/7)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a3b6df4a489ed0c7de8ad12251cdac5d6}\label{_eigen___colamd_8h_a3b6df4a489ed0c7de8ad12251cdac5d6}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_col\_length\_negative@{COLAMD\_ERROR\_col\_length\_negative}}
+\index{COLAMD\_ERROR\_col\_length\_negative@{COLAMD\_ERROR\_col\_length\_negative}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_col\_length\_negative}{COLAMD\_ERROR\_col\_length\_negative}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+col\+\_\+length\+\_\+negative~(-\/8)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_ae97b9ba07b455e4ce07c53a4d71c1169}\label{_eigen___colamd_8h_ae97b9ba07b455e4ce07c53a4d71c1169}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_internal\_error@{COLAMD\_ERROR\_internal\_error}}
+\index{COLAMD\_ERROR\_internal\_error@{COLAMD\_ERROR\_internal\_error}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_internal\_error}{COLAMD\_ERROR\_internal\_error}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+internal\+\_\+error~(-\/999)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a2feedddbe535286cbea9eca9fca91f45}\label{_eigen___colamd_8h_a2feedddbe535286cbea9eca9fca91f45}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_ncol\_negative@{COLAMD\_ERROR\_ncol\_negative}}
+\index{COLAMD\_ERROR\_ncol\_negative@{COLAMD\_ERROR\_ncol\_negative}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_ncol\_negative}{COLAMD\_ERROR\_ncol\_negative}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+ncol\+\_\+negative~(-\/4)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a7147ea7a9d673f17ef856e9914f90c81}\label{_eigen___colamd_8h_a7147ea7a9d673f17ef856e9914f90c81}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_nnz\_negative@{COLAMD\_ERROR\_nnz\_negative}}
+\index{COLAMD\_ERROR\_nnz\_negative@{COLAMD\_ERROR\_nnz\_negative}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_nnz\_negative}{COLAMD\_ERROR\_nnz\_negative}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+nnz\+\_\+negative~(-\/5)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a8e848cfde5cdf42fcb316695305f8002}\label{_eigen___colamd_8h_a8e848cfde5cdf42fcb316695305f8002}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_nrow\_negative@{COLAMD\_ERROR\_nrow\_negative}}
+\index{COLAMD\_ERROR\_nrow\_negative@{COLAMD\_ERROR\_nrow\_negative}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_nrow\_negative}{COLAMD\_ERROR\_nrow\_negative}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+nrow\+\_\+negative~(-\/3)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a703f11265b521c931cdd44709d141fca}\label{_eigen___colamd_8h_a703f11265b521c931cdd44709d141fca}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_out\_of\_memory@{COLAMD\_ERROR\_out\_of\_memory}}
+\index{COLAMD\_ERROR\_out\_of\_memory@{COLAMD\_ERROR\_out\_of\_memory}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_out\_of\_memory}{COLAMD\_ERROR\_out\_of\_memory}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+out\+\_\+of\+\_\+memory~(-\/10)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a58b5d911cc825b4334ade136bad3afd3}\label{_eigen___colamd_8h_a58b5d911cc825b4334ade136bad3afd3}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_p0\_nonzero@{COLAMD\_ERROR\_p0\_nonzero}}
+\index{COLAMD\_ERROR\_p0\_nonzero@{COLAMD\_ERROR\_p0\_nonzero}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_p0\_nonzero}{COLAMD\_ERROR\_p0\_nonzero}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+p0\+\_\+nonzero~(-\/6)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a51d3f9714a4cb80c0f54dea5d0c5f95f}\label{_eigen___colamd_8h_a51d3f9714a4cb80c0f54dea5d0c5f95f}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_p\_not\_present@{COLAMD\_ERROR\_p\_not\_present}}
+\index{COLAMD\_ERROR\_p\_not\_present@{COLAMD\_ERROR\_p\_not\_present}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_p\_not\_present}{COLAMD\_ERROR\_p\_not\_present}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+p\+\_\+not\+\_\+present~(-\/2)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a0559e0ff07deab1841e7aaee8cde51e6}\label{_eigen___colamd_8h_a0559e0ff07deab1841e7aaee8cde51e6}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_ERROR\_row\_index\_out\_of\_bounds@{COLAMD\_ERROR\_row\_index\_out\_of\_bounds}}
+\index{COLAMD\_ERROR\_row\_index\_out\_of\_bounds@{COLAMD\_ERROR\_row\_index\_out\_of\_bounds}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_ERROR\_row\_index\_out\_of\_bounds}{COLAMD\_ERROR\_row\_index\_out\_of\_bounds}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+row\+\_\+index\+\_\+out\+\_\+of\+\_\+bounds~(-\/9)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a569d56a773011e0b4e465b3f5830e80b}\label{_eigen___colamd_8h_a569d56a773011e0b4e465b3f5830e80b}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_INFO1@{COLAMD\_INFO1}}
+\index{COLAMD\_INFO1@{COLAMD\_INFO1}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_INFO1}{COLAMD\_INFO1}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+I\+N\+F\+O1~4}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a2161fd78bbd688f943250d1d7583284b}\label{_eigen___colamd_8h_a2161fd78bbd688f943250d1d7583284b}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_INFO2@{COLAMD\_INFO2}}
+\index{COLAMD\_INFO2@{COLAMD\_INFO2}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_INFO2}{COLAMD\_INFO2}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+I\+N\+F\+O2~5}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a15d83814c573d742764ff83e9d1d67fc}\label{_eigen___colamd_8h_a15d83814c573d742764ff83e9d1d67fc}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_INFO3@{COLAMD\_INFO3}}
+\index{COLAMD\_INFO3@{COLAMD\_INFO3}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_INFO3}{COLAMD\_INFO3}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+I\+N\+F\+O3~6}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_ae92bb10d09f7cd004f07d1baddf90548}\label{_eigen___colamd_8h_ae92bb10d09f7cd004f07d1baddf90548}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_KNOBS@{COLAMD\_KNOBS}}
+\index{COLAMD\_KNOBS@{COLAMD\_KNOBS}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_KNOBS}{COLAMD\_KNOBS}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+K\+N\+O\+BS~20}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a38c21eb06ef9315d929d75aa9162b515}\label{_eigen___colamd_8h_a38c21eb06ef9315d929d75aa9162b515}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_NDEBUG@{COLAMD\_NDEBUG}}
+\index{COLAMD\_NDEBUG@{COLAMD\_NDEBUG}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_NDEBUG}{COLAMD\_NDEBUG}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+N\+D\+E\+B\+UG}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_aa754fd30d924c5c8d2d402fa0a482d72}\label{_eigen___colamd_8h_aa754fd30d924c5c8d2d402fa0a482d72}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_OK@{COLAMD\_OK}}
+\index{COLAMD\_OK@{COLAMD\_OK}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_OK}{COLAMD\_OK}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+OK~(0)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_ac0d7f3882e6e9e39527aa2195dd23789}\label{_eigen___colamd_8h_ac0d7f3882e6e9e39527aa2195dd23789}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_OK\_BUT\_JUMBLED@{COLAMD\_OK\_BUT\_JUMBLED}}
+\index{COLAMD\_OK\_BUT\_JUMBLED@{COLAMD\_OK\_BUT\_JUMBLED}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_OK\_BUT\_JUMBLED}{COLAMD\_OK\_BUT\_JUMBLED}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+O\+K\+\_\+\+B\+U\+T\+\_\+\+J\+U\+M\+B\+L\+ED~(1)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a411703fc0a994b83ec0e00df1abfc0f7}\label{_eigen___colamd_8h_a411703fc0a994b83ec0e00df1abfc0f7}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_STATS@{COLAMD\_STATS}}
+\index{COLAMD\_STATS@{COLAMD\_STATS}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_STATS}{COLAMD\_STATS}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+S\+T\+A\+TS~20}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a6a4201ce55dfa3a6375b90097e8c747e}\label{_eigen___colamd_8h_a6a4201ce55dfa3a6375b90097e8c747e}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!COLAMD\_STATUS@{COLAMD\_STATUS}}
+\index{COLAMD\_STATUS@{COLAMD\_STATUS}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{COLAMD\_STATUS}{COLAMD\_STATUS}}
+{\footnotesize\ttfamily \#define C\+O\+L\+A\+M\+D\+\_\+\+S\+T\+A\+T\+US~3}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a3c8793c7acb4598d2ebcd8288f29ee69}\label{_eigen___colamd_8h_a3c8793c7acb4598d2ebcd8288f29ee69}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!DEAD@{DEAD}}
+\index{DEAD@{DEAD}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{DEAD}{DEAD}}
+{\footnotesize\ttfamily \#define D\+E\+AD~(-\/1)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a0f66923672bcc495333995f7d238945f}\label{_eigen___colamd_8h_a0f66923672bcc495333995f7d238945f}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!DEAD\_NON\_PRINCIPAL@{DEAD\_NON\_PRINCIPAL}}
+\index{DEAD\_NON\_PRINCIPAL@{DEAD\_NON\_PRINCIPAL}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{DEAD\_NON\_PRINCIPAL}{DEAD\_NON\_PRINCIPAL}}
+{\footnotesize\ttfamily \#define D\+E\+A\+D\+\_\+\+N\+O\+N\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL~(-\/2)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_ac0adce1e7d70351cef4752f3373709af}\label{_eigen___colamd_8h_ac0adce1e7d70351cef4752f3373709af}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!DEAD\_PRINCIPAL@{DEAD\_PRINCIPAL}}
+\index{DEAD\_PRINCIPAL@{DEAD\_PRINCIPAL}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{DEAD\_PRINCIPAL}{DEAD\_PRINCIPAL}}
+{\footnotesize\ttfamily \#define D\+E\+A\+D\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL~(-\/1)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a0458a358e752473d86e6f21a56b44a26}\label{_eigen___colamd_8h_a0458a358e752473d86e6f21a56b44a26}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!KILL\_NON\_PRINCIPAL\_COL@{KILL\_NON\_PRINCIPAL\_COL}}
+\index{KILL\_NON\_PRINCIPAL\_COL@{KILL\_NON\_PRINCIPAL\_COL}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{KILL\_NON\_PRINCIPAL\_COL}{KILL\_NON\_PRINCIPAL\_COL}}
+{\footnotesize\ttfamily \#define K\+I\+L\+L\+\_\+\+N\+O\+N\+\_\+\+P\+R\+I\+N\+C\+I\+P\+A\+L\+\_\+\+C\+OL(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\{ Col \mbox{[}c\mbox{]}.start = \mbox{\hyperlink{_eigen___colamd_8h_a0f66923672bcc495333995f7d238945f}{D\+E\+A\+D\+\_\+\+N\+O\+N\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL}} ; \}}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a7882929a7898e09a3de9e7676ae1aa29}\label{_eigen___colamd_8h_a7882929a7898e09a3de9e7676ae1aa29}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!KILL\_PRINCIPAL\_COL@{KILL\_PRINCIPAL\_COL}}
+\index{KILL\_PRINCIPAL\_COL@{KILL\_PRINCIPAL\_COL}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{KILL\_PRINCIPAL\_COL}{KILL\_PRINCIPAL\_COL}}
+{\footnotesize\ttfamily \#define K\+I\+L\+L\+\_\+\+P\+R\+I\+N\+C\+I\+P\+A\+L\+\_\+\+C\+OL(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~\{ Col \mbox{[}c\mbox{]}.start = \mbox{\hyperlink{_eigen___colamd_8h_ac0adce1e7d70351cef4752f3373709af}{D\+E\+A\+D\+\_\+\+P\+R\+I\+N\+C\+I\+P\+AL}} ; \}}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_adde21248544152df48ab70b6da1b38b5}\label{_eigen___colamd_8h_adde21248544152df48ab70b6da1b38b5}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!KILL\_ROW@{KILL\_ROW}}
+\index{KILL\_ROW@{KILL\_ROW}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{KILL\_ROW}{KILL\_ROW}}
+{\footnotesize\ttfamily \#define K\+I\+L\+L\+\_\+\+R\+OW(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\{ Row \mbox{[}r\mbox{]}.shared2.\+mark = \mbox{\hyperlink{_eigen___colamd_8h_a3c8793c7acb4598d2ebcd8288f29ee69}{D\+E\+AD}} ; \}}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_af4201cc2809d450d2484680ee1b958ca}\label{_eigen___colamd_8h_af4201cc2809d450d2484680ee1b958ca}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!ONES\_COMPLEMENT@{ONES\_COMPLEMENT}}
+\index{ONES\_COMPLEMENT@{ONES\_COMPLEMENT}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{ONES\_COMPLEMENT}{ONES\_COMPLEMENT}}
+{\footnotesize\ttfamily \#define O\+N\+E\+S\+\_\+\+C\+O\+M\+P\+L\+E\+M\+E\+NT(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~(-\/(r)-\/1)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_abc775359cfa45ffaf6250522c521110d}\label{_eigen___colamd_8h_abc775359cfa45ffaf6250522c521110d}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!ROW\_IS\_ALIVE@{ROW\_IS\_ALIVE}}
+\index{ROW\_IS\_ALIVE@{ROW\_IS\_ALIVE}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{ROW\_IS\_ALIVE}{ROW\_IS\_ALIVE}}
+{\footnotesize\ttfamily \#define R\+O\+W\+\_\+\+I\+S\+\_\+\+A\+L\+I\+VE(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~(Row \mbox{[}r\mbox{]}.shared2.\+mark $>$= \mbox{\hyperlink{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}{A\+L\+I\+VE}})}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_ae200d2ac8149305712af7230f9ee24d5}\label{_eigen___colamd_8h_ae200d2ac8149305712af7230f9ee24d5}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!ROW\_IS\_DEAD@{ROW\_IS\_DEAD}}
+\index{ROW\_IS\_DEAD@{ROW\_IS\_DEAD}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{ROW\_IS\_DEAD}{ROW\_IS\_DEAD}}
+{\footnotesize\ttfamily \#define R\+O\+W\+\_\+\+I\+S\+\_\+\+D\+E\+AD(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})~\mbox{\hyperlink{_eigen___colamd_8h_a0d68b03acc587c11fe6dffbfede78c2d}{R\+O\+W\+\_\+\+I\+S\+\_\+\+M\+A\+R\+K\+E\+D\+\_\+\+D\+E\+AD}} (Row\mbox{[}r\mbox{]}.shared2.\+mark)}
+
+\mbox{\Hypertarget{_eigen___colamd_8h_a0d68b03acc587c11fe6dffbfede78c2d}\label{_eigen___colamd_8h_a0d68b03acc587c11fe6dffbfede78c2d}} 
+\index{Eigen\_Colamd.h@{Eigen\_Colamd.h}!ROW\_IS\_MARKED\_DEAD@{ROW\_IS\_MARKED\_DEAD}}
+\index{ROW\_IS\_MARKED\_DEAD@{ROW\_IS\_MARKED\_DEAD}!Eigen\_Colamd.h@{Eigen\_Colamd.h}}
+\doxysubsubsection{\texorpdfstring{ROW\_IS\_MARKED\_DEAD}{ROW\_IS\_MARKED\_DEAD}}
+{\footnotesize\ttfamily \#define R\+O\+W\+\_\+\+I\+S\+\_\+\+M\+A\+R\+K\+E\+D\+\_\+\+D\+E\+AD(\begin{DoxyParamCaption}\item[{}]{row\+\_\+mark }\end{DoxyParamCaption})~(row\+\_\+mark $<$ \mbox{\hyperlink{_eigen___colamd_8h_ad8beef706da0344be19d59438fcdab6d}{A\+L\+I\+VE}})}
+

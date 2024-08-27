@@ -1,0 +1,113 @@
+\hypertarget{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4}{}\doxysection{Eigen\+::internal\+::Blas\+Linear\+Mapper$<$ Scalar, Index, Alignment\+Type, 1 $>$ Class Template Reference}
+\label{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4}\index{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}}
+
+
+{\ttfamily \#include $<$Blas\+Util.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{packet\+\_\+traits}}$<$ Scalar $>$\+::type \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a8bb7262bac44d9adcf45243fb3f77d1d}{Packet}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{packet\+\_\+traits}}$<$ Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1half}{half}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae0ff616e1b5ad36fd5256a50e953e032}{Half\+Packet}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ab59444738e3efdcf768c17644bf5225a}{Blas\+Linear\+Mapper}} (Scalar $\ast$data, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} incr=1)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae62b8a18af5d58292676dd4d38d93960}{prefetch}} (int i) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} Scalar \& \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ad929d8456dc2f25847a363ebd0a0e3e1}{operator()}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} i) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a8bb7262bac44d9adcf45243fb3f77d1d}{Packet}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a808ca17adf444a32f8f5d0cffe90c19e}{load\+Packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} i) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae0ff616e1b5ad36fd5256a50e953e032}{Half\+Packet}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a65909ccf39a3515fd04952620899a943}{load\+Half\+Packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} i) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a4988a82b03c9297460121ca1e8e8987c}{store\+Packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} i, const \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a8bb7262bac44d9adcf45243fb3f77d1d}{Packet}} \&p) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Scalar $\ast$ \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae143675adcf03adfce52260094d138fa}{m\+\_\+data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae0ff616e1b5ad36fd5256a50e953e032}\label{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae0ff616e1b5ad36fd5256a50e953e032}} 
+\index{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}!HalfPacket@{HalfPacket}}
+\index{HalfPacket@{HalfPacket}!Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}}
+\doxysubsubsection{\texorpdfstring{HalfPacket}{HalfPacket}}
+{\footnotesize\ttfamily template$<$typename Scalar , typename Index , int Alignment\+Type$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{packet\+\_\+traits}}$<$Scalar$>$\+::\mbox{\hyperlink{struct_eigen_1_1half}{half}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper}{Eigen\+::internal\+::\+Blas\+Linear\+Mapper}}$<$ Scalar, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, \mbox{\hyperlink{group__enums_ga45fe06e29902b7a2773de05ba27b47a1}{Alignment\+Type}}, 1 $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae0ff616e1b5ad36fd5256a50e953e032}{Half\+Packet}}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a8bb7262bac44d9adcf45243fb3f77d1d}\label{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a8bb7262bac44d9adcf45243fb3f77d1d}} 
+\index{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}!Packet@{Packet}}
+\index{Packet@{Packet}!Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}}
+\doxysubsubsection{\texorpdfstring{Packet}{Packet}}
+{\footnotesize\ttfamily template$<$typename Scalar , typename Index , int Alignment\+Type$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{packet\+\_\+traits}}$<$Scalar$>$\+::type \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper}{Eigen\+::internal\+::\+Blas\+Linear\+Mapper}}$<$ Scalar, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, \mbox{\hyperlink{group__enums_ga45fe06e29902b7a2773de05ba27b47a1}{Alignment\+Type}}, 1 $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a8bb7262bac44d9adcf45243fb3f77d1d}{Packet}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ab59444738e3efdcf768c17644bf5225a}\label{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ab59444738e3efdcf768c17644bf5225a}} 
+\index{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}!BlasLinearMapper@{BlasLinearMapper}}
+\index{BlasLinearMapper@{BlasLinearMapper}!Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}}
+\doxysubsubsection{\texorpdfstring{BlasLinearMapper()}{BlasLinearMapper()}}
+{\footnotesize\ttfamily template$<$typename Scalar , typename Index , int Alignment\+Type$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper}{Eigen\+::internal\+::\+Blas\+Linear\+Mapper}}$<$ Scalar, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, \mbox{\hyperlink{group__enums_ga45fe06e29902b7a2773de05ba27b47a1}{Alignment\+Type}}, 1 $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper}{Blas\+Linear\+Mapper}} (\begin{DoxyParamCaption}\item[{Scalar $\ast$}]{data,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{incr = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a65909ccf39a3515fd04952620899a943}\label{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a65909ccf39a3515fd04952620899a943}} 
+\index{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}!loadHalfPacket@{loadHalfPacket}}
+\index{loadHalfPacket@{loadHalfPacket}!Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}}
+\doxysubsubsection{\texorpdfstring{loadHalfPacket()}{loadHalfPacket()}}
+{\footnotesize\ttfamily template$<$typename Scalar , typename Index , int Alignment\+Type$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae0ff616e1b5ad36fd5256a50e953e032}{Half\+Packet}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper}{Eigen\+::internal\+::\+Blas\+Linear\+Mapper}}$<$ Scalar, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, \mbox{\hyperlink{group__enums_ga45fe06e29902b7a2773de05ba27b47a1}{Alignment\+Type}}, 1 $>$\+::load\+Half\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a808ca17adf444a32f8f5d0cffe90c19e}\label{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a808ca17adf444a32f8f5d0cffe90c19e}} 
+\index{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}!loadPacket@{loadPacket}}
+\index{loadPacket@{loadPacket}!Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}}
+\doxysubsubsection{\texorpdfstring{loadPacket()}{loadPacket()}}
+{\footnotesize\ttfamily template$<$typename Scalar , typename Index , int Alignment\+Type$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a8bb7262bac44d9adcf45243fb3f77d1d}{Packet}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper}{Eigen\+::internal\+::\+Blas\+Linear\+Mapper}}$<$ Scalar, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, \mbox{\hyperlink{group__enums_ga45fe06e29902b7a2773de05ba27b47a1}{Alignment\+Type}}, 1 $>$\+::load\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ad929d8456dc2f25847a363ebd0a0e3e1}\label{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ad929d8456dc2f25847a363ebd0a0e3e1}} 
+\index{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename Scalar , typename Index , int Alignment\+Type$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} Scalar\& \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper}{Eigen\+::internal\+::\+Blas\+Linear\+Mapper}}$<$ Scalar, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, \mbox{\hyperlink{group__enums_ga45fe06e29902b7a2773de05ba27b47a1}{Alignment\+Type}}, 1 $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae62b8a18af5d58292676dd4d38d93960}\label{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae62b8a18af5d58292676dd4d38d93960}} 
+\index{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}!prefetch@{prefetch}}
+\index{prefetch@{prefetch}!Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}}
+\doxysubsubsection{\texorpdfstring{prefetch()}{prefetch()}}
+{\footnotesize\ttfamily template$<$typename Scalar , typename Index , int Alignment\+Type$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper}{Eigen\+::internal\+::\+Blas\+Linear\+Mapper}}$<$ Scalar, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, \mbox{\hyperlink{group__enums_ga45fe06e29902b7a2773de05ba27b47a1}{Alignment\+Type}}, 1 $>$\+::prefetch (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a4988a82b03c9297460121ca1e8e8987c}\label{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a4988a82b03c9297460121ca1e8e8987c}} 
+\index{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}!storePacket@{storePacket}}
+\index{storePacket@{storePacket}!Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}}
+\doxysubsubsection{\texorpdfstring{storePacket()}{storePacket()}}
+{\footnotesize\ttfamily template$<$typename Scalar , typename Index , int Alignment\+Type$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_a1fdc6f94f20527c7275768d82b2eb9ce}{E\+I\+G\+E\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper}{Eigen\+::internal\+::\+Blas\+Linear\+Mapper}}$<$ Scalar, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, \mbox{\hyperlink{group__enums_ga45fe06e29902b7a2773de05ba27b47a1}{Alignment\+Type}}, 1 $>$\+::store\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{i,  }\item[{const \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_a8bb7262bac44d9adcf45243fb3f77d1d}{Packet}} \&}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae143675adcf03adfce52260094d138fa}\label{class_eigen_1_1internal_1_1_blas_linear_mapper_3_01_scalar_00_01_index_00_01_alignment_type_00_011_01_4_ae143675adcf03adfce52260094d138fa}} 
+\index{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$@{Eigen::internal::BlasLinearMapper$<$ Scalar, Index, AlignmentType, 1 $>$}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily template$<$typename Scalar , typename Index , int Alignment\+Type$>$ \\
+Scalar$\ast$ \mbox{\hyperlink{class_eigen_1_1internal_1_1_blas_linear_mapper}{Eigen\+::internal\+::\+Blas\+Linear\+Mapper}}$<$ Scalar, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, \mbox{\hyperlink{group__enums_ga45fe06e29902b7a2773de05ba27b47a1}{Alignment\+Type}}, 1 $>$\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/util/\mbox{\hyperlink{_blas_util_8h}{Blas\+Util.\+h}}\end{DoxyCompactItemize}

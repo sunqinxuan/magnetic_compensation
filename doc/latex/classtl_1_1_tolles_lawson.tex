@@ -1,0 +1,202 @@
+\hypertarget{classtl_1_1_tolles_lawson}{}\doxysection{tl\+::Tolles\+Lawson Class Reference}
+\label{classtl_1_1_tolles_lawson}\index{tl::TollesLawson@{tl::TollesLawson}}
+
+
+{\ttfamily \#include $<$tolles\+\_\+lawson.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}{F\+D\+Mscheme}} \{ \newline
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15aab655f1573e6347dbbe18815b721ac36}{B\+A\+C\+K\+W\+A\+RD}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a73b5713fa203e10b7276664ec56f6c99}{F\+O\+R\+W\+A\+RD}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8}{C\+E\+N\+T\+R\+AL}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a57332f41561ba30a906a0b73364c7826}{B\+A\+C\+K\+W\+A\+R\+D2}}, 
+\newline
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a1d7c067fef6231094b42039502fc4822}{F\+O\+R\+W\+A\+R\+D2}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a44fa0f27eb258ba5862b6c1df0d1bdf2}{F\+O\+U\+R\+TH}}
+ \}
+\item 
+enum \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}} \{ \newline
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a1f59ebf4e2fbbe6ed4beed0fe5e3dbb9}{F\+DM}}, 
+\newline
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021ab48ca68ff0a09fc73a1d1c02113ffefd}{B\+I\+AS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a89b32ef1dcc2dc9762e3eecd174931e9}{Tolles\+Lawson}} ()
+\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9810b4a08cf09238d7a266499f5eeeed}{create\+MatrixA}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&T\+L\+\_\+\+A\+\_\+, const std\+::vector$<$ double $>$ \&Bx, const std\+::vector$<$ double $>$ \&By, const std\+::vector$<$ double $>$ \&Bz, std\+::vector$<$ double $>$ \&Bt, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&terms=\{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}, const double Bt\+\_\+scale=50000.\+0)
+\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_a2b7bfb08f2761c66a30be8286382b797}{create\+Matrix\+A\+\_\+component}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&T\+L\+\_\+\+A\+\_\+, const std\+::vector$<$ double $>$ \&Bx, const std\+::vector$<$ double $>$ \&By, const std\+::vector$<$ double $>$ \&Bz, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&terms=\{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\})
+\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_a404908081d42c7ccad7208dda1d1ce7b}{create\+Coeff}} (std\+::vector$<$ double $>$ \&T\+L\+\_\+beta\+\_\+, const std\+::vector$<$ double $>$ \&Bx, const std\+::vector$<$ double $>$ \&By, const std\+::vector$<$ double $>$ \&Bz, const std\+::vector$<$ double $>$ \&Be, std\+::vector$<$ double $>$ \&Bt, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&terms=\{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}, const double lambda=0.\+0, const double pass1=0.\+1, const double pass2=0.\+9, const double fs=10.\+0, const int pole=4, const int trim=20, const double Bt\+\_\+scale=50000.\+0)
+\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_a353d979123fad3405645b92708013147}{create\+Coeff\+\_\+component}} (std\+::vector$<$ double $>$ \&T\+L\+\_\+beta\+\_\+, const std\+::vector$<$ double $>$ \&Bx, const std\+::vector$<$ double $>$ \&By, const std\+::vector$<$ double $>$ \&Bz, const std\+::vector$<$ double $>$ \&Bex, const std\+::vector$<$ double $>$ \&Bey, const std\+::vector$<$ double $>$ \&Bez, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&terms=\{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_aabbb06c4750503ba0df54b512bda3f88}{fdm}} (std\+::vector$<$ double $>$ \&dif, const std\+::vector$<$ double $>$ \&x, const \mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}{Tolles\+Lawson\+::\+F\+D\+Mscheme}} scheme=\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8}{C\+E\+N\+T\+R\+AL}})
+\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_aa46298f732ee2b6224ab14159a5fa1ff}{bwbp\+\_\+filter}} (std\+::vector$<$ double $>$ \&y, const std\+::vector$<$ double $>$ \&x, const double pass1, const double pass2, const int pole, const int trim)
+\item 
+void \mbox{\hyperlink{classtl_1_1_tolles_lawson_a8c0be95a1b03bc8f62cf1ef3b1daa25f}{linear\+\_\+regression}} (std\+::vector$<$ double $>$ \&coeff, std\+::vector$<$ double $>$ \&residual, const std\+::vector$<$ double $>$ \&bb, const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&AA, const double lambda)
+\item 
+void \mbox{\hyperlink{classtl_1_1_tolles_lawson_a53c3401136e8b54bbdbe17525afb7a4d}{stack\+\_\+vector}} (std\+::vector$<$ double $>$ \&result, const std\+::vector$<$ double $>$ \&x, const std\+::vector$<$ double $>$ \&y, const std\+::vector$<$ double $>$ \&z)
+\item 
+double \mbox{\hyperlink{classtl_1_1_tolles_lawson_acaa8bca7f18728bd5f3a1031ee22f9ac}{rmse}} (const std\+::vector$<$ double $>$ \&residual)
+\item 
+void \mbox{\hyperlink{classtl_1_1_tolles_lawson_a14a66249bdce85111bf57819b180ada3}{degeneration}} (const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&T\+L\+\_\+A)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!FDMscheme@{FDMscheme}}
+\index{FDMscheme@{FDMscheme}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{FDMscheme}{FDMscheme}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}{tl\+::\+Tolles\+Lawson\+::\+F\+D\+Mscheme}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BACKWARD@{BACKWARD}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!BACKWARD@{BACKWARD}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15aab655f1573e6347dbbe18815b721ac36}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15aab655f1573e6347dbbe18815b721ac36}} 
+B\+A\+C\+K\+W\+A\+RD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORWARD@{FORWARD}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!FORWARD@{FORWARD}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a73b5713fa203e10b7276664ec56f6c99}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a73b5713fa203e10b7276664ec56f6c99}} 
+F\+O\+R\+W\+A\+RD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CENTRAL@{CENTRAL}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!CENTRAL@{CENTRAL}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8}} 
+C\+E\+N\+T\+R\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BACKWARD2@{BACKWARD2}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!BACKWARD2@{BACKWARD2}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a57332f41561ba30a906a0b73364c7826}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a57332f41561ba30a906a0b73364c7826}} 
+B\+A\+C\+K\+W\+A\+R\+D2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORWARD2@{FORWARD2}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!FORWARD2@{FORWARD2}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a1d7c067fef6231094b42039502fc4822}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a1d7c067fef6231094b42039502fc4822}} 
+F\+O\+R\+W\+A\+R\+D2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FOURTH@{FOURTH}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!FOURTH@{FOURTH}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a44fa0f27eb258ba5862b6c1df0d1bdf2}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a44fa0f27eb258ba5862b6c1df0d1bdf2}} 
+F\+O\+U\+R\+TH&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!TLterm@{TLterm}}
+\index{TLterm@{TLterm}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{TLterm}{TLterm}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{tl\+::\+Tolles\+Lawson\+::\+T\+Lterm}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PERMANENT@{PERMANENT}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!PERMANENT@{PERMANENT}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}} 
+P\+E\+R\+M\+A\+N\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INDUCED@{INDUCED}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!INDUCED@{INDUCED}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}} 
+I\+N\+D\+U\+C\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EDDY@{EDDY}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!EDDY@{EDDY}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}} 
+E\+D\+DY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FDM@{FDM}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!FDM@{FDM}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a1f59ebf4e2fbbe6ed4beed0fe5e3dbb9}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a1f59ebf4e2fbbe6ed4beed0fe5e3dbb9}} 
+F\+DM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BIAS@{BIAS}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!BIAS@{BIAS}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021ab48ca68ff0a09fc73a1d1c02113ffefd}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021ab48ca68ff0a09fc73a1d1c02113ffefd}} 
+B\+I\+AS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a89b32ef1dcc2dc9762e3eecd174931e9}\label{classtl_1_1_tolles_lawson_a89b32ef1dcc2dc9762e3eecd174931e9}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!TollesLawson@{TollesLawson}}
+\index{TollesLawson@{TollesLawson}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{TollesLawson()}{TollesLawson()}}
+{\footnotesize\ttfamily tl\+::\+Tolles\+Lawson\+::\+Tolles\+Lawson (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_aa46298f732ee2b6224ab14159a5fa1ff}\label{classtl_1_1_tolles_lawson_aa46298f732ee2b6224ab14159a5fa1ff}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!bwbp\_filter@{bwbp\_filter}}
+\index{bwbp\_filter@{bwbp\_filter}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{bwbp\_filter()}{bwbp\_filter()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::bwbp\+\_\+filter (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{y,  }\item[{const std\+::vector$<$ double $>$ \&}]{x,  }\item[{const double}]{pass1,  }\item[{const double}]{pass2,  }\item[{const int}]{pole,  }\item[{const int}]{trim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a404908081d42c7ccad7208dda1d1ce7b}\label{classtl_1_1_tolles_lawson_a404908081d42c7ccad7208dda1d1ce7b}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!createCoeff@{createCoeff}}
+\index{createCoeff@{createCoeff}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{createCoeff()}{createCoeff()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::create\+Coeff (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{T\+L\+\_\+beta\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bx,  }\item[{const std\+::vector$<$ double $>$ \&}]{By,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bz,  }\item[{const std\+::vector$<$ double $>$ \&}]{Be,  }\item[{std\+::vector$<$ double $>$ \&}]{Bt,  }\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&}]{terms = {\ttfamily \{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}},  }\item[{const double}]{lambda = {\ttfamily 0.0},  }\item[{const double}]{pass1 = {\ttfamily 0.1},  }\item[{const double}]{pass2 = {\ttfamily 0.9},  }\item[{const double}]{fs = {\ttfamily 10.0},  }\item[{const int}]{pole = {\ttfamily 4},  }\item[{const int}]{trim = {\ttfamily 20},  }\item[{const double}]{Bt\+\_\+scale = {\ttfamily 50000.0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a353d979123fad3405645b92708013147}\label{classtl_1_1_tolles_lawson_a353d979123fad3405645b92708013147}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!createCoeff\_component@{createCoeff\_component}}
+\index{createCoeff\_component@{createCoeff\_component}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{createCoeff\_component()}{createCoeff\_component()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::create\+Coeff\+\_\+component (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{T\+L\+\_\+beta\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bx,  }\item[{const std\+::vector$<$ double $>$ \&}]{By,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bz,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bex,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bey,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bez,  }\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&}]{terms = {\ttfamily \{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9810b4a08cf09238d7a266499f5eeeed}\label{classtl_1_1_tolles_lawson_a9810b4a08cf09238d7a266499f5eeeed}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!createMatrixA@{createMatrixA}}
+\index{createMatrixA@{createMatrixA}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{createMatrixA()}{createMatrixA()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::create\+MatrixA (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{T\+L\+\_\+\+A\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bx,  }\item[{const std\+::vector$<$ double $>$ \&}]{By,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bz,  }\item[{std\+::vector$<$ double $>$ \&}]{Bt,  }\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&}]{terms = {\ttfamily \{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}},  }\item[{const double}]{Bt\+\_\+scale = {\ttfamily 50000.0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a2b7bfb08f2761c66a30be8286382b797}\label{classtl_1_1_tolles_lawson_a2b7bfb08f2761c66a30be8286382b797}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!createMatrixA\_component@{createMatrixA\_component}}
+\index{createMatrixA\_component@{createMatrixA\_component}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{createMatrixA\_component()}{createMatrixA\_component()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::create\+Matrix\+A\+\_\+component (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{T\+L\+\_\+\+A\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bx,  }\item[{const std\+::vector$<$ double $>$ \&}]{By,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bz,  }\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&}]{terms = {\ttfamily \{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a14a66249bdce85111bf57819b180ada3}\label{classtl_1_1_tolles_lawson_a14a66249bdce85111bf57819b180ada3}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!degeneration@{degeneration}}
+\index{degeneration@{degeneration}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{degeneration()}{degeneration()}}
+{\footnotesize\ttfamily void tl\+::\+Tolles\+Lawson\+::degeneration (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{T\+L\+\_\+A }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_aabbb06c4750503ba0df54b512bda3f88}\label{classtl_1_1_tolles_lawson_aabbb06c4750503ba0df54b512bda3f88}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!fdm@{fdm}}
+\index{fdm@{fdm}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{fdm()}{fdm()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::fdm (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{dif,  }\item[{const std\+::vector$<$ double $>$ \&}]{x,  }\item[{const \mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}{Tolles\+Lawson\+::\+F\+D\+Mscheme}}}]{scheme = {\ttfamily \mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8}{C\+E\+N\+T\+R\+AL}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a8c0be95a1b03bc8f62cf1ef3b1daa25f}\label{classtl_1_1_tolles_lawson_a8c0be95a1b03bc8f62cf1ef3b1daa25f}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!linear\_regression@{linear\_regression}}
+\index{linear\_regression@{linear\_regression}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{linear\_regression()}{linear\_regression()}}
+{\footnotesize\ttfamily void tl\+::\+Tolles\+Lawson\+::linear\+\_\+regression (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{coeff,  }\item[{std\+::vector$<$ double $>$ \&}]{residual,  }\item[{const std\+::vector$<$ double $>$ \&}]{bb,  }\item[{const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{AA,  }\item[{const double}]{lambda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_acaa8bca7f18728bd5f3a1031ee22f9ac}\label{classtl_1_1_tolles_lawson_acaa8bca7f18728bd5f3a1031ee22f9ac}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!rmse@{rmse}}
+\index{rmse@{rmse}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{rmse()}{rmse()}}
+{\footnotesize\ttfamily double tl\+::\+Tolles\+Lawson\+::rmse (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{residual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a53c3401136e8b54bbdbe17525afb7a4d}\label{classtl_1_1_tolles_lawson_a53c3401136e8b54bbdbe17525afb7a4d}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!stack\_vector@{stack\_vector}}
+\index{stack\_vector@{stack\_vector}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{stack\_vector()}{stack\_vector()}}
+{\footnotesize\ttfamily void tl\+::\+Tolles\+Lawson\+::stack\+\_\+vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{result,  }\item[{const std\+::vector$<$ double $>$ \&}]{x,  }\item[{const std\+::vector$<$ double $>$ \&}]{y,  }\item[{const std\+::vector$<$ double $>$ \&}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/tolles-\/lawson/tl/\mbox{\hyperlink{tolles__lawson_8hpp}{tolles\+\_\+lawson.\+hpp}}\item 
+3rd\+\_\+party/tolles-\/lawson/tl/\mbox{\hyperlink{tolles__lawson_8cpp}{tolles\+\_\+lawson.\+cpp}}\end{DoxyCompactItemize}

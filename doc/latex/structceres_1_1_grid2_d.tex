@@ -1,0 +1,136 @@
+\hypertarget{structceres_1_1_grid2_d}{}\doxysection{ceres\+::Grid2D$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$ Struct Template Reference}
+\label{structceres_1_1_grid2_d}\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+
+
+{\ttfamily \#include $<$cubic\+\_\+interpolation.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{structceres_1_1_grid2_d_a4ae185d9a83fc90cda461a1d43c9754ba49dc2f91f79f1957aebd67a14a8be1d9}{D\+A\+T\+A\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON}} = k\+Data\+Dimension
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structceres_1_1_grid2_d_a5b6561e86a6782b04b5335a964355708}{Grid2D}} (const T $\ast$data, const int row\+\_\+begin, const int row\+\_\+end, const int col\+\_\+begin, const int col\+\_\+end)
+\item 
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{structceres_1_1_grid2_d_ac0a543e3d39f8f2c5af87a794dedce65}{Get\+Value}} (const int r, const int c, double $\ast$f) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const T $\ast$ \mbox{\hyperlink{structceres_1_1_grid2_d_a7fe5667c27d66fc6fa82d017d7f53841}{data\+\_\+}}
+\item 
+const int \mbox{\hyperlink{structceres_1_1_grid2_d_abed2eeddf2968a1d5b28114a56e57b6a}{row\+\_\+begin\+\_\+}}
+\item 
+const int \mbox{\hyperlink{structceres_1_1_grid2_d_a07fb010360b26ed71a0d3eb1f5728f87}{row\+\_\+end\+\_\+}}
+\item 
+const int \mbox{\hyperlink{structceres_1_1_grid2_d_a9c8d77a31b48086a40b6664d5d15f532}{col\+\_\+begin\+\_\+}}
+\item 
+const int \mbox{\hyperlink{structceres_1_1_grid2_d_ac659850625421b1a7c2397129ad40a80}{col\+\_\+end\+\_\+}}
+\item 
+const int \mbox{\hyperlink{structceres_1_1_grid2_d_ac8312bd9c295e214591fe724cf892acd}{num\+\_\+rows\+\_\+}}
+\item 
+const int \mbox{\hyperlink{structceres_1_1_grid2_d_a43bcd21c3992154fee137d440c4d67a6}{num\+\_\+cols\+\_\+}}
+\item 
+const int \mbox{\hyperlink{structceres_1_1_grid2_d_a54701de650a53fecd38efb1ce02964bb}{num\+\_\+values\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structceres_1_1_grid2_d_a4ae185d9a83fc90cda461a1d43c9754b}\label{structceres_1_1_grid2_d_a4ae185d9a83fc90cda461a1d43c9754b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DATA\_DIMENSION@{DATA\_DIMENSION}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!DATA\_DIMENSION@{DATA\_DIMENSION}}}\mbox{\Hypertarget{structceres_1_1_grid2_d_a4ae185d9a83fc90cda461a1d43c9754ba49dc2f91f79f1957aebd67a14a8be1d9}\label{structceres_1_1_grid2_d_a4ae185d9a83fc90cda461a1d43c9754ba49dc2f91f79f1957aebd67a14a8be1d9}} 
+D\+A\+T\+A\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structceres_1_1_grid2_d_a5b6561e86a6782b04b5335a964355708}\label{structceres_1_1_grid2_d_a5b6561e86a6782b04b5335a964355708}} 
+\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!Grid2D@{Grid2D}}
+\index{Grid2D@{Grid2D}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{Grid2D()}{Grid2D()}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+\mbox{\hyperlink{structceres_1_1_grid2_d}{ceres\+::\+Grid2D}}$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$\+::\mbox{\hyperlink{structceres_1_1_grid2_d}{Grid2D}} (\begin{DoxyParamCaption}\item[{const T $\ast$}]{data,  }\item[{const int}]{row\+\_\+begin,  }\item[{const int}]{row\+\_\+end,  }\item[{const int}]{col\+\_\+begin,  }\item[{const int}]{col\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structceres_1_1_grid2_d_ac0a543e3d39f8f2c5af87a794dedce65}\label{structceres_1_1_grid2_d_ac0a543e3d39f8f2c5af87a794dedce65}} 
+\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{structceres_1_1_grid2_d}{ceres\+::\+Grid2D}}$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$\+::Get\+Value (\begin{DoxyParamCaption}\item[{const int}]{r,  }\item[{const int}]{c,  }\item[{double $\ast$}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structceres_1_1_grid2_d_a9c8d77a31b48086a40b6664d5d15f532}\label{structceres_1_1_grid2_d_a9c8d77a31b48086a40b6664d5d15f532}} 
+\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!col\_begin\_@{col\_begin\_}}
+\index{col\_begin\_@{col\_begin\_}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{col\_begin\_}{col\_begin\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+const int \mbox{\hyperlink{structceres_1_1_grid2_d}{ceres\+::\+Grid2D}}$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$\+::col\+\_\+begin\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structceres_1_1_grid2_d_ac659850625421b1a7c2397129ad40a80}\label{structceres_1_1_grid2_d_ac659850625421b1a7c2397129ad40a80}} 
+\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!col\_end\_@{col\_end\_}}
+\index{col\_end\_@{col\_end\_}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{col\_end\_}{col\_end\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+const int \mbox{\hyperlink{structceres_1_1_grid2_d}{ceres\+::\+Grid2D}}$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$\+::col\+\_\+end\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structceres_1_1_grid2_d_a7fe5667c27d66fc6fa82d017d7f53841}\label{structceres_1_1_grid2_d_a7fe5667c27d66fc6fa82d017d7f53841}} 
+\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!data\_@{data\_}}
+\index{data\_@{data\_}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+const T$\ast$ \mbox{\hyperlink{structceres_1_1_grid2_d}{ceres\+::\+Grid2D}}$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$\+::data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structceres_1_1_grid2_d_a43bcd21c3992154fee137d440c4d67a6}\label{structceres_1_1_grid2_d_a43bcd21c3992154fee137d440c4d67a6}} 
+\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!num\_cols\_@{num\_cols\_}}
+\index{num\_cols\_@{num\_cols\_}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{num\_cols\_}{num\_cols\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+const int \mbox{\hyperlink{structceres_1_1_grid2_d}{ceres\+::\+Grid2D}}$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$\+::num\+\_\+cols\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structceres_1_1_grid2_d_ac8312bd9c295e214591fe724cf892acd}\label{structceres_1_1_grid2_d_ac8312bd9c295e214591fe724cf892acd}} 
+\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!num\_rows\_@{num\_rows\_}}
+\index{num\_rows\_@{num\_rows\_}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{num\_rows\_}{num\_rows\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+const int \mbox{\hyperlink{structceres_1_1_grid2_d}{ceres\+::\+Grid2D}}$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$\+::num\+\_\+rows\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structceres_1_1_grid2_d_a54701de650a53fecd38efb1ce02964bb}\label{structceres_1_1_grid2_d_a54701de650a53fecd38efb1ce02964bb}} 
+\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!num\_values\_@{num\_values\_}}
+\index{num\_values\_@{num\_values\_}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{num\_values\_}{num\_values\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+const int \mbox{\hyperlink{structceres_1_1_grid2_d}{ceres\+::\+Grid2D}}$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$\+::num\+\_\+values\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structceres_1_1_grid2_d_abed2eeddf2968a1d5b28114a56e57b6a}\label{structceres_1_1_grid2_d_abed2eeddf2968a1d5b28114a56e57b6a}} 
+\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!row\_begin\_@{row\_begin\_}}
+\index{row\_begin\_@{row\_begin\_}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{row\_begin\_}{row\_begin\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+const int \mbox{\hyperlink{structceres_1_1_grid2_d}{ceres\+::\+Grid2D}}$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$\+::row\+\_\+begin\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structceres_1_1_grid2_d_a07fb010360b26ed71a0d3eb1f5728f87}\label{structceres_1_1_grid2_d_a07fb010360b26ed71a0d3eb1f5728f87}} 
+\index{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}!row\_end\_@{row\_end\_}}
+\index{row\_end\_@{row\_end\_}!ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$@{ceres::Grid2D$<$ T, kDataDimension, kRowMajor, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{row\_end\_}{row\_end\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Row\+Major = true, bool k\+Interleaved = true$>$ \\
+const int \mbox{\hyperlink{structceres_1_1_grid2_d}{ceres\+::\+Grid2D}}$<$ T, k\+Data\+Dimension, k\+Row\+Major, k\+Interleaved $>$\+::row\+\_\+end\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{cubic__interpolation_8h}{cubic\+\_\+interpolation.\+h}}\end{DoxyCompactItemize}

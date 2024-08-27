@@ -1,0 +1,118 @@
+\hypertarget{stl__logging_8h}{}\doxysection{3rd\+\_\+party/glog-\/0.4.0/include/glog/stl\+\_\+logging.h File Reference}
+\label{stl__logging_8h}\index{3rd\_party/glog-\/0.4.0/include/glog/stl\_logging.h@{3rd\_party/glog-\/0.4.0/include/glog/stl\_logging.h}}
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for stl\+\_\+logging.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stl__logging_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacegoogle}{google}}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stl__logging_8h_a5e919f38e03be7bf929f6217c66af984}{O\+U\+T\+P\+U\+T\+\_\+\+T\+W\+O\+\_\+\+A\+R\+G\+\_\+\+C\+O\+N\+T\+A\+I\+N\+ER}}(Sequence)
+\item 
+\#define \mbox{\hyperlink{stl__logging_8h_a75af345e6244f42937858aae7bbf6676}{O\+U\+T\+P\+U\+T\+\_\+\+T\+H\+R\+E\+E\+\_\+\+A\+R\+G\+\_\+\+C\+O\+N\+T\+A\+I\+N\+ER}}(Sequence)
+\item 
+\#define \mbox{\hyperlink{stl__logging_8h_a4b31e314ef6be3dcfd2935ab0d01d3de}{O\+U\+T\+P\+U\+T\+\_\+\+F\+O\+U\+R\+\_\+\+A\+R\+G\+\_\+\+C\+O\+N\+T\+A\+I\+N\+ER}}(Sequence)
+\item 
+\#define \mbox{\hyperlink{stl__logging_8h_aff2c9aeb85a64708d00f8d36cb2aac95}{O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+V\+E\+\_\+\+A\+R\+G\+\_\+\+C\+O\+N\+T\+A\+I\+N\+ER}}(Sequence)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class First , class Second $>$ }\\std\+::ostream \& \mbox{\hyperlink{stl__logging_8h_a682a8f845c69fb4338ae7da571464daf}{operator$<$$<$}} (std\+::ostream \&out, const std\+::pair$<$ First, Second $>$ \&p)
+\item 
+{\footnotesize template$<$class Iter $>$ }\\void \mbox{\hyperlink{namespacegoogle_ae5a5342065be66465356f053adfba6fe}{google\+::\+Print\+Sequence}} (std\+::ostream \&out, Iter begin, Iter end)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stl__logging_8h_aff2c9aeb85a64708d00f8d36cb2aac95}\label{stl__logging_8h_aff2c9aeb85a64708d00f8d36cb2aac95}} 
+\index{stl\_logging.h@{stl\_logging.h}!OUTPUT\_FIVE\_ARG\_CONTAINER@{OUTPUT\_FIVE\_ARG\_CONTAINER}}
+\index{OUTPUT\_FIVE\_ARG\_CONTAINER@{OUTPUT\_FIVE\_ARG\_CONTAINER}!stl\_logging.h@{stl\_logging.h}}
+\doxysubsubsection{\texorpdfstring{OUTPUT\_FIVE\_ARG\_CONTAINER}{OUTPUT\_FIVE\_ARG\_CONTAINER}}
+{\footnotesize\ttfamily \#define O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+V\+E\+\_\+\+A\+R\+G\+\_\+\+C\+O\+N\+T\+A\+I\+N\+ER(\begin{DoxyParamCaption}\item[{}]{Sequence }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{class} T1, \textcolor{keyword}{class} T2, \textcolor{keyword}{class} T3, \textcolor{keyword}{class} T4, \textcolor{keyword}{class} T5> \(\backslash\)}
+\DoxyCodeLine{inline std::ostream\& \mbox{\hyperlink{class_eigen_1_1_dense_base_a3806d3f42de165878dace160e6aba40a}{operator<<}}(std::ostream\& out, \(\backslash\)}
+\DoxyCodeLine{                                \textcolor{keyword}{const} Sequence<T1, T2, T3, T4, T5>\& seq) \{ \mbox{\hyperlink{namespacegoogle_ae5a5342065be66465356f053adfba6fe}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{namespacegoogle_ae5a5342065be66465356f053adfba6fe}{  google::PrintSequence}}(out, seq.begin(), seq.end()); \(\backslash\)}
+\DoxyCodeLine{  return out; \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{stl__logging_8h_a4b31e314ef6be3dcfd2935ab0d01d3de}\label{stl__logging_8h_a4b31e314ef6be3dcfd2935ab0d01d3de}} 
+\index{stl\_logging.h@{stl\_logging.h}!OUTPUT\_FOUR\_ARG\_CONTAINER@{OUTPUT\_FOUR\_ARG\_CONTAINER}}
+\index{OUTPUT\_FOUR\_ARG\_CONTAINER@{OUTPUT\_FOUR\_ARG\_CONTAINER}!stl\_logging.h@{stl\_logging.h}}
+\doxysubsubsection{\texorpdfstring{OUTPUT\_FOUR\_ARG\_CONTAINER}{OUTPUT\_FOUR\_ARG\_CONTAINER}}
+{\footnotesize\ttfamily \#define O\+U\+T\+P\+U\+T\+\_\+\+F\+O\+U\+R\+\_\+\+A\+R\+G\+\_\+\+C\+O\+N\+T\+A\+I\+N\+ER(\begin{DoxyParamCaption}\item[{}]{Sequence }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{class} T1, \textcolor{keyword}{class} T2, \textcolor{keyword}{class} T3, \textcolor{keyword}{class} T4> \(\backslash\)}
+\DoxyCodeLine{inline std::ostream\& \mbox{\hyperlink{class_eigen_1_1_dense_base_a3806d3f42de165878dace160e6aba40a}{operator<<}}(std::ostream\& out, \(\backslash\)}
+\DoxyCodeLine{                                \textcolor{keyword}{const} Sequence<T1, T2, T3, T4>\& seq) \{ \mbox{\hyperlink{namespacegoogle_ae5a5342065be66465356f053adfba6fe}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{namespacegoogle_ae5a5342065be66465356f053adfba6fe}{  google::PrintSequence}}(out, seq.begin(), seq.end()); \(\backslash\)}
+\DoxyCodeLine{  return out; \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{stl__logging_8h_a75af345e6244f42937858aae7bbf6676}\label{stl__logging_8h_a75af345e6244f42937858aae7bbf6676}} 
+\index{stl\_logging.h@{stl\_logging.h}!OUTPUT\_THREE\_ARG\_CONTAINER@{OUTPUT\_THREE\_ARG\_CONTAINER}}
+\index{OUTPUT\_THREE\_ARG\_CONTAINER@{OUTPUT\_THREE\_ARG\_CONTAINER}!stl\_logging.h@{stl\_logging.h}}
+\doxysubsubsection{\texorpdfstring{OUTPUT\_THREE\_ARG\_CONTAINER}{OUTPUT\_THREE\_ARG\_CONTAINER}}
+{\footnotesize\ttfamily \#define O\+U\+T\+P\+U\+T\+\_\+\+T\+H\+R\+E\+E\+\_\+\+A\+R\+G\+\_\+\+C\+O\+N\+T\+A\+I\+N\+ER(\begin{DoxyParamCaption}\item[{}]{Sequence }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{class} T1, \textcolor{keyword}{class} T2, \textcolor{keyword}{class} T3> \(\backslash\)}
+\DoxyCodeLine{inline std::ostream\& \mbox{\hyperlink{class_eigen_1_1_dense_base_a3806d3f42de165878dace160e6aba40a}{operator<<}}(std::ostream\& out, \(\backslash\)}
+\DoxyCodeLine{                                \textcolor{keyword}{const} Sequence<T1, T2, T3>\& seq) \{ \mbox{\hyperlink{namespacegoogle_ae5a5342065be66465356f053adfba6fe}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{namespacegoogle_ae5a5342065be66465356f053adfba6fe}{  google::PrintSequence}}(out, seq.begin(), seq.end()); \(\backslash\)}
+\DoxyCodeLine{  return out; \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{stl__logging_8h_a5e919f38e03be7bf929f6217c66af984}\label{stl__logging_8h_a5e919f38e03be7bf929f6217c66af984}} 
+\index{stl\_logging.h@{stl\_logging.h}!OUTPUT\_TWO\_ARG\_CONTAINER@{OUTPUT\_TWO\_ARG\_CONTAINER}}
+\index{OUTPUT\_TWO\_ARG\_CONTAINER@{OUTPUT\_TWO\_ARG\_CONTAINER}!stl\_logging.h@{stl\_logging.h}}
+\doxysubsubsection{\texorpdfstring{OUTPUT\_TWO\_ARG\_CONTAINER}{OUTPUT\_TWO\_ARG\_CONTAINER}}
+{\footnotesize\ttfamily \#define O\+U\+T\+P\+U\+T\+\_\+\+T\+W\+O\+\_\+\+A\+R\+G\+\_\+\+C\+O\+N\+T\+A\+I\+N\+ER(\begin{DoxyParamCaption}\item[{}]{Sequence }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{class} T1, \textcolor{keyword}{class} T2> \(\backslash\)}
+\DoxyCodeLine{inline std::ostream\& \mbox{\hyperlink{class_eigen_1_1_dense_base_a3806d3f42de165878dace160e6aba40a}{operator<<}}(std::ostream\& out, \(\backslash\)}
+\DoxyCodeLine{                                \textcolor{keyword}{const} Sequence<T1, T2>\& seq) \{ \mbox{\hyperlink{namespacegoogle_ae5a5342065be66465356f053adfba6fe}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{namespacegoogle_ae5a5342065be66465356f053adfba6fe}{  google::PrintSequence}}(out, seq.begin(), seq.end()); \(\backslash\)}
+\DoxyCodeLine{  return out; \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{stl__logging_8h_a682a8f845c69fb4338ae7da571464daf}\label{stl__logging_8h_a682a8f845c69fb4338ae7da571464daf}} 
+\index{stl\_logging.h@{stl\_logging.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!stl\_logging.h@{stl\_logging.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$class First , class Second $>$ \\
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const std\+::pair$<$ First, Second $>$ \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

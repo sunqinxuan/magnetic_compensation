@@ -1,0 +1,35 @@
+\hypertarget{_spline_fitting_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/unsupported/\+Eigen/src/\+Splines/\+Spline\+Fitting.h File Reference}
+\label{_spline_fitting_8h}\index{3rd\_party/eigen-\/3.3.9/unsupported/Eigen/src/Splines/SplineFitting.h@{3rd\_party/eigen-\/3.3.9/unsupported/Eigen/src/Splines/SplineFitting.h}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}Spline\+Fwd.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Eigen/\+LU$>$}\newline
+{\ttfamily \#include $<$Eigen/\+QR$>$}\newline
+Include dependency graph for Spline\+Fitting.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_spline_fitting_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_spline_fitting}{Eigen\+::\+Spline\+Fitting$<$ Spline\+Type $>$}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_eigen_1_1_spline}{Spline}} fitting methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Knot\+Vector\+Type $>$ }\\void \mbox{\hyperlink{namespace_eigen_a9474da5ed68bbd9a6788a999330416d6}{Eigen\+::\+Knot\+Averaging}} (const Knot\+Vector\+Type \&parameters, Dense\+Index degree, Knot\+Vector\+Type \&knots)
+\begin{DoxyCompactList}\small\item\em Computes knot averages. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Knot\+Vector\+Type , typename Parameter\+Vector\+Type , typename Index\+Array $>$ }\\void \mbox{\hyperlink{namespace_eigen_ae10a6f9b6ab7fb400a2526b6382c533b}{Eigen\+::\+Knot\+Averaging\+With\+Derivatives}} (const Parameter\+Vector\+Type \&parameters, const unsigned int degree, const Index\+Array \&derivative\+Indices, Knot\+Vector\+Type \&knots)
+\begin{DoxyCompactList}\small\item\em Computes knot averages when derivative constraints are present. Note that this is a technical interpretation of the referenced article since the algorithm contained therein is incorrect as written. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Point\+Array\+Type , typename Knot\+Vector\+Type $>$ }\\void \mbox{\hyperlink{namespace_eigen_a1b4cbde5d98411405871accf877552d2}{Eigen\+::\+Chord\+Lengths}} (const Point\+Array\+Type \&pts, Knot\+Vector\+Type \&chord\+\_\+lengths)
+\begin{DoxyCompactList}\small\item\em Computes chord length parameters which are required for spline interpolation. \end{DoxyCompactList}\end{DoxyCompactItemize}

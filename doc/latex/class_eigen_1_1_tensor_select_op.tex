@@ -1,0 +1,168 @@
+\hypertarget{class_eigen_1_1_tensor_select_op}{}\doxysection{Eigen\+::Tensor\+Select\+Op$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_tensor_select_op}\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Expr.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Tensor\+Select\+Op$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_tensor_select_op__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Tensor\+Select\+Op$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_tensor_select_op__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Tensor\+Select\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a7ee8b8d25ef298c4306f92fd84fdade1}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a7ee8b8d25ef298c4306f92fd84fdade1}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a7ee8b8d25ef298c4306f92fd84fdade1}{Scalar}} $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a5bfd8aa9d9929830330922fb52778d17}{Real\+Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__storage__type}{internal\+::promote\+\_\+storage\+\_\+type}}$<$ typename Then\+Xpr\+Type\+::\+Coeff\+Return\+Type, typename Else\+Xpr\+Type\+::\+Coeff\+Return\+Type $>$\+::ret \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_adf3382ce42bcc784fc87fea06381d40a}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Tensor\+Select\+Op}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a644d1b2a9a11191e5f503a284d6de0ce}{Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Tensor\+Select\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a6d9c4142f12439114687b51a0e7d622d}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a6d9c4142f12439114687b51a0e7d622d}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Tensor\+Select\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a2c538caf796accb9e63a9b8a08909dfb}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a2c538caf796accb9e63a9b8a08909dfb}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a664023d4dfa3616386d2168430cb0103}{Tensor\+Select\+Op}} (const If\+Xpr\+Type \&a\+\_\+condition, const Then\+Xpr\+Type \&a\+\_\+then, const Else\+Xpr\+Type \&a\+\_\+else)
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC If\+Xpr\+Type \& \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_afa32595ad6824a512d2e5fc45b694f82}{if\+Expression}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Then\+Xpr\+Type \& \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a54e7ea6a4face070e830503c87255d56}{then\+Expression}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Else\+Xpr\+Type \& \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a384673e4386de6339761bc89de49aa9c}{else\+Expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+If\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_ab621b970c85f9bbfe9dc42e0e5e821e3}{m\+\_\+condition}}
+\item 
+Then\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a100777e88e0cf292d7fd163e7e8888dc}{m\+\_\+then}}
+\item 
+Else\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_select_op_ad0137c2194d61e4e050785e97a8e0ba4}{m\+\_\+else}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_adf3382ce42bcc784fc87fea06381d40a}\label{class_eigen_1_1_tensor_select_op_adf3382ce42bcc784fc87fea06381d40a}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__storage__type}{internal\+::promote\+\_\+storage\+\_\+type}}$<$typename Then\+Xpr\+Type\+::\+Coeff\+Return\+Type, typename Else\+Xpr\+Type\+::\+Coeff\+Return\+Type$>$\+::ret \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_adf3382ce42bcc784fc87fea06381d40a}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_a2c538caf796accb9e63a9b8a08909dfb}\label{class_eigen_1_1_tensor_select_op_a2c538caf796accb9e63a9b8a08909dfb}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Tensor\+Select\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a2c538caf796accb9e63a9b8a08909dfb}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a2c538caf796accb9e63a9b8a08909dfb}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_a644d1b2a9a11191e5f503a284d6de0ce}\label{class_eigen_1_1_tensor_select_op_a644d1b2a9a11191e5f503a284d6de0ce}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Tensor\+Select\+Op}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a644d1b2a9a11191e5f503a284d6de0ce}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_a5bfd8aa9d9929830330922fb52778d17}\label{class_eigen_1_1_tensor_select_op_a5bfd8aa9d9929830330922fb52778d17}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a7ee8b8d25ef298c4306f92fd84fdade1}{Scalar}}$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a5bfd8aa9d9929830330922fb52778d17}{Real\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_a7ee8b8d25ef298c4306f92fd84fdade1}\label{class_eigen_1_1_tensor_select_op_a7ee8b8d25ef298c4306f92fd84fdade1}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Tensor\+Select\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a7ee8b8d25ef298c4306f92fd84fdade1}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a7ee8b8d25ef298c4306f92fd84fdade1}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_a6d9c4142f12439114687b51a0e7d622d}\label{class_eigen_1_1_tensor_select_op_a6d9c4142f12439114687b51a0e7d622d}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Tensor\+Select\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a6d9c4142f12439114687b51a0e7d622d}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op_a6d9c4142f12439114687b51a0e7d622d}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_a664023d4dfa3616386d2168430cb0103}\label{class_eigen_1_1_tensor_select_op_a664023d4dfa3616386d2168430cb0103}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!TensorSelectOp@{TensorSelectOp}}
+\index{TensorSelectOp@{TensorSelectOp}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{TensorSelectOp()}{TensorSelectOp()}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Tensor\+Select\+Op}} (\begin{DoxyParamCaption}\item[{const If\+Xpr\+Type \&}]{a\+\_\+condition,  }\item[{const Then\+Xpr\+Type \&}]{a\+\_\+then,  }\item[{const Else\+Xpr\+Type \&}]{a\+\_\+else }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_a384673e4386de6339761bc89de49aa9c}\label{class_eigen_1_1_tensor_select_op_a384673e4386de6339761bc89de49aa9c}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!elseExpression@{elseExpression}}
+\index{elseExpression@{elseExpression}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{elseExpression()}{elseExpression()}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Else\+Xpr\+Type\& \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::else\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_afa32595ad6824a512d2e5fc45b694f82}\label{class_eigen_1_1_tensor_select_op_afa32595ad6824a512d2e5fc45b694f82}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!ifExpression@{ifExpression}}
+\index{ifExpression@{ifExpression}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{ifExpression()}{ifExpression()}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC If\+Xpr\+Type\& \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::if\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_a54e7ea6a4face070e830503c87255d56}\label{class_eigen_1_1_tensor_select_op_a54e7ea6a4face070e830503c87255d56}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!thenExpression@{thenExpression}}
+\index{thenExpression@{thenExpression}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{thenExpression()}{thenExpression()}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Then\+Xpr\+Type\& \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::then\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_ab621b970c85f9bbfe9dc42e0e5e821e3}\label{class_eigen_1_1_tensor_select_op_ab621b970c85f9bbfe9dc42e0e5e821e3}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!m\_condition@{m\_condition}}
+\index{m\_condition@{m\_condition}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_condition}{m\_condition}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+If\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::m\+\_\+condition\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_ad0137c2194d61e4e050785e97a8e0ba4}\label{class_eigen_1_1_tensor_select_op_ad0137c2194d61e4e050785e97a8e0ba4}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!m\_else@{m\_else}}
+\index{m\_else@{m\_else}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_else}{m\_else}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+Else\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::m\+\_\+else\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_select_op_a100777e88e0cf292d7fd163e7e8888dc}\label{class_eigen_1_1_tensor_select_op_a100777e88e0cf292d7fd163e7e8888dc}} 
+\index{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}!m\_then@{m\_then}}
+\index{m\_then@{m\_then}!Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$@{Eigen::TensorSelectOp$<$ IfXprType, ThenXprType, ElseXprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_then}{m\_then}}
+{\footnotesize\ttfamily template$<$typename If\+Xpr\+Type , typename Then\+Xpr\+Type , typename Else\+Xpr\+Type $>$ \\
+Then\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_select_op}{Eigen\+::\+Tensor\+Select\+Op}}$<$ If\+Xpr\+Type, Then\+Xpr\+Type, Else\+Xpr\+Type $>$\+::m\+\_\+then\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_expr_8h}{Tensor\+Expr.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,124 @@
+\hypertarget{_tensor_sycl_convert_to_device_expression_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\+Tensor\+Sycl\+Convert\+To\+Device\+Expression.h File Reference}
+\label{_tensor_sycl_convert_to_device_expression_8h}\index{3rd\_party/eigen-\/3.3.9/unsupported/Eigen/CXX11/src/Tensor/TensorSyclConvertToDeviceExpression.h@{3rd\_party/eigen-\/3.3.9/unsupported/Eigen/CXX11/src/Tensor/TensorSyclConvertToDeviceExpression.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_convert_to_device_expression}{Eigen\+::\+Tensor\+Sycl\+::internal\+::\+Convert\+To\+Device\+Expression}}
+\begin{DoxyCompactList}\small\item\em This struct is used to convert the \mbox{\hyperlink{struct_eigen_1_1_make_pointer}{Make\+Pointer}} in the host expression to the Make\+Global\+Pointer for the device expression. For the leaf\+Nodes containing the pointer. This is due to the fact that the address space of the pointer T$\ast$ is different on the host and the device. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_non_op_conversion}{Eigen\+::\+Tensor\+Sycl\+::internal\+::\+Non\+Op\+Conversion$<$ Non\+Op\+Category, Is\+Const, Args $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_device_convertor}{Eigen\+::\+Tensor\+Sycl\+::internal\+::\+Device\+Convertor$<$ Non\+Op\+Category, Is\+Const, Args $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1_tensor_sycl}{Eigen\+::\+Tensor\+Sycl}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1_tensor_sycl_1_1internal}{Eigen\+::\+Tensor\+Sycl\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_tensor_sycl_convert_to_device_expression_8h_a42f51fbe0ece5abf748a4bbc39a7ca7e}{T\+E\+N\+S\+O\+R\+M\+A\+P\+C\+O\+N\+V\+E\+RT}}(C\+V\+Qual)
+\item 
+\#define \mbox{\hyperlink{_tensor_sycl_convert_to_device_expression_8h_a508f1d4bcff7e6481877bfafc0aeb829}{C\+A\+T\+E\+G\+O\+R\+Y\+C\+O\+N\+V\+E\+RT}}(C\+V\+Qual)
+\item 
+\#define \mbox{\hyperlink{_tensor_sycl_convert_to_device_expression_8h_a92dc59d10878fd9b70e3bf4002ef179c}{S\+E\+L\+E\+C\+T\+O\+P\+C\+O\+N\+V\+E\+RT}}(C\+V\+Qual,  Res)
+\item 
+\#define \mbox{\hyperlink{_tensor_sycl_convert_to_device_expression_8h_a01ff64ba576d851f60e87b62552c1c77}{A\+S\+S\+I\+G\+N\+C\+O\+N\+V\+E\+RT}}(C\+V\+Qual,  Res)
+\item 
+\#define \mbox{\hyperlink{_tensor_sycl_convert_to_device_expression_8h_a8d4ac1c11655e4008beca3c5637167c1}{K\+E\+R\+N\+E\+L\+B\+R\+O\+K\+E\+R\+C\+O\+N\+V\+E\+RT}}(C\+V\+Qual,  Res,  Expr\+Node)
+\item 
+\#define \mbox{\hyperlink{_tensor_sycl_convert_to_device_expression_8h_a059f04cd4c54d870af866bd446275b2e}{K\+E\+R\+N\+E\+L\+B\+R\+O\+K\+E\+R\+C\+O\+N\+V\+E\+R\+T\+R\+E\+D\+U\+C\+T\+I\+ON}}(C\+V\+Qual)
+\begin{DoxyCompactList}\small\item\em specialisation of the Convert\+To\+Device\+Expression struct when the node type is Tensor\+Reduction\+Op \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_tensor_sycl_convert_to_device_expression_8h_a01ff64ba576d851f60e87b62552c1c77}\label{_tensor_sycl_convert_to_device_expression_8h_a01ff64ba576d851f60e87b62552c1c77}} 
+\index{TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}!ASSIGNCONVERT@{ASSIGNCONVERT}}
+\index{ASSIGNCONVERT@{ASSIGNCONVERT}!TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}}
+\doxysubsubsection{\texorpdfstring{ASSIGNCONVERT}{ASSIGNCONVERT}}
+{\footnotesize\ttfamily \#define A\+S\+S\+I\+G\+N\+C\+O\+N\+V\+E\+RT(\begin{DoxyParamCaption}\item[{}]{C\+V\+Qual,  }\item[{}]{Res }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template} <\textcolor{keyword}{typename} LHSExpr, \textcolor{keyword}{typename} RHSExpr>\(\backslash\)}
+\DoxyCodeLine{struct ConvertToDeviceExpression<CVQual TensorAssignOp<LHSExpr, RHSExpr> >\(\backslash\)}
+\DoxyCodeLine{: NonOpConversion<TensorAssignOp, Res, LHSExpr, RHSExpr>\{\};}
+
+\end{DoxyCode}
+specialisation of the Convert\+To\+Device\+Expression struct when the node type is const Assing\+OP \mbox{\Hypertarget{_tensor_sycl_convert_to_device_expression_8h_a508f1d4bcff7e6481877bfafc0aeb829}\label{_tensor_sycl_convert_to_device_expression_8h_a508f1d4bcff7e6481877bfafc0aeb829}} 
+\index{TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}!CATEGORYCONVERT@{CATEGORYCONVERT}}
+\index{CATEGORYCONVERT@{CATEGORYCONVERT}!TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}}
+\doxysubsubsection{\texorpdfstring{CATEGORYCONVERT}{CATEGORYCONVERT}}
+{\footnotesize\ttfamily \#define C\+A\+T\+E\+G\+O\+R\+Y\+C\+O\+N\+V\+E\+RT(\begin{DoxyParamCaption}\item[{}]{C\+V\+Qual }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template} <\textcolor{keyword}{template}<\textcolor{keyword}{class}, \textcolor{keyword}{class}...> \textcolor{keyword}{class }Category, \textcolor{keyword}{typename} OP, \textcolor{keyword}{typename}... subExprs>\(\backslash\)}
+\DoxyCodeLine{struct ConvertToDeviceExpression<CVQual Category<OP, subExprs...> > \{\(\backslash\)}
+\DoxyCodeLine{  typedef CVQual \mbox{\hyperlink{namespace_eigen_1_1_architecture_ae54c092bdb3a978b9aa8cc50dcafc13c}{Category<OP, typename ConvertToDeviceExpression<subExprs>::Type}}... > \mbox{\hyperlink{namespace_eigen_1_1_architecture_ae54c092bdb3a978b9aa8cc50dcafc13c}{Type}};\(\backslash\)}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+specialisation of the Convert\+To\+Device\+Expression struct when the node type is Tensor\+Cwise\+Nullary\+Op, Tensor\+Cwise\+Unary\+Op, Tensor\+Cwise\+Binary\+Op, Tensor\+Cwise\+Ternary\+Op, Tensor\+Broadcasting\+Op \mbox{\Hypertarget{_tensor_sycl_convert_to_device_expression_8h_a8d4ac1c11655e4008beca3c5637167c1}\label{_tensor_sycl_convert_to_device_expression_8h_a8d4ac1c11655e4008beca3c5637167c1}} 
+\index{TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}!KERNELBROKERCONVERT@{KERNELBROKERCONVERT}}
+\index{KERNELBROKERCONVERT@{KERNELBROKERCONVERT}!TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}}
+\doxysubsubsection{\texorpdfstring{KERNELBROKERCONVERT}{KERNELBROKERCONVERT}}
+{\footnotesize\ttfamily \#define K\+E\+R\+N\+E\+L\+B\+R\+O\+K\+E\+R\+C\+O\+N\+V\+E\+RT(\begin{DoxyParamCaption}\item[{}]{C\+V\+Qual,  }\item[{}]{Res,  }\item[{}]{Expr\+Node }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template} <\textcolor{keyword}{typename} Expr>\(\backslash\)}
+\DoxyCodeLine{struct ConvertToDeviceExpression<CVQual ExprNode<Expr> > \(\backslash\)}
+\DoxyCodeLine{: DeviceConvertor<ExprNode, Res, Expr>\{\};}
+
+\end{DoxyCode}
+specialisation of the Convert\+To\+Device\+Expression struct when the node type is either Tensor\+Forced\+Eval\+Op or Tensor\+Eval\+To\+Op \mbox{\Hypertarget{_tensor_sycl_convert_to_device_expression_8h_a059f04cd4c54d870af866bd446275b2e}\label{_tensor_sycl_convert_to_device_expression_8h_a059f04cd4c54d870af866bd446275b2e}} 
+\index{TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}!KERNELBROKERCONVERTREDUCTION@{KERNELBROKERCONVERTREDUCTION}}
+\index{KERNELBROKERCONVERTREDUCTION@{KERNELBROKERCONVERTREDUCTION}!TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}}
+\doxysubsubsection{\texorpdfstring{KERNELBROKERCONVERTREDUCTION}{KERNELBROKERCONVERTREDUCTION}}
+{\footnotesize\ttfamily \#define K\+E\+R\+N\+E\+L\+B\+R\+O\+K\+E\+R\+C\+O\+N\+V\+E\+R\+T\+R\+E\+D\+U\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{C\+V\+Qual }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template} <\textcolor{keyword}{typename} OP, \textcolor{keyword}{typename} Dim, \textcolor{keyword}{typename} subExpr, \textcolor{keyword}{template} <\textcolor{keyword}{class}> \textcolor{keyword}{class }MakePointer\_>\(\backslash\)}
+\DoxyCodeLine{struct ConvertToDeviceExpression<CVQual TensorReductionOp<OP, Dim, subExpr, MakePointer\_> > \{\(\backslash\)}
+\DoxyCodeLine{  typedef CVQual \mbox{\hyperlink{namespace_eigen_1_1_architecture_ae54c092bdb3a978b9aa8cc50dcafc13c}{TensorReductionOp<OP, Dim, typename ConvertToDeviceExpression<subExpr>::Type}}, MakeGlobalPointer> \mbox{\hyperlink{namespace_eigen_1_1_architecture_ae54c092bdb3a978b9aa8cc50dcafc13c}{Type}};\(\backslash\)}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+specialisation of the Convert\+To\+Device\+Expression struct when the node type is Tensor\+Reduction\+Op 
+
+\mbox{\Hypertarget{_tensor_sycl_convert_to_device_expression_8h_a92dc59d10878fd9b70e3bf4002ef179c}\label{_tensor_sycl_convert_to_device_expression_8h_a92dc59d10878fd9b70e3bf4002ef179c}} 
+\index{TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}!SELECTOPCONVERT@{SELECTOPCONVERT}}
+\index{SELECTOPCONVERT@{SELECTOPCONVERT}!TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}}
+\doxysubsubsection{\texorpdfstring{SELECTOPCONVERT}{SELECTOPCONVERT}}
+{\footnotesize\ttfamily \#define S\+E\+L\+E\+C\+T\+O\+P\+C\+O\+N\+V\+E\+RT(\begin{DoxyParamCaption}\item[{}]{C\+V\+Qual,  }\item[{}]{Res }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template} <\textcolor{keyword}{typename} IfExpr, \textcolor{keyword}{typename} ThenExpr, \textcolor{keyword}{typename} ElseExpr>\(\backslash\)}
+\DoxyCodeLine{struct ConvertToDeviceExpression<CVQual TensorSelectOp<IfExpr, ThenExpr, ElseExpr> >\(\backslash\)}
+\DoxyCodeLine{: NonOpConversion<TensorSelectOp, Res, IfExpr, ThenExpr, ElseExpr> \{\};}
+
+\end{DoxyCode}
+specialisation of the Convert\+To\+Device\+Expression struct when the node type is Tensor\+Cwise\+Select\+Op \mbox{\Hypertarget{_tensor_sycl_convert_to_device_expression_8h_a42f51fbe0ece5abf748a4bbc39a7ca7e}\label{_tensor_sycl_convert_to_device_expression_8h_a42f51fbe0ece5abf748a4bbc39a7ca7e}} 
+\index{TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}!TENSORMAPCONVERT@{TENSORMAPCONVERT}}
+\index{TENSORMAPCONVERT@{TENSORMAPCONVERT}!TensorSyclConvertToDeviceExpression.h@{TensorSyclConvertToDeviceExpression.h}}
+\doxysubsubsection{\texorpdfstring{TENSORMAPCONVERT}{TENSORMAPCONVERT}}
+{\footnotesize\ttfamily \#define T\+E\+N\+S\+O\+R\+M\+A\+P\+C\+O\+N\+V\+E\+RT(\begin{DoxyParamCaption}\item[{}]{C\+V\+Qual }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template} <\textcolor{keyword}{typename} Scalar\_, \textcolor{keywordtype}{int} Options\_, \textcolor{keywordtype}{int} Options2\_, \textcolor{keywordtype}{int} NumIndices\_, \textcolor{keyword}{typename} IndexType\_, \textcolor{keyword}{template} <\textcolor{keyword}{class}> \textcolor{keyword}{class }MakePointer\_>\(\backslash\)}
+\DoxyCodeLine{struct ConvertToDeviceExpression<CVQual TensorMap<Tensor<Scalar\_, NumIndices\_, Options\_, IndexType\_>, Options2\_, MakePointer\_> > \{\(\backslash\)}
+\DoxyCodeLine{  typedef CVQual TensorMap<Tensor<Scalar\_, NumIndices\_, Options\_, IndexType\_>, Options2\_, MakeGlobalPointer> \mbox{\hyperlink{namespace_eigen_1_1_architecture_ae54c092bdb3a978b9aa8cc50dcafc13c}{Type}};\(\backslash\)}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+specialisation of the Convert\+To\+Device\+Expression struct when the node type is Tensor\+Map 

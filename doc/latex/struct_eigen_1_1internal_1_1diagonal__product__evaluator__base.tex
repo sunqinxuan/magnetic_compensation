@@ -1,0 +1,188 @@
+\hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base}{}\doxysection{Eigen\+::internal\+::diagonal\+\_\+product\+\_\+evaluator\+\_\+base$<$ Matrix\+Type, Diagonal\+Type, Derived, Product\+Order $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}
+
+
+{\ttfamily \#include $<$Product\+Evaluators.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::internal\+::diagonal\+\_\+product\+\_\+evaluator\+\_\+base$<$ Matrix\+Type, Diagonal\+Type, Derived, Product\+Order $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::internal\+::diagonal\+\_\+product\+\_\+evaluator\+\_\+base$<$ Matrix\+Type, Diagonal\+Type, Derived, Product\+Order $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a45dabee78e332b246770d16d5f5c7873}{Coeff\+Read\+Cost}} = Num\+Traits$<$Scalar$>$\+::Mul\+Cost + evaluator$<$Matrix\+Type$>$\+::Coeff\+Read\+Cost + evaluator$<$Diagonal\+Type$>$\+::Coeff\+Read\+Cost, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11ace354e6dc6d2a2026bba105f80530b07}{Matrix\+Flags}} = evaluator$<$Matrix\+Type$>$\+::Flags, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a3a996eab81b9587f307342a9477b3356}{Diag\+Flags}} = evaluator$<$Diagonal\+Type$>$\+::Flags, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a820b7c5310246b84df40ba74a4edf16f}{\+\_\+\+Storage\+Order}} = Matrix\+Flags \& Row\+Major\+Bit ? Row\+Major \+: Col\+Major, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11ab664e0c2fae22a26e7b58888a2c4bb8d}{\+\_\+\+Scalar\+Access\+On\+Diag}}, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a83cb6fdb248de52175593c42c78c02fb}{\+\_\+\+Same\+Types}} = is\+\_\+same$<$typename Matrix\+Type\+::Scalar, typename Diagonal\+Type\+::Scalar$>$\+::value, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a82ac69ac3849d629b9ea3aa436787fb7}{\+\_\+\+Vectorizable}} = bool(int(Matrix\+Flags)\&Packet\+Access\+Bit) \&\& \+\_\+\+Same\+Types \&\& (\+\_\+\+Scalar\+Access\+On\+Diag $\vert$$\vert$ (bool(int(Diag\+Flags)\&Packet\+Access\+Bit))), 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a35fbbe4b51d959b61df1c3b47b2c516a}{\+\_\+\+Linear\+Access\+Mask}} = (Matrix\+Type\+::Rows\+At\+Compile\+Time==1 $\vert$$\vert$ Matrix\+Type\+::Cols\+At\+Compile\+Time==1) ? Linear\+Access\+Bit \+: 0, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a49ea9afe72cfbb3a97160cd5258899e6}{Flags}} = ((Hereditary\+Bits$\vert$\+\_\+\+Linear\+Access\+Mask) \& (unsigned int)(Matrix\+Flags)) $\vert$ (\+\_\+\+Vectorizable ? Packet\+Access\+Bit \+: 0), 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11acdeb3784ea7f8959ff6dfce78ea85dd5}{Alignment}} = evaluator$<$Matrix\+Type$>$\+::Alignment, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a80944af05808f18d1f551af2e4f669f5}{As\+Scalar\+Product}}
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_scalar_binary_op_traits}{Scalar\+Binary\+Op\+Traits}}$<$ typename Matrix\+Type\+::\+Scalar, typename Diagonal\+Type\+::\+Scalar $>$\+::Return\+Type \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ad110e69ee2799e8dfeee209795641dfd}{Scalar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_a31b91435801db27c9ca20198f0d0facf}{diagonal\+\_\+product\+\_\+evaluator\+\_\+base}} (const Matrix\+Type \&mat, const Diagonal\+Type \&diag)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ad110e69ee2799e8dfeee209795641dfd}{Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_a15788a29a644408e78f4e66a21a85425}{coeff}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} idx) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$int Load\+Mode, typename Packet\+Type $>$ }\\\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_a0c40c8d14ebec720202430c2b54ccd5c}{packet\+\_\+impl}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} id, \mbox{\hyperlink{struct_eigen_1_1internal_1_1true__type}{internal\+::true\+\_\+type}}) const
+\item 
+{\footnotesize template$<$int Load\+Mode, typename Packet\+Type $>$ }\\\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ad0c8a0b3d0df8990abbab8c091df0bca}{packet\+\_\+impl}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} id, \mbox{\hyperlink{struct_eigen_1_1internal_1_1false__type}{internal\+::false\+\_\+type}}) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$ Diagonal\+Type $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_aac89e831a382ebe6172a2cc32e3159ac}{m\+\_\+diag\+Impl}}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$ Matrix\+Type $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ab40d6e41275ebc97d46700e5b2f562ce}{m\+\_\+mat\+Impl}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ad110e69ee2799e8dfeee209795641dfd}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ad110e69ee2799e8dfeee209795641dfd}} 
+\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , typename Diagonal\+Type , typename Derived , int Product\+Order$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_scalar_binary_op_traits}{Scalar\+Binary\+Op\+Traits}}$<$typename Matrix\+Type\+::\+Scalar, typename Diagonal\+Type\+::\+Scalar$>$\+::Return\+Type \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base}{Eigen\+::internal\+::diagonal\+\_\+product\+\_\+evaluator\+\_\+base}}$<$ Matrix\+Type, Diagonal\+Type, Derived, Product\+Order $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ad110e69ee2799e8dfeee209795641dfd}{Scalar}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , typename Diagonal\+Type , typename Derived , int Product\+Order$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CoeffReadCost@{CoeffReadCost}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!CoeffReadCost@{CoeffReadCost}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a45dabee78e332b246770d16d5f5c7873}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a45dabee78e332b246770d16d5f5c7873}} 
+Coeff\+Read\+Cost&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MatrixFlags@{MatrixFlags}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!MatrixFlags@{MatrixFlags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11ace354e6dc6d2a2026bba105f80530b07}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11ace354e6dc6d2a2026bba105f80530b07}} 
+Matrix\+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DiagFlags@{DiagFlags}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!DiagFlags@{DiagFlags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a3a996eab81b9587f307342a9477b3356}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a3a996eab81b9587f307342a9477b3356}} 
+Diag\+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_StorageOrder@{\_StorageOrder}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!\_StorageOrder@{\_StorageOrder}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a820b7c5310246b84df40ba74a4edf16f}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a820b7c5310246b84df40ba74a4edf16f}} 
+\+\_\+\+Storage\+Order&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_ScalarAccessOnDiag@{\_ScalarAccessOnDiag}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!\_ScalarAccessOnDiag@{\_ScalarAccessOnDiag}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11ab664e0c2fae22a26e7b58888a2c4bb8d}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11ab664e0c2fae22a26e7b58888a2c4bb8d}} 
+\+\_\+\+Scalar\+Access\+On\+Diag&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_SameTypes@{\_SameTypes}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!\_SameTypes@{\_SameTypes}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a83cb6fdb248de52175593c42c78c02fb}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a83cb6fdb248de52175593c42c78c02fb}} 
+\+\_\+\+Same\+Types&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_Vectorizable@{\_Vectorizable}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!\_Vectorizable@{\_Vectorizable}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a82ac69ac3849d629b9ea3aa436787fb7}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a82ac69ac3849d629b9ea3aa436787fb7}} 
+\+\_\+\+Vectorizable&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_LinearAccessMask@{\_LinearAccessMask}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!\_LinearAccessMask@{\_LinearAccessMask}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a35fbbe4b51d959b61df1c3b47b2c516a}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a35fbbe4b51d959b61df1c3b47b2c516a}} 
+\+\_\+\+Linear\+Access\+Mask&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a49ea9afe72cfbb3a97160cd5258899e6}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a49ea9afe72cfbb3a97160cd5258899e6}} 
+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alignment@{Alignment}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!Alignment@{Alignment}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11acdeb3784ea7f8959ff6dfce78ea85dd5}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11acdeb3784ea7f8959ff6dfce78ea85dd5}} 
+Alignment&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AsScalarProduct@{AsScalarProduct}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!AsScalarProduct@{AsScalarProduct}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a80944af05808f18d1f551af2e4f669f5}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_af3db064c5f8898778c76bf06a3c39f11a80944af05808f18d1f551af2e4f669f5}} 
+As\+Scalar\+Product&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_a31b91435801db27c9ca20198f0d0facf}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_a31b91435801db27c9ca20198f0d0facf}} 
+\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!diagonal\_product\_evaluator\_base@{diagonal\_product\_evaluator\_base}}
+\index{diagonal\_product\_evaluator\_base@{diagonal\_product\_evaluator\_base}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}
+\doxysubsubsection{\texorpdfstring{diagonal\_product\_evaluator\_base()}{diagonal\_product\_evaluator\_base()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , typename Diagonal\+Type , typename Derived , int Product\+Order$>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base}{Eigen\+::internal\+::diagonal\+\_\+product\+\_\+evaluator\+\_\+base}}$<$ Matrix\+Type, Diagonal\+Type, Derived, Product\+Order $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base}{diagonal\+\_\+product\+\_\+evaluator\+\_\+base}} (\begin{DoxyParamCaption}\item[{const Matrix\+Type \&}]{mat,  }\item[{const Diagonal\+Type \&}]{diag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_a15788a29a644408e78f4e66a21a85425}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_a15788a29a644408e78f4e66a21a85425}} 
+\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , typename Diagonal\+Type , typename Derived , int Product\+Order$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ad110e69ee2799e8dfeee209795641dfd}{Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base}{Eigen\+::internal\+::diagonal\+\_\+product\+\_\+evaluator\+\_\+base}}$<$ Matrix\+Type, Diagonal\+Type, Derived, Product\+Order $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ad0c8a0b3d0df8990abbab8c091df0bca}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ad0c8a0b3d0df8990abbab8c091df0bca}} 
+\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!packet\_impl@{packet\_impl}}
+\index{packet\_impl@{packet\_impl}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}
+\doxysubsubsection{\texorpdfstring{packet\_impl()}{packet\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , typename Diagonal\+Type , typename Derived , int Product\+Order$>$ \\
+template$<$int Load\+Mode, typename Packet\+Type $>$ \\
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base}{Eigen\+::internal\+::diagonal\+\_\+product\+\_\+evaluator\+\_\+base}}$<$ Matrix\+Type, Diagonal\+Type, Derived, Product\+Order $>$\+::packet\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{id,  }\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1false__type}{internal\+::false\+\_\+type}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_a0c40c8d14ebec720202430c2b54ccd5c}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_a0c40c8d14ebec720202430c2b54ccd5c}} 
+\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!packet\_impl@{packet\_impl}}
+\index{packet\_impl@{packet\_impl}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}
+\doxysubsubsection{\texorpdfstring{packet\_impl()}{packet\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , typename Diagonal\+Type , typename Derived , int Product\+Order$>$ \\
+template$<$int Load\+Mode, typename Packet\+Type $>$ \\
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base}{Eigen\+::internal\+::diagonal\+\_\+product\+\_\+evaluator\+\_\+base}}$<$ Matrix\+Type, Diagonal\+Type, Derived, Product\+Order $>$\+::packet\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{id,  }\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1true__type}{internal\+::true\+\_\+type}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_aac89e831a382ebe6172a2cc32e3159ac}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_aac89e831a382ebe6172a2cc32e3159ac}} 
+\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!m\_diagImpl@{m\_diagImpl}}
+\index{m\_diagImpl@{m\_diagImpl}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}
+\doxysubsubsection{\texorpdfstring{m\_diagImpl}{m\_diagImpl}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , typename Diagonal\+Type , typename Derived , int Product\+Order$>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$Diagonal\+Type$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base}{Eigen\+::internal\+::diagonal\+\_\+product\+\_\+evaluator\+\_\+base}}$<$ Matrix\+Type, Diagonal\+Type, Derived, Product\+Order $>$\+::m\+\_\+diag\+Impl\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ab40d6e41275ebc97d46700e5b2f562ce}\label{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base_ab40d6e41275ebc97d46700e5b2f562ce}} 
+\index{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}!m\_matImpl@{m\_matImpl}}
+\index{m\_matImpl@{m\_matImpl}!Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$@{Eigen::internal::diagonal\_product\_evaluator\_base$<$ MatrixType, DiagonalType, Derived, ProductOrder $>$}}
+\doxysubsubsection{\texorpdfstring{m\_matImpl}{m\_matImpl}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , typename Diagonal\+Type , typename Derived , int Product\+Order$>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$Matrix\+Type$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1diagonal__product__evaluator__base}{Eigen\+::internal\+::diagonal\+\_\+product\+\_\+evaluator\+\_\+base}}$<$ Matrix\+Type, Diagonal\+Type, Derived, Product\+Order $>$\+::m\+\_\+mat\+Impl\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_product_evaluators_8h}{Product\+Evaluators.\+h}}\end{DoxyCompactItemize}

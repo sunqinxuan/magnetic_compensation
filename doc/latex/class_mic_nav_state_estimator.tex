@@ -1,0 +1,132 @@
+\hypertarget{class_mic_nav_state_estimator}{}\doxysection{Mic\+Nav\+State\+Estimator Class Reference}
+\label{class_mic_nav_state_estimator}\index{MicNavStateEstimator@{MicNavStateEstimator}}
+
+
+{\ttfamily \#include $<$mic\+\_\+nav\+\_\+state\+\_\+estimator.\+h$>$}
+
+
+
+Inheritance diagram for Mic\+Nav\+State\+Estimator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_mic_nav_state_estimator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mic\+Nav\+State\+Estimator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_mic_nav_state_estimator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mic_nav_state_estimator_a587c9149f8ee55d8ce670baf8b497a57}{Mic\+Nav\+State\+Estimator}} ()=default
+\item 
+\mbox{\hyperlink{class_mic_nav_state_estimator_a341ce05a438d373b7b0e43f93067c3e4}{$\sim$\+Mic\+Nav\+State\+Estimator}} ()=default
+\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_nav_state_estimator_aca506da6f6afd6dc0de5aa5f58242bbf}{add\+\_\+imu\+\_\+data}} (const float64\+\_\+t ts, const mic\+\_\+imu\+\_\+t \&imu\+\_\+data)
+\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_nav_state_estimator_ae756aeb7871ebf2be0bc34fd373260b3}{add\+\_\+gnss\+\_\+data}} (const float64\+\_\+t ts, const mic\+\_\+gnss\+\_\+t \&gnss\+\_\+data)
+\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_nav_state_estimator_a93c734fea9c62652c2b528e33d2c6b30}{set\+\_\+nav\+\_\+state}} (const float64\+\_\+t ts, const mic\+\_\+nav\+\_\+state\+\_\+t \&nav\+\_\+state)
+\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_nav_state_estimator_a0e9fcf2879c40e130e309dda2b94933f}{get\+\_\+nav\+\_\+state}} (const float64\+\_\+t ts, mic\+\_\+nav\+\_\+state\+\_\+t \&nav\+\_\+state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_nav_state_estimator_af0e971fa53cac0bee077dd1a7024086a}{update}} (const float64\+\_\+t ts, const mic\+\_\+imu\+\_\+t \&imu\+\_\+data, mic\+\_\+nav\+\_\+state\+\_\+t \&nav\+\_\+state)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float64\+\_\+t \mbox{\hyperlink{class_mic_nav_state_estimator_a347b075b666bff342dcfcaaa873db03a}{\+\_\+curr\+\_\+time\+\_\+stamp}}
+\item 
+float64\+\_\+t \mbox{\hyperlink{class_mic_nav_state_estimator_a5da8211d90bf616352b2c88b56682ad4}{\+\_\+last\+\_\+time\+\_\+stamp}}
+\item 
+\mbox{\hyperlink{mic__nav__state__estimator_8h_a809788810db9e8b8cb4e39bca08b1f4c}{mic\+\_\+nav\+\_\+state\+\_\+storer\+\_\+t}} \mbox{\hyperlink{class_mic_nav_state_estimator_a4eb49d87f34a4a4e9ab55158cce9be81}{\+\_\+data\+\_\+storer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mic_nav_state_estimator_a587c9149f8ee55d8ce670baf8b497a57}\label{class_mic_nav_state_estimator_a587c9149f8ee55d8ce670baf8b497a57}} 
+\index{MicNavStateEstimator@{MicNavStateEstimator}!MicNavStateEstimator@{MicNavStateEstimator}}
+\index{MicNavStateEstimator@{MicNavStateEstimator}!MicNavStateEstimator@{MicNavStateEstimator}}
+\doxysubsubsection{\texorpdfstring{MicNavStateEstimator()}{MicNavStateEstimator()}}
+{\footnotesize\ttfamily Mic\+Nav\+State\+Estimator\+::\+Mic\+Nav\+State\+Estimator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_mic_nav_state_estimator_a341ce05a438d373b7b0e43f93067c3e4}\label{class_mic_nav_state_estimator_a341ce05a438d373b7b0e43f93067c3e4}} 
+\index{MicNavStateEstimator@{MicNavStateEstimator}!````~MicNavStateEstimator@{$\sim$MicNavStateEstimator}}
+\index{````~MicNavStateEstimator@{$\sim$MicNavStateEstimator}!MicNavStateEstimator@{MicNavStateEstimator}}
+\doxysubsubsection{\texorpdfstring{$\sim$MicNavStateEstimator()}{~MicNavStateEstimator()}}
+{\footnotesize\ttfamily Mic\+Nav\+State\+Estimator\+::$\sim$\+Mic\+Nav\+State\+Estimator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mic_nav_state_estimator_ae756aeb7871ebf2be0bc34fd373260b3}\label{class_mic_nav_state_estimator_ae756aeb7871ebf2be0bc34fd373260b3}} 
+\index{MicNavStateEstimator@{MicNavStateEstimator}!add\_gnss\_data@{add\_gnss\_data}}
+\index{add\_gnss\_data@{add\_gnss\_data}!MicNavStateEstimator@{MicNavStateEstimator}}
+\doxysubsubsection{\texorpdfstring{add\_gnss\_data()}{add\_gnss\_data()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Nav\+State\+Estimator\+::add\+\_\+gnss\+\_\+data (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{const mic\+\_\+gnss\+\_\+t \&}]{gnss\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_nav_state_estimator_aca506da6f6afd6dc0de5aa5f58242bbf}\label{class_mic_nav_state_estimator_aca506da6f6afd6dc0de5aa5f58242bbf}} 
+\index{MicNavStateEstimator@{MicNavStateEstimator}!add\_imu\_data@{add\_imu\_data}}
+\index{add\_imu\_data@{add\_imu\_data}!MicNavStateEstimator@{MicNavStateEstimator}}
+\doxysubsubsection{\texorpdfstring{add\_imu\_data()}{add\_imu\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__prerequisite_8h_ac3afdc1b2ec865ffb74d6eb75764462e}{M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+S\+T\+A\+RT}} ret\+\_\+t Mic\+Nav\+State\+Estimator\+::add\+\_\+imu\+\_\+data (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{const mic\+\_\+imu\+\_\+t \&}]{imu\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_nav_state_estimator_a0e9fcf2879c40e130e309dda2b94933f}\label{class_mic_nav_state_estimator_a0e9fcf2879c40e130e309dda2b94933f}} 
+\index{MicNavStateEstimator@{MicNavStateEstimator}!get\_nav\_state@{get\_nav\_state}}
+\index{get\_nav\_state@{get\_nav\_state}!MicNavStateEstimator@{MicNavStateEstimator}}
+\doxysubsubsection{\texorpdfstring{get\_nav\_state()}{get\_nav\_state()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Nav\+State\+Estimator\+::get\+\_\+nav\+\_\+state (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{mic\+\_\+nav\+\_\+state\+\_\+t \&}]{nav\+\_\+state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_nav_state_estimator_a93c734fea9c62652c2b528e33d2c6b30}\label{class_mic_nav_state_estimator_a93c734fea9c62652c2b528e33d2c6b30}} 
+\index{MicNavStateEstimator@{MicNavStateEstimator}!set\_nav\_state@{set\_nav\_state}}
+\index{set\_nav\_state@{set\_nav\_state}!MicNavStateEstimator@{MicNavStateEstimator}}
+\doxysubsubsection{\texorpdfstring{set\_nav\_state()}{set\_nav\_state()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Nav\+State\+Estimator\+::set\+\_\+nav\+\_\+state (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{const mic\+\_\+nav\+\_\+state\+\_\+t \&}]{nav\+\_\+state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_nav_state_estimator_af0e971fa53cac0bee077dd1a7024086a}\label{class_mic_nav_state_estimator_af0e971fa53cac0bee077dd1a7024086a}} 
+\index{MicNavStateEstimator@{MicNavStateEstimator}!update@{update}}
+\index{update@{update}!MicNavStateEstimator@{MicNavStateEstimator}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual ret\+\_\+t Mic\+Nav\+State\+Estimator\+::update (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{const mic\+\_\+imu\+\_\+t \&}]{imu\+\_\+data,  }\item[{mic\+\_\+nav\+\_\+state\+\_\+t \&}]{nav\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_mic_k_f_i_n_s_estimator_afdbbfc30dd2d2a7ea573d0f450fb966a}{Mic\+K\+F\+I\+N\+S\+Estimator}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mic_nav_state_estimator_a347b075b666bff342dcfcaaa873db03a}\label{class_mic_nav_state_estimator_a347b075b666bff342dcfcaaa873db03a}} 
+\index{MicNavStateEstimator@{MicNavStateEstimator}!\_curr\_time\_stamp@{\_curr\_time\_stamp}}
+\index{\_curr\_time\_stamp@{\_curr\_time\_stamp}!MicNavStateEstimator@{MicNavStateEstimator}}
+\doxysubsubsection{\texorpdfstring{\_curr\_time\_stamp}{\_curr\_time\_stamp}}
+{\footnotesize\ttfamily float64\+\_\+t Mic\+Nav\+State\+Estimator\+::\+\_\+curr\+\_\+time\+\_\+stamp\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mic_nav_state_estimator_a4eb49d87f34a4a4e9ab55158cce9be81}\label{class_mic_nav_state_estimator_a4eb49d87f34a4a4e9ab55158cce9be81}} 
+\index{MicNavStateEstimator@{MicNavStateEstimator}!\_data\_storer@{\_data\_storer}}
+\index{\_data\_storer@{\_data\_storer}!MicNavStateEstimator@{MicNavStateEstimator}}
+\doxysubsubsection{\texorpdfstring{\_data\_storer}{\_data\_storer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__nav__state__estimator_8h_a809788810db9e8b8cb4e39bca08b1f4c}{mic\+\_\+nav\+\_\+state\+\_\+storer\+\_\+t}} Mic\+Nav\+State\+Estimator\+::\+\_\+data\+\_\+storer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mic_nav_state_estimator_a5da8211d90bf616352b2c88b56682ad4}\label{class_mic_nav_state_estimator_a5da8211d90bf616352b2c88b56682ad4}} 
+\index{MicNavStateEstimator@{MicNavStateEstimator}!\_last\_time\_stamp@{\_last\_time\_stamp}}
+\index{\_last\_time\_stamp@{\_last\_time\_stamp}!MicNavStateEstimator@{MicNavStateEstimator}}
+\doxysubsubsection{\texorpdfstring{\_last\_time\_stamp}{\_last\_time\_stamp}}
+{\footnotesize\ttfamily float64\+\_\+t Mic\+Nav\+State\+Estimator\+::\+\_\+last\+\_\+time\+\_\+stamp\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/mic\+\_\+nav\+\_\+state\+\_\+estimator/\mbox{\hyperlink{mic__nav__state__estimator_8h}{mic\+\_\+nav\+\_\+state\+\_\+estimator.\+h}}\item 
+src/mic\+\_\+nav\+\_\+state\+\_\+estimator/\mbox{\hyperlink{mic__nav__state__estimator_8cc}{mic\+\_\+nav\+\_\+state\+\_\+estimator.\+cc}}\end{DoxyCompactItemize}

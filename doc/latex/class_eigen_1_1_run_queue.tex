@@ -1,0 +1,229 @@
+\hypertarget{class_eigen_1_1_run_queue}{}\doxysection{Eigen\+::Run\+Queue$<$ Work, k\+Size $>$ Class Template Reference}
+\label{class_eigen_1_1_run_queue}\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+
+
+{\ttfamily \#include $<$Run\+Queue.\+h$>$}
+
+
+
+Collaboration diagram for Eigen\+::Run\+Queue$<$ Work, k\+Size $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_eigen_1_1_run_queue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_run_queue_1_1_elem}{Elem}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_run_queue_afd6573d43cd90181d21cedb9c1721672}{Run\+Queue}} ()
+\item 
+\mbox{\hyperlink{class_eigen_1_1_run_queue_aa746573c5cbc6e13743b19cbc9dd1deb}{$\sim$\+Run\+Queue}} ()
+\item 
+Work \mbox{\hyperlink{class_eigen_1_1_run_queue_aa176e6edcabac0e168f579a968eeb49f}{Push\+Front}} (Work w)
+\item 
+Work \mbox{\hyperlink{class_eigen_1_1_run_queue_a70485d807cb89b34d882471f069eeeea}{Pop\+Front}} ()
+\item 
+Work \mbox{\hyperlink{class_eigen_1_1_run_queue_a205fedbfce51498cde3069171ff4790d}{Push\+Back}} (Work w)
+\item 
+Work \mbox{\hyperlink{class_eigen_1_1_run_queue_a5f0a65d40022baef3d77abb8226f35b0}{Pop\+Back}} ()
+\item 
+unsigned \mbox{\hyperlink{class_eigen_1_1_run_queue_a583d558af80e41729d7808ed5dfa25d9}{Pop\+Back\+Half}} (std\+::vector$<$ Work $>$ $\ast$result)
+\item 
+unsigned \mbox{\hyperlink{class_eigen_1_1_run_queue_aa193d3baea623281da1886603799dd87}{Size}} () const
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_run_queue_aa7abe7eea034f24a03843b90109636dc}{Empty}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefdaa028009086ad9f01e51c5a3e35513076}{k\+Empty}}, 
+\mbox{\hyperlink{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefdaaaa1c99d4fdb22b9b924bb47b2877bea}{k\+Busy}}, 
+\mbox{\hyperlink{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefda13f1535a4bf129718f99c601d0e96e5c}{k\+Ready}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_run_queue_a4e21a3d63996bc8f5748e5202e7f1947}{Run\+Queue}} (const \mbox{\hyperlink{class_eigen_1_1_run_queue}{Run\+Queue}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_run_queue_a06d0d6f086412645b4061a1c0c2369c7}{operator=}} (const \mbox{\hyperlink{class_eigen_1_1_run_queue}{Run\+Queue}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{class_eigen_1_1_run_queue_abf500ae2871dcbfcfd27e10cf9d49411}{mutex\+\_\+}}
+\item 
+std\+::atomic$<$ unsigned $>$ \mbox{\hyperlink{class_eigen_1_1_run_queue_a46a4910c59e4000d05bad86c165e4ba0}{front\+\_\+}}
+\item 
+std\+::atomic$<$ unsigned $>$ \mbox{\hyperlink{class_eigen_1_1_run_queue_a577e863bcd4f48adf8d99e0afdf4bfa6}{back\+\_\+}}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_run_queue_1_1_elem}{Elem}} \mbox{\hyperlink{class_eigen_1_1_run_queue_acae2f0a3672326aab58cd152ab1c181c}{array\+\_\+}} \mbox{[}k\+Size\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned \mbox{\hyperlink{class_eigen_1_1_run_queue_afd992b854f23440d40c5cd42bfba251e}{k\+Mask}} = k\+Size -\/ 1
+\item 
+static const unsigned \mbox{\hyperlink{class_eigen_1_1_run_queue_aa69e3c7fd6789577c16b6bbf174a2c64}{k\+Mask2}} = (k\+Size $<$$<$ 1) -\/ 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefd}\label{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefd}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+anonymous enum\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kEmpty@{kEmpty}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!kEmpty@{kEmpty}}}\mbox{\Hypertarget{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefdaa028009086ad9f01e51c5a3e35513076}\label{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefdaa028009086ad9f01e51c5a3e35513076}} 
+k\+Empty&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kBusy@{kBusy}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!kBusy@{kBusy}}}\mbox{\Hypertarget{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefdaaaa1c99d4fdb22b9b924bb47b2877bea}\label{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefdaaaa1c99d4fdb22b9b924bb47b2877bea}} 
+k\+Busy&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kReady@{kReady}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!kReady@{kReady}}}\mbox{\Hypertarget{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefda13f1535a4bf129718f99c601d0e96e5c}\label{class_eigen_1_1_run_queue_adc3931aff224b69d07cb875e7e15fefda13f1535a4bf129718f99c601d0e96e5c}} 
+k\+Ready&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_afd6573d43cd90181d21cedb9c1721672}\label{class_eigen_1_1_run_queue_afd6573d43cd90181d21cedb9c1721672}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!RunQueue@{RunQueue}}
+\index{RunQueue@{RunQueue}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{RunQueue()}{RunQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::\mbox{\hyperlink{class_eigen_1_1_run_queue}{Run\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_aa746573c5cbc6e13743b19cbc9dd1deb}\label{class_eigen_1_1_run_queue_aa746573c5cbc6e13743b19cbc9dd1deb}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!````~RunQueue@{$\sim$RunQueue}}
+\index{````~RunQueue@{$\sim$RunQueue}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$RunQueue()}{~RunQueue()}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::$\sim$\mbox{\hyperlink{class_eigen_1_1_run_queue}{Run\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_a4e21a3d63996bc8f5748e5202e7f1947}\label{class_eigen_1_1_run_queue_a4e21a3d63996bc8f5748e5202e7f1947}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!RunQueue@{RunQueue}}
+\index{RunQueue@{RunQueue}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{RunQueue()}{RunQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::\mbox{\hyperlink{class_eigen_1_1_run_queue}{Run\+Queue}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_run_queue}{Run\+Queue}}$<$ Work, k\+Size $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_aa7abe7eea034f24a03843b90109636dc}\label{class_eigen_1_1_run_queue_aa7abe7eea034f24a03843b90109636dc}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!Empty@{Empty}}
+\index{Empty@{Empty}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+bool \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_a06d0d6f086412645b4061a1c0c2369c7}\label{class_eigen_1_1_run_queue_a06d0d6f086412645b4061a1c0c2369c7}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_run_queue}{Run\+Queue}}$<$ Work, k\+Size $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_a5f0a65d40022baef3d77abb8226f35b0}\label{class_eigen_1_1_run_queue_a5f0a65d40022baef3d77abb8226f35b0}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!PopBack@{PopBack}}
+\index{PopBack@{PopBack}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{PopBack()}{PopBack()}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+Work \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::Pop\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_a583d558af80e41729d7808ed5dfa25d9}\label{class_eigen_1_1_run_queue_a583d558af80e41729d7808ed5dfa25d9}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!PopBackHalf@{PopBackHalf}}
+\index{PopBackHalf@{PopBackHalf}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{PopBackHalf()}{PopBackHalf()}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+unsigned \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::Pop\+Back\+Half (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Work $>$ $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_a70485d807cb89b34d882471f069eeeea}\label{class_eigen_1_1_run_queue_a70485d807cb89b34d882471f069eeeea}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!PopFront@{PopFront}}
+\index{PopFront@{PopFront}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{PopFront()}{PopFront()}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+Work \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::Pop\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_a205fedbfce51498cde3069171ff4790d}\label{class_eigen_1_1_run_queue_a205fedbfce51498cde3069171ff4790d}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!PushBack@{PushBack}}
+\index{PushBack@{PushBack}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{PushBack()}{PushBack()}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+Work \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::Push\+Back (\begin{DoxyParamCaption}\item[{Work}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_aa176e6edcabac0e168f579a968eeb49f}\label{class_eigen_1_1_run_queue_aa176e6edcabac0e168f579a968eeb49f}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!PushFront@{PushFront}}
+\index{PushFront@{PushFront}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{PushFront()}{PushFront()}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+Work \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::Push\+Front (\begin{DoxyParamCaption}\item[{Work}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_aa193d3baea623281da1886603799dd87}\label{class_eigen_1_1_run_queue_aa193d3baea623281da1886603799dd87}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!Size@{Size}}
+\index{Size@{Size}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+unsigned \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_acae2f0a3672326aab58cd152ab1c181c}\label{class_eigen_1_1_run_queue_acae2f0a3672326aab58cd152ab1c181c}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!array\_@{array\_}}
+\index{array\_@{array\_}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{array\_}{array\_}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+\mbox{\hyperlink{struct_eigen_1_1_run_queue_1_1_elem}{Elem}} \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::array\+\_\+\mbox{[}k\+Size\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_a577e863bcd4f48adf8d99e0afdf4bfa6}\label{class_eigen_1_1_run_queue_a577e863bcd4f48adf8d99e0afdf4bfa6}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!back\_@{back\_}}
+\index{back\_@{back\_}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{back\_}{back\_}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+std\+::atomic$<$unsigned$>$ \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::back\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_a46a4910c59e4000d05bad86c165e4ba0}\label{class_eigen_1_1_run_queue_a46a4910c59e4000d05bad86c165e4ba0}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!front\_@{front\_}}
+\index{front\_@{front\_}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{front\_}{front\_}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+std\+::atomic$<$unsigned$>$ \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::front\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_afd992b854f23440d40c5cd42bfba251e}\label{class_eigen_1_1_run_queue_afd992b854f23440d40c5cd42bfba251e}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!kMask@{kMask}}
+\index{kMask@{kMask}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{kMask}{kMask}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+const unsigned \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::k\+Mask = k\+Size -\/ 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_aa69e3c7fd6789577c16b6bbf174a2c64}\label{class_eigen_1_1_run_queue_aa69e3c7fd6789577c16b6bbf174a2c64}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!kMask2@{kMask2}}
+\index{kMask2@{kMask2}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{kMask2}{kMask2}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+const unsigned \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::k\+Mask2 = (k\+Size $<$$<$ 1) -\/ 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_run_queue_abf500ae2871dcbfcfd27e10cf9d49411}\label{class_eigen_1_1_run_queue_abf500ae2871dcbfcfd27e10cf9d49411}} 
+\index{Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!Eigen::RunQueue$<$ Work, kSize $>$@{Eigen::RunQueue$<$ Work, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily template$<$typename Work , unsigned k\+Size$>$ \\
+std\+::mutex \mbox{\hyperlink{class_eigen_1_1_run_queue}{Eigen\+::\+Run\+Queue}}$<$ Work, k\+Size $>$\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Thread\+Pool/\mbox{\hyperlink{_run_queue_8h}{Run\+Queue.\+h}}\end{DoxyCompactItemize}

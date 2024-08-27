@@ -1,0 +1,72 @@
+\hypertarget{struct_eigen_1_1internal_1_1redux__vec__unroller}{}\doxysection{Eigen\+::internal\+::redux\+\_\+vec\+\_\+unroller$<$ Func, Derived, Start, Length $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1redux__vec__unroller}\index{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}}
+
+
+{\ttfamily \#include $<$Redux.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller_a5665ccae70a4485fdf3d7ccbc76cc292a69dc726f9f8583ff954c4f3baf612e8e}{Packet\+Size}} = redux\+\_\+traits$<$Func, Derived$>$\+::Packet\+Size, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller_a5665ccae70a4485fdf3d7ccbc76cc292a2124d8f373a638524b294f7f697ea44e}{Half\+Length}} = Length/2
+ \}
+\item 
+typedef Derived\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller_a37caf247b75c895c88df3d44bf97bab5}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__traits}{redux\+\_\+traits}}$<$ Func, Derived $>$\+::\mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller_a983568f8988c5c8891f9febfbe5e8722}{Packet\+Scalar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller_a983568f8988c5c8891f9febfbe5e8722}{Packet\+Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller_aa41cff18de625592df82c377cd67d916}{run}} (const Derived \&mat, const Func \&func)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1redux__vec__unroller_a983568f8988c5c8891f9febfbe5e8722}\label{struct_eigen_1_1internal_1_1redux__vec__unroller_a983568f8988c5c8891f9febfbe5e8722}} 
+\index{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}!PacketScalar@{PacketScalar}}
+\index{PacketScalar@{PacketScalar}!Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}}
+\doxysubsubsection{\texorpdfstring{PacketScalar}{PacketScalar}}
+{\footnotesize\ttfamily template$<$typename Func , typename Derived , int Start, int Length$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__traits}{redux\+\_\+traits}}$<$Func, Derived$>$\+::\mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller}{Eigen\+::internal\+::redux\+\_\+vec\+\_\+unroller}}$<$ Func, Derived, Start, Length $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller_a983568f8988c5c8891f9febfbe5e8722}{Packet\+Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1redux__vec__unroller_a37caf247b75c895c88df3d44bf97bab5}\label{struct_eigen_1_1internal_1_1redux__vec__unroller_a37caf247b75c895c88df3d44bf97bab5}} 
+\index{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Func , typename Derived , int Start, int Length$>$ \\
+typedef Derived\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller}{Eigen\+::internal\+::redux\+\_\+vec\+\_\+unroller}}$<$ Func, Derived, Start, Length $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller_a37caf247b75c895c88df3d44bf97bab5}{Scalar}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1redux__vec__unroller_a5665ccae70a4485fdf3d7ccbc76cc292}\label{struct_eigen_1_1internal_1_1redux__vec__unroller_a5665ccae70a4485fdf3d7ccbc76cc292}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Func , typename Derived , int Start, int Length$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PacketSize@{PacketSize}!Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}}\index{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}!PacketSize@{PacketSize}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1redux__vec__unroller_a5665ccae70a4485fdf3d7ccbc76cc292a69dc726f9f8583ff954c4f3baf612e8e}\label{struct_eigen_1_1internal_1_1redux__vec__unroller_a5665ccae70a4485fdf3d7ccbc76cc292a69dc726f9f8583ff954c4f3baf612e8e}} 
+Packet\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HalfLength@{HalfLength}!Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}}\index{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}!HalfLength@{HalfLength}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1redux__vec__unroller_a5665ccae70a4485fdf3d7ccbc76cc292a2124d8f373a638524b294f7f697ea44e}\label{struct_eigen_1_1internal_1_1redux__vec__unroller_a5665ccae70a4485fdf3d7ccbc76cc292a2124d8f373a638524b294f7f697ea44e}} 
+Half\+Length&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1redux__vec__unroller_aa41cff18de625592df82c377cd67d916}\label{struct_eigen_1_1internal_1_1redux__vec__unroller_aa41cff18de625592df82c377cd67d916}} 
+\index{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}!run@{run}}
+\index{run@{run}!Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$@{Eigen::internal::redux\_vec\_unroller$<$ Func, Derived, Start, Length $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename Func , typename Derived , int Start, int Length$>$ \\
+static \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller_a983568f8988c5c8891f9febfbe5e8722}{Packet\+Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1redux__vec__unroller}{Eigen\+::internal\+::redux\+\_\+vec\+\_\+unroller}}$<$ Func, Derived, Start, Length $>$\+::run (\begin{DoxyParamCaption}\item[{const Derived \&}]{mat,  }\item[{const Func \&}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_redux_8h}{Redux.\+h}}\end{DoxyCompactItemize}

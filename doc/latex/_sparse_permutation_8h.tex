@@ -1,0 +1,33 @@
+\hypertarget{_sparse_permutation_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Sparse\+Core/\+Sparse\+Permutation.h File Reference}
+\label{_sparse_permutation_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/SparseCore/SparsePermutation.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/SparseCore/SparsePermutation.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1permutation__matrix__product_3_01_expression_type_00_01_side_00_01_t20ccd76e9ac5a7579d51cf9e9a5cbb67}{Eigen\+::internal\+::permutation\+\_\+matrix\+\_\+product$<$ Expression\+Type, Side, Transposed, Sparse\+Shape $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1product__promote__storage__type_3_01_sparse_00_01_permutation_storage_00_01_product_tag_01_4}{Eigen\+::internal\+::product\+\_\+promote\+\_\+storage\+\_\+type$<$ Sparse, Permutation\+Storage, Product\+Tag $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1product__promote__storage__type_3_01_permutation_storage_00_01_sparse_00_01_product_tag_01_4}{Eigen\+::internal\+::product\+\_\+promote\+\_\+storage\+\_\+type$<$ Permutation\+Storage, Sparse, Product\+Tag $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1product__evaluator_3_01_product_3_01_lhs_00_01_rhs_00_01_alias_free_0706ef7a5a2e7de13f2e1755913a650d}{Eigen\+::internal\+::product\+\_\+evaluator$<$ Product$<$ Lhs, Rhs, Alias\+Free\+Product $>$, Product\+Tag, Permutation\+Shape, Sparse\+Shape $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1product__evaluator_3_01_product_3_01_lhs_00_01_rhs_00_01_alias_free_9d3be1aa43ce7749965c0caa1184b53c}{Eigen\+::internal\+::product\+\_\+evaluator$<$ Product$<$ Lhs, Rhs, Alias\+Free\+Product $>$, Product\+Tag, Sparse\+Shape, Permutation\+Shape $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1internal}{Eigen\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Sparse\+Derived , typename Perm\+Derived $>$ }\\const Product$<$ Sparse\+Derived, Perm\+Derived, Alias\+Free\+Product $>$ \mbox{\hyperlink{namespace_eigen_a429958a0e6bd27168f3935d3100c55cf}{Eigen\+::operator$\ast$}} (const Sparse\+Matrix\+Base$<$ Sparse\+Derived $>$ \&matrix, const Permutation\+Base$<$ Perm\+Derived $>$ \&perm)
+\item 
+{\footnotesize template$<$typename Sparse\+Derived , typename Perm\+Derived $>$ }\\const Product$<$ Perm\+Derived, Sparse\+Derived, Alias\+Free\+Product $>$ \mbox{\hyperlink{namespace_eigen_a02fbb1bbd915b899b34a56a3cd64c438}{Eigen\+::operator$\ast$}} (const Permutation\+Base$<$ Perm\+Derived $>$ \&perm, const Sparse\+Matrix\+Base$<$ Sparse\+Derived $>$ \&matrix)
+\item 
+{\footnotesize template$<$typename Sparse\+Derived , typename Permutation\+Type $>$ }\\const Product$<$ Sparse\+Derived, Inverse$<$ Permutation\+Type $>$, Alias\+Free\+Product $>$ \mbox{\hyperlink{namespace_eigen_a8b7051d2f98498d619044089949f931d}{Eigen\+::operator$\ast$}} (const Sparse\+Matrix\+Base$<$ Sparse\+Derived $>$ \&matrix, const Inverse\+Impl$<$ Permutation\+Type, Permutation\+Storage $>$ \&tperm)
+\item 
+{\footnotesize template$<$typename Sparse\+Derived , typename Permutation\+Type $>$ }\\const Product$<$ Inverse$<$ Permutation\+Type $>$, Sparse\+Derived, Alias\+Free\+Product $>$ \mbox{\hyperlink{namespace_eigen_ad225313de8037d40c2d26c17edf1a9fd}{Eigen\+::operator$\ast$}} (const Inverse\+Impl$<$ Permutation\+Type, Permutation\+Storage $>$ \&tperm, const Sparse\+Matrix\+Base$<$ Sparse\+Derived $>$ \&matrix)
+\end{DoxyCompactItemize}

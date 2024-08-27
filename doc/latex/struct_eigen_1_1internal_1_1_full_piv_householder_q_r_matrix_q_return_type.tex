@@ -1,0 +1,151 @@
+\hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{}\doxysection{Eigen\+::internal\+::Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type$<$ Matrix\+Type $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+
+
+Expression type for return value of \mbox{\hyperlink{class_eigen_1_1_full_piv_householder_q_r_a2cdb5e200586c8a7b6289bdad5500554}{Full\+Piv\+Householder\+Q\+R\+::matrix\+Q()}}  
+
+
+
+
+{\ttfamily \#include $<$Full\+Piv\+Householder\+Q\+R.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_full_piv_householder_q_r}{Full\+Piv\+Householder\+QR}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a2106e3e1d3cbf5699f5a1f41ea01f802}{Int\+Diag\+Size\+Vector\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a2106e3e1d3cbf5699f5a1f41ea01f802}{Int\+Diag\+Size\+Vector\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type}{internal\+::plain\+\_\+diag\+\_\+type}}$<$ Matrix\+Type $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a9c6c57160a8ed7c06d5947d723f6ff94}{H\+Coeffs\+Type}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$ typename Matrix\+Type\+::\+Scalar, 1, Matrix\+Type\+::\+Rows\+At\+Compile\+Time, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, 1, Matrix\+Type\+::\+Max\+Rows\+At\+Compile\+Time $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a07f618acb4fada7e8d4017d7e341f4ec}{Work\+Vector\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a37a27f976a5e2b582e6e02e7c409afc9}{Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}} (const Matrix\+Type \&qr, const \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a9c6c57160a8ed7c06d5947d723f6ff94}{H\+Coeffs\+Type}} \&h\+Coeffs, const \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a2106e3e1d3cbf5699f5a1f41ea01f802}{Int\+Diag\+Size\+Vector\+Type}} \&rows\+Transpositions)
+\item 
+{\footnotesize template$<$typename Result\+Type $>$ }\\void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a6d2495b5c87313fe23aa1ab32524d359}{eval\+To}} (Result\+Type \&result) const
+\item 
+{\footnotesize template$<$typename Result\+Type $>$ }\\void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_aeca3ef83807e4dd6b4fdc73ac20dc000}{eval\+To}} (Result\+Type \&result, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a07f618acb4fada7e8d4017d7e341f4ec}{Work\+Vector\+Type}} \&workspace) const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a33656ee221422a3800edf363c72994d4}{rows}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_ada880345139442a6e5a51ccd4dd2bf09}{cols}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Matrix\+Type\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a52bad57f1b6f4e9e59435556575772ca}{m\+\_\+qr}}
+\item 
+H\+Coeffs\+Type\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a3518abc98f07cff4e7a3c7b38f226d9e}{m\+\_\+h\+Coeffs}}
+\item 
+Int\+Diag\+Size\+Vector\+Type\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_ae75bac7d6c6b5d0df7da8d0f9cf8556e}{m\+\_\+rows\+Transpositions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Matrix\+Type$>$\newline
+struct Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type$<$ Matrix\+Type $>$}
+
+Expression type for return value of \mbox{\hyperlink{class_eigen_1_1_full_piv_householder_q_r_a2cdb5e200586c8a7b6289bdad5500554}{Full\+Piv\+Householder\+Q\+R\+::matrix\+Q()}} 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Matrix\+Type} & type of underlying dense matrix \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a9c6c57160a8ed7c06d5947d723f6ff94}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a9c6c57160a8ed7c06d5947d723f6ff94}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!HCoeffsType@{HCoeffsType}}
+\index{HCoeffsType@{HCoeffsType}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{HCoeffsType}{HCoeffsType}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type}{internal\+::plain\+\_\+diag\+\_\+type}}$<$Matrix\+Type$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a9c6c57160a8ed7c06d5947d723f6ff94}{H\+Coeffs\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a2106e3e1d3cbf5699f5a1f41ea01f802}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a2106e3e1d3cbf5699f5a1f41ea01f802}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!IntDiagSizeVectorType@{IntDiagSizeVectorType}}
+\index{IntDiagSizeVectorType@{IntDiagSizeVectorType}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{IntDiagSizeVectorType}{IntDiagSizeVectorType}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_full_piv_householder_q_r}{Full\+Piv\+Householder\+QR}}$<$Matrix\+Type$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a2106e3e1d3cbf5699f5a1f41ea01f802}{Int\+Diag\+Size\+Vector\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a2106e3e1d3cbf5699f5a1f41ea01f802}{Int\+Diag\+Size\+Vector\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a07f618acb4fada7e8d4017d7e341f4ec}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a07f618acb4fada7e8d4017d7e341f4ec}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!WorkVectorType@{WorkVectorType}}
+\index{WorkVectorType@{WorkVectorType}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{WorkVectorType}{WorkVectorType}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$typename Matrix\+Type\+::\+Scalar, 1, Matrix\+Type\+::\+Rows\+At\+Compile\+Time, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, 1, Matrix\+Type\+::\+Max\+Rows\+At\+Compile\+Time$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a07f618acb4fada7e8d4017d7e341f4ec}{Work\+Vector\+Type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a37a27f976a5e2b582e6e02e7c409afc9}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a37a27f976a5e2b582e6e02e7c409afc9}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!FullPivHouseholderQRMatrixQReturnType@{FullPivHouseholderQRMatrixQReturnType}}
+\index{FullPivHouseholderQRMatrixQReturnType@{FullPivHouseholderQRMatrixQReturnType}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{FullPivHouseholderQRMatrixQReturnType()}{FullPivHouseholderQRMatrixQReturnType()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}} (\begin{DoxyParamCaption}\item[{const Matrix\+Type \&}]{qr,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a9c6c57160a8ed7c06d5947d723f6ff94}{H\+Coeffs\+Type}} \&}]{h\+Coeffs,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a2106e3e1d3cbf5699f5a1f41ea01f802}{Int\+Diag\+Size\+Vector\+Type}} \&}]{rows\+Transpositions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_ada880345139442a6e5a51ccd4dd2bf09}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_ada880345139442a6e5a51ccd4dd2bf09}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a6d2495b5c87313fe23aa1ab32524d359}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a6d2495b5c87313fe23aa1ab32524d359}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!evalTo@{evalTo}}
+\index{evalTo@{evalTo}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{evalTo()}{evalTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+template$<$typename Result\+Type $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::eval\+To (\begin{DoxyParamCaption}\item[{Result\+Type \&}]{result }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_aeca3ef83807e4dd6b4fdc73ac20dc000}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_aeca3ef83807e4dd6b4fdc73ac20dc000}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!evalTo@{evalTo}}
+\index{evalTo@{evalTo}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{evalTo()}{evalTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+template$<$typename Result\+Type $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::eval\+To (\begin{DoxyParamCaption}\item[{Result\+Type \&}]{result,  }\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a07f618acb4fada7e8d4017d7e341f4ec}{Work\+Vector\+Type}} \&}]{workspace }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a33656ee221422a3800edf363c72994d4}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a33656ee221422a3800edf363c72994d4}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a3518abc98f07cff4e7a3c7b38f226d9e}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a3518abc98f07cff4e7a3c7b38f226d9e}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!m\_hCoeffs@{m\_hCoeffs}}
+\index{m\_hCoeffs@{m\_hCoeffs}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_hCoeffs}{m\_hCoeffs}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+H\+Coeffs\+Type\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::m\+\_\+h\+Coeffs\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a52bad57f1b6f4e9e59435556575772ca}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_a52bad57f1b6f4e9e59435556575772ca}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!m\_qr@{m\_qr}}
+\index{m\_qr@{m\_qr}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_qr}{m\_qr}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+Matrix\+Type\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::m\+\_\+qr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_ae75bac7d6c6b5d0df7da8d0f9cf8556e}\label{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type_ae75bac7d6c6b5d0df7da8d0f9cf8556e}} 
+\index{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}!m\_rowsTranspositions@{m\_rowsTranspositions}}
+\index{m\_rowsTranspositions@{m\_rowsTranspositions}!Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$@{Eigen::internal::FullPivHouseholderQRMatrixQReturnType$<$ MatrixType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_rowsTranspositions}{m\_rowsTranspositions}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+Int\+Diag\+Size\+Vector\+Type\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_piv_householder_q_r_matrix_q_return_type}{Eigen\+::internal\+::\+Full\+Piv\+Householder\+Q\+R\+Matrix\+Q\+Return\+Type}}$<$ Matrix\+Type $>$\+::m\+\_\+rows\+Transpositions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Q\+R/\mbox{\hyperlink{_full_piv_householder_q_r_8h}{Full\+Piv\+Householder\+Q\+R.\+h}}\end{DoxyCompactItemize}

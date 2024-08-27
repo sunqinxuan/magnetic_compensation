@@ -1,0 +1,245 @@
+\hypertarget{class_mic_mag_compensator}{}\doxysection{Mic\+Mag\+Compensator Class Reference}
+\label{class_mic_mag_compensator}\index{MicMagCompensator@{MicMagCompensator}}
+
+
+basic class for magnetic compensator  
+
+
+
+
+{\ttfamily \#include $<$mic\+\_\+mag\+\_\+compensator.\+h$>$}
+
+
+
+Inheritance diagram for Mic\+Mag\+Compensator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mic_mag_compensator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mic\+Mag\+Compensator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mic_mag_compensator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mic_mag_compensator_a4338d4ad6c2470f78dc64dc078d7c0ed}{Mic\+Mag\+Compensator}} ()
+\item 
+\mbox{\hyperlink{class_mic_mag_compensator_a1539712f91b91612cf42c25dacf58903}{$\sim$\+Mic\+Mag\+Compensator}} ()
+\item 
+\mbox{\hyperlink{mic__mag__compensator_8h_ab08c9058790ad02067631c7e1e9f7b78}{mic\+\_\+mag\+\_\+storer\+\_\+t}} \& \mbox{\hyperlink{class_mic_mag_compensator_a9b013f5c2f2a7bbf2c13fb47e9ca85cb}{get\+\_\+data\+\_\+storer}} ()
+\item 
+float64\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_a9858707edd7130ff8f27f204b39b3d33}{get\+\_\+curr\+\_\+time}} ()
+\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_a50c330fd46fec13bd51a2feb005bdf6d}{add\+\_\+data}} (const float64\+\_\+t ts, const mic\+\_\+mag\+\_\+t \&mag\+\_\+data, const mic\+\_\+nav\+\_\+state\+\_\+t \&nav\+\_\+state=mic\+\_\+nav\+\_\+state\+\_\+t())
+\begin{DoxyCompactList}\small\item\em add data (magnetic measurements and navigation states of the aircraft) to the compensator \end{DoxyCompactList}\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_a77aea7fa9c29438ee67a0b1ff62dee99}{add\+\_\+data\+\_\+truth}} (const float64\+\_\+t ts, const mic\+\_\+mag\+\_\+t \&mag\+\_\+data, const mic\+\_\+nav\+\_\+state\+\_\+t \&nav\+\_\+state=mic\+\_\+nav\+\_\+state\+\_\+t())
+\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_a1f87b105c0c6574b5b09f6b5920323c8}{calibrate}} ()
+\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_aca311492246289f097f35889ecf4f590}{compenste}} (const float64\+\_\+t ts, mic\+\_\+mag\+\_\+t \&out)
+\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_a5db82a7412c47bfe4eeee91b7e759a07}{load\+\_\+model}} (const std\+::string filename)
+\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_a30d49ec93282805eaf2bee54d979e976}{save\+\_\+model}} (const std\+::string filename)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_a5a411ece565ad33e614fa9f4deb49245}{do\+\_\+calibrate}} ()=0
+\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_ac23bd6a837144a977a30de1c2ac5295a}{do\+\_\+compenste}} (const float64\+\_\+t ts, mic\+\_\+mag\+\_\+t \&out)=0
+\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_a5cd2f4fc5c9d7f159792374ef3bea48d}{serialize}} (\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&node)
+\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_a4a090fdaf9ef1b5cafdb13d8ba30d819}{deserialize}} (\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&node)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float64\+\_\+t \mbox{\hyperlink{class_mic_mag_compensator_a99cace4ac027f4cd45a6e16ed1f6eee7}{\+\_\+curr\+\_\+time\+\_\+stamp}}
+\item 
+\mbox{\hyperlink{mic__mag__compensator_8h_ab08c9058790ad02067631c7e1e9f7b78}{mic\+\_\+mag\+\_\+storer\+\_\+t}} \mbox{\hyperlink{class_mic_mag_compensator_acc5d802ed9d19101033a441a2d08d44f}{\+\_\+mag\+\_\+measure\+\_\+storer}}
+\item 
+\mbox{\hyperlink{mic__mag__compensator_8h_ab08c9058790ad02067631c7e1e9f7b78}{mic\+\_\+mag\+\_\+storer\+\_\+t}} \mbox{\hyperlink{class_mic_mag_compensator_ab3a2cfbab0653dd219b07fc4ba5b8096}{\+\_\+mag\+\_\+truth\+\_\+storer}}
+\item 
+\mbox{\hyperlink{mic__mag__compensator_8h_ae215f354c141d02e5a50eae6ef55974e}{mic\+\_\+state\+\_\+t}} \mbox{\hyperlink{class_mic_mag_compensator_acc0daf5ca875caf1fcffda53cb0f0821}{\+\_\+state}}
+\item 
+std\+::string \mbox{\hyperlink{class_mic_mag_compensator_a475bfd7e81350fa0a767637e14c9247d}{\+\_\+version}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+basic class for magnetic compensator 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mic_mag_compensator_a4338d4ad6c2470f78dc64dc078d7c0ed}\label{class_mic_mag_compensator_a4338d4ad6c2470f78dc64dc078d7c0ed}} 
+\index{MicMagCompensator@{MicMagCompensator}!MicMagCompensator@{MicMagCompensator}}
+\index{MicMagCompensator@{MicMagCompensator}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{MicMagCompensator()}{MicMagCompensator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__prerequisite_8h_ac3afdc1b2ec865ffb74d6eb75764462e}{M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+S\+T\+A\+RT}} Mic\+Mag\+Compensator\+::\+Mic\+Mag\+Compensator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_a1539712f91b91612cf42c25dacf58903}\label{class_mic_mag_compensator_a1539712f91b91612cf42c25dacf58903}} 
+\index{MicMagCompensator@{MicMagCompensator}!````~MicMagCompensator@{$\sim$MicMagCompensator}}
+\index{````~MicMagCompensator@{$\sim$MicMagCompensator}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{$\sim$MicMagCompensator()}{~MicMagCompensator()}}
+{\footnotesize\ttfamily Mic\+Mag\+Compensator\+::$\sim$\+Mic\+Mag\+Compensator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mic_mag_compensator_a50c330fd46fec13bd51a2feb005bdf6d}\label{class_mic_mag_compensator_a50c330fd46fec13bd51a2feb005bdf6d}} 
+\index{MicMagCompensator@{MicMagCompensator}!add\_data@{add\_data}}
+\index{add\_data@{add\_data}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{add\_data()}{add\_data()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Mag\+Compensator\+::add\+\_\+data (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{const mic\+\_\+mag\+\_\+t \&}]{mag\+\_\+data,  }\item[{const mic\+\_\+nav\+\_\+state\+\_\+t \&}]{nav\+\_\+state = {\ttfamily mic\+\_\+nav\+\_\+state\+\_\+t()} }\end{DoxyParamCaption})}
+
+
+
+add data (magnetic measurements and navigation states of the aircraft) to the compensator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & timestamp \\
+\hline
+{\em mag\+\_\+data} & magnetic measurement at time ts \\
+\hline
+{\em nav\+\_\+state} & (optional) navigation state at time ts \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret\+\_\+t 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em if} & the data is successfully added \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_mic_mag_compensator_a77aea7fa9c29438ee67a0b1ff62dee99}\label{class_mic_mag_compensator_a77aea7fa9c29438ee67a0b1ff62dee99}} 
+\index{MicMagCompensator@{MicMagCompensator}!add\_data\_truth@{add\_data\_truth}}
+\index{add\_data\_truth@{add\_data\_truth}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{add\_data\_truth()}{add\_data\_truth()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Mag\+Compensator\+::add\+\_\+data\+\_\+truth (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{const mic\+\_\+mag\+\_\+t \&}]{mag\+\_\+data,  }\item[{const mic\+\_\+nav\+\_\+state\+\_\+t \&}]{nav\+\_\+state = {\ttfamily mic\+\_\+nav\+\_\+state\+\_\+t()} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_a1f87b105c0c6574b5b09f6b5920323c8}\label{class_mic_mag_compensator_a1f87b105c0c6574b5b09f6b5920323c8}} 
+\index{MicMagCompensator@{MicMagCompensator}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{calibrate()}{calibrate()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Mag\+Compensator\+::calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_aca311492246289f097f35889ecf4f590}\label{class_mic_mag_compensator_aca311492246289f097f35889ecf4f590}} 
+\index{MicMagCompensator@{MicMagCompensator}!compenste@{compenste}}
+\index{compenste@{compenste}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{compenste()}{compenste()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Mag\+Compensator\+::compenste (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{mic\+\_\+mag\+\_\+t \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_a4a090fdaf9ef1b5cafdb13d8ba30d819}\label{class_mic_mag_compensator_a4a090fdaf9ef1b5cafdb13d8ba30d819}} 
+\index{MicMagCompensator@{MicMagCompensator}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Mag\+Compensator\+::deserialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_a14151d53dcc9f2c2180c767e29360154}{Mic\+Ellipsoid\+Mag\+Compensator}}, \mbox{\hyperlink{class_mic_cabin_mag_compensator_a0d120146e5d20620a6e6fae63b52ba13}{Mic\+Cabin\+Mag\+Compensator}}, and \mbox{\hyperlink{class_mic_t_l_mag_compensator_add7099ce41d4d36dc20a842ee11132c0}{Mic\+T\+L\+Mag\+Compensator}}.
+
+\mbox{\Hypertarget{class_mic_mag_compensator_a5a411ece565ad33e614fa9f4deb49245}\label{class_mic_mag_compensator_a5a411ece565ad33e614fa9f4deb49245}} 
+\index{MicMagCompensator@{MicMagCompensator}!do\_calibrate@{do\_calibrate}}
+\index{do\_calibrate@{do\_calibrate}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{do\_calibrate()}{do\_calibrate()}}
+{\footnotesize\ttfamily virtual ret\+\_\+t Mic\+Mag\+Compensator\+::do\+\_\+calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_adc7307de6e8f7cf14c5e7f1a0c98475c}{Mic\+Ellipsoid\+Mag\+Compensator}}, \mbox{\hyperlink{class_mic_cabin_mag_compensator_a2131cf7284cf4d74e5cccb4df126b331}{Mic\+Cabin\+Mag\+Compensator}}, \mbox{\hyperlink{class_mic_t_l_mag_compensator_a720be7c8627cc32f24a22793a39dfd42}{Mic\+T\+L\+Mag\+Compensator}}, and \mbox{\hyperlink{class_mic_t_l_component_mag_compensator_afec2d2ced69749df12b716e022a23c01}{Mic\+T\+L\+Component\+Mag\+Compensator}}.
+
+\mbox{\Hypertarget{class_mic_mag_compensator_ac23bd6a837144a977a30de1c2ac5295a}\label{class_mic_mag_compensator_ac23bd6a837144a977a30de1c2ac5295a}} 
+\index{MicMagCompensator@{MicMagCompensator}!do\_compenste@{do\_compenste}}
+\index{do\_compenste@{do\_compenste}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{do\_compenste()}{do\_compenste()}}
+{\footnotesize\ttfamily virtual ret\+\_\+t Mic\+Mag\+Compensator\+::do\+\_\+compenste (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{mic\+\_\+mag\+\_\+t \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_a77ba4069020cecf092927947e58593fe}{Mic\+Ellipsoid\+Mag\+Compensator}}, \mbox{\hyperlink{class_mic_cabin_mag_compensator_a8c1fcbfc84a4929c7b0d58cb035c6604}{Mic\+Cabin\+Mag\+Compensator}}, \mbox{\hyperlink{class_mic_t_l_mag_compensator_abba1d69dd80ef398e162bacc59f0a430}{Mic\+T\+L\+Mag\+Compensator}}, and \mbox{\hyperlink{class_mic_t_l_component_mag_compensator_a2d53434944aeaf2d1945e99268b1a4d7}{Mic\+T\+L\+Component\+Mag\+Compensator}}.
+
+\mbox{\Hypertarget{class_mic_mag_compensator_a9858707edd7130ff8f27f204b39b3d33}\label{class_mic_mag_compensator_a9858707edd7130ff8f27f204b39b3d33}} 
+\index{MicMagCompensator@{MicMagCompensator}!get\_curr\_time@{get\_curr\_time}}
+\index{get\_curr\_time@{get\_curr\_time}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{get\_curr\_time()}{get\_curr\_time()}}
+{\footnotesize\ttfamily float64\+\_\+t Mic\+Mag\+Compensator\+::get\+\_\+curr\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_a9b013f5c2f2a7bbf2c13fb47e9ca85cb}\label{class_mic_mag_compensator_a9b013f5c2f2a7bbf2c13fb47e9ca85cb}} 
+\index{MicMagCompensator@{MicMagCompensator}!get\_data\_storer@{get\_data\_storer}}
+\index{get\_data\_storer@{get\_data\_storer}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{get\_data\_storer()}{get\_data\_storer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__mag__compensator_8h_ab08c9058790ad02067631c7e1e9f7b78}{mic\+\_\+mag\+\_\+storer\+\_\+t}} \& Mic\+Mag\+Compensator\+::get\+\_\+data\+\_\+storer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_a5db82a7412c47bfe4eeee91b7e759a07}\label{class_mic_mag_compensator_a5db82a7412c47bfe4eeee91b7e759a07}} 
+\index{MicMagCompensator@{MicMagCompensator}!load\_model@{load\_model}}
+\index{load\_model@{load\_model}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{load\_model()}{load\_model()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Mag\+Compensator\+::load\+\_\+model (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_a30d49ec93282805eaf2bee54d979e976}\label{class_mic_mag_compensator_a30d49ec93282805eaf2bee54d979e976}} 
+\index{MicMagCompensator@{MicMagCompensator}!save\_model@{save\_model}}
+\index{save\_model@{save\_model}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{save\_model()}{save\_model()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Mag\+Compensator\+::save\+\_\+model (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_a5cd2f4fc5c9d7f159792374ef3bea48d}\label{class_mic_mag_compensator_a5cd2f4fc5c9d7f159792374ef3bea48d}} 
+\index{MicMagCompensator@{MicMagCompensator}!serialize@{serialize}}
+\index{serialize@{serialize}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Mag\+Compensator\+::serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_aec965e1adc14bdc537c2fdf31064d64a}{Mic\+Ellipsoid\+Mag\+Compensator}}, \mbox{\hyperlink{class_mic_cabin_mag_compensator_a14cbcf63ad9dd556cb6a92dad9aec73c}{Mic\+Cabin\+Mag\+Compensator}}, and \mbox{\hyperlink{class_mic_t_l_mag_compensator_a91ddd88e16d7348b00eca41be0cbed3d}{Mic\+T\+L\+Mag\+Compensator}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mic_mag_compensator_a99cace4ac027f4cd45a6e16ed1f6eee7}\label{class_mic_mag_compensator_a99cace4ac027f4cd45a6e16ed1f6eee7}} 
+\index{MicMagCompensator@{MicMagCompensator}!\_curr\_time\_stamp@{\_curr\_time\_stamp}}
+\index{\_curr\_time\_stamp@{\_curr\_time\_stamp}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{\_curr\_time\_stamp}{\_curr\_time\_stamp}}
+{\footnotesize\ttfamily float64\+\_\+t Mic\+Mag\+Compensator\+::\+\_\+curr\+\_\+time\+\_\+stamp\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_acc5d802ed9d19101033a441a2d08d44f}\label{class_mic_mag_compensator_acc5d802ed9d19101033a441a2d08d44f}} 
+\index{MicMagCompensator@{MicMagCompensator}!\_mag\_measure\_storer@{\_mag\_measure\_storer}}
+\index{\_mag\_measure\_storer@{\_mag\_measure\_storer}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{\_mag\_measure\_storer}{\_mag\_measure\_storer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__mag__compensator_8h_ab08c9058790ad02067631c7e1e9f7b78}{mic\+\_\+mag\+\_\+storer\+\_\+t}} Mic\+Mag\+Compensator\+::\+\_\+mag\+\_\+measure\+\_\+storer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_ab3a2cfbab0653dd219b07fc4ba5b8096}\label{class_mic_mag_compensator_ab3a2cfbab0653dd219b07fc4ba5b8096}} 
+\index{MicMagCompensator@{MicMagCompensator}!\_mag\_truth\_storer@{\_mag\_truth\_storer}}
+\index{\_mag\_truth\_storer@{\_mag\_truth\_storer}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{\_mag\_truth\_storer}{\_mag\_truth\_storer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__mag__compensator_8h_ab08c9058790ad02067631c7e1e9f7b78}{mic\+\_\+mag\+\_\+storer\+\_\+t}} Mic\+Mag\+Compensator\+::\+\_\+mag\+\_\+truth\+\_\+storer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_acc0daf5ca875caf1fcffda53cb0f0821}\label{class_mic_mag_compensator_acc0daf5ca875caf1fcffda53cb0f0821}} 
+\index{MicMagCompensator@{MicMagCompensator}!\_state@{\_state}}
+\index{\_state@{\_state}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{\_state}{\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__mag__compensator_8h_ae215f354c141d02e5a50eae6ef55974e}{mic\+\_\+state\+\_\+t}} Mic\+Mag\+Compensator\+::\+\_\+state\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mic_mag_compensator_a475bfd7e81350fa0a767637e14c9247d}\label{class_mic_mag_compensator_a475bfd7e81350fa0a767637e14c9247d}} 
+\index{MicMagCompensator@{MicMagCompensator}!\_version@{\_version}}
+\index{\_version@{\_version}!MicMagCompensator@{MicMagCompensator}}
+\doxysubsubsection{\texorpdfstring{\_version}{\_version}}
+{\footnotesize\ttfamily std\+::string Mic\+Mag\+Compensator\+::\+\_\+version\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/mic\+\_\+mag\+\_\+compensator/\mbox{\hyperlink{mic__mag__compensator_8h}{mic\+\_\+mag\+\_\+compensator.\+h}}\item 
+src/mic\+\_\+mag\+\_\+compensator/\mbox{\hyperlink{mic__mag__compensator_8cc}{mic\+\_\+mag\+\_\+compensator.\+cc}}\end{DoxyCompactItemize}

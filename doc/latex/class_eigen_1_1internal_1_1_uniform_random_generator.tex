@@ -1,0 +1,85 @@
+\hypertarget{class_eigen_1_1internal_1_1_uniform_random_generator}{}\doxysection{Eigen\+::internal\+::Uniform\+Random\+Generator$<$ T $>$ Class Template Reference}
+\label{class_eigen_1_1internal_1_1_uniform_random_generator}\index{Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Random.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator_aedf399a1d9468154a90f5b6bca799d82}{Uniform\+Random\+Generator}} (uint64\+\_\+t seed=0)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator_a97b9c2bc04be36b4f511d70131d6cc24}{Uniform\+Random\+Generator}} (const \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator}{Uniform\+Random\+Generator}} \&other)
+\item 
+{\footnotesize template$<$typename Index $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator_a620623213b13e27aa1590dc9e605b56e}{operator()}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} i) const
+\item 
+{\footnotesize template$<$typename Packet , typename Index $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator_a6f28e945355106c147b1d7c27ba6c995}{packet\+Op}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} i) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator_a29df43522cd74f119dd768e8b80effe8}{Packet\+Access}} = \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator_afb629308c52d0a232ab471d108b026bd}{m\+\_\+state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_uniform_random_generator_aedf399a1d9468154a90f5b6bca799d82}\label{class_eigen_1_1internal_1_1_uniform_random_generator_aedf399a1d9468154a90f5b6bca799d82}} 
+\index{Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}!UniformRandomGenerator@{UniformRandomGenerator}}
+\index{UniformRandomGenerator@{UniformRandomGenerator}!Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UniformRandomGenerator()}{UniformRandomGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator}{Eigen\+::internal\+::\+Uniform\+Random\+Generator}}$<$ T $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator}{Uniform\+Random\+Generator}} (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{seed = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_uniform_random_generator_a97b9c2bc04be36b4f511d70131d6cc24}\label{class_eigen_1_1internal_1_1_uniform_random_generator_a97b9c2bc04be36b4f511d70131d6cc24}} 
+\index{Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}!UniformRandomGenerator@{UniformRandomGenerator}}
+\index{UniformRandomGenerator@{UniformRandomGenerator}!Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UniformRandomGenerator()}{UniformRandomGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator}{Eigen\+::internal\+::\+Uniform\+Random\+Generator}}$<$ T $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator}{Uniform\+Random\+Generator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator}{Uniform\+Random\+Generator}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_uniform_random_generator_a620623213b13e27aa1590dc9e605b56e}\label{class_eigen_1_1internal_1_1_uniform_random_generator_a620623213b13e27aa1590dc9e605b56e}} 
+\index{Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Index $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator}{Eigen\+::internal\+::\+Uniform\+Random\+Generator}}$<$ T $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_uniform_random_generator_a6f28e945355106c147b1d7c27ba6c995}\label{class_eigen_1_1internal_1_1_uniform_random_generator_a6f28e945355106c147b1d7c27ba6c995}} 
+\index{Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}!packetOp@{packetOp}}
+\index{packetOp@{packetOp}!Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{packetOp()}{packetOp()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Packet , typename Index $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator}{Eigen\+::internal\+::\+Uniform\+Random\+Generator}}$<$ T $>$\+::packet\+Op (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_uniform_random_generator_afb629308c52d0a232ab471d108b026bd}\label{class_eigen_1_1internal_1_1_uniform_random_generator_afb629308c52d0a232ab471d108b026bd}} 
+\index{Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}!m\_state@{m\_state}}
+\index{m\_state@{m\_state}!Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_state}{m\_state}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator}{Eigen\+::internal\+::\+Uniform\+Random\+Generator}}$<$ T $>$\+::m\+\_\+state\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_uniform_random_generator_a29df43522cd74f119dd768e8b80effe8}\label{class_eigen_1_1internal_1_1_uniform_random_generator_a29df43522cd74f119dd768e8b80effe8}} 
+\index{Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}!PacketAccess@{PacketAccess}}
+\index{PacketAccess@{PacketAccess}!Eigen::internal::UniformRandomGenerator$<$ T $>$@{Eigen::internal::UniformRandomGenerator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PacketAccess}{PacketAccess}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const bool \mbox{\hyperlink{class_eigen_1_1internal_1_1_uniform_random_generator}{Eigen\+::internal\+::\+Uniform\+Random\+Generator}}$<$ T $>$\+::Packet\+Access = \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_random_8h}{Tensor\+Random.\+h}}\end{DoxyCompactItemize}

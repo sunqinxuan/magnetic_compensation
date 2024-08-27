@@ -1,0 +1,63 @@
+\hypertarget{struct_eigen_1_1internal_1_1all__unroller}{}\doxysection{Eigen\+::internal\+::all\+\_\+unroller$<$ Derived, Unroll\+Count $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1all__unroller}\index{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$@{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$}}
+
+
+{\ttfamily \#include $<$Boolean\+Redux.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1all__unroller_aab93edb17dcce07dd0a586bad2e3e4e7a4a5274589539d564634984d1a344d492}{col}} = (Unroll\+Count-\/1) / Traits\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1all__unroller_aab93edb17dcce07dd0a586bad2e3e4e7a7043a74cdf015adbb1cbb77b8abbcf10}{row}} = (Unroll\+Count-\/1) \% Traits\+::Rows\+At\+Compile\+Time
+ \}
+\item 
+typedef Derived\+::\+Expression\+Traits \mbox{\hyperlink{struct_eigen_1_1internal_1_1all__unroller_a15d269678082201f46f0735e0adeff1e}{Traits}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1all__unroller_ae703c58c22926d7c28e1714953e5083b}{run}} (const Derived \&mat)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1all__unroller_a15d269678082201f46f0735e0adeff1e}\label{struct_eigen_1_1internal_1_1all__unroller_a15d269678082201f46f0735e0adeff1e}} 
+\index{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$@{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$}!Traits@{Traits}}
+\index{Traits@{Traits}!Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$@{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$}}
+\doxysubsubsection{\texorpdfstring{Traits}{Traits}}
+{\footnotesize\ttfamily template$<$typename Derived , int Unroll\+Count$>$ \\
+typedef Derived\+::\+Expression\+Traits \mbox{\hyperlink{struct_eigen_1_1internal_1_1all__unroller}{Eigen\+::internal\+::all\+\_\+unroller}}$<$ Derived, Unroll\+Count $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1all__unroller_a15d269678082201f46f0735e0adeff1e}{Traits}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1all__unroller_aab93edb17dcce07dd0a586bad2e3e4e7}\label{struct_eigen_1_1internal_1_1all__unroller_aab93edb17dcce07dd0a586bad2e3e4e7}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Derived , int Unroll\+Count$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{col@{col}!Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$@{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$}}\index{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$@{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$}!col@{col}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1all__unroller_aab93edb17dcce07dd0a586bad2e3e4e7a4a5274589539d564634984d1a344d492}\label{struct_eigen_1_1internal_1_1all__unroller_aab93edb17dcce07dd0a586bad2e3e4e7a4a5274589539d564634984d1a344d492}} 
+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{row@{row}!Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$@{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$}}\index{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$@{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$}!row@{row}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1all__unroller_aab93edb17dcce07dd0a586bad2e3e4e7a7043a74cdf015adbb1cbb77b8abbcf10}\label{struct_eigen_1_1internal_1_1all__unroller_aab93edb17dcce07dd0a586bad2e3e4e7a7043a74cdf015adbb1cbb77b8abbcf10}} 
+row&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1all__unroller_ae703c58c22926d7c28e1714953e5083b}\label{struct_eigen_1_1internal_1_1all__unroller_ae703c58c22926d7c28e1714953e5083b}} 
+\index{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$@{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$}!run@{run}}
+\index{run@{run}!Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$@{Eigen::internal::all\_unroller$<$ Derived, UnrollCount $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename Derived , int Unroll\+Count$>$ \\
+static bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1all__unroller}{Eigen\+::internal\+::all\+\_\+unroller}}$<$ Derived, Unroll\+Count $>$\+::run (\begin{DoxyParamCaption}\item[{const Derived \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_boolean_redux_8h}{Boolean\+Redux.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,135 @@
+\hypertarget{classdetail_1_1exception}{}\doxysection{detail\+::exception Class Reference}
+\label{classdetail_1_1exception}\index{detail::exception@{detail::exception}}
+
+
+general exception of the \mbox{\hyperlink{classbasic__json}{basic\+\_\+json}} class  
+
+
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+
+
+Inheritance diagram for detail\+::exception\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdetail_1_1exception__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for detail\+::exception\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classdetail_1_1exception__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{classdetail_1_1exception_a7a50109c734c69d4521730a898be08f9}{what}} () const noexcept override
+\begin{DoxyCompactList}\small\item\em returns the explanatory string \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classdetail_1_1exception_a63b819fbb2ef34df9dad1e309207fa24}{id}}
+\begin{DoxyCompactList}\small\item\em the id of the exception \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdetail_1_1exception_a528d6bc77e88490bbb84cde2222b7ff0}{exception}} (int id\+\_\+, const char $\ast$what\+\_\+arg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classdetail_1_1exception_a8f1eb56b9964c8dd84d89d0da98d883b}{name}} (const std\+::string \&ename, int id\+\_\+)
+\item 
+static std\+::string \mbox{\hyperlink{classdetail_1_1exception_a6b4a786b5c1c25dd3edaceb1bf2d5120}{diagnostics}} (std\+::nullptr\+\_\+t)
+\item 
+{\footnotesize template$<$typename Basic\+Json\+Type $>$ }\\static std\+::string \mbox{\hyperlink{classdetail_1_1exception_af3739c53fe56a1712754d13dfa561f80}{diagnostics}} (const Basic\+Json\+Type $\ast$leaf\+\_\+element)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::runtime\+\_\+error \mbox{\hyperlink{classdetail_1_1exception_a6f86cee7b7a4938d4d758036dc4deed9}{m}}
+\begin{DoxyCompactList}\small\item\em an exception object as storage for error messages \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+general exception of the \mbox{\hyperlink{classbasic__json}{basic\+\_\+json}} class 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/basic_json/exception/}{\texttt{ https\+://json.\+nlohmann.\+me/api/basic\+\_\+json/exception/}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdetail_1_1exception_a528d6bc77e88490bbb84cde2222b7ff0}\label{classdetail_1_1exception_a528d6bc77e88490bbb84cde2222b7ff0}} 
+\index{detail::exception@{detail::exception}!exception@{exception}}
+\index{exception@{exception}!detail::exception@{detail::exception}}
+\doxysubsubsection{\texorpdfstring{exception()}{exception()}}
+{\footnotesize\ttfamily detail\+::exception\+::exception (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+,  }\item[{const char $\ast$}]{what\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdetail_1_1exception_af3739c53fe56a1712754d13dfa561f80}\label{classdetail_1_1exception_af3739c53fe56a1712754d13dfa561f80}} 
+\index{detail::exception@{detail::exception}!diagnostics@{diagnostics}}
+\index{diagnostics@{diagnostics}!detail::exception@{detail::exception}}
+\doxysubsubsection{\texorpdfstring{diagnostics()}{diagnostics()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
+static std\+::string detail\+::exception\+::diagnostics (\begin{DoxyParamCaption}\item[{const Basic\+Json\+Type $\ast$}]{leaf\+\_\+element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classdetail_1_1exception_a6b4a786b5c1c25dd3edaceb1bf2d5120}\label{classdetail_1_1exception_a6b4a786b5c1c25dd3edaceb1bf2d5120}} 
+\index{detail::exception@{detail::exception}!diagnostics@{diagnostics}}
+\index{diagnostics@{diagnostics}!detail::exception@{detail::exception}}
+\doxysubsubsection{\texorpdfstring{diagnostics()}{diagnostics()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static std\+::string detail\+::exception\+::diagnostics (\begin{DoxyParamCaption}\item[{std\+::nullptr\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classdetail_1_1exception_a8f1eb56b9964c8dd84d89d0da98d883b}\label{classdetail_1_1exception_a8f1eb56b9964c8dd84d89d0da98d883b}} 
+\index{detail::exception@{detail::exception}!name@{name}}
+\index{name@{name}!detail::exception@{detail::exception}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily static std\+::string detail\+::exception\+::name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ename,  }\item[{int}]{id\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classdetail_1_1exception_a7a50109c734c69d4521730a898be08f9}\label{classdetail_1_1exception_a7a50109c734c69d4521730a898be08f9}} 
+\index{detail::exception@{detail::exception}!what@{what}}
+\index{what@{what}!detail::exception@{detail::exception}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ detail\+::exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+returns the explanatory string 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdetail_1_1exception_a63b819fbb2ef34df9dad1e309207fa24}\label{classdetail_1_1exception_a63b819fbb2ef34df9dad1e309207fa24}} 
+\index{detail::exception@{detail::exception}!id@{id}}
+\index{id@{id}!detail::exception@{detail::exception}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily const int detail\+::exception\+::id}
+
+
+
+the id of the exception 
+
+\mbox{\Hypertarget{classdetail_1_1exception_a6f86cee7b7a4938d4d758036dc4deed9}\label{classdetail_1_1exception_a6f86cee7b7a4938d4d758036dc4deed9}} 
+\index{detail::exception@{detail::exception}!m@{m}}
+\index{m@{m}!detail::exception@{detail::exception}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily std\+::runtime\+\_\+error detail\+::exception\+::m\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+an exception object as storage for error messages 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/nlohmann/include/\mbox{\hyperlink{json_8hpp}{json.\+hpp}}\end{DoxyCompactItemize}

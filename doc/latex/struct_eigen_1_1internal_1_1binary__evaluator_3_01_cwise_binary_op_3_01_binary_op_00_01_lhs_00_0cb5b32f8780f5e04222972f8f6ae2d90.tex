@@ -1,0 +1,171 @@
+\hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90}{}\doxysection{Eigen\+::internal\+::binary\+\_\+evaluator$<$ Cwise\+Binary\+Op$<$ Binary\+Op, Lhs, Rhs $>$, Iterator\+Based, Index\+Based $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90}\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+
+
+{\ttfamily \#include $<$Sparse\+Cwise\+Binary\+Op.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::internal\+::binary\+\_\+evaluator$<$ Cwise\+Binary\+Op$<$ Binary\+Op, Lhs, Rhs $>$, Iterator\+Based, Index\+Based $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0df59ee20de0439de31b2c2629746f82c}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::internal\+::binary\+\_\+evaluator$<$ Cwise\+Binary\+Op$<$ Binary\+Op, Lhs, Rhs $>$, Iterator\+Based, Index\+Based $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0f34a48e49431ef985faee0dcd6838883}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_012b4683c8809d5a8c88ca2030de640ed2}{Inner\+Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_aa444d1f647796c886f970aeeb5ddba5ca3f8543d5611645e00e70eb00cc862f8f}{Coeff\+Read\+Cost}} = evaluator$<$Lhs$>$\+::Coeff\+Read\+Cost + evaluator$<$Rhs$>$\+::Coeff\+Read\+Cost + functor\+\_\+traits$<$Binary\+Op$>$\+::Cost, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_aa444d1f647796c886f970aeeb5ddba5ca0fb22d225a9bf1fd16901eb53b4512b5}{Flags}} = (Xpr\+Type\+::Flags \& $\sim$\+Row\+Major\+Bit) $\vert$ (int(Lhs\+::Flags)\&Row\+Major\+Bit)
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ae651ac32465859b332b06ec2d6b21b14}{binary\+\_\+evaluator}} (const \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ad36d9bbe192ed9de539f812d91891f7f}{Xpr\+Type}} \&xpr)
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a287b169a07a616c109fa94a9eb32c9dd}{non\+Zeros\+Estimate}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_inner_iterator}{Inner\+Iterator}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a77cb8978ba80ac6d3c3d8fe12c1cf5cb}{Lhs\+Iterator}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ad36d9bbe192ed9de539f812d91891f7f}{Xpr\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ad36d9bbe192ed9de539f812d91891f7f}{Xpr\+Type}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a4e37da1a1fe4959472ae2a6cc7a9632d}{Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a4e37da1a1fe4959472ae2a6cc7a9632d}{Scalar}}
+\item 
+typedef Xpr\+Type\+::\+Storage\+Index \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a1efc2cf6f2339944d155c90783f22a63}{Storage\+Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Binary\+Op \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_abecc44c75458c4ffbf3f819f0b05a0b5}{m\+\_\+functor}}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_af07052c9e9ae6334de98f6fbc859da51}{m\+\_\+lhs\+Impl}}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_afa9cd73f0db45a3fdebb42203a82af82}{m\+\_\+rhs\+Impl}}
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ad36d9bbe192ed9de539f812d91891f7f}{Xpr\+Type}} \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a245d953951d776c44160a41718a35dd3}{m\+\_\+expr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a77cb8978ba80ac6d3c3d8fe12c1cf5cb}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a77cb8978ba80ac6d3c3d8fe12c1cf5cb}} 
+\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!LhsIterator@{LhsIterator}}
+\index{LhsIterator@{LhsIterator}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+\doxysubsubsection{\texorpdfstring{LhsIterator}{LhsIterator}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_inner_iterator}{Inner\+Iterator}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{Eigen\+::internal\+::binary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_index_based}{Index\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a77cb8978ba80ac6d3c3d8fe12c1cf5cb}{Lhs\+Iterator}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a4e37da1a1fe4959472ae2a6cc7a9632d}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a4e37da1a1fe4959472ae2a6cc7a9632d}} 
+\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ad36d9bbe192ed9de539f812d91891f7f}{Xpr\+Type}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a4e37da1a1fe4959472ae2a6cc7a9632d}{Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{Eigen\+::internal\+::binary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_index_based}{Index\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a4e37da1a1fe4959472ae2a6cc7a9632d}{Scalar}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a1efc2cf6f2339944d155c90783f22a63}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a1efc2cf6f2339944d155c90783f22a63}} 
+\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef Xpr\+Type\+::\+Storage\+Index \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{Eigen\+::internal\+::binary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_index_based}{Index\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a1efc2cf6f2339944d155c90783f22a63}{Storage\+Index}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ad36d9bbe192ed9de539f812d91891f7f}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ad36d9bbe192ed9de539f812d91891f7f}} 
+\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!XprType@{XprType}}
+\index{XprType@{XprType}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+\doxysubsubsection{\texorpdfstring{XprType}{XprType}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{Eigen\+::internal\+::binary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_index_based}{Index\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ad36d9bbe192ed9de539f812d91891f7f}{Xpr\+Type}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_aa444d1f647796c886f970aeeb5ddba5c}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_aa444d1f647796c886f970aeeb5ddba5c}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CoeffReadCost@{CoeffReadCost}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!CoeffReadCost@{CoeffReadCost}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_aa444d1f647796c886f970aeeb5ddba5ca3f8543d5611645e00e70eb00cc862f8f}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_aa444d1f647796c886f970aeeb5ddba5ca3f8543d5611645e00e70eb00cc862f8f}} 
+Coeff\+Read\+Cost&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_aa444d1f647796c886f970aeeb5ddba5ca0fb22d225a9bf1fd16901eb53b4512b5}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_aa444d1f647796c886f970aeeb5ddba5ca0fb22d225a9bf1fd16901eb53b4512b5}} 
+Flags&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ae651ac32465859b332b06ec2d6b21b14}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ae651ac32465859b332b06ec2d6b21b14}} 
+\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!binary\_evaluator@{binary\_evaluator}}
+\index{binary\_evaluator@{binary\_evaluator}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+\doxysubsubsection{\texorpdfstring{binary\_evaluator()}{binary\_evaluator()}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{Eigen\+::internal\+::binary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_index_based}{Index\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{binary\+\_\+evaluator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ad36d9bbe192ed9de539f812d91891f7f}{Xpr\+Type}} \&}]{xpr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a287b169a07a616c109fa94a9eb32c9dd}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a287b169a07a616c109fa94a9eb32c9dd}} 
+\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!nonZerosEstimate@{nonZerosEstimate}}
+\index{nonZerosEstimate@{nonZerosEstimate}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+\doxysubsubsection{\texorpdfstring{nonZerosEstimate()}{nonZerosEstimate()}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{Eigen\+::internal\+::binary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_index_based}{Index\+Based}} $>$\+::non\+Zeros\+Estimate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a245d953951d776c44160a41718a35dd3}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_a245d953951d776c44160a41718a35dd3}} 
+\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!m\_expr@{m\_expr}}
+\index{m\_expr@{m\_expr}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+\doxysubsubsection{\texorpdfstring{m\_expr}{m\_expr}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_ad36d9bbe192ed9de539f812d91891f7f}{Xpr\+Type}}\& \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{Eigen\+::internal\+::binary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_index_based}{Index\+Based}} $>$\+::m\+\_\+expr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_abecc44c75458c4ffbf3f819f0b05a0b5}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_abecc44c75458c4ffbf3f819f0b05a0b5}} 
+\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!m\_functor@{m\_functor}}
+\index{m\_functor@{m\_functor}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+\doxysubsubsection{\texorpdfstring{m\_functor}{m\_functor}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+const Binary\+Op \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{Eigen\+::internal\+::binary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_index_based}{Index\+Based}} $>$\+::m\+\_\+functor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_af07052c9e9ae6334de98f6fbc859da51}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_af07052c9e9ae6334de98f6fbc859da51}} 
+\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!m\_lhsImpl@{m\_lhsImpl}}
+\index{m\_lhsImpl@{m\_lhsImpl}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+\doxysubsubsection{\texorpdfstring{m\_lhsImpl}{m\_lhsImpl}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{Eigen\+::internal\+::binary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_index_based}{Index\+Based}} $>$\+::m\+\_\+lhs\+Impl\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_afa9cd73f0db45a3fdebb42203a82af82}\label{struct_eigen_1_1internal_1_1binary__evaluator_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_0cb5b32f8780f5e04222972f8f6ae2d90_afa9cd73f0db45a3fdebb42203a82af82}} 
+\index{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}!m\_rhsImpl@{m\_rhsImpl}}
+\index{m\_rhsImpl@{m\_rhsImpl}!Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$@{Eigen::internal::binary\_evaluator$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$, IteratorBased, IndexBased $>$}}
+\doxysubsubsection{\texorpdfstring{m\_rhsImpl}{m\_rhsImpl}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1binary__evaluator}{Eigen\+::internal\+::binary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_index_based}{Index\+Based}} $>$\+::m\+\_\+rhs\+Impl\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Sparse\+Core/\mbox{\hyperlink{_sparse_cwise_binary_op_8h}{Sparse\+Cwise\+Binary\+Op.\+h}}\end{DoxyCompactItemize}

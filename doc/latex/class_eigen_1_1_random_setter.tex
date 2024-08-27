@@ -1,0 +1,254 @@
+\hypertarget{class_eigen_1_1_random_setter}{}\doxysection{Eigen\+::Random\+Setter$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$ Class Template Reference}
+\label{class_eigen_1_1_random_setter}\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+
+
+The \mbox{\hyperlink{class_eigen_1_1_random_setter}{Random\+Setter}} is a wrapper object allowing to set/update a sparse matrix with random access.  
+
+
+
+
+{\ttfamily \#include $<$Random\+Setter.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_random_setter_1_1_scalar_wrapper}{Scalar\+Wrapper}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_random_setter_a62e960bd52cec62a59ebb285f381138f}{Random\+Setter}} (Sparse\+Matrix\+Type \&target)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_random_setter_a3e4a78672df59ab4dd2799919b431027}{$\sim$\+Random\+Setter}} ()
+\item 
+\mbox{\hyperlink{class_eigen_1_1_random_setter_ac1d2247fd5cbd6a749ff3432ff52ff02}{Scalar}} \& \mbox{\hyperlink{class_eigen_1_1_random_setter_a77dcbbc964b42027e00af269a5147c68}{operator()}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}})
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_random_setter_ac34e5cd67e370641c3b48c8a91705046}{non\+Zeros}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_random_setter_aa27c7250c000948650ae4b0d172df076}{Hash\+Map\+Type}} $\ast$ \mbox{\hyperlink{class_eigen_1_1_random_setter_aa6f8c71daa160c808cd515dfcb14f5cd}{m\+\_\+hashmaps}}
+\item 
+Sparse\+Matrix\+Type $\ast$ \mbox{\hyperlink{class_eigen_1_1_random_setter_af801818a55a455ad5b313dd676692eed}{mp\+\_\+target}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_random_setter_a1acbf60fa8b0da0ae992b75ff96f3d67}{m\+\_\+outer\+Packets}}
+\item 
+unsigned char \mbox{\hyperlink{class_eigen_1_1_random_setter_aa1bc933cf6c76368c1cfc4cac59f680a}{m\+\_\+key\+Bits\+Offset}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463a07c15db6221c525aaf7afde30960bcf0}{Swap\+Storage}} = 1 -\/ Map\+Traits$<$Scalar\+Wrapper$>$\+::Is\+Sorted, 
+\mbox{\hyperlink{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463a6d9ebce2d4d5975017a637c3082c5f43}{Target\+Row\+Major}} = (Sparse\+Matrix\+Type\+::Flags \& Row\+Major\+Bit) ? 1 \+: 0, 
+\mbox{\hyperlink{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463a6a73d77a863ed90cc4daddd177c68e60}{Setter\+Row\+Major}} = Swap\+Storage ? 1-\/Target\+Row\+Major \+: Target\+Row\+Major
+ \}
+\item 
+typedef Sparse\+Matrix\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_random_setter_ac1d2247fd5cbd6a749ff3432ff52ff02}{Scalar}}
+\item 
+typedef Sparse\+Matrix\+Type\+::\+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_random_setter_abee8608d2f04c98d2fb22c2aef471a59}{Storage\+Index}}
+\item 
+typedef Map\+Traits$<$ \mbox{\hyperlink{struct_eigen_1_1_random_setter_1_1_scalar_wrapper}{Scalar\+Wrapper}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_random_setter_a1b3669a4ba4e9c3cf5eb7b5717555e66}{Key\+Type}} \mbox{\hyperlink{class_eigen_1_1_random_setter_a1b3669a4ba4e9c3cf5eb7b5717555e66}{Key\+Type}}
+\item 
+typedef Map\+Traits$<$ \mbox{\hyperlink{struct_eigen_1_1_random_setter_1_1_scalar_wrapper}{Scalar\+Wrapper}} $>$\+::Type \mbox{\hyperlink{class_eigen_1_1_random_setter_aa27c7250c000948650ae4b0d172df076}{Hash\+Map\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_eigen_1_1_random_setter_a5d87887f8c10b841aeddfcf11265beee}{Outer\+Packet\+Mask}} = (1 $<$$<$ Outer\+Packet\+Bits) -\/ 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Sparse\+Matrix\+Type, template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$\newline
+class Eigen\+::\+Random\+Setter$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$}
+
+The \mbox{\hyperlink{class_eigen_1_1_random_setter}{Random\+Setter}} is a wrapper object allowing to set/update a sparse matrix with random access. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Sparse\+Matrix\+Type} & the type of the sparse matrix we are updating \\
+\hline
+{\em Map\+Traits} & a traits class representing the map implementation used for the temporary sparse storage. Its default value depends on the system. \\
+\hline
+{\em Outer\+Packet\+Bits} & defines the number of rows (or columns) manage by a single map object as a power of two exponent.\\
+\hline
+\end{DoxyTemplParams}
+This class temporarily represents a sparse matrix object using a generic map implementation allowing for efficient random access. The conversion from the compressed representation to a hash\+\_\+map object is performed in the \mbox{\hyperlink{class_eigen_1_1_random_setter}{Random\+Setter}} constructor, while the sparse matrix is updated back at destruction time. This strategy suggest the use of nested blocks as in this example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SparseMatrix<double> m(rows,cols);}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  RandomSetter<SparseMatrix<double> > w(m);}
+\DoxyCodeLine{  \textcolor{comment}{// don't use m but w instead with read/write random access to the coefficients:}}
+\DoxyCodeLine{  \textcolor{keywordflow}{for}(;;)}
+\DoxyCodeLine{    w(rand(),rand()) = rand;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// when w is deleted, the data are copied back to m}}
+\DoxyCodeLine{\textcolor{comment}{// and m is ready to use.}}
+\end{DoxyCode}
+
+
+Since hash\+\_\+map objects are not fully sorted, representing a full matrix as a single hash\+\_\+map would involve a big and costly sort to update the compressed matrix back. To overcome this issue, a \mbox{\hyperlink{class_eigen_1_1_random_setter}{Random\+Setter}} use multiple hash\+\_\+map, each representing 2$^\wedge$\+Outer\+Packet\+Bits columns or rows according to the storage order. To reach optimal performance, this value should be adjusted according to the average number of nonzeros per rows/columns.
+
+The possible values for the template parameter Map\+Traits are\+:
+\begin{DoxyItemize}
+\item {\bfseries{\mbox{\hyperlink{struct_eigen_1_1_std_map_traits}{Std\+Map\+Traits}}\+:}} corresponds to std\+::map. (does not perform very well)
+\item {\bfseries{Gnu\+Hash\+Map\+Traits\+:}} corresponds to \+\_\+\+\_\+gnu\+\_\+cxx\+::hash\+\_\+map (available only with G\+CC)
+\item {\bfseries{Google\+Dense\+Hash\+Map\+Traits\+:}} corresponds to google\+::dense\+\_\+hash\+\_\+map (best efficiency, reasonable memory consumption)
+\item {\bfseries{Google\+Sparse\+Hash\+Map\+Traits\+:}} corresponds to google\+::sparse\+\_\+hash\+\_\+map (best memory consumption, relatively good performance)
+\end{DoxyItemize}
+
+The default map implementation depends on the availability, and the preferred order is\+: Google\+Sparse\+Hash\+Map\+Traits, Gnu\+Hash\+Map\+Traits, and finally \mbox{\hyperlink{struct_eigen_1_1_std_map_traits}{Std\+Map\+Traits}}.
+
+For performance and memory consumption reasons it is highly recommended to use one of the Google\textquotesingle{}s hash\+\_\+map implementation. To enable the support for them, you have two options\+:
+\begin{DoxyItemize}
+\item \#include $<$google/dense\+\_\+hash\+\_\+map$>$ yourself {\bfseries{before}} Eigen/\+Sparse header
+\item define E\+I\+G\+E\+N\+\_\+\+G\+O\+O\+G\+L\+E\+H\+A\+S\+H\+\_\+\+S\+U\+P\+P\+O\+RT In the later case the inclusion of $<$google/dense\+\_\+hash\+\_\+map$>$ is made for you.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\href{http://code.google.com/p/google-sparsehash/}{\texttt{ http\+://code.\+google.\+com/p/google-\/sparsehash/}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_aa27c7250c000948650ae4b0d172df076}\label{class_eigen_1_1_random_setter_aa27c7250c000948650ae4b0d172df076}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!HashMapType@{HashMapType}}
+\index{HashMapType@{HashMapType}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{HashMapType}{HashMapType}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+typedef Map\+Traits$<$\mbox{\hyperlink{struct_eigen_1_1_random_setter_1_1_scalar_wrapper}{Scalar\+Wrapper}}$>$\+::Type \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::\mbox{\hyperlink{class_eigen_1_1_random_setter_aa27c7250c000948650ae4b0d172df076}{Hash\+Map\+Type}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_a1b3669a4ba4e9c3cf5eb7b5717555e66}\label{class_eigen_1_1_random_setter_a1b3669a4ba4e9c3cf5eb7b5717555e66}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!KeyType@{KeyType}}
+\index{KeyType@{KeyType}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{KeyType}{KeyType}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+typedef Map\+Traits$<$\mbox{\hyperlink{struct_eigen_1_1_random_setter_1_1_scalar_wrapper}{Scalar\+Wrapper}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_random_setter_a1b3669a4ba4e9c3cf5eb7b5717555e66}{Key\+Type}} \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::\mbox{\hyperlink{class_eigen_1_1_random_setter_a1b3669a4ba4e9c3cf5eb7b5717555e66}{Key\+Type}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_ac1d2247fd5cbd6a749ff3432ff52ff02}\label{class_eigen_1_1_random_setter_ac1d2247fd5cbd6a749ff3432ff52ff02}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+typedef Sparse\+Matrix\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::\mbox{\hyperlink{class_eigen_1_1_random_setter_ac1d2247fd5cbd6a749ff3432ff52ff02}{Scalar}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_abee8608d2f04c98d2fb22c2aef471a59}\label{class_eigen_1_1_random_setter_abee8608d2f04c98d2fb22c2aef471a59}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+typedef Sparse\+Matrix\+Type\+::\+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::\mbox{\hyperlink{class_eigen_1_1_random_setter_abee8608d2f04c98d2fb22c2aef471a59}{Storage\+Index}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463}\label{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+anonymous enum\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SwapStorage@{SwapStorage}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!SwapStorage@{SwapStorage}}}\mbox{\Hypertarget{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463a07c15db6221c525aaf7afde30960bcf0}\label{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463a07c15db6221c525aaf7afde30960bcf0}} 
+Swap\+Storage&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TargetRowMajor@{TargetRowMajor}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!TargetRowMajor@{TargetRowMajor}}}\mbox{\Hypertarget{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463a6d9ebce2d4d5975017a637c3082c5f43}\label{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463a6d9ebce2d4d5975017a637c3082c5f43}} 
+Target\+Row\+Major&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SetterRowMajor@{SetterRowMajor}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!SetterRowMajor@{SetterRowMajor}}}\mbox{\Hypertarget{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463a6a73d77a863ed90cc4daddd177c68e60}\label{class_eigen_1_1_random_setter_a46dafee2052a5b0cfbfe69da86b4f463a6a73d77a863ed90cc4daddd177c68e60}} 
+Setter\+Row\+Major&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_a62e960bd52cec62a59ebb285f381138f}\label{class_eigen_1_1_random_setter_a62e960bd52cec62a59ebb285f381138f}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!RandomSetter@{RandomSetter}}
+\index{RandomSetter@{RandomSetter}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{RandomSetter()}{RandomSetter()}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::\mbox{\hyperlink{class_eigen_1_1_random_setter}{Random\+Setter}} (\begin{DoxyParamCaption}\item[{Sparse\+Matrix\+Type \&}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a random setter object from the sparse matrix {\itshape target} 
+
+Note that the initial value of {\itshape target} are imported. If you want to re-\/set a sparse matrix from scratch, then you must set it to zero first using the set\+Zero() function. \mbox{\Hypertarget{class_eigen_1_1_random_setter_a3e4a78672df59ab4dd2799919b431027}\label{class_eigen_1_1_random_setter_a3e4a78672df59ab4dd2799919b431027}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!````~RandomSetter@{$\sim$RandomSetter}}
+\index{````~RandomSetter@{$\sim$RandomSetter}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$RandomSetter()}{~RandomSetter()}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::$\sim$\mbox{\hyperlink{class_eigen_1_1_random_setter}{Random\+Setter}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor updating back the sparse matrix target 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_ac34e5cd67e370641c3b48c8a91705046}\label{class_eigen_1_1_random_setter_ac34e5cd67e370641c3b48c8a91705046}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!nonZeros@{nonZeros}}
+\index{nonZeros@{nonZeros}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{nonZeros()}{nonZeros()}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::non\+Zeros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of non zero coefficients
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+According to the underlying map/hash\+\_\+map implementation, this function might be quite expensive. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_a77dcbbc964b42027e00af269a5147c68}\label{class_eigen_1_1_random_setter_a77dcbbc964b42027e00af269a5147c68}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_random_setter_ac1d2247fd5cbd6a749ff3432ff52ff02}{Scalar}}\& \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a reference to the coefficient at given coordinates {\itshape row}, {\itshape col} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_aa6f8c71daa160c808cd515dfcb14f5cd}\label{class_eigen_1_1_random_setter_aa6f8c71daa160c808cd515dfcb14f5cd}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!m\_hashmaps@{m\_hashmaps}}
+\index{m\_hashmaps@{m\_hashmaps}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{m\_hashmaps}{m\_hashmaps}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_random_setter_aa27c7250c000948650ae4b0d172df076}{Hash\+Map\+Type}}$\ast$ \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::m\+\_\+hashmaps\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_aa1bc933cf6c76368c1cfc4cac59f680a}\label{class_eigen_1_1_random_setter_aa1bc933cf6c76368c1cfc4cac59f680a}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!m\_keyBitsOffset@{m\_keyBitsOffset}}
+\index{m\_keyBitsOffset@{m\_keyBitsOffset}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{m\_keyBitsOffset}{m\_keyBitsOffset}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+unsigned char \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::m\+\_\+key\+Bits\+Offset\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_a1acbf60fa8b0da0ae992b75ff96f3d67}\label{class_eigen_1_1_random_setter_a1acbf60fa8b0da0ae992b75ff96f3d67}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!m\_outerPackets@{m\_outerPackets}}
+\index{m\_outerPackets@{m\_outerPackets}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{m\_outerPackets}{m\_outerPackets}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::m\+\_\+outer\+Packets\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_af801818a55a455ad5b313dd676692eed}\label{class_eigen_1_1_random_setter_af801818a55a455ad5b313dd676692eed}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!mp\_target@{mp\_target}}
+\index{mp\_target@{mp\_target}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{mp\_target}{mp\_target}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+Sparse\+Matrix\+Type$\ast$ \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::mp\+\_\+target\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_random_setter_a5d87887f8c10b841aeddfcf11265beee}\label{class_eigen_1_1_random_setter_a5d87887f8c10b841aeddfcf11265beee}} 
+\index{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}!OuterPacketMask@{OuterPacketMask}}
+\index{OuterPacketMask@{OuterPacketMask}!Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$@{Eigen::RandomSetter$<$ SparseMatrixType, MapTraits, OuterPacketBits $>$}}
+\doxysubsubsection{\texorpdfstring{OuterPacketMask}{OuterPacketMask}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Matrix\+Type , template$<$ typename T $>$ class Map\+Traits = Std\+Map\+Traits, int Outer\+Packet\+Bits = 6$>$ \\
+const int \mbox{\hyperlink{class_eigen_1_1_random_setter}{Eigen\+::\+Random\+Setter}}$<$ Sparse\+Matrix\+Type, Map\+Traits, Outer\+Packet\+Bits $>$\+::Outer\+Packet\+Mask = (1 $<$$<$ Outer\+Packet\+Bits) -\/ 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/src/\+Sparse\+Extra/\mbox{\hyperlink{_random_setter_8h}{Random\+Setter.\+h}}\end{DoxyCompactItemize}

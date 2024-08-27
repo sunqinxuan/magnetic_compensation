@@ -1,0 +1,501 @@
+\hypertarget{class_eigen_1_1_tensor_volume_patch_op}{}\doxysection{Eigen\+::Tensor\+Volume\+Patch\+Op$<$ Planes, Rows, Cols, Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_tensor_volume_patch_op}\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Forward\+Declarations.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Tensor\+Volume\+Patch\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}} $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a7fccefc2ec5615cca8d517e6147f65c3}{Real\+Scalar}}
+\item 
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a135222a87283b56fb1265da275195e01}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Tensor\+Volume\+Patch\+Op}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a60a9bba01689df55835248dd01726f86}{Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Tensor\+Volume\+Patch\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ac8758f38bfd3291e9033a18005599fb3}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ac8758f38bfd3291e9033a18005599fb3}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Tensor\+Volume\+Patch\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a3707bb26bc7806f3a2f43910f7a30b36}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a3707bb26bc7806f3a2f43910f7a30b36}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_abd3362f3580aede62382a3bea56d3edd}{Tensor\+Volume\+Patch\+Op}} (const Xpr\+Type \&expr, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a4717a5f0dce3370fb6ef4c1683a539ea}{patch\+\_\+planes}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ae5d5a1fd280f5c7f1f6e6313f8f43b50}{patch\+\_\+rows}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ae0dbc8f349fd171b2fc59a07b1582b62}{patch\+\_\+cols}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a05afb9a406a9a8ca58c4105c3bc63e44}{plane\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a8624b86945a5d22eaca15010f9094cda}{row\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a3d36f431162ace90c6fd88c2c099d6eb}{col\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a7649aeb8e06d893f3a89f444882b6ccc}{in\+\_\+plane\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a09e2dca0c18334d9c680291d55d0215f}{in\+\_\+row\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_acf7081fc28c88e5444c0264b721d4001}{in\+\_\+col\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a35a464b0b9c41b02233235ed6c83ff3f}{plane\+\_\+inflate\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a7ec8a659e3a9df305a5e883cb99eb4cd}{row\+\_\+inflate\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ae4689d47bf6784443f60f14ddff059a4}{col\+\_\+inflate\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_a622216a61db7cda3a723ffd639e2e046}{Padding\+Type}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a654090d3e2dfcf741fb184096b3f58a1}{padding\+\_\+type}}, \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_af2bc93a4dbbd600e020ff1eda193437e}{padding\+\_\+value}})
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a2b9eb5266ca20600764f7c7f03e09d40}{Tensor\+Volume\+Patch\+Op}} (const Xpr\+Type \&expr, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a4717a5f0dce3370fb6ef4c1683a539ea}{patch\+\_\+planes}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ae5d5a1fd280f5c7f1f6e6313f8f43b50}{patch\+\_\+rows}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ae0dbc8f349fd171b2fc59a07b1582b62}{patch\+\_\+cols}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a05afb9a406a9a8ca58c4105c3bc63e44}{plane\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a8624b86945a5d22eaca15010f9094cda}{row\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a3d36f431162ace90c6fd88c2c099d6eb}{col\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a7649aeb8e06d893f3a89f444882b6ccc}{in\+\_\+plane\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a09e2dca0c18334d9c680291d55d0215f}{in\+\_\+row\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_acf7081fc28c88e5444c0264b721d4001}{in\+\_\+col\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a35a464b0b9c41b02233235ed6c83ff3f}{plane\+\_\+inflate\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a7ec8a659e3a9df305a5e883cb99eb4cd}{row\+\_\+inflate\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ae4689d47bf6784443f60f14ddff059a4}{col\+\_\+inflate\+\_\+strides}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a98223a5b0475c83295beda5113f08f82}{padding\+\_\+top\+\_\+z}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_af69e5958efe2d9d3610aee5dc2cd978c}{padding\+\_\+bottom\+\_\+z}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a2ab323da058e39ab44b3df4839a20e9e}{padding\+\_\+top}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aacfbeea312c868ff6da371751e0ec110}{padding\+\_\+bottom}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ad27206fe7f69ae54383b918146e2966f}{padding\+\_\+left}}, \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aa8afb8908e6f399a14fc09aaa4108787}{padding\+\_\+right}}, \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_af2bc93a4dbbd600e020ff1eda193437e}{padding\+\_\+value}})
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a4717a5f0dce3370fb6ef4c1683a539ea}{patch\+\_\+planes}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ae5d5a1fd280f5c7f1f6e6313f8f43b50}{patch\+\_\+rows}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ae0dbc8f349fd171b2fc59a07b1582b62}{patch\+\_\+cols}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a05afb9a406a9a8ca58c4105c3bc63e44}{plane\+\_\+strides}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a8624b86945a5d22eaca15010f9094cda}{row\+\_\+strides}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a3d36f431162ace90c6fd88c2c099d6eb}{col\+\_\+strides}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a7649aeb8e06d893f3a89f444882b6ccc}{in\+\_\+plane\+\_\+strides}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a09e2dca0c18334d9c680291d55d0215f}{in\+\_\+row\+\_\+strides}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_acf7081fc28c88e5444c0264b721d4001}{in\+\_\+col\+\_\+strides}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a35a464b0b9c41b02233235ed6c83ff3f}{plane\+\_\+inflate\+\_\+strides}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a7ec8a659e3a9df305a5e883cb99eb4cd}{row\+\_\+inflate\+\_\+strides}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ae4689d47bf6784443f60f14ddff059a4}{col\+\_\+inflate\+\_\+strides}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC bool \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a82cd679f27fe48e3f69749ff05f9a6cb}{padding\+\_\+explicit}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a98223a5b0475c83295beda5113f08f82}{padding\+\_\+top\+\_\+z}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_af69e5958efe2d9d3610aee5dc2cd978c}{padding\+\_\+bottom\+\_\+z}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a2ab323da058e39ab44b3df4839a20e9e}{padding\+\_\+top}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aacfbeea312c868ff6da371751e0ec110}{padding\+\_\+bottom}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ad27206fe7f69ae54383b918146e2966f}{padding\+\_\+left}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aa8afb8908e6f399a14fc09aaa4108787}{padding\+\_\+right}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a622216a61db7cda3a723ffd639e2e046}{Padding\+Type}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a654090d3e2dfcf741fb184096b3f58a1}{padding\+\_\+type}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_af2bc93a4dbbd600e020ff1eda193437e}{padding\+\_\+value}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Xpr\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_af314b1cb001f3573d2c4ab989387579e}{expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ac22a780debfcf0cdad237e13266d51c0}{m\+\_\+xpr}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a16381a25ce189facd4c83f38d3b66331}{m\+\_\+patch\+\_\+planes}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a241d7410a2246617269b2a3eefd3a02a}{m\+\_\+patch\+\_\+rows}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ad12bf507f2d93f6640f9fd176f840004}{m\+\_\+patch\+\_\+cols}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a095f8371aa96bed6a09c110cd19754f5}{m\+\_\+plane\+\_\+strides}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a3301e6ba1bd678a500a7e8efa1e63d67}{m\+\_\+row\+\_\+strides}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a578712be8148847c04d2011d16e43c8d}{m\+\_\+col\+\_\+strides}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aedc79ce46c693ff126908f3dbc1a1474}{m\+\_\+in\+\_\+plane\+\_\+strides}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a4fc6bf654ecf0eb2304f3ecdc04e7ac7}{m\+\_\+in\+\_\+row\+\_\+strides}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_adeb4a930b907492a1d1ba077b64cf374}{m\+\_\+in\+\_\+col\+\_\+strides}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a4c5631e6873bbd71565a7649a67e0a4a}{m\+\_\+plane\+\_\+inflate\+\_\+strides}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a2357b53fd1d0b4573cb4eadfdfe5e0df}{m\+\_\+row\+\_\+inflate\+\_\+strides}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aca64b32f8e82b9b0e134f2c44d01e273}{m\+\_\+col\+\_\+inflate\+\_\+strides}}
+\item 
+const bool \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aff38336e22303b513fca74745814d0f9}{m\+\_\+padding\+\_\+explicit}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ae71d46a9089a25080a45b9cf7c245ab5}{m\+\_\+padding\+\_\+top\+\_\+z}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a43c00190ddc5d1eb485690db255bf162}{m\+\_\+padding\+\_\+bottom\+\_\+z}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a930b534e436cde5fd2f7dc3afaa5e75c}{m\+\_\+padding\+\_\+top}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a73b986c6e3196c4ccb51d76ab7aba786}{m\+\_\+padding\+\_\+bottom}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a8de225a9efdda093875e5a780344348d}{m\+\_\+padding\+\_\+left}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a66f2841add24fbbf0da17a5791af4353}{m\+\_\+padding\+\_\+right}}
+\item 
+const \mbox{\hyperlink{namespace_eigen_a622216a61db7cda3a723ffd639e2e046}{Padding\+Type}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a63360711d8981f19d563148b08f529d6}{m\+\_\+padding\+\_\+type}}
+\item 
+const \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a97a00c58d939f33941be96f8982c871b}{m\+\_\+padding\+\_\+value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a135222a87283b56fb1265da275195e01}\label{class_eigen_1_1_tensor_volume_patch_op_a135222a87283b56fb1265da275195e01}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a135222a87283b56fb1265da275195e01}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a3707bb26bc7806f3a2f43910f7a30b36}\label{class_eigen_1_1_tensor_volume_patch_op_a3707bb26bc7806f3a2f43910f7a30b36}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Tensor\+Volume\+Patch\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a3707bb26bc7806f3a2f43910f7a30b36}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a3707bb26bc7806f3a2f43910f7a30b36}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a60a9bba01689df55835248dd01726f86}\label{class_eigen_1_1_tensor_volume_patch_op_a60a9bba01689df55835248dd01726f86}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Tensor\+Volume\+Patch\+Op}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a60a9bba01689df55835248dd01726f86}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a7fccefc2ec5615cca8d517e6147f65c3}\label{class_eigen_1_1_tensor_volume_patch_op_a7fccefc2ec5615cca8d517e6147f65c3}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}}$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_a7fccefc2ec5615cca8d517e6147f65c3}{Real\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}\label{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Tensor\+Volume\+Patch\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_ac8758f38bfd3291e9033a18005599fb3}\label{class_eigen_1_1_tensor_volume_patch_op_ac8758f38bfd3291e9033a18005599fb3}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Tensor\+Volume\+Patch\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ac8758f38bfd3291e9033a18005599fb3}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_ac8758f38bfd3291e9033a18005599fb3}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_abd3362f3580aede62382a3bea56d3edd}\label{class_eigen_1_1_tensor_volume_patch_op_abd3362f3580aede62382a3bea56d3edd}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!TensorVolumePatchOp@{TensorVolumePatchOp}}
+\index{TensorVolumePatchOp@{TensorVolumePatchOp}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{TensorVolumePatchOp()}{TensorVolumePatchOp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Tensor\+Volume\+Patch\+Op}} (\begin{DoxyParamCaption}\item[{const Xpr\+Type \&}]{expr,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{patch\+\_\+planes,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{patch\+\_\+rows,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{patch\+\_\+cols,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{plane\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{row\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{col\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{in\+\_\+plane\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{in\+\_\+row\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{in\+\_\+col\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{plane\+\_\+inflate\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{row\+\_\+inflate\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{col\+\_\+inflate\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_a622216a61db7cda3a723ffd639e2e046}{Padding\+Type}}}]{padding\+\_\+type,  }\item[{\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}}}]{padding\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a2b9eb5266ca20600764f7c7f03e09d40}\label{class_eigen_1_1_tensor_volume_patch_op_a2b9eb5266ca20600764f7c7f03e09d40}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!TensorVolumePatchOp@{TensorVolumePatchOp}}
+\index{TensorVolumePatchOp@{TensorVolumePatchOp}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{TensorVolumePatchOp()}{TensorVolumePatchOp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Tensor\+Volume\+Patch\+Op}} (\begin{DoxyParamCaption}\item[{const Xpr\+Type \&}]{expr,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{patch\+\_\+planes,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{patch\+\_\+rows,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{patch\+\_\+cols,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{plane\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{row\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{col\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{in\+\_\+plane\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{in\+\_\+row\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{in\+\_\+col\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{plane\+\_\+inflate\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{row\+\_\+inflate\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{col\+\_\+inflate\+\_\+strides,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{padding\+\_\+top\+\_\+z,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{padding\+\_\+bottom\+\_\+z,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{padding\+\_\+top,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{padding\+\_\+bottom,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{padding\+\_\+left,  }\item[{\mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}}}]{padding\+\_\+right,  }\item[{\mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}}}]{padding\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_ae4689d47bf6784443f60f14ddff059a4}\label{class_eigen_1_1_tensor_volume_patch_op_ae4689d47bf6784443f60f14ddff059a4}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!col\_inflate\_strides@{col\_inflate\_strides}}
+\index{col\_inflate\_strides@{col\_inflate\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{col\_inflate\_strides()}{col\_inflate\_strides()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::col\+\_\+inflate\+\_\+strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a3d36f431162ace90c6fd88c2c099d6eb}\label{class_eigen_1_1_tensor_volume_patch_op_a3d36f431162ace90c6fd88c2c099d6eb}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!col\_strides@{col\_strides}}
+\index{col\_strides@{col\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{col\_strides()}{col\_strides()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::col\+\_\+strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_af314b1cb001f3573d2c4ab989387579e}\label{class_eigen_1_1_tensor_volume_patch_op_af314b1cb001f3573d2c4ab989387579e}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!expression@{expression}}
+\index{expression@{expression}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{expression()}{expression()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Xpr\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_acf7081fc28c88e5444c0264b721d4001}\label{class_eigen_1_1_tensor_volume_patch_op_acf7081fc28c88e5444c0264b721d4001}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!in\_col\_strides@{in\_col\_strides}}
+\index{in\_col\_strides@{in\_col\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{in\_col\_strides()}{in\_col\_strides()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::in\+\_\+col\+\_\+strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a7649aeb8e06d893f3a89f444882b6ccc}\label{class_eigen_1_1_tensor_volume_patch_op_a7649aeb8e06d893f3a89f444882b6ccc}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!in\_plane\_strides@{in\_plane\_strides}}
+\index{in\_plane\_strides@{in\_plane\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{in\_plane\_strides()}{in\_plane\_strides()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::in\+\_\+plane\+\_\+strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a09e2dca0c18334d9c680291d55d0215f}\label{class_eigen_1_1_tensor_volume_patch_op_a09e2dca0c18334d9c680291d55d0215f}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!in\_row\_strides@{in\_row\_strides}}
+\index{in\_row\_strides@{in\_row\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{in\_row\_strides()}{in\_row\_strides()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::in\+\_\+row\+\_\+strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_aacfbeea312c868ff6da371751e0ec110}\label{class_eigen_1_1_tensor_volume_patch_op_aacfbeea312c868ff6da371751e0ec110}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!padding\_bottom@{padding\_bottom}}
+\index{padding\_bottom@{padding\_bottom}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding\_bottom()}{padding\_bottom()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::padding\+\_\+bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_af69e5958efe2d9d3610aee5dc2cd978c}\label{class_eigen_1_1_tensor_volume_patch_op_af69e5958efe2d9d3610aee5dc2cd978c}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!padding\_bottom\_z@{padding\_bottom\_z}}
+\index{padding\_bottom\_z@{padding\_bottom\_z}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding\_bottom\_z()}{padding\_bottom\_z()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::padding\+\_\+bottom\+\_\+z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a82cd679f27fe48e3f69749ff05f9a6cb}\label{class_eigen_1_1_tensor_volume_patch_op_a82cd679f27fe48e3f69749ff05f9a6cb}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!padding\_explicit@{padding\_explicit}}
+\index{padding\_explicit@{padding\_explicit}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding\_explicit()}{padding\_explicit()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC bool \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::padding\+\_\+explicit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_ad27206fe7f69ae54383b918146e2966f}\label{class_eigen_1_1_tensor_volume_patch_op_ad27206fe7f69ae54383b918146e2966f}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!padding\_left@{padding\_left}}
+\index{padding\_left@{padding\_left}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding\_left()}{padding\_left()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::padding\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_aa8afb8908e6f399a14fc09aaa4108787}\label{class_eigen_1_1_tensor_volume_patch_op_aa8afb8908e6f399a14fc09aaa4108787}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!padding\_right@{padding\_right}}
+\index{padding\_right@{padding\_right}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding\_right()}{padding\_right()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::padding\+\_\+right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a2ab323da058e39ab44b3df4839a20e9e}\label{class_eigen_1_1_tensor_volume_patch_op_a2ab323da058e39ab44b3df4839a20e9e}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!padding\_top@{padding\_top}}
+\index{padding\_top@{padding\_top}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding\_top()}{padding\_top()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::padding\+\_\+top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a98223a5b0475c83295beda5113f08f82}\label{class_eigen_1_1_tensor_volume_patch_op_a98223a5b0475c83295beda5113f08f82}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!padding\_top\_z@{padding\_top\_z}}
+\index{padding\_top\_z@{padding\_top\_z}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding\_top\_z()}{padding\_top\_z()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::padding\+\_\+top\+\_\+z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a654090d3e2dfcf741fb184096b3f58a1}\label{class_eigen_1_1_tensor_volume_patch_op_a654090d3e2dfcf741fb184096b3f58a1}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!padding\_type@{padding\_type}}
+\index{padding\_type@{padding\_type}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding\_type()}{padding\_type()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a622216a61db7cda3a723ffd639e2e046}{Padding\+Type}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::padding\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_af2bc93a4dbbd600e020ff1eda193437e}\label{class_eigen_1_1_tensor_volume_patch_op_af2bc93a4dbbd600e020ff1eda193437e}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!padding\_value@{padding\_value}}
+\index{padding\_value@{padding\_value}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding\_value()}{padding\_value()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::padding\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_ae0dbc8f349fd171b2fc59a07b1582b62}\label{class_eigen_1_1_tensor_volume_patch_op_ae0dbc8f349fd171b2fc59a07b1582b62}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!patch\_cols@{patch\_cols}}
+\index{patch\_cols@{patch\_cols}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{patch\_cols()}{patch\_cols()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::patch\+\_\+cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a4717a5f0dce3370fb6ef4c1683a539ea}\label{class_eigen_1_1_tensor_volume_patch_op_a4717a5f0dce3370fb6ef4c1683a539ea}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!patch\_planes@{patch\_planes}}
+\index{patch\_planes@{patch\_planes}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{patch\_planes()}{patch\_planes()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::patch\+\_\+planes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_ae5d5a1fd280f5c7f1f6e6313f8f43b50}\label{class_eigen_1_1_tensor_volume_patch_op_ae5d5a1fd280f5c7f1f6e6313f8f43b50}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!patch\_rows@{patch\_rows}}
+\index{patch\_rows@{patch\_rows}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{patch\_rows()}{patch\_rows()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::patch\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a35a464b0b9c41b02233235ed6c83ff3f}\label{class_eigen_1_1_tensor_volume_patch_op_a35a464b0b9c41b02233235ed6c83ff3f}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!plane\_inflate\_strides@{plane\_inflate\_strides}}
+\index{plane\_inflate\_strides@{plane\_inflate\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{plane\_inflate\_strides()}{plane\_inflate\_strides()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::plane\+\_\+inflate\+\_\+strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a05afb9a406a9a8ca58c4105c3bc63e44}\label{class_eigen_1_1_tensor_volume_patch_op_a05afb9a406a9a8ca58c4105c3bc63e44}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!plane\_strides@{plane\_strides}}
+\index{plane\_strides@{plane\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{plane\_strides()}{plane\_strides()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::plane\+\_\+strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a7ec8a659e3a9df305a5e883cb99eb4cd}\label{class_eigen_1_1_tensor_volume_patch_op_a7ec8a659e3a9df305a5e883cb99eb4cd}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!row\_inflate\_strides@{row\_inflate\_strides}}
+\index{row\_inflate\_strides@{row\_inflate\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{row\_inflate\_strides()}{row\_inflate\_strides()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::row\+\_\+inflate\+\_\+strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a8624b86945a5d22eaca15010f9094cda}\label{class_eigen_1_1_tensor_volume_patch_op_a8624b86945a5d22eaca15010f9094cda}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!row\_strides@{row\_strides}}
+\index{row\_strides@{row\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{row\_strides()}{row\_strides()}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::row\+\_\+strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_aca64b32f8e82b9b0e134f2c44d01e273}\label{class_eigen_1_1_tensor_volume_patch_op_aca64b32f8e82b9b0e134f2c44d01e273}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_col\_inflate\_strides@{m\_col\_inflate\_strides}}
+\index{m\_col\_inflate\_strides@{m\_col\_inflate\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_col\_inflate\_strides}{m\_col\_inflate\_strides}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+col\+\_\+inflate\+\_\+strides\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a578712be8148847c04d2011d16e43c8d}\label{class_eigen_1_1_tensor_volume_patch_op_a578712be8148847c04d2011d16e43c8d}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_col\_strides@{m\_col\_strides}}
+\index{m\_col\_strides@{m\_col\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_col\_strides}{m\_col\_strides}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+col\+\_\+strides\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_adeb4a930b907492a1d1ba077b64cf374}\label{class_eigen_1_1_tensor_volume_patch_op_adeb4a930b907492a1d1ba077b64cf374}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_in\_col\_strides@{m\_in\_col\_strides}}
+\index{m\_in\_col\_strides@{m\_in\_col\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_in\_col\_strides}{m\_in\_col\_strides}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+in\+\_\+col\+\_\+strides\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_aedc79ce46c693ff126908f3dbc1a1474}\label{class_eigen_1_1_tensor_volume_patch_op_aedc79ce46c693ff126908f3dbc1a1474}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_in\_plane\_strides@{m\_in\_plane\_strides}}
+\index{m\_in\_plane\_strides@{m\_in\_plane\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_in\_plane\_strides}{m\_in\_plane\_strides}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+in\+\_\+plane\+\_\+strides\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a4fc6bf654ecf0eb2304f3ecdc04e7ac7}\label{class_eigen_1_1_tensor_volume_patch_op_a4fc6bf654ecf0eb2304f3ecdc04e7ac7}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_in\_row\_strides@{m\_in\_row\_strides}}
+\index{m\_in\_row\_strides@{m\_in\_row\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_in\_row\_strides}{m\_in\_row\_strides}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+in\+\_\+row\+\_\+strides\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a73b986c6e3196c4ccb51d76ab7aba786}\label{class_eigen_1_1_tensor_volume_patch_op_a73b986c6e3196c4ccb51d76ab7aba786}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_padding\_bottom@{m\_padding\_bottom}}
+\index{m\_padding\_bottom@{m\_padding\_bottom}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_bottom}{m\_padding\_bottom}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+bottom\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a43c00190ddc5d1eb485690db255bf162}\label{class_eigen_1_1_tensor_volume_patch_op_a43c00190ddc5d1eb485690db255bf162}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_padding\_bottom\_z@{m\_padding\_bottom\_z}}
+\index{m\_padding\_bottom\_z@{m\_padding\_bottom\_z}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_bottom\_z}{m\_padding\_bottom\_z}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+bottom\+\_\+z\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_aff38336e22303b513fca74745814d0f9}\label{class_eigen_1_1_tensor_volume_patch_op_aff38336e22303b513fca74745814d0f9}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_padding\_explicit@{m\_padding\_explicit}}
+\index{m\_padding\_explicit@{m\_padding\_explicit}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_explicit}{m\_padding\_explicit}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const bool \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+explicit\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a8de225a9efdda093875e5a780344348d}\label{class_eigen_1_1_tensor_volume_patch_op_a8de225a9efdda093875e5a780344348d}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_padding\_left@{m\_padding\_left}}
+\index{m\_padding\_left@{m\_padding\_left}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_left}{m\_padding\_left}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+left\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a66f2841add24fbbf0da17a5791af4353}\label{class_eigen_1_1_tensor_volume_patch_op_a66f2841add24fbbf0da17a5791af4353}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_padding\_right@{m\_padding\_right}}
+\index{m\_padding\_right@{m\_padding\_right}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_right}{m\_padding\_right}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+right\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a930b534e436cde5fd2f7dc3afaa5e75c}\label{class_eigen_1_1_tensor_volume_patch_op_a930b534e436cde5fd2f7dc3afaa5e75c}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_padding\_top@{m\_padding\_top}}
+\index{m\_padding\_top@{m\_padding\_top}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_top}{m\_padding\_top}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+top\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_ae71d46a9089a25080a45b9cf7c245ab5}\label{class_eigen_1_1_tensor_volume_patch_op_ae71d46a9089a25080a45b9cf7c245ab5}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_padding\_top\_z@{m\_padding\_top\_z}}
+\index{m\_padding\_top\_z@{m\_padding\_top\_z}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_top\_z}{m\_padding\_top\_z}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+top\+\_\+z\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a63360711d8981f19d563148b08f529d6}\label{class_eigen_1_1_tensor_volume_patch_op_a63360711d8981f19d563148b08f529d6}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_padding\_type@{m\_padding\_type}}
+\index{m\_padding\_type@{m\_padding\_type}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_type}{m\_padding\_type}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_a622216a61db7cda3a723ffd639e2e046}{Padding\+Type}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a97a00c58d939f33941be96f8982c871b}\label{class_eigen_1_1_tensor_volume_patch_op_a97a00c58d939f33941be96f8982c871b}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_padding\_value@{m\_padding\_value}}
+\index{m\_padding\_value@{m\_padding\_value}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_value}{m\_padding\_value}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op_aaa2340cc6759ec9bb4159d850bf9ea65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+value\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_ad12bf507f2d93f6640f9fd176f840004}\label{class_eigen_1_1_tensor_volume_patch_op_ad12bf507f2d93f6640f9fd176f840004}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_patch\_cols@{m\_patch\_cols}}
+\index{m\_patch\_cols@{m\_patch\_cols}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_patch\_cols}{m\_patch\_cols}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+patch\+\_\+cols\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a16381a25ce189facd4c83f38d3b66331}\label{class_eigen_1_1_tensor_volume_patch_op_a16381a25ce189facd4c83f38d3b66331}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_patch\_planes@{m\_patch\_planes}}
+\index{m\_patch\_planes@{m\_patch\_planes}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_patch\_planes}{m\_patch\_planes}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+patch\+\_\+planes\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a241d7410a2246617269b2a3eefd3a02a}\label{class_eigen_1_1_tensor_volume_patch_op_a241d7410a2246617269b2a3eefd3a02a}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_patch\_rows@{m\_patch\_rows}}
+\index{m\_patch\_rows@{m\_patch\_rows}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_patch\_rows}{m\_patch\_rows}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+patch\+\_\+rows\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a4c5631e6873bbd71565a7649a67e0a4a}\label{class_eigen_1_1_tensor_volume_patch_op_a4c5631e6873bbd71565a7649a67e0a4a}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_plane\_inflate\_strides@{m\_plane\_inflate\_strides}}
+\index{m\_plane\_inflate\_strides@{m\_plane\_inflate\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_plane\_inflate\_strides}{m\_plane\_inflate\_strides}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+plane\+\_\+inflate\+\_\+strides\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a095f8371aa96bed6a09c110cd19754f5}\label{class_eigen_1_1_tensor_volume_patch_op_a095f8371aa96bed6a09c110cd19754f5}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_plane\_strides@{m\_plane\_strides}}
+\index{m\_plane\_strides@{m\_plane\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_plane\_strides}{m\_plane\_strides}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+plane\+\_\+strides\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a2357b53fd1d0b4573cb4eadfdfe5e0df}\label{class_eigen_1_1_tensor_volume_patch_op_a2357b53fd1d0b4573cb4eadfdfe5e0df}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_row\_inflate\_strides@{m\_row\_inflate\_strides}}
+\index{m\_row\_inflate\_strides@{m\_row\_inflate\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_row\_inflate\_strides}{m\_row\_inflate\_strides}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+row\+\_\+inflate\+\_\+strides\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_a3301e6ba1bd678a500a7e8efa1e63d67}\label{class_eigen_1_1_tensor_volume_patch_op_a3301e6ba1bd678a500a7e8efa1e63d67}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_row\_strides@{m\_row\_strides}}
+\index{m\_row\_strides@{m\_row\_strides}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_row\_strides}{m\_row\_strides}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{namespace_eigen_aa06499c94936a19673e53deb516a1b76}{Dense\+Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+row\+\_\+strides\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_volume_patch_op_ac22a780debfcf0cdad237e13266d51c0}\label{class_eigen_1_1_tensor_volume_patch_op_ac22a780debfcf0cdad237e13266d51c0}} 
+\index{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}!m\_xpr@{m\_xpr}}
+\index{m\_xpr@{m\_xpr}!Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$@{Eigen::TensorVolumePatchOp$<$ Planes, Rows, Cols, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_xpr}{m\_xpr}}
+{\footnotesize\ttfamily template$<$Dense\+Index Planes, Dense\+Index Rows, Dense\+Index Cols, typename Xpr\+Type $>$ \\
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_volume_patch_op}{Eigen\+::\+Tensor\+Volume\+Patch\+Op}}$<$ Planes, Rows, Cols, Xpr\+Type $>$\+::m\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_forward_declarations_8h}{Tensor\+Forward\+Declarations.\+h}}\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_volume_patch_8h}{Tensor\+Volume\+Patch.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,133 @@
+\hypertarget{classceres_1_1_dynamic_numeric_diff_cost_function}{}\doxysection{ceres\+::Dynamic\+Numeric\+Diff\+Cost\+Function$<$ Cost\+Functor, method $>$ Class Template Reference}
+\label{classceres_1_1_dynamic_numeric_diff_cost_function}\index{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}}
+
+
+{\ttfamily \#include $<$dynamic\+\_\+numeric\+\_\+diff\+\_\+cost\+\_\+function.\+h$>$}
+
+
+
+Inheritance diagram for ceres\+::Dynamic\+Numeric\+Diff\+Cost\+Function$<$ Cost\+Functor, method $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classceres_1_1_dynamic_numeric_diff_cost_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ceres\+::Dynamic\+Numeric\+Diff\+Cost\+Function$<$ Cost\+Functor, method $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classceres_1_1_dynamic_numeric_diff_cost_function__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function_a2a2d18c896d8dbcc3dc3b4b89cfc70a6}{Dynamic\+Numeric\+Diff\+Cost\+Function}} (const Cost\+Functor $\ast$functor, \mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6}{Ownership}} ownership=\mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6ab1f05a852675f0f192b93bcacdf38a20}{T\+A\+K\+E\+\_\+\+O\+W\+N\+E\+R\+S\+H\+IP}}, const \mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}} \&options=\mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}}())
+\item 
+virtual \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function_a2897e420412504047b3e86c69f94e6e6}{$\sim$\+Dynamic\+Numeric\+Diff\+Cost\+Function}} ()
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function_a7aefdf52db55dc016de2cb9215dccb54}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function_ac36ffa401c1a2e346b6a7a745e4185ff}{Evaluate\+Cost\+Functor}} (double const $\ast$const $\ast$parameters, double $\ast$residuals) const
+\item 
+bool \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function_ad2e8ca92df4b52346175a5051c10e775}{Evaluate\+Cost\+Functor\+Impl}} (const Cost\+Functor $\ast$functor, double const $\ast$const $\ast$parameters, double $\ast$residuals, const void $\ast$) const
+\item 
+bool \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function_afba499ee92d1258c29cd114d8949bbde}{Evaluate\+Cost\+Functor\+Impl}} (const Cost\+Functor $\ast$functor, double const $\ast$const $\ast$parameters, double $\ast$residuals, const \mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr}{internal\+::scoped\+\_\+ptr}}$<$ const Cost\+Functor $>$ \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function_a99a19bd10c6a2fd0344dd75abf5d3662}{functor\+\_\+}}
+\item 
+\mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6}{Ownership}} \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function_a83759b588bf4755a1f8d369f935729fb}{ownership\+\_\+}}
+\item 
+\mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}} \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function_a99df9aaf44e51a73e81c8e462f4020b2}{options\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classceres_1_1_dynamic_numeric_diff_cost_function_a2a2d18c896d8dbcc3dc3b4b89cfc70a6}\label{classceres_1_1_dynamic_numeric_diff_cost_function_a2a2d18c896d8dbcc3dc3b4b89cfc70a6}} 
+\index{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}!DynamicNumericDiffCostFunction@{DynamicNumericDiffCostFunction}}
+\index{DynamicNumericDiffCostFunction@{DynamicNumericDiffCostFunction}!ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}}
+\doxysubsubsection{\texorpdfstring{DynamicNumericDiffCostFunction()}{DynamicNumericDiffCostFunction()}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL$>$ \\
+\mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{ceres\+::\+Dynamic\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method $>$\+::\mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{Dynamic\+Numeric\+Diff\+Cost\+Function}} (\begin{DoxyParamCaption}\item[{const Cost\+Functor $\ast$}]{functor,  }\item[{\mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6}{Ownership}}}]{ownership = {\ttfamily \mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6ab1f05a852675f0f192b93bcacdf38a20}{T\+A\+K\+E\+\_\+\+O\+W\+N\+E\+R\+S\+H\+IP}}},  }\item[{const \mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}} \&}]{options = {\ttfamily \mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classceres_1_1_dynamic_numeric_diff_cost_function_a2897e420412504047b3e86c69f94e6e6}\label{classceres_1_1_dynamic_numeric_diff_cost_function_a2897e420412504047b3e86c69f94e6e6}} 
+\index{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}!````~DynamicNumericDiffCostFunction@{$\sim$DynamicNumericDiffCostFunction}}
+\index{````~DynamicNumericDiffCostFunction@{$\sim$DynamicNumericDiffCostFunction}!ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$DynamicNumericDiffCostFunction()}{~DynamicNumericDiffCostFunction()}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL$>$ \\
+virtual \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{ceres\+::\+Dynamic\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method $>$\+::$\sim$\mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{Dynamic\+Numeric\+Diff\+Cost\+Function}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_dynamic_numeric_diff_cost_function_a7aefdf52db55dc016de2cb9215dccb54}\label{classceres_1_1_dynamic_numeric_diff_cost_function_a7aefdf52db55dc016de2cb9215dccb54}} 
+\index{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL$>$ \\
+virtual bool \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{ceres\+::\+Dynamic\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method $>$\+::Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_cost_function_a9e973858fdbf3a2e5603e848d30e9ddc}{ceres\+::\+Cost\+Function}}.
+
+\mbox{\Hypertarget{classceres_1_1_dynamic_numeric_diff_cost_function_ac36ffa401c1a2e346b6a7a745e4185ff}\label{classceres_1_1_dynamic_numeric_diff_cost_function_ac36ffa401c1a2e346b6a7a745e4185ff}} 
+\index{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}!EvaluateCostFunctor@{EvaluateCostFunctor}}
+\index{EvaluateCostFunctor@{EvaluateCostFunctor}!ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluateCostFunctor()}{EvaluateCostFunctor()}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL$>$ \\
+bool \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{ceres\+::\+Dynamic\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method $>$\+::Evaluate\+Cost\+Functor (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_dynamic_numeric_diff_cost_function_afba499ee92d1258c29cd114d8949bbde}\label{classceres_1_1_dynamic_numeric_diff_cost_function_afba499ee92d1258c29cd114d8949bbde}} 
+\index{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}!EvaluateCostFunctorImpl@{EvaluateCostFunctorImpl}}
+\index{EvaluateCostFunctorImpl@{EvaluateCostFunctorImpl}!ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluateCostFunctorImpl()}{EvaluateCostFunctorImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL$>$ \\
+bool \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{ceres\+::\+Dynamic\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method $>$\+::Evaluate\+Cost\+Functor\+Impl (\begin{DoxyParamCaption}\item[{const Cost\+Functor $\ast$}]{functor,  }\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{const \mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_dynamic_numeric_diff_cost_function_ad2e8ca92df4b52346175a5051c10e775}\label{classceres_1_1_dynamic_numeric_diff_cost_function_ad2e8ca92df4b52346175a5051c10e775}} 
+\index{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}!EvaluateCostFunctorImpl@{EvaluateCostFunctorImpl}}
+\index{EvaluateCostFunctorImpl@{EvaluateCostFunctorImpl}!ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluateCostFunctorImpl()}{EvaluateCostFunctorImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL$>$ \\
+bool \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{ceres\+::\+Dynamic\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method $>$\+::Evaluate\+Cost\+Functor\+Impl (\begin{DoxyParamCaption}\item[{const Cost\+Functor $\ast$}]{functor,  }\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{const void $\ast$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classceres_1_1_dynamic_numeric_diff_cost_function_a99a19bd10c6a2fd0344dd75abf5d3662}\label{classceres_1_1_dynamic_numeric_diff_cost_function_a99a19bd10c6a2fd0344dd75abf5d3662}} 
+\index{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}!functor\_@{functor\_}}
+\index{functor\_@{functor\_}!ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}}
+\doxysubsubsection{\texorpdfstring{functor\_}{functor\_}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL$>$ \\
+\mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr}{internal\+::scoped\+\_\+ptr}}$<$const Cost\+Functor$>$ \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{ceres\+::\+Dynamic\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method $>$\+::functor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_dynamic_numeric_diff_cost_function_a99df9aaf44e51a73e81c8e462f4020b2}\label{classceres_1_1_dynamic_numeric_diff_cost_function_a99df9aaf44e51a73e81c8e462f4020b2}} 
+\index{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}!options\_@{options\_}}
+\index{options\_@{options\_}!ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}}
+\doxysubsubsection{\texorpdfstring{options\_}{options\_}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL$>$ \\
+\mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}} \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{ceres\+::\+Dynamic\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method $>$\+::options\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_dynamic_numeric_diff_cost_function_a83759b588bf4755a1f8d369f935729fb}\label{classceres_1_1_dynamic_numeric_diff_cost_function_a83759b588bf4755a1f8d369f935729fb}} 
+\index{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}!ownership\_@{ownership\_}}
+\index{ownership\_@{ownership\_}!ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$@{ceres::DynamicNumericDiffCostFunction$<$ CostFunctor, method $>$}}
+\doxysubsubsection{\texorpdfstring{ownership\_}{ownership\_}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL$>$ \\
+\mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6}{Ownership}} \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function}{ceres\+::\+Dynamic\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method $>$\+::ownership\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{dynamic__numeric__diff__cost__function_8h}{dynamic\+\_\+numeric\+\_\+diff\+\_\+cost\+\_\+function.\+h}}\end{DoxyCompactItemize}

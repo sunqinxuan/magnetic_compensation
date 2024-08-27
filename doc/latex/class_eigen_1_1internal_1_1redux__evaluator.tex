@@ -1,0 +1,278 @@
+\hypertarget{class_eigen_1_1internal_1_1redux__evaluator}{}\doxysection{Eigen\+::internal\+::redux\+\_\+evaluator$<$ \+\_\+\+Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1internal_1_1redux__evaluator}\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+
+
+{\ttfamily \#include $<$Redux.\+h$>$}
+
+
+
+Collaboration diagram for Eigen\+::internal\+::redux\+\_\+evaluator$<$ \+\_\+\+Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_eigen_1_1internal_1_1redux__evaluator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621caf8ebf643685d14e82e53b637e4de8726}{Max\+Rows\+At\+Compile\+Time}} = Xpr\+Type\+::Max\+Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca697cfea2e7ca84e9785b54615cc81ec2}{Max\+Cols\+At\+Compile\+Time}} = Xpr\+Type\+::Max\+Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca9f8548a5f50817d800397f53c697b4bb}{Flags}} = evaluator$<$Xpr\+Type$>$\+::Flags \& $\sim$\+Direct\+Access\+Bit, 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca0b3d4422e552fb61c54ff42e83ac9e4e}{Is\+Row\+Major}} = Xpr\+Type\+::Is\+Row\+Major, 
+\newline
+\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621cada9371d59487eaa07ea771691d28c5f3}{Size\+At\+Compile\+Time}} = Xpr\+Type\+::Size\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca5c25cee54f4cd8012142c6316f372301}{Inner\+Size\+At\+Compile\+Time}} = Xpr\+Type\+::Inner\+Size\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca6bf57d9ec467d6e9b4f10d49486592c2}{Coeff\+Read\+Cost}} = evaluator$<$Xpr\+Type$>$\+::Coeff\+Read\+Cost, 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca04a01492335c227a5ff5e24b30e4e625}{Alignment}} = evaluator$<$Xpr\+Type$>$\+::Alignment
+ \}
+\item 
+typedef \+\_\+\+Xpr\+Type \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}{Xpr\+Type}}
+\item 
+typedef Xpr\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a1bf8a7092dd7275c5d575ad536c29a94}{Scalar}}
+\item 
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a23b1054b9d1aa504024ca69d9830b9fa}{Coeff\+Return\+Type}}
+\item 
+typedef Xpr\+Type\+::\+Packet\+Scalar \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a40654b5cbdcd571f0587dcdadfddae19}{Packet\+Scalar}}
+\item 
+typedef Xpr\+Type\+::\+Packet\+Return\+Type \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a21a1cc38bfef69466788453f7f416662}{Packet\+Return\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a487c02f00711feaa4de98d60bfea6dfa}{redux\+\_\+evaluator}} (const \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}{Xpr\+Type}} \&xpr)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a2c19ff41ffb50b8f5fa84057565f85ee}{rows}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a1f04979dab75676a4f227759d20b94bb}{cols}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a9c66829411f30c3b07b72119381c87d1}{size}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a52040bcf477aef883f0f7646acfb33cc}{inner\+Size}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_aa0b9d4249bc6eb1cd957e669929721e8}{outer\+Size}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a23b1054b9d1aa504024ca69d9830b9fa}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a55d9a4f6db1a8bce00f218a2fe304f73}{coeff}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a23b1054b9d1aa504024ca69d9830b9fa}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_ab0980858a25500e1c8fe8ce59960500a}{coeff}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} index) const
+\item 
+{\footnotesize template$<$int Load\+Mode, typename Packet\+Type $>$ }\\\mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a472d69c66fe1edee728666b67ebc401c}{packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+{\footnotesize template$<$int Load\+Mode, typename Packet\+Type $>$ }\\\mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a433d7cdb229ff7568e0d68b74b87985c}{packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} index) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a23b1054b9d1aa504024ca69d9830b9fa}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a6d56217446293557a7b21754181fce85}{coeff\+By\+Outer\+Inner}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} outer, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} inner) const
+\item 
+{\footnotesize template$<$int Load\+Mode, typename Packet\+Type $>$ }\\\mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a438feca81b1846945bad96d2198b4bac}{packet\+By\+Outer\+Inner}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} outer, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} inner) const
+\item 
+const \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}{Xpr\+Type}} \& \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_ae913efcd2894bb81aa1a04369722df32}{nested\+Expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}{Xpr\+Type}} $>$ \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_adaad4ff2d8129d49fb3a33f4b2e6444d}{m\+\_\+evaluator}}
+\item 
+const \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}{Xpr\+Type}} \& \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a8e1c3b294a21c5bedaf3230e35a09f49}{m\+\_\+xpr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a23b1054b9d1aa504024ca69d9830b9fa}\label{class_eigen_1_1internal_1_1redux__evaluator_a23b1054b9d1aa504024ca69d9830b9fa}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a23b1054b9d1aa504024ca69d9830b9fa}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a21a1cc38bfef69466788453f7f416662}\label{class_eigen_1_1internal_1_1redux__evaluator_a21a1cc38bfef69466788453f7f416662}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!PacketReturnType@{PacketReturnType}}
+\index{PacketReturnType@{PacketReturnType}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{PacketReturnType}{PacketReturnType}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Packet\+Return\+Type \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a21a1cc38bfef69466788453f7f416662}{Packet\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a40654b5cbdcd571f0587dcdadfddae19}\label{class_eigen_1_1internal_1_1redux__evaluator_a40654b5cbdcd571f0587dcdadfddae19}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!PacketScalar@{PacketScalar}}
+\index{PacketScalar@{PacketScalar}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{PacketScalar}{PacketScalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Packet\+Scalar \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a40654b5cbdcd571f0587dcdadfddae19}{Packet\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a1bf8a7092dd7275c5d575ad536c29a94}\label{class_eigen_1_1internal_1_1redux__evaluator_a1bf8a7092dd7275c5d575ad536c29a94}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a1bf8a7092dd7275c5d575ad536c29a94}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}\label{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!XprType@{XprType}}
+\index{XprType@{XprType}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{XprType}{XprType}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+typedef \+\_\+\+Xpr\+Type \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}{Xpr\+Type}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621c}\label{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621c}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621caf8ebf643685d14e82e53b637e4de8726}\label{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621caf8ebf643685d14e82e53b637e4de8726}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca697cfea2e7ca84e9785b54615cc81ec2}\label{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca697cfea2e7ca84e9785b54615cc81ec2}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!Flags@{Flags}}}\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca9f8548a5f50817d800397f53c697b4bb}\label{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca9f8548a5f50817d800397f53c697b4bb}} 
+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsRowMajor@{IsRowMajor}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!IsRowMajor@{IsRowMajor}}}\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca0b3d4422e552fb61c54ff42e83ac9e4e}\label{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca0b3d4422e552fb61c54ff42e83ac9e4e}} 
+Is\+Row\+Major&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SizeAtCompileTime@{SizeAtCompileTime}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!SizeAtCompileTime@{SizeAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621cada9371d59487eaa07ea771691d28c5f3}\label{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621cada9371d59487eaa07ea771691d28c5f3}} 
+Size\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InnerSizeAtCompileTime@{InnerSizeAtCompileTime}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!InnerSizeAtCompileTime@{InnerSizeAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca5c25cee54f4cd8012142c6316f372301}\label{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca5c25cee54f4cd8012142c6316f372301}} 
+Inner\+Size\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CoeffReadCost@{CoeffReadCost}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!CoeffReadCost@{CoeffReadCost}}}\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca6bf57d9ec467d6e9b4f10d49486592c2}\label{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca6bf57d9ec467d6e9b4f10d49486592c2}} 
+Coeff\+Read\+Cost&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alignment@{Alignment}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!Alignment@{Alignment}}}\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca04a01492335c227a5ff5e24b30e4e625}\label{class_eigen_1_1internal_1_1redux__evaluator_a0ec3d0087a309d2871f08f0c52a1621ca04a01492335c227a5ff5e24b30e4e625}} 
+Alignment&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a487c02f00711feaa4de98d60bfea6dfa}\label{class_eigen_1_1internal_1_1redux__evaluator_a487c02f00711feaa4de98d60bfea6dfa}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!redux\_evaluator@{redux\_evaluator}}
+\index{redux\_evaluator@{redux\_evaluator}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{redux\_evaluator()}{redux\_evaluator()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{redux\+\_\+evaluator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}{Xpr\+Type}} \&}]{xpr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_ab0980858a25500e1c8fe8ce59960500a}\label{class_eigen_1_1internal_1_1redux__evaluator_ab0980858a25500e1c8fe8ce59960500a}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a23b1054b9d1aa504024ca69d9830b9fa}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a55d9a4f6db1a8bce00f218a2fe304f73}\label{class_eigen_1_1internal_1_1redux__evaluator_a55d9a4f6db1a8bce00f218a2fe304f73}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a23b1054b9d1aa504024ca69d9830b9fa}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a6d56217446293557a7b21754181fce85}\label{class_eigen_1_1internal_1_1redux__evaluator_a6d56217446293557a7b21754181fce85}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!coeffByOuterInner@{coeffByOuterInner}}
+\index{coeffByOuterInner@{coeffByOuterInner}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{coeffByOuterInner()}{coeffByOuterInner()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_a23b1054b9d1aa504024ca69d9830b9fa}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::coeff\+By\+Outer\+Inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{outer,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{inner }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a1f04979dab75676a4f227759d20b94bb}\label{class_eigen_1_1internal_1_1redux__evaluator_a1f04979dab75676a4f227759d20b94bb}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a52040bcf477aef883f0f7646acfb33cc}\label{class_eigen_1_1internal_1_1redux__evaluator_a52040bcf477aef883f0f7646acfb33cc}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!innerSize@{innerSize}}
+\index{innerSize@{innerSize}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{innerSize()}{innerSize()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::inner\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_ae913efcd2894bb81aa1a04369722df32}\label{class_eigen_1_1internal_1_1redux__evaluator_ae913efcd2894bb81aa1a04369722df32}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!nestedExpression@{nestedExpression}}
+\index{nestedExpression@{nestedExpression}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{nestedExpression()}{nestedExpression()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+const \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}{Xpr\+Type}}\& \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::nested\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_aa0b9d4249bc6eb1cd957e669929721e8}\label{class_eigen_1_1internal_1_1redux__evaluator_aa0b9d4249bc6eb1cd957e669929721e8}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!outerSize@{outerSize}}
+\index{outerSize@{outerSize}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{outerSize()}{outerSize()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::outer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a433d7cdb229ff7568e0d68b74b87985c}\label{class_eigen_1_1internal_1_1redux__evaluator_a433d7cdb229ff7568e0d68b74b87985c}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!packet@{packet}}
+\index{packet@{packet}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{packet()}{packet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+template$<$int Load\+Mode, typename Packet\+Type $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a472d69c66fe1edee728666b67ebc401c}\label{class_eigen_1_1internal_1_1redux__evaluator_a472d69c66fe1edee728666b67ebc401c}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!packet@{packet}}
+\index{packet@{packet}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{packet()}{packet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+template$<$int Load\+Mode, typename Packet\+Type $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a438feca81b1846945bad96d2198b4bac}\label{class_eigen_1_1internal_1_1redux__evaluator_a438feca81b1846945bad96d2198b4bac}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!packetByOuterInner@{packetByOuterInner}}
+\index{packetByOuterInner@{packetByOuterInner}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{packetByOuterInner()}{packetByOuterInner()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+template$<$int Load\+Mode, typename Packet\+Type $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::packet\+By\+Outer\+Inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{outer,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{inner }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a2c19ff41ffb50b8f5fa84057565f85ee}\label{class_eigen_1_1internal_1_1redux__evaluator_a2c19ff41ffb50b8f5fa84057565f85ee}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a9c66829411f30c3b07b72119381c87d1}\label{class_eigen_1_1internal_1_1redux__evaluator_a9c66829411f30c3b07b72119381c87d1}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!size@{size}}
+\index{size@{size}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_adaad4ff2d8129d49fb3a33f4b2e6444d}\label{class_eigen_1_1internal_1_1redux__evaluator_adaad4ff2d8129d49fb3a33f4b2e6444d}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!m\_evaluator@{m\_evaluator}}
+\index{m\_evaluator@{m\_evaluator}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_evaluator}{m\_evaluator}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{internal\+::evaluator}}$<$\mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}{Xpr\+Type}}$>$ \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::m\+\_\+evaluator\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1redux__evaluator_a8e1c3b294a21c5bedaf3230e35a09f49}\label{class_eigen_1_1internal_1_1redux__evaluator_a8e1c3b294a21c5bedaf3230e35a09f49}} 
+\index{Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}!m\_xpr@{m\_xpr}}
+\index{m\_xpr@{m\_xpr}!Eigen::internal::redux\_evaluator$<$ \_XprType $>$@{Eigen::internal::redux\_evaluator$<$ \_XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_xpr}{m\_xpr}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Xpr\+Type $>$ \\
+const \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator_acc45bdab9b8f02fe19a183cd18dccaa6}{Xpr\+Type}}\& \mbox{\hyperlink{class_eigen_1_1internal_1_1redux__evaluator}{Eigen\+::internal\+::redux\+\_\+evaluator}}$<$ \+\_\+\+Xpr\+Type $>$\+::m\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_redux_8h}{Redux.\+h}}\end{DoxyCompactItemize}

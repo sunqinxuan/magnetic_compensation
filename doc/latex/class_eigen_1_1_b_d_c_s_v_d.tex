@@ -1,0 +1,646 @@
+\hypertarget{class_eigen_1_1_b_d_c_s_v_d}{}\doxysection{Eigen\+::B\+D\+C\+S\+VD Class Reference}
+\label{class_eigen_1_1_b_d_c_s_v_d}\index{Eigen::BDCSVD@{Eigen::BDCSVD}}
+
+
+class Bidiagonal Divide and Conquer S\+VD  
+
+
+
+
+{\ttfamily \#include $<$Forward\+Declarations.\+h$>$}
+
+
+
+Collaboration diagram for Eigen\+::B\+D\+C\+S\+VD\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_b_d_c_s_v_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7af523b3fd3c2c9e84256a5812a61c1eef}{Rows\+At\+Compile\+Time}} = Matrix\+Type\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a0c48c834f42f0f4470d7da9e8abec8ba}{Cols\+At\+Compile\+Time}} = Matrix\+Type\+::Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7ace7bdfb464326b321ec35b0f178b9345}{Diag\+Size\+At\+Compile\+Time}} = E\+I\+G\+E\+N\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+N\+\_\+\+P\+R\+E\+F\+E\+R\+\_\+\+D\+Y\+N\+A\+M\+IC(Rows\+At\+Compile\+Time, Cols\+At\+Compile\+Time), 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a4529fa2996b8b06c9d36e925d428e2d5}{Max\+Rows\+At\+Compile\+Time}} = Matrix\+Type\+::Max\+Rows\+At\+Compile\+Time, 
+\newline
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a90ffbbe226362fd4ad7e118481a08be1}{Max\+Cols\+At\+Compile\+Time}} = Matrix\+Type\+::Max\+Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a6758273d3e205b6ca6bc4ea8864406d3}{Max\+Diag\+Size\+At\+Compile\+Time}} = E\+I\+G\+E\+N\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+N\+\_\+\+P\+R\+E\+F\+E\+R\+\_\+\+F\+I\+X\+ED(Max\+Rows\+At\+Compile\+Time, Max\+Cols\+At\+Compile\+Time), 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a31a421521f520615c858a0f3577f27ad}{Matrix\+Options}} = Matrix\+Type\+::Options
+ \}
+\item 
+typedef \+\_\+\+Matrix\+Type \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}{Matrix\+Type}}
+\item 
+typedef Matrix\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_acbcf08972eaf86a7a02911440e5af630}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$ typename Matrix\+Type\+::\+Scalar $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ace9e259aac92f9ffba9e1633ecbc27f3}{Literal}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ace9e259aac92f9ffba9e1633ecbc27f3}{Literal}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_s_v_d_base_ab62c306c5d1efeae9bce88dee1b04965}{Base\+::\+Matrix\+U\+Type}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a82dff54aa94d83ff2d1ff4c7c2d5773b}{Matrix\+U\+Type}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_s_v_d_base_af2ec05d33dd5be28df6fcf56346e23ec}{Base\+::\+Matrix\+V\+Type}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a69c4a18e1876ef08c8f54aeb36b28b14}{Matrix\+V\+Type}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_s_v_d_base_a7426695e87c152fbb8bc7834dd8e6ce3}{Base\+::\+Singular\+Values\+Type}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a44bfd0ed80d684e0e083dda473f86347}{Singular\+Values\+Type}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_acbcf08972eaf86a7a02911440e5af630}{Scalar}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a0103672ae41005ab03b4176c765afd62}{Col\+Major}} $>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aacd3b24c4366ba5379dfb21451d6056b}{MatrixX}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a0103672ae41005ab03b4176c765afd62}{Col\+Major}} $>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, 1 $>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}{Vector\+Type}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_array}{Array}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, 1 $>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aa137a145da2071bb46761d1b69f9eb77}{Array\+Xr}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_array}{Array}}$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, 1, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}} $>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a674e446912e3a2691ab57e1fd91d7126}{Array\+Xi}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_ref}{Ref}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aa137a145da2071bb46761d1b69f9eb77}{Array\+Xr}} $>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_ref}{Ref}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a674e446912e3a2691ab57e1fd91d7126}{Array\+Xi}} $>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}{Indices\+Ref}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ab3c53411f0893bf641367aca79234760}{B\+D\+C\+S\+VD}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a7840e5377c33be8c5b1725918ca58b50}{B\+D\+C\+S\+VD}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} rows, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} cols, unsigned int computation\+Options=0)
+\begin{DoxyCompactList}\small\item\em Default Constructor with memory preallocation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aa1737274fdee1bc893d4176b15223c41}{B\+D\+C\+S\+VD}} (const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}{Matrix\+Type}} \&matrix, unsigned int computation\+Options=0)
+\begin{DoxyCompactList}\small\item\em Constructor performing the decomposition of given matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a6bdf18c01846f434f5df0ace746b51d0}{$\sim$\+B\+D\+C\+S\+VD}} ()
+\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d}{B\+D\+C\+S\+VD}} \& \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a96232f52930af6006bc7dc1e58df1ba7}{compute}} (const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}{Matrix\+Type}} \&matrix, unsigned int computation\+Options)
+\begin{DoxyCompactList}\small\item\em Method performing the decomposition of given matrix using custom options. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d}{B\+D\+C\+S\+VD}} \& \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4923796555b973dba9fe3f8744cac23e}{compute}} (const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}{Matrix\+Type}} \&matrix)
+\begin{DoxyCompactList}\small\item\em Method performing the decomposition of given matrix using current options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a77b3899cfe5e281b2316a3416b708cf4}{set\+Switch\+Size}} (int s)
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ab1a0d1fcc818a876c3cb2b32887604be}{rows}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a083d99e05949bab974bbff2966606b7f}{cols}} () const
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a705a7c2709e1624ccc19aa748a78d473}{computeU}} () const
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a5f12efcb791eb007d4a4890ac5255ac4}{computeV}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aa2b6256bf120e94a84bb2ff649e9fe12}{m\+\_\+num\+Iters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a07f0a77a6c2eab0fa670c4a20f7f4d04}{m\+\_\+naiveU}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a6cf4369daf59e01cafd182c95436ba47}{m\+\_\+naiveV}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ad500b021ef9c41226ea0aa46fc6f9134}{m\+\_\+computed}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a96ccec17686c37ce5be32756f6c9533a}{m\+\_\+n\+Rec}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aa137a145da2071bb46761d1b69f9eb77}{Array\+Xr}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a3b9a2b57a61fe7a4d2f5d13073aa8661}{m\+\_\+workspace}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a674e446912e3a2691ab57e1fd91d7126}{Array\+Xi}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a50dd6ce9692c8dd6b3b107937be8abea}{m\+\_\+workspaceI}}
+\item 
+int \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ab45cc717600ccda20adc83b92e28d5f5}{m\+\_\+algoswap}}
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a6e464b147e14034cda958efed4084dd7}{m\+\_\+is\+Transpose}}
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a0ac2686b921a80ab90b091083f084a32}{m\+\_\+compU}}
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_afe4eb8aa0c677e53929bea482c72dea4}{m\+\_\+compV}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a44bfd0ed80d684e0e083dda473f86347}{Singular\+Values\+Type}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ab71e31e61c33f68ff2f499ed9f30e718}{m\+\_\+singular\+Values}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a6eca3829eb56684ca01c291c6630c8d8}{m\+\_\+diag\+Size}}
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ad6f49fd8f826a41109f8eb68e2f48dc4}{m\+\_\+compute\+FullU}}
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1eec8ead08bc9cd1729ba9ba7beb6b41}{m\+\_\+compute\+FullV}}
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a47b67c55d69ba645bb7ae32bb5466138}{m\+\_\+compute\+ThinU}}
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac8321ff2cbf3b82f5c2638b9de6661af}{m\+\_\+compute\+ThinV}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a82dff54aa94d83ff2d1ff4c7c2d5773b}{Matrix\+U\+Type}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_af0e0b3833c1d49286c0fdcbc023c3bd8}{m\+\_\+matrixU}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a69c4a18e1876ef08c8f54aeb36b28b14}{Matrix\+V\+Type}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a69cf1cfb527ff5562156c13bdca45ca5}{m\+\_\+matrixV}}
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a633b92f4eb9c65911b943b93bb8b341c}{m\+\_\+is\+Initialized}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aa41b395662650f2e10652f76365877c4}{m\+\_\+nonzero\+Singular\+Values}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{S\+V\+D\+Base}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d}{B\+D\+C\+S\+VD}} $>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a281933400cb031160afa391b20b6ce98}{Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a8a0e0daa052ab386ab0f5aae43af35dc}{allocate}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} rows, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} cols, unsigned int computation\+Options)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1af0b4658904cebb7d7c222310cb6295}{divide}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+Col, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} last\+Col, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+RowW, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+ColW, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} shift)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a7d1ecf0116ffedd32c3de609ec9644f0}{compute\+S\+V\+DofM}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+Col, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} n, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \&U, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}{Vector\+Type}} \&sing\+Vals, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \&V)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a52fe9ddcb4a1c813a14cd4c3395430fa}{compute\+Sing\+Vals}} (const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&col0, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&diag, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}{Indices\+Ref}} \&perm, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}{Vector\+Type}} \&sing\+Vals, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} shifts, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} mus)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a344fbe4bdd8832adb45e3131b3414ba3}{perturb\+Col0}} (const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&col0, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&diag, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}{Indices\+Ref}} \&perm, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}{Vector\+Type}} \&sing\+Vals, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&shifts, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&mus, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} zhat)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a8d5a0666c92f302727ae4c27b484d2c5}{compute\+Sing\+Vecs}} (const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&zhat, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&diag, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}{Indices\+Ref}} \&perm, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}{Vector\+Type}} \&sing\+Vals, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&shifts, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&mus, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \&U, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \&V)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1abcb282a213563dc5e5947f1b9f6a3c}{deflation43}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+Col, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} shift, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} i, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} size)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a9d86b1b751ac27b1ed019b6b47bed2d7}{deflation44}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+Colu, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+Colm, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+RowW, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+ColW, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} i, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} j, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} size)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a2d006590fc66061674777e177b0f24f1}{deflation}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+Col, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} last\+Col, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} k, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+RowW, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} first\+ColW, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} shift)
+\item 
+{\footnotesize template$<$typename HouseholderU , typename HouseholderV , typename NaiveU , typename NaiveV $>$ }\\void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a1bf30e82260a1cf0abc133e27284efa9}{copy\+UV}} (const HouseholderU \&householderU, const HouseholderV \&householderV, const NaiveU \&naiveU, const NaiveV \&naivev)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a581f30d5a056f9a93f1928e9038805d1}{structured\+\_\+update}} (\mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}} $>$ A, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \&B, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} n1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a889033ef68601ba9daa2b07adce311ab}{secular\+Eq}} (\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}} x, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&col0, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&diag, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}{Indices\+Ref}} \&perm, const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&diag\+Shifted, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}} shift)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class Bidiagonal Divide and Conquer S\+VD 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \+\_\+\+Matrix\+Type} & the type of the matrix of which we are computing the S\+VD decomposition\\
+\hline
+\end{DoxyTemplParams}
+This class first reduces the input matrix to bi-\/diagonal form using class Upper\+Bidiagonalization, and then performs a divide-\/and-\/conquer diagonalization. Small blocks are diagonalized using class \mbox{\hyperlink{class_eigen_1_1_jacobi_s_v_d}{Jacobi\+S\+VD}}. You can control the switching size with the \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a77b3899cfe5e281b2316a3416b708cf4}{set\+Switch\+Size()}} method, default is 16. For small matrice ($<$16), it is thus preferable to directly use \mbox{\hyperlink{class_eigen_1_1_jacobi_s_v_d}{Jacobi\+S\+VD}}. For larger ones, \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d}{B\+D\+C\+S\+VD}} is highly recommended and can several order of magnitude faster.
+
+\begin{DoxyWarning}{Warning}
+this algorithm is unlikely to provide accurate result when compiled with unsafe math optimizations. For instance, this concerns Intel\textquotesingle{}s compiler (I\+CC), which perfroms such optimization by default unless you compile with the {\ttfamily -\/fp-\/model} {\ttfamily precise} option. Likewise, the {\ttfamily -\/ffast-\/math} option of G\+CC or clang will significantly degrade the accuracy.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+class \mbox{\hyperlink{class_eigen_1_1_jacobi_s_v_d}{Jacobi\+S\+VD}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}\label{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!ArrayRef@{ArrayRef}}
+\index{ArrayRef@{ArrayRef}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{ArrayRef}{ArrayRef}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_ref}{Ref}}$<$\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aa137a145da2071bb46761d1b69f9eb77}{Array\+Xr}}$>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Array\+Ref}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a674e446912e3a2691ab57e1fd91d7126}\label{class_eigen_1_1_b_d_c_s_v_d_a674e446912e3a2691ab57e1fd91d7126}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!ArrayXi@{ArrayXi}}
+\index{ArrayXi@{ArrayXi}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{ArrayXi}{ArrayXi}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_array}{Array}}$<$\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}},1,\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}$>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a674e446912e3a2691ab57e1fd91d7126}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Array\+Xi}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_aa137a145da2071bb46761d1b69f9eb77}\label{class_eigen_1_1_b_d_c_s_v_d_aa137a145da2071bb46761d1b69f9eb77}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!ArrayXr@{ArrayXr}}
+\index{ArrayXr@{ArrayXr}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{ArrayXr}{ArrayXr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_array}{Array}}$<$\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, 1$>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aa137a145da2071bb46761d1b69f9eb77}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Array\+Xr}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a281933400cb031160afa391b20b6ce98}\label{class_eigen_1_1_b_d_c_s_v_d_a281933400cb031160afa391b20b6ce98}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!Base@{Base}}
+\index{Base@{Base}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{S\+V\+D\+Base}}$<$\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d}{B\+D\+C\+S\+VD}}$>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a281933400cb031160afa391b20b6ce98}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Base}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}\label{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!IndicesRef@{IndicesRef}}
+\index{IndicesRef@{IndicesRef}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{IndicesRef}{IndicesRef}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_ref}{Ref}}$<$\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a674e446912e3a2691ab57e1fd91d7126}{Array\+Xi}}$>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Indices\+Ref}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_ace9e259aac92f9ffba9e1633ecbc27f3}\label{class_eigen_1_1_b_d_c_s_v_d_ace9e259aac92f9ffba9e1633ecbc27f3}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!Literal@{Literal}}
+\index{Literal@{Literal}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{Literal}{Literal}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ace9e259aac92f9ffba9e1633ecbc27f3}{Literal}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ace9e259aac92f9ffba9e1633ecbc27f3}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Literal}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}\label{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!MatrixType@{MatrixType}}
+\index{MatrixType@{MatrixType}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{MatrixType}{MatrixType}}
+{\footnotesize\ttfamily typedef \+\_\+\+Matrix\+Type \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Matrix\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a82dff54aa94d83ff2d1ff4c7c2d5773b}\label{class_eigen_1_1_b_d_c_s_v_d_a82dff54aa94d83ff2d1ff4c7c2d5773b}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!MatrixUType@{MatrixUType}}
+\index{MatrixUType@{MatrixUType}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{MatrixUType}{MatrixUType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_s_v_d_base_ab62c306c5d1efeae9bce88dee1b04965}{Base\+::\+Matrix\+U\+Type}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a82dff54aa94d83ff2d1ff4c7c2d5773b}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Matrix\+U\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a69c4a18e1876ef08c8f54aeb36b28b14}\label{class_eigen_1_1_b_d_c_s_v_d_a69c4a18e1876ef08c8f54aeb36b28b14}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!MatrixVType@{MatrixVType}}
+\index{MatrixVType@{MatrixVType}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{MatrixVType}{MatrixVType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_s_v_d_base_af2ec05d33dd5be28df6fcf56346e23ec}{Base\+::\+Matrix\+V\+Type}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a69c4a18e1876ef08c8f54aeb36b28b14}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Matrix\+V\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_aacd3b24c4366ba5379dfb21451d6056b}\label{class_eigen_1_1_b_d_c_s_v_d_aacd3b24c4366ba5379dfb21451d6056b}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!MatrixX@{MatrixX}}
+\index{MatrixX@{MatrixX}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{MatrixX}{MatrixX}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_acbcf08972eaf86a7a02911440e5af630}{Scalar}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a0103672ae41005ab03b4176c765afd62}{Col\+Major}}$>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aacd3b24c4366ba5379dfb21451d6056b}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+MatrixX}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}\label{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!MatrixXr@{MatrixXr}}
+\index{MatrixXr@{MatrixXr}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{MatrixXr}{MatrixXr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a0103672ae41005ab03b4176c765afd62}{Col\+Major}}$>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Matrix\+Xr}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}\label{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$typename Matrix\+Type\+::\+Scalar$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Real\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_acbcf08972eaf86a7a02911440e5af630}\label{class_eigen_1_1_b_d_c_s_v_d_acbcf08972eaf86a7a02911440e5af630}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily typedef Matrix\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_acbcf08972eaf86a7a02911440e5af630}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a44bfd0ed80d684e0e083dda473f86347}\label{class_eigen_1_1_b_d_c_s_v_d_a44bfd0ed80d684e0e083dda473f86347}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!SingularValuesType@{SingularValuesType}}
+\index{SingularValuesType@{SingularValuesType}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{SingularValuesType}{SingularValuesType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_s_v_d_base_a7426695e87c152fbb8bc7834dd8e6ce3}{Base\+::\+Singular\+Values\+Type}} \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a44bfd0ed80d684e0e083dda473f86347}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Singular\+Values\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}\label{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!VectorType@{VectorType}}
+\index{VectorType@{VectorType}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{VectorType}{VectorType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, 1$>$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}{Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+Vector\+Type}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7}\label{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::BDCSVD@{Eigen::BDCSVD}}\index{Eigen::BDCSVD@{Eigen::BDCSVD}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7af523b3fd3c2c9e84256a5812a61c1eef}\label{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7af523b3fd3c2c9e84256a5812a61c1eef}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::BDCSVD@{Eigen::BDCSVD}}\index{Eigen::BDCSVD@{Eigen::BDCSVD}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a0c48c834f42f0f4470d7da9e8abec8ba}\label{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a0c48c834f42f0f4470d7da9e8abec8ba}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DiagSizeAtCompileTime@{DiagSizeAtCompileTime}!Eigen::BDCSVD@{Eigen::BDCSVD}}\index{Eigen::BDCSVD@{Eigen::BDCSVD}!DiagSizeAtCompileTime@{DiagSizeAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7ace7bdfb464326b321ec35b0f178b9345}\label{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7ace7bdfb464326b321ec35b0f178b9345}} 
+Diag\+Size\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::BDCSVD@{Eigen::BDCSVD}}\index{Eigen::BDCSVD@{Eigen::BDCSVD}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a4529fa2996b8b06c9d36e925d428e2d5}\label{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a4529fa2996b8b06c9d36e925d428e2d5}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::BDCSVD@{Eigen::BDCSVD}}\index{Eigen::BDCSVD@{Eigen::BDCSVD}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a90ffbbe226362fd4ad7e118481a08be1}\label{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a90ffbbe226362fd4ad7e118481a08be1}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxDiagSizeAtCompileTime@{MaxDiagSizeAtCompileTime}!Eigen::BDCSVD@{Eigen::BDCSVD}}\index{Eigen::BDCSVD@{Eigen::BDCSVD}!MaxDiagSizeAtCompileTime@{MaxDiagSizeAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a6758273d3e205b6ca6bc4ea8864406d3}\label{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a6758273d3e205b6ca6bc4ea8864406d3}} 
+Max\+Diag\+Size\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MatrixOptions@{MatrixOptions}!Eigen::BDCSVD@{Eigen::BDCSVD}}\index{Eigen::BDCSVD@{Eigen::BDCSVD}!MatrixOptions@{MatrixOptions}}}\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a31a421521f520615c858a0f3577f27ad}\label{class_eigen_1_1_b_d_c_s_v_d_a1b893b53559c840777a49142d32b75b7a31a421521f520615c858a0f3577f27ad}} 
+Matrix\+Options&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_ab3c53411f0893bf641367aca79234760}\label{class_eigen_1_1_b_d_c_s_v_d_ab3c53411f0893bf641367aca79234760}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!BDCSVD@{BDCSVD}}
+\index{BDCSVD@{BDCSVD}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{BDCSVD()}{BDCSVD()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+B\+D\+C\+S\+VD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor. 
+
+The default constructor is useful in cases in which the user intends to perform decompositions via \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4923796555b973dba9fe3f8744cac23e}{B\+D\+C\+S\+V\+D\+::compute(const Matrix\+Type\&)}}. \mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a7840e5377c33be8c5b1725918ca58b50}\label{class_eigen_1_1_b_d_c_s_v_d_a7840e5377c33be8c5b1725918ca58b50}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!BDCSVD@{BDCSVD}}
+\index{BDCSVD@{BDCSVD}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{BDCSVD()}{BDCSVD()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+B\+D\+C\+S\+VD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{rows,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{cols,  }\item[{unsigned int}]{computation\+Options = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor with memory preallocation. 
+
+Like the default constructor but with preallocation of the internal data according to the specified problem size. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ab3c53411f0893bf641367aca79234760}{B\+D\+C\+S\+V\+D()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_aa1737274fdee1bc893d4176b15223c41}\label{class_eigen_1_1_b_d_c_s_v_d_aa1737274fdee1bc893d4176b15223c41}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!BDCSVD@{BDCSVD}}
+\index{BDCSVD@{BDCSVD}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{BDCSVD()}{BDCSVD()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Eigen\+::\+B\+D\+C\+S\+V\+D\+::\+B\+D\+C\+S\+VD (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}{Matrix\+Type}} \&}]{matrix,  }\item[{unsigned int}]{computation\+Options = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor performing the decomposition of given matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & the matrix to decompose \\
+\hline
+{\em computation\+Options} & optional parameter allowing to specify if you want full or thin U or V unitaries to be computed. By default, none is computed. This is a bit -\/ field, the possible bits are \mbox{\hyperlink{group__enums_ggae3e239fb70022eb8747994cf5d68b4a9a9fa9302d510cee20c26311154937e23f}{Compute\+FullU}}, \mbox{\hyperlink{group__enums_ggae3e239fb70022eb8747994cf5d68b4a9aa7fb4e98834788d0b1b0f2b8467d2527}{Compute\+ThinU}}, \mbox{\hyperlink{group__enums_ggae3e239fb70022eb8747994cf5d68b4a9a36581f7c662f7def31efd500c284f930}{Compute\+FullV}}, \mbox{\hyperlink{group__enums_ggae3e239fb70022eb8747994cf5d68b4a9a540036417bfecf2e791a70948c227f47}{Compute\+ThinV}}.\\
+\hline
+\end{DoxyParams}
+Thin unitaries are only available if your matrix type has a Dynamic number of columns (for example Matrix\+Xf). They also are not available with the (non -\/ default) \mbox{\hyperlink{class_eigen_1_1_full_piv_householder_q_r}{Full\+Piv\+Householder\+QR}} preconditioner. \mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a6bdf18c01846f434f5df0ace746b51d0}\label{class_eigen_1_1_b_d_c_s_v_d_a6bdf18c01846f434f5df0ace746b51d0}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!````~BDCSVD@{$\sim$BDCSVD}}
+\index{````~BDCSVD@{$\sim$BDCSVD}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{$\sim$BDCSVD()}{~BDCSVD()}}
+{\footnotesize\ttfamily Eigen\+::\+B\+D\+C\+S\+V\+D\+::$\sim$\+B\+D\+C\+S\+VD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a8a0e0daa052ab386ab0f5aae43af35dc}\label{class_eigen_1_1_b_d_c_s_v_d_a8a0e0daa052ab386ab0f5aae43af35dc}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!allocate@{allocate}}
+\index{allocate@{allocate}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::allocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{rows,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{cols,  }\item[{unsigned int}]{computation\+Options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a083d99e05949bab974bbff2966606b7f}\label{class_eigen_1_1_b_d_c_s_v_d_a083d99e05949bab974bbff2966606b7f}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!cols@{cols}}
+\index{cols@{cols}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::cols\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a4923796555b973dba9fe3f8744cac23e}\label{class_eigen_1_1_b_d_c_s_v_d_a4923796555b973dba9fe3f8744cac23e}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!compute@{compute}}
+\index{compute@{compute}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d}{B\+D\+C\+S\+VD}}\& Eigen\+::\+B\+D\+C\+S\+V\+D\+::compute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}{Matrix\+Type}} \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method performing the decomposition of given matrix using current options. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & the matrix to decompose\\
+\hline
+\end{DoxyParams}
+This method uses the current {\itshape computation\+Options}, as already passed to the constructor or to \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a96232f52930af6006bc7dc1e58df1ba7}{compute(const Matrix\+Type\&, unsigned int)}}. \mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a96232f52930af6006bc7dc1e58df1ba7}\label{class_eigen_1_1_b_d_c_s_v_d_a96232f52930af6006bc7dc1e58df1ba7}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!compute@{compute}}
+\index{compute@{compute}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d}{B\+D\+C\+S\+VD}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}{Matrix\+Type}} $>$ \& Eigen\+::\+B\+D\+C\+S\+V\+D\+::compute (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}{Matrix\+Type}} \&}]{matrix,  }\item[{unsigned int}]{computation\+Options }\end{DoxyParamCaption})}
+
+
+
+Method performing the decomposition of given matrix using custom options. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & the matrix to decompose \\
+\hline
+{\em computation\+Options} & optional parameter allowing to specify if you want full or thin U or V unitaries to be computed. By default, none is computed. This is a bit -\/ field, the possible bits are \mbox{\hyperlink{group__enums_ggae3e239fb70022eb8747994cf5d68b4a9a9fa9302d510cee20c26311154937e23f}{Compute\+FullU}}, \mbox{\hyperlink{group__enums_ggae3e239fb70022eb8747994cf5d68b4a9aa7fb4e98834788d0b1b0f2b8467d2527}{Compute\+ThinU}}, \mbox{\hyperlink{group__enums_ggae3e239fb70022eb8747994cf5d68b4a9a36581f7c662f7def31efd500c284f930}{Compute\+FullV}}, \mbox{\hyperlink{group__enums_ggae3e239fb70022eb8747994cf5d68b4a9a540036417bfecf2e791a70948c227f47}{Compute\+ThinV}}.\\
+\hline
+\end{DoxyParams}
+Thin unitaries are only available if your matrix type has a Dynamic number of columns (for example Matrix\+Xf). They also are not available with the (non -\/ default) \mbox{\hyperlink{class_eigen_1_1_full_piv_householder_q_r}{Full\+Piv\+Householder\+QR}} preconditioner. \mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a52fe9ddcb4a1c813a14cd4c3395430fa}\label{class_eigen_1_1_b_d_c_s_v_d_a52fe9ddcb4a1c813a14cd4c3395430fa}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!computeSingVals@{computeSingVals}}
+\index{computeSingVals@{computeSingVals}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{computeSingVals()}{computeSingVals()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::compute\+Sing\+Vals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{col0,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{diag,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}{Indices\+Ref}} \&}]{perm,  }\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}{Vector\+Type}} \&}]{sing\+Vals,  }\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}}}]{shifts,  }\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}}}]{mus }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a8d5a0666c92f302727ae4c27b484d2c5}\label{class_eigen_1_1_b_d_c_s_v_d_a8d5a0666c92f302727ae4c27b484d2c5}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!computeSingVecs@{computeSingVecs}}
+\index{computeSingVecs@{computeSingVecs}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{computeSingVecs()}{computeSingVecs()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::compute\+Sing\+Vecs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{zhat,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{diag,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}{Indices\+Ref}} \&}]{perm,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}{Vector\+Type}} \&}]{sing\+Vals,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{shifts,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{mus,  }\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \&}]{U,  }\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \&}]{V }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a7d1ecf0116ffedd32c3de609ec9644f0}\label{class_eigen_1_1_b_d_c_s_v_d_a7d1ecf0116ffedd32c3de609ec9644f0}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!computeSVDofM@{computeSVDofM}}
+\index{computeSVDofM@{computeSVDofM}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{computeSVDofM()}{computeSVDofM()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::compute\+S\+V\+DofM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+Col,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{n,  }\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \&}]{U,  }\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}{Vector\+Type}} \&}]{sing\+Vals,  }\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \&}]{V }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a705a7c2709e1624ccc19aa748a78d473}\label{class_eigen_1_1_b_d_c_s_v_d_a705a7c2709e1624ccc19aa748a78d473}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!computeU@{computeU}}
+\index{computeU@{computeU}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{computeU()}{computeU()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::computeU\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\itshape U} (full or thin) is asked for in this S\+VD decomposition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a5f12efcb791eb007d4a4890ac5255ac4}\label{class_eigen_1_1_b_d_c_s_v_d_a5f12efcb791eb007d4a4890ac5255ac4}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!computeV@{computeV}}
+\index{computeV@{computeV}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{computeV()}{computeV()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::computeV\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if {\itshape V} (full or thin) is asked for in this S\+VD decomposition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1bf30e82260a1cf0abc133e27284efa9}\label{class_eigen_1_1_b_d_c_s_v_d_a1bf30e82260a1cf0abc133e27284efa9}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!copyUV@{copyUV}}
+\index{copyUV@{copyUV}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{copyUV()}{copyUV()}}
+{\footnotesize\ttfamily template$<$typename HouseholderU , typename HouseholderV , typename NaiveU , typename NaiveV $>$ \\
+void Eigen\+::\+B\+D\+C\+S\+V\+D\+::copy\+UV (\begin{DoxyParamCaption}\item[{const HouseholderU \&}]{householderU,  }\item[{const HouseholderV \&}]{householderV,  }\item[{const NaiveU \&}]{naiveU,  }\item[{const NaiveV \&}]{naivev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a2d006590fc66061674777e177b0f24f1}\label{class_eigen_1_1_b_d_c_s_v_d_a2d006590fc66061674777e177b0f24f1}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!deflation@{deflation}}
+\index{deflation@{deflation}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{deflation()}{deflation()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::deflation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+Col,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{last\+Col,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{k,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+RowW,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+ColW,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{shift }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1abcb282a213563dc5e5947f1b9f6a3c}\label{class_eigen_1_1_b_d_c_s_v_d_a1abcb282a213563dc5e5947f1b9f6a3c}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!deflation43@{deflation43}}
+\index{deflation43@{deflation43}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{deflation43()}{deflation43()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::deflation43 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+Col,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{shift,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{i,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a9d86b1b751ac27b1ed019b6b47bed2d7}\label{class_eigen_1_1_b_d_c_s_v_d_a9d86b1b751ac27b1ed019b6b47bed2d7}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!deflation44@{deflation44}}
+\index{deflation44@{deflation44}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{deflation44()}{deflation44()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::deflation44 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+Colu,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+Colm,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+RowW,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+ColW,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{i,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{j,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1af0b4658904cebb7d7c222310cb6295}\label{class_eigen_1_1_b_d_c_s_v_d_a1af0b4658904cebb7d7c222310cb6295}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!divide@{divide}}
+\index{divide@{divide}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{divide()}{divide()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::divide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+Col,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{last\+Col,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+RowW,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{first\+ColW,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{shift }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a344fbe4bdd8832adb45e3131b3414ba3}\label{class_eigen_1_1_b_d_c_s_v_d_a344fbe4bdd8832adb45e3131b3414ba3}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!perturbCol0@{perturbCol0}}
+\index{perturbCol0@{perturbCol0}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{perturbCol0()}{perturbCol0()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::perturb\+Col0 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{col0,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{diag,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}{Indices\+Ref}} \&}]{perm,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_abe222fb48e619463407c3f8ca05aff2e}{Vector\+Type}} \&}]{sing\+Vals,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{shifts,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{mus,  }\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}}}]{zhat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_ab1a0d1fcc818a876c3cb2b32887604be}\label{class_eigen_1_1_b_d_c_s_v_d_ab1a0d1fcc818a876c3cb2b32887604be}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!rows@{rows}}
+\index{rows@{rows}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::rows\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a889033ef68601ba9daa2b07adce311ab}\label{class_eigen_1_1_b_d_c_s_v_d_a889033ef68601ba9daa2b07adce311ab}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!secularEq@{secularEq}}
+\index{secularEq@{secularEq}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{secularEq()}{secularEq()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d}{B\+D\+C\+S\+VD}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ae226b6edf58835b997dac0341556af99}{Matrix\+Type}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}} Eigen\+::\+B\+D\+C\+S\+V\+D\+::secular\+Eq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}}}]{x,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{col0,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{diag,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a4ea497616a05783b8ced6108bf13949e}{Indices\+Ref}} \&}]{perm,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_ac4e8bb8286290ada1a48f8ca9ef8c27b}{Array\+Ref}} \&}]{diag\+Shifted,  }\item[{\mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a842c4d753a7b0304b4cc7ccc51adc249}{Real\+Scalar}}}]{shift }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a77b3899cfe5e281b2316a3416b708cf4}\label{class_eigen_1_1_b_d_c_s_v_d_a77b3899cfe5e281b2316a3416b708cf4}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!setSwitchSize@{setSwitchSize}}
+\index{setSwitchSize@{setSwitchSize}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{setSwitchSize()}{setSwitchSize()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::set\+Switch\+Size (\begin{DoxyParamCaption}\item[{int}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a581f30d5a056f9a93f1928e9038805d1}\label{class_eigen_1_1_b_d_c_s_v_d_a581f30d5a056f9a93f1928e9038805d1}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!structured\_update@{structured\_update}}
+\index{structured\_update@{structured\_update}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{structured\_update()}{structured\_update()}}
+{\footnotesize\ttfamily void Eigen\+::\+B\+D\+C\+S\+V\+D\+::structured\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}} $>$}]{A,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} \&}]{B,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{n1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_ab45cc717600ccda20adc83b92e28d5f5}\label{class_eigen_1_1_b_d_c_s_v_d_ab45cc717600ccda20adc83b92e28d5f5}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_algoswap@{m\_algoswap}}
+\index{m\_algoswap@{m\_algoswap}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_algoswap}{m\_algoswap}}
+{\footnotesize\ttfamily int Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+algoswap\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a0ac2686b921a80ab90b091083f084a32}\label{class_eigen_1_1_b_d_c_s_v_d_a0ac2686b921a80ab90b091083f084a32}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_compU@{m\_compU}}
+\index{m\_compU@{m\_compU}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_compU}{m\_compU}}
+{\footnotesize\ttfamily bool Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+compU\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_ad500b021ef9c41226ea0aa46fc6f9134}\label{class_eigen_1_1_b_d_c_s_v_d_ad500b021ef9c41226ea0aa46fc6f9134}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_computed@{m\_computed}}
+\index{m\_computed@{m\_computed}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_computed}{m\_computed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+computed\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_ad6f49fd8f826a41109f8eb68e2f48dc4}\label{class_eigen_1_1_b_d_c_s_v_d_ad6f49fd8f826a41109f8eb68e2f48dc4}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_computeFullU@{m\_computeFullU}}
+\index{m\_computeFullU@{m\_computeFullU}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_computeFullU}{m\_computeFullU}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::m\+\_\+compute\+FullU\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a1eec8ead08bc9cd1729ba9ba7beb6b41}\label{class_eigen_1_1_b_d_c_s_v_d_a1eec8ead08bc9cd1729ba9ba7beb6b41}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_computeFullV@{m\_computeFullV}}
+\index{m\_computeFullV@{m\_computeFullV}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_computeFullV}{m\_computeFullV}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::m\+\_\+compute\+FullV\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a47b67c55d69ba645bb7ae32bb5466138}\label{class_eigen_1_1_b_d_c_s_v_d_a47b67c55d69ba645bb7ae32bb5466138}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_computeThinU@{m\_computeThinU}}
+\index{m\_computeThinU@{m\_computeThinU}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_computeThinU}{m\_computeThinU}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::m\+\_\+compute\+ThinU\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_ac8321ff2cbf3b82f5c2638b9de6661af}\label{class_eigen_1_1_b_d_c_s_v_d_ac8321ff2cbf3b82f5c2638b9de6661af}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_computeThinV@{m\_computeThinV}}
+\index{m\_computeThinV@{m\_computeThinV}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_computeThinV}{m\_computeThinV}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::m\+\_\+compute\+ThinV\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_afe4eb8aa0c677e53929bea482c72dea4}\label{class_eigen_1_1_b_d_c_s_v_d_afe4eb8aa0c677e53929bea482c72dea4}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_compV@{m\_compV}}
+\index{m\_compV@{m\_compV}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_compV}{m\_compV}}
+{\footnotesize\ttfamily bool Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+compV\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a6eca3829eb56684ca01c291c6630c8d8}\label{class_eigen_1_1_b_d_c_s_v_d_a6eca3829eb56684ca01c291c6630c8d8}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_diagSize@{m\_diagSize}}
+\index{m\_diagSize@{m\_diagSize}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_diagSize}{m\_diagSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::m\+\_\+diag\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a633b92f4eb9c65911b943b93bb8b341c}\label{class_eigen_1_1_b_d_c_s_v_d_a633b92f4eb9c65911b943b93bb8b341c}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_isInitialized@{m\_isInitialized}}
+\index{m\_isInitialized@{m\_isInitialized}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_isInitialized}{m\_isInitialized}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::m\+\_\+is\+Initialized\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a6e464b147e14034cda958efed4084dd7}\label{class_eigen_1_1_b_d_c_s_v_d_a6e464b147e14034cda958efed4084dd7}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_isTranspose@{m\_isTranspose}}
+\index{m\_isTranspose@{m\_isTranspose}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_isTranspose}{m\_isTranspose}}
+{\footnotesize\ttfamily bool Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+is\+Transpose\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_af0e0b3833c1d49286c0fdcbc023c3bd8}\label{class_eigen_1_1_b_d_c_s_v_d_af0e0b3833c1d49286c0fdcbc023c3bd8}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_matrixU@{m\_matrixU}}
+\index{m\_matrixU@{m\_matrixU}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_matrixU}{m\_matrixU}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a82dff54aa94d83ff2d1ff4c7c2d5773b}{Matrix\+U\+Type}} \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::m\+\_\+matrixU\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a69cf1cfb527ff5562156c13bdca45ca5}\label{class_eigen_1_1_b_d_c_s_v_d_a69cf1cfb527ff5562156c13bdca45ca5}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_matrixV@{m\_matrixV}}
+\index{m\_matrixV@{m\_matrixV}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_matrixV}{m\_matrixV}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a69c4a18e1876ef08c8f54aeb36b28b14}{Matrix\+V\+Type}} \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::m\+\_\+matrixV\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a07f0a77a6c2eab0fa670c4a20f7f4d04}\label{class_eigen_1_1_b_d_c_s_v_d_a07f0a77a6c2eab0fa670c4a20f7f4d04}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_naiveU@{m\_naiveU}}
+\index{m\_naiveU@{m\_naiveU}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_naiveU}{m\_naiveU}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+naiveU\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a6cf4369daf59e01cafd182c95436ba47}\label{class_eigen_1_1_b_d_c_s_v_d_a6cf4369daf59e01cafd182c95436ba47}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_naiveV@{m\_naiveV}}
+\index{m\_naiveV@{m\_naiveV}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_naiveV}{m\_naiveV}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a58067eacce9bac6f3a61b8636783a336}{Matrix\+Xr}} Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+naiveV\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_aa41b395662650f2e10652f76365877c4}\label{class_eigen_1_1_b_d_c_s_v_d_aa41b395662650f2e10652f76365877c4}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_nonzeroSingularValues@{m\_nonzeroSingularValues}}
+\index{m\_nonzeroSingularValues@{m\_nonzeroSingularValues}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_nonzeroSingularValues}{m\_nonzeroSingularValues}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::m\+\_\+nonzero\+Singular\+Values\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a96ccec17686c37ce5be32756f6c9533a}\label{class_eigen_1_1_b_d_c_s_v_d_a96ccec17686c37ce5be32756f6c9533a}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_nRec@{m\_nRec}}
+\index{m\_nRec@{m\_nRec}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_nRec}{m\_nRec}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+n\+Rec\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_aa2b6256bf120e94a84bb2ff649e9fe12}\label{class_eigen_1_1_b_d_c_s_v_d_aa2b6256bf120e94a84bb2ff649e9fe12}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_numIters@{m\_numIters}}
+\index{m\_numIters@{m\_numIters}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_numIters}{m\_numIters}}
+{\footnotesize\ttfamily int Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+num\+Iters}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_ab71e31e61c33f68ff2f499ed9f30e718}\label{class_eigen_1_1_b_d_c_s_v_d_ab71e31e61c33f68ff2f499ed9f30e718}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_singularValues@{m\_singularValues}}
+\index{m\_singularValues@{m\_singularValues}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_singularValues}{m\_singularValues}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a44bfd0ed80d684e0e083dda473f86347}{Singular\+Values\+Type}} \mbox{\hyperlink{class_eigen_1_1_s_v_d_base}{Eigen\+::\+S\+V\+D\+Base}}$<$ Derived $>$\+::m\+\_\+singular\+Values\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a3b9a2b57a61fe7a4d2f5d13073aa8661}\label{class_eigen_1_1_b_d_c_s_v_d_a3b9a2b57a61fe7a4d2f5d13073aa8661}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_workspace@{m\_workspace}}
+\index{m\_workspace@{m\_workspace}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_workspace}{m\_workspace}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_aa137a145da2071bb46761d1b69f9eb77}{Array\+Xr}} Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+workspace\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_b_d_c_s_v_d_a50dd6ce9692c8dd6b3b107937be8abea}\label{class_eigen_1_1_b_d_c_s_v_d_a50dd6ce9692c8dd6b3b107937be8abea}} 
+\index{Eigen::BDCSVD@{Eigen::BDCSVD}!m\_workspaceI@{m\_workspaceI}}
+\index{m\_workspaceI@{m\_workspaceI}!Eigen::BDCSVD@{Eigen::BDCSVD}}
+\doxysubsubsection{\texorpdfstring{m\_workspaceI}{m\_workspaceI}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_b_d_c_s_v_d_a674e446912e3a2691ab57e1fd91d7126}{Array\+Xi}} Eigen\+::\+B\+D\+C\+S\+V\+D\+::m\+\_\+workspaceI\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/util/\mbox{\hyperlink{_forward_declarations_8h}{Forward\+Declarations.\+h}}\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+S\+V\+D/\mbox{\hyperlink{_b_d_c_s_v_d_8h}{B\+D\+C\+S\+V\+D.\+h}}\end{DoxyCompactItemize}

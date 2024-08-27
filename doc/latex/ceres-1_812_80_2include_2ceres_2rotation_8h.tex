@@ -1,0 +1,71 @@
+\hypertarget{ceres-1_812_80_2include_2ceres_2rotation_8h}{}\doxysection{3rd\+\_\+party/ceres-\/1.12.0/include/ceres/rotation.h File Reference}
+\label{ceres-1_812_80_2include_2ceres_2rotation_8h}\index{3rd\_party/ceres-\/1.12.0/include/ceres/rotation.h@{3rd\_party/ceres-\/1.12.0/include/ceres/rotation.h}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+Include dependency graph for rotation.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{ceres-1_812_80_2include_2ceres_2rotation_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structceres_1_1_matrix_adapter}{ceres\+::\+Matrix\+Adapter$<$ T, row\+\_\+stride, col\+\_\+stride $>$}}
+\item 
+struct \mbox{\hyperlink{structceres_1_1_matrix_adapter}{ceres\+::\+Matrix\+Adapter$<$ T, row\+\_\+stride, col\+\_\+stride $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceceres}{ceres}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\Matrix\+Adapter$<$ T, 1, 3 $>$ \mbox{\hyperlink{namespaceceres_a0500fcd7e01e8a0d8f0fcd752d9a6015}{ceres\+::\+Column\+Major\+Adapter3x3}} (T $\ast$pointer)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Matrix\+Adapter$<$ T, 3, 1 $>$ \mbox{\hyperlink{namespaceceres_a24522eea38579ddde26aa54dddb432d4}{ceres\+::\+Row\+Major\+Adapter3x3}} (T $\ast$pointer)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_a98fa9c6405a41de89083e1d8da55a986}{ceres\+::\+Angle\+Axis\+To\+Quaternion}} (const T $\ast$angle\+\_\+axis, T $\ast$quaternion)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_aa68081e4af2f2b8c62896f55f9f1ece2}{ceres\+::\+Quaternion\+To\+Angle\+Axis}} (const T $\ast$quaternion, T $\ast$angle\+\_\+axis)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_aaaf832d35a41469025f344dda76bd462}{ceres\+::\+Rotation\+Matrix\+To\+Quaternion}} (const T $\ast$R, T $\ast$quaternion)
+\item 
+{\footnotesize template$<$typename T , int row\+\_\+stride, int col\+\_\+stride$>$ }\\void \mbox{\hyperlink{namespaceceres_a2b6a921817dda9a58c7015a3e2c3de69}{ceres\+::\+Rotation\+Matrix\+To\+Quaternion}} (const Matrix\+Adapter$<$ const T, row\+\_\+stride, col\+\_\+stride $>$ \&R, T $\ast$quaternion)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_a6abbd9b955dd891fbfdd0113a8f208ae}{ceres\+::\+Rotation\+Matrix\+To\+Angle\+Axis}} (const T $\ast$R, T $\ast$angle\+\_\+axis)
+\item 
+{\footnotesize template$<$typename T , int row\+\_\+stride, int col\+\_\+stride$>$ }\\void \mbox{\hyperlink{namespaceceres_ab5b88aa5c90d92630bcafcd3009f5c2d}{ceres\+::\+Rotation\+Matrix\+To\+Angle\+Axis}} (const Matrix\+Adapter$<$ const T, row\+\_\+stride, col\+\_\+stride $>$ \&R, T $\ast$angle\+\_\+axis)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_a672a5276e9531e7a680e7fe3596297a3}{ceres\+::\+Angle\+Axis\+To\+Rotation\+Matrix}} (const T $\ast$angle\+\_\+axis, T $\ast$R)
+\item 
+{\footnotesize template$<$typename T , int row\+\_\+stride, int col\+\_\+stride$>$ }\\void \mbox{\hyperlink{namespaceceres_a94ece6b8e7faa769c2ca7c05b253495b}{ceres\+::\+Angle\+Axis\+To\+Rotation\+Matrix}} (const T $\ast$angle\+\_\+axis, const Matrix\+Adapter$<$ T, row\+\_\+stride, col\+\_\+stride $>$ \&R)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_ad9ac3ab9cb0064f717640e2a259884ad}{ceres\+::\+Euler\+Angles\+To\+Rotation\+Matrix}} (const T $\ast$euler, int row\+\_\+stride, T $\ast$R)
+\item 
+{\footnotesize template$<$typename T , int row\+\_\+stride, int col\+\_\+stride$>$ }\\void \mbox{\hyperlink{namespaceceres_afe510a5b3fdc9001d95d40496a7d7074}{ceres\+::\+Euler\+Angles\+To\+Rotation\+Matrix}} (const T $\ast$euler, const Matrix\+Adapter$<$ T, row\+\_\+stride, col\+\_\+stride $>$ \&R)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_a53590daf0f20450dcde7928d51816375}{ceres\+::\+Quaternion\+To\+Scaled\+Rotation}} (const T q\mbox{[}4\mbox{]}, T R\mbox{[}3 $\ast$3\mbox{]})
+\item 
+{\footnotesize template$<$typename T , int row\+\_\+stride, int col\+\_\+stride$>$ }\\void \mbox{\hyperlink{namespaceceres_a91396cfc97966b68c73f1ff251954c3d}{ceres\+::\+Quaternion\+To\+Scaled\+Rotation}} (const T q\mbox{[}4\mbox{]}, const Matrix\+Adapter$<$ T, row\+\_\+stride, col\+\_\+stride $>$ \&R)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_aba60be7f2c881e1eff19132dbece7a9e}{ceres\+::\+Quaternion\+To\+Rotation}} (const T q\mbox{[}4\mbox{]}, T R\mbox{[}3 $\ast$3\mbox{]})
+\item 
+{\footnotesize template$<$typename T , int row\+\_\+stride, int col\+\_\+stride$>$ }\\void \mbox{\hyperlink{namespaceceres_a73693f22a0591ec0c6337c6caa8dbb3f}{ceres\+::\+Quaternion\+To\+Rotation}} (const T q\mbox{[}4\mbox{]}, const Matrix\+Adapter$<$ T, row\+\_\+stride, col\+\_\+stride $>$ \&R)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_afd6bb18a7e986acde30f9bfd59afd6b4}{ceres\+::\+Unit\+Quaternion\+Rotate\+Point}} (const T q\mbox{[}4\mbox{]}, const T pt\mbox{[}3\mbox{]}, T result\mbox{[}3\mbox{]})
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_ab8d00fc11dc79215beb9c8d09085c650}{ceres\+::\+Quaternion\+Rotate\+Point}} (const T q\mbox{[}4\mbox{]}, const T pt\mbox{[}3\mbox{]}, T result\mbox{[}3\mbox{]})
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_ab47743b0e2c5b04837f4755ba3aa9cfc}{ceres\+::\+Quaternion\+Product}} (const T z\mbox{[}4\mbox{]}, const T w\mbox{[}4\mbox{]}, T zw\mbox{[}4\mbox{]})
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_ab7ad5277935019a5e5f76db11c9958df}{ceres\+::\+Cross\+Product}} (const T x\mbox{[}3\mbox{]}, const T y\mbox{[}3\mbox{]}, T x\+\_\+cross\+\_\+y\mbox{[}3\mbox{]})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceceres_ac70b0a04e2a7e6d1fff88358b189db01}{ceres\+::\+Dot\+Product}} (const T x\mbox{[}3\mbox{]}, const T y\mbox{[}3\mbox{]})
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceceres_a3de3cc0060579bca157028a0a481ed97}{ceres\+::\+Angle\+Axis\+Rotate\+Point}} (const T angle\+\_\+axis\mbox{[}3\mbox{]}, const T pt\mbox{[}3\mbox{]}, T result\mbox{[}3\mbox{]})
+\end{DoxyCompactItemize}

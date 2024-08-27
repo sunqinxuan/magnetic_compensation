@@ -1,0 +1,133 @@
+\hypertarget{class_mic_data_storer}{}\doxysection{Mic\+Data\+Storer$<$ Types $>$ Class Template Reference}
+\label{class_mic_data_storer}\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+
+
+{\ttfamily \#include $<$mic\+\_\+data\+\_\+storer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mic_data_storer_ad67eed5c6be44df87a06028495b88dde}{Mic\+Data\+Storer}} ()
+\item 
+\mbox{\hyperlink{class_mic_data_storer_a8fc93a97be571d0e079cdc9cd3ded753}{$\sim$\+Mic\+Data\+Storer}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool\+\_\+t \mbox{\hyperlink{class_mic_data_storer_a19c0e720f70b04554ed07b8b1d00dc16}{add\+\_\+data}} (const float64\+\_\+t ts, const T \&data)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{class_mic_data_storer_a67a60e6e25f183ce0d265d2ed5d0ce76}{get\+\_\+data\+\_\+range}} (const float64\+\_\+t start\+\_\+ts, const float64\+\_\+t end\+\_\+ts)
+\item 
+{\footnotesize template$<$typename T $>$ }\\size\+\_\+t \mbox{\hyperlink{class_mic_data_storer_afbd350bbbdff3d6902b088e6294fd555}{get\+\_\+data\+\_\+size}} ()
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\bool\+\_\+t \mbox{\hyperlink{class_mic_data_storer_a1afbd4b73401839c5bdf46dc17b7523e}{get\+\_\+data}} (const float64\+\_\+t ts, Args \&... data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename... Rest$>$ }\\bool\+\_\+t \mbox{\hyperlink{class_mic_data_storer_a10c77132fde184b602eb580f5bd7a6cf}{get\+\_\+data\+\_\+impl}} (const float64\+\_\+t ts, T \&data, Rest \&... rest)
+\item 
+bool\+\_\+t \mbox{\hyperlink{class_mic_data_storer_a9f96a582373de5963e9edae613a35ae3}{get\+\_\+data\+\_\+impl}} (const float64\+\_\+t ts)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float32\+\_\+t \mbox{\hyperlink{class_mic_data_storer_a9883f3da738e12cfec2983087eeda74a}{\+\_\+time\+\_\+sync\+\_\+tolerance}}
+\item 
+float32\+\_\+t \mbox{\hyperlink{class_mic_data_storer_a69ecd8d42ea32c1176dc659526d079c8}{\+\_\+data\+\_\+remain\+\_\+time}}
+\item 
+std\+::tuple$<$ std\+::map$<$ float64\+\_\+t, Types $>$... $>$ \mbox{\hyperlink{class_mic_data_storer_a000f34939be47d61c07518f4c68653e2}{\+\_\+data\+\_\+storage}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mic_data_storer_ad67eed5c6be44df87a06028495b88dde}\label{class_mic_data_storer_ad67eed5c6be44df87a06028495b88dde}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!MicDataStorer@{MicDataStorer}}
+\index{MicDataStorer@{MicDataStorer}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{MicDataStorer()}{MicDataStorer()}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+\mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::\mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mic_data_storer_a8fc93a97be571d0e079cdc9cd3ded753}\label{class_mic_data_storer_a8fc93a97be571d0e079cdc9cd3ded753}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!````~MicDataStorer@{$\sim$MicDataStorer}}
+\index{````~MicDataStorer@{$\sim$MicDataStorer}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$MicDataStorer()}{~MicDataStorer()}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+\mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::$\sim$\mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mic_data_storer_a19c0e720f70b04554ed07b8b1d00dc16}\label{class_mic_data_storer_a19c0e720f70b04554ed07b8b1d00dc16}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!add\_data@{add\_data}}
+\index{add\_data@{add\_data}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{add\_data()}{add\_data()}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+template$<$typename T $>$ \\
+bool\+\_\+t \mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::add\+\_\+data (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{const T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mic_data_storer_a1afbd4b73401839c5bdf46dc17b7523e}\label{class_mic_data_storer_a1afbd4b73401839c5bdf46dc17b7523e}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+template$<$typename... Args$>$ \\
+bool\+\_\+t \mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::get\+\_\+data (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{Args \&...}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mic_data_storer_a9f96a582373de5963e9edae613a35ae3}\label{class_mic_data_storer_a9f96a582373de5963e9edae613a35ae3}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!get\_data\_impl@{get\_data\_impl}}
+\index{get\_data\_impl@{get\_data\_impl}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{get\_data\_impl()}{get\_data\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+bool\+\_\+t \mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::get\+\_\+data\+\_\+impl (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_mic_data_storer_a10c77132fde184b602eb580f5bd7a6cf}\label{class_mic_data_storer_a10c77132fde184b602eb580f5bd7a6cf}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!get\_data\_impl@{get\_data\_impl}}
+\index{get\_data\_impl@{get\_data\_impl}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{get\_data\_impl()}{get\_data\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+template$<$typename T , typename... Rest$>$ \\
+bool\+\_\+t \mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::get\+\_\+data\+\_\+impl (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{T \&}]{data,  }\item[{Rest \&...}]{rest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_mic_data_storer_a67a60e6e25f183ce0d265d2ed5d0ce76}\label{class_mic_data_storer_a67a60e6e25f183ce0d265d2ed5d0ce76}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!get\_data\_range@{get\_data\_range}}
+\index{get\_data\_range@{get\_data\_range}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{get\_data\_range()}{get\_data\_range()}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+template$<$typename T $>$ \\
+auto \mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::get\+\_\+data\+\_\+range (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{start\+\_\+ts,  }\item[{const float64\+\_\+t}]{end\+\_\+ts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mic_data_storer_afbd350bbbdff3d6902b088e6294fd555}\label{class_mic_data_storer_afbd350bbbdff3d6902b088e6294fd555}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!get\_data\_size@{get\_data\_size}}
+\index{get\_data\_size@{get\_data\_size}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{get\_data\_size()}{get\_data\_size()}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::get\+\_\+data\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mic_data_storer_a69ecd8d42ea32c1176dc659526d079c8}\label{class_mic_data_storer_a69ecd8d42ea32c1176dc659526d079c8}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!\_data\_remain\_time@{\_data\_remain\_time}}
+\index{\_data\_remain\_time@{\_data\_remain\_time}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{\_data\_remain\_time}{\_data\_remain\_time}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+float32\+\_\+t \mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::\+\_\+data\+\_\+remain\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_mic_data_storer_a000f34939be47d61c07518f4c68653e2}\label{class_mic_data_storer_a000f34939be47d61c07518f4c68653e2}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!\_data\_storage@{\_data\_storage}}
+\index{\_data\_storage@{\_data\_storage}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{\_data\_storage}{\_data\_storage}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+std\+::tuple$<$std\+::map$<$float64\+\_\+t, Types$>$...$>$ \mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::\+\_\+data\+\_\+storage\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_mic_data_storer_a9883f3da738e12cfec2983087eeda74a}\label{class_mic_data_storer_a9883f3da738e12cfec2983087eeda74a}} 
+\index{MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}!\_time\_sync\_tolerance@{\_time\_sync\_tolerance}}
+\index{\_time\_sync\_tolerance@{\_time\_sync\_tolerance}!MicDataStorer$<$ Types $>$@{MicDataStorer$<$ Types $>$}}
+\doxysubsubsection{\texorpdfstring{\_time\_sync\_tolerance}{\_time\_sync\_tolerance}}
+{\footnotesize\ttfamily template$<$typename... Types$>$ \\
+float32\+\_\+t \mbox{\hyperlink{class_mic_data_storer}{Mic\+Data\+Storer}}$<$ Types $>$\+::\+\_\+time\+\_\+sync\+\_\+tolerance\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/data\+\_\+storer/\mbox{\hyperlink{mic__data__storer_8h}{mic\+\_\+data\+\_\+storer.\+h}}\end{DoxyCompactItemize}

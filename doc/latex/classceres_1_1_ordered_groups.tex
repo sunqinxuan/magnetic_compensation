@@ -1,0 +1,158 @@
+\hypertarget{classceres_1_1_ordered_groups}{}\doxysection{ceres\+::Ordered\+Groups$<$ T $>$ Class Template Reference}
+\label{classceres_1_1_ordered_groups}\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+
+
+{\ttfamily \#include $<$ordered\+\_\+groups.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classceres_1_1_ordered_groups_a5e44f3cf3cdf1606e76b4b264cc73973}{Add\+Element\+To\+Group}} (const T element, const int group)
+\item 
+void \mbox{\hyperlink{classceres_1_1_ordered_groups_a96a76f6b7769c3e658bef11b9c60c3f4}{Clear}} ()
+\item 
+bool \mbox{\hyperlink{classceres_1_1_ordered_groups_a976ddfee1535a46a1a4411013e414bd7}{Remove}} (const T element)
+\item 
+int \mbox{\hyperlink{classceres_1_1_ordered_groups_ae8be4058d08f0afbb1cd1fded5442368}{Remove}} (const std\+::vector$<$ T $>$ \&elements)
+\item 
+void \mbox{\hyperlink{classceres_1_1_ordered_groups_af02a8ca28d305ad2f0b4048167991660}{Reverse}} ()
+\item 
+int \mbox{\hyperlink{classceres_1_1_ordered_groups_a954e5687de3a0e02e9a870f7cc3f587b}{Group\+Id}} (const T element) const
+\item 
+bool \mbox{\hyperlink{classceres_1_1_ordered_groups_adb650fbc59eb6170b597d6627e4ff4fc}{Is\+Member}} (const T element) const
+\item 
+int \mbox{\hyperlink{classceres_1_1_ordered_groups_a538d44a73519024903fa4fc74ff03e48}{Group\+Size}} (const int group) const
+\item 
+int \mbox{\hyperlink{classceres_1_1_ordered_groups_a253f4c0792d9c3f05c9b48b60eb38dab}{Num\+Elements}} () const
+\item 
+int \mbox{\hyperlink{classceres_1_1_ordered_groups_adbc5805f2b56c99b82f5b9660bb3a69a}{Num\+Groups}} () const
+\item 
+int \mbox{\hyperlink{classceres_1_1_ordered_groups_a77e86d9e33eb38b81f74eee462405c8c}{Min\+Non\+Zero\+Group}} () const
+\item 
+const std\+::map$<$ int, \mbox{\hyperlink{_c_make_lists_8txt_a2e9ebc265f7eb0620867e76ba1736bd2}{std\+::set}}$<$ T $>$ $>$ \& \mbox{\hyperlink{classceres_1_1_ordered_groups_a594f533466f73e816d6a7b3b78662fc8}{group\+\_\+to\+\_\+elements}} () const
+\item 
+const std\+::map$<$ T, int $>$ \& \mbox{\hyperlink{classceres_1_1_ordered_groups_a87c1c1b61f72166e59dee882d0408b02}{element\+\_\+to\+\_\+group}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{_c_make_lists_8txt_a2e9ebc265f7eb0620867e76ba1736bd2}{std\+::set}}$<$ T $>$ $>$ \mbox{\hyperlink{classceres_1_1_ordered_groups_ad7ae79952f24c4902b31185d7678ae3d}{group\+\_\+to\+\_\+elements\+\_\+}}
+\item 
+std\+::map$<$ T, int $>$ \mbox{\hyperlink{classceres_1_1_ordered_groups_a99dc728e68e533a5ac339ad321d856c7}{element\+\_\+to\+\_\+group\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_a5e44f3cf3cdf1606e76b4b264cc73973}\label{classceres_1_1_ordered_groups_a5e44f3cf3cdf1606e76b4b264cc73973}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!AddElementToGroup@{AddElementToGroup}}
+\index{AddElementToGroup@{AddElementToGroup}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AddElementToGroup()}{AddElementToGroup()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Add\+Element\+To\+Group (\begin{DoxyParamCaption}\item[{const T}]{element,  }\item[{const int}]{group }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_a96a76f6b7769c3e658bef11b9c60c3f4}\label{classceres_1_1_ordered_groups_a96a76f6b7769c3e658bef11b9c60c3f4}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!Clear@{Clear}}
+\index{Clear@{Clear}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_a87c1c1b61f72166e59dee882d0408b02}\label{classceres_1_1_ordered_groups_a87c1c1b61f72166e59dee882d0408b02}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!element\_to\_group@{element\_to\_group}}
+\index{element\_to\_group@{element\_to\_group}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{element\_to\_group()}{element\_to\_group()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const std\+::map$<$T, int$>$\& \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::element\+\_\+to\+\_\+group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_a594f533466f73e816d6a7b3b78662fc8}\label{classceres_1_1_ordered_groups_a594f533466f73e816d6a7b3b78662fc8}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!group\_to\_elements@{group\_to\_elements}}
+\index{group\_to\_elements@{group\_to\_elements}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{group\_to\_elements()}{group\_to\_elements()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const std\+::map$<$int, \mbox{\hyperlink{_c_make_lists_8txt_a2e9ebc265f7eb0620867e76ba1736bd2}{std\+::set}}$<$T$>$ $>$\& \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::group\+\_\+to\+\_\+elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_a954e5687de3a0e02e9a870f7cc3f587b}\label{classceres_1_1_ordered_groups_a954e5687de3a0e02e9a870f7cc3f587b}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!GroupId@{GroupId}}
+\index{GroupId@{GroupId}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GroupId()}{GroupId()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Group\+Id (\begin{DoxyParamCaption}\item[{const T}]{element }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_a538d44a73519024903fa4fc74ff03e48}\label{classceres_1_1_ordered_groups_a538d44a73519024903fa4fc74ff03e48}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!GroupSize@{GroupSize}}
+\index{GroupSize@{GroupSize}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GroupSize()}{GroupSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Group\+Size (\begin{DoxyParamCaption}\item[{const int}]{group }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_adb650fbc59eb6170b597d6627e4ff4fc}\label{classceres_1_1_ordered_groups_adb650fbc59eb6170b597d6627e4ff4fc}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!IsMember@{IsMember}}
+\index{IsMember@{IsMember}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsMember()}{IsMember()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Is\+Member (\begin{DoxyParamCaption}\item[{const T}]{element }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_a77e86d9e33eb38b81f74eee462405c8c}\label{classceres_1_1_ordered_groups_a77e86d9e33eb38b81f74eee462405c8c}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!MinNonZeroGroup@{MinNonZeroGroup}}
+\index{MinNonZeroGroup@{MinNonZeroGroup}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MinNonZeroGroup()}{MinNonZeroGroup()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Min\+Non\+Zero\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_a253f4c0792d9c3f05c9b48b60eb38dab}\label{classceres_1_1_ordered_groups_a253f4c0792d9c3f05c9b48b60eb38dab}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!NumElements@{NumElements}}
+\index{NumElements@{NumElements}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{NumElements()}{NumElements()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Num\+Elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_adbc5805f2b56c99b82f5b9660bb3a69a}\label{classceres_1_1_ordered_groups_adbc5805f2b56c99b82f5b9660bb3a69a}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!NumGroups@{NumGroups}}
+\index{NumGroups@{NumGroups}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{NumGroups()}{NumGroups()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Num\+Groups (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_ae8be4058d08f0afbb1cd1fded5442368}\label{classceres_1_1_ordered_groups_ae8be4058d08f0afbb1cd1fded5442368}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Remove (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_a976ddfee1535a46a1a4411013e414bd7}\label{classceres_1_1_ordered_groups_a976ddfee1535a46a1a4411013e414bd7}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Remove (\begin{DoxyParamCaption}\item[{const T}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_af02a8ca28d305ad2f0b4048167991660}\label{classceres_1_1_ordered_groups_af02a8ca28d305ad2f0b4048167991660}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!Reverse@{Reverse}}
+\index{Reverse@{Reverse}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Reverse()}{Reverse()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::Reverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_a99dc728e68e533a5ac339ad321d856c7}\label{classceres_1_1_ordered_groups_a99dc728e68e533a5ac339ad321d856c7}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!element\_to\_group\_@{element\_to\_group\_}}
+\index{element\_to\_group\_@{element\_to\_group\_}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{element\_to\_group\_}{element\_to\_group\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::map$<$T, int$>$ \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::element\+\_\+to\+\_\+group\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_ordered_groups_ad7ae79952f24c4902b31185d7678ae3d}\label{classceres_1_1_ordered_groups_ad7ae79952f24c4902b31185d7678ae3d}} 
+\index{ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}!group\_to\_elements\_@{group\_to\_elements\_}}
+\index{group\_to\_elements\_@{group\_to\_elements\_}!ceres::OrderedGroups$<$ T $>$@{ceres::OrderedGroups$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{group\_to\_elements\_}{group\_to\_elements\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::map$<$int, \mbox{\hyperlink{_c_make_lists_8txt_a2e9ebc265f7eb0620867e76ba1736bd2}{std\+::set}}$<$T$>$ $>$ \mbox{\hyperlink{classceres_1_1_ordered_groups}{ceres\+::\+Ordered\+Groups}}$<$ T $>$\+::group\+\_\+to\+\_\+elements\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{ordered__groups_8h}{ordered\+\_\+groups.\+h}}\end{DoxyCompactItemize}

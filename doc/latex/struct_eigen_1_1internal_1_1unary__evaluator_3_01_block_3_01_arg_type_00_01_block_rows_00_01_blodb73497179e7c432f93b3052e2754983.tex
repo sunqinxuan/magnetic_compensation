@@ -1,0 +1,174 @@
+\hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983}{}\doxysection{Eigen\+::internal\+::unary\+\_\+evaluator$<$ Block$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, Iterator\+Based $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983}\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}
+
+
+{\ttfamily \#include $<$Sparse\+Block.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::internal\+::unary\+\_\+evaluator$<$ Block$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, Iterator\+Based $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blo435842cf4168f96e0edca55fba9a326d}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::internal\+::unary\+\_\+evaluator$<$ Block$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, Iterator\+Based $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blofb2a8ae5b473bfebdd9349dd74960f9d}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_bloc7b8c3454e32b582bbd24168a4ea19a1b}{Inner\+Vector\+Inner\+Iterator}}
+\item 
+class \mbox{\hyperlink{class_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_bloc652d26bcece9990189dc15f4df1c964f}{Outer\+Vector\+Inner\+Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a8a0bbb4f3ece721cb73dd48205eeb413}{Is\+Row\+Major}} = Xpr\+Type\+::Is\+Row\+Major, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a31d9ba5297e9f32c60263e79f476a347}{Outer\+Vector}}, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a4fc693f2b4702215cf856b691d3d447a}{Coeff\+Read\+Cost}} = evaluator$<$Arg\+Type$>$\+::Coeff\+Read\+Cost, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a8ac7eec994c0cdb90b5e7df783b39379}{Flags}} = Xpr\+Type\+::Flags
+ \}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ad42e6673d3294b8e964679ffb0a236be}{Xpr\+Type}}
+\item 
+typedef Xpr\+Type\+::\+Storage\+Index \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_abc7a6c8fa3b1b8dfc1292e99b66bf2b6}{Storage\+Index}}
+\item 
+typedef Xpr\+Type\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ac1a5335a94b733ec121bd99fe5296f4b}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{internal\+::conditional}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a31d9ba5297e9f32c60263e79f476a347}{Outer\+Vector}}, Outer\+Vector\+Inner\+Iterator, Inner\+Vector\+Inner\+Iterator $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a2dc3e0d38916135df8eeac6cf18203fb}{Inner\+Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a60f6106b40381d37c8bef793ac0b9bdb}{unary\+\_\+evaluator}} (const \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ad42e6673d3294b8e964679ffb0a236be}{Xpr\+Type}} \&op)
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a8ba2f6d99ab98b5955178cefa2c90e50}{non\+Zeros\+Estimate}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$ Arg\+Type $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a2dc3e0d38916135df8eeac6cf18203fb}{Inner\+Iterator}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4dbf4d167a0970ef1d83f5dd3d30f044}{Eval\+Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$ Arg\+Type $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a7bce0ea2705db61efb1d55c086837236}{m\+\_\+arg\+Impl}}
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ad42e6673d3294b8e964679ffb0a236be}{Xpr\+Type}} \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a7fe6d200d82df7b7f586e12753265592}{m\+\_\+block}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4dbf4d167a0970ef1d83f5dd3d30f044}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4dbf4d167a0970ef1d83f5dd3d30f044}} 
+\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!EvalIterator@{EvalIterator}}
+\index{EvalIterator@{EvalIterator}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}
+\doxysubsubsection{\texorpdfstring{EvalIterator}{EvalIterator}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , int Block\+Rows, int Block\+Cols, bool Inner\+Panel$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$Arg\+Type$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a2dc3e0d38916135df8eeac6cf18203fb}{Inner\+Iterator}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator}{Eigen\+::internal\+::unary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4dbf4d167a0970ef1d83f5dd3d30f044}{Eval\+Iterator}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a2dc3e0d38916135df8eeac6cf18203fb}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a2dc3e0d38916135df8eeac6cf18203fb}} 
+\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!InnerIterator@{InnerIterator}}
+\index{InnerIterator@{InnerIterator}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}
+\doxysubsubsection{\texorpdfstring{InnerIterator}{InnerIterator}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , int Block\+Rows, int Block\+Cols, bool Inner\+Panel$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{internal\+::conditional}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a31d9ba5297e9f32c60263e79f476a347}{Outer\+Vector}},Outer\+Vector\+Inner\+Iterator,Inner\+Vector\+Inner\+Iterator$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator}{Eigen\+::internal\+::unary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a2dc3e0d38916135df8eeac6cf18203fb}{Inner\+Iterator}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ac1a5335a94b733ec121bd99fe5296f4b}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ac1a5335a94b733ec121bd99fe5296f4b}} 
+\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , int Block\+Rows, int Block\+Cols, bool Inner\+Panel$>$ \\
+typedef Xpr\+Type\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator}{Eigen\+::internal\+::unary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ac1a5335a94b733ec121bd99fe5296f4b}{Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_abc7a6c8fa3b1b8dfc1292e99b66bf2b6}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_abc7a6c8fa3b1b8dfc1292e99b66bf2b6}} 
+\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , int Block\+Rows, int Block\+Cols, bool Inner\+Panel$>$ \\
+typedef Xpr\+Type\+::\+Storage\+Index \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator}{Eigen\+::internal\+::unary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_abc7a6c8fa3b1b8dfc1292e99b66bf2b6}{Storage\+Index}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ad42e6673d3294b8e964679ffb0a236be}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ad42e6673d3294b8e964679ffb0a236be}} 
+\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!XprType@{XprType}}
+\index{XprType@{XprType}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}
+\doxysubsubsection{\texorpdfstring{XprType}{XprType}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , int Block\+Rows, int Block\+Cols, bool Inner\+Panel$>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$Arg\+Type,Block\+Rows,Block\+Cols,Inner\+Panel$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator}{Eigen\+::internal\+::unary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ad42e6673d3294b8e964679ffb0a236be}{Xpr\+Type}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , int Block\+Rows, int Block\+Cols, bool Inner\+Panel$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsRowMajor@{IsRowMajor}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!IsRowMajor@{IsRowMajor}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a8a0bbb4f3ece721cb73dd48205eeb413}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a8a0bbb4f3ece721cb73dd48205eeb413}} 
+Is\+Row\+Major&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OuterVector@{OuterVector}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!OuterVector@{OuterVector}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a31d9ba5297e9f32c60263e79f476a347}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a31d9ba5297e9f32c60263e79f476a347}} 
+Outer\+Vector&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CoeffReadCost@{CoeffReadCost}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!CoeffReadCost@{CoeffReadCost}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a4fc693f2b4702215cf856b691d3d447a}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a4fc693f2b4702215cf856b691d3d447a}} 
+Coeff\+Read\+Cost&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a8ac7eec994c0cdb90b5e7df783b39379}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a4265cc6d901fcb65814f20e6420b5cb5a8ac7eec994c0cdb90b5e7df783b39379}} 
+Flags&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a60f6106b40381d37c8bef793ac0b9bdb}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a60f6106b40381d37c8bef793ac0b9bdb}} 
+\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!unary\_evaluator@{unary\_evaluator}}
+\index{unary\_evaluator@{unary\_evaluator}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}
+\doxysubsubsection{\texorpdfstring{unary\_evaluator()}{unary\_evaluator()}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , int Block\+Rows, int Block\+Cols, bool Inner\+Panel$>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator}{Eigen\+::internal\+::unary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator}{unary\+\_\+evaluator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ad42e6673d3294b8e964679ffb0a236be}{Xpr\+Type}} \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a8ba2f6d99ab98b5955178cefa2c90e50}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a8ba2f6d99ab98b5955178cefa2c90e50}} 
+\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!nonZerosEstimate@{nonZerosEstimate}}
+\index{nonZerosEstimate@{nonZerosEstimate}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}
+\doxysubsubsection{\texorpdfstring{nonZerosEstimate()}{nonZerosEstimate()}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , int Block\+Rows, int Block\+Cols, bool Inner\+Panel$>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator}{Eigen\+::internal\+::unary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}} $>$\+::non\+Zeros\+Estimate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a7bce0ea2705db61efb1d55c086837236}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a7bce0ea2705db61efb1d55c086837236}} 
+\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!m\_argImpl@{m\_argImpl}}
+\index{m\_argImpl@{m\_argImpl}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}
+\doxysubsubsection{\texorpdfstring{m\_argImpl}{m\_argImpl}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , int Block\+Rows, int Block\+Cols, bool Inner\+Panel$>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$Arg\+Type$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator}{Eigen\+::internal\+::unary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}} $>$\+::m\+\_\+arg\+Impl\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a7fe6d200d82df7b7f586e12753265592}\label{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_a7fe6d200d82df7b7f586e12753265592}} 
+\index{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}!m\_block@{m\_block}}
+\index{m\_block@{m\_block}!Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$@{Eigen::internal::unary\_evaluator$<$ Block$<$ ArgType, BlockRows, BlockCols, InnerPanel $>$, IteratorBased $>$}}
+\doxysubsubsection{\texorpdfstring{m\_block}{m\_block}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , int Block\+Rows, int Block\+Cols, bool Inner\+Panel$>$ \\
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator_3_01_block_3_01_arg_type_00_01_block_rows_00_01_blodb73497179e7c432f93b3052e2754983_ad42e6673d3294b8e964679ffb0a236be}{Xpr\+Type}}\& \mbox{\hyperlink{struct_eigen_1_1internal_1_1unary__evaluator}{Eigen\+::internal\+::unary\+\_\+evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_block}{Block}}$<$ Arg\+Type, Block\+Rows, Block\+Cols, Inner\+Panel $>$, \mbox{\hyperlink{struct_eigen_1_1internal_1_1_iterator_based}{Iterator\+Based}} $>$\+::m\+\_\+block\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Sparse\+Core/\mbox{\hyperlink{_sparse_block_8h}{Sparse\+Block.\+h}}\end{DoxyCompactItemize}

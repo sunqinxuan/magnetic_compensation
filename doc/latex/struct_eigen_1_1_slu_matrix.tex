@@ -1,0 +1,155 @@
+\hypertarget{struct_eigen_1_1_slu_matrix}{}\doxysection{Eigen\+::Slu\+Matrix Struct Reference}
+\label{struct_eigen_1_1_slu_matrix}\index{Eigen::SluMatrix@{Eigen::SluMatrix}}
+
+
+{\ttfamily \#include $<$Super\+L\+U\+Support.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Slu\+Matrix\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{struct_eigen_1_1_slu_matrix__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Slu\+Matrix\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{struct_eigen_1_1_slu_matrix__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_slu_matrix_a4b4258279bdca54d64063460c9fce130}{Slu\+Matrix}} ()
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_slu_matrix_a60e084a9e9a1d1dfffb12e70aaf1bc09}{Slu\+Matrix}} (const \mbox{\hyperlink{struct_eigen_1_1_slu_matrix}{Slu\+Matrix}} \&other)
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_slu_matrix}{Slu\+Matrix}} \& \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_a1f80eca52f85117e3b3afa29cb4ee332}{operator=}} (const \mbox{\hyperlink{struct_eigen_1_1_slu_matrix}{Slu\+Matrix}} \&other)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_ae36a82e01409ad0c3cbbf5847c096f0b}{set\+Storage\+Type}} (Stype\+\_\+t t)
+\item 
+{\footnotesize template$<$typename Scalar $>$ }\\void \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_a77c5ddf8fd6cfb5314f937976046cf46}{set\+Scalar\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Matrix\+Type $>$ }\\static \mbox{\hyperlink{struct_eigen_1_1_slu_matrix}{Slu\+Matrix}} \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_aed2b1c36eb8e9c1c6725d5dc2e699dfd}{Map}} (\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Matrix\+Type $>$ \&\+\_\+mat)
+\item 
+{\footnotesize template$<$typename Matrix\+Type $>$ }\\static \mbox{\hyperlink{struct_eigen_1_1_slu_matrix}{Slu\+Matrix}} \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_a6df11803cf163f9e04ac2a5ff9790583}{Map}} (\mbox{\hyperlink{class_eigen_1_1_sparse_matrix_base}{Sparse\+Matrix\+Base}}$<$ Matrix\+Type $>$ \&a\+\_\+mat)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>union \{\\
+\>\>int \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_aba53ec49b23daec5741e52b97b19b048}{nnz}}\\
+\>\>int \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_ab680540b525fe5b4d87b095c3bf5f8a1}{lda}}\\
+\>\} \\
+\>void $\ast$ \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_a1f5129eaf0eeb5b766062c926251c498}{values}}\\
+\>int $\ast$ \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_adfce3df739550864e737bcc9cbb7097f}{innerInd}}\\
+\>int $\ast$ \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_ad82392a0b41da273aa3f1b6dd61daff1}{outerInd}}\\
+\} \mbox{\hyperlink{struct_eigen_1_1_slu_matrix_a2bcb041af926e0c0fbdecced5a638c5b}{storage}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_a4b4258279bdca54d64063460c9fce130}\label{struct_eigen_1_1_slu_matrix_a4b4258279bdca54d64063460c9fce130}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!SluMatrix@{SluMatrix}}
+\index{SluMatrix@{SluMatrix}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{SluMatrix()}{SluMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Slu\+Matrix\+::\+Slu\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_a60e084a9e9a1d1dfffb12e70aaf1bc09}\label{struct_eigen_1_1_slu_matrix_a60e084a9e9a1d1dfffb12e70aaf1bc09}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!SluMatrix@{SluMatrix}}
+\index{SluMatrix@{SluMatrix}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{SluMatrix()}{SluMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Slu\+Matrix\+::\+Slu\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1_slu_matrix}{Slu\+Matrix}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_aed2b1c36eb8e9c1c6725d5dc2e699dfd}\label{struct_eigen_1_1_slu_matrix_aed2b1c36eb8e9c1c6725d5dc2e699dfd}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!Map@{Map}}
+\index{Map@{Map}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+static \mbox{\hyperlink{struct_eigen_1_1_slu_matrix}{Slu\+Matrix}} Eigen\+::\+Slu\+Matrix\+::\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Matrix\+Type $>$ \&}]{\+\_\+mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_a6df11803cf163f9e04ac2a5ff9790583}\label{struct_eigen_1_1_slu_matrix_a6df11803cf163f9e04ac2a5ff9790583}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!Map@{Map}}
+\index{Map@{Map}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+static \mbox{\hyperlink{struct_eigen_1_1_slu_matrix}{Slu\+Matrix}} Eigen\+::\+Slu\+Matrix\+::\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_sparse_matrix_base}{Sparse\+Matrix\+Base}}$<$ Matrix\+Type $>$ \&}]{a\+\_\+mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_a1f80eca52f85117e3b3afa29cb4ee332}\label{struct_eigen_1_1_slu_matrix_a1f80eca52f85117e3b3afa29cb4ee332}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!operator=@{operator=}}
+\index{operator=@{operator=}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_eigen_1_1_slu_matrix}{Slu\+Matrix}}\& Eigen\+::\+Slu\+Matrix\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1_slu_matrix}{Slu\+Matrix}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_a77c5ddf8fd6cfb5314f937976046cf46}\label{struct_eigen_1_1_slu_matrix_a77c5ddf8fd6cfb5314f937976046cf46}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!setScalarType@{setScalarType}}
+\index{setScalarType@{setScalarType}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{setScalarType()}{setScalarType()}}
+{\footnotesize\ttfamily template$<$typename Scalar $>$ \\
+void Eigen\+::\+Slu\+Matrix\+::set\+Scalar\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_ae36a82e01409ad0c3cbbf5847c096f0b}\label{struct_eigen_1_1_slu_matrix_ae36a82e01409ad0c3cbbf5847c096f0b}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!setStorageType@{setStorageType}}
+\index{setStorageType@{setStorageType}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{setStorageType()}{setStorageType()}}
+{\footnotesize\ttfamily void Eigen\+::\+Slu\+Matrix\+::set\+Storage\+Type (\begin{DoxyParamCaption}\item[{Stype\+\_\+t}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_adfce3df739550864e737bcc9cbb7097f}\label{struct_eigen_1_1_slu_matrix_adfce3df739550864e737bcc9cbb7097f}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!innerInd@{innerInd}}
+\index{innerInd@{innerInd}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{innerInd}{innerInd}}
+{\footnotesize\ttfamily int$\ast$ Eigen\+::\+Slu\+Matrix\+::inner\+Ind}
+
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_ab680540b525fe5b4d87b095c3bf5f8a1}\label{struct_eigen_1_1_slu_matrix_ab680540b525fe5b4d87b095c3bf5f8a1}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!lda@{lda}}
+\index{lda@{lda}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{lda}{lda}}
+{\footnotesize\ttfamily int Eigen\+::\+Slu\+Matrix\+::lda}
+
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_aba53ec49b23daec5741e52b97b19b048}\label{struct_eigen_1_1_slu_matrix_aba53ec49b23daec5741e52b97b19b048}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!nnz@{nnz}}
+\index{nnz@{nnz}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{nnz}{nnz}}
+{\footnotesize\ttfamily int Eigen\+::\+Slu\+Matrix\+::nnz}
+
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_ad82392a0b41da273aa3f1b6dd61daff1}\label{struct_eigen_1_1_slu_matrix_ad82392a0b41da273aa3f1b6dd61daff1}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!outerInd@{outerInd}}
+\index{outerInd@{outerInd}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{outerInd}{outerInd}}
+{\footnotesize\ttfamily int$\ast$ Eigen\+::\+Slu\+Matrix\+::outer\+Ind}
+
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_a2bcb041af926e0c0fbdecced5a638c5b}\label{struct_eigen_1_1_slu_matrix_a2bcb041af926e0c0fbdecced5a638c5b}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!storage@{storage}}
+\index{storage@{storage}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{storage}{storage}}
+{\footnotesize\ttfamily struct \{ ... \}  Eigen\+::\+Slu\+Matrix\+::storage}
+
+\mbox{\Hypertarget{struct_eigen_1_1_slu_matrix_a1f5129eaf0eeb5b766062c926251c498}\label{struct_eigen_1_1_slu_matrix_a1f5129eaf0eeb5b766062c926251c498}} 
+\index{Eigen::SluMatrix@{Eigen::SluMatrix}!values@{values}}
+\index{values@{values}!Eigen::SluMatrix@{Eigen::SluMatrix}}
+\doxysubsubsection{\texorpdfstring{values}{values}}
+{\footnotesize\ttfamily void$\ast$ Eigen\+::\+Slu\+Matrix\+::values}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Super\+L\+U\+Support/\mbox{\hyperlink{_super_l_u_support_8h}{Super\+L\+U\+Support.\+h}}\end{DoxyCompactItemize}

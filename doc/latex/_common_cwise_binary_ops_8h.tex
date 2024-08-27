@@ -1,0 +1,110 @@
+\hypertarget{_common_cwise_binary_ops_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/plugins/\+Common\+Cwise\+Binary\+Ops.h File Reference}
+\label{_common_cwise_binary_ops_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/plugins/CommonCwiseBinaryOps.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/plugins/CommonCwiseBinaryOps.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_common_cwise_binary_ops_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Custom\+Binary\+Op , typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$ Custom\+Binary\+Op, const Derived, const Other\+Derived $>$ \mbox{\hyperlink{_common_cwise_binary_ops_8h_acb4534facc729e7502c9f2420523d0ed}{binary\+Expr}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other, const Custom\+Binary\+Op \&func=Custom\+Binary\+Op()) const
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+boolean\+\_\+and\+\_\+op, const Derived, const Other\+Derived $>$ \mbox{\hyperlink{_common_cwise_binary_ops_8h_a389d242eaf451d33c6ea101c0295a4f3}{operator\&\&}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+boolean\+\_\+or\+\_\+op, const Derived, const Other\+Derived $>$ \mbox{\hyperlink{_common_cwise_binary_ops_8h_abfd797c1c1788aec09b76c6281444814}{operator$\vert$$\vert$}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_common_cwise_binary_ops_8h_acb4534facc729e7502c9f2420523d0ed}\label{_common_cwise_binary_ops_8h_acb4534facc729e7502c9f2420523d0ed}} 
+\index{CommonCwiseBinaryOps.h@{CommonCwiseBinaryOps.h}!binaryExpr@{binaryExpr}}
+\index{binaryExpr@{binaryExpr}!CommonCwiseBinaryOps.h@{CommonCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{binaryExpr()}{binaryExpr()}}
+{\footnotesize\ttfamily template$<$typename Custom\+Binary\+Op , typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$Custom\+Binary\+Op, const Derived, const Other\+Derived$>$ binary\+Expr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&}]{other,  }\item[{const Custom\+Binary\+Op \&}]{func = {\ttfamily CustomBinaryOp()} }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+an expression of the difference of {\ttfamily $\ast$this} and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If you want to substract a given scalar from all coefficients, see Cwise\+::operator-\/().
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+class Cwise\+Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1half__impl_a25cc6afed9e35653f69e66ecbc602820}{operator-\/=()}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of the sum of {\ttfamily $\ast$this} and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If you want to add a given scalar to all coefficients, see \mbox{\hyperlink{namespaceceres_a5bebf8f2b1d622dec054ce176700e0a4}{Cwise\+::operator+()}}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+class Cwise\+Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1half__impl_ad45d7633656144c5d6a6aebae50d6535}{operator+=()}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of a custom coefficient-\/wise operator {\itshape func} of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+The template parameter {\itshape Custom\+Binary\+Op} is the type of the functor of the custom operator (see class Cwise\+Binary\+Op for an example)
+
+Here is an example illustrating the use of custom functors\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+class Cwise\+Binary\+Op, \mbox{\hyperlink{namespaceceres_a5bebf8f2b1d622dec054ce176700e0a4}{operator+()}}, \mbox{\hyperlink{_common_cwise_unary_ops_8h_acf27c8aabc3a01a393804f207a8a8496}{operator-\/()}}, cwise\+Product() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_common_cwise_binary_ops_8h_a389d242eaf451d33c6ea101c0295a4f3}\label{_common_cwise_binary_ops_8h_a389d242eaf451d33c6ea101c0295a4f3}} 
+\index{CommonCwiseBinaryOps.h@{CommonCwiseBinaryOps.h}!operator\&\&@{operator\&\&}}
+\index{operator\&\&@{operator\&\&}!CommonCwiseBinaryOps.h@{CommonCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{operator\&\&()}{operator\&\&()}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+boolean\+\_\+and\+\_\+op, const Derived, const Other\+Derived$>$ operator\&\& (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise boolean {\bfseries{and}} operator of {\ttfamily $\ast$this} and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+this operator is for expression of bool only.
+\end{DoxyWarning}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_common_cwise_binary_ops_8h_abfd797c1c1788aec09b76c6281444814}{operator$\vert$$\vert$()}}, select() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_common_cwise_binary_ops_8h_abfd797c1c1788aec09b76c6281444814}\label{_common_cwise_binary_ops_8h_abfd797c1c1788aec09b76c6281444814}} 
+\index{CommonCwiseBinaryOps.h@{CommonCwiseBinaryOps.h}!operator\texttt{"|}\texttt{"|}@{operator\texttt{"|}\texttt{"|}}}
+\index{operator\texttt{"|}\texttt{"|}@{operator\texttt{"|}\texttt{"|}}!CommonCwiseBinaryOps.h@{CommonCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{operator\texttt{"|}\texttt{"|}()}{operator||()}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+boolean\+\_\+or\+\_\+op, const Derived, const Other\+Derived$>$ operator$\vert$$\vert$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise boolean {\bfseries{or}} operator of {\ttfamily $\ast$this} and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+this operator is for expression of bool only.
+\end{DoxyWarning}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_common_cwise_binary_ops_8h_a389d242eaf451d33c6ea101c0295a4f3}{operator\&\&()}}, select() 
+\end{DoxySeeAlso}

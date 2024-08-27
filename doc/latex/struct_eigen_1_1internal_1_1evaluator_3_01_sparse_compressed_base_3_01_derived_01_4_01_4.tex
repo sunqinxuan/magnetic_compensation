@@ -1,0 +1,192 @@
+\hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4}{}\doxysection{Eigen\+::internal\+::evaluator$<$ Sparse\+Compressed\+Base$<$ Derived $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4}\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+
+
+{\ttfamily \#include $<$Sparse\+Compressed\+Base.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::internal\+::evaluator$<$ Sparse\+Compressed\+Base$<$ Derived $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::internal\+::evaluator$<$ Sparse\+Compressed\+Base$<$ Derived $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a86b15018ee31abdc5ce64dfd15c4c31da94525701f5fa9ec42bc85307b905250d}{Coeff\+Read\+Cost}} = Num\+Traits$<$Scalar$>$\+::Read\+Cost, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a86b15018ee31abdc5ce64dfd15c4c31da0b41e4b4d1f1ca55ed2f539b587a8bc2}{Flags}} = Derived\+::Flags
+ \}
+\item 
+typedef Derived\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a0ee9c4e4302545da033cb6574a92b0c5}{Scalar}}
+\item 
+typedef Derived\+::\+Inner\+Iterator \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_abc5d24ea2cacb1f9fa79e7e936e70816}{Inner\+Iterator}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a6a09f2251fbe97b764aedfe9a05a19d7}{Coeff\+Return\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a6a09f2251fbe97b764aedfe9a05a19d7}{Coeff\+Return\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a61fd3fc8ac9cb31ac6cc8a3b1d0a9673}{evaluator}} ()
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a8966591401961c5fca4e62c2b8528e64}{evaluator}} (const Derived \&mat)
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a74c6ee3163e15762c0db29c1b7b4e713}{non\+Zeros\+Estimate}} () const
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_ab4e0103cff2c817eb14041310678f803}{operator Derived \&}} ()
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a9cf03d1ff5caf19c5d09c5302cad0247}{operator const Derived \&}} () const
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a0ee9c4e4302545da033cb6574a92b0c5}{Scalar}} \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a63fb9cb11ea2851c27a6216b31338c52}{coeff}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a0ee9c4e4302545da033cb6574a92b0c5}{Scalar}} \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_aca6df0008fe8db31ad15d21777ac88ca}{coeff\+Ref}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a4c68f588a99a46a47ee5b3f75f3a5bf8}{find}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Derived $\ast$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a7ade0dc31f165f3a986b6b071fb8bc58}{m\+\_\+matrix}}
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a0ee9c4e4302545da033cb6574a92b0c5}{Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_aae5203679f27d57f812976ee83afc227}{m\+\_\+zero}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a6a09f2251fbe97b764aedfe9a05a19d7}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a6a09f2251fbe97b764aedfe9a05a19d7}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Dense\+Coeffs\+Base}}$<$Derived,\mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a6a09f2251fbe97b764aedfe9a05a19d7}{Coeff\+Return\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a6a09f2251fbe97b764aedfe9a05a19d7}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_abc5d24ea2cacb1f9fa79e7e936e70816}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_abc5d24ea2cacb1f9fa79e7e936e70816}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!InnerIterator@{InnerIterator}}
+\index{InnerIterator@{InnerIterator}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{InnerIterator}{InnerIterator}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef Derived\+::\+Inner\+Iterator \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_abc5d24ea2cacb1f9fa79e7e936e70816}{Inner\+Iterator}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a0ee9c4e4302545da033cb6574a92b0c5}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a0ee9c4e4302545da033cb6574a92b0c5}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef Derived\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a0ee9c4e4302545da033cb6574a92b0c5}{Scalar}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a86b15018ee31abdc5ce64dfd15c4c31d}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a86b15018ee31abdc5ce64dfd15c4c31d}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CoeffReadCost@{CoeffReadCost}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!CoeffReadCost@{CoeffReadCost}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a86b15018ee31abdc5ce64dfd15c4c31da94525701f5fa9ec42bc85307b905250d}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a86b15018ee31abdc5ce64dfd15c4c31da94525701f5fa9ec42bc85307b905250d}} 
+Coeff\+Read\+Cost&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a86b15018ee31abdc5ce64dfd15c4c31da0b41e4b4d1f1ca55ed2f539b587a8bc2}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a86b15018ee31abdc5ce64dfd15c4c31da0b41e4b4d1f1ca55ed2f539b587a8bc2}} 
+Flags&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a61fd3fc8ac9cb31ac6cc8a3b1d0a9673}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a61fd3fc8ac9cb31ac6cc8a3b1d0a9673}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!evaluator@{evaluator}}
+\index{evaluator@{evaluator}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{evaluator()}{evaluator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a8966591401961c5fca4e62c2b8528e64}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a8966591401961c5fca4e62c2b8528e64}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!evaluator@{evaluator}}
+\index{evaluator@{evaluator}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{evaluator()}{evaluator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}} (\begin{DoxyParamCaption}\item[{const Derived \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a63fb9cb11ea2851c27a6216b31338c52}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a63fb9cb11ea2851c27a6216b31338c52}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a0ee9c4e4302545da033cb6574a92b0c5}{Scalar}}\& \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_aca6df0008fe8db31ad15d21777ac88ca}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_aca6df0008fe8db31ad15d21777ac88ca}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!coeffRef@{coeffRef}}
+\index{coeffRef@{coeffRef}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{coeffRef()}{coeffRef()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a0ee9c4e4302545da033cb6574a92b0c5}{Scalar}}\& \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::coeff\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a4c68f588a99a46a47ee5b3f75f3a5bf8}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a4c68f588a99a46a47ee5b3f75f3a5bf8}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!find@{find}}
+\index{find@{find}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a74c6ee3163e15762c0db29c1b7b4e713}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a74c6ee3163e15762c0db29c1b7b4e713}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!nonZerosEstimate@{nonZerosEstimate}}
+\index{nonZerosEstimate@{nonZerosEstimate}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{nonZerosEstimate()}{nonZerosEstimate()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::non\+Zeros\+Estimate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a9cf03d1ff5caf19c5d09c5302cad0247}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a9cf03d1ff5caf19c5d09c5302cad0247}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!operator const Derived \&@{operator const Derived \&}}
+\index{operator const Derived \&@{operator const Derived \&}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{operator const Derived \&()}{operator const Derived \&()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::operator const Derived \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_ab4e0103cff2c817eb14041310678f803}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_ab4e0103cff2c817eb14041310678f803}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!operator Derived \&@{operator Derived \&}}
+\index{operator Derived \&@{operator Derived \&}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{operator Derived \&()}{operator Derived \&()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::operator Derived \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a7ade0dc31f165f3a986b6b071fb8bc58}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a7ade0dc31f165f3a986b6b071fb8bc58}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!m\_matrix@{m\_matrix}}
+\index{m\_matrix@{m\_matrix}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{m\_matrix}{m\_matrix}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+const Derived$\ast$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::m\+\_\+matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_aae5203679f27d57f812976ee83afc227}\label{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_aae5203679f27d57f812976ee83afc227}} 
+\index{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}!m\_zero@{m\_zero}}
+\index{m\_zero@{m\_zero}!Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$@{Eigen::internal::evaluator$<$ SparseCompressedBase$<$ Derived $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{m\_zero}{m\_zero}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_sparse_compressed_base_3_01_derived_01_4_01_4_a0ee9c4e4302545da033cb6574a92b0c5}{Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}}$<$ Derived $>$ $>$\+::m\+\_\+zero\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Sparse\+Core/\mbox{\hyperlink{_sparse_compressed_base_8h}{Sparse\+Compressed\+Base.\+h}}\end{DoxyCompactItemize}

@@ -24,6 +24,7 @@
 #define MAGNAV_MAGCMP_TL_HPP_
 
 #include <Eigen/Dense>
+#include <Eigen/Eigenvalues>
 #include <unordered_set>
 #include <vector>
 #include <numeric>
@@ -125,9 +126,7 @@ namespace tl
 
     double rmse(const std::vector<double> &residual);
 
-    // void getFilterCoeffAB(int n, double lowcut, double highcut, int fs,
-    //                      std::vector<double> &acof_vec,
-    //                      std::vector<double> &bcof_vec);
+    void degeneration(const std::vector<std::vector<double>> &TL_A);
 
   private:
     // A -  Tolles-Lawson `A` matrix
@@ -154,4 +153,5 @@ namespace tl
     // std::vector<double> Bz_dot;
   };
 } // namespace magnav
+
 #endif

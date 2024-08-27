@@ -1,0 +1,168 @@
+\hypertarget{class_eigen_1_1_tensor_scan_op}{}\doxysection{Eigen\+::Tensor\+Scan\+Op$<$ Op, Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_tensor_scan_op}\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Forward\+Declarations.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a4729aae7a2a4bfa4b28c6a3e0cf057bc}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a4729aae7a2a4bfa4b28c6a3e0cf057bc}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a4729aae7a2a4bfa4b28c6a3e0cf057bc}{Scalar}} $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a8288bbf4fee44b48216a4f474e232cdb}{Real\+Scalar}}
+\item 
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a13b25e77a08992deabbd320172044e79}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a1c30340cc47c0e0066f1daa24ee8a656}{Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a291ad6ceb9b864bd67712e00efd5115f}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a291ad6ceb9b864bd67712e00efd5115f}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a9d0da3b1613efca99fe444c1c4c4f50d}{Tensor\+Scan\+Op}} (const Xpr\+Type \&expr, const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Index}} \&\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a25038654330d34eb8ee564af23bb486c}{axis}}, bool \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a8d3a0a38b3835e8644ed2f68a852e6c8}{exclusive}}=\mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}, const Op \&op=Op())
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a25038654330d34eb8ee564af23bb486c}{axis}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Xpr\+Type \& \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_aaa80317b0b1d955088e5f5db693816c3}{expression}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Op \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a2f6065e31dda8abf6b9faefece0d979f}{accumulator}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} bool \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a8d3a0a38b3835e8644ed2f68a852e6c8}{exclusive}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a53f92e1d598f2edff80aba2b92d97c28}{m\+\_\+expr}}
+\item 
+const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_adce5b10a72e11e9fc1df9f06d399c257}{m\+\_\+axis}}
+\item 
+const Op \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a8622909f2e97fc080c19bbdc3301e3f5}{m\+\_\+accumulator}}
+\item 
+const bool \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a1c33b98ff834d01b0593d5fe43990c42}{m\+\_\+exclusive}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a13b25e77a08992deabbd320172044e79}\label{class_eigen_1_1_tensor_scan_op_a13b25e77a08992deabbd320172044e79}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a13b25e77a08992deabbd320172044e79}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}\label{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a1c30340cc47c0e0066f1daa24ee8a656}\label{class_eigen_1_1_tensor_scan_op_a1c30340cc47c0e0066f1daa24ee8a656}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a1c30340cc47c0e0066f1daa24ee8a656}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a8288bbf4fee44b48216a4f474e232cdb}\label{class_eigen_1_1_tensor_scan_op_a8288bbf4fee44b48216a4f474e232cdb}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a4729aae7a2a4bfa4b28c6a3e0cf057bc}{Scalar}}$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a8288bbf4fee44b48216a4f474e232cdb}{Real\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a4729aae7a2a4bfa4b28c6a3e0cf057bc}\label{class_eigen_1_1_tensor_scan_op_a4729aae7a2a4bfa4b28c6a3e0cf057bc}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a4729aae7a2a4bfa4b28c6a3e0cf057bc}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a4729aae7a2a4bfa4b28c6a3e0cf057bc}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a291ad6ceb9b864bd67712e00efd5115f}\label{class_eigen_1_1_tensor_scan_op_a291ad6ceb9b864bd67712e00efd5115f}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a291ad6ceb9b864bd67712e00efd5115f}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a291ad6ceb9b864bd67712e00efd5115f}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a9d0da3b1613efca99fe444c1c4c4f50d}\label{class_eigen_1_1_tensor_scan_op_a9d0da3b1613efca99fe444c1c4c4f50d}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!TensorScanOp@{TensorScanOp}}
+\index{TensorScanOp@{TensorScanOp}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{TensorScanOp()}{TensorScanOp()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}} (\begin{DoxyParamCaption}\item[{const Xpr\+Type \&}]{expr,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Index}} \&}]{axis,  }\item[{bool}]{exclusive = {\ttfamily \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}},  }\item[{const Op \&}]{op = {\ttfamily Op()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a2f6065e31dda8abf6b9faefece0d979f}\label{class_eigen_1_1_tensor_scan_op_a2f6065e31dda8abf6b9faefece0d979f}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!accumulator@{accumulator}}
+\index{accumulator@{accumulator}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{accumulator()}{accumulator()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Op \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::accumulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a25038654330d34eb8ee564af23bb486c}\label{class_eigen_1_1_tensor_scan_op_a25038654330d34eb8ee564af23bb486c}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!axis@{axis}}
+\index{axis@{axis}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{axis()}{axis()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a8d3a0a38b3835e8644ed2f68a852e6c8}\label{class_eigen_1_1_tensor_scan_op_a8d3a0a38b3835e8644ed2f68a852e6c8}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!exclusive@{exclusive}}
+\index{exclusive@{exclusive}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{exclusive()}{exclusive()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} bool \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::exclusive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_aaa80317b0b1d955088e5f5db693816c3}\label{class_eigen_1_1_tensor_scan_op_aaa80317b0b1d955088e5f5db693816c3}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!expression@{expression}}
+\index{expression@{expression}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{expression()}{expression()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Xpr\+Type\& \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a8622909f2e97fc080c19bbdc3301e3f5}\label{class_eigen_1_1_tensor_scan_op_a8622909f2e97fc080c19bbdc3301e3f5}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!m\_accumulator@{m\_accumulator}}
+\index{m\_accumulator@{m\_accumulator}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_accumulator}{m\_accumulator}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+const Op \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::m\+\_\+accumulator\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_adce5b10a72e11e9fc1df9f06d399c257}\label{class_eigen_1_1_tensor_scan_op_adce5b10a72e11e9fc1df9f06d399c257}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!m\_axis@{m\_axis}}
+\index{m\_axis@{m\_axis}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_axis}{m\_axis}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::m\+\_\+axis\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a1c33b98ff834d01b0593d5fe43990c42}\label{class_eigen_1_1_tensor_scan_op_a1c33b98ff834d01b0593d5fe43990c42}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!m\_exclusive@{m\_exclusive}}
+\index{m\_exclusive@{m\_exclusive}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_exclusive}{m\_exclusive}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+const bool \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::m\+\_\+exclusive\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_scan_op_a53f92e1d598f2edff80aba2b92d97c28}\label{class_eigen_1_1_tensor_scan_op_a53f92e1d598f2edff80aba2b92d97c28}} 
+\index{Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}!m\_expr@{m\_expr}}
+\index{m\_expr@{m\_expr}!Eigen::TensorScanOp$<$ Op, XprType $>$@{Eigen::TensorScanOp$<$ Op, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_expr}{m\_expr}}
+{\footnotesize\ttfamily template$<$typename Op , typename Xpr\+Type $>$ \\
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Eigen\+::\+Tensor\+Scan\+Op}}$<$ Op, Xpr\+Type $>$\+::m\+\_\+expr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_forward_declarations_8h}{Tensor\+Forward\+Declarations.\+h}}\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_scan_8h}{Tensor\+Scan.\+h}}\end{DoxyCompactItemize}

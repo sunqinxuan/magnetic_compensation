@@ -1,0 +1,230 @@
+\hypertarget{_static_assert_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Core/util/\+Static\+Assert.h File Reference}
+\label{_static_assert_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/Core/util/StaticAssert.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/Core/util/StaticAssert.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1static__assertion}{Eigen\+::internal\+::static\+\_\+assertion$<$ condition $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1static__assertion_3_01true_01_4}{Eigen\+::internal\+::static\+\_\+assertion$<$ true $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1internal}{Eigen\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}}(C\+O\+N\+D\+I\+T\+I\+ON,  M\+SG)~if (\mbox{\hyperlink{struct_eigen_1_1internal_1_1static__assertion}{Eigen\+::internal\+::static\+\_\+assertion}}$<$static\+\_\+cast$<$bool$>$(C\+O\+N\+D\+I\+T\+I\+ON)$>$\+::M\+SG) \{\}
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_ac04a73705a0aa1d66c4b80f6338db904}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+O\+N\+LY}}(T\+Y\+PE)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_a50d32252d6396ebfdb4f05802e5014f9}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+F\+I\+X\+E\+D\+\_\+\+S\+I\+ZE}}(T\+Y\+PE)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_a66478b8cbea2f3b9fd459b9757144ff2}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+S\+I\+ZE}}(T\+Y\+PE)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_abf22bd5abe14bc8ffe8ef673e6e9497d}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+I\+ZE}}(T\+Y\+PE,  S\+I\+ZE)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_a60a9ff4c2bc47b84024a471210d292ba}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+I\+ZE}}(T\+Y\+PE,  R\+O\+WS,  C\+O\+LS)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_a1b0fdf26cc91ef461d8eb245f7085a80}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+A\+M\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE}}(T\+Y\+P\+E0,  T\+Y\+P\+E1)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_a98369d7862bc954b23827ea93ef0a914}{E\+I\+G\+E\+N\+\_\+\+P\+R\+E\+D\+I\+C\+A\+T\+E\+\_\+\+S\+A\+M\+E\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE}}(T\+Y\+P\+E0,  T\+Y\+P\+E1)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_a9e3e7d3a7dc559b8b72aa535d3a555d9}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+N\+O\+N\+\_\+\+I\+N\+T\+E\+G\+ER}}(T\+Y\+PE)~\mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}}(!Num\+Traits$<$T\+Y\+PE$>$\+::Is\+Integer, T\+H\+I\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+O\+R\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+T\+Y\+P\+ES)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_ab247f0d0f9226fe72bb02adefde6361d}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+A\+M\+E\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE}}(T\+Y\+P\+E0,  T\+Y\+P\+E1)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_addb40726804f9537a9cc89904f96db98}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+I\+Z\+E\+\_\+1x1}}(T\+Y\+PE)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_a035dfe5cbd4c226a3a96d8677a996fdf}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+L\+V\+A\+L\+UE}}(Derived)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_a040c4f077ce245ab300bbc5e8f4905ae}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+A\+R\+R\+A\+Y\+X\+PR}}(Derived)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_a97ec8a24237169dbb3235fed95f9ff80}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+A\+M\+E\+\_\+\+X\+P\+R\+\_\+\+K\+I\+ND}}(Derived1,  Derived2)
+\item 
+\#define \mbox{\hyperlink{_static_assert_8h_a90c2f6a32335ec94b7f979006034e15b}{E\+I\+G\+E\+N\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+S\+T\+\_\+\+V\+A\+L\+UE}}(C)~\mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}}((C)$>$=0 \&\& (C)$<$=Huge\+Cost$\ast$Huge\+Cost, E\+I\+G\+E\+N\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+L\+E\+A\+S\+E\+\_\+\+F\+I\+L\+E\+\_\+\+A\+\_\+\+B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+S\+T\+\_\+\+V\+A\+L\+UE);
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_static_assert_8h_a90c2f6a32335ec94b7f979006034e15b}\label{_static_assert_8h_a90c2f6a32335ec94b7f979006034e15b}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_INTERNAL\_CHECK\_COST\_VALUE@{EIGEN\_INTERNAL\_CHECK\_COST\_VALUE}}
+\index{EIGEN\_INTERNAL\_CHECK\_COST\_VALUE@{EIGEN\_INTERNAL\_CHECK\_COST\_VALUE}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_INTERNAL\_CHECK\_COST\_VALUE}{EIGEN\_INTERNAL\_CHECK\_COST\_VALUE}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+S\+T\+\_\+\+V\+A\+L\+UE(\begin{DoxyParamCaption}\item[{}]{C }\end{DoxyParamCaption})~\mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}}((C)$>$=0 \&\& (C)$<$=Huge\+Cost$\ast$Huge\+Cost, E\+I\+G\+E\+N\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+L\+E\+A\+S\+E\+\_\+\+F\+I\+L\+E\+\_\+\+A\+\_\+\+B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+S\+T\+\_\+\+V\+A\+L\+UE);}
+
+\mbox{\Hypertarget{_static_assert_8h_a98369d7862bc954b23827ea93ef0a914}\label{_static_assert_8h_a98369d7862bc954b23827ea93ef0a914}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_PREDICATE\_SAME\_MATRIX\_SIZE@{EIGEN\_PREDICATE\_SAME\_MATRIX\_SIZE}}
+\index{EIGEN\_PREDICATE\_SAME\_MATRIX\_SIZE@{EIGEN\_PREDICATE\_SAME\_MATRIX\_SIZE}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_PREDICATE\_SAME\_MATRIX\_SIZE}{EIGEN\_PREDICATE\_SAME\_MATRIX\_SIZE}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+P\+R\+E\+D\+I\+C\+A\+T\+E\+\_\+\+S\+A\+M\+E\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{T\+Y\+P\+E0,  }\item[{}]{T\+Y\+P\+E1 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{     ( \(\backslash\)}
+\DoxyCodeLine{        (int(\mbox{\hyperlink{struct_eigen_1_1internal_1_1size__of__xpr__at__compile__time}{Eigen::internal::size\_of\_xpr\_at\_compile\_time<TYPE0>::ret}})==0 \&\& int(\mbox{\hyperlink{struct_eigen_1_1internal_1_1size__of__xpr__at__compile__time}{Eigen::internal::size\_of\_xpr\_at\_compile\_time<TYPE1>::ret}})==0) \(\backslash\)}
+\DoxyCodeLine{    || (\(\backslash\)}
+\DoxyCodeLine{          (\textcolor{keywordtype}{int}(TYPE0::RowsAtCompileTime)==\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Eigen::Dynamic}} \(\backslash\)}
+\DoxyCodeLine{        || \textcolor{keywordtype}{int}(TYPE1::RowsAtCompileTime)==\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Eigen::Dynamic}} \(\backslash\)}
+\DoxyCodeLine{        || \textcolor{keywordtype}{int}(TYPE0::RowsAtCompileTime)==\textcolor{keywordtype}{int}(TYPE1::RowsAtCompileTime)) \(\backslash\)}
+\DoxyCodeLine{      \&\&  (int(TYPE0::ColsAtCompileTime)==\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Eigen::Dynamic}} \(\backslash\)}
+\DoxyCodeLine{        || int(TYPE1::ColsAtCompileTime)==\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Eigen::Dynamic}} \(\backslash\)}
+\DoxyCodeLine{        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\(\backslash\)}
+\DoxyCodeLine{       ) \(\backslash\)}
+\DoxyCodeLine{     )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}\label{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT@{EIGEN\_STATIC\_ASSERT}}
+\index{EIGEN\_STATIC\_ASSERT@{EIGEN\_STATIC\_ASSERT}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT}{EIGEN\_STATIC\_ASSERT}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{C\+O\+N\+D\+I\+T\+I\+ON,  }\item[{}]{M\+SG }\end{DoxyParamCaption})~if (\mbox{\hyperlink{struct_eigen_1_1internal_1_1static__assertion}{Eigen\+::internal\+::static\+\_\+assertion}}$<$static\+\_\+cast$<$bool$>$(C\+O\+N\+D\+I\+T\+I\+ON)$>$\+::M\+SG) \{\}}
+
+\mbox{\Hypertarget{_static_assert_8h_a040c4f077ce245ab300bbc5e8f4905ae}\label{_static_assert_8h_a040c4f077ce245ab300bbc5e8f4905ae}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_ARRAYXPR@{EIGEN\_STATIC\_ASSERT\_ARRAYXPR}}
+\index{EIGEN\_STATIC\_ASSERT\_ARRAYXPR@{EIGEN\_STATIC\_ASSERT\_ARRAYXPR}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_ARRAYXPR}{EIGEN\_STATIC\_ASSERT\_ARRAYXPR}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+A\+R\+R\+A\+Y\+X\+PR(\begin{DoxyParamCaption}\item[{}]{Derived }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}((\mbox{\hyperlink{struct_eigen_1_1internal_1_1is__same}{Eigen::internal::is\_same}}<\textcolor{keyword}{typename} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen::internal::traits<Derived>::XprKind}}, ArrayXpr>::value), \(\backslash\)}
+\DoxyCodeLine{                          THIS\_METHOD\_IS\_ONLY\_FOR\_ARRAYS\_NOT\_MATRICES)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_a66478b8cbea2f3b9fd459b9757144ff2}\label{_static_assert_8h_a66478b8cbea2f3b9fd459b9757144ff2}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_DYNAMIC\_SIZE@{EIGEN\_STATIC\_ASSERT\_DYNAMIC\_SIZE}}
+\index{EIGEN\_STATIC\_ASSERT\_DYNAMIC\_SIZE@{EIGEN\_STATIC\_ASSERT\_DYNAMIC\_SIZE}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_DYNAMIC\_SIZE}{EIGEN\_STATIC\_ASSERT\_DYNAMIC\_SIZE}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}(TYPE::SizeAtCompileTime==\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Eigen::Dynamic}}, \(\backslash\)}
+\DoxyCodeLine{                      YOU\_CALLED\_A\_DYNAMIC\_SIZE\_METHOD\_ON\_A\_FIXED\_SIZE\_MATRIX\_OR\_VECTOR)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_a50d32252d6396ebfdb4f05802e5014f9}\label{_static_assert_8h_a50d32252d6396ebfdb4f05802e5014f9}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_FIXED\_SIZE@{EIGEN\_STATIC\_ASSERT\_FIXED\_SIZE}}
+\index{EIGEN\_STATIC\_ASSERT\_FIXED\_SIZE@{EIGEN\_STATIC\_ASSERT\_FIXED\_SIZE}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_FIXED\_SIZE}{EIGEN\_STATIC\_ASSERT\_FIXED\_SIZE}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+F\+I\+X\+E\+D\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}(TYPE::SizeAtCompileTime!=\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Eigen::Dynamic}}, \(\backslash\)}
+\DoxyCodeLine{                      YOU\_CALLED\_A\_FIXED\_SIZE\_METHOD\_ON\_A\_DYNAMIC\_SIZE\_MATRIX\_OR\_VECTOR)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_a035dfe5cbd4c226a3a96d8677a996fdf}\label{_static_assert_8h_a035dfe5cbd4c226a3a96d8677a996fdf}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_LVALUE@{EIGEN\_STATIC\_ASSERT\_LVALUE}}
+\index{EIGEN\_STATIC\_ASSERT\_LVALUE@{EIGEN\_STATIC\_ASSERT\_LVALUE}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_LVALUE}{EIGEN\_STATIC\_ASSERT\_LVALUE}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+L\+V\+A\+L\+UE(\begin{DoxyParamCaption}\item[{}]{Derived }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}(\mbox{\hyperlink{struct_eigen_1_1internal_1_1is__lvalue}{Eigen::internal::is\_lvalue<Derived>::value}}, \(\backslash\)}
+\DoxyCodeLine{                          THIS\_EXPRESSION\_IS\_NOT\_A\_LVALUE\_\_IT\_IS\_READ\_ONLY)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_a60a9ff4c2bc47b84024a471210d292ba}\label{_static_assert_8h_a60a9ff4c2bc47b84024a471210d292ba}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_MATRIX\_SPECIFIC\_SIZE@{EIGEN\_STATIC\_ASSERT\_MATRIX\_SPECIFIC\_SIZE}}
+\index{EIGEN\_STATIC\_ASSERT\_MATRIX\_SPECIFIC\_SIZE@{EIGEN\_STATIC\_ASSERT\_MATRIX\_SPECIFIC\_SIZE}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_MATRIX\_SPECIFIC\_SIZE}{EIGEN\_STATIC\_ASSERT\_MATRIX\_SPECIFIC\_SIZE}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE,  }\item[{}]{R\+O\+WS,  }\item[{}]{C\+O\+LS }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}(TYPE::RowsAtCompileTime==ROWS \&\& TYPE::ColsAtCompileTime==COLS, \(\backslash\)}
+\DoxyCodeLine{                      THIS\_METHOD\_IS\_ONLY\_FOR\_MATRICES\_OF\_A\_SPECIFIC\_SIZE)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_a9e3e7d3a7dc559b8b72aa535d3a555d9}\label{_static_assert_8h_a9e3e7d3a7dc559b8b72aa535d3a555d9}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_NON\_INTEGER@{EIGEN\_STATIC\_ASSERT\_NON\_INTEGER}}
+\index{EIGEN\_STATIC\_ASSERT\_NON\_INTEGER@{EIGEN\_STATIC\_ASSERT\_NON\_INTEGER}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_NON\_INTEGER}{EIGEN\_STATIC\_ASSERT\_NON\_INTEGER}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+N\+O\+N\+\_\+\+I\+N\+T\+E\+G\+ER(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE }\end{DoxyParamCaption})~\mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}}(!Num\+Traits$<$T\+Y\+PE$>$\+::Is\+Integer, T\+H\+I\+S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+O\+R\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+T\+Y\+P\+ES)}
+
+\mbox{\Hypertarget{_static_assert_8h_ab247f0d0f9226fe72bb02adefde6361d}\label{_static_assert_8h_ab247f0d0f9226fe72bb02adefde6361d}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_SAME\_MATRIX\_SIZE@{EIGEN\_STATIC\_ASSERT\_SAME\_MATRIX\_SIZE}}
+\index{EIGEN\_STATIC\_ASSERT\_SAME\_MATRIX\_SIZE@{EIGEN\_STATIC\_ASSERT\_SAME\_MATRIX\_SIZE}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_SAME\_MATRIX\_SIZE}{EIGEN\_STATIC\_ASSERT\_SAME\_MATRIX\_SIZE}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+A\+M\+E\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{T\+Y\+P\+E0,  }\item[{}]{T\+Y\+P\+E1 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}( \(\backslash\)}
+\DoxyCodeLine{     \mbox{\hyperlink{_static_assert_8h_a98369d7862bc954b23827ea93ef0a914}{EIGEN\_PREDICATE\_SAME\_MATRIX\_SIZE}}(TYPE0,TYPE1),\(\backslash\)}
+\DoxyCodeLine{    YOU\_MIXED\_MATRICES\_OF\_DIFFERENT\_SIZES)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_a1b0fdf26cc91ef461d8eb245f7085a80}\label{_static_assert_8h_a1b0fdf26cc91ef461d8eb245f7085a80}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_SAME\_VECTOR\_SIZE@{EIGEN\_STATIC\_ASSERT\_SAME\_VECTOR\_SIZE}}
+\index{EIGEN\_STATIC\_ASSERT\_SAME\_VECTOR\_SIZE@{EIGEN\_STATIC\_ASSERT\_SAME\_VECTOR\_SIZE}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_SAME\_VECTOR\_SIZE}{EIGEN\_STATIC\_ASSERT\_SAME\_VECTOR\_SIZE}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+A\+M\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{T\+Y\+P\+E0,  }\item[{}]{T\+Y\+P\+E1 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}( \(\backslash\)}
+\DoxyCodeLine{      (\textcolor{keywordtype}{int}(TYPE0::SizeAtCompileTime)==\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Eigen::Dynamic}} \(\backslash\)}
+\DoxyCodeLine{    || \textcolor{keywordtype}{int}(TYPE1::SizeAtCompileTime)==\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Eigen::Dynamic}} \(\backslash\)}
+\DoxyCodeLine{    || \textcolor{keywordtype}{int}(TYPE0::SizeAtCompileTime)==\textcolor{keywordtype}{int}(TYPE1::SizeAtCompileTime)),\(\backslash\)}
+\DoxyCodeLine{    YOU\_MIXED\_VECTORS\_OF\_DIFFERENT\_SIZES)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_a97ec8a24237169dbb3235fed95f9ff80}\label{_static_assert_8h_a97ec8a24237169dbb3235fed95f9ff80}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_SAME\_XPR\_KIND@{EIGEN\_STATIC\_ASSERT\_SAME\_XPR\_KIND}}
+\index{EIGEN\_STATIC\_ASSERT\_SAME\_XPR\_KIND@{EIGEN\_STATIC\_ASSERT\_SAME\_XPR\_KIND}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_SAME\_XPR\_KIND}{EIGEN\_STATIC\_ASSERT\_SAME\_XPR\_KIND}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+A\+M\+E\+\_\+\+X\+P\+R\+\_\+\+K\+I\+ND(\begin{DoxyParamCaption}\item[{}]{Derived1,  }\item[{}]{Derived2 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}((\mbox{\hyperlink{struct_eigen_1_1internal_1_1is__same}{Eigen::internal::is\_same}}<\textcolor{keyword}{typename} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen::internal::traits<Derived1>::XprKind}}, \(\backslash\)}
+\DoxyCodeLine{                                             \textcolor{keyword}{typename} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen::internal::traits<Derived2>::XprKind}} \(\backslash\)}
+\DoxyCodeLine{                                            >::value), \(\backslash\)}
+\DoxyCodeLine{                          YOU\_CANNOT\_MIX\_ARRAYS\_AND\_MATRICES)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_addb40726804f9537a9cc89904f96db98}\label{_static_assert_8h_addb40726804f9537a9cc89904f96db98}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_SIZE\_1x1@{EIGEN\_STATIC\_ASSERT\_SIZE\_1x1}}
+\index{EIGEN\_STATIC\_ASSERT\_SIZE\_1x1@{EIGEN\_STATIC\_ASSERT\_SIZE\_1x1}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_SIZE\_1x1}{EIGEN\_STATIC\_ASSERT\_SIZE\_1x1}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+I\+Z\+E\+\_\+1x1(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}((TYPE::RowsAtCompileTime == 1 || TYPE::RowsAtCompileTime == \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}) \&\& \(\backslash\)}
+\DoxyCodeLine{                          (TYPE::ColsAtCompileTime == 1 || TYPE::ColsAtCompileTime == \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}), \(\backslash\)}
+\DoxyCodeLine{                          THIS\_METHOD\_IS\_ONLY\_FOR\_1x1\_EXPRESSIONS)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_ac04a73705a0aa1d66c4b80f6338db904}\label{_static_assert_8h_ac04a73705a0aa1d66c4b80f6338db904}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_VECTOR\_ONLY@{EIGEN\_STATIC\_ASSERT\_VECTOR\_ONLY}}
+\index{EIGEN\_STATIC\_ASSERT\_VECTOR\_ONLY@{EIGEN\_STATIC\_ASSERT\_VECTOR\_ONLY}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_VECTOR\_ONLY}{EIGEN\_STATIC\_ASSERT\_VECTOR\_ONLY}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+O\+N\+LY(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}(TYPE::IsVectorAtCompileTime, \(\backslash\)}
+\DoxyCodeLine{                      YOU\_TRIED\_CALLING\_A\_VECTOR\_METHOD\_ON\_A\_MATRIX)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_static_assert_8h_abf22bd5abe14bc8ffe8ef673e6e9497d}\label{_static_assert_8h_abf22bd5abe14bc8ffe8ef673e6e9497d}} 
+\index{StaticAssert.h@{StaticAssert.h}!EIGEN\_STATIC\_ASSERT\_VECTOR\_SPECIFIC\_SIZE@{EIGEN\_STATIC\_ASSERT\_VECTOR\_SPECIFIC\_SIZE}}
+\index{EIGEN\_STATIC\_ASSERT\_VECTOR\_SPECIFIC\_SIZE@{EIGEN\_STATIC\_ASSERT\_VECTOR\_SPECIFIC\_SIZE}!StaticAssert.h@{StaticAssert.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STATIC\_ASSERT\_VECTOR\_SPECIFIC\_SIZE}{EIGEN\_STATIC\_ASSERT\_VECTOR\_SPECIFIC\_SIZE}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE,  }\item[{}]{S\+I\+ZE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{_static_assert_8h_ac95cf960f4a8395b28af90edfda755f0}{EIGEN\_STATIC\_ASSERT}}(TYPE::IsVectorAtCompileTime \&\& TYPE::SizeAtCompileTime==SIZE, \(\backslash\)}
+\DoxyCodeLine{                      THIS\_METHOD\_IS\_ONLY\_FOR\_VECTORS\_OF\_A\_SPECIFIC\_SIZE)}
+
+\end{DoxyCode}

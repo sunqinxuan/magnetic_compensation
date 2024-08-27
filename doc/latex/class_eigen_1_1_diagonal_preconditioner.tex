@@ -1,0 +1,250 @@
+\hypertarget{class_eigen_1_1_diagonal_preconditioner}{}\doxysection{Eigen\+::Diagonal\+Preconditioner$<$ \+\_\+\+Scalar $>$ Class Template Reference}
+\label{class_eigen_1_1_diagonal_preconditioner}\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+
+
+A preconditioner based on the digonal entries.  
+
+
+
+
+{\ttfamily \#include $<$Basic\+Preconditioners.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Diagonal\+Preconditioner$<$ \+\_\+\+Scalar $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_eigen_1_1_diagonal_preconditioner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Diagonal\+Preconditioner$<$ \+\_\+\+Scalar $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_diagonal_preconditioner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3a5d585f0c48111d1d88ae8a26fe265da96d01376bd5a909043cbb29017607ed4}{Cols\+At\+Compile\+Time}} = Dynamic, 
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3a5d585f0c48111d1d88ae8a26fe265da2ba35e5d3a579b0d5de0c771e3aae258}{Max\+Cols\+At\+Compile\+Time}} = Dynamic
+ \}
+\item 
+typedef Vector\+::\+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a21a4ddda2e64177b5afc4c7c45a6ced9}{Storage\+Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_ae7d19e26de3f8c96f659356b9453a788}{Diagonal\+Preconditioner}} ()
+\item 
+{\footnotesize template$<$typename Mat\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_ad7d67c2d25072f73543031e4853d443b}{Diagonal\+Preconditioner}} (const Mat\+Type \&mat)
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_abfa8fc0d88fd77c131cf0bf8a88d8c4d}{rows}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_ab6e72d6ba6e848c2669e7453ccbf1e2b}{cols}} () const
+\item 
+{\footnotesize template$<$typename Mat\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}} \& \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_af9a7205f04b0ef833b3fae8b2c3f6cc9}{analyze\+Pattern}} (const Mat\+Type \&)
+\item 
+{\footnotesize template$<$typename Mat\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}} \& \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3bb1bae9f49ff115fb21f951101fb88a}{factorize}} (const Mat\+Type \&mat)
+\item 
+{\footnotesize template$<$typename Mat\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}} \& \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a4b938c483a6d17bfc079f2fde8671a08}{compute}} (const Mat\+Type \&mat)
+\item 
+{\footnotesize template$<$typename Rhs , typename Dest $>$ }\\void \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3bbc5d91d64e3968c3b0b629e15e9fb7}{\+\_\+solve\+\_\+impl}} (const Rhs \&b, Dest \&x) const
+\item 
+{\footnotesize template$<$typename Rhs $>$ }\\const \mbox{\hyperlink{class_eigen_1_1_solve}{Solve}}$<$ \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}}, Rhs $>$ \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a0b42a9d87d619347f92f703f162f375f}{solve}} (const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Rhs $>$ \&b) const
+\item 
+\mbox{\hyperlink{group__enums_ga85fad7b87587764e5cf6b513a9e0ee5e}{Computation\+Info}} \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a83769941faa301e9f414ecdf6a715140}{info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_aef3c886661f3a48e01c1c48629f8528e}{Vector}} \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_abce7e6e756519949b58f201ef486d162}{m\+\_\+invdiag}}
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a180911e1c0f848621dab8e29b5da88dc}{m\+\_\+is\+Initialized}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+\_\+\+Scalar \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3fc53ebbf9c7f11e5a728c9fbd9132ab}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$ \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3fc53ebbf9c7f11e5a728c9fbd9132ab}{Scalar}}, \mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}, 1 $>$ \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_aef3c886661f3a48e01c1c48629f8528e}{Vector}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename \+\_\+\+Scalar$>$\newline
+class Eigen\+::\+Diagonal\+Preconditioner$<$ \+\_\+\+Scalar $>$}
+
+A preconditioner based on the digonal entries. 
+
+This class allows to approximately solve for A.\+x = b problems assuming A is a diagonal matrix. In other words, this preconditioner neglects all off diagonal entries and, in \mbox{\hyperlink{namespace_eigen}{Eigen}}\textquotesingle{}s language, solves for\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{A.diagonal().asDiagonal() . \mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}} = \mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \+\_\+\+Scalar} & the type of the scalar.\\
+\hline
+\end{DoxyTemplParams}
+\textbackslash{}implsparsesolverconcept
+
+This preconditioner is suitable for both selfadjoint and general problems. The diagonal entries are pre-\/inverted and stored into a dense vector.
+
+\begin{DoxyNote}{Note}
+A variant that has yet to be implemented would attempt to preserve the norm of each column.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+class \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Least\+Square\+Diagonal\+Preconditioner}}, class \mbox{\hyperlink{class_eigen_1_1_conjugate_gradient}{Conjugate\+Gradient}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a3fc53ebbf9c7f11e5a728c9fbd9132ab}\label{class_eigen_1_1_diagonal_preconditioner_a3fc53ebbf9c7f11e5a728c9fbd9132ab}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef \+\_\+\+Scalar \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3fc53ebbf9c7f11e5a728c9fbd9132ab}{Scalar}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a21a4ddda2e64177b5afc4c7c45a6ced9}\label{class_eigen_1_1_diagonal_preconditioner_a21a4ddda2e64177b5afc4c7c45a6ced9}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef Vector\+::\+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a21a4ddda2e64177b5afc4c7c45a6ced9}{Storage\+Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_aef3c886661f3a48e01c1c48629f8528e}\label{class_eigen_1_1_diagonal_preconditioner_aef3c886661f3a48e01c1c48629f8528e}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{Vector}{Vector}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3fc53ebbf9c7f11e5a728c9fbd9132ab}{Scalar}},\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}},1$>$ \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_aef3c886661f3a48e01c1c48629f8528e}{Vector}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a3a5d585f0c48111d1d88ae8a26fe265d}\label{class_eigen_1_1_diagonal_preconditioner_a3a5d585f0c48111d1d88ae8a26fe265d}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a3a5d585f0c48111d1d88ae8a26fe265da96d01376bd5a909043cbb29017607ed4}\label{class_eigen_1_1_diagonal_preconditioner_a3a5d585f0c48111d1d88ae8a26fe265da96d01376bd5a909043cbb29017607ed4}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a3a5d585f0c48111d1d88ae8a26fe265da2ba35e5d3a579b0d5de0c771e3aae258}\label{class_eigen_1_1_diagonal_preconditioner_a3a5d585f0c48111d1d88ae8a26fe265da2ba35e5d3a579b0d5de0c771e3aae258}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_ae7d19e26de3f8c96f659356b9453a788}\label{class_eigen_1_1_diagonal_preconditioner_ae7d19e26de3f8c96f659356b9453a788}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!DiagonalPreconditioner@{DiagonalPreconditioner}}
+\index{DiagonalPreconditioner@{DiagonalPreconditioner}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{DiagonalPreconditioner()}{DiagonalPreconditioner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_ad7d67c2d25072f73543031e4853d443b}\label{class_eigen_1_1_diagonal_preconditioner_ad7d67c2d25072f73543031e4853d443b}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!DiagonalPreconditioner@{DiagonalPreconditioner}}
+\index{DiagonalPreconditioner@{DiagonalPreconditioner}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{DiagonalPreconditioner()}{DiagonalPreconditioner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename Mat\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}} (\begin{DoxyParamCaption}\item[{const Mat\+Type \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a3bbc5d91d64e3968c3b0b629e15e9fb7}\label{class_eigen_1_1_diagonal_preconditioner_a3bbc5d91d64e3968c3b0b629e15e9fb7}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!\_solve\_impl@{\_solve\_impl}}
+\index{\_solve\_impl@{\_solve\_impl}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{\_solve\_impl()}{\_solve\_impl()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename Rhs , typename Dest $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\+\_\+solve\+\_\+impl (\begin{DoxyParamCaption}\item[{const Rhs \&}]{b,  }\item[{Dest \&}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_af9a7205f04b0ef833b3fae8b2c3f6cc9}\label{class_eigen_1_1_diagonal_preconditioner_af9a7205f04b0ef833b3fae8b2c3f6cc9}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!analyzePattern@{analyzePattern}}
+\index{analyzePattern@{analyzePattern}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{analyzePattern()}{analyzePattern()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename Mat\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}}\& \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::analyze\+Pattern (\begin{DoxyParamCaption}\item[{const Mat\+Type \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_ab6e72d6ba6e848c2669e7453ccbf1e2b}\label{class_eigen_1_1_diagonal_preconditioner_ab6e72d6ba6e848c2669e7453ccbf1e2b}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a4b938c483a6d17bfc079f2fde8671a08}\label{class_eigen_1_1_diagonal_preconditioner_a4b938c483a6d17bfc079f2fde8671a08}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!compute@{compute}}
+\index{compute@{compute}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename Mat\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}}\& \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::compute (\begin{DoxyParamCaption}\item[{const Mat\+Type \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a3bb1bae9f49ff115fb21f951101fb88a}\label{class_eigen_1_1_diagonal_preconditioner_a3bb1bae9f49ff115fb21f951101fb88a}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!factorize@{factorize}}
+\index{factorize@{factorize}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{factorize()}{factorize()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename Mat\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}}\& \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::factorize (\begin{DoxyParamCaption}\item[{const Mat\+Type \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a83769941faa301e9f414ecdf6a715140}\label{class_eigen_1_1_diagonal_preconditioner_a83769941faa301e9f414ecdf6a715140}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!info@{info}}
+\index{info@{info}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{group__enums_ga85fad7b87587764e5cf6b513a9e0ee5e}{Computation\+Info}} \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_abfa8fc0d88fd77c131cf0bf8a88d8c4d}\label{class_eigen_1_1_diagonal_preconditioner_abfa8fc0d88fd77c131cf0bf8a88d8c4d}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a0b42a9d87d619347f92f703f162f375f}\label{class_eigen_1_1_diagonal_preconditioner_a0b42a9d87d619347f92f703f162f375f}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!solve@{solve}}
+\index{solve@{solve}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename Rhs $>$ \\
+const \mbox{\hyperlink{class_eigen_1_1_solve}{Solve}}$<$\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}}, Rhs$>$ \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::solve (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Rhs $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_abce7e6e756519949b58f201ef486d162}\label{class_eigen_1_1_diagonal_preconditioner_abce7e6e756519949b58f201ef486d162}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!m\_invdiag@{m\_invdiag}}
+\index{m\_invdiag@{m\_invdiag}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_invdiag}{m\_invdiag}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_aef3c886661f3a48e01c1c48629f8528e}{Vector}} \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+invdiag\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_diagonal_preconditioner_a180911e1c0f848621dab8e29b5da88dc}\label{class_eigen_1_1_diagonal_preconditioner_a180911e1c0f848621dab8e29b5da88dc}} 
+\index{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}!m\_isInitialized@{m\_isInitialized}}
+\index{m\_isInitialized@{m\_isInitialized}!Eigen::DiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::DiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_isInitialized}{m\_isInitialized}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+bool \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+is\+Initialized\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Iterative\+Linear\+Solvers/\mbox{\hyperlink{_basic_preconditioners_8h}{Basic\+Preconditioners.\+h}}\end{DoxyCompactItemize}

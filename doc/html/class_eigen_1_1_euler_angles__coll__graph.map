@@ -1,0 +1,12 @@
+<map id="Eigen::EulerAngles&lt; _Scalar, _System &gt;" name="Eigen::EulerAngles&lt; _Scalar, _System &gt;">
+<area shape="rect" id="node1" title="Represents a rotation in a 3 dimensional space as three Euler angles." alt="" coords="1396,125,1559,167"/>
+<area shape="rect" id="node2" href="$class_eigen_1_1_rotation_base.html" title=" " alt="" coords="1100,82,1280,138"/>
+<area shape="rect" id="node3" href="$class_eigen_1_1_matrix.html" title=" " alt="" coords="1107,163,1273,204"/>
+<area shape="rect" id="node4" href="$class_eigen_1_1_plain_object_base.html" title=" " alt="" coords="843,148,1051,219"/>
+<area shape="rect" id="node5" title=" " alt="" coords="381,5,643,76"/>
+<area shape="rect" id="node6" href="$class_eigen_1_1_dense_storage.html" title=" " alt="" coords="379,100,645,171"/>
+<area shape="rect" id="node7" href="$struct_eigen_1_1internal_1_1plain__array.html" title=" " alt="" coords="63,107,220,163"/>
+<area shape="rect" id="node8" href="$class_eigen_1_1_map.html" title=" " alt="" coords="396,195,628,265"/>
+<area shape="rect" id="node9" href="$class_eigen_1_1_map_base.html" title=" " alt="" coords="5,203,277,289"/>
+<area shape="rect" id="node10" href="$class_eigen_1_1_map.html" title=" " alt="" coords="396,289,628,360"/>
+</map>

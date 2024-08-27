@@ -1,0 +1,218 @@
+\hypertarget{_matrix_cwise_binary_ops_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/plugins/\+Matrix\+Cwise\+Binary\+Ops.h File Reference}
+\label{_matrix_cwise_binary_ops_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/plugins/MatrixCwiseBinaryOps.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/plugins/MatrixCwiseBinaryOps.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_matrix_cwise_binary_ops_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+cmp\+\_\+op$<$ Scalar, Scalar, internal\+::cmp\+\_\+\+EQ $>$, const Derived, const Constant\+Return\+Type $>$ \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a5f6a0cdb0f2df5f0def41dd27a95ef3c}{Cwise\+Scalar\+Equal\+Return\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a81fdc2db9810173dff882554a6404dbf}{E\+I\+G\+E\+N\+\_\+\+C\+W\+I\+S\+E\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}} (Derived, Other\+Derived, product) cwise\+Product(const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Binary\+Op$<$ std\+::equal\+\_\+to$<$ Scalar $>$, const Derived, const Other\+Derived $>$ \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_ad68fdd420da2f3015274c1ea2857d405}{cwise\+Equal}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Binary\+Op$<$ std\+::not\+\_\+equal\+\_\+to$<$ Scalar $>$, const Derived, const Other\+Derived $>$ \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a57eb02c05351d888565d6b1e8c7e1280}{cwise\+Not\+Equal}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+min\+\_\+op$<$ Scalar, Scalar $>$, const Derived, const Other\+Derived $>$ \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a785f570964e40f1cf900a6a59ef76f01}{cwise\+Min}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+min\+\_\+op$<$ Scalar, Scalar $>$, const Derived, const Constant\+Return\+Type $>$ \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a041cfdd5c3918c3c28d7ab31437b51c9}{cwise\+Min}} (const Scalar \&other) const
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+max\+\_\+op$<$ Scalar, Scalar $>$, const Derived, const Other\+Derived $>$ \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a3cd453c483b8a4415ab1d950ebc384c5}{cwise\+Max}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+max\+\_\+op$<$ Scalar, Scalar $>$, const Derived, const Constant\+Return\+Type $>$ \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a528fc4ff3bbeb88b59fb362de54283bc}{cwise\+Max}} (const Scalar \&other) const
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+quotient\+\_\+op$<$ Scalar $>$, const Derived, const Other\+Derived $>$ \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a005942376175fb9fdfa0a1600064243f}{cwise\+Quotient}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a5f6a0cdb0f2df5f0def41dd27a95ef3c}{Cwise\+Scalar\+Equal\+Return\+Type}} \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a3b2532033592bcaeb67ff05d4138d864}{cwise\+Equal}} (const Scalar \&s) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_matrix_cwise_binary_ops_8h_a5f6a0cdb0f2df5f0def41dd27a95ef3c}\label{_matrix_cwise_binary_ops_8h_a5f6a0cdb0f2df5f0def41dd27a95ef3c}} 
+\index{MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}!CwiseScalarEqualReturnType@{CwiseScalarEqualReturnType}}
+\index{CwiseScalarEqualReturnType@{CwiseScalarEqualReturnType}!MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{CwiseScalarEqualReturnType}{CwiseScalarEqualReturnType}}
+{\footnotesize\ttfamily typedef Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+cmp\+\_\+op$<$Scalar,Scalar,internal\+::cmp\+\_\+\+EQ$>$, const Derived, const Constant\+Return\+Type$>$ \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a5f6a0cdb0f2df5f0def41dd27a95ef3c}{Cwise\+Scalar\+Equal\+Return\+Type}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_matrix_cwise_binary_ops_8h_ad68fdd420da2f3015274c1ea2857d405}\label{_matrix_cwise_binary_ops_8h_ad68fdd420da2f3015274c1ea2857d405}} 
+\index{MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}!cwiseEqual@{cwiseEqual}}
+\index{cwiseEqual@{cwiseEqual}!MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{cwiseEqual()}{cwiseEqual()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Binary\+Op$<$std\+::equal\+\_\+to$<$Scalar$>$, const Derived, const Other\+Derived$>$ cwise\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise == operator of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+this performs an exact comparison, which is generally a bad idea with floating-\/point types. In order to check for equality between two vectors or matrices with floating-\/point coefficients, it is generally a far better idea to use a fuzzy comparison as provided by \mbox{\hyperlink{namespace_eigen_1_1internal_a7c83f2257c639f3d550f5d7d7c69ca3b}{is\+Approx()}} and \mbox{\hyperlink{namespace_eigen_1_1internal_a84d9a116f1410c45670db495257f64ac}{is\+Much\+Smaller\+Than()}}.
+\end{DoxyWarning}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a57eb02c05351d888565d6b1e8c7e1280}{cwise\+Not\+Equal()}}, \mbox{\hyperlink{namespace_eigen_1_1internal_a7c83f2257c639f3d550f5d7d7c69ca3b}{is\+Approx()}}, \mbox{\hyperlink{namespace_eigen_1_1internal_a84d9a116f1410c45670db495257f64ac}{is\+Much\+Smaller\+Than()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_matrix_cwise_binary_ops_8h_a3b2532033592bcaeb67ff05d4138d864}\label{_matrix_cwise_binary_ops_8h_a3b2532033592bcaeb67ff05d4138d864}} 
+\index{MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}!cwiseEqual@{cwiseEqual}}
+\index{cwiseEqual@{cwiseEqual}!MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{cwiseEqual()}{cwiseEqual()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_matrix_cwise_binary_ops_8h_a5f6a0cdb0f2df5f0def41dd27a95ef3c}{Cwise\+Scalar\+Equal\+Return\+Type}} cwise\+Equal (\begin{DoxyParamCaption}\item[{const Scalar \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise == operator of {\ttfamily $\ast$this} and a scalar {\itshape s} 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+this performs an exact comparison, which is generally a bad idea with floating-\/point types. In order to check for equality between two vectors or matrices with floating-\/point coefficients, it is generally a far better idea to use a fuzzy comparison as provided by \mbox{\hyperlink{namespace_eigen_1_1internal_a7c83f2257c639f3d550f5d7d7c69ca3b}{is\+Approx()}} and \mbox{\hyperlink{namespace_eigen_1_1internal_a84d9a116f1410c45670db495257f64ac}{is\+Much\+Smaller\+Than()}}.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+cwise\+Equal(const Matrix\+Base$<$\+Other\+Derived$>$ \&) const 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_matrix_cwise_binary_ops_8h_a3cd453c483b8a4415ab1d950ebc384c5}\label{_matrix_cwise_binary_ops_8h_a3cd453c483b8a4415ab1d950ebc384c5}} 
+\index{MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}!cwiseMax@{cwiseMax}}
+\index{cwiseMax@{cwiseMax}!MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{cwiseMax()}{cwiseMax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+max\+\_\+op$<$Scalar,Scalar$>$, const Derived, const Other\+Derived$>$ cwise\+Max (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise max of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+class Cwise\+Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1half__impl_a52c8391bfe74901409df09e9b1d5ac79}{min()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_matrix_cwise_binary_ops_8h_a528fc4ff3bbeb88b59fb362de54283bc}\label{_matrix_cwise_binary_ops_8h_a528fc4ff3bbeb88b59fb362de54283bc}} 
+\index{MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}!cwiseMax@{cwiseMax}}
+\index{cwiseMax@{cwiseMax}!MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{cwiseMax()}{cwiseMax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+max\+\_\+op$<$Scalar,Scalar$>$, const Derived, const Constant\+Return\+Type$>$ cwise\+Max (\begin{DoxyParamCaption}\item[{const Scalar \&}]{other }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise max of $\ast$this and scalar {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+class Cwise\+Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1half__impl_a52c8391bfe74901409df09e9b1d5ac79}{min()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_matrix_cwise_binary_ops_8h_a785f570964e40f1cf900a6a59ef76f01}\label{_matrix_cwise_binary_ops_8h_a785f570964e40f1cf900a6a59ef76f01}} 
+\index{MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}!cwiseMin@{cwiseMin}}
+\index{cwiseMin@{cwiseMin}!MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{cwiseMin()}{cwiseMin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+min\+\_\+op$<$Scalar,Scalar$>$, const Derived, const Other\+Derived$>$ cwise\+Min (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise min of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+class Cwise\+Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1half__impl_a92e6345ca905d3483422361cf8c991b6}{max()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_matrix_cwise_binary_ops_8h_a041cfdd5c3918c3c28d7ab31437b51c9}\label{_matrix_cwise_binary_ops_8h_a041cfdd5c3918c3c28d7ab31437b51c9}} 
+\index{MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}!cwiseMin@{cwiseMin}}
+\index{cwiseMin@{cwiseMin}!MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{cwiseMin()}{cwiseMin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+min\+\_\+op$<$Scalar,Scalar$>$, const Derived, const Constant\+Return\+Type$>$ cwise\+Min (\begin{DoxyParamCaption}\item[{const Scalar \&}]{other }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise min of $\ast$this and scalar {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+class Cwise\+Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1half__impl_a52c8391bfe74901409df09e9b1d5ac79}{min()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_matrix_cwise_binary_ops_8h_a57eb02c05351d888565d6b1e8c7e1280}\label{_matrix_cwise_binary_ops_8h_a57eb02c05351d888565d6b1e8c7e1280}} 
+\index{MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}!cwiseNotEqual@{cwiseNotEqual}}
+\index{cwiseNotEqual@{cwiseNotEqual}!MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{cwiseNotEqual()}{cwiseNotEqual()}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Binary\+Op$<$std\+::not\+\_\+equal\+\_\+to$<$Scalar$>$, const Derived, const Other\+Derived$>$ cwise\+Not\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise != operator of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+this performs an exact comparison, which is generally a bad idea with floating-\/point types. In order to check for equality between two vectors or matrices with floating-\/point coefficients, it is generally a far better idea to use a fuzzy comparison as provided by \mbox{\hyperlink{namespace_eigen_1_1internal_a7c83f2257c639f3d550f5d7d7c69ca3b}{is\+Approx()}} and \mbox{\hyperlink{namespace_eigen_1_1internal_a84d9a116f1410c45670db495257f64ac}{is\+Much\+Smaller\+Than()}}.
+\end{DoxyWarning}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_matrix_cwise_binary_ops_8h_ad68fdd420da2f3015274c1ea2857d405}{cwise\+Equal()}}, \mbox{\hyperlink{namespace_eigen_1_1internal_a7c83f2257c639f3d550f5d7d7c69ca3b}{is\+Approx()}}, \mbox{\hyperlink{namespace_eigen_1_1internal_a84d9a116f1410c45670db495257f64ac}{is\+Much\+Smaller\+Than()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_matrix_cwise_binary_ops_8h_a005942376175fb9fdfa0a1600064243f}\label{_matrix_cwise_binary_ops_8h_a005942376175fb9fdfa0a1600064243f}} 
+\index{MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}!cwiseQuotient@{cwiseQuotient}}
+\index{cwiseQuotient@{cwiseQuotient}!MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{cwiseQuotient()}{cwiseQuotient()}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+quotient\+\_\+op$<$Scalar$>$, const Derived, const Other\+Derived$>$ cwise\+Quotient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise quotient of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+class Cwise\+Binary\+Op, cwise\+Product(), \mbox{\hyperlink{_matrix_cwise_unary_ops_8h_a77ff35adec8ad63fc95256b3561ae8e1}{cwise\+Inverse()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_matrix_cwise_binary_ops_8h_a81fdc2db9810173dff882554a6404dbf}\label{_matrix_cwise_binary_ops_8h_a81fdc2db9810173dff882554a6404dbf}} 
+\index{MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}!EIGEN\_CWISE\_BINARY\_RETURN\_TYPE@{EIGEN\_CWISE\_BINARY\_RETURN\_TYPE}}
+\index{EIGEN\_CWISE\_BINARY\_RETURN\_TYPE@{EIGEN\_CWISE\_BINARY\_RETURN\_TYPE}!MatrixCwiseBinaryOps.h@{MatrixCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_CWISE\_BINARY\_RETURN\_TYPE()}{EIGEN\_CWISE\_BINARY\_RETURN\_TYPE()}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} E\+I\+G\+E\+N\+\_\+\+C\+W\+I\+S\+E\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE (\begin{DoxyParamCaption}\item[{Derived}]{,  }\item[{Other\+Derived}]{,  }\item[{product}]{ }\end{DoxyParamCaption}) const \&}
+
+\begin{DoxyReturn}{Returns}
+an expression of the Schur product (coefficient wise product) of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+class Cwise\+Binary\+Op, \mbox{\hyperlink{_matrix_cwise_unary_ops_8h_a9395b735893d057b639e398d9d245237}{cwise\+Abs2}} 
+\end{DoxySeeAlso}

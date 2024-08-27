@@ -1,0 +1,66 @@
+\hypertarget{struct_eigen_1_1internal_1_1plain__diag__type}{}\doxysection{Eigen\+::internal\+::plain\+\_\+diag\+\_\+type$<$ Expression\+Type, Scalar $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1plain__diag__type}\index{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}}
+
+
+{\ttfamily \#include $<$Xpr\+Helper.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31a5d6c31f8861f15a8ddd1782c73754681}{diag\+\_\+size}} = E\+I\+G\+E\+N\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+N\+\_\+\+P\+R\+E\+F\+E\+R\+\_\+\+D\+Y\+N\+A\+M\+IC(Expression\+Type\+::Rows\+At\+Compile\+Time, Expression\+Type\+::Cols\+At\+Compile\+Time), 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31ad85ca4c09dd5f482d61a88fc84357998}{max\+\_\+diag\+\_\+size}} = E\+I\+G\+E\+N\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+N\+\_\+\+P\+R\+E\+F\+E\+R\+\_\+\+F\+I\+X\+ED(Expression\+Type\+::Max\+Rows\+At\+Compile\+Time, Expression\+Type\+::Max\+Cols\+At\+Compile\+Time)
+ \}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$ Scalar, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31a5d6c31f8861f15a8ddd1782c73754681}{diag\+\_\+size}}, 1, Expression\+Type\+::\+Plain\+Object\+::\+Options \&$\sim$\mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31ad85ca4c09dd5f482d61a88fc84357998}{max\+\_\+diag\+\_\+size}}, 1 $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_a69632fbb83643a8b45c7d08d4b2d7c77}{Matrix\+Diag\+Type}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_array}{Array}}$<$ Scalar, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31a5d6c31f8861f15a8ddd1782c73754681}{diag\+\_\+size}}, 1, Expression\+Type\+::\+Plain\+Object\+::\+Options \&$\sim$\mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31ad85ca4c09dd5f482d61a88fc84357998}{max\+\_\+diag\+\_\+size}}, 1 $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_a7e0e180b02fc82020caeccc5ed0987bd}{Array\+Diag\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{conditional}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1is__same}{is\+\_\+same}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ Expression\+Type $>$\+::Xpr\+Kind, \mbox{\hyperlink{struct_eigen_1_1_matrix_xpr}{Matrix\+Xpr}} $>$\+::value, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_a69632fbb83643a8b45c7d08d4b2d7c77}{Matrix\+Diag\+Type}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_a7e0e180b02fc82020caeccc5ed0987bd}{Array\+Diag\+Type}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_af32705fa775bbb35d9647a6d1419144e}{type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_af32705fa775bbb35d9647a6d1419144e}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1plain__diag__type_a7e0e180b02fc82020caeccc5ed0987bd}\label{struct_eigen_1_1internal_1_1plain__diag__type_a7e0e180b02fc82020caeccc5ed0987bd}} 
+\index{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}!ArrayDiagType@{ArrayDiagType}}
+\index{ArrayDiagType@{ArrayDiagType}!Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{ArrayDiagType}{ArrayDiagType}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , typename Scalar  = typename Expression\+Type\+::\+Scalar$>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_array}{Array}}$<$Scalar, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31a5d6c31f8861f15a8ddd1782c73754681}{diag\+\_\+size}}, 1, Expression\+Type\+::\+Plain\+Object\+::\+Options \& $\sim$\mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31ad85ca4c09dd5f482d61a88fc84357998}{max\+\_\+diag\+\_\+size}}, 1$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type}{Eigen\+::internal\+::plain\+\_\+diag\+\_\+type}}$<$ Expression\+Type, Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_a7e0e180b02fc82020caeccc5ed0987bd}{Array\+Diag\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1plain__diag__type_a69632fbb83643a8b45c7d08d4b2d7c77}\label{struct_eigen_1_1internal_1_1plain__diag__type_a69632fbb83643a8b45c7d08d4b2d7c77}} 
+\index{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}!MatrixDiagType@{MatrixDiagType}}
+\index{MatrixDiagType@{MatrixDiagType}!Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{MatrixDiagType}{MatrixDiagType}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , typename Scalar  = typename Expression\+Type\+::\+Scalar$>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$Scalar, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31a5d6c31f8861f15a8ddd1782c73754681}{diag\+\_\+size}}, 1, Expression\+Type\+::\+Plain\+Object\+::\+Options \& $\sim$\mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31ad85ca4c09dd5f482d61a88fc84357998}{max\+\_\+diag\+\_\+size}}, 1$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type}{Eigen\+::internal\+::plain\+\_\+diag\+\_\+type}}$<$ Expression\+Type, Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_a69632fbb83643a8b45c7d08d4b2d7c77}{Matrix\+Diag\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1plain__diag__type_af32705fa775bbb35d9647a6d1419144e}\label{struct_eigen_1_1internal_1_1plain__diag__type_af32705fa775bbb35d9647a6d1419144e}} 
+\index{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}!type@{type}}
+\index{type@{type}!Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , typename Scalar  = typename Expression\+Type\+::\+Scalar$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{conditional}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1is__same}{is\+\_\+same}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$Expression\+Type$>$\+::Xpr\+Kind, \mbox{\hyperlink{struct_eigen_1_1_matrix_xpr}{Matrix\+Xpr}} $>$\+::value, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_a69632fbb83643a8b45c7d08d4b2d7c77}{Matrix\+Diag\+Type}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_a7e0e180b02fc82020caeccc5ed0987bd}{Array\+Diag\+Type}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_af32705fa775bbb35d9647a6d1419144e}{type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type}{Eigen\+::internal\+::plain\+\_\+diag\+\_\+type}}$<$ Expression\+Type, Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__diag__type_af32705fa775bbb35d9647a6d1419144e}{type}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31}\label{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , typename Scalar  = typename Expression\+Type\+::\+Scalar$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{diag\_size@{diag\_size}!Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}}\index{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}!diag\_size@{diag\_size}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31a5d6c31f8861f15a8ddd1782c73754681}\label{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31a5d6c31f8861f15a8ddd1782c73754681}} 
+diag\+\_\+size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{max\_diag\_size@{max\_diag\_size}!Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}}\index{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_diag\_type$<$ ExpressionType, Scalar $>$}!max\_diag\_size@{max\_diag\_size}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31ad85ca4c09dd5f482d61a88fc84357998}\label{struct_eigen_1_1internal_1_1plain__diag__type_ae7c0cfc00f03572661b8d314580aff31ad85ca4c09dd5f482d61a88fc84357998}} 
+max\+\_\+diag\+\_\+size&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/util/\mbox{\hyperlink{_xpr_helper_8h}{Xpr\+Helper.\+h}}\end{DoxyCompactItemize}

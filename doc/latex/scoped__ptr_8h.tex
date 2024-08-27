@@ -1,0 +1,67 @@
+\hypertarget{scoped__ptr_8h}{}\doxysection{3rd\+\_\+party/ceres-\/1.12.0/include/ceres/internal/scoped\+\_\+ptr.h File Reference}
+\label{scoped__ptr_8h}\index{3rd\_party/ceres-\/1.12.0/include/ceres/internal/scoped\_ptr.h@{3rd\_party/ceres-\/1.12.0/include/ceres/internal/scoped\_ptr.h}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+Include dependency graph for scoped\+\_\+ptr.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{scoped__ptr_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{scoped__ptr_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr}{ceres\+::internal\+::scoped\+\_\+ptr$<$ C $>$}}
+\item 
+class \mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr__malloc}{ceres\+::internal\+::scoped\+\_\+ptr\+\_\+malloc$<$ C, Free $>$}}
+\item 
+class \mbox{\hyperlink{classceres_1_1internal_1_1scoped__array}{ceres\+::internal\+::scoped\+\_\+array$<$ C $>$}}
+\item 
+class \mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr}{ceres\+::internal\+::scoped\+\_\+ptr$<$ C $>$}}
+\item 
+class \mbox{\hyperlink{classceres_1_1internal_1_1scoped__array}{ceres\+::internal\+::scoped\+\_\+array$<$ C $>$}}
+\item 
+class \mbox{\hyperlink{classceres_1_1internal_1_1_scoped_ptr_malloc_free}{ceres\+::internal\+::\+Scoped\+Ptr\+Malloc\+Free}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceceres}{ceres}}
+\item 
+ \mbox{\hyperlink{namespaceceres_1_1internal}{ceres\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class C $>$ }\\scoped\+\_\+ptr$<$ C $>$ \mbox{\hyperlink{namespaceceres_1_1internal_aa77a6698a4a355c70759b2d7577f1cd8}{ceres\+::internal\+::make\+\_\+scoped\+\_\+ptr}} (C $\ast$)
+\item 
+{\footnotesize template$<$class C $>$ }\\void \mbox{\hyperlink{namespaceceres_1_1internal_a2e8453644b23c5e96436867b270278a7}{ceres\+::internal\+::swap}} (scoped\+\_\+ptr$<$ C $>$ \&p1, scoped\+\_\+ptr$<$ C $>$ \&p2)
+\item 
+{\footnotesize template$<$class C $>$ }\\bool \mbox{\hyperlink{namespaceceres_1_1internal_a8c730e753a92e8c5b102ca28a71cc04b}{ceres\+::internal\+::operator==}} (const C $\ast$p1, const scoped\+\_\+ptr$<$ C $>$ \&p2)
+\item 
+{\footnotesize template$<$class C $>$ }\\bool \mbox{\hyperlink{namespaceceres_1_1internal_a6e5dc1df16f044dc408b5dcf71a7cfd2}{ceres\+::internal\+::operator==}} (const C $\ast$p1, const scoped\+\_\+ptr$<$ const C $>$ \&p2)
+\item 
+{\footnotesize template$<$class C $>$ }\\bool \mbox{\hyperlink{namespaceceres_1_1internal_a6e6d335288f00d5217af17aeb28e63cd}{ceres\+::internal\+::operator!=}} (const C $\ast$p1, const scoped\+\_\+ptr$<$ C $>$ \&p2)
+\item 
+{\footnotesize template$<$class C $>$ }\\bool \mbox{\hyperlink{namespaceceres_1_1internal_a31f6fa8b46d91af44cf5739481e510bd}{ceres\+::internal\+::operator!=}} (const C $\ast$p1, const scoped\+\_\+ptr$<$ const C $>$ \&p2)
+\item 
+{\footnotesize template$<$class C $>$ }\\void \mbox{\hyperlink{namespaceceres_1_1internal_aeb8431530c2f1ecb848a130caa232d24}{ceres\+::internal\+::swap}} (scoped\+\_\+array$<$ C $>$ \&p1, scoped\+\_\+array$<$ C $>$ \&p2)
+\item 
+{\footnotesize template$<$class C $>$ }\\bool \mbox{\hyperlink{namespaceceres_1_1internal_a490f30bae9ebb7fd1b84fb3613f8bcaf}{ceres\+::internal\+::operator==}} (const C $\ast$p1, const scoped\+\_\+array$<$ C $>$ \&p2)
+\item 
+{\footnotesize template$<$class C $>$ }\\bool \mbox{\hyperlink{namespaceceres_1_1internal_adcf1859745387af5f00117846a53cbec}{ceres\+::internal\+::operator==}} (const C $\ast$p1, const scoped\+\_\+array$<$ const C $>$ \&p2)
+\item 
+{\footnotesize template$<$class C $>$ }\\bool \mbox{\hyperlink{namespaceceres_1_1internal_a28e5e5e958b1688a44a6ee2251298545}{ceres\+::internal\+::operator!=}} (const C $\ast$p1, const scoped\+\_\+array$<$ C $>$ \&p2)
+\item 
+{\footnotesize template$<$class C $>$ }\\bool \mbox{\hyperlink{namespaceceres_1_1internal_a1ce14b9014fb12984918627d9fcb3e73}{ceres\+::internal\+::operator!=}} (const C $\ast$p1, const scoped\+\_\+array$<$ const C $>$ \&p2)
+\end{DoxyCompactItemize}

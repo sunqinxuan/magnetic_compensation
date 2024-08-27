@@ -1,0 +1,197 @@
+\hypertarget{struct_eigen_1_1internal_1_1kissfft__impl}{}\doxysection{Eigen\+::internal\+::kissfft\+\_\+impl$<$ \+\_\+\+Scalar $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1kissfft__impl}\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+
+
+{\ttfamily \#include $<$ei\+\_\+kissfft\+\_\+impl.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+\_\+\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}{Scalar}}
+\item 
+typedef std\+::complex$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}{Scalar}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a24ae326cc4d2e7b1f5f1e1e15f0df0a9}{clear}} ()
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_ab72085de6e46b34ee777f6f6887afa10}{fwd}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$dst, const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$src, int nfft)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a6f06e5103fce0687c3f9dada88de7fd7}{fwd2}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$dst, const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$src, int n0, int n1)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_ad8c65a5e75b9059534bf60ded4ace582}{inv2}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$dst, const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$src, int n0, int n1)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a2e7fc2f0910f00b559b8560e52ce6a4a}{fwd}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$dst, const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}{Scalar}} $\ast$src, int nfft)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_af6d3bb0a2807a079de677e81f940d41b}{inv}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$dst, const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$src, int nfft)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a2de77b6da24146144f1d9b202c312108}{inv}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}{Scalar}} $\ast$dst, const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$src, int nfft)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{kiss\+\_\+cpx\+\_\+fft}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}{Scalar}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a833bf512e24e9629b206265188506a9b}{Plan\+Data}}
+\item 
+typedef std\+::map$<$ int, \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a833bf512e24e9629b206265188506a9b}{Plan\+Data}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a3058dab58ee6e2afff12f16b17bd043d}{Plan\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a6be6c5acf7e3cce474dc8c94f15eff1e}{Plan\+Key}} (int nfft, bool isinverse) const
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a833bf512e24e9629b206265188506a9b}{Plan\+Data}} \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a738d277ef0b7743450c9647bce8a048d}{get\+\_\+plan}} (int nfft, bool \mbox{\hyperlink{_array_cwise_unary_ops_8h_a6bbf910050f42a24192e2fe5e4423eac}{inverse}})
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aabe826db33978346e8e21c3d8aa837b5}{real\+\_\+twiddles}} (int ncfft2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a3058dab58ee6e2afff12f16b17bd043d}{Plan\+Map}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a0d73230bed57a7b3c1cfe7ff4708c1be}{m\+\_\+plans}}
+\item 
+std\+::map$<$ int, std\+::vector$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $>$ $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a8bcdc6a09b8839fdc53a3da64987d6e2}{m\+\_\+real\+Twiddles}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a777f112137d71539bc0ffc2875643cc4}{m\+\_\+tmp\+Buf1}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_ad7c946816e4ace1e955b837a683368c1}{m\+\_\+tmp\+Buf2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}\label{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!Complex@{Complex}}
+\index{Complex@{Complex}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{Complex}{Complex}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef std\+::complex$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}{Scalar}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a833bf512e24e9629b206265188506a9b}\label{struct_eigen_1_1internal_1_1kissfft__impl_a833bf512e24e9629b206265188506a9b}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!PlanData@{PlanData}}
+\index{PlanData@{PlanData}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{PlanData}{PlanData}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{kiss\+\_\+cpx\+\_\+fft}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}{Scalar}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a833bf512e24e9629b206265188506a9b}{Plan\+Data}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a3058dab58ee6e2afff12f16b17bd043d}\label{struct_eigen_1_1internal_1_1kissfft__impl_a3058dab58ee6e2afff12f16b17bd043d}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!PlanMap@{PlanMap}}
+\index{PlanMap@{PlanMap}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{PlanMap}{PlanMap}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef std\+::map$<$int,\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a833bf512e24e9629b206265188506a9b}{Plan\+Data}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a3058dab58ee6e2afff12f16b17bd043d}{Plan\+Map}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}\label{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef \+\_\+\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}{Scalar}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a24ae326cc4d2e7b1f5f1e1e15f0df0a9}\label{struct_eigen_1_1internal_1_1kissfft__impl_a24ae326cc4d2e7b1f5f1e1e15f0df0a9}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!clear@{clear}}
+\index{clear@{clear}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_ab72085de6e46b34ee777f6f6887afa10}\label{struct_eigen_1_1internal_1_1kissfft__impl_ab72085de6e46b34ee777f6f6887afa10}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!fwd@{fwd}}
+\index{fwd@{fwd}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{fwd()}{fwd()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::fwd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$}]{src,  }\item[{int}]{nfft }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a2e7fc2f0910f00b559b8560e52ce6a4a}\label{struct_eigen_1_1internal_1_1kissfft__impl_a2e7fc2f0910f00b559b8560e52ce6a4a}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!fwd@{fwd}}
+\index{fwd@{fwd}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{fwd()}{fwd()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::fwd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}{Scalar}} $\ast$}]{src,  }\item[{int}]{nfft }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a6f06e5103fce0687c3f9dada88de7fd7}\label{struct_eigen_1_1internal_1_1kissfft__impl_a6f06e5103fce0687c3f9dada88de7fd7}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!fwd2@{fwd2}}
+\index{fwd2@{fwd2}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{fwd2()}{fwd2()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::fwd2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$}]{src,  }\item[{int}]{n0,  }\item[{int}]{n1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a738d277ef0b7743450c9647bce8a048d}\label{struct_eigen_1_1internal_1_1kissfft__impl_a738d277ef0b7743450c9647bce8a048d}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!get\_plan@{get\_plan}}
+\index{get\_plan@{get\_plan}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{get\_plan()}{get\_plan()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a833bf512e24e9629b206265188506a9b}{Plan\+Data}}\& \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::get\+\_\+plan (\begin{DoxyParamCaption}\item[{int}]{nfft,  }\item[{bool}]{inverse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_af6d3bb0a2807a079de677e81f940d41b}\label{struct_eigen_1_1internal_1_1kissfft__impl_af6d3bb0a2807a079de677e81f940d41b}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!inv@{inv}}
+\index{inv@{inv}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{inv()}{inv()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::inv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$}]{src,  }\item[{int}]{nfft }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a2de77b6da24146144f1d9b202c312108}\label{struct_eigen_1_1internal_1_1kissfft__impl_a2de77b6da24146144f1d9b202c312108}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!inv@{inv}}
+\index{inv@{inv}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{inv()}{inv()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::inv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aaa7ee28331132c45aabb28d7d22abee5}{Scalar}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$}]{src,  }\item[{int}]{nfft }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_ad8c65a5e75b9059534bf60ded4ace582}\label{struct_eigen_1_1internal_1_1kissfft__impl_ad8c65a5e75b9059534bf60ded4ace582}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!inv2@{inv2}}
+\index{inv2@{inv2}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{inv2()}{inv2()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::inv2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}} $\ast$}]{src,  }\item[{int}]{n0,  }\item[{int}]{n1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a6be6c5acf7e3cce474dc8c94f15eff1e}\label{struct_eigen_1_1internal_1_1kissfft__impl_a6be6c5acf7e3cce474dc8c94f15eff1e}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!PlanKey@{PlanKey}}
+\index{PlanKey@{PlanKey}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{PlanKey()}{PlanKey()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+int \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::Plan\+Key (\begin{DoxyParamCaption}\item[{int}]{nfft,  }\item[{bool}]{isinverse }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_aabe826db33978346e8e21c3d8aa837b5}\label{struct_eigen_1_1internal_1_1kissfft__impl_aabe826db33978346e8e21c3d8aa837b5}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!real\_twiddles@{real\_twiddles}}
+\index{real\_twiddles@{real\_twiddles}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{real\_twiddles()}{real\_twiddles()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}}$\ast$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::real\+\_\+twiddles (\begin{DoxyParamCaption}\item[{int}]{ncfft2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a0d73230bed57a7b3c1cfe7ff4708c1be}\label{struct_eigen_1_1internal_1_1kissfft__impl_a0d73230bed57a7b3c1cfe7ff4708c1be}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!m\_plans@{m\_plans}}
+\index{m\_plans@{m\_plans}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_plans}{m\_plans}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_a3058dab58ee6e2afff12f16b17bd043d}{Plan\+Map}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+plans\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a8bcdc6a09b8839fdc53a3da64987d6e2}\label{struct_eigen_1_1internal_1_1kissfft__impl_a8bcdc6a09b8839fdc53a3da64987d6e2}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!m\_realTwiddles@{m\_realTwiddles}}
+\index{m\_realTwiddles@{m\_realTwiddles}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_realTwiddles}{m\_realTwiddles}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+std\+::map$<$int, std\+::vector$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}}$>$ $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+real\+Twiddles\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_a777f112137d71539bc0ffc2875643cc4}\label{struct_eigen_1_1internal_1_1kissfft__impl_a777f112137d71539bc0ffc2875643cc4}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!m\_tmpBuf1@{m\_tmpBuf1}}
+\index{m\_tmpBuf1@{m\_tmpBuf1}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_tmpBuf1}{m\_tmpBuf1}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+std\+::vector$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+tmp\+Buf1\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kissfft__impl_ad7c946816e4ace1e955b837a683368c1}\label{struct_eigen_1_1internal_1_1kissfft__impl_ad7c946816e4ace1e955b837a683368c1}} 
+\index{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}!m\_tmpBuf2@{m\_tmpBuf2}}
+\index{m\_tmpBuf2@{m\_tmpBuf2}!Eigen::internal::kissfft\_impl$<$ \_Scalar $>$@{Eigen::internal::kissfft\_impl$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_tmpBuf2}{m\_tmpBuf2}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+std\+::vector$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl_aa4cd6de1ff27455a7f5bc83feb771222}{Complex}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kissfft__impl}{Eigen\+::internal\+::kissfft\+\_\+impl}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+tmp\+Buf2\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/src/\+F\+F\+T/\mbox{\hyperlink{ei__kissfft__impl_8h}{ei\+\_\+kissfft\+\_\+impl.\+h}}\end{DoxyCompactItemize}

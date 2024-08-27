@@ -1,0 +1,200 @@
+\hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4}{}\doxysection{Eigen\+::internal\+::evaluator$<$ Partial\+Redux\+Expr$<$ Arg\+Type, Member\+Op, Direction $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4}\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+
+
+{\ttfamily \#include $<$Core\+Evaluators.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::internal\+::evaluator$<$ Partial\+Redux\+Expr$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01e843b5ff5e898d49f3e414625c4be2a}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::internal\+::evaluator$<$ Partial\+Redux\+Expr$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_0867c9a63893a870a958c04173570cf3b}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a46ffc14d9b33b65d46be3b356066a34da73130c9c205151d0cf025dc053902c6b}{Traversal\+Size}} = Direction==int(Vertical) ? int(Arg\+Type\+::Rows\+At\+Compile\+Time) \+: int(Arg\+Type\+::Cols\+At\+Compile\+Time)
+ \}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14a33ac7b44ffd9f5275e456a5a658b38cc}{Coeff\+Read\+Cost}}, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14a657971670333ce8bbe84c17f8befdebe}{Flags}} = (traits$<$Xpr\+Type$>$\+::Flags\&Row\+Major\+Bit) $\vert$ (evaluator$<$Arg\+Type$>$\+::Flags\&(Hereditary\+Bits\&($\sim$\+Row\+Major\+Bit))) $\vert$ Linear\+Access\+Bit, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14a5c6f53f5ba477736fcc33c810f214e77}{Alignment}} = 0
+ \}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a53f3e96728b8398fb732ff23db4680b0}{Xpr\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval}{internal\+::nested\+\_\+eval}}$<$ Arg\+Type, 1 $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0e64e3f427e45e3918c376ed9c78569b}{Arg\+Type\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0e64e3f427e45e3918c376ed9c78569b}{Arg\+Type\+Nested}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9d005566f6850d26e5b0f1ae6770bb9f}{Arg\+Type\+Nested\+Cleaned}}
+\item 
+typedef Arg\+Type\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a22db2b2380c5005a73a502f38cb0aa20}{Input\+Scalar}}
+\item 
+typedef Xpr\+Type\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9be4d60e9872969c8635a74170c10d56}{Scalar}}
+\item 
+typedef Member\+Op\+::template Cost$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a22db2b2380c5005a73a502f38cb0aa20}{Input\+Scalar}}, int(\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a46ffc14d9b33b65d46be3b356066a34da73130c9c205151d0cf025dc053902c6b}{Traversal\+Size}})$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a8dfcbd8aa483d53f4b0647d643e4d728}{Cost\+Op\+Type}}
+\item 
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_af284bce80bc99697934df88f6a14b838}{Coeff\+Return\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_aeef6a0e1c9868969a6e019c4d6f7d7b8}{evaluator}} (const \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a53f3e96728b8398fb732ff23db4680b0}{Xpr\+Type}} xpr)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9be4d60e9872969c8635a74170c10d56}{Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_ad86c5d5cd7a6c24fd71d54e2fb7f2abe}{coeff}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} i, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} j) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9be4d60e9872969c8635a74170c10d56}{Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0f34ee7ebe673d1af906f6478ea4f371}{coeff}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} index) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1add__const__on__value__type}{internal\+::add\+\_\+const\+\_\+on\+\_\+value\+\_\+type}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0e64e3f427e45e3918c376ed9c78569b}{Arg\+Type\+Nested}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_adda440d44fd10ae949464c465596744c}{m\+\_\+arg}}
+\item 
+const Member\+Op \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_aa4d55dc703ff6c2bfb2074ce2fc3c4ac}{m\+\_\+functor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0e64e3f427e45e3918c376ed9c78569b}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0e64e3f427e45e3918c376ed9c78569b}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!ArgTypeNested@{ArgTypeNested}}
+\index{ArgTypeNested@{ArgTypeNested}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{ArgTypeNested}{ArgTypeNested}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval}{internal\+::nested\+\_\+eval}}$<$Arg\+Type,1$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0e64e3f427e45e3918c376ed9c78569b}{Arg\+Type\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9d005566f6850d26e5b0f1ae6770bb9f}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9d005566f6850d26e5b0f1ae6770bb9f}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!ArgTypeNestedCleaned@{ArgTypeNestedCleaned}}
+\index{ArgTypeNestedCleaned@{ArgTypeNestedCleaned}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{ArgTypeNestedCleaned}{ArgTypeNestedCleaned}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0e64e3f427e45e3918c376ed9c78569b}{Arg\+Type\+Nested}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9d005566f6850d26e5b0f1ae6770bb9f}{Arg\+Type\+Nested\+Cleaned}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_af284bce80bc99697934df88f6a14b838}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_af284bce80bc99697934df88f6a14b838}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_af284bce80bc99697934df88f6a14b838}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a8dfcbd8aa483d53f4b0647d643e4d728}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a8dfcbd8aa483d53f4b0647d643e4d728}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!CostOpType@{CostOpType}}
+\index{CostOpType@{CostOpType}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{CostOpType}{CostOpType}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+typedef Member\+Op\+::template Cost$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a22db2b2380c5005a73a502f38cb0aa20}{Input\+Scalar}},int(\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a46ffc14d9b33b65d46be3b356066a34da73130c9c205151d0cf025dc053902c6b}{Traversal\+Size}})$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a8dfcbd8aa483d53f4b0647d643e4d728}{Cost\+Op\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a22db2b2380c5005a73a502f38cb0aa20}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a22db2b2380c5005a73a502f38cb0aa20}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!InputScalar@{InputScalar}}
+\index{InputScalar@{InputScalar}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{InputScalar}{InputScalar}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+typedef Arg\+Type\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a22db2b2380c5005a73a502f38cb0aa20}{Input\+Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9be4d60e9872969c8635a74170c10d56}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9be4d60e9872969c8635a74170c10d56}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+typedef Xpr\+Type\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9be4d60e9872969c8635a74170c10d56}{Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a53f3e96728b8398fb732ff23db4680b0}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a53f3e96728b8398fb732ff23db4680b0}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!XprType@{XprType}}
+\index{XprType@{XprType}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{XprType}{XprType}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$Arg\+Type, Member\+Op, Direction$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a53f3e96728b8398fb732ff23db4680b0}{Xpr\+Type}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a46ffc14d9b33b65d46be3b356066a34d}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a46ffc14d9b33b65d46be3b356066a34d}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TraversalSize@{TraversalSize}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!TraversalSize@{TraversalSize}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a46ffc14d9b33b65d46be3b356066a34da73130c9c205151d0cf025dc053902c6b}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a46ffc14d9b33b65d46be3b356066a34da73130c9c205151d0cf025dc053902c6b}} 
+Traversal\+Size&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CoeffReadCost@{CoeffReadCost}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!CoeffReadCost@{CoeffReadCost}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14a33ac7b44ffd9f5275e456a5a658b38cc}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14a33ac7b44ffd9f5275e456a5a658b38cc}} 
+Coeff\+Read\+Cost&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14a657971670333ce8bbe84c17f8befdebe}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14a657971670333ce8bbe84c17f8befdebe}} 
+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alignment@{Alignment}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!Alignment@{Alignment}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14a5c6f53f5ba477736fcc33c810f214e77}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a2044a511708d1991c03ac3b460ca5f14a5c6f53f5ba477736fcc33c810f214e77}} 
+Alignment&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_aeef6a0e1c9868969a6e019c4d6f7d7b8}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_aeef6a0e1c9868969a6e019c4d6f7d7b8}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!evaluator@{evaluator}}
+\index{evaluator@{evaluator}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{evaluator()}{evaluator()}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a53f3e96728b8398fb732ff23db4680b0}{Xpr\+Type}}}]{xpr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_ad86c5d5cd7a6c24fd71d54e2fb7f2abe}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_ad86c5d5cd7a6c24fd71d54e2fb7f2abe}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9be4d60e9872969c8635a74170c10d56}{Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{i,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0f34ee7ebe673d1af906f6478ea4f371}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0f34ee7ebe673d1af906f6478ea4f371}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a9be4d60e9872969c8635a74170c10d56}{Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_adda440d44fd10ae949464c465596744c}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_adda440d44fd10ae949464c465596744c}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!m\_arg@{m\_arg}}
+\index{m\_arg@{m\_arg}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{m\_arg}{m\_arg}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1add__const__on__value__type}{internal\+::add\+\_\+const\+\_\+on\+\_\+value\+\_\+type}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_a0e64e3f427e45e3918c376ed9c78569b}{Arg\+Type\+Nested}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::m\+\_\+arg\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_aa4d55dc703ff6c2bfb2074ce2fc3c4ac}\label{struct_eigen_1_1internal_1_1evaluator_3_01_partial_redux_expr_3_01_arg_type_00_01_member_op_00_01_direction_01_4_01_4_aa4d55dc703ff6c2bfb2074ce2fc3c4ac}} 
+\index{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}!m\_functor@{m\_functor}}
+\index{m\_functor@{m\_functor}!Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$@{Eigen::internal::evaluator$<$ PartialReduxExpr$<$ ArgType, MemberOp, Direction $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{m\_functor}{m\_functor}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , typename Member\+Op , int Direction$>$ \\
+const Member\+Op \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$<$ Arg\+Type, Member\+Op, Direction $>$ $>$\+::m\+\_\+functor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_core_evaluators_8h}{Core\+Evaluators.\+h}}\end{DoxyCompactItemize}

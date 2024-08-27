@@ -1,0 +1,331 @@
+\hypertarget{mic__prerequisite_8h}{}\doxysection{include/common/mic\+\_\+prerequisite.h File Reference}
+\label{mic__prerequisite_8h}\index{include/common/mic\_prerequisite.h@{include/common/mic\_prerequisite.h}}
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}api/mic\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}json.\+hpp\char`\"{}}\newline
+Include dependency graph for mic\+\_\+prerequisite.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mic__prerequisite_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mic__prerequisite_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_mic_observer}{Mic\+Observer$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{class_mic_observable}{Mic\+Observable$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_ac3afdc1b2ec865ffb74d6eb75764462e}{M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+S\+T\+A\+RT}}~namespace mic \{
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a8f7c728e15f77fcbba94cb2dcdbd0aa0}{M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+E\+ND}}~\}
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a197514eaf0ab0f58529636bb766542cd}{U\+S\+I\+N\+G\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+M\+IC}}~using namespace mic
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a5e34efb9f63683f060a18d2eec04f059}{M\+I\+C\+\_\+\+M\+I\+N\+\_\+\+F\+L\+O\+A\+T64}}~std\+::numeric\+\_\+limits$<$float64\+\_\+t$>$\+::min()
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a98ec3fe41c672cf170f16dfb2b4685ac}{M\+I\+C\+\_\+\+M\+A\+X\+\_\+\+F\+L\+O\+A\+T64}}~std\+::numeric\+\_\+limits$<$float64\+\_\+t$>$\+::max()
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a73f3af6357d6f4735e58e226a9900eb1}{M\+I\+C\+\_\+\+M\+I\+N\+\_\+\+F\+L\+O\+A\+T32}}~std\+::numeric\+\_\+limits$<$float32\+\_\+t$>$\+::min()
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a824eedf8b1dedc4342315418e3d2a018}{M\+I\+C\+\_\+\+M\+A\+X\+\_\+\+F\+L\+O\+A\+T32}}~std\+::numeric\+\_\+limits$<$float32\+\_\+t$>$\+::max()
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a757cc8f373dea975e8d05082eb78e012}{M\+I\+C\+\_\+\+M\+I\+N\+\_\+\+I\+N\+T32}}~std\+::numeric\+\_\+limits$<$int32\+\_\+t$>$\+::min()
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a2288ce0290e36a1f64ff4134e9f7e274}{M\+I\+C\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T32}}~std\+::numeric\+\_\+limits$<$int32\+\_\+t$>$\+::max()
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_ac82e9b9d9a615b3a63071a657c8606ee}{M\+I\+C\+\_\+\+E\+P\+S\+I\+L\+ON}}~(1e-\/3f)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a89add98aa547ab9e2b2be5f959125beb}{M\+I\+C\+\_\+\+S\+M\+A\+L\+L\+E\+R\+\_\+\+E\+P\+S\+I\+L\+ON}}~(1e-\/6f)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_abcc9513cbd063e0ea2297c79abc703ac}{M\+I\+C\+\_\+\+S\+M\+A\+L\+L\+E\+S\+T\+\_\+\+E\+P\+S\+I\+L\+ON}}~(1e-\/8f)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_ad362317d3f3f6d9a74c6c35f38d23030}{M\+I\+C\+\_\+\+I\+S\+\_\+\+F\+L\+O\+A\+T\+\_\+\+Z\+E\+RO}}(x)~(fabs(x -\/ 0.) $<$ \mbox{\hyperlink{mic__prerequisite_8h_a89add98aa547ab9e2b2be5f959125beb}{M\+I\+C\+\_\+\+S\+M\+A\+L\+L\+E\+R\+\_\+\+E\+P\+S\+I\+L\+ON}})
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_aa1e0ffb51dc9c1e3f6420ed2e9c055e0}{M\+I\+C\+\_\+\+PI}}~(3.\+14159265358979323846)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_abc592cf7bc5b24dea06ae97360cf95fa}{M\+I\+C\+\_\+\+H\+A\+L\+F\+\_\+\+PI}}~(1.\+57079632679489661923)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a9a2d9c4912f84f91b95023f3556013e2}{M\+I\+C\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+PI}}~(6.\+28318530717958647692)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_adb07593958d6f6345b454ac802def149}{M\+I\+C\+\_\+\+R\+EF}}(obj)~std\+::ref(obj)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a13cd3352c7a2cdadbc0c51b08f03f2a4}{M\+I\+C\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+TE}}(p)~do \{ if (p) \{delete p; p = nullptr;\}\} while(0)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a9c401e8c6626cefde9eb559936a18eca}{mic\+\_\+time\+\_\+t}}~std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a8f10c621adbd4ebb0c9d99d02e4ccdbe}{M\+I\+C\+\_\+\+N\+OW}}()~(std\+::chrono\+::steady\+\_\+clock\+::now())
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a49e8d166440d1cf2b3af7b34283957c0}{M\+I\+C\+\_\+\+T\+I\+M\+E\+\_\+\+C\+O\+ST}}(start,  end)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a702f2e548ce443bf3cecce333fd3a9d8}{M\+I\+C\+\_\+\+T\+I\+M\+E\+\_\+\+C\+O\+S\+T\+\_\+\+T\+O\+\_\+\+N\+OW}}(time)~\mbox{\hyperlink{mic__prerequisite_8h_a49e8d166440d1cf2b3af7b34283957c0}{M\+I\+C\+\_\+\+T\+I\+M\+E\+\_\+\+C\+O\+ST}}(time, \mbox{\hyperlink{mic__prerequisite_8h_a8f10c621adbd4ebb0c9d99d02e4ccdbe}{M\+I\+C\+\_\+\+N\+OW}}())
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a267e4227374a5d60c568f074635fdac2}{M\+I\+C\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+RT}}(\+\_\+X)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_a8559bf9e1d8ecd43415b7da603ce70dd}{M\+I\+C\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+OP}}(\+\_\+X)
+\item 
+\#define \mbox{\hyperlink{mic__prerequisite_8h_ab12ab3bd9982c6ac4be528003997377d}{M\+I\+C\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+U\+NT}}(\+\_\+X)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{mic__prerequisite_8h_a91e83021e528728619733a8a63faf8f7}{thread\+\_\+t}} = std\+::thread
+\item 
+using \mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} = nlohmann\+::json
+\item 
+using \mbox{\hyperlink{mic__prerequisite_8h_a13492812757299bd04ac5a942f32b8d0}{mic\+\_\+logger\+\_\+t}} = \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}}
+\item 
+using \mbox{\hyperlink{mic__prerequisite_8h_a0b4609f1c6c770e66e1a5f230551e719}{mic\+\_\+config\+\_\+t}} = \mbox{\hyperlink{class_mic_config}{Mic\+Config}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{mic__prerequisite_8h_a3302592b8f2df7414b91c186faec2df2}{mic\+\_\+observer\+\_\+t}} = \mbox{\hyperlink{class_mic_observer}{Mic\+Observer}}$<$ T $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{mic__prerequisite_8h_ac48fbe04ebca487b34b52c507ffae399}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{mic__prerequisite_8h_a3302592b8f2df7414b91c186faec2df2}{mic\+\_\+observer\+\_\+t}}$<$ T $>$ $>$
+\item 
+using \mbox{\hyperlink{mic__prerequisite_8h_a3818ae2d6ee9835996fee3d3f47c7fb2}{mic\+\_\+utils}} = \mbox{\hyperlink{class_mic_utils}{Mic\+Utils}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mic__prerequisite_8h_a9a2d9c4912f84f91b95023f3556013e2}\label{mic__prerequisite_8h_a9a2d9c4912f84f91b95023f3556013e2}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_DOUBLE\_PI@{MIC\_DOUBLE\_PI}}
+\index{MIC\_DOUBLE\_PI@{MIC\_DOUBLE\_PI}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_DOUBLE\_PI}{MIC\_DOUBLE\_PI}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+PI~(6.\+28318530717958647692)}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_ac82e9b9d9a615b3a63071a657c8606ee}\label{mic__prerequisite_8h_ac82e9b9d9a615b3a63071a657c8606ee}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_EPSILON@{MIC\_EPSILON}}
+\index{MIC\_EPSILON@{MIC\_EPSILON}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_EPSILON}{MIC\_EPSILON}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+E\+P\+S\+I\+L\+ON~(1e-\/3f)}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_abc592cf7bc5b24dea06ae97360cf95fa}\label{mic__prerequisite_8h_abc592cf7bc5b24dea06ae97360cf95fa}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_HALF\_PI@{MIC\_HALF\_PI}}
+\index{MIC\_HALF\_PI@{MIC\_HALF\_PI}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_HALF\_PI}{MIC\_HALF\_PI}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+H\+A\+L\+F\+\_\+\+PI~(1.\+57079632679489661923)}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_ad362317d3f3f6d9a74c6c35f38d23030}\label{mic__prerequisite_8h_ad362317d3f3f6d9a74c6c35f38d23030}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_IS\_FLOAT\_ZERO@{MIC\_IS\_FLOAT\_ZERO}}
+\index{MIC\_IS\_FLOAT\_ZERO@{MIC\_IS\_FLOAT\_ZERO}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_IS\_FLOAT\_ZERO}{MIC\_IS\_FLOAT\_ZERO}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+I\+S\+\_\+\+F\+L\+O\+A\+T\+\_\+\+Z\+E\+RO(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(fabs(x -\/ 0.) $<$ \mbox{\hyperlink{mic__prerequisite_8h_a89add98aa547ab9e2b2be5f959125beb}{M\+I\+C\+\_\+\+S\+M\+A\+L\+L\+E\+R\+\_\+\+E\+P\+S\+I\+L\+ON}})}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a824eedf8b1dedc4342315418e3d2a018}\label{mic__prerequisite_8h_a824eedf8b1dedc4342315418e3d2a018}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_MAX\_FLOAT32@{MIC\_MAX\_FLOAT32}}
+\index{MIC\_MAX\_FLOAT32@{MIC\_MAX\_FLOAT32}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_MAX\_FLOAT32}{MIC\_MAX\_FLOAT32}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+M\+A\+X\+\_\+\+F\+L\+O\+A\+T32~std\+::numeric\+\_\+limits$<$float32\+\_\+t$>$\+::max()}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a98ec3fe41c672cf170f16dfb2b4685ac}\label{mic__prerequisite_8h_a98ec3fe41c672cf170f16dfb2b4685ac}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_MAX\_FLOAT64@{MIC\_MAX\_FLOAT64}}
+\index{MIC\_MAX\_FLOAT64@{MIC\_MAX\_FLOAT64}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_MAX\_FLOAT64}{MIC\_MAX\_FLOAT64}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+M\+A\+X\+\_\+\+F\+L\+O\+A\+T64~std\+::numeric\+\_\+limits$<$float64\+\_\+t$>$\+::max()}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a2288ce0290e36a1f64ff4134e9f7e274}\label{mic__prerequisite_8h_a2288ce0290e36a1f64ff4134e9f7e274}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_MAX\_INT32@{MIC\_MAX\_INT32}}
+\index{MIC\_MAX\_INT32@{MIC\_MAX\_INT32}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_MAX\_INT32}{MIC\_MAX\_INT32}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T32~std\+::numeric\+\_\+limits$<$int32\+\_\+t$>$\+::max()}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a73f3af6357d6f4735e58e226a9900eb1}\label{mic__prerequisite_8h_a73f3af6357d6f4735e58e226a9900eb1}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_MIN\_FLOAT32@{MIC\_MIN\_FLOAT32}}
+\index{MIC\_MIN\_FLOAT32@{MIC\_MIN\_FLOAT32}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_MIN\_FLOAT32}{MIC\_MIN\_FLOAT32}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+M\+I\+N\+\_\+\+F\+L\+O\+A\+T32~std\+::numeric\+\_\+limits$<$float32\+\_\+t$>$\+::min()}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a5e34efb9f63683f060a18d2eec04f059}\label{mic__prerequisite_8h_a5e34efb9f63683f060a18d2eec04f059}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_MIN\_FLOAT64@{MIC\_MIN\_FLOAT64}}
+\index{MIC\_MIN\_FLOAT64@{MIC\_MIN\_FLOAT64}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_MIN\_FLOAT64}{MIC\_MIN\_FLOAT64}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+M\+I\+N\+\_\+\+F\+L\+O\+A\+T64~std\+::numeric\+\_\+limits$<$float64\+\_\+t$>$\+::min()}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a757cc8f373dea975e8d05082eb78e012}\label{mic__prerequisite_8h_a757cc8f373dea975e8d05082eb78e012}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_MIN\_INT32@{MIC\_MIN\_INT32}}
+\index{MIC\_MIN\_INT32@{MIC\_MIN\_INT32}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_MIN\_INT32}{MIC\_MIN\_INT32}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+M\+I\+N\+\_\+\+I\+N\+T32~std\+::numeric\+\_\+limits$<$int32\+\_\+t$>$\+::min()}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a8f7c728e15f77fcbba94cb2dcdbd0aa0}\label{mic__prerequisite_8h_a8f7c728e15f77fcbba94cb2dcdbd0aa0}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_NAMESPACE\_END@{MIC\_NAMESPACE\_END}}
+\index{MIC\_NAMESPACE\_END@{MIC\_NAMESPACE\_END}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_NAMESPACE\_END}{MIC\_NAMESPACE\_END}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+E\+ND~\}}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_ac3afdc1b2ec865ffb74d6eb75764462e}\label{mic__prerequisite_8h_ac3afdc1b2ec865ffb74d6eb75764462e}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_NAMESPACE\_START@{MIC\_NAMESPACE\_START}}
+\index{MIC\_NAMESPACE\_START@{MIC\_NAMESPACE\_START}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_NAMESPACE\_START}{MIC\_NAMESPACE\_START}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+S\+T\+A\+RT~namespace mic \{}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a8f10c621adbd4ebb0c9d99d02e4ccdbe}\label{mic__prerequisite_8h_a8f10c621adbd4ebb0c9d99d02e4ccdbe}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_NOW@{MIC\_NOW}}
+\index{MIC\_NOW@{MIC\_NOW}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_NOW}{MIC\_NOW}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+N\+OW(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(std\+::chrono\+::steady\+\_\+clock\+::now())}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_aa1e0ffb51dc9c1e3f6420ed2e9c055e0}\label{mic__prerequisite_8h_aa1e0ffb51dc9c1e3f6420ed2e9c055e0}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_PI@{MIC\_PI}}
+\index{MIC\_PI@{MIC\_PI}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_PI}{MIC\_PI}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+PI~(3.\+14159265358979323846)}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_adb07593958d6f6345b454ac802def149}\label{mic__prerequisite_8h_adb07593958d6f6345b454ac802def149}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_REF@{MIC\_REF}}
+\index{MIC\_REF@{MIC\_REF}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_REF}{MIC\_REF}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+R\+EF(\begin{DoxyParamCaption}\item[{}]{obj }\end{DoxyParamCaption})~std\+::ref(obj)}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a13cd3352c7a2cdadbc0c51b08f03f2a4}\label{mic__prerequisite_8h_a13cd3352c7a2cdadbc0c51b08f03f2a4}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_SAFE\_DELETE@{MIC\_SAFE\_DELETE}}
+\index{MIC\_SAFE\_DELETE@{MIC\_SAFE\_DELETE}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_SAFE\_DELETE}{MIC\_SAFE\_DELETE}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+TE(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~do \{ if (p) \{delete p; p = nullptr;\}\} while(0)}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a89add98aa547ab9e2b2be5f959125beb}\label{mic__prerequisite_8h_a89add98aa547ab9e2b2be5f959125beb}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_SMALLER\_EPSILON@{MIC\_SMALLER\_EPSILON}}
+\index{MIC\_SMALLER\_EPSILON@{MIC\_SMALLER\_EPSILON}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_SMALLER\_EPSILON}{MIC\_SMALLER\_EPSILON}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+S\+M\+A\+L\+L\+E\+R\+\_\+\+E\+P\+S\+I\+L\+ON~(1e-\/6f)}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_abcc9513cbd063e0ea2297c79abc703ac}\label{mic__prerequisite_8h_abcc9513cbd063e0ea2297c79abc703ac}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_SMALLEST\_EPSILON@{MIC\_SMALLEST\_EPSILON}}
+\index{MIC\_SMALLEST\_EPSILON@{MIC\_SMALLEST\_EPSILON}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_SMALLEST\_EPSILON}{MIC\_SMALLEST\_EPSILON}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+S\+M\+A\+L\+L\+E\+S\+T\+\_\+\+E\+P\+S\+I\+L\+ON~(1e-\/8f)}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a49e8d166440d1cf2b3af7b34283957c0}\label{mic__prerequisite_8h_a49e8d166440d1cf2b3af7b34283957c0}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_TIME\_COST@{MIC\_TIME\_COST}}
+\index{MIC\_TIME\_COST@{MIC\_TIME\_COST}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_TIME\_COST}{MIC\_TIME\_COST}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+T\+I\+M\+E\+\_\+\+C\+O\+ST(\begin{DoxyParamCaption}\item[{}]{start,  }\item[{}]{end }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    (std::chrono::duration\_cast<std::chrono::duration<float64\_t> > \(\backslash\)}
+\DoxyCodeLine{            (end -\/ start).count())}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{mic__prerequisite_8h_a702f2e548ce443bf3cecce333fd3a9d8}\label{mic__prerequisite_8h_a702f2e548ce443bf3cecce333fd3a9d8}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_TIME\_COST\_TO\_NOW@{MIC\_TIME\_COST\_TO\_NOW}}
+\index{MIC\_TIME\_COST\_TO\_NOW@{MIC\_TIME\_COST\_TO\_NOW}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_TIME\_COST\_TO\_NOW}{MIC\_TIME\_COST\_TO\_NOW}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+T\+I\+M\+E\+\_\+\+C\+O\+S\+T\+\_\+\+T\+O\+\_\+\+N\+OW(\begin{DoxyParamCaption}\item[{}]{time }\end{DoxyParamCaption})~\mbox{\hyperlink{mic__prerequisite_8h_a49e8d166440d1cf2b3af7b34283957c0}{M\+I\+C\+\_\+\+T\+I\+M\+E\+\_\+\+C\+O\+ST}}(time, \mbox{\hyperlink{mic__prerequisite_8h_a8f10c621adbd4ebb0c9d99d02e4ccdbe}{M\+I\+C\+\_\+\+N\+OW}}())}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a9c401e8c6626cefde9eb559936a18eca}\label{mic__prerequisite_8h_a9c401e8c6626cefde9eb559936a18eca}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!mic\_time\_t@{mic\_time\_t}}
+\index{mic\_time\_t@{mic\_time\_t}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{mic\_time\_t}{mic\_time\_t}}
+{\footnotesize\ttfamily \#define mic\+\_\+time\+\_\+t~std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_ab12ab3bd9982c6ac4be528003997377d}\label{mic__prerequisite_8h_ab12ab3bd9982c6ac4be528003997377d}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_TIMER\_COUNT@{MIC\_TIMER\_COUNT}}
+\index{MIC\_TIMER\_COUNT@{MIC\_TIMER\_COUNT}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_TIMER\_COUNT}{MIC\_TIMER\_COUNT}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+U\+NT(\begin{DoxyParamCaption}\item[{}]{\+\_\+X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        std::chrono::duration\_cast<std::chrono::duration<float64\_t> > \(\backslash\)}
+\DoxyCodeLine{        (\_X\#\#\_stop -\/ \_X\#\#\_start).count()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{mic__prerequisite_8h_a267e4227374a5d60c568f074635fdac2}\label{mic__prerequisite_8h_a267e4227374a5d60c568f074635fdac2}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_TIMER\_START@{MIC\_TIMER\_START}}
+\index{MIC\_TIMER\_START@{MIC\_TIMER\_START}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_TIMER\_START}{MIC\_TIMER\_START}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+RT(\begin{DoxyParamCaption}\item[{}]{\+\_\+X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \textcolor{keyword}{auto} \_X\#\#\_start = std::chrono::steady\_clock::now(); \(\backslash\)}
+\DoxyCodeLine{        auto \_X\#\#\_stop = \_X\#\#\_start}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{mic__prerequisite_8h_a8559bf9e1d8ecd43415b7da603ce70dd}\label{mic__prerequisite_8h_a8559bf9e1d8ecd43415b7da603ce70dd}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!MIC\_TIMER\_STOP@{MIC\_TIMER\_STOP}}
+\index{MIC\_TIMER\_STOP@{MIC\_TIMER\_STOP}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_TIMER\_STOP}{MIC\_TIMER\_STOP}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+OP(\begin{DoxyParamCaption}\item[{}]{\+\_\+X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
+\DoxyCodeLine{            \_X\#\#\_stop = std::chrono::steady\_clock::now(); \(\backslash\)}
+\DoxyCodeLine{            auto time\_used = \(\backslash\)}
+\DoxyCodeLine{            std::chrono::duration\_cast<std::chrono::duration<float64\_t> > \(\backslash\)}
+\DoxyCodeLine{            (\_X\#\#\_stop -\/ \_X\#\#\_start); \(\backslash\)}
+\DoxyCodeLine{            MIC\_LOG\_DEBUG\_INFO(\textcolor{stringliteral}{"[MIC] "}\#\_X\textcolor{stringliteral}{" takes \%.3f s\(\backslash\)n"}, time\_used.count()); \(\backslash\)}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{mic__prerequisite_8h_a197514eaf0ab0f58529636bb766542cd}\label{mic__prerequisite_8h_a197514eaf0ab0f58529636bb766542cd}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!USING\_NAMESPACE\_MIC@{USING\_NAMESPACE\_MIC}}
+\index{USING\_NAMESPACE\_MIC@{USING\_NAMESPACE\_MIC}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{USING\_NAMESPACE\_MIC}{USING\_NAMESPACE\_MIC}}
+{\footnotesize\ttfamily \#define U\+S\+I\+N\+G\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+M\+IC~using namespace mic}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}\label{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!json\_t@{json\_t}}
+\index{json\_t@{json\_t}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{json\_t}{json\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} =  nlohmann\+::json}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a0b4609f1c6c770e66e1a5f230551e719}\label{mic__prerequisite_8h_a0b4609f1c6c770e66e1a5f230551e719}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!mic\_config\_t@{mic\_config\_t}}
+\index{mic\_config\_t@{mic\_config\_t}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{mic\_config\_t}{mic\_config\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__prerequisite_8h_a0b4609f1c6c770e66e1a5f230551e719}{mic\+\_\+config\+\_\+t}} =  \mbox{\hyperlink{class_mic_config}{Mic\+Config}}}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a13492812757299bd04ac5a942f32b8d0}\label{mic__prerequisite_8h_a13492812757299bd04ac5a942f32b8d0}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!mic\_logger\_t@{mic\_logger\_t}}
+\index{mic\_logger\_t@{mic\_logger\_t}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{mic\_logger\_t}{mic\_logger\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__logger_8h_a13492812757299bd04ac5a942f32b8d0}{mic\+\_\+logger\+\_\+t}} =  \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}}}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_ac48fbe04ebca487b34b52c507ffae399}\label{mic__prerequisite_8h_ac48fbe04ebca487b34b52c507ffae399}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!mic\_observer\_shared\_ptr@{mic\_observer\_shared\_ptr}}
+\index{mic\_observer\_shared\_ptr@{mic\_observer\_shared\_ptr}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{mic\_observer\_shared\_ptr}{mic\_observer\_shared\_ptr}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{mic__prerequisite_8h_ac48fbe04ebca487b34b52c507ffae399}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{mic__prerequisite_8h_a3302592b8f2df7414b91c186faec2df2}{mic\+\_\+observer\+\_\+t}}$<$T$>$ $>$}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a3302592b8f2df7414b91c186faec2df2}\label{mic__prerequisite_8h_a3302592b8f2df7414b91c186faec2df2}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!mic\_observer\_t@{mic\_observer\_t}}
+\index{mic\_observer\_t@{mic\_observer\_t}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{mic\_observer\_t}{mic\_observer\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{mic__prerequisite_8h_a3302592b8f2df7414b91c186faec2df2}{mic\+\_\+observer\+\_\+t}} =  \mbox{\hyperlink{class_mic_observer}{Mic\+Observer}}$<$T$>$}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a3818ae2d6ee9835996fee3d3f47c7fb2}\label{mic__prerequisite_8h_a3818ae2d6ee9835996fee3d3f47c7fb2}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!mic\_utils@{mic\_utils}}
+\index{mic\_utils@{mic\_utils}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{mic\_utils}{mic\_utils}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__prerequisite_8h_a3818ae2d6ee9835996fee3d3f47c7fb2}{mic\+\_\+utils}} =  \mbox{\hyperlink{class_mic_utils}{Mic\+Utils}}}
+
+\mbox{\Hypertarget{mic__prerequisite_8h_a91e83021e528728619733a8a63faf8f7}\label{mic__prerequisite_8h_a91e83021e528728619733a8a63faf8f7}} 
+\index{mic\_prerequisite.h@{mic\_prerequisite.h}!thread\_t@{thread\_t}}
+\index{thread\_t@{thread\_t}!mic\_prerequisite.h@{mic\_prerequisite.h}}
+\doxysubsubsection{\texorpdfstring{thread\_t}{thread\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__prerequisite_8h_a91e83021e528728619733a8a63faf8f7}{thread\+\_\+t}} =  std\+::thread}
+

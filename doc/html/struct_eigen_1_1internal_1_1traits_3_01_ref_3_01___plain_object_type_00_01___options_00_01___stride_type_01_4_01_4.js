@@ -1,0 +1,9 @@
+var struct_eigen_1_1internal_1_1traits_3_01_ref_3_01___plain_object_type_00_01___options_00_01___stride_type_01_4_01_4 =
+[
+    [ "match", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01___plain_object_type_00_01___options_00_01___stride_type_01_4_01_4_1_1match.html", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01___plain_object_type_00_01___options_00_01___stride_type_01_4_01_4_1_1match" ],
+    [ "PlainObjectType", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01___plain_object_type_00_01___options_00_01___stride_type_01_4_01_4.html#a1a891225ab7bc2b909fe009cb15af8ca", null ],
+    [ "StrideType", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01___plain_object_type_00_01___options_00_01___stride_type_01_4_01_4.html#a3d87abd458a368ce0a3ec13e4c90667a", null ],
+    [ "Options", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01___plain_object_type_00_01___options_00_01___stride_type_01_4_01_4.html#ae090d14a61766ff9bc884551b34ca427ad7fc16b0758e6c5f3753157dd4fa6eb6", null ],
+    [ "Flags", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01___plain_object_type_00_01___options_00_01___stride_type_01_4_01_4.html#ae090d14a61766ff9bc884551b34ca427ad225cd7be17e76fb3598532eea28eb21", null ],
+    [ "Alignment", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01___plain_object_type_00_01___options_00_01___stride_type_01_4_01_4.html#ae090d14a61766ff9bc884551b34ca427af4e39de8172cbc30224da48d07c8072c", null ]
+];

@@ -1,0 +1,102 @@
+\hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4}{}\doxysection{Eigen\+::internal\+::traits$<$ Sparse\+Vector$<$ \+\_\+\+Scalar, \+\_\+\+Options, \+\_\+\+Storage\+Index $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4}\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}
+
+
+{\ttfamily \#include $<$Sparse\+Vector.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a597df31eccea73e1c94d21ad383639bc}{Is\+Col\+Vector}} = (\+\_\+\+Options \& Row\+Major\+Bit) ? 0 \+: 1, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a7347512ae6ad073e191454427041fbc5}{Rows\+At\+Compile\+Time}} = Is\+Col\+Vector ? Dynamic \+: 1, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a319be67a22b734c26881f030c8a42a54}{Cols\+At\+Compile\+Time}} = Is\+Col\+Vector ? 1 \+: Dynamic, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a68cbb5a16acd05c0486a7eeec59a6f5b}{Max\+Rows\+At\+Compile\+Time}} = Rows\+At\+Compile\+Time, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423af41e46b3d825b097382cbb3cbb88e313}{Max\+Cols\+At\+Compile\+Time}} = Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423ac6688e5db78494d3bbfeb07547ece65d}{Flags}} = \+\_\+\+Options $\vert$ Nest\+By\+Ref\+Bit $\vert$ Lvalue\+Bit $\vert$ (Is\+Col\+Vector ? 0 \+: Row\+Major\+Bit) $\vert$ Compressed\+Access\+Bit, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423ac6ff8a31aeb837c146e4f81fc7419d3b}{Supported\+Access\+Patterns}} = Inner\+Random\+Access\+Pattern
+ \}
+\item 
+typedef \+\_\+\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a82769d78cf75ea2316a85d621bedbff3}{Scalar}}
+\item 
+typedef \+\_\+\+Storage\+Index \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_aec42d69562b56c18622a9f6c68819227}{Storage\+Index}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_sparse}{Sparse}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a45df209a997a71525a21af75e046cf35}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_matrix_xpr}{Matrix\+Xpr}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a7766d0c43155ec85950124548de9f661}{Xpr\+Kind}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a82769d78cf75ea2316a85d621bedbff3}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a82769d78cf75ea2316a85d621bedbff3}} 
+\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar , int \+\_\+\+Options, typename \+\_\+\+Storage\+Index $>$ \\
+typedef \+\_\+\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_vector}{Sparse\+Vector}}$<$ \+\_\+\+Scalar, \+\_\+\+Options, \+\_\+\+Storage\+Index $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a82769d78cf75ea2316a85d621bedbff3}{Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_aec42d69562b56c18622a9f6c68819227}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_aec42d69562b56c18622a9f6c68819227}} 
+\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar , int \+\_\+\+Options, typename \+\_\+\+Storage\+Index $>$ \\
+typedef \+\_\+\+Storage\+Index \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_vector}{Sparse\+Vector}}$<$ \+\_\+\+Scalar, \+\_\+\+Options, \+\_\+\+Storage\+Index $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_aec42d69562b56c18622a9f6c68819227}{Storage\+Index}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a45df209a997a71525a21af75e046cf35}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a45df209a997a71525a21af75e046cf35}} 
+\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar , int \+\_\+\+Options, typename \+\_\+\+Storage\+Index $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_sparse}{Sparse}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_vector}{Sparse\+Vector}}$<$ \+\_\+\+Scalar, \+\_\+\+Options, \+\_\+\+Storage\+Index $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a45df209a997a71525a21af75e046cf35}{Storage\+Kind}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a7766d0c43155ec85950124548de9f661}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a7766d0c43155ec85950124548de9f661}} 
+\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!XprKind@{XprKind}}
+\index{XprKind@{XprKind}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{XprKind}{XprKind}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar , int \+\_\+\+Options, typename \+\_\+\+Storage\+Index $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_matrix_xpr}{Matrix\+Xpr}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_vector}{Sparse\+Vector}}$<$ \+\_\+\+Scalar, \+\_\+\+Options, \+\_\+\+Storage\+Index $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a7766d0c43155ec85950124548de9f661}{Xpr\+Kind}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar , int \+\_\+\+Options, typename \+\_\+\+Storage\+Index $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsColVector@{IsColVector}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!IsColVector@{IsColVector}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a597df31eccea73e1c94d21ad383639bc}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a597df31eccea73e1c94d21ad383639bc}} 
+Is\+Col\+Vector&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a7347512ae6ad073e191454427041fbc5}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a7347512ae6ad073e191454427041fbc5}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a319be67a22b734c26881f030c8a42a54}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a319be67a22b734c26881f030c8a42a54}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a68cbb5a16acd05c0486a7eeec59a6f5b}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423a68cbb5a16acd05c0486a7eeec59a6f5b}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423af41e46b3d825b097382cbb3cbb88e313}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423af41e46b3d825b097382cbb3cbb88e313}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423ac6688e5db78494d3bbfeb07547ece65d}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423ac6688e5db78494d3bbfeb07547ece65d}} 
+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SupportedAccessPatterns@{SupportedAccessPatterns}!Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}}\index{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$@{Eigen::internal::traits$<$ SparseVector$<$ \_Scalar, \_Options, \_StorageIndex $>$ $>$}!SupportedAccessPatterns@{SupportedAccessPatterns}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423ac6ff8a31aeb837c146e4f81fc7419d3b}\label{struct_eigen_1_1internal_1_1traits_3_01_sparse_vector_3_01___scalar_00_01___options_00_01___storage_index_01_4_01_4_a6704ef8fe9c932ea1c2143bc2bb7e423ac6ff8a31aeb837c146e4f81fc7419d3b}} 
+Supported\+Access\+Patterns&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Sparse\+Core/\mbox{\hyperlink{_sparse_vector_8h}{Sparse\+Vector.\+h}}\end{DoxyCompactItemize}

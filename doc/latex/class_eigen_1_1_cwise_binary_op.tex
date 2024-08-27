@@ -1,0 +1,241 @@
+\hypertarget{class_eigen_1_1_cwise_binary_op}{}\doxysection{Eigen\+::Cwise\+Binary\+Op$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_cwise_binary_op}\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+
+
+Generic expression where a coefficient-\/wise binary operator is applied to two expressions.  
+
+
+
+
+{\ttfamily \#include $<$Cwise\+Binary\+Op.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Cwise\+Binary\+Op$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_cwise_binary_op__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Cwise\+Binary\+Op$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_cwise_binary_op__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ Binary\+Op $>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aecf8b37279ba824a914f6b2e8eeb1f0e}{Functor}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ Lhs\+Type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a31d9914c9d046a26f1d6104d7342c9d4}{Lhs}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ Rhs\+Type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a06e93ecd10ac78c598a92a17aec6a1c2}{Rhs}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_impl}{Cwise\+Binary\+Op\+Impl}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1cwise__promote__storage__type}{internal\+::cwise\+\_\+promote\+\_\+storage\+\_\+type}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ Lhs\+Type $>$\+::Storage\+Kind, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a06e93ecd10ac78c598a92a17aec6a1c2}{Rhs}} $>$\+::Storage\+Kind, Binary\+Op $>$\+::ret $>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aee1491a3491367912850a4cacc4d66b5}{Base}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aee1491a3491367912850a4cacc4d66b5}{Base}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{internal\+::ref\+\_\+selector}}$<$ Lhs\+Type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a801ee06b0303d085c010328449d22ecf}{Lhs\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{internal\+::ref\+\_\+selector}}$<$ Rhs\+Type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_ab5da2bb07bf090d812f537c4286e8a3d}{Rhs\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{internal\+::remove\+\_\+reference}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a801ee06b0303d085c010328449d22ecf}{Lhs\+Nested}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a138c1d4de02672e0413e00740cea9fb2}{\+\_\+\+Lhs\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{internal\+::remove\+\_\+reference}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_ab5da2bb07bf090d812f537c4286e8a3d}{Rhs\+Nested}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aa7ac1eae125b261a3fe9c4cc610a1fab}{\+\_\+\+Rhs\+Nested}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a2eddd2a280221cee4e42ac6fbed64ad1}{Cwise\+Binary\+Op}} (const \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a31d9914c9d046a26f1d6104d7342c9d4}{Lhs}} \&a\+Lhs, const \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a06e93ecd10ac78c598a92a17aec6a1c2}{Rhs}} \&a\+Rhs, const Binary\+Op \&func=Binary\+Op())
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_ab34abef7299679708c9311ae9044dc8e}{rows}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aa9542897bb422929bc2223b761450304}{cols}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a138c1d4de02672e0413e00740cea9fb2}{\+\_\+\+Lhs\+Nested}} \& \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a591105e7b7d3a26d1600302fb4432770}{lhs}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aa7ac1eae125b261a3fe9c4cc610a1fab}{\+\_\+\+Rhs\+Nested}} \& \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a989ee2b537169396f01976e83e4e08c2}{rhs}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Binary\+Op \& \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_ae897d42f27fb0da96590ee24f37ee907}{functor}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a801ee06b0303d085c010328449d22ecf}{Lhs\+Nested}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a29b57054a3644d62c101ee15815ebe1c}{m\+\_\+lhs}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_ab5da2bb07bf090d812f537c4286e8a3d}{Rhs\+Nested}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a42af8f795a8f4062d9e57c0136277be3}{m\+\_\+rhs}}
+\item 
+const Binary\+Op \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a1bd1d4ffcfa797bb07b09b55e63bc9ab}{m\+\_\+functor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Binary\+Op, typename Lhs\+Type, typename Rhs\+Type$>$\newline
+class Eigen\+::\+Cwise\+Binary\+Op$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$}
+
+Generic expression where a coefficient-\/wise binary operator is applied to two expressions. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Binary\+Op} & template functor implementing the operator \\
+\hline
+{\em Lhs\+Type} & the type of the left-\/hand side \\
+\hline
+{\em Rhs\+Type} & the type of the right-\/hand side\\
+\hline
+\end{DoxyTemplParams}
+This class represents an expression where a coefficient-\/wise binary operator is applied to two expressions. It is the return type of binary operators, by which we mean only those binary operators where both the left-\/hand side and the right-\/hand side are \mbox{\hyperlink{namespace_eigen}{Eigen}} expressions. For example, the return type of matrix1+matrix2 is a \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}.
+
+Most of the time, this is the only way that it is used, so you typically don\textquotesingle{}t have to name \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}} types explicitly.
+
+\begin{DoxySeeAlso}{See also}
+Matrix\+Base\+::binary\+Expr(const Matrix\+Base$<$\+Other\+Derived$>$ \&,const Custom\+Binary\+Op \&) const, class \mbox{\hyperlink{class_eigen_1_1_cwise_unary_op}{Cwise\+Unary\+Op}}, class \mbox{\hyperlink{class_eigen_1_1_cwise_nullary_op}{Cwise\+Nullary\+Op}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_a138c1d4de02672e0413e00740cea9fb2}\label{class_eigen_1_1_cwise_binary_op_a138c1d4de02672e0413e00740cea9fb2}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!\_LhsNested@{\_LhsNested}}
+\index{\_LhsNested@{\_LhsNested}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{\_LhsNested}{\_LhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{internal\+::remove\+\_\+reference}}$<$\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a801ee06b0303d085c010328449d22ecf}{Lhs\+Nested}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a138c1d4de02672e0413e00740cea9fb2}{\+\_\+\+Lhs\+Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_aa7ac1eae125b261a3fe9c4cc610a1fab}\label{class_eigen_1_1_cwise_binary_op_aa7ac1eae125b261a3fe9c4cc610a1fab}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!\_RhsNested@{\_RhsNested}}
+\index{\_RhsNested@{\_RhsNested}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{\_RhsNested}{\_RhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{internal\+::remove\+\_\+reference}}$<$\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_ab5da2bb07bf090d812f537c4286e8a3d}{Rhs\+Nested}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aa7ac1eae125b261a3fe9c4cc610a1fab}{\+\_\+\+Rhs\+Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_aee1491a3491367912850a4cacc4d66b5}\label{class_eigen_1_1_cwise_binary_op_aee1491a3491367912850a4cacc4d66b5}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_impl}{Cwise\+Binary\+Op\+Impl}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1cwise__promote__storage__type}{internal\+::cwise\+\_\+promote\+\_\+storage\+\_\+type}}$<$typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$Lhs\+Type$>$\+::Storage\+Kind, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a06e93ecd10ac78c598a92a17aec6a1c2}{Rhs}}$>$\+::Storage\+Kind, Binary\+Op$>$\+::ret$>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aee1491a3491367912850a4cacc4d66b5}{Base}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aee1491a3491367912850a4cacc4d66b5}{Base}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_aecf8b37279ba824a914f6b2e8eeb1f0e}\label{class_eigen_1_1_cwise_binary_op_aecf8b37279ba824a914f6b2e8eeb1f0e}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!Functor@{Functor}}
+\index{Functor@{Functor}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{Functor}{Functor}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$Binary\+Op$>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aecf8b37279ba824a914f6b2e8eeb1f0e}{Functor}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_a31d9914c9d046a26f1d6104d7342c9d4}\label{class_eigen_1_1_cwise_binary_op_a31d9914c9d046a26f1d6104d7342c9d4}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!Lhs@{Lhs}}
+\index{Lhs@{Lhs}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{Lhs}{Lhs}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$Lhs\+Type$>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a31d9914c9d046a26f1d6104d7342c9d4}{Lhs}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_a801ee06b0303d085c010328449d22ecf}\label{class_eigen_1_1_cwise_binary_op_a801ee06b0303d085c010328449d22ecf}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!LhsNested@{LhsNested}}
+\index{LhsNested@{LhsNested}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{LhsNested}{LhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{internal\+::ref\+\_\+selector}}$<$Lhs\+Type$>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a801ee06b0303d085c010328449d22ecf}{Lhs\+Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_a06e93ecd10ac78c598a92a17aec6a1c2}\label{class_eigen_1_1_cwise_binary_op_a06e93ecd10ac78c598a92a17aec6a1c2}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!Rhs@{Rhs}}
+\index{Rhs@{Rhs}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{Rhs}{Rhs}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$Rhs\+Type$>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a06e93ecd10ac78c598a92a17aec6a1c2}{Rhs}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_ab5da2bb07bf090d812f537c4286e8a3d}\label{class_eigen_1_1_cwise_binary_op_ab5da2bb07bf090d812f537c4286e8a3d}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!RhsNested@{RhsNested}}
+\index{RhsNested@{RhsNested}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{RhsNested}{RhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{internal\+::ref\+\_\+selector}}$<$Rhs\+Type$>$\+::type \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_ab5da2bb07bf090d812f537c4286e8a3d}{Rhs\+Nested}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_a2eddd2a280221cee4e42ac6fbed64ad1}\label{class_eigen_1_1_cwise_binary_op_a2eddd2a280221cee4e42ac6fbed64ad1}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!CwiseBinaryOp@{CwiseBinaryOp}}
+\index{CwiseBinaryOp@{CwiseBinaryOp}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{CwiseBinaryOp()}{CwiseBinaryOp()}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a31d9914c9d046a26f1d6104d7342c9d4}{Lhs}} \&}]{a\+Lhs,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a06e93ecd10ac78c598a92a17aec6a1c2}{Rhs}} \&}]{a\+Rhs,  }\item[{const Binary\+Op \&}]{func = {\ttfamily BinaryOp()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_aa9542897bb422929bc2223b761450304}\label{class_eigen_1_1_cwise_binary_op_aa9542897bb422929bc2223b761450304}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_ae897d42f27fb0da96590ee24f37ee907}\label{class_eigen_1_1_cwise_binary_op_ae897d42f27fb0da96590ee24f37ee907}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!functor@{functor}}
+\index{functor@{functor}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{functor()}{functor()}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Binary\+Op\& \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::functor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the functor representing the binary operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_a591105e7b7d3a26d1600302fb4432770}\label{class_eigen_1_1_cwise_binary_op_a591105e7b7d3a26d1600302fb4432770}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!lhs@{lhs}}
+\index{lhs@{lhs}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{lhs()}{lhs()}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a138c1d4de02672e0413e00740cea9fb2}{\+\_\+\+Lhs\+Nested}}\& \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::lhs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the left hand side nested expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_a989ee2b537169396f01976e83e4e08c2}\label{class_eigen_1_1_cwise_binary_op_a989ee2b537169396f01976e83e4e08c2}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!rhs@{rhs}}
+\index{rhs@{rhs}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{rhs()}{rhs()}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_aa7ac1eae125b261a3fe9c4cc610a1fab}{\+\_\+\+Rhs\+Nested}}\& \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::rhs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the right hand side nested expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_ab34abef7299679708c9311ae9044dc8e}\label{class_eigen_1_1_cwise_binary_op_ab34abef7299679708c9311ae9044dc8e}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_a1bd1d4ffcfa797bb07b09b55e63bc9ab}\label{class_eigen_1_1_cwise_binary_op_a1bd1d4ffcfa797bb07b09b55e63bc9ab}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!m\_functor@{m\_functor}}
+\index{m\_functor@{m\_functor}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_functor}{m\_functor}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+const Binary\+Op \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::m\+\_\+functor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_a29b57054a3644d62c101ee15815ebe1c}\label{class_eigen_1_1_cwise_binary_op_a29b57054a3644d62c101ee15815ebe1c}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!m\_lhs@{m\_lhs}}
+\index{m\_lhs@{m\_lhs}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_lhs}{m\_lhs}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_a801ee06b0303d085c010328449d22ecf}{Lhs\+Nested}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::m\+\_\+lhs\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cwise_binary_op_a42af8f795a8f4062d9e57c0136277be3}\label{class_eigen_1_1_cwise_binary_op_a42af8f795a8f4062d9e57c0136277be3}} 
+\index{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}!m\_rhs@{m\_rhs}}
+\index{m\_rhs@{m\_rhs}!Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$@{Eigen::CwiseBinaryOp$<$ BinaryOp, LhsType, RhsType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_rhs}{m\_rhs}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Type , typename Rhs\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_cwise_binary_op_ab5da2bb07bf090d812f537c4286e8a3d}{Rhs\+Nested}} \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Eigen\+::\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Type, Rhs\+Type $>$\+::m\+\_\+rhs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_cwise_binary_op_8h}{Cwise\+Binary\+Op.\+h}}\end{DoxyCompactItemize}

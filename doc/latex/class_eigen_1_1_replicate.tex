@@ -1,0 +1,190 @@
+\hypertarget{class_eigen_1_1_replicate}{}\doxysection{Eigen\+::Replicate$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$ Class Template Reference}
+\label{class_eigen_1_1_replicate}\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+
+
+Expression of the multiple replication of a matrix or vector.  
+
+
+
+
+{\ttfamily \#include $<$Replicate.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Replicate$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{class_eigen_1_1_replicate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Replicate$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_replicate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1dense__xpr__base}{internal\+::dense\+\_\+xpr\+\_\+base}}$<$ \mbox{\hyperlink{class_eigen_1_1_replicate}{Replicate}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_replicate_a5725bae5b2e3a85a37403feed2b8161d}{Base}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ Matrix\+Type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_replicate_a4cc986623572d699119c3bcca6a12c69}{Nested\+Expression}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Original\+Matrix\+Type $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_replicate_a66e289ca86915a631cb1ca4125f64db0}{Replicate}} (const Original\+Matrix\+Type \&matrix)
+\item 
+{\footnotesize template$<$typename Original\+Matrix\+Type $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_replicate_acfdb96424b779cea2b8b43423d4574b4}{Replicate}} (const Original\+Matrix\+Type \&matrix, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} row\+Factor, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} col\+Factor)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_replicate_ad49008b1890464697326d138f5e69a2e}{rows}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_replicate_affbc470e2987519cc4357a222c6180fa}{cols}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_replicate_a6e8ebe871f42991dce25fa52f5b1d97b}{\+\_\+\+Matrix\+Type\+Nested}} \& \mbox{\hyperlink{class_eigen_1_1_replicate_a4d473f81fe1e8737b200fe6c7cdbac41}{nested\+Expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_replicate_a47acd3e13da90f7e6ff63ea9a6dfc639}{Matrix\+Type\+Nested}} \mbox{\hyperlink{class_eigen_1_1_replicate_aea2ec14101efda1e508ce42c98375b3a}{m\+\_\+matrix}}
+\item 
+const \mbox{\hyperlink{class_eigen_1_1internal_1_1variable__if__dynamic}{internal\+::variable\+\_\+if\+\_\+dynamic}}$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Row\+Factor $>$ \mbox{\hyperlink{class_eigen_1_1_replicate_aa0a60d49b10d684ab40b99915bf65031}{m\+\_\+row\+Factor}}
+\item 
+const \mbox{\hyperlink{class_eigen_1_1internal_1_1variable__if__dynamic}{internal\+::variable\+\_\+if\+\_\+dynamic}}$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Col\+Factor $>$ \mbox{\hyperlink{class_eigen_1_1_replicate_a669f37c7eddbfaad27e2beae140da7e7}{m\+\_\+col\+Factor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_replicate}{Replicate}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_replicate_a47acd3e13da90f7e6ff63ea9a6dfc639}{Matrix\+Type\+Nested}} \mbox{\hyperlink{class_eigen_1_1_replicate_a47acd3e13da90f7e6ff63ea9a6dfc639}{Matrix\+Type\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_replicate}{Replicate}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_replicate_a6e8ebe871f42991dce25fa52f5b1d97b}{\+\_\+\+Matrix\+Type\+Nested}} \mbox{\hyperlink{class_eigen_1_1_replicate_a6e8ebe871f42991dce25fa52f5b1d97b}{\+\_\+\+Matrix\+Type\+Nested}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Matrix\+Type, int Row\+Factor, int Col\+Factor$>$\newline
+class Eigen\+::\+Replicate$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$}
+
+Expression of the multiple replication of a matrix or vector. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Matrix\+Type} & the type of the object we are replicating \\
+\hline
+{\em Row\+Factor} & number of repetitions at compile time along the vertical direction, can be Dynamic. \\
+\hline
+{\em Col\+Factor} & number of repetitions at compile time along the horizontal direction, can be Dynamic.\\
+\hline
+\end{DoxyTemplParams}
+This class represents an expression of the multiple replication of a matrix or vector. It is the return type of \mbox{\hyperlink{class_eigen_1_1_dense_base_a3a6e6d31914ebf1e48e74e2928a9c249}{Dense\+Base\+::replicate()}} and most of the time this is the only way it is used.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_dense_base_a3a6e6d31914ebf1e48e74e2928a9c249}{Dense\+Base\+::replicate()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_replicate_a6e8ebe871f42991dce25fa52f5b1d97b}\label{class_eigen_1_1_replicate_a6e8ebe871f42991dce25fa52f5b1d97b}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!\_MatrixTypeNested@{\_MatrixTypeNested}}
+\index{\_MatrixTypeNested@{\_MatrixTypeNested}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{\_MatrixTypeNested}{\_MatrixTypeNested}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_replicate}{Replicate}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_replicate_a6e8ebe871f42991dce25fa52f5b1d97b}{\+\_\+\+Matrix\+Type\+Nested}} \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::\mbox{\hyperlink{class_eigen_1_1_replicate_a6e8ebe871f42991dce25fa52f5b1d97b}{\+\_\+\+Matrix\+Type\+Nested}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_replicate_a5725bae5b2e3a85a37403feed2b8161d}\label{class_eigen_1_1_replicate_a5725bae5b2e3a85a37403feed2b8161d}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1dense__xpr__base}{internal\+::dense\+\_\+xpr\+\_\+base}}$<$\mbox{\hyperlink{class_eigen_1_1_replicate}{Replicate}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::\mbox{\hyperlink{class_eigen_1_1_replicate_a5725bae5b2e3a85a37403feed2b8161d}{Base}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_replicate_a47acd3e13da90f7e6ff63ea9a6dfc639}\label{class_eigen_1_1_replicate_a47acd3e13da90f7e6ff63ea9a6dfc639}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!MatrixTypeNested@{MatrixTypeNested}}
+\index{MatrixTypeNested@{MatrixTypeNested}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{MatrixTypeNested}{MatrixTypeNested}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_replicate}{Replicate}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_replicate_a47acd3e13da90f7e6ff63ea9a6dfc639}{Matrix\+Type\+Nested}} \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::\mbox{\hyperlink{class_eigen_1_1_replicate_a47acd3e13da90f7e6ff63ea9a6dfc639}{Matrix\+Type\+Nested}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_replicate_a4cc986623572d699119c3bcca6a12c69}\label{class_eigen_1_1_replicate_a4cc986623572d699119c3bcca6a12c69}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!NestedExpression@{NestedExpression}}
+\index{NestedExpression@{NestedExpression}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{NestedExpression}{NestedExpression}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$Matrix\+Type$>$\+::type \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::\mbox{\hyperlink{class_eigen_1_1_replicate_a4cc986623572d699119c3bcca6a12c69}{Nested\+Expression}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_replicate_a66e289ca86915a631cb1ca4125f64db0}\label{class_eigen_1_1_replicate_a66e289ca86915a631cb1ca4125f64db0}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!Replicate@{Replicate}}
+\index{Replicate@{Replicate}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{Replicate()}{Replicate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+template$<$typename Original\+Matrix\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::\mbox{\hyperlink{class_eigen_1_1_replicate}{Replicate}} (\begin{DoxyParamCaption}\item[{const Original\+Matrix\+Type \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_replicate_acfdb96424b779cea2b8b43423d4574b4}\label{class_eigen_1_1_replicate_acfdb96424b779cea2b8b43423d4574b4}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!Replicate@{Replicate}}
+\index{Replicate@{Replicate}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{Replicate()}{Replicate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+template$<$typename Original\+Matrix\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::\mbox{\hyperlink{class_eigen_1_1_replicate}{Replicate}} (\begin{DoxyParamCaption}\item[{const Original\+Matrix\+Type \&}]{matrix,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row\+Factor,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_replicate_affbc470e2987519cc4357a222c6180fa}\label{class_eigen_1_1_replicate_affbc470e2987519cc4357a222c6180fa}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_replicate_a4d473f81fe1e8737b200fe6c7cdbac41}\label{class_eigen_1_1_replicate_a4d473f81fe1e8737b200fe6c7cdbac41}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!nestedExpression@{nestedExpression}}
+\index{nestedExpression@{nestedExpression}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{nestedExpression()}{nestedExpression()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_replicate_a6e8ebe871f42991dce25fa52f5b1d97b}{\+\_\+\+Matrix\+Type\+Nested}}\& \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::nested\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_replicate_ad49008b1890464697326d138f5e69a2e}\label{class_eigen_1_1_replicate_ad49008b1890464697326d138f5e69a2e}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_replicate_a669f37c7eddbfaad27e2beae140da7e7}\label{class_eigen_1_1_replicate_a669f37c7eddbfaad27e2beae140da7e7}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!m\_colFactor@{m\_colFactor}}
+\index{m\_colFactor@{m\_colFactor}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{m\_colFactor}{m\_colFactor}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+const \mbox{\hyperlink{class_eigen_1_1internal_1_1variable__if__dynamic}{internal\+::variable\+\_\+if\+\_\+dynamic}}$<$\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Col\+Factor$>$ \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::m\+\_\+col\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_replicate_aea2ec14101efda1e508ce42c98375b3a}\label{class_eigen_1_1_replicate_aea2ec14101efda1e508ce42c98375b3a}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!m\_matrix@{m\_matrix}}
+\index{m\_matrix@{m\_matrix}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{m\_matrix}{m\_matrix}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_replicate_a47acd3e13da90f7e6ff63ea9a6dfc639}{Matrix\+Type\+Nested}} \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::m\+\_\+matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_replicate_aa0a60d49b10d684ab40b99915bf65031}\label{class_eigen_1_1_replicate_aa0a60d49b10d684ab40b99915bf65031}} 
+\index{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}!m\_rowFactor@{m\_rowFactor}}
+\index{m\_rowFactor@{m\_rowFactor}!Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$@{Eigen::Replicate$<$ MatrixType, RowFactor, ColFactor $>$}}
+\doxysubsubsection{\texorpdfstring{m\_rowFactor}{m\_rowFactor}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Row\+Factor, int Col\+Factor$>$ \\
+const \mbox{\hyperlink{class_eigen_1_1internal_1_1variable__if__dynamic}{internal\+::variable\+\_\+if\+\_\+dynamic}}$<$\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Row\+Factor$>$ \mbox{\hyperlink{class_eigen_1_1_replicate}{Eigen\+::\+Replicate}}$<$ Matrix\+Type, Row\+Factor, Col\+Factor $>$\+::m\+\_\+row\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_replicate_8h}{Replicate.\+h}}\end{DoxyCompactItemize}

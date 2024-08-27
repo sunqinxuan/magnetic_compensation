@@ -1,0 +1,121 @@
+\hypertarget{class_eigen_1_1_partial_redux_expr}{}\doxysection{Eigen\+::Partial\+Redux\+Expr Class Reference}
+\label{class_eigen_1_1_partial_redux_expr}\index{Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}}
+
+
+Generic expression of a partially reduxed matrix.  
+
+
+
+
+{\ttfamily \#include $<$Forward\+Declarations.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1dense__xpr__base}{internal\+::dense\+\_\+xpr\+\_\+base}}$<$ \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr_a05f0d591c2392a0eee08aa45a1672258}{Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr_aab0edbb3a25282a6a0e40fe31bd07680}{Partial\+Redux\+Expr}} (const Matrix\+Type \&mat, const Member\+Op \&func=Member\+Op())
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr_a62f194c049be3bd11324fb6d489dc7f7}{rows}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr_aa909380cde9e6da5c6b5d3bc05496de5}{cols}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Matrix\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr_a25789864dd6496fec8c6b848afcf76e2}{nested\+Expression}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Member\+Op \& \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr_a58cbbf866267b904339845bc9bb39329}{functor}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Matrix\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr_a04038627ac7ebaecfc5b99957e4cb627}{m\+\_\+matrix}}
+\item 
+const Member\+Op \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr_a40228bb89ee6948048b908c4be332f3e}{m\+\_\+functor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic expression of a partially reduxed matrix. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Matrix\+Type} & the type of the matrix we are applying the redux operation \\
+\hline
+{\em Member\+Op} & type of the member functor \\
+\hline
+{\em Direction} & indicates the direction of the redux (\mbox{\hyperlink{group__enums_ggad49a7b3738e273eb00932271b36127f7ae2efac6e74ecab5e3b0b1561c5ddf83e}{Vertical}} or \mbox{\hyperlink{group__enums_ggad49a7b3738e273eb00932271b36127f7a961c62410157b64033839488f4d7f7e4}{Horizontal}})\\
+\hline
+\end{DoxyTemplParams}
+This class represents an expression of a partial redux operator of a matrix. It is the return type of some \mbox{\hyperlink{class_eigen_1_1_vectorwise_op}{Vectorwise\+Op}} functions, and most of the time this is the only way it is used.
+
+\begin{DoxySeeAlso}{See also}
+class \mbox{\hyperlink{class_eigen_1_1_vectorwise_op}{Vectorwise\+Op}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_partial_redux_expr_a05f0d591c2392a0eee08aa45a1672258}\label{class_eigen_1_1_partial_redux_expr_a05f0d591c2392a0eee08aa45a1672258}} 
+\index{Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}!Base@{Base}}
+\index{Base@{Base}!Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1dense__xpr__base}{internal\+::dense\+\_\+xpr\+\_\+base}}$<$\mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Partial\+Redux\+Expr}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr_a05f0d591c2392a0eee08aa45a1672258}{Eigen\+::\+Partial\+Redux\+Expr\+::\+Base}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_partial_redux_expr_aab0edbb3a25282a6a0e40fe31bd07680}\label{class_eigen_1_1_partial_redux_expr_aab0edbb3a25282a6a0e40fe31bd07680}} 
+\index{Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}!PartialReduxExpr@{PartialReduxExpr}}
+\index{PartialReduxExpr@{PartialReduxExpr}!Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}}
+\doxysubsubsection{\texorpdfstring{PartialReduxExpr()}{PartialReduxExpr()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Eigen\+::\+Partial\+Redux\+Expr\+::\+Partial\+Redux\+Expr (\begin{DoxyParamCaption}\item[{const Matrix\+Type \&}]{mat,  }\item[{const Member\+Op \&}]{func = {\ttfamily MemberOp()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_partial_redux_expr_aa909380cde9e6da5c6b5d3bc05496de5}\label{class_eigen_1_1_partial_redux_expr_aa909380cde9e6da5c6b5d3bc05496de5}} 
+\index{Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}!cols@{cols}}
+\index{cols@{cols}!Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Partial\+Redux\+Expr\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_partial_redux_expr_a58cbbf866267b904339845bc9bb39329}\label{class_eigen_1_1_partial_redux_expr_a58cbbf866267b904339845bc9bb39329}} 
+\index{Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}!functor@{functor}}
+\index{functor@{functor}!Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}}
+\doxysubsubsection{\texorpdfstring{functor()}{functor()}}
+{\footnotesize\ttfamily const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Member\+Op\& Eigen\+::\+Partial\+Redux\+Expr\+::functor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_partial_redux_expr_a25789864dd6496fec8c6b848afcf76e2}\label{class_eigen_1_1_partial_redux_expr_a25789864dd6496fec8c6b848afcf76e2}} 
+\index{Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}!nestedExpression@{nestedExpression}}
+\index{nestedExpression@{nestedExpression}!Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}}
+\doxysubsubsection{\texorpdfstring{nestedExpression()}{nestedExpression()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Matrix\+Type\+::\+Nested Eigen\+::\+Partial\+Redux\+Expr\+::nested\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_partial_redux_expr_a62f194c049be3bd11324fb6d489dc7f7}\label{class_eigen_1_1_partial_redux_expr_a62f194c049be3bd11324fb6d489dc7f7}} 
+\index{Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}!rows@{rows}}
+\index{rows@{rows}!Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Partial\+Redux\+Expr\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_partial_redux_expr_a40228bb89ee6948048b908c4be332f3e}\label{class_eigen_1_1_partial_redux_expr_a40228bb89ee6948048b908c4be332f3e}} 
+\index{Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}!m\_functor@{m\_functor}}
+\index{m\_functor@{m\_functor}!Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}}
+\doxysubsubsection{\texorpdfstring{m\_functor}{m\_functor}}
+{\footnotesize\ttfamily const Member\+Op Eigen\+::\+Partial\+Redux\+Expr\+::m\+\_\+functor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_partial_redux_expr_a04038627ac7ebaecfc5b99957e4cb627}\label{class_eigen_1_1_partial_redux_expr_a04038627ac7ebaecfc5b99957e4cb627}} 
+\index{Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}!m\_matrix@{m\_matrix}}
+\index{m\_matrix@{m\_matrix}!Eigen::PartialReduxExpr@{Eigen::PartialReduxExpr}}
+\doxysubsubsection{\texorpdfstring{m\_matrix}{m\_matrix}}
+{\footnotesize\ttfamily Matrix\+Type\+::\+Nested Eigen\+::\+Partial\+Redux\+Expr\+::m\+\_\+matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/util/\mbox{\hyperlink{_forward_declarations_8h}{Forward\+Declarations.\+h}}\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_vectorwise_op_8h}{Vectorwise\+Op.\+h}}\end{DoxyCompactItemize}

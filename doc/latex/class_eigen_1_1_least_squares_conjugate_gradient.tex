@@ -1,0 +1,240 @@
+\hypertarget{class_eigen_1_1_least_squares_conjugate_gradient}{}\doxysection{Eigen\+::Least\+Squares\+Conjugate\+Gradient$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$ Class Template Reference}
+\label{class_eigen_1_1_least_squares_conjugate_gradient}\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+
+
+A conjugate gradient solver for sparse (or dense) least-\/square problems.  
+
+
+
+
+{\ttfamily \#include $<$Least\+Square\+Conjugate\+Gradient.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+\_\+\+Matrix\+Type \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a56c5362953670bfd8cfa31a51d18ee47}{Matrix\+Type}}
+\item 
+typedef Matrix\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a9b8be7215e7a9d0871517ccee24d9857}{Scalar}}
+\item 
+typedef Matrix\+Type\+::\+Real\+Scalar \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a81b0c2843b7d4118c8cf0529bc21924d}{Real\+Scalar}}
+\item 
+typedef \+\_\+\+Preconditioner \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_addeb2525fd746662bee305d73f360204}{Preconditioner}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_ace69f423fcc1f8960d0e2de0667447c9}{Least\+Squares\+Conjugate\+Gradient}} ()
+\item 
+{\footnotesize template$<$typename Matrix\+Derived $>$ }\\\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a91c4f2edc20f93cee9b721165937fb99}{Least\+Squares\+Conjugate\+Gradient}} (const \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+Base}}$<$ Matrix\+Derived $>$ \&A)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a4be76cc34fe7493c522a67e9952621ab}{$\sim$\+Least\+Squares\+Conjugate\+Gradient}} ()
+\item 
+{\footnotesize template$<$typename Rhs , typename Dest $>$ }\\void \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a04c0c32b322d74949d190731a354340e}{\+\_\+solve\+\_\+with\+\_\+guess\+\_\+impl}} (const Rhs \&b, Dest \&x) const
+\item 
+{\footnotesize template$<$typename Rhs , typename Dest $>$ }\\void \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_aaadb8f72ca585e7dd5f41ddf7e14a9d3}{\+\_\+solve\+\_\+impl}} (const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Rhs $>$ \&b, Dest \&x) const
+\item 
+{\footnotesize template$<$typename Rhs , typename Dest\+Derived $>$ }\\void \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a7c2a35dde0ddb891b4030143ed286743}{\+\_\+solve\+\_\+impl}} (const Rhs \&b, \mbox{\hyperlink{class_eigen_1_1_sparse_matrix_base}{Sparse\+Matrix\+Base}}$<$ Dest\+Derived $>$ \&a\+Dest) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_iterative_solver_base}{Iterative\+Solver\+Base}}$<$ \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Least\+Squares\+Conjugate\+Gradient}} $>$ \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_aecfafc8b288974a9b6984557a37e3557}{Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const Actual\+Matrix\+Type \& \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_af201e47006a87f748e1ad464d041e0a1}{matrix}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a81b0c2843b7d4118c8cf0529bc21924d}{Real\+Scalar}} \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a9140af00eb517cb5677dd6e1a60fab80}{m\+\_\+error}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_aa1e43c88482d7d73394ec3229f6e8a4a}{m\+\_\+iterations}}
+\item 
+\mbox{\hyperlink{group__enums_ga85fad7b87587764e5cf6b513a9e0ee5e}{Computation\+Info}} \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a283a3c6136f76e77ac29184352c3e940}{m\+\_\+info}}
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_ac52101f69d048d5c4b036eadf1f13673}{m\+\_\+is\+Initialized}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename \+\_\+\+Matrix\+Type, typename \+\_\+\+Preconditioner$>$\newline
+class Eigen\+::\+Least\+Squares\+Conjugate\+Gradient$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$}
+
+A conjugate gradient solver for sparse (or dense) least-\/square problems. 
+
+This class allows to solve for A x = b linear problems using an iterative conjugate gradient algorithm. The matrix A can be non symmetric and rectangular, but the matrix A\textquotesingle{} A should be positive-\/definite to guaranty stability. Otherwise, the \mbox{\hyperlink{class_eigen_1_1_sparse_l_u}{Sparse\+LU}} or \mbox{\hyperlink{class_eigen_1_1_sparse_q_r}{Sparse\+QR}} classes might be preferable. The matrix A and the vectors x and b can be either dense or sparse.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \+\_\+\+Matrix\+Type} & the type of the matrix A, can be a dense or a sparse matrix. \\
+\hline
+{\em \+\_\+\+Preconditioner} & the type of the preconditioner. Default is \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Least\+Square\+Diagonal\+Preconditioner}}\\
+\hline
+\end{DoxyTemplParams}
+\textbackslash{}implsparsesolverconcept
+
+The maximal number of iterations and tolerance value can be controlled via the set\+Max\+Iterations() and set\+Tolerance() methods. The defaults are the size of the problem for the maximal number of iterations and Num\+Traits$<$\+Scalar$>$\+::epsilon() for the tolerance.
+
+This class can be used as the direct solver classes. Here is a typical usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} m=1000000, n = 10000;}
+\DoxyCodeLine{VectorXd \mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}}(n), \mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}}(m);}
+\DoxyCodeLine{SparseMatrix<double> A(m,n);}
+\DoxyCodeLine{\textcolor{comment}{// fill A and b}}
+\DoxyCodeLine{LeastSquaresConjugateGradient<SparseMatrix<double> > lscg;}
+\DoxyCodeLine{lscg.compute(A);}
+\DoxyCodeLine{\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}} = lscg.solve(\mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}});}
+\DoxyCodeLine{std::cout << \textcolor{stringliteral}{"\#iterations:     "} << lscg.iterations() << std::endl;}
+\DoxyCodeLine{std::cout << \textcolor{stringliteral}{"estimated error: "} << lscg.error()      << std::endl;}
+\DoxyCodeLine{\textcolor{comment}{// update b, and solve again}}
+\DoxyCodeLine{\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}} = lscg.solve(\mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}});}
+\end{DoxyCode}
+
+
+By default the iterations start with x=0 as an initial guess of the solution. One can control the start using the solve\+With\+Guess() method.
+
+\begin{DoxySeeAlso}{See also}
+class \mbox{\hyperlink{class_eigen_1_1_conjugate_gradient}{Conjugate\+Gradient}}, \mbox{\hyperlink{class_eigen_1_1_sparse_l_u}{Sparse\+LU}}, \mbox{\hyperlink{class_eigen_1_1_sparse_q_r}{Sparse\+QR}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_aecfafc8b288974a9b6984557a37e3557}\label{class_eigen_1_1_least_squares_conjugate_gradient_aecfafc8b288974a9b6984557a37e3557}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_iterative_solver_base}{Iterative\+Solver\+Base}}$<$\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Least\+Squares\+Conjugate\+Gradient}}$>$ \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Eigen\+::\+Least\+Squares\+Conjugate\+Gradient}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_aecfafc8b288974a9b6984557a37e3557}{Base}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_a56c5362953670bfd8cfa31a51d18ee47}\label{class_eigen_1_1_least_squares_conjugate_gradient_a56c5362953670bfd8cfa31a51d18ee47}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!MatrixType@{MatrixType}}
+\index{MatrixType@{MatrixType}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{MatrixType}{MatrixType}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+typedef \+\_\+\+Matrix\+Type \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Eigen\+::\+Least\+Squares\+Conjugate\+Gradient}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a56c5362953670bfd8cfa31a51d18ee47}{Matrix\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_addeb2525fd746662bee305d73f360204}\label{class_eigen_1_1_least_squares_conjugate_gradient_addeb2525fd746662bee305d73f360204}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!Preconditioner@{Preconditioner}}
+\index{Preconditioner@{Preconditioner}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{Preconditioner}{Preconditioner}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+typedef \+\_\+\+Preconditioner \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Eigen\+::\+Least\+Squares\+Conjugate\+Gradient}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_addeb2525fd746662bee305d73f360204}{Preconditioner}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_a81b0c2843b7d4118c8cf0529bc21924d}\label{class_eigen_1_1_least_squares_conjugate_gradient_a81b0c2843b7d4118c8cf0529bc21924d}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+typedef Matrix\+Type\+::\+Real\+Scalar \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Eigen\+::\+Least\+Squares\+Conjugate\+Gradient}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a81b0c2843b7d4118c8cf0529bc21924d}{Real\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_a9b8be7215e7a9d0871517ccee24d9857}\label{class_eigen_1_1_least_squares_conjugate_gradient_a9b8be7215e7a9d0871517ccee24d9857}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+typedef Matrix\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Eigen\+::\+Least\+Squares\+Conjugate\+Gradient}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a9b8be7215e7a9d0871517ccee24d9857}{Scalar}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_ace69f423fcc1f8960d0e2de0667447c9}\label{class_eigen_1_1_least_squares_conjugate_gradient_ace69f423fcc1f8960d0e2de0667447c9}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!LeastSquaresConjugateGradient@{LeastSquaresConjugateGradient}}
+\index{LeastSquaresConjugateGradient@{LeastSquaresConjugateGradient}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{LeastSquaresConjugateGradient()}{LeastSquaresConjugateGradient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Eigen\+::\+Least\+Squares\+Conjugate\+Gradient}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Least\+Squares\+Conjugate\+Gradient}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor. \mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_a91c4f2edc20f93cee9b721165937fb99}\label{class_eigen_1_1_least_squares_conjugate_gradient_a91c4f2edc20f93cee9b721165937fb99}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!LeastSquaresConjugateGradient@{LeastSquaresConjugateGradient}}
+\index{LeastSquaresConjugateGradient@{LeastSquaresConjugateGradient}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{LeastSquaresConjugateGradient()}{LeastSquaresConjugateGradient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+template$<$typename Matrix\+Derived $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Eigen\+::\+Least\+Squares\+Conjugate\+Gradient}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Least\+Squares\+Conjugate\+Gradient}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+Base}}$<$ Matrix\+Derived $>$ \&}]{A }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Initialize the solver with matrix {\itshape A} for further {\ttfamily Ax=b} solving.
+
+This constructor is a shortcut for the default constructor followed by a call to compute().
+
+\begin{DoxyWarning}{Warning}
+this class stores a reference to the matrix A as well as some precomputed values that depend on it. Therefore, if {\itshape A} is changed this class becomes invalid. Call compute() to update it with the new matrix A, or modify a copy of A. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_a4be76cc34fe7493c522a67e9952621ab}\label{class_eigen_1_1_least_squares_conjugate_gradient_a4be76cc34fe7493c522a67e9952621ab}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!````~LeastSquaresConjugateGradient@{$\sim$LeastSquaresConjugateGradient}}
+\index{````~LeastSquaresConjugateGradient@{$\sim$LeastSquaresConjugateGradient}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$LeastSquaresConjugateGradient()}{~LeastSquaresConjugateGradient()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Eigen\+::\+Least\+Squares\+Conjugate\+Gradient}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$\+::$\sim$\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Least\+Squares\+Conjugate\+Gradient}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_aaadb8f72ca585e7dd5f41ddf7e14a9d3}\label{class_eigen_1_1_least_squares_conjugate_gradient_aaadb8f72ca585e7dd5f41ddf7e14a9d3}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!\_solve\_impl@{\_solve\_impl}}
+\index{\_solve\_impl@{\_solve\_impl}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{\_solve\_impl()}{\_solve\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+template$<$typename Rhs , typename Dest $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Eigen\+::\+Least\+Squares\+Conjugate\+Gradient}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$\+::\+\_\+solve\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Rhs $>$ \&}]{b,  }\item[{Dest \&}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_a7c2a35dde0ddb891b4030143ed286743}\label{class_eigen_1_1_least_squares_conjugate_gradient_a7c2a35dde0ddb891b4030143ed286743}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!\_solve\_impl@{\_solve\_impl}}
+\index{\_solve\_impl@{\_solve\_impl}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{\_solve\_impl()}{\_solve\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+template$<$typename Rhs , typename Dest\+Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_iterative_solver_base}{Eigen\+::\+Iterative\+Solver\+Base}}$<$ Derived $>$\+::\+\_\+solve\+\_\+impl (\begin{DoxyParamCaption}\item[{typename Rhs}]{,  }\item[{typename Dest\+Derived}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_a04c0c32b322d74949d190731a354340e}\label{class_eigen_1_1_least_squares_conjugate_gradient_a04c0c32b322d74949d190731a354340e}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!\_solve\_with\_guess\_impl@{\_solve\_with\_guess\_impl}}
+\index{\_solve\_with\_guess\_impl@{\_solve\_with\_guess\_impl}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{\_solve\_with\_guess\_impl()}{\_solve\_with\_guess\_impl()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+template$<$typename Rhs , typename Dest $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Eigen\+::\+Least\+Squares\+Conjugate\+Gradient}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Preconditioner $>$\+::\+\_\+solve\+\_\+with\+\_\+guess\+\_\+impl (\begin{DoxyParamCaption}\item[{const Rhs \&}]{b,  }\item[{Dest \&}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_af201e47006a87f748e1ad464d041e0a1}\label{class_eigen_1_1_least_squares_conjugate_gradient_af201e47006a87f748e1ad464d041e0a1}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!matrix@{matrix}}
+\index{matrix@{matrix}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{matrix()}{matrix()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+const Actual\+Matrix\+Type\& \mbox{\hyperlink{class_eigen_1_1_iterative_solver_base}{Eigen\+::\+Iterative\+Solver\+Base}}$<$ Derived $>$\+::matrix\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_a9140af00eb517cb5677dd6e1a60fab80}\label{class_eigen_1_1_least_squares_conjugate_gradient_a9140af00eb517cb5677dd6e1a60fab80}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!m\_error@{m\_error}}
+\index{m\_error@{m\_error}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{m\_error}{m\_error}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient_a81b0c2843b7d4118c8cf0529bc21924d}{Real\+Scalar}} \mbox{\hyperlink{class_eigen_1_1_iterative_solver_base}{Eigen\+::\+Iterative\+Solver\+Base}}$<$ Derived $>$\+::m\+\_\+error\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_a283a3c6136f76e77ac29184352c3e940}\label{class_eigen_1_1_least_squares_conjugate_gradient_a283a3c6136f76e77ac29184352c3e940}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!m\_info@{m\_info}}
+\index{m\_info@{m\_info}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{m\_info}{m\_info}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+\mbox{\hyperlink{group__enums_ga85fad7b87587764e5cf6b513a9e0ee5e}{Computation\+Info}} \mbox{\hyperlink{class_eigen_1_1_iterative_solver_base}{Eigen\+::\+Iterative\+Solver\+Base}}$<$ Derived $>$\+::m\+\_\+info\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_ac52101f69d048d5c4b036eadf1f13673}\label{class_eigen_1_1_least_squares_conjugate_gradient_ac52101f69d048d5c4b036eadf1f13673}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!m\_isInitialized@{m\_isInitialized}}
+\index{m\_isInitialized@{m\_isInitialized}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{m\_isInitialized}{m\_isInitialized}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+bool \mbox{\hyperlink{class_eigen_1_1_sparse_solver_base}{Eigen\+::\+Sparse\+Solver\+Base}}$<$ Derived $>$\+::m\+\_\+is\+Initialized\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_squares_conjugate_gradient_aa1e43c88482d7d73394ec3229f6e8a4a}\label{class_eigen_1_1_least_squares_conjugate_gradient_aa1e43c88482d7d73394ec3229f6e8a4a}} 
+\index{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}!m\_iterations@{m\_iterations}}
+\index{m\_iterations@{m\_iterations}!Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$@{Eigen::LeastSquaresConjugateGradient$<$ \_MatrixType, \_Preconditioner $>$}}
+\doxysubsubsection{\texorpdfstring{m\_iterations}{m\_iterations}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , typename \+\_\+\+Preconditioner $>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_iterative_solver_base}{Eigen\+::\+Iterative\+Solver\+Base}}$<$ Derived $>$\+::m\+\_\+iterations\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Iterative\+Linear\+Solvers/\mbox{\hyperlink{_least_square_conjugate_gradient_8h}{Least\+Square\+Conjugate\+Gradient.\+h}}\end{DoxyCompactItemize}

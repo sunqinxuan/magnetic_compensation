@@ -1,0 +1,5 @@
+var struct_eigen_1_1internal_1_1functor__traits_3_01std_1_1binary__negate_3_01_t_01_4_01_4 =
+[
+    [ "Cost", "struct_eigen_1_1internal_1_1functor__traits_3_01std_1_1binary__negate_3_01_t_01_4_01_4.html#a8e7102045232b0f10dcfa5fffb383adea638cb605a493f47fc45abcc32431467b", null ],
+    [ "PacketAccess", "struct_eigen_1_1internal_1_1functor__traits_3_01std_1_1binary__negate_3_01_t_01_4_01_4.html#a8e7102045232b0f10dcfa5fffb383adeac2448c9a46d294a42b7509120f934e90", null ]
+];

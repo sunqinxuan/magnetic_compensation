@@ -1,0 +1,70 @@
+\hypertarget{struct_eigen_1_1internal_1_1nested__eval}{}\doxysection{Eigen\+::internal\+::nested\+\_\+eval$<$ T, n, Plain\+Object $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1nested__eval}\index{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}}
+
+
+{\ttfamily \#include $<$Xpr\+Helper.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a9890ef7124d41e698600a5d16f8638d6}{Scalar\+Read\+Cost}} = Num\+Traits$<$typename traits$<$T$>$\+::Scalar$>$\+::Read\+Cost, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a49cff2e44edf50377a97ef7a6795a18d}{Coeff\+Read\+Cost}} = evaluator$<$T$>$\+::Coeff\+Read\+Cost, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a850220718686d5f060e3351dbb87cf51}{N\+As\+Integer}} = n == Dynamic ? Huge\+Cost \+: n, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6aa67e6956b21f3e478767bc56441f0c5d}{Cost\+Eval}} = (N\+As\+Integer+1) $\ast$ Scalar\+Read\+Cost + Coeff\+Read\+Cost, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a586d977872077a9a628547587bbbfc87}{Cost\+No\+Eval}} = N\+As\+Integer $\ast$ Coeff\+Read\+Cost, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6aa1f3d1cb5e715314885deb4c16950dfe}{Evaluate}} = (int(evaluator$<$T$>$\+::Flags) \& Eval\+Before\+Nesting\+Bit) $\vert$$\vert$ (int(Cost\+Eval) $<$ int(Cost\+No\+Eval))
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{conditional}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6aa1f3d1cb5e715314885deb4c16950dfe}{Evaluate}}, Plain\+Object, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{ref\+\_\+selector}}$<$ T $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a3e0ad119cd1fee5aba6b98cb7e7ad2fe}{type}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a3e0ad119cd1fee5aba6b98cb7e7ad2fe}{type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a3e0ad119cd1fee5aba6b98cb7e7ad2fe}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1nested__eval_a3e0ad119cd1fee5aba6b98cb7e7ad2fe}\label{struct_eigen_1_1internal_1_1nested__eval_a3e0ad119cd1fee5aba6b98cb7e7ad2fe}} 
+\index{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}!type@{type}}
+\index{type@{type}!Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily template$<$typename T , int n, typename Plain\+Object  = typename plain\+\_\+object\+\_\+eval$<$\+T$>$\+::type$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{conditional}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6aa1f3d1cb5e715314885deb4c16950dfe}{Evaluate}}, Plain\+Object, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{ref\+\_\+selector}}$<$T$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a3e0ad119cd1fee5aba6b98cb7e7ad2fe}{type}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a3e0ad119cd1fee5aba6b98cb7e7ad2fe}{type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval}{Eigen\+::internal\+::nested\+\_\+eval}}$<$ T, n, Plain\+Object $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1nested__eval_a3e0ad119cd1fee5aba6b98cb7e7ad2fe}{type}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6}\label{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename T , int n, typename Plain\+Object  = typename plain\+\_\+object\+\_\+eval$<$\+T$>$\+::type$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ScalarReadCost@{ScalarReadCost}!Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}}\index{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}!ScalarReadCost@{ScalarReadCost}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a9890ef7124d41e698600a5d16f8638d6}\label{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a9890ef7124d41e698600a5d16f8638d6}} 
+Scalar\+Read\+Cost&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CoeffReadCost@{CoeffReadCost}!Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}}\index{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}!CoeffReadCost@{CoeffReadCost}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a49cff2e44edf50377a97ef7a6795a18d}\label{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a49cff2e44edf50377a97ef7a6795a18d}} 
+Coeff\+Read\+Cost&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NAsInteger@{NAsInteger}!Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}}\index{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}!NAsInteger@{NAsInteger}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a850220718686d5f060e3351dbb87cf51}\label{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a850220718686d5f060e3351dbb87cf51}} 
+N\+As\+Integer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CostEval@{CostEval}!Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}}\index{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}!CostEval@{CostEval}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6aa67e6956b21f3e478767bc56441f0c5d}\label{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6aa67e6956b21f3e478767bc56441f0c5d}} 
+Cost\+Eval&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CostNoEval@{CostNoEval}!Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}}\index{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}!CostNoEval@{CostNoEval}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a586d977872077a9a628547587bbbfc87}\label{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6a586d977872077a9a628547587bbbfc87}} 
+Cost\+No\+Eval&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Evaluate@{Evaluate}!Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}}\index{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$@{Eigen::internal::nested\_eval$<$ T, n, PlainObject $>$}!Evaluate@{Evaluate}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6aa1f3d1cb5e715314885deb4c16950dfe}\label{struct_eigen_1_1internal_1_1nested__eval_a82c03cb033b813ad04ee6d49c2472dc6aa1f3d1cb5e715314885deb4c16950dfe}} 
+Evaluate&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/util/\mbox{\hyperlink{_xpr_helper_8h}{Xpr\+Helper.\+h}}\end{DoxyCompactItemize}

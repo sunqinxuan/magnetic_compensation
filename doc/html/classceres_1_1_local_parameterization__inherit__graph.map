@@ -1,0 +1,10 @@
+<map id="ceres::LocalParameterization" name="ceres::LocalParameterization">
+<area shape="rect" id="node1" title=" " alt="" coords="5,189,216,215"/>
+<area shape="rect" id="node2" href="$classceres_1_1_auto_diff_local_parameterization.html" title=" " alt="" coords="274,5,539,47"/>
+<area shape="rect" id="node3" href="$classceres_1_1_eigen_quaternion_parameterization.html" title=" " alt="" coords="264,71,549,98"/>
+<area shape="rect" id="node4" href="$classceres_1_1_homogeneous_vector_parameterization.html" title=" " alt="" coords="306,123,507,164"/>
+<area shape="rect" id="node5" href="$classceres_1_1_identity_parameterization.html" title=" " alt="" coords="293,189,520,215"/>
+<area shape="rect" id="node6" href="$classceres_1_1_product_parameterization.html" title=" " alt="" coords="293,239,520,266"/>
+<area shape="rect" id="node7" href="$classceres_1_1_quaternion_parameterization.html" title=" " alt="" coords="282,290,531,317"/>
+<area shape="rect" id="node8" href="$classceres_1_1_subset_parameterization.html" title=" " alt="" coords="296,341,517,367"/>
+</map>

@@ -1,0 +1,105 @@
+\hypertarget{class_rotation}{}\doxysection{Rotation Class Reference}
+\label{class_rotation}\index{Rotation@{Rotation}}
+
+
+{\ttfamily \#include $<$rotation.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Quaterniond \mbox{\hyperlink{class_rotation_a84231054270d09161e11634c71d8be1c}{matrix2quaternion}} (const Matrix3d \&matrix)
+\item 
+static Matrix3d \mbox{\hyperlink{class_rotation_aaefc326a9f4ca94099e4762ddd855219}{quaternion2matrix}} (const Quaterniond \&quaternion)
+\item 
+static Vector3d \mbox{\hyperlink{class_rotation_a446eba782cb502073f6401f0a2b5de36}{matrix2euler}} (const Eigen\+::\+Matrix3d \&dcm)
+\item 
+static Vector3d \mbox{\hyperlink{class_rotation_a170e85504460290f64a73a7cedcb7726}{quaternion2euler}} (const Quaterniond \&quaternion)
+\item 
+static Quaterniond \mbox{\hyperlink{class_rotation_a181d472c33662032458167798efe958f}{rotvec2quaternion}} (const Vector3d \&rotvec)
+\item 
+static Vector3d \mbox{\hyperlink{class_rotation_a91740a6a49eabde39a99b01054216079}{quaternion2vector}} (const Quaterniond \&quaternion)
+\item 
+static Matrix3d \mbox{\hyperlink{class_rotation_a0ef33a4cee4e7bf1b33a3798be9a76a6}{euler2matrix}} (const Vector3d \&euler)
+\item 
+static Quaterniond \mbox{\hyperlink{class_rotation_a5a9c777c059e5c01cc00c5c2968d9857}{euler2quaternion}} (const Vector3d \&euler)
+\item 
+static Matrix3d \mbox{\hyperlink{class_rotation_a54fc8ad5be4eda845f5bacda8e0169eb}{skew\+Symmetric}} (const Vector3d \&vector)
+\item 
+static Eigen\+::\+Matrix4d \mbox{\hyperlink{class_rotation_a96de838b7df97cd28a746994ffa6b2df}{quaternionleft}} (const Quaterniond \&q)
+\item 
+static Eigen\+::\+Matrix4d \mbox{\hyperlink{class_rotation_a53bde7ea70effde79e2b1f448579bc58}{quaternionright}} (const Quaterniond \&p)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rotation_a0ef33a4cee4e7bf1b33a3798be9a76a6}\label{class_rotation_a0ef33a4cee4e7bf1b33a3798be9a76a6}} 
+\index{Rotation@{Rotation}!euler2matrix@{euler2matrix}}
+\index{euler2matrix@{euler2matrix}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{euler2matrix()}{euler2matrix()}}
+{\footnotesize\ttfamily static Matrix3d Rotation\+::euler2matrix (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{euler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_rotation_a5a9c777c059e5c01cc00c5c2968d9857}\label{class_rotation_a5a9c777c059e5c01cc00c5c2968d9857}} 
+\index{Rotation@{Rotation}!euler2quaternion@{euler2quaternion}}
+\index{euler2quaternion@{euler2quaternion}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{euler2quaternion()}{euler2quaternion()}}
+{\footnotesize\ttfamily static Quaterniond Rotation\+::euler2quaternion (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{euler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_rotation_a446eba782cb502073f6401f0a2b5de36}\label{class_rotation_a446eba782cb502073f6401f0a2b5de36}} 
+\index{Rotation@{Rotation}!matrix2euler@{matrix2euler}}
+\index{matrix2euler@{matrix2euler}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{matrix2euler()}{matrix2euler()}}
+{\footnotesize\ttfamily static Vector3d Rotation\+::matrix2euler (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix3d \&}]{dcm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_rotation_a84231054270d09161e11634c71d8be1c}\label{class_rotation_a84231054270d09161e11634c71d8be1c}} 
+\index{Rotation@{Rotation}!matrix2quaternion@{matrix2quaternion}}
+\index{matrix2quaternion@{matrix2quaternion}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{matrix2quaternion()}{matrix2quaternion()}}
+{\footnotesize\ttfamily static Quaterniond Rotation\+::matrix2quaternion (\begin{DoxyParamCaption}\item[{const Matrix3d \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_rotation_a170e85504460290f64a73a7cedcb7726}\label{class_rotation_a170e85504460290f64a73a7cedcb7726}} 
+\index{Rotation@{Rotation}!quaternion2euler@{quaternion2euler}}
+\index{quaternion2euler@{quaternion2euler}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{quaternion2euler()}{quaternion2euler()}}
+{\footnotesize\ttfamily static Vector3d Rotation\+::quaternion2euler (\begin{DoxyParamCaption}\item[{const Quaterniond \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_rotation_aaefc326a9f4ca94099e4762ddd855219}\label{class_rotation_aaefc326a9f4ca94099e4762ddd855219}} 
+\index{Rotation@{Rotation}!quaternion2matrix@{quaternion2matrix}}
+\index{quaternion2matrix@{quaternion2matrix}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{quaternion2matrix()}{quaternion2matrix()}}
+{\footnotesize\ttfamily static Matrix3d Rotation\+::quaternion2matrix (\begin{DoxyParamCaption}\item[{const Quaterniond \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_rotation_a91740a6a49eabde39a99b01054216079}\label{class_rotation_a91740a6a49eabde39a99b01054216079}} 
+\index{Rotation@{Rotation}!quaternion2vector@{quaternion2vector}}
+\index{quaternion2vector@{quaternion2vector}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{quaternion2vector()}{quaternion2vector()}}
+{\footnotesize\ttfamily static Vector3d Rotation\+::quaternion2vector (\begin{DoxyParamCaption}\item[{const Quaterniond \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_rotation_a96de838b7df97cd28a746994ffa6b2df}\label{class_rotation_a96de838b7df97cd28a746994ffa6b2df}} 
+\index{Rotation@{Rotation}!quaternionleft@{quaternionleft}}
+\index{quaternionleft@{quaternionleft}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{quaternionleft()}{quaternionleft()}}
+{\footnotesize\ttfamily static Eigen\+::\+Matrix4d Rotation\+::quaternionleft (\begin{DoxyParamCaption}\item[{const Quaterniond \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_rotation_a53bde7ea70effde79e2b1f448579bc58}\label{class_rotation_a53bde7ea70effde79e2b1f448579bc58}} 
+\index{Rotation@{Rotation}!quaternionright@{quaternionright}}
+\index{quaternionright@{quaternionright}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{quaternionright()}{quaternionright()}}
+{\footnotesize\ttfamily static Eigen\+::\+Matrix4d Rotation\+::quaternionright (\begin{DoxyParamCaption}\item[{const Quaterniond \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_rotation_a181d472c33662032458167798efe958f}\label{class_rotation_a181d472c33662032458167798efe958f}} 
+\index{Rotation@{Rotation}!rotvec2quaternion@{rotvec2quaternion}}
+\index{rotvec2quaternion@{rotvec2quaternion}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{rotvec2quaternion()}{rotvec2quaternion()}}
+{\footnotesize\ttfamily static Quaterniond Rotation\+::rotvec2quaternion (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{rotvec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_rotation_a54fc8ad5be4eda845f5bacda8e0169eb}\label{class_rotation_a54fc8ad5be4eda845f5bacda8e0169eb}} 
+\index{Rotation@{Rotation}!skewSymmetric@{skewSymmetric}}
+\index{skewSymmetric@{skewSymmetric}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{skewSymmetric()}{skewSymmetric()}}
+{\footnotesize\ttfamily static Matrix3d Rotation\+::skew\+Symmetric (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/kf-\/gins/common/\mbox{\hyperlink{kf-gins_2common_2rotation_8h}{rotation.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,150 @@
+\hypertarget{class_eigen_1_1_tensor_padding_op}{}\doxysection{Eigen\+::Tensor\+Padding\+Op$<$ Padding\+Dimensions, Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_tensor_padding_op}\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Forward\+Declarations.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Tensor\+Padding\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}} $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a8725abf6611cc6868211f21bd7a34df0}{Real\+Scalar}}
+\item 
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a03d812907c627e4669763b0cce1f5861}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Tensor\+Padding\+Op}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_abd4bea6390103e3fd014b1ef6d27f71b}{Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Tensor\+Padding\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a6f349272eaddec6978350ef676160986}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a6f349272eaddec6978350ef676160986}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Tensor\+Padding\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a1d8e56fe8fa67418b6fbdca29bb6f7ba}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a1d8e56fe8fa67418b6fbdca29bb6f7ba}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a6076ec28131aa5740daaae7ceda46ad7}{Tensor\+Padding\+Op}} (const Xpr\+Type \&expr, const Padding\+Dimensions \&padding\+\_\+dims, const \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ae122e70a35284599706c00cf85bb7d0e}{padding\+\_\+value}})
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Padding\+Dimensions \& \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_aac7c93a6dacd6bd8578061f11eee73b4}{padding}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ae122e70a35284599706c00cf85bb7d0e}{padding\+\_\+value}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Xpr\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a40b50ddd7fe4228d2bde7db46d83cd2a}{expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a6f3b2c051708a3c9eeb2f8eee5fdea37}{m\+\_\+xpr}}
+\item 
+const Padding\+Dimensions \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a667964bf156b7e1110d452990f55caa6}{m\+\_\+padding\+\_\+dims}}
+\item 
+const \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_aa0f21f557674e3435a26a8ddacfe6e47}{m\+\_\+padding\+\_\+value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_a03d812907c627e4669763b0cce1f5861}\label{class_eigen_1_1_tensor_padding_op_a03d812907c627e4669763b0cce1f5861}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a03d812907c627e4669763b0cce1f5861}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_a1d8e56fe8fa67418b6fbdca29bb6f7ba}\label{class_eigen_1_1_tensor_padding_op_a1d8e56fe8fa67418b6fbdca29bb6f7ba}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Tensor\+Padding\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a1d8e56fe8fa67418b6fbdca29bb6f7ba}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a1d8e56fe8fa67418b6fbdca29bb6f7ba}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_abd4bea6390103e3fd014b1ef6d27f71b}\label{class_eigen_1_1_tensor_padding_op_abd4bea6390103e3fd014b1ef6d27f71b}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Tensor\+Padding\+Op}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_abd4bea6390103e3fd014b1ef6d27f71b}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_a8725abf6611cc6868211f21bd7a34df0}\label{class_eigen_1_1_tensor_padding_op_a8725abf6611cc6868211f21bd7a34df0}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}}$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a8725abf6611cc6868211f21bd7a34df0}{Real\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}\label{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Tensor\+Padding\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_a6f349272eaddec6978350ef676160986}\label{class_eigen_1_1_tensor_padding_op_a6f349272eaddec6978350ef676160986}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Tensor\+Padding\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a6f349272eaddec6978350ef676160986}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_a6f349272eaddec6978350ef676160986}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_a6076ec28131aa5740daaae7ceda46ad7}\label{class_eigen_1_1_tensor_padding_op_a6076ec28131aa5740daaae7ceda46ad7}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!TensorPaddingOp@{TensorPaddingOp}}
+\index{TensorPaddingOp@{TensorPaddingOp}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{TensorPaddingOp()}{TensorPaddingOp()}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Tensor\+Padding\+Op}} (\begin{DoxyParamCaption}\item[{const Xpr\+Type \&}]{expr,  }\item[{const Padding\+Dimensions \&}]{padding\+\_\+dims,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}}}]{padding\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_a40b50ddd7fe4228d2bde7db46d83cd2a}\label{class_eigen_1_1_tensor_padding_op_a40b50ddd7fe4228d2bde7db46d83cd2a}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!expression@{expression}}
+\index{expression@{expression}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{expression()}{expression()}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Xpr\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_aac7c93a6dacd6bd8578061f11eee73b4}\label{class_eigen_1_1_tensor_padding_op_aac7c93a6dacd6bd8578061f11eee73b4}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!padding@{padding}}
+\index{padding@{padding}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding()}{padding()}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Padding\+Dimensions\& \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::padding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_ae122e70a35284599706c00cf85bb7d0e}\label{class_eigen_1_1_tensor_padding_op_ae122e70a35284599706c00cf85bb7d0e}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!padding\_value@{padding\_value}}
+\index{padding\_value@{padding\_value}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{padding\_value()}{padding\_value()}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::padding\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_a667964bf156b7e1110d452990f55caa6}\label{class_eigen_1_1_tensor_padding_op_a667964bf156b7e1110d452990f55caa6}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!m\_padding\_dims@{m\_padding\_dims}}
+\index{m\_padding\_dims@{m\_padding\_dims}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_dims}{m\_padding\_dims}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+const Padding\+Dimensions \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+dims\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_aa0f21f557674e3435a26a8ddacfe6e47}\label{class_eigen_1_1_tensor_padding_op_aa0f21f557674e3435a26a8ddacfe6e47}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!m\_padding\_value@{m\_padding\_value}}
+\index{m\_padding\_value@{m\_padding\_value}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_padding\_value}{m\_padding\_value}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+const \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op_ab5de6c66d7a10e746609ba824c909f5d}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::m\+\_\+padding\+\_\+value\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_padding_op_a6f3b2c051708a3c9eeb2f8eee5fdea37}\label{class_eigen_1_1_tensor_padding_op_a6f3b2c051708a3c9eeb2f8eee5fdea37}} 
+\index{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}!m\_xpr@{m\_xpr}}
+\index{m\_xpr@{m\_xpr}!Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$@{Eigen::TensorPaddingOp$<$ PaddingDimensions, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_xpr}{m\_xpr}}
+{\footnotesize\ttfamily template$<$typename Padding\+Dimensions , typename Xpr\+Type $>$ \\
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_padding_op}{Eigen\+::\+Tensor\+Padding\+Op}}$<$ Padding\+Dimensions, Xpr\+Type $>$\+::m\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_forward_declarations_8h}{Tensor\+Forward\+Declarations.\+h}}\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_padding_8h}{Tensor\+Padding.\+h}}\end{DoxyCompactItemize}

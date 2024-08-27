@@ -1,0 +1,46 @@
+\hypertarget{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01const_017b84cc42bd938fc0857672c2d814fbbd}{}\doxysection{Eigen\+::Tensor\+Sycl\+::internal\+::Extract\+Accessor$<$ Tensor\+Evaluator$<$ const Tensor\+Reduction\+Op$<$ OP, Dim, Expr $>$, Dev $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01const_017b84cc42bd938fc0857672c2d814fbbd}\index{Eigen::TensorSycl::internal::ExtractAccessor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ OP, Dim, Expr $>$, Dev $>$ $>$@{Eigen::TensorSycl::internal::ExtractAccessor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ OP, Dim, Expr $>$, Dev $>$ $>$}}
+
+
+specialisation of the \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor}{Extract\+Accessor}} struct when the node type is const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}  
+
+
+
+
+{\ttfamily \#include $<$Tensor\+Sycl\+Extract\+Accessor.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Tensor\+Sycl\+::internal\+::Extract\+Accessor$<$ Tensor\+Evaluator$<$ const Tensor\+Reduction\+Op$<$ OP, Dim, Expr $>$, Dev $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01const_01022b8dd4ba435b68fecd20ac1b546efb}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01const_017b84cc42bd938fc0857672c2d814fbbd_a9807b599fdcff1ffbb36cf75d3cc52f1}{get\+Tuple}} (cl\+::sycl\+::handler \&cgh, const \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ OP, Dim, Expr $>$, Dev $>$ eval) -\/$>$ decltype(Accessor\+Constructor\+::template get\+Accessor$<$ cl\+::sycl\+::access\+::mode\+::read $>$(cgh, eval))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename OP, typename Dim, typename Expr, typename Dev$>$\newline
+struct Eigen\+::\+Tensor\+Sycl\+::internal\+::\+Extract\+Accessor$<$ Tensor\+Evaluator$<$ const Tensor\+Reduction\+Op$<$ O\+P, Dim, Expr $>$, Dev $>$ $>$}
+
+specialisation of the \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor}{Extract\+Accessor}} struct when the node type is const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01const_017b84cc42bd938fc0857672c2d814fbbd_a9807b599fdcff1ffbb36cf75d3cc52f1}\label{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01const_017b84cc42bd938fc0857672c2d814fbbd_a9807b599fdcff1ffbb36cf75d3cc52f1}} 
+\index{Eigen::TensorSycl::internal::ExtractAccessor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ OP, Dim, Expr $>$, Dev $>$ $>$@{Eigen::TensorSycl::internal::ExtractAccessor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ OP, Dim, Expr $>$, Dev $>$ $>$}!getTuple@{getTuple}}
+\index{getTuple@{getTuple}!Eigen::TensorSycl::internal::ExtractAccessor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ OP, Dim, Expr $>$, Dev $>$ $>$@{Eigen::TensorSycl::internal::ExtractAccessor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ OP, Dim, Expr $>$, Dev $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{getTuple()}{getTuple()}}
+{\footnotesize\ttfamily template$<$typename OP , typename Dim , typename Expr , typename Dev $>$ \\
+static auto \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor}{Eigen\+::\+Tensor\+Sycl\+::internal\+::\+Extract\+Accessor}}$<$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ OP, Dim, Expr $>$, Dev $>$ $>$\+::get\+Tuple (\begin{DoxyParamCaption}\item[{cl\+::sycl\+::handler \&}]{cgh,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ OP, Dim, Expr $>$, Dev $>$}]{eval }\end{DoxyParamCaption}) -\/$>$ decltype(Accessor\+Constructor\+::template get\+Accessor$<$cl\+::sycl\+::access\+::mode\+::read$>$(cgh, eval))\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_sycl_extract_accessor_8h}{Tensor\+Sycl\+Extract\+Accessor.\+h}}\end{DoxyCompactItemize}

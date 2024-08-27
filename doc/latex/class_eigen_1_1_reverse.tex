@@ -1,0 +1,208 @@
+\hypertarget{class_eigen_1_1_reverse}{}\doxysection{Eigen\+::Reverse$<$ Matrix\+Type, Direction $>$ Class Template Reference}
+\label{class_eigen_1_1_reverse}\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}
+
+
+Expression of the reverse of a vector or matrix.  
+
+
+
+
+{\ttfamily \#include $<$Reverse.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Reverse$<$ Matrix\+Type, Direction $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{class_eigen_1_1_reverse__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Reverse$<$ Matrix\+Type, Direction $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{class_eigen_1_1_reverse__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1dense__xpr__base}{internal\+::dense\+\_\+xpr\+\_\+base}}$<$ \mbox{\hyperlink{class_eigen_1_1_reverse}{Reverse}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_reverse_af8e484d71f37f971c051271bc137630a}{Base}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ Matrix\+Type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_reverse_a2c2404c170c28f27eed92837ac2ec7f3}{Nested\+Expression}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_reverse_a96b3fcbbafa514745407b895acf4c8b4}{Reverse}} (const Matrix\+Type \&matrix)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_reverse_ac28de933d74d3feb733c222559f574f4}{rows}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_reverse_a915f526f2c8a720da1e99a888ce87c48}{cols}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_reverse_a3ca8f0d426460bcbba3bff75bc38f6cb}{inner\+Stride}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Matrix\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_reverse_ab444a8edb5db635022de13f39cbafd8f}{nested\+Expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a76c8eb09290c100fa91b5846008b5153}{Packet\+Size}} = internal\+::packet\+\_\+traits$<$Scalar$>$\+::size, 
+\mbox{\hyperlink{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5aeb8470b65bad8425f2ec3128499bb277}{Is\+Col\+Major}} = !\+Is\+Row\+Major, 
+\mbox{\hyperlink{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a5695a62bbcdcc28e7012b1cc355e370e}{Reverse\+Row}} = (Direction == Vertical) $\vert$$\vert$ (Direction == Both\+Directions), 
+\mbox{\hyperlink{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a770ddf07ca46520c9841280e5630dafb}{Reverse\+Col}} = (Direction == Horizontal) $\vert$$\vert$ (Direction == Both\+Directions), 
+\newline
+\mbox{\hyperlink{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a82c958ff293e2e4db66e0fd47e92d7f8}{Offset\+Row}} = Reverse\+Row \&\& Is\+Col\+Major ? Packet\+Size \+: 1, 
+\mbox{\hyperlink{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a2fdcf783e1ecede6eebe28f071b498c0}{Offset\+Col}} = Reverse\+Col \&\& Is\+Row\+Major ? Packet\+Size \+: 1, 
+\mbox{\hyperlink{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a4d9b3dbffb97faac27c6147d863367ee}{Reverse\+Packet}}
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1reverse__packet__cond}{internal\+::reverse\+\_\+packet\+\_\+cond}}$<$ Packet\+Scalar, \mbox{\hyperlink{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a4d9b3dbffb97faac27c6147d863367ee}{Reverse\+Packet}} $>$ \mbox{\hyperlink{class_eigen_1_1_reverse_a4e8cdf354cf1da1918754405bcb60ea0}{reverse\+\_\+packet}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Matrix\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_reverse_ae722e74e5d0b115f8ccb4d65632f741b}{m\+\_\+matrix}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Matrix\+Type, int Direction$>$\newline
+class Eigen\+::\+Reverse$<$ Matrix\+Type, Direction $>$}
+
+Expression of the reverse of a vector or matrix. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Matrix\+Type} & the type of the object of which we are taking the reverse \\
+\hline
+{\em Direction} & defines the direction of the reverse operation, can be Vertical, Horizontal, or Both\+Directions\\
+\hline
+\end{DoxyTemplParams}
+This class represents an expression of the reverse of a vector. It is the return type of \mbox{\hyperlink{class_eigen_1_1_dense_base_a38ea394036d8b096abf322469c80198f}{Matrix\+Base\+::reverse()}} and \mbox{\hyperlink{class_eigen_1_1_vectorwise_op_ae4d2eede244f46f15619e1eee848266a}{Vectorwise\+Op\+::reverse()}} and most of the time this is the only way it is used.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_dense_base_a38ea394036d8b096abf322469c80198f}{Matrix\+Base\+::reverse()}}, \mbox{\hyperlink{class_eigen_1_1_vectorwise_op_ae4d2eede244f46f15619e1eee848266a}{Vectorwise\+Op\+::reverse()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_reverse_af8e484d71f37f971c051271bc137630a}\label{class_eigen_1_1_reverse_af8e484d71f37f971c051271bc137630a}} 
+\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Direction$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1dense__xpr__base}{internal\+::dense\+\_\+xpr\+\_\+base}}$<$\mbox{\hyperlink{class_eigen_1_1_reverse}{Reverse}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_reverse}{Eigen\+::\+Reverse}}$<$ Matrix\+Type, Direction $>$\+::\mbox{\hyperlink{class_eigen_1_1_reverse_af8e484d71f37f971c051271bc137630a}{Base}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_reverse_a2c2404c170c28f27eed92837ac2ec7f3}\label{class_eigen_1_1_reverse_a2c2404c170c28f27eed92837ac2ec7f3}} 
+\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!NestedExpression@{NestedExpression}}
+\index{NestedExpression@{NestedExpression}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}
+\doxysubsubsection{\texorpdfstring{NestedExpression}{NestedExpression}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Direction$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$Matrix\+Type$>$\+::type \mbox{\hyperlink{class_eigen_1_1_reverse}{Eigen\+::\+Reverse}}$<$ Matrix\+Type, Direction $>$\+::\mbox{\hyperlink{class_eigen_1_1_reverse_a2c2404c170c28f27eed92837ac2ec7f3}{Nested\+Expression}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_reverse_a4e8cdf354cf1da1918754405bcb60ea0}\label{class_eigen_1_1_reverse_a4e8cdf354cf1da1918754405bcb60ea0}} 
+\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!reverse\_packet@{reverse\_packet}}
+\index{reverse\_packet@{reverse\_packet}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}
+\doxysubsubsection{\texorpdfstring{reverse\_packet}{reverse\_packet}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Direction$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1reverse__packet__cond}{internal\+::reverse\+\_\+packet\+\_\+cond}}$<$Packet\+Scalar,\mbox{\hyperlink{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a4d9b3dbffb97faac27c6147d863367ee}{Reverse\+Packet}}$>$ \mbox{\hyperlink{class_eigen_1_1_reverse}{Eigen\+::\+Reverse}}$<$ Matrix\+Type, Direction $>$\+::\mbox{\hyperlink{class_eigen_1_1_reverse_a4e8cdf354cf1da1918754405bcb60ea0}{reverse\+\_\+packet}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5}\label{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Direction$>$ \\
+anonymous enum\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PacketSize@{PacketSize}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!PacketSize@{PacketSize}}}\mbox{\Hypertarget{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a76c8eb09290c100fa91b5846008b5153}\label{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a76c8eb09290c100fa91b5846008b5153}} 
+Packet\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsColMajor@{IsColMajor}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!IsColMajor@{IsColMajor}}}\mbox{\Hypertarget{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5aeb8470b65bad8425f2ec3128499bb277}\label{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5aeb8470b65bad8425f2ec3128499bb277}} 
+Is\+Col\+Major&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReverseRow@{ReverseRow}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!ReverseRow@{ReverseRow}}}\mbox{\Hypertarget{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a5695a62bbcdcc28e7012b1cc355e370e}\label{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a5695a62bbcdcc28e7012b1cc355e370e}} 
+Reverse\+Row&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReverseCol@{ReverseCol}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!ReverseCol@{ReverseCol}}}\mbox{\Hypertarget{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a770ddf07ca46520c9841280e5630dafb}\label{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a770ddf07ca46520c9841280e5630dafb}} 
+Reverse\+Col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OffsetRow@{OffsetRow}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!OffsetRow@{OffsetRow}}}\mbox{\Hypertarget{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a82c958ff293e2e4db66e0fd47e92d7f8}\label{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a82c958ff293e2e4db66e0fd47e92d7f8}} 
+Offset\+Row&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OffsetCol@{OffsetCol}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!OffsetCol@{OffsetCol}}}\mbox{\Hypertarget{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a2fdcf783e1ecede6eebe28f071b498c0}\label{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a2fdcf783e1ecede6eebe28f071b498c0}} 
+Offset\+Col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReversePacket@{ReversePacket}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!ReversePacket@{ReversePacket}}}\mbox{\Hypertarget{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a4d9b3dbffb97faac27c6147d863367ee}\label{class_eigen_1_1_reverse_a850d0fd6cedefd23678715fce22937f5a4d9b3dbffb97faac27c6147d863367ee}} 
+Reverse\+Packet&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_reverse_a96b3fcbbafa514745407b895acf4c8b4}\label{class_eigen_1_1_reverse_a96b3fcbbafa514745407b895acf4c8b4}} 
+\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!Reverse@{Reverse}}
+\index{Reverse@{Reverse}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}
+\doxysubsubsection{\texorpdfstring{Reverse()}{Reverse()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Direction$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_reverse}{Eigen\+::\+Reverse}}$<$ Matrix\+Type, Direction $>$\+::\mbox{\hyperlink{class_eigen_1_1_reverse}{Reverse}} (\begin{DoxyParamCaption}\item[{const Matrix\+Type \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_reverse_a915f526f2c8a720da1e99a888ce87c48}\label{class_eigen_1_1_reverse_a915f526f2c8a720da1e99a888ce87c48}} 
+\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Direction$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_reverse}{Eigen\+::\+Reverse}}$<$ Matrix\+Type, Direction $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_reverse_a3ca8f0d426460bcbba3bff75bc38f6cb}\label{class_eigen_1_1_reverse_a3ca8f0d426460bcbba3bff75bc38f6cb}} 
+\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!innerStride@{innerStride}}
+\index{innerStride@{innerStride}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}
+\doxysubsubsection{\texorpdfstring{innerStride()}{innerStride()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Direction$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_reverse}{Eigen\+::\+Reverse}}$<$ Matrix\+Type, Direction $>$\+::inner\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_reverse_ab444a8edb5db635022de13f39cbafd8f}\label{class_eigen_1_1_reverse_ab444a8edb5db635022de13f39cbafd8f}} 
+\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!nestedExpression@{nestedExpression}}
+\index{nestedExpression@{nestedExpression}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}
+\doxysubsubsection{\texorpdfstring{nestedExpression()}{nestedExpression()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Direction$>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Matrix\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_reverse}{Eigen\+::\+Reverse}}$<$ Matrix\+Type, Direction $>$\+::nested\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_reverse_ac28de933d74d3feb733c222559f574f4}\label{class_eigen_1_1_reverse_ac28de933d74d3feb733c222559f574f4}} 
+\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Direction$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_reverse}{Eigen\+::\+Reverse}}$<$ Matrix\+Type, Direction $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_reverse_ae722e74e5d0b115f8ccb4d65632f741b}\label{class_eigen_1_1_reverse_ae722e74e5d0b115f8ccb4d65632f741b}} 
+\index{Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}!m\_matrix@{m\_matrix}}
+\index{m\_matrix@{m\_matrix}!Eigen::Reverse$<$ MatrixType, Direction $>$@{Eigen::Reverse$<$ MatrixType, Direction $>$}}
+\doxysubsubsection{\texorpdfstring{m\_matrix}{m\_matrix}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Direction$>$ \\
+Matrix\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_reverse}{Eigen\+::\+Reverse}}$<$ Matrix\+Type, Direction $>$\+::m\+\_\+matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_reverse_8h}{Reverse.\+h}}\end{DoxyCompactItemize}

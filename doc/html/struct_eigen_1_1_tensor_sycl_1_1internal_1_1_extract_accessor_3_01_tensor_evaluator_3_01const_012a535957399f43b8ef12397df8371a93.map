@@ -1,0 +1,4 @@
+<map id="Eigen::TensorSycl::internal::ExtractAccessor&lt; TensorEvaluator&lt; const BinaryCategory&lt; OP, LHSExpr, RHSExpr &gt;, Dev &gt; &gt;" name="Eigen::TensorSycl::internal::ExtractAccessor&lt; TensorEvaluator&lt; const BinaryCategory&lt; OP, LHSExpr, RHSExpr &gt;, Dev &gt; &gt;">
+<area shape="rect" id="node1" title="specialisation of the ExtractAccessor struct when the node type is const TensorCwiseBinaryOp" alt="" coords="5,5,232,91"/>
+<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01_binary_6539dfdd8ebae0bc4a33defdc23ba0ac.html" title="specialisation of the ExtractAccessor struct when the node type is TensorCwiseBinaryOp" alt="" coords="280,13,540,83"/>
+</map>

@@ -1,0 +1,146 @@
+\hypertarget{struct_eigen_1_1internal_1_1image__retval__base}{}\doxysection{Eigen\+::internal\+::image\+\_\+retval\+\_\+base Class Reference}
+\label{struct_eigen_1_1internal_1_1image__retval__base}\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+
+
+{\ttfamily \#include $<$Forward\+Declarations.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+\_\+\+Decomposition\+Type \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a64fe73281e070ff78bba2534984933c4}{Decomposition\+Type}}
+\item 
+typedef Decomposition\+Type\+::\+Matrix\+Type \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a5dec38143d3a245853ea6016430098c7}{Matrix\+Type}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_return_by_value}{Return\+By\+Value}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base}{image\+\_\+retval\+\_\+base}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a9983db6d5cf10e65b39ebef0bbb1352b}{Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_accfec251051e6f25559561ba8c9acbd3}{image\+\_\+retval\+\_\+base}} (const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a64fe73281e070ff78bba2534984933c4}{Decomposition\+Type}} \&\mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a38f6028fb51e50359e097803d1338987}{dec}}, const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a5dec38143d3a245853ea6016430098c7}{Matrix\+Type}} \&\mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_aa8245df7450a7073616b31433537f143}{original\+Matrix}})
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a2fa8dbee13c53f94788032163e7c132a}{rows}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a4104e0ad41f991d8d100cd7802a90885}{cols}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a83abdd0b8a8cae3e3bc5740694188b31}{rank}} () const
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a64fe73281e070ff78bba2534984933c4}{Decomposition\+Type}} \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a38f6028fb51e50359e097803d1338987}{dec}} () const
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a5dec38143d3a245853ea6016430098c7}{Matrix\+Type}} \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_aa8245df7450a7073616b31433537f143}{original\+Matrix}} () const
+\item 
+{\footnotesize template$<$typename Dest $>$ }\\void \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a399a617bb1f128e9824dda1cfef32561}{eval\+To}} (Dest \&dst) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a64fe73281e070ff78bba2534984933c4}{Decomposition\+Type}} \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a7b86b0728da9f4b0c6b5c2c80bde07f8}{m\+\_\+dec}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_aadc0ff942dabf9aed9590b4c3073dcce}{m\+\_\+rank}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a25fdf20ee49dde56244bf163169abe03}{m\+\_\+cols}}
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a5dec38143d3a245853ea6016430098c7}{Matrix\+Type}} \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a355e44322109fca01cc0b538d3563a24}{m\+\_\+original\+Matrix}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a9983db6d5cf10e65b39ebef0bbb1352b}\label{struct_eigen_1_1internal_1_1image__retval__base_a9983db6d5cf10e65b39ebef0bbb1352b}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!Base@{Base}}
+\index{Base@{Base}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1_return_by_value}{Return\+By\+Value}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base}{image\+\_\+retval\+\_\+base}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a9983db6d5cf10e65b39ebef0bbb1352b}{Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::\+Base}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a64fe73281e070ff78bba2534984933c4}\label{struct_eigen_1_1internal_1_1image__retval__base_a64fe73281e070ff78bba2534984933c4}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!DecompositionType@{DecompositionType}}
+\index{DecompositionType@{DecompositionType}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{DecompositionType}{DecompositionType}}
+{\footnotesize\ttfamily typedef \+\_\+\+Decomposition\+Type \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a64fe73281e070ff78bba2534984933c4}{Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::\+Decomposition\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a5dec38143d3a245853ea6016430098c7}\label{struct_eigen_1_1internal_1_1image__retval__base_a5dec38143d3a245853ea6016430098c7}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!MatrixType@{MatrixType}}
+\index{MatrixType@{MatrixType}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{MatrixType}{MatrixType}}
+{\footnotesize\ttfamily typedef Decomposition\+Type\+::\+Matrix\+Type \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a5dec38143d3a245853ea6016430098c7}{Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::\+Matrix\+Type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_accfec251051e6f25559561ba8c9acbd3}\label{struct_eigen_1_1internal_1_1image__retval__base_accfec251051e6f25559561ba8c9acbd3}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!image\_retval\_base@{image\_retval\_base}}
+\index{image\_retval\_base@{image\_retval\_base}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{image\_retval\_base()}{image\_retval\_base()}}
+{\footnotesize\ttfamily Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::image\+\_\+retval\+\_\+base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a64fe73281e070ff78bba2534984933c4}{Decomposition\+Type}} \&}]{dec,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a5dec38143d3a245853ea6016430098c7}{Matrix\+Type}} \&}]{original\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a4104e0ad41f991d8d100cd7802a90885}\label{struct_eigen_1_1internal_1_1image__retval__base_a4104e0ad41f991d8d100cd7802a90885}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!cols@{cols}}
+\index{cols@{cols}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a38f6028fb51e50359e097803d1338987}\label{struct_eigen_1_1internal_1_1image__retval__base_a38f6028fb51e50359e097803d1338987}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!dec@{dec}}
+\index{dec@{dec}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{dec()}{dec()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a64fe73281e070ff78bba2534984933c4}{Decomposition\+Type}}\& Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::dec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a399a617bb1f128e9824dda1cfef32561}\label{struct_eigen_1_1internal_1_1image__retval__base_a399a617bb1f128e9824dda1cfef32561}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!evalTo@{evalTo}}
+\index{evalTo@{evalTo}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{evalTo()}{evalTo()}}
+{\footnotesize\ttfamily template$<$typename Dest $>$ \\
+void Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::eval\+To (\begin{DoxyParamCaption}\item[{Dest \&}]{dst }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_aa8245df7450a7073616b31433537f143}\label{struct_eigen_1_1internal_1_1image__retval__base_aa8245df7450a7073616b31433537f143}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!originalMatrix@{originalMatrix}}
+\index{originalMatrix@{originalMatrix}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{originalMatrix()}{originalMatrix()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a5dec38143d3a245853ea6016430098c7}{Matrix\+Type}}\& Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::original\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a83abdd0b8a8cae3e3bc5740694188b31}\label{struct_eigen_1_1internal_1_1image__retval__base_a83abdd0b8a8cae3e3bc5740694188b31}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!rank@{rank}}
+\index{rank@{rank}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{rank()}{rank()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a2fa8dbee13c53f94788032163e7c132a}\label{struct_eigen_1_1internal_1_1image__retval__base_a2fa8dbee13c53f94788032163e7c132a}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!rows@{rows}}
+\index{rows@{rows}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a25fdf20ee49dde56244bf163169abe03}\label{struct_eigen_1_1internal_1_1image__retval__base_a25fdf20ee49dde56244bf163169abe03}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!m\_cols@{m\_cols}}
+\index{m\_cols@{m\_cols}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{m\_cols}{m\_cols}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::m\+\_\+cols\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a7b86b0728da9f4b0c6b5c2c80bde07f8}\label{struct_eigen_1_1internal_1_1image__retval__base_a7b86b0728da9f4b0c6b5c2c80bde07f8}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!m\_dec@{m\_dec}}
+\index{m\_dec@{m\_dec}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{m\_dec}{m\_dec}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a64fe73281e070ff78bba2534984933c4}{Decomposition\+Type}}\& Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::m\+\_\+dec\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_a355e44322109fca01cc0b538d3563a24}\label{struct_eigen_1_1internal_1_1image__retval__base_a355e44322109fca01cc0b538d3563a24}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!m\_originalMatrix@{m\_originalMatrix}}
+\index{m\_originalMatrix@{m\_originalMatrix}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{m\_originalMatrix}{m\_originalMatrix}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base_a5dec38143d3a245853ea6016430098c7}{Matrix\+Type}}\& Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::m\+\_\+original\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1image__retval__base_aadc0ff942dabf9aed9590b4c3073dcce}\label{struct_eigen_1_1internal_1_1image__retval__base_aadc0ff942dabf9aed9590b4c3073dcce}} 
+\index{Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}!m\_rank@{m\_rank}}
+\index{m\_rank@{m\_rank}!Eigen::internal::image\_retval\_base@{Eigen::internal::image\_retval\_base}}
+\doxysubsubsection{\texorpdfstring{m\_rank}{m\_rank}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::internal\+::image\+\_\+retval\+\_\+base\+::m\+\_\+rank\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/util/\mbox{\hyperlink{_forward_declarations_8h}{Forward\+Declarations.\+h}}\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/misc/\mbox{\hyperlink{_image_8h}{Image.\+h}}\end{DoxyCompactItemize}

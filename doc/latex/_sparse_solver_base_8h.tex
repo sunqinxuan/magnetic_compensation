@@ -1,0 +1,21 @@
+\hypertarget{_sparse_solver_base_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Sparse\+Core/\+Sparse\+Solver\+Base.h File Reference}
+\label{_sparse_solver_base_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/SparseCore/SparseSolverBase.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/SparseCore/SparseSolverBase.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_eigen_1_1_sparse_solver_base}{Eigen\+::\+Sparse\+Solver\+Base$<$ Derived $>$}}
+\begin{DoxyCompactList}\small\item\em A base class for sparse solvers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1internal}{Eigen\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Decomposition , typename Rhs , typename Dest $>$ }\\enable\+\_\+if$<$ Rhs\+::\+Cols\+At\+Compile\+Time!=1 \&\&Dest\+::\+Cols\+At\+Compile\+Time!=1 $>$\+::type \mbox{\hyperlink{namespace_eigen_1_1internal_ab1ac3125e2aa4b2a363cee9c0dfabfef}{Eigen\+::internal\+::solve\+\_\+sparse\+\_\+through\+\_\+dense\+\_\+panels}} (const Decomposition \&dec, const Rhs \&rhs, Dest \&dest)
+\item 
+{\footnotesize template$<$typename Decomposition , typename Rhs , typename Dest $>$ }\\enable\+\_\+if$<$ Rhs\+::\+Cols\+At\+Compile\+Time==1$\vert$$\vert$Dest\+::\+Cols\+At\+Compile\+Time==1 $>$\+::type \mbox{\hyperlink{namespace_eigen_1_1internal_ab7b238edecdf936040464f745f926308}{Eigen\+::internal\+::solve\+\_\+sparse\+\_\+through\+\_\+dense\+\_\+panels}} (const Decomposition \&dec, const Rhs \&rhs, Dest \&dest)
+\end{DoxyCompactItemize}

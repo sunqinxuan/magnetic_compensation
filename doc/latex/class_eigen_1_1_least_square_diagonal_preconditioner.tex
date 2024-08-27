@@ -1,0 +1,176 @@
+\hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner}{}\doxysection{Eigen\+::Least\+Square\+Diagonal\+Preconditioner$<$ \+\_\+\+Scalar $>$ Class Template Reference}
+\label{class_eigen_1_1_least_square_diagonal_preconditioner}\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+
+
+Jacobi preconditioner for \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Least\+Squares\+Conjugate\+Gradient}}.  
+
+
+
+
+{\ttfamily \#include $<$Basic\+Preconditioners.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Least\+Square\+Diagonal\+Preconditioner$<$ \+\_\+\+Scalar $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_eigen_1_1_least_square_diagonal_preconditioner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Least\+Square\+Diagonal\+Preconditioner$<$ \+\_\+\+Scalar $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_least_square_diagonal_preconditioner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_a28c5a22103a8bd561e404721d807726d}{Least\+Square\+Diagonal\+Preconditioner}} ()
+\item 
+{\footnotesize template$<$typename Mat\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_a9fe093a3b038a1dc7628eced1aa00e39}{Least\+Square\+Diagonal\+Preconditioner}} (const Mat\+Type \&mat)
+\item 
+{\footnotesize template$<$typename Mat\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Least\+Square\+Diagonal\+Preconditioner}} \& \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_af1d3a3dbe081bdb667a5596491d7ad47}{analyze\+Pattern}} (const Mat\+Type \&)
+\item 
+{\footnotesize template$<$typename Mat\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Least\+Square\+Diagonal\+Preconditioner}} \& \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_a831492d2cecddc28b48ce53ddb4bc295}{factorize}} (const Mat\+Type \&mat)
+\item 
+{\footnotesize template$<$typename Mat\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Least\+Square\+Diagonal\+Preconditioner}} \& \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_a05eb1d791e2265e9110ba3bb8d717cfe}{compute}} (const Mat\+Type \&mat)
+\item 
+\mbox{\hyperlink{group__enums_ga85fad7b87587764e5cf6b513a9e0ee5e}{Computation\+Info}} \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_a648044dd59ff3b09cf4efa7fe49d5208}{info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+\_\+\+Scalar \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_a4c713aef4ad5eefa1eebed35f343d473}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3fc53ebbf9c7f11e5a728c9fbd9132ab}{Scalar}} $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_add95534e4bc486890b13a7f5347cf6a0}{Real\+Scalar}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$ \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_aef09e6599452224c4981836ed782cd39}{Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_aef3c886661f3a48e01c1c48629f8528e}{Vector}} \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_abce7e6e756519949b58f201ef486d162}{m\+\_\+invdiag}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename \+\_\+\+Scalar$>$\newline
+class Eigen\+::\+Least\+Square\+Diagonal\+Preconditioner$<$ \+\_\+\+Scalar $>$}
+
+Jacobi preconditioner for \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Least\+Squares\+Conjugate\+Gradient}}. 
+
+This class allows to approximately solve for A\textquotesingle{} A x = A\textquotesingle{} b problems assuming A\textquotesingle{} A is a diagonal matrix. In other words, this preconditioner neglects all off diagonal entries and, in \mbox{\hyperlink{namespace_eigen}{Eigen}}\textquotesingle{}s language, solves for\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(A.adjoint() * A).diagonal().asDiagonal() * \mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}} = \mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \+\_\+\+Scalar} & the type of the scalar.\\
+\hline
+\end{DoxyTemplParams}
+\textbackslash{}implsparsesolverconcept
+
+The diagonal entries are pre-\/inverted and stored into a dense vector.
+
+\begin{DoxySeeAlso}{See also}
+class \mbox{\hyperlink{class_eigen_1_1_least_squares_conjugate_gradient}{Least\+Squares\+Conjugate\+Gradient}}, class \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner_aef09e6599452224c4981836ed782cd39}\label{class_eigen_1_1_least_square_diagonal_preconditioner_aef09e6599452224c4981836ed782cd39}} 
+\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}}$<$\+\_\+\+Scalar$>$ \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Eigen\+::\+Least\+Square\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_aef09e6599452224c4981836ed782cd39}{Base}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner_add95534e4bc486890b13a7f5347cf6a0}\label{class_eigen_1_1_least_square_diagonal_preconditioner_add95534e4bc486890b13a7f5347cf6a0}} 
+\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3fc53ebbf9c7f11e5a728c9fbd9132ab}{Scalar}}$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Eigen\+::\+Least\+Square\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner_add95534e4bc486890b13a7f5347cf6a0}{Real\+Scalar}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner_a4c713aef4ad5eefa1eebed35f343d473}\label{class_eigen_1_1_least_square_diagonal_preconditioner_a4c713aef4ad5eefa1eebed35f343d473}} 
+\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef \+\_\+\+Scalar \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Eigen\+::\+Least\+Square\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_a3fc53ebbf9c7f11e5a728c9fbd9132ab}{Scalar}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner_a28c5a22103a8bd561e404721d807726d}\label{class_eigen_1_1_least_square_diagonal_preconditioner_a28c5a22103a8bd561e404721d807726d}} 
+\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}!LeastSquareDiagonalPreconditioner@{LeastSquareDiagonalPreconditioner}}
+\index{LeastSquareDiagonalPreconditioner@{LeastSquareDiagonalPreconditioner}!Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{LeastSquareDiagonalPreconditioner()}{LeastSquareDiagonalPreconditioner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Eigen\+::\+Least\+Square\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Least\+Square\+Diagonal\+Preconditioner}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner_a9fe093a3b038a1dc7628eced1aa00e39}\label{class_eigen_1_1_least_square_diagonal_preconditioner_a9fe093a3b038a1dc7628eced1aa00e39}} 
+\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}!LeastSquareDiagonalPreconditioner@{LeastSquareDiagonalPreconditioner}}
+\index{LeastSquareDiagonalPreconditioner@{LeastSquareDiagonalPreconditioner}!Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{LeastSquareDiagonalPreconditioner()}{LeastSquareDiagonalPreconditioner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename Mat\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Eigen\+::\+Least\+Square\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Least\+Square\+Diagonal\+Preconditioner}} (\begin{DoxyParamCaption}\item[{const Mat\+Type \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner_af1d3a3dbe081bdb667a5596491d7ad47}\label{class_eigen_1_1_least_square_diagonal_preconditioner_af1d3a3dbe081bdb667a5596491d7ad47}} 
+\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}!analyzePattern@{analyzePattern}}
+\index{analyzePattern@{analyzePattern}!Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{analyzePattern()}{analyzePattern()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename Mat\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Least\+Square\+Diagonal\+Preconditioner}}\& \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Eigen\+::\+Least\+Square\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::analyze\+Pattern (\begin{DoxyParamCaption}\item[{const Mat\+Type \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner_a05eb1d791e2265e9110ba3bb8d717cfe}\label{class_eigen_1_1_least_square_diagonal_preconditioner_a05eb1d791e2265e9110ba3bb8d717cfe}} 
+\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}!compute@{compute}}
+\index{compute@{compute}!Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename Mat\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Least\+Square\+Diagonal\+Preconditioner}}\& \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Eigen\+::\+Least\+Square\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::compute (\begin{DoxyParamCaption}\item[{const Mat\+Type \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner_a831492d2cecddc28b48ce53ddb4bc295}\label{class_eigen_1_1_least_square_diagonal_preconditioner_a831492d2cecddc28b48ce53ddb4bc295}} 
+\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}!factorize@{factorize}}
+\index{factorize@{factorize}!Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{factorize()}{factorize()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename Mat\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Least\+Square\+Diagonal\+Preconditioner}}\& \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Eigen\+::\+Least\+Square\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::factorize (\begin{DoxyParamCaption}\item[{const Mat\+Type \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner_a648044dd59ff3b09cf4efa7fe49d5208}\label{class_eigen_1_1_least_square_diagonal_preconditioner_a648044dd59ff3b09cf4efa7fe49d5208}} 
+\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}!info@{info}}
+\index{info@{info}!Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{group__enums_ga85fad7b87587764e5cf6b513a9e0ee5e}{Computation\+Info}} \mbox{\hyperlink{class_eigen_1_1_least_square_diagonal_preconditioner}{Eigen\+::\+Least\+Square\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_least_square_diagonal_preconditioner_abce7e6e756519949b58f201ef486d162}\label{class_eigen_1_1_least_square_diagonal_preconditioner_abce7e6e756519949b58f201ef486d162}} 
+\index{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}!m\_invdiag@{m\_invdiag}}
+\index{m\_invdiag@{m\_invdiag}!Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$@{Eigen::LeastSquareDiagonalPreconditioner$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_invdiag}{m\_invdiag}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner_aef3c886661f3a48e01c1c48629f8528e}{Vector}} \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Eigen\+::\+Diagonal\+Preconditioner}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+invdiag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Iterative\+Linear\+Solvers/\mbox{\hyperlink{_basic_preconditioners_8h}{Basic\+Preconditioners.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4}{}\doxysection{Eigen\+::internal\+::evaluator$<$ Map$<$ Plain\+Object\+Type, Map\+Options, Stride\+Type $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}
+
+
+{\ttfamily \#include $<$Core\+Evaluators.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::internal\+::evaluator$<$ Map$<$ Plain\+Object\+Type, Map\+Options, Stride\+Type $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_st97f2148c453f041fcc20e19ceddfdfb3}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::internal\+::evaluator$<$ Map$<$ Plain\+Object\+Type, Map\+Options, Stride\+Type $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stae04a5ac893155e7c9d5523756f85060}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa93ea149c43260ebaf1116d4cff72911a}{Inner\+Stride\+At\+Compile\+Time}}, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aac7bad62b7ff77ac587992568a93b8fa3}{Outer\+Stride\+At\+Compile\+Time}}, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa5f52efbdd01848dc40869fa18465c3ac}{Has\+No\+Inner\+Stride}} = Inner\+Stride\+At\+Compile\+Time == 1, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa0e08e850d5a2f5d377b706c909c26f37}{Has\+No\+Outer\+Stride}} = Stride\+Type\+::Outer\+Stride\+At\+Compile\+Time == 0, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aac3a46f86848c05067115617e7a8e1e07}{Has\+No\+Stride}} = Has\+No\+Inner\+Stride \&\& Has\+No\+Outer\+Stride, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa6abb4c6db07e5fc4c5d9b5b3116a2fbd}{Is\+Dynamic\+Size}} = Plain\+Object\+Type\+::Size\+At\+Compile\+Time==Dynamic, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa2a005675be09c3127a94a568611f27bc}{Packet\+Access\+Mask}} = bool(Has\+No\+Inner\+Stride) ? $\sim$int(0) \+: $\sim$int(Packet\+Access\+Bit), 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa7c9c406ef98aef78b085e020e5c3dc90}{Linear\+Access\+Mask}} = bool(Has\+No\+Stride) $\vert$$\vert$ bool(Plain\+Object\+Type\+::Is\+Vector\+At\+Compile\+Time) ? $\sim$int(0) \+: $\sim$int(Linear\+Access\+Bit), 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa95644052e9b2857c67bec3d4c29a73af}{Flags}} = int( evaluator$<$Plain\+Object\+Type$>$\+::Flags) \& (Linear\+Access\+Mask\&Packet\+Access\+Mask), 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aaaf26ead49b9fa1dea495dd606b1b0d74}{Alignment}} = int(Map\+Options)\&int(Aligned\+Mask)
+ \}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_map}{Map}}$<$ Plain\+Object\+Type, Map\+Options, Stride\+Type $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a80fdb5638d909afe0fd082f96bde0e1b}{Xpr\+Type}}
+\item 
+typedef Xpr\+Type\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a4c72be1590c93d2fddf24398a45d9f7b}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{packet\+\_\+traits}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a4c72be1590c93d2fddf24398a45d9f7b}{Scalar}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a005617b21f80a25250a573052bd35319}{Packet\+Scalar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a0a8ec07dfd1229d9e45bb3178ffc378c}{evaluator}} (const \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a80fdb5638d909afe0fd082f96bde0e1b}{Xpr\+Type}} \&map)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a005617b21f80a25250a573052bd35319}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a005617b21f80a25250a573052bd35319}} 
+\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!PacketScalar@{PacketScalar}}
+\index{PacketScalar@{PacketScalar}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{PacketScalar}{PacketScalar}}
+{\footnotesize\ttfamily template$<$typename Plain\+Object\+Type , int Map\+Options, typename Stride\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{packet\+\_\+traits}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a4c72be1590c93d2fddf24398a45d9f7b}{Scalar}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_map}{Map}}$<$ Plain\+Object\+Type, Map\+Options, Stride\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a005617b21f80a25250a573052bd35319}{Packet\+Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a4c72be1590c93d2fddf24398a45d9f7b}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a4c72be1590c93d2fddf24398a45d9f7b}} 
+\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Plain\+Object\+Type , int Map\+Options, typename Stride\+Type $>$ \\
+typedef Xpr\+Type\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_map}{Map}}$<$ Plain\+Object\+Type, Map\+Options, Stride\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a4c72be1590c93d2fddf24398a45d9f7b}{Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a80fdb5638d909afe0fd082f96bde0e1b}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a80fdb5638d909afe0fd082f96bde0e1b}} 
+\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!XprType@{XprType}}
+\index{XprType@{XprType}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{XprType}{XprType}}
+{\footnotesize\ttfamily template$<$typename Plain\+Object\+Type , int Map\+Options, typename Stride\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_map}{Map}}$<$Plain\+Object\+Type, Map\+Options, Stride\+Type$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_map}{Map}}$<$ Plain\+Object\+Type, Map\+Options, Stride\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a80fdb5638d909afe0fd082f96bde0e1b}{Xpr\+Type}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26a}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26a}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Plain\+Object\+Type , int Map\+Options, typename Stride\+Type $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InnerStrideAtCompileTime@{InnerStrideAtCompileTime}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!InnerStrideAtCompileTime@{InnerStrideAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa93ea149c43260ebaf1116d4cff72911a}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa93ea149c43260ebaf1116d4cff72911a}} 
+Inner\+Stride\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OuterStrideAtCompileTime@{OuterStrideAtCompileTime}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!OuterStrideAtCompileTime@{OuterStrideAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aac7bad62b7ff77ac587992568a93b8fa3}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aac7bad62b7ff77ac587992568a93b8fa3}} 
+Outer\+Stride\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HasNoInnerStride@{HasNoInnerStride}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!HasNoInnerStride@{HasNoInnerStride}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa5f52efbdd01848dc40869fa18465c3ac}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa5f52efbdd01848dc40869fa18465c3ac}} 
+Has\+No\+Inner\+Stride&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HasNoOuterStride@{HasNoOuterStride}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!HasNoOuterStride@{HasNoOuterStride}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa0e08e850d5a2f5d377b706c909c26f37}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa0e08e850d5a2f5d377b706c909c26f37}} 
+Has\+No\+Outer\+Stride&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HasNoStride@{HasNoStride}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!HasNoStride@{HasNoStride}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aac3a46f86848c05067115617e7a8e1e07}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aac3a46f86848c05067115617e7a8e1e07}} 
+Has\+No\+Stride&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsDynamicSize@{IsDynamicSize}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!IsDynamicSize@{IsDynamicSize}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa6abb4c6db07e5fc4c5d9b5b3116a2fbd}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa6abb4c6db07e5fc4c5d9b5b3116a2fbd}} 
+Is\+Dynamic\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PacketAccessMask@{PacketAccessMask}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!PacketAccessMask@{PacketAccessMask}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa2a005675be09c3127a94a568611f27bc}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa2a005675be09c3127a94a568611f27bc}} 
+Packet\+Access\+Mask&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LinearAccessMask@{LinearAccessMask}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!LinearAccessMask@{LinearAccessMask}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa7c9c406ef98aef78b085e020e5c3dc90}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa7c9c406ef98aef78b085e020e5c3dc90}} 
+Linear\+Access\+Mask&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa95644052e9b2857c67bec3d4c29a73af}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aa95644052e9b2857c67bec3d4c29a73af}} 
+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alignment@{Alignment}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!Alignment@{Alignment}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aaaf26ead49b9fa1dea495dd606b1b0d74}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a8c04a7f66f9f0e80c4b3dad4dde6b26aaaf26ead49b9fa1dea495dd606b1b0d74}} 
+Alignment&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a0a8ec07dfd1229d9e45bb3178ffc378c}\label{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a0a8ec07dfd1229d9e45bb3178ffc378c}} 
+\index{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}!evaluator@{evaluator}}
+\index{evaluator@{evaluator}!Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$@{Eigen::internal::evaluator$<$ Map$<$ PlainObjectType, MapOptions, StrideType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{evaluator()}{evaluator()}}
+{\footnotesize\ttfamily template$<$typename Plain\+Object\+Type , int Map\+Options, typename Stride\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{Eigen\+::internal\+::evaluator}}$<$ \mbox{\hyperlink{class_eigen_1_1_map}{Map}}$<$ Plain\+Object\+Type, Map\+Options, Stride\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator_3_01_map_3_01_plain_object_type_00_01_map_options_00_01_stride_type_01_4_01_4_a80fdb5638d909afe0fd082f96bde0e1b}{Xpr\+Type}} \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_core_evaluators_8h}{Core\+Evaluators.\+h}}\end{DoxyCompactItemize}

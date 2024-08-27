@@ -1,0 +1,232 @@
+\hypertarget{class_eigen_1_1_tensor_op_cost}{}\doxysection{Eigen\+::Tensor\+Op\+Cost Class Reference}
+\label{class_eigen_1_1_tensor_op_cost}\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+
+
+{\ttfamily \#include $<$Tensor\+Cost\+Model.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a918b5fe64078a5ca8877387409ce4055}{Tensor\+Op\+Cost}} ()
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a28957e6eb06dc8d5b36aa54d6b5d908f}{Tensor\+Op\+Cost}} (double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_ab219b63415092d08e09310471cf6fc23}{bytes\+\_\+loaded}}, double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a5d813f65797b15c9da19d23ae7ceb5eb}{bytes\+\_\+stored}}, double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_ac24758ad7deef1e3968f66eb33eaf139}{compute\+\_\+cycles}})
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_acb9efb295137bd79a37936952247e5c3}{Tensor\+Op\+Cost}} (double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_ab219b63415092d08e09310471cf6fc23}{bytes\+\_\+loaded}}, double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a5d813f65797b15c9da19d23ae7ceb5eb}{bytes\+\_\+stored}}, double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_ac24758ad7deef1e3968f66eb33eaf139}{compute\+\_\+cycles}}, bool vectorized, double packet\+\_\+size)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_ab219b63415092d08e09310471cf6fc23}{bytes\+\_\+loaded}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a5d813f65797b15c9da19d23ae7ceb5eb}{bytes\+\_\+stored}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_ac24758ad7deef1e3968f66eb33eaf139}{compute\+\_\+cycles}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_ae7caee524a30c15d68c781ea5f063ead}{total\+\_\+cost}} (double load\+\_\+cost, double store\+\_\+cost, double compute\+\_\+cost) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_ae309b668454a04ebbaaaf2dbcc623e08}{drop\+Memory\+Cost}} ()
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a1ab887f487b37baa8808be9973f91297}{cwise\+Min}} (const \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \&rhs) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a41a42f41c2b31092bfaae8b34e8120c5}{cwise\+Max}} (const \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \&rhs) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \& \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a30660514bb69f91a0f993e1869797a03}{operator+=}} (const \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \&rhs)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \& \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a40b904633b50a3b8b8c788f6f53644c7}{operator$\ast$=}} (double rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Arg\+Type $>$ }\\static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a6beccb61485f429ac575d0a22abf9014}{Mul\+Cost}} ()
+\item 
+{\footnotesize template$<$typename Arg\+Type $>$ }\\static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a7c74e94f5c5992ddd756ba868df98441}{Add\+Cost}} ()
+\item 
+{\footnotesize template$<$typename Arg\+Type $>$ }\\static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_ab5da69fab8e443d48fafa9880aa8691c}{Div\+Cost}} ()
+\item 
+{\footnotesize template$<$typename Arg\+Type $>$ }\\static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a7041e9d0ec3d9b67f951a6bfb68c3cc0}{Mod\+Cost}} ()
+\item 
+{\footnotesize template$<$typename Src\+Type , typename Target\+Type $>$ }\\static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a8087678093f5133cd7d001e8e4ae5899}{Cast\+Cost}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a386c707658272c2a97e3a7c554efa783}{bytes\+\_\+loaded\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a62e48a4428e3a1603aea4a9f3051f752}{bytes\+\_\+stored\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_ab83e0cb244466a8d0283d733a32e1e36}{compute\+\_\+cycles\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} friend \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a4bf19abdd278dc789984826418d45b4f}{operator+}} (\mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} lhs, const \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \&rhs)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} friend \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a7cf6f7f475447551927a5192c7d0e1d6}{operator$\ast$}} (\mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} lhs, double rhs)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} friend \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_a6557ef3f7399e2415a9602a088734438}{operator$\ast$}} (double lhs, \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} rhs)
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost_aad53c6427804f0add2236ccc87a697c8}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \&tc)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a918b5fe64078a5ca8877387409ce4055}\label{class_eigen_1_1_tensor_op_cost_a918b5fe64078a5ca8877387409ce4055}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!TensorOpCost@{TensorOpCost}}
+\index{TensorOpCost@{TensorOpCost}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{TensorOpCost()}{TensorOpCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Eigen\+::\+Tensor\+Op\+Cost\+::\+Tensor\+Op\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a28957e6eb06dc8d5b36aa54d6b5d908f}\label{class_eigen_1_1_tensor_op_cost_a28957e6eb06dc8d5b36aa54d6b5d908f}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!TensorOpCost@{TensorOpCost}}
+\index{TensorOpCost@{TensorOpCost}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{TensorOpCost()}{TensorOpCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Eigen\+::\+Tensor\+Op\+Cost\+::\+Tensor\+Op\+Cost (\begin{DoxyParamCaption}\item[{double}]{bytes\+\_\+loaded,  }\item[{double}]{bytes\+\_\+stored,  }\item[{double}]{compute\+\_\+cycles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_acb9efb295137bd79a37936952247e5c3}\label{class_eigen_1_1_tensor_op_cost_acb9efb295137bd79a37936952247e5c3}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!TensorOpCost@{TensorOpCost}}
+\index{TensorOpCost@{TensorOpCost}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{TensorOpCost()}{TensorOpCost()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Eigen\+::\+Tensor\+Op\+Cost\+::\+Tensor\+Op\+Cost (\begin{DoxyParamCaption}\item[{double}]{bytes\+\_\+loaded,  }\item[{double}]{bytes\+\_\+stored,  }\item[{double}]{compute\+\_\+cycles,  }\item[{bool}]{vectorized,  }\item[{double}]{packet\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a7c74e94f5c5992ddd756ba868df98441}\label{class_eigen_1_1_tensor_op_cost_a7c74e94f5c5992ddd756ba868df98441}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!AddCost@{AddCost}}
+\index{AddCost@{AddCost}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{AddCost()}{AddCost()}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type $>$ \\
+static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int Eigen\+::\+Tensor\+Op\+Cost\+::\+Add\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_ab219b63415092d08e09310471cf6fc23}\label{class_eigen_1_1_tensor_op_cost_ab219b63415092d08e09310471cf6fc23}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!bytes\_loaded@{bytes\_loaded}}
+\index{bytes\_loaded@{bytes\_loaded}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{bytes\_loaded()}{bytes\_loaded()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double Eigen\+::\+Tensor\+Op\+Cost\+::bytes\+\_\+loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a5d813f65797b15c9da19d23ae7ceb5eb}\label{class_eigen_1_1_tensor_op_cost_a5d813f65797b15c9da19d23ae7ceb5eb}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!bytes\_stored@{bytes\_stored}}
+\index{bytes\_stored@{bytes\_stored}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{bytes\_stored()}{bytes\_stored()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double Eigen\+::\+Tensor\+Op\+Cost\+::bytes\+\_\+stored (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a8087678093f5133cd7d001e8e4ae5899}\label{class_eigen_1_1_tensor_op_cost_a8087678093f5133cd7d001e8e4ae5899}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!CastCost@{CastCost}}
+\index{CastCost@{CastCost}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{CastCost()}{CastCost()}}
+{\footnotesize\ttfamily template$<$typename Src\+Type , typename Target\+Type $>$ \\
+static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int Eigen\+::\+Tensor\+Op\+Cost\+::\+Cast\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_ac24758ad7deef1e3968f66eb33eaf139}\label{class_eigen_1_1_tensor_op_cost_ac24758ad7deef1e3968f66eb33eaf139}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!compute\_cycles@{compute\_cycles}}
+\index{compute\_cycles@{compute\_cycles}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{compute\_cycles()}{compute\_cycles()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double Eigen\+::\+Tensor\+Op\+Cost\+::compute\+\_\+cycles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a41a42f41c2b31092bfaae8b34e8120c5}\label{class_eigen_1_1_tensor_op_cost_a41a42f41c2b31092bfaae8b34e8120c5}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!cwiseMax@{cwiseMax}}
+\index{cwiseMax@{cwiseMax}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{cwiseMax()}{cwiseMax()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} Eigen\+::\+Tensor\+Op\+Cost\+::cwise\+Max (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a1ab887f487b37baa8808be9973f91297}\label{class_eigen_1_1_tensor_op_cost_a1ab887f487b37baa8808be9973f91297}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!cwiseMin@{cwiseMin}}
+\index{cwiseMin@{cwiseMin}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{cwiseMin()}{cwiseMin()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} Eigen\+::\+Tensor\+Op\+Cost\+::cwise\+Min (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_ab5da69fab8e443d48fafa9880aa8691c}\label{class_eigen_1_1_tensor_op_cost_ab5da69fab8e443d48fafa9880aa8691c}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!DivCost@{DivCost}}
+\index{DivCost@{DivCost}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{DivCost()}{DivCost()}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type $>$ \\
+static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int Eigen\+::\+Tensor\+Op\+Cost\+::\+Div\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_ae309b668454a04ebbaaaf2dbcc623e08}\label{class_eigen_1_1_tensor_op_cost_ae309b668454a04ebbaaaf2dbcc623e08}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!dropMemoryCost@{dropMemoryCost}}
+\index{dropMemoryCost@{dropMemoryCost}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{dropMemoryCost()}{dropMemoryCost()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void Eigen\+::\+Tensor\+Op\+Cost\+::drop\+Memory\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a7041e9d0ec3d9b67f951a6bfb68c3cc0}\label{class_eigen_1_1_tensor_op_cost_a7041e9d0ec3d9b67f951a6bfb68c3cc0}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!ModCost@{ModCost}}
+\index{ModCost@{ModCost}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{ModCost()}{ModCost()}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type $>$ \\
+static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int Eigen\+::\+Tensor\+Op\+Cost\+::\+Mod\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a6beccb61485f429ac575d0a22abf9014}\label{class_eigen_1_1_tensor_op_cost_a6beccb61485f429ac575d0a22abf9014}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!MulCost@{MulCost}}
+\index{MulCost@{MulCost}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{MulCost()}{MulCost()}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type $>$ \\
+static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int Eigen\+::\+Tensor\+Op\+Cost\+::\+Mul\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a40b904633b50a3b8b8c788f6f53644c7}\label{class_eigen_1_1_tensor_op_cost_a40b904633b50a3b8b8c788f6f53644c7}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}}\& Eigen\+::\+Tensor\+Op\+Cost\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{double}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a30660514bb69f91a0f993e1869797a03}\label{class_eigen_1_1_tensor_op_cost_a30660514bb69f91a0f993e1869797a03}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}}\& Eigen\+::\+Tensor\+Op\+Cost\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_ae7caee524a30c15d68c781ea5f063ead}\label{class_eigen_1_1_tensor_op_cost_ae7caee524a30c15d68c781ea5f063ead}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!total\_cost@{total\_cost}}
+\index{total\_cost@{total\_cost}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{total\_cost()}{total\_cost()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double Eigen\+::\+Tensor\+Op\+Cost\+::total\+\_\+cost (\begin{DoxyParamCaption}\item[{double}]{load\+\_\+cost,  }\item[{double}]{store\+\_\+cost,  }\item[{double}]{compute\+\_\+cost }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a6557ef3f7399e2415a9602a088734438}\label{class_eigen_1_1_tensor_op_cost_a6557ef3f7399e2415a9602a088734438}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} friend \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{lhs,  }\item[{\mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}}}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a7cf6f7f475447551927a5192c7d0e1d6}\label{class_eigen_1_1_tensor_op_cost_a7cf6f7f475447551927a5192c7d0e1d6}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} friend \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}}}]{lhs,  }\item[{double}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a4bf19abdd278dc789984826418d45b4f}\label{class_eigen_1_1_tensor_op_cost_a4bf19abdd278dc789984826418d45b4f}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!operator+@{operator+}}
+\index{operator+@{operator+}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} friend \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}}}]{lhs,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_aad53c6427804f0add2236ccc87a697c8}\label{class_eigen_1_1_tensor_op_cost_aad53c6427804f0add2236ccc87a697c8}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \&}]{tc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a386c707658272c2a97e3a7c554efa783}\label{class_eigen_1_1_tensor_op_cost_a386c707658272c2a97e3a7c554efa783}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!bytes\_loaded\_@{bytes\_loaded\_}}
+\index{bytes\_loaded\_@{bytes\_loaded\_}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{bytes\_loaded\_}{bytes\_loaded\_}}
+{\footnotesize\ttfamily double Eigen\+::\+Tensor\+Op\+Cost\+::bytes\+\_\+loaded\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_a62e48a4428e3a1603aea4a9f3051f752}\label{class_eigen_1_1_tensor_op_cost_a62e48a4428e3a1603aea4a9f3051f752}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!bytes\_stored\_@{bytes\_stored\_}}
+\index{bytes\_stored\_@{bytes\_stored\_}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{bytes\_stored\_}{bytes\_stored\_}}
+{\footnotesize\ttfamily double Eigen\+::\+Tensor\+Op\+Cost\+::bytes\+\_\+stored\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_op_cost_ab83e0cb244466a8d0283d733a32e1e36}\label{class_eigen_1_1_tensor_op_cost_ab83e0cb244466a8d0283d733a32e1e36}} 
+\index{Eigen::TensorOpCost@{Eigen::TensorOpCost}!compute\_cycles\_@{compute\_cycles\_}}
+\index{compute\_cycles\_@{compute\_cycles\_}!Eigen::TensorOpCost@{Eigen::TensorOpCost}}
+\doxysubsubsection{\texorpdfstring{compute\_cycles\_}{compute\_cycles\_}}
+{\footnotesize\ttfamily double Eigen\+::\+Tensor\+Op\+Cost\+::compute\+\_\+cycles\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_cost_model_8h}{Tensor\+Cost\+Model.\+h}}\end{DoxyCompactItemize}

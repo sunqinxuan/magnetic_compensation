@@ -1,0 +1,68 @@
+\hypertarget{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211}{}\doxysection{Eigen\+::internal\+::sparse\+\_\+time\+\_\+dense\+\_\+product\+\_\+impl$<$ Sparse\+Lhs\+Type, Dense\+Rhs\+Type, Dense\+Res\+Type, Alpha\+Type, Col\+Major, true $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211}\index{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}}
+
+
+{\ttfamily \#include $<$Sparse\+Dense\+Product.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ Sparse\+Lhs\+Type $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a09087957a08e1348ef699ea5218fc4d2}{Lhs}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ Dense\+Rhs\+Type $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_ac371e52b3a7c2d2c627c1ccce18a35df}{Rhs}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ Dense\+Res\+Type $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a4a315e7a7d0c11bf3a74d2031391125c}{Res}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a09087957a08e1348ef699ea5218fc4d2}{Lhs}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_inner_iterator}{Inner\+Iterator}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a013e9e29c84679f5e584115c0c8bdfb4}{Lhs\+Inner\+Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_abad882c53c0c8533a858d2ec80d0044c}{run}} (const Sparse\+Lhs\+Type \&lhs, const Dense\+Rhs\+Type \&rhs, Dense\+Res\+Type \&res, const Alpha\+Type \&alpha)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a09087957a08e1348ef699ea5218fc4d2}\label{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a09087957a08e1348ef699ea5218fc4d2}} 
+\index{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}!Lhs@{Lhs}}
+\index{Lhs@{Lhs}!Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}}
+\doxysubsubsection{\texorpdfstring{Lhs}{Lhs}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Lhs\+Type , typename Dense\+Rhs\+Type , typename Dense\+Res\+Type , typename Alpha\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$Sparse\+Lhs\+Type$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl}{Eigen\+::internal\+::sparse\+\_\+time\+\_\+dense\+\_\+product\+\_\+impl}}$<$ Sparse\+Lhs\+Type, Dense\+Rhs\+Type, Dense\+Res\+Type, Alpha\+Type, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a0103672ae41005ab03b4176c765afd62}{Col\+Major}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a09087957a08e1348ef699ea5218fc4d2}{Lhs}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a013e9e29c84679f5e584115c0c8bdfb4}\label{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a013e9e29c84679f5e584115c0c8bdfb4}} 
+\index{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}!LhsInnerIterator@{LhsInnerIterator}}
+\index{LhsInnerIterator@{LhsInnerIterator}!Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}}
+\doxysubsubsection{\texorpdfstring{LhsInnerIterator}{LhsInnerIterator}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Lhs\+Type , typename Dense\+Rhs\+Type , typename Dense\+Res\+Type , typename Alpha\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1evaluator}{evaluator}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a09087957a08e1348ef699ea5218fc4d2}{Lhs}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_inner_iterator}{Inner\+Iterator}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl}{Eigen\+::internal\+::sparse\+\_\+time\+\_\+dense\+\_\+product\+\_\+impl}}$<$ Sparse\+Lhs\+Type, Dense\+Rhs\+Type, Dense\+Res\+Type, Alpha\+Type, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a0103672ae41005ab03b4176c765afd62}{Col\+Major}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a013e9e29c84679f5e584115c0c8bdfb4}{Lhs\+Inner\+Iterator}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a4a315e7a7d0c11bf3a74d2031391125c}\label{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a4a315e7a7d0c11bf3a74d2031391125c}} 
+\index{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}!Res@{Res}}
+\index{Res@{Res}!Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}}
+\doxysubsubsection{\texorpdfstring{Res}{Res}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Lhs\+Type , typename Dense\+Rhs\+Type , typename Dense\+Res\+Type , typename Alpha\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$Dense\+Res\+Type$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl}{Eigen\+::internal\+::sparse\+\_\+time\+\_\+dense\+\_\+product\+\_\+impl}}$<$ Sparse\+Lhs\+Type, Dense\+Rhs\+Type, Dense\+Res\+Type, Alpha\+Type, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a0103672ae41005ab03b4176c765afd62}{Col\+Major}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_a4a315e7a7d0c11bf3a74d2031391125c}{Res}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_ac371e52b3a7c2d2c627c1ccce18a35df}\label{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_ac371e52b3a7c2d2c627c1ccce18a35df}} 
+\index{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}!Rhs@{Rhs}}
+\index{Rhs@{Rhs}!Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}}
+\doxysubsubsection{\texorpdfstring{Rhs}{Rhs}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Lhs\+Type , typename Dense\+Rhs\+Type , typename Dense\+Res\+Type , typename Alpha\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$Dense\+Rhs\+Type$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl}{Eigen\+::internal\+::sparse\+\_\+time\+\_\+dense\+\_\+product\+\_\+impl}}$<$ Sparse\+Lhs\+Type, Dense\+Rhs\+Type, Dense\+Res\+Type, Alpha\+Type, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a0103672ae41005ab03b4176c765afd62}{Col\+Major}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_ac371e52b3a7c2d2c627c1ccce18a35df}{Rhs}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_abad882c53c0c8533a858d2ec80d0044c}\label{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl_3_01_sparse_lhs_type_00_01_dense_4902bcccfe44923f57955b34ebedf211_abad882c53c0c8533a858d2ec80d0044c}} 
+\index{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}!run@{run}}
+\index{run@{run}!Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$@{Eigen::internal::sparse\_time\_dense\_product\_impl$<$ SparseLhsType, DenseRhsType, DenseResType, AlphaType, ColMajor, true $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename Sparse\+Lhs\+Type , typename Dense\+Rhs\+Type , typename Dense\+Res\+Type , typename Alpha\+Type $>$ \\
+static void \mbox{\hyperlink{struct_eigen_1_1internal_1_1sparse__time__dense__product__impl}{Eigen\+::internal\+::sparse\+\_\+time\+\_\+dense\+\_\+product\+\_\+impl}}$<$ Sparse\+Lhs\+Type, Dense\+Rhs\+Type, Dense\+Res\+Type, Alpha\+Type, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a0103672ae41005ab03b4176c765afd62}{Col\+Major}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::run (\begin{DoxyParamCaption}\item[{const Sparse\+Lhs\+Type \&}]{lhs,  }\item[{const Dense\+Rhs\+Type \&}]{rhs,  }\item[{Dense\+Res\+Type \&}]{res,  }\item[{const Alpha\+Type \&}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Sparse\+Core/\mbox{\hyperlink{_sparse_dense_product_8h}{Sparse\+Dense\+Product.\+h}}\end{DoxyCompactItemize}

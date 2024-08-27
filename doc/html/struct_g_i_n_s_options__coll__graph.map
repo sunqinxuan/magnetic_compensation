@@ -1,0 +1,7 @@
+<map id="GINSOptions" name="GINSOptions">
+<area shape="rect" id="node1" title=" " alt="" coords="36,391,140,417"/>
+<area shape="rect" id="node2" href="$struct_nav_state.html" title=" " alt="" coords="47,287,130,313"/>
+<area shape="rect" id="node3" href="$struct_imu_error.html" title=" " alt="" coords="122,177,201,203"/>
+<area shape="rect" id="node4" title=" " alt="" coords="63,5,143,32"/>
+<area shape="rect" id="node5" href="$struct_imu_noise.html" title=" " alt="" coords="190,236,274,263"/>
+</map>

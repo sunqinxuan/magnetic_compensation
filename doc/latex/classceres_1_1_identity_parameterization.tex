@@ -1,0 +1,128 @@
+\hypertarget{classceres_1_1_identity_parameterization}{}\doxysection{ceres\+::Identity\+Parameterization Class Reference}
+\label{classceres_1_1_identity_parameterization}\index{ceres::IdentityParameterization@{ceres::IdentityParameterization}}
+
+
+{\ttfamily \#include $<$local\+\_\+parameterization.\+h$>$}
+
+
+
+Inheritance diagram for ceres\+::Identity\+Parameterization\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classceres_1_1_identity_parameterization__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ceres\+::Identity\+Parameterization\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classceres_1_1_identity_parameterization__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_identity_parameterization_a50c7709f456964c1148dfcdf1bce4e4d}{Identity\+Parameterization}} (int size)
+\item 
+virtual \mbox{\hyperlink{classceres_1_1_identity_parameterization_a293dc7860438aa7357fd6801ce5fe253}{$\sim$\+Identity\+Parameterization}} ()
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_identity_parameterization_a017c43ee909e06070c7fe5e51dc5d149}{Plus}} (const double $\ast$x, const double $\ast$delta, double $\ast$x\+\_\+plus\+\_\+delta) const
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_identity_parameterization_a49ff1651063c72279afb62c696f6e324}{Compute\+Jacobian}} (const double $\ast$x, double $\ast$jacobian) const
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_identity_parameterization_adccbe5b9c942f94be7e4e0b5a67ea178}{Multiply\+By\+Jacobian}} (const double $\ast$x, const int num\+\_\+cols, const double $\ast$global\+\_\+matrix, double $\ast$local\+\_\+matrix) const
+\item 
+virtual int \mbox{\hyperlink{classceres_1_1_identity_parameterization_a191910b0563425825f069055999f60fe}{Global\+Size}} () const
+\item 
+virtual int \mbox{\hyperlink{classceres_1_1_identity_parameterization_a469cf7f9c6a6e8b15253d7a2614f4ac6}{Local\+Size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classceres_1_1_identity_parameterization_a89aab98fe0a7504206b3a2e8eb84a4ae}{size\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classceres_1_1_identity_parameterization_a50c7709f456964c1148dfcdf1bce4e4d}\label{classceres_1_1_identity_parameterization_a50c7709f456964c1148dfcdf1bce4e4d}} 
+\index{ceres::IdentityParameterization@{ceres::IdentityParameterization}!IdentityParameterization@{IdentityParameterization}}
+\index{IdentityParameterization@{IdentityParameterization}!ceres::IdentityParameterization@{ceres::IdentityParameterization}}
+\doxysubsubsection{\texorpdfstring{IdentityParameterization()}{IdentityParameterization()}}
+{\footnotesize\ttfamily ceres\+::\+Identity\+Parameterization\+::\+Identity\+Parameterization (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classceres_1_1_identity_parameterization_a293dc7860438aa7357fd6801ce5fe253}\label{classceres_1_1_identity_parameterization_a293dc7860438aa7357fd6801ce5fe253}} 
+\index{ceres::IdentityParameterization@{ceres::IdentityParameterization}!````~IdentityParameterization@{$\sim$IdentityParameterization}}
+\index{````~IdentityParameterization@{$\sim$IdentityParameterization}!ceres::IdentityParameterization@{ceres::IdentityParameterization}}
+\doxysubsubsection{\texorpdfstring{$\sim$IdentityParameterization()}{~IdentityParameterization()}}
+{\footnotesize\ttfamily virtual ceres\+::\+Identity\+Parameterization\+::$\sim$\+Identity\+Parameterization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_identity_parameterization_a49ff1651063c72279afb62c696f6e324}\label{classceres_1_1_identity_parameterization_a49ff1651063c72279afb62c696f6e324}} 
+\index{ceres::IdentityParameterization@{ceres::IdentityParameterization}!ComputeJacobian@{ComputeJacobian}}
+\index{ComputeJacobian@{ComputeJacobian}!ceres::IdentityParameterization@{ceres::IdentityParameterization}}
+\doxysubsubsection{\texorpdfstring{ComputeJacobian()}{ComputeJacobian()}}
+{\footnotesize\ttfamily virtual bool ceres\+::\+Identity\+Parameterization\+::\+Compute\+Jacobian (\begin{DoxyParamCaption}\item[{const double $\ast$}]{x,  }\item[{double $\ast$}]{jacobian }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_ab0e25130de878a2180d2b0b2caab6b95}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_identity_parameterization_a191910b0563425825f069055999f60fe}\label{classceres_1_1_identity_parameterization_a191910b0563425825f069055999f60fe}} 
+\index{ceres::IdentityParameterization@{ceres::IdentityParameterization}!GlobalSize@{GlobalSize}}
+\index{GlobalSize@{GlobalSize}!ceres::IdentityParameterization@{ceres::IdentityParameterization}}
+\doxysubsubsection{\texorpdfstring{GlobalSize()}{GlobalSize()}}
+{\footnotesize\ttfamily virtual int ceres\+::\+Identity\+Parameterization\+::\+Global\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_a8f1ec16c46144c3808abf2ba189b6a18}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_identity_parameterization_a469cf7f9c6a6e8b15253d7a2614f4ac6}\label{classceres_1_1_identity_parameterization_a469cf7f9c6a6e8b15253d7a2614f4ac6}} 
+\index{ceres::IdentityParameterization@{ceres::IdentityParameterization}!LocalSize@{LocalSize}}
+\index{LocalSize@{LocalSize}!ceres::IdentityParameterization@{ceres::IdentityParameterization}}
+\doxysubsubsection{\texorpdfstring{LocalSize()}{LocalSize()}}
+{\footnotesize\ttfamily virtual int ceres\+::\+Identity\+Parameterization\+::\+Local\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_ae5a6db8e21e101d43f20a3c9bc179ef5}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_identity_parameterization_adccbe5b9c942f94be7e4e0b5a67ea178}\label{classceres_1_1_identity_parameterization_adccbe5b9c942f94be7e4e0b5a67ea178}} 
+\index{ceres::IdentityParameterization@{ceres::IdentityParameterization}!MultiplyByJacobian@{MultiplyByJacobian}}
+\index{MultiplyByJacobian@{MultiplyByJacobian}!ceres::IdentityParameterization@{ceres::IdentityParameterization}}
+\doxysubsubsection{\texorpdfstring{MultiplyByJacobian()}{MultiplyByJacobian()}}
+{\footnotesize\ttfamily virtual bool ceres\+::\+Identity\+Parameterization\+::\+Multiply\+By\+Jacobian (\begin{DoxyParamCaption}\item[{const double $\ast$}]{x,  }\item[{const int}]{num\+\_\+cols,  }\item[{const double $\ast$}]{global\+\_\+matrix,  }\item[{double $\ast$}]{local\+\_\+matrix }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classceres_1_1_local_parameterization_ab200770c24caa7cd89d19ae5779dd54e}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_identity_parameterization_a017c43ee909e06070c7fe5e51dc5d149}\label{classceres_1_1_identity_parameterization_a017c43ee909e06070c7fe5e51dc5d149}} 
+\index{ceres::IdentityParameterization@{ceres::IdentityParameterization}!Plus@{Plus}}
+\index{Plus@{Plus}!ceres::IdentityParameterization@{ceres::IdentityParameterization}}
+\doxysubsubsection{\texorpdfstring{Plus()}{Plus()}}
+{\footnotesize\ttfamily virtual bool ceres\+::\+Identity\+Parameterization\+::\+Plus (\begin{DoxyParamCaption}\item[{const double $\ast$}]{x,  }\item[{const double $\ast$}]{delta,  }\item[{double $\ast$}]{x\+\_\+plus\+\_\+delta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_a8b21e4a5d0a0bc926b7e350f417b73dc}{ceres\+::\+Local\+Parameterization}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classceres_1_1_identity_parameterization_a89aab98fe0a7504206b3a2e8eb84a4ae}\label{classceres_1_1_identity_parameterization_a89aab98fe0a7504206b3a2e8eb84a4ae}} 
+\index{ceres::IdentityParameterization@{ceres::IdentityParameterization}!size\_@{size\_}}
+\index{size\_@{size\_}!ceres::IdentityParameterization@{ceres::IdentityParameterization}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily const int ceres\+::\+Identity\+Parameterization\+::size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{local__parameterization_8h}{local\+\_\+parameterization.\+h}}\end{DoxyCompactItemize}

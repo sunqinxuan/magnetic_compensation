@@ -1,0 +1,41 @@
+\hypertarget{struct_eigen_1_1internal_1_1_full_reducer}{}\doxysection{Eigen\+::internal\+::Full\+Reducer$<$ Self, Op, Device, Vectorizable $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1_full_reducer}\index{Eigen::internal::FullReducer$<$ Self, Op, Device, Vectorizable $>$@{Eigen::internal::FullReducer$<$ Self, Op, Device, Vectorizable $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Reduction.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_reducer_a506159dc2c13ca4882575512f42f972f}{run}} (const Self \&self, Op \&reducer, const Device \&, typename Self\+::\+Coeff\+Return\+Type $\ast$output)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_reducer_afdb7b8d8326a460adec840d3f38b097e}{Has\+Optimized\+Implementation}} = \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_reducer_a506159dc2c13ca4882575512f42f972f}\label{struct_eigen_1_1internal_1_1_full_reducer_a506159dc2c13ca4882575512f42f972f}} 
+\index{Eigen::internal::FullReducer$<$ Self, Op, Device, Vectorizable $>$@{Eigen::internal::FullReducer$<$ Self, Op, Device, Vectorizable $>$}!run@{run}}
+\index{run@{run}!Eigen::internal::FullReducer$<$ Self, Op, Device, Vectorizable $>$@{Eigen::internal::FullReducer$<$ Self, Op, Device, Vectorizable $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename Self , typename Op , typename Device , bool Vectorizable = (\+Self\+::\+Input\+Packet\+Access \& Op\+::\+Packet\+Access)$>$ \\
+static E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_reducer}{Eigen\+::internal\+::\+Full\+Reducer}}$<$ Self, Op, Device, Vectorizable $>$\+::run (\begin{DoxyParamCaption}\item[{const Self \&}]{self,  }\item[{Op \&}]{reducer,  }\item[{const Device \&}]{,  }\item[{typename Self\+::\+Coeff\+Return\+Type $\ast$}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_full_reducer_afdb7b8d8326a460adec840d3f38b097e}\label{struct_eigen_1_1internal_1_1_full_reducer_afdb7b8d8326a460adec840d3f38b097e}} 
+\index{Eigen::internal::FullReducer$<$ Self, Op, Device, Vectorizable $>$@{Eigen::internal::FullReducer$<$ Self, Op, Device, Vectorizable $>$}!HasOptimizedImplementation@{HasOptimizedImplementation}}
+\index{HasOptimizedImplementation@{HasOptimizedImplementation}!Eigen::internal::FullReducer$<$ Self, Op, Device, Vectorizable $>$@{Eigen::internal::FullReducer$<$ Self, Op, Device, Vectorizable $>$}}
+\doxysubsubsection{\texorpdfstring{HasOptimizedImplementation}{HasOptimizedImplementation}}
+{\footnotesize\ttfamily template$<$typename Self , typename Op , typename Device , bool Vectorizable = (\+Self\+::\+Input\+Packet\+Access \& Op\+::\+Packet\+Access)$>$ \\
+const bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1_full_reducer}{Eigen\+::internal\+::\+Full\+Reducer}}$<$ Self, Op, Device, Vectorizable $>$\+::Has\+Optimized\+Implementation = \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_reduction_8h}{Tensor\+Reduction.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{class_cabin_cost_function_creator}{}\doxysection{Cabin\+Cost\+Function\+Creator Class Reference}
+\label{class_cabin_cost_function_creator}\index{CabinCostFunctionCreator@{CabinCostFunctionCreator}}
+
+
+{\ttfamily \#include $<$mic\+\_\+cabin\+\_\+mag\+\_\+compensator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cabin_cost_function_creator_a958a58e0d6bb0eb459c4096902237109}{Cabin\+Cost\+Function\+Creator}} (const matrix\+\_\+3f\+\_\+t \&coeff\+\_\+\+D\+\_\+tilde\+\_\+inv, const vector\+\_\+3f\+\_\+t \&coeff\+\_\+o\+\_\+hat, const vector\+\_\+3f\+\_\+t \&mag\+\_\+r, const vector\+\_\+3f\+\_\+t \&mag\+\_\+c)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{class_cabin_cost_function_creator_ae2e4d51922f6a37ac27671cb5117d8da}{operator()}} (const T $\ast$const quaternion, T $\ast$residual\+\_\+ptr) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static ceres\+::\+Cost\+Function $\ast$ \mbox{\hyperlink{class_cabin_cost_function_creator_afc9917a2f831967e888573d320ed3596}{Create}} (const matrix\+\_\+3f\+\_\+t \&coeff\+\_\+\+D\+\_\+tilde\+\_\+inv, const vector\+\_\+3f\+\_\+t \&coeff\+\_\+o\+\_\+hat, const vector\+\_\+3f\+\_\+t \&mag\+\_\+r, const vector\+\_\+3f\+\_\+t \&mag\+\_\+c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+matrix\+\_\+3f\+\_\+t \mbox{\hyperlink{class_cabin_cost_function_creator_ac0feeeacee6762f441094452374fcc0f}{coeff\+\_\+\+D\+\_\+tilde\+\_\+inv\+\_\+}}
+\item 
+vector\+\_\+3f\+\_\+t \mbox{\hyperlink{class_cabin_cost_function_creator_a586c6810aaacac7382cfb825807e2511}{coeff\+\_\+o\+\_\+hat\+\_\+}}
+\item 
+vector\+\_\+3f\+\_\+t \mbox{\hyperlink{class_cabin_cost_function_creator_aa3011f50bda09dc03ca8e4cfb162e1f7}{mag\+\_\+r\+\_\+}}
+\item 
+vector\+\_\+3f\+\_\+t \mbox{\hyperlink{class_cabin_cost_function_creator_ad106e1d330f82027879510cf616bd38d}{mag\+\_\+c\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cabin_cost_function_creator_a958a58e0d6bb0eb459c4096902237109}\label{class_cabin_cost_function_creator_a958a58e0d6bb0eb459c4096902237109}} 
+\index{CabinCostFunctionCreator@{CabinCostFunctionCreator}!CabinCostFunctionCreator@{CabinCostFunctionCreator}}
+\index{CabinCostFunctionCreator@{CabinCostFunctionCreator}!CabinCostFunctionCreator@{CabinCostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{CabinCostFunctionCreator()}{CabinCostFunctionCreator()}}
+{\footnotesize\ttfamily Cabin\+Cost\+Function\+Creator\+::\+Cabin\+Cost\+Function\+Creator (\begin{DoxyParamCaption}\item[{const matrix\+\_\+3f\+\_\+t \&}]{coeff\+\_\+\+D\+\_\+tilde\+\_\+inv,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{coeff\+\_\+o\+\_\+hat,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{mag\+\_\+r,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{mag\+\_\+c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cabin_cost_function_creator_afc9917a2f831967e888573d320ed3596}\label{class_cabin_cost_function_creator_afc9917a2f831967e888573d320ed3596}} 
+\index{CabinCostFunctionCreator@{CabinCostFunctionCreator}!Create@{Create}}
+\index{Create@{Create}!CabinCostFunctionCreator@{CabinCostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static ceres\+::\+Cost\+Function$\ast$ Cabin\+Cost\+Function\+Creator\+::\+Create (\begin{DoxyParamCaption}\item[{const matrix\+\_\+3f\+\_\+t \&}]{coeff\+\_\+\+D\+\_\+tilde\+\_\+inv,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{coeff\+\_\+o\+\_\+hat,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{mag\+\_\+r,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{mag\+\_\+c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_cabin_cost_function_creator_ae2e4d51922f6a37ac27671cb5117d8da}\label{class_cabin_cost_function_creator_ae2e4d51922f6a37ac27671cb5117d8da}} 
+\index{CabinCostFunctionCreator@{CabinCostFunctionCreator}!operator()@{operator()}}
+\index{operator()@{operator()}!CabinCostFunctionCreator@{CabinCostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool Cabin\+Cost\+Function\+Creator\+::operator() (\begin{DoxyParamCaption}\item[{const T $\ast$const}]{quaternion,  }\item[{T $\ast$}]{residual\+\_\+ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cabin_cost_function_creator_ac0feeeacee6762f441094452374fcc0f}\label{class_cabin_cost_function_creator_ac0feeeacee6762f441094452374fcc0f}} 
+\index{CabinCostFunctionCreator@{CabinCostFunctionCreator}!coeff\_D\_tilde\_inv\_@{coeff\_D\_tilde\_inv\_}}
+\index{coeff\_D\_tilde\_inv\_@{coeff\_D\_tilde\_inv\_}!CabinCostFunctionCreator@{CabinCostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{coeff\_D\_tilde\_inv\_}{coeff\_D\_tilde\_inv\_}}
+{\footnotesize\ttfamily matrix\+\_\+3f\+\_\+t Cabin\+Cost\+Function\+Creator\+::coeff\+\_\+\+D\+\_\+tilde\+\_\+inv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_cabin_cost_function_creator_a586c6810aaacac7382cfb825807e2511}\label{class_cabin_cost_function_creator_a586c6810aaacac7382cfb825807e2511}} 
+\index{CabinCostFunctionCreator@{CabinCostFunctionCreator}!coeff\_o\_hat\_@{coeff\_o\_hat\_}}
+\index{coeff\_o\_hat\_@{coeff\_o\_hat\_}!CabinCostFunctionCreator@{CabinCostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{coeff\_o\_hat\_}{coeff\_o\_hat\_}}
+{\footnotesize\ttfamily vector\+\_\+3f\+\_\+t Cabin\+Cost\+Function\+Creator\+::coeff\+\_\+o\+\_\+hat\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_cabin_cost_function_creator_ad106e1d330f82027879510cf616bd38d}\label{class_cabin_cost_function_creator_ad106e1d330f82027879510cf616bd38d}} 
+\index{CabinCostFunctionCreator@{CabinCostFunctionCreator}!mag\_c\_@{mag\_c\_}}
+\index{mag\_c\_@{mag\_c\_}!CabinCostFunctionCreator@{CabinCostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{mag\_c\_}{mag\_c\_}}
+{\footnotesize\ttfamily vector\+\_\+3f\+\_\+t Cabin\+Cost\+Function\+Creator\+::mag\+\_\+c\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_cabin_cost_function_creator_aa3011f50bda09dc03ca8e4cfb162e1f7}\label{class_cabin_cost_function_creator_aa3011f50bda09dc03ca8e4cfb162e1f7}} 
+\index{CabinCostFunctionCreator@{CabinCostFunctionCreator}!mag\_r\_@{mag\_r\_}}
+\index{mag\_r\_@{mag\_r\_}!CabinCostFunctionCreator@{CabinCostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{mag\_r\_}{mag\_r\_}}
+{\footnotesize\ttfamily vector\+\_\+3f\+\_\+t Cabin\+Cost\+Function\+Creator\+::mag\+\_\+r\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mic\+\_\+mag\+\_\+compensator/impl/\mbox{\hyperlink{mic__cabin__mag__compensator_8h}{mic\+\_\+cabin\+\_\+mag\+\_\+compensator.\+h}}\end{DoxyCompactItemize}

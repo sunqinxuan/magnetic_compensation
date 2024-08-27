@@ -1,0 +1,118 @@
+\hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4}{}\doxysection{Eigen\+::internal\+::traits$<$ Transpose$<$ Matrix\+Type $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}
+
+
+{\ttfamily \#include $<$Transpose.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::internal\+::traits$<$ Transpose$<$ Matrix\+Type $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::internal\+::traits$<$ Transpose$<$ Matrix\+Type $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda5e25bd02c9fe4c579d5ad7e397d858a8}{Rows\+At\+Compile\+Time}} = Matrix\+Type\+::Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdad5086c1a3191186d34974fe898e69668}{Cols\+At\+Compile\+Time}} = Matrix\+Type\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda804b9e298366688d3b6bb760afa1ac41}{Max\+Rows\+At\+Compile\+Time}} = Matrix\+Type\+::Max\+Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda3acc64c5fdfc191ea7da3722c1c2a301}{Max\+Cols\+At\+Compile\+Time}} = Matrix\+Type\+::Max\+Rows\+At\+Compile\+Time, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdab1184e5c20df6a6ae5313e68e2510cfa}{Flags\+Lvalue\+Bit}} = is\+\_\+lvalue$<$Matrix\+Type$>$\+::value ? Lvalue\+Bit \+: 0, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdad9efac70f466e193d434a625891204fe}{Flags0}} = traits$<$Matrix\+Type\+Nested\+Plain$>$\+::Flags \& $\sim$(Lvalue\+Bit $\vert$ Nest\+By\+Ref\+Bit), 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda8869a04c0d6a92675ecf87b23ea58c6b}{Flags1}} = Flags0 $\vert$ Flags\+Lvalue\+Bit, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdaec2a145e0a62f0b6bffd9338d9ddb13a}{Flags}} = Flags1 $^\wedge$ Row\+Major\+Bit, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda35cac228f015805d5aca313fe2b877c0}{Inner\+Stride\+At\+Compile\+Time}} = inner\+\_\+stride\+\_\+at\+\_\+compile\+\_\+time$<$Matrix\+Type$>$\+::ret, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda6bb957e5001662f230c8ef0431cdc6dd}{Outer\+Stride\+At\+Compile\+Time}} = outer\+\_\+stride\+\_\+at\+\_\+compile\+\_\+time$<$Matrix\+Type$>$\+::ret
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{ref\+\_\+selector}}$<$ Matrix\+Type $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_af03354ff50cf117fe23a0caac756e3ee}{Matrix\+Type\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_af03354ff50cf117fe23a0caac756e3ee}{Matrix\+Type\+Nested}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ae5b6205259511832d2015de8dcf8e40b}{Matrix\+Type\+Nested\+Plain}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_af03354ff50cf117fe23a0caac756e3ee}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_af03354ff50cf117fe23a0caac756e3ee}} 
+\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!MatrixTypeNested@{MatrixTypeNested}}
+\index{MatrixTypeNested@{MatrixTypeNested}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{MatrixTypeNested}{MatrixTypeNested}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{ref\+\_\+selector}}$<$Matrix\+Type$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_transpose}{Transpose}}$<$ Matrix\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_af03354ff50cf117fe23a0caac756e3ee}{Matrix\+Type\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ae5b6205259511832d2015de8dcf8e40b}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ae5b6205259511832d2015de8dcf8e40b}} 
+\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!MatrixTypeNestedPlain@{MatrixTypeNestedPlain}}
+\index{MatrixTypeNestedPlain@{MatrixTypeNestedPlain}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{MatrixTypeNestedPlain}{MatrixTypeNestedPlain}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_af03354ff50cf117fe23a0caac756e3ee}{Matrix\+Type\+Nested}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_transpose}{Transpose}}$<$ Matrix\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ae5b6205259511832d2015de8dcf8e40b}{Matrix\+Type\+Nested\+Plain}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fd}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fd}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda5e25bd02c9fe4c579d5ad7e397d858a8}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda5e25bd02c9fe4c579d5ad7e397d858a8}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdad5086c1a3191186d34974fe898e69668}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdad5086c1a3191186d34974fe898e69668}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda804b9e298366688d3b6bb760afa1ac41}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda804b9e298366688d3b6bb760afa1ac41}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda3acc64c5fdfc191ea7da3722c1c2a301}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda3acc64c5fdfc191ea7da3722c1c2a301}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FlagsLvalueBit@{FlagsLvalueBit}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!FlagsLvalueBit@{FlagsLvalueBit}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdab1184e5c20df6a6ae5313e68e2510cfa}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdab1184e5c20df6a6ae5313e68e2510cfa}} 
+Flags\+Lvalue\+Bit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags0@{Flags0}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!Flags0@{Flags0}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdad9efac70f466e193d434a625891204fe}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdad9efac70f466e193d434a625891204fe}} 
+Flags0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags1@{Flags1}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!Flags1@{Flags1}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda8869a04c0d6a92675ecf87b23ea58c6b}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda8869a04c0d6a92675ecf87b23ea58c6b}} 
+Flags1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdaec2a145e0a62f0b6bffd9338d9ddb13a}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fdaec2a145e0a62f0b6bffd9338d9ddb13a}} 
+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InnerStrideAtCompileTime@{InnerStrideAtCompileTime}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!InnerStrideAtCompileTime@{InnerStrideAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda35cac228f015805d5aca313fe2b877c0}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda35cac228f015805d5aca313fe2b877c0}} 
+Inner\+Stride\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OuterStrideAtCompileTime@{OuterStrideAtCompileTime}!Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}}\index{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$@{Eigen::internal::traits$<$ Transpose$<$ MatrixType $>$ $>$}!OuterStrideAtCompileTime@{OuterStrideAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda6bb957e5001662f230c8ef0431cdc6dd}\label{struct_eigen_1_1internal_1_1traits_3_01_transpose_3_01_matrix_type_01_4_01_4_ab65ccbb22dcd62964ba205d36e4635fda6bb957e5001662f230c8ef0431cdc6dd}} 
+Outer\+Stride\+At\+Compile\+Time&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_transpose_8h}{Transpose.\+h}}\end{DoxyCompactItemize}

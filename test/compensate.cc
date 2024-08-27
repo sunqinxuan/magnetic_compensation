@@ -19,6 +19,7 @@ using namespace std;
 
 DEFINE_string(model, "ellipsoid", "ellipsoid, tl, tlc or cabin");
 DEFINE_string(file, "Flt1002_1002.2.txt", "file to load data");
+DEFINE_string(output, "output.txt", "file to output compensation results");
 
 int main(int argc, char *argv[])
 {
@@ -27,20 +28,35 @@ int main(int argc, char *argv[])
     // initialize the compensator;
     mic_init_worker(FLAGS_model, "./mic_model_" + FLAGS_model + ".mdl");
 
+    google::CommandLineFlagInfo info;
+    GetCommandLineFlagInfo("output", &info);
+    std::string output_file_name;
+    if (info.is_default)
+    {
+        output_file_name = "output_" + FLAGS_model + ".txt";
+    }
+    else
+    {
+        output_file_name = FLAGS_output;
+    }
+    MIC_LOG_BASIC_INFO("output file name: %s", output_file_name.c_str());
+
     // create output file for compensation results;
-    time_t tt = time(nullptr); // milliseconds from 1970;
-    struct tm *cur_tm = localtime(&tt);
-    std::stringstream tm_str;
-    tm_str << cur_tm->tm_year + 1900 << "-"
-           << cur_tm->tm_mon + 1 << "-"
-           << cur_tm->tm_mday << "-"
-           << cur_tm->tm_hour << "-"
-           << cur_tm->tm_min << "-"
-           << cur_tm->tm_sec;
-    std::ofstream outfile("./output_" + tm_str.str() + ".txt");
+    // time_t tt = time(nullptr); // milliseconds from 1970;
+    // struct tm *cur_tm = localtime(&tt);
+    // std::stringstream tm_str;
+    // tm_str << cur_tm->tm_year + 1900 << "-"
+    //        << cur_tm->tm_mon + 1 << "-"
+    //        << cur_tm->tm_mday << "-"
+    //        << cur_tm->tm_hour << "-"
+    //        << cur_tm->tm_min << "-"
+    //        << cur_tm->tm_sec;
+    // std::ofstream outfile("./output_" + tm_str.str() + ".txt");
+
+    std::ofstream outfile(output_file_name);
     if (!outfile.is_open())
     {
-        MIC_LOG_ERR("Error: Could not open file %s", "./" + tm_str.str() + ".txt");
+        MIC_LOG_ERR("Error: Could not open file %s", output_file_name.c_str());
         return -1;
     }
 
@@ -48,9 +64,10 @@ int main(int argc, char *argv[])
     std::ifstream infile(FLAGS_file);
     if (!infile.is_open())
     {
-        MIC_LOG_ERR("Error: Could not open file %s", FLAGS_file);
+        MIC_LOG_ERR("Error: Could not open file %s", FLAGS_file.c_str());
         return -1;
     }
+    std::cout << std::endl;
     while (true)
     {
         std::vector<float64_t> data_line;
@@ -67,9 +84,13 @@ int main(int argc, char *argv[])
             mic_mag_t mag_out;
             mic_compensate(ts, mag_out);
             outfile << std::fixed << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
-            cout << std::fixed << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
+            cout << " - real-time compensation: " << std::setw(3) << std::fixed
+                 << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << "\r" << std::flush;
         }
     }
+    std::cout << std::endl
+              << std::endl
+              << "Compensation Process Finish! " << std::endl;
     infile.close();
     outfile.close();
 

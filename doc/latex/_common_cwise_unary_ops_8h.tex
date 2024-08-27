@@ -1,0 +1,224 @@
+\hypertarget{_common_cwise_unary_ops_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/plugins/\+Common\+Cwise\+Unary\+Ops.h File Reference}
+\label{_common_cwise_unary_ops_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/plugins/CommonCwiseUnaryOps.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/plugins/CommonCwiseUnaryOps.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_common_cwise_unary_ops_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cast_xpr}{Cast\+Xpr$<$ New\+Type $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef internal\+::conditional$<$ Num\+Traits$<$ Scalar $>$\+::Is\+Complex, const Cwise\+Unary\+Op$<$ internal\+::scalar\+\_\+conjugate\+\_\+op$<$ Scalar $>$, const Derived $>$, const Derived \& $>$\+::type \mbox{\hyperlink{_common_cwise_unary_ops_8h_a8391a8a82f1ad952c5ce3bc797a59fa3}{Conjugate\+Return\+Type}}
+\item 
+typedef internal\+::conditional$<$ Num\+Traits$<$ Scalar $>$\+::Is\+Complex, const Cwise\+Unary\+Op$<$ internal\+::scalar\+\_\+real\+\_\+op$<$ Scalar $>$, const Derived $>$, const Derived \& $>$\+::type \mbox{\hyperlink{_common_cwise_unary_ops_8h_a78f6c235431381c8d8236a57e8cdf3aa}{Real\+Return\+Type}}
+\item 
+typedef internal\+::conditional$<$ Num\+Traits$<$ Scalar $>$\+::Is\+Complex, Cwise\+Unary\+View$<$ internal\+::scalar\+\_\+real\+\_\+ref\+\_\+op$<$ Scalar $>$, Derived $>$, Derived \& $>$\+::type \mbox{\hyperlink{_common_cwise_unary_ops_8h_a4df201105578a2265d8f70d74ef90ec1}{Non\+Const\+Real\+Return\+Type}}
+\item 
+typedef Cwise\+Unary\+Op$<$ internal\+::scalar\+\_\+imag\+\_\+op$<$ Scalar $>$, const Derived $>$ \mbox{\hyperlink{_common_cwise_unary_ops_8h_a95e17c548bb824eea74de365922dd98f}{Imag\+Return\+Type}}
+\item 
+typedef Cwise\+Unary\+View$<$ internal\+::scalar\+\_\+imag\+\_\+ref\+\_\+op$<$ Scalar $>$, Derived $>$ \mbox{\hyperlink{_common_cwise_unary_ops_8h_a439275343866fc96ec3b3593495d103c}{Non\+Const\+Imag\+Return\+Type}}
+\item 
+typedef Cwise\+Unary\+Op$<$ internal\+::scalar\+\_\+opposite\+\_\+op$<$ Scalar $>$, const Derived $>$ \mbox{\hyperlink{_common_cwise_unary_ops_8h_aff53bb7e0da4f1764538c2cdb52768ab}{Negative\+Return\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_common_cwise_unary_ops_8h_aff53bb7e0da4f1764538c2cdb52768ab}{Negative\+Return\+Type}} \mbox{\hyperlink{_common_cwise_unary_ops_8h_acf27c8aabc3a01a393804f207a8a8496}{operator-\/}} () const
+\item 
+{\footnotesize template$<$typename New\+Type $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_cast_xpr}{Cast\+Xpr}}$<$ New\+Type $>$\+::Type \mbox{\hyperlink{_common_cwise_unary_ops_8h_ae9c73516309861c00fd6bf3f38ab7f3c}{cast}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_common_cwise_unary_ops_8h_a8391a8a82f1ad952c5ce3bc797a59fa3}{Conjugate\+Return\+Type}} \mbox{\hyperlink{_common_cwise_unary_ops_8h_acea5b38fcb99c3e0b91a43bfcca923ce}{conjugate}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_common_cwise_unary_ops_8h_a78f6c235431381c8d8236a57e8cdf3aa}{Real\+Return\+Type}} \mbox{\hyperlink{_common_cwise_unary_ops_8h_a560b678a662ccfce4da582595899a0b7}{real}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_common_cwise_unary_ops_8h_a95e17c548bb824eea74de365922dd98f}{Imag\+Return\+Type}} \mbox{\hyperlink{_common_cwise_unary_ops_8h_a8cc3d2f4413a156b2ec6a3097efd3aa4}{imag}} () const
+\item 
+{\footnotesize template$<$typename Custom\+Unary\+Op $>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Unary\+Op$<$ Custom\+Unary\+Op, const Derived $>$ \mbox{\hyperlink{_common_cwise_unary_ops_8h_aa88c23cf8c1698c87408d22953e6f8fc}{unary\+Expr}} (const Custom\+Unary\+Op \&func=Custom\+Unary\+Op()) const
+\begin{DoxyCompactList}\small\item\em Apply a unary operator coefficient-\/wise. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Custom\+View\+Op $>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Unary\+View$<$ Custom\+View\+Op, const Derived $>$ \mbox{\hyperlink{_common_cwise_unary_ops_8h_a744ac332022e6d742d67d27fc573b33f}{unary\+View\+Expr}} (const Custom\+View\+Op \&func=Custom\+View\+Op()) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_a8391a8a82f1ad952c5ce3bc797a59fa3}\label{_common_cwise_unary_ops_8h_a8391a8a82f1ad952c5ce3bc797a59fa3}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!ConjugateReturnType@{ConjugateReturnType}}
+\index{ConjugateReturnType@{ConjugateReturnType}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{ConjugateReturnType}{ConjugateReturnType}}
+{\footnotesize\ttfamily typedef internal\+::conditional$<$Num\+Traits$<$Scalar$>$\+::Is\+Complex, const Cwise\+Unary\+Op$<$internal\+::scalar\+\_\+conjugate\+\_\+op$<$Scalar$>$, const Derived$>$, const Derived\& $>$\+::type \mbox{\hyperlink{_common_cwise_unary_ops_8h_a8391a8a82f1ad952c5ce3bc797a59fa3}{Conjugate\+Return\+Type}}}
+
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_a95e17c548bb824eea74de365922dd98f}\label{_common_cwise_unary_ops_8h_a95e17c548bb824eea74de365922dd98f}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!ImagReturnType@{ImagReturnType}}
+\index{ImagReturnType@{ImagReturnType}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{ImagReturnType}{ImagReturnType}}
+{\footnotesize\ttfamily typedef Cwise\+Unary\+Op$<$internal\+::scalar\+\_\+imag\+\_\+op$<$Scalar$>$, const Derived$>$ \mbox{\hyperlink{_common_cwise_unary_ops_8h_a95e17c548bb824eea74de365922dd98f}{Imag\+Return\+Type}}}
+
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_aff53bb7e0da4f1764538c2cdb52768ab}\label{_common_cwise_unary_ops_8h_aff53bb7e0da4f1764538c2cdb52768ab}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!NegativeReturnType@{NegativeReturnType}}
+\index{NegativeReturnType@{NegativeReturnType}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{NegativeReturnType}{NegativeReturnType}}
+{\footnotesize\ttfamily typedef Cwise\+Unary\+Op$<$internal\+::scalar\+\_\+opposite\+\_\+op$<$Scalar$>$, const Derived$>$ \mbox{\hyperlink{_common_cwise_unary_ops_8h_aff53bb7e0da4f1764538c2cdb52768ab}{Negative\+Return\+Type}}}
+
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_a439275343866fc96ec3b3593495d103c}\label{_common_cwise_unary_ops_8h_a439275343866fc96ec3b3593495d103c}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!NonConstImagReturnType@{NonConstImagReturnType}}
+\index{NonConstImagReturnType@{NonConstImagReturnType}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{NonConstImagReturnType}{NonConstImagReturnType}}
+{\footnotesize\ttfamily typedef Cwise\+Unary\+View$<$internal\+::scalar\+\_\+imag\+\_\+ref\+\_\+op$<$Scalar$>$, Derived$>$ \mbox{\hyperlink{_common_cwise_unary_ops_8h_a439275343866fc96ec3b3593495d103c}{Non\+Const\+Imag\+Return\+Type}}}
+
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_a4df201105578a2265d8f70d74ef90ec1}\label{_common_cwise_unary_ops_8h_a4df201105578a2265d8f70d74ef90ec1}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!NonConstRealReturnType@{NonConstRealReturnType}}
+\index{NonConstRealReturnType@{NonConstRealReturnType}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{NonConstRealReturnType}{NonConstRealReturnType}}
+{\footnotesize\ttfamily typedef internal\+::conditional$<$Num\+Traits$<$Scalar$>$\+::Is\+Complex, Cwise\+Unary\+View$<$internal\+::scalar\+\_\+real\+\_\+ref\+\_\+op$<$Scalar$>$, Derived$>$, Derived\& $>$\+::type \mbox{\hyperlink{_common_cwise_unary_ops_8h_a4df201105578a2265d8f70d74ef90ec1}{Non\+Const\+Real\+Return\+Type}}}
+
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_a78f6c235431381c8d8236a57e8cdf3aa}\label{_common_cwise_unary_ops_8h_a78f6c235431381c8d8236a57e8cdf3aa}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!RealReturnType@{RealReturnType}}
+\index{RealReturnType@{RealReturnType}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{RealReturnType}{RealReturnType}}
+{\footnotesize\ttfamily typedef internal\+::conditional$<$Num\+Traits$<$Scalar$>$\+::Is\+Complex, const Cwise\+Unary\+Op$<$internal\+::scalar\+\_\+real\+\_\+op$<$Scalar$>$, const Derived$>$, const Derived\& $>$\+::type \mbox{\hyperlink{_common_cwise_unary_ops_8h_a78f6c235431381c8d8236a57e8cdf3aa}{Real\+Return\+Type}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_ae9c73516309861c00fd6bf3f38ab7f3c}\label{_common_cwise_unary_ops_8h_ae9c73516309861c00fd6bf3f38ab7f3c}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!cast@{cast}}
+\index{cast@{cast}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily template$<$typename New\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_cast_xpr}{Cast\+Xpr}}$<$New\+Type$>$\+::Type cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+an expression of {\ttfamily $\ast$this} with the {\itshape Scalar} type casted to {\itshape New\+Scalar}.
+\end{DoxyReturn}
+The template parameter {\itshape New\+Scalar} is the type we are casting the scalars to. \begin{DoxySeeAlso}{See also}
+class Cwise\+Unary\+Op 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_acea5b38fcb99c3e0b91a43bfcca923ce}\label{_common_cwise_unary_ops_8h_acea5b38fcb99c3e0b91a43bfcca923ce}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!conjugate@{conjugate}}
+\index{conjugate@{conjugate}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{conjugate()}{conjugate()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_common_cwise_unary_ops_8h_a8391a8a82f1ad952c5ce3bc797a59fa3}{Conjugate\+Return\+Type}} conjugate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the complex conjugate of {\ttfamily $\ast$this}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{group__CoeffwiseMathFunctions.html\#cwisetable_conj}{\texttt{ Math functions}}, Matrix\+Base\+::adjoint() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_a8cc3d2f4413a156b2ec6a3097efd3aa4}\label{_common_cwise_unary_ops_8h_a8cc3d2f4413a156b2ec6a3097efd3aa4}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!imag@{imag}}
+\index{imag@{imag}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{imag()}{imag()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_common_cwise_unary_ops_8h_a439275343866fc96ec3b3593495d103c}{Non\+Const\+Imag\+Return\+Type}} imag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an read-\/only expression of the imaginary part of {\ttfamily $\ast$this}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_common_cwise_unary_ops_8h_a560b678a662ccfce4da582595899a0b7}{real()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a non const expression of the imaginary part of {\ttfamily $\ast$this}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_common_cwise_unary_ops_8h_a560b678a662ccfce4da582595899a0b7}{real()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_acf27c8aabc3a01a393804f207a8a8496}\label{_common_cwise_unary_ops_8h_acf27c8aabc3a01a393804f207a8a8496}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_common_cwise_unary_ops_8h_aff53bb7e0da4f1764538c2cdb52768ab}{Negative\+Return\+Type}} operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the opposite of {\ttfamily $\ast$this} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_a560b678a662ccfce4da582595899a0b7}\label{_common_cwise_unary_ops_8h_a560b678a662ccfce4da582595899a0b7}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!real@{real}}
+\index{real@{real}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{real()}{real()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_common_cwise_unary_ops_8h_a4df201105578a2265d8f70d74ef90ec1}{Non\+Const\+Real\+Return\+Type}} real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a read-\/only expression of the real part of {\ttfamily $\ast$this}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_common_cwise_unary_ops_8h_a8cc3d2f4413a156b2ec6a3097efd3aa4}{imag()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a non const expression of the real part of {\ttfamily $\ast$this}.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_common_cwise_unary_ops_8h_a8cc3d2f4413a156b2ec6a3097efd3aa4}{imag()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_aa88c23cf8c1698c87408d22953e6f8fc}\label{_common_cwise_unary_ops_8h_aa88c23cf8c1698c87408d22953e6f8fc}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!unaryExpr@{unaryExpr}}
+\index{unaryExpr@{unaryExpr}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{unaryExpr()}{unaryExpr()}}
+{\footnotesize\ttfamily template$<$typename Custom\+Unary\+Op $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Unary\+Op$<$Custom\+Unary\+Op, const Derived$>$ unary\+Expr (\begin{DoxyParamCaption}\item[{const Custom\+Unary\+Op \&}]{func = {\ttfamily CustomUnaryOp()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apply a unary operator coefficient-\/wise. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Functor implementing the unary operator \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Custom\+Unary\+Op} & Type of {\itshape func} \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+An expression of a custom coefficient-\/wise unary operator {\itshape func} of $\ast$this
+\end{DoxyReturn}
+The function {\ttfamily ptr\+\_\+fun()} from the C++ standard library can be used to make functors out of normal functions.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+Genuine functors allow for more possibilities, for instance it may contain a state.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_common_cwise_unary_ops_8h_a744ac332022e6d742d67d27fc573b33f}{unary\+View\+Expr}}, \mbox{\hyperlink{_common_cwise_binary_ops_8h_acb4534facc729e7502c9f2420523d0ed}{binary\+Expr}}, class Cwise\+Unary\+Op 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_common_cwise_unary_ops_8h_a744ac332022e6d742d67d27fc573b33f}\label{_common_cwise_unary_ops_8h_a744ac332022e6d742d67d27fc573b33f}} 
+\index{CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}!unaryViewExpr@{unaryViewExpr}}
+\index{unaryViewExpr@{unaryViewExpr}!CommonCwiseUnaryOps.h@{CommonCwiseUnaryOps.h}}
+\doxysubsubsection{\texorpdfstring{unaryViewExpr()}{unaryViewExpr()}}
+{\footnotesize\ttfamily template$<$typename Custom\+View\+Op $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Unary\+View$<$Custom\+View\+Op, const Derived$>$ unary\+View\+Expr (\begin{DoxyParamCaption}\item[{const Custom\+View\+Op \&}]{func = {\ttfamily CustomViewOp()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of a custom coefficient-\/wise unary operator {\itshape func} of $\ast$this
+\end{DoxyReturn}
+The template parameter {\itshape Custom\+Unary\+Op} is the type of the functor of the custom unary operator.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_common_cwise_unary_ops_8h_aa88c23cf8c1698c87408d22953e6f8fc}{unary\+Expr}}, \mbox{\hyperlink{_common_cwise_binary_ops_8h_acb4534facc729e7502c9f2420523d0ed}{binary\+Expr}} class Cwise\+Unary\+Op 
+\end{DoxySeeAlso}

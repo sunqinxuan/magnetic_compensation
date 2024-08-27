@@ -1,0 +1,94 @@
+\hypertarget{classceres_1_1_auto_diff_cost_function}{}\doxysection{ceres\+::Auto\+Diff\+Cost\+Function$<$ Cost\+Functor, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$ Class Template Reference}
+\label{classceres_1_1_auto_diff_cost_function}\index{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+
+
+{\ttfamily \#include $<$autodiff\+\_\+cost\+\_\+function.\+h$>$}
+
+
+
+Inheritance diagram for ceres\+::Auto\+Diff\+Cost\+Function$<$ Cost\+Functor, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classceres_1_1_auto_diff_cost_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ceres\+::Auto\+Diff\+Cost\+Function$<$ Cost\+Functor, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classceres_1_1_auto_diff_cost_function__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_auto_diff_cost_function_a0833bd184d38ccd854da27dd3915f104}{Auto\+Diff\+Cost\+Function}} (Cost\+Functor $\ast$functor)
+\item 
+\mbox{\hyperlink{classceres_1_1_auto_diff_cost_function_a4506cc3d03c75db175fbd5db106242af}{Auto\+Diff\+Cost\+Function}} (Cost\+Functor $\ast$functor, int \mbox{\hyperlink{classceres_1_1_cost_function_a6d4bd07102c6effa91f87ee2a4a944f7}{num\+\_\+residuals}})
+\item 
+virtual \mbox{\hyperlink{classceres_1_1_auto_diff_cost_function_a48fbd959397dc59371a0cb3db88fc1cf}{$\sim$\+Auto\+Diff\+Cost\+Function}} ()
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_auto_diff_cost_function_a3abb9962f50a86eefa33a3d3a06d5e55}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr}{internal\+::scoped\+\_\+ptr}}$<$ Cost\+Functor $>$ \mbox{\hyperlink{classceres_1_1_auto_diff_cost_function_a36a5790fb6d9fec105e2d5a9d1dcef7b}{functor\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classceres_1_1_auto_diff_cost_function_a0833bd184d38ccd854da27dd3915f104}\label{classceres_1_1_auto_diff_cost_function_a0833bd184d38ccd854da27dd3915f104}} 
+\index{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!AutoDiffCostFunction@{AutoDiffCostFunction}}
+\index{AutoDiffCostFunction@{AutoDiffCostFunction}!ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{AutoDiffCostFunction()}{AutoDiffCostFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , int k\+Num\+Residuals, int N0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+\mbox{\hyperlink{classceres_1_1_auto_diff_cost_function}{ceres\+::\+Auto\+Diff\+Cost\+Function}}$<$ Cost\+Functor, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::\mbox{\hyperlink{classceres_1_1_auto_diff_cost_function}{Auto\+Diff\+Cost\+Function}} (\begin{DoxyParamCaption}\item[{Cost\+Functor $\ast$}]{functor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classceres_1_1_auto_diff_cost_function_a4506cc3d03c75db175fbd5db106242af}\label{classceres_1_1_auto_diff_cost_function_a4506cc3d03c75db175fbd5db106242af}} 
+\index{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!AutoDiffCostFunction@{AutoDiffCostFunction}}
+\index{AutoDiffCostFunction@{AutoDiffCostFunction}!ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{AutoDiffCostFunction()}{AutoDiffCostFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , int k\+Num\+Residuals, int N0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+\mbox{\hyperlink{classceres_1_1_auto_diff_cost_function}{ceres\+::\+Auto\+Diff\+Cost\+Function}}$<$ Cost\+Functor, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::\mbox{\hyperlink{classceres_1_1_auto_diff_cost_function}{Auto\+Diff\+Cost\+Function}} (\begin{DoxyParamCaption}\item[{Cost\+Functor $\ast$}]{functor,  }\item[{int}]{num\+\_\+residuals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_auto_diff_cost_function_a48fbd959397dc59371a0cb3db88fc1cf}\label{classceres_1_1_auto_diff_cost_function_a48fbd959397dc59371a0cb3db88fc1cf}} 
+\index{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!````~AutoDiffCostFunction@{$\sim$AutoDiffCostFunction}}
+\index{````~AutoDiffCostFunction@{$\sim$AutoDiffCostFunction}!ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$AutoDiffCostFunction()}{~AutoDiffCostFunction()}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , int k\+Num\+Residuals, int N0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+virtual \mbox{\hyperlink{classceres_1_1_auto_diff_cost_function}{ceres\+::\+Auto\+Diff\+Cost\+Function}}$<$ Cost\+Functor, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::$\sim$\mbox{\hyperlink{classceres_1_1_auto_diff_cost_function}{Auto\+Diff\+Cost\+Function}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_auto_diff_cost_function_a3abb9962f50a86eefa33a3d3a06d5e55}\label{classceres_1_1_auto_diff_cost_function_a3abb9962f50a86eefa33a3d3a06d5e55}} 
+\index{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , int k\+Num\+Residuals, int N0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+virtual bool \mbox{\hyperlink{classceres_1_1_auto_diff_cost_function}{ceres\+::\+Auto\+Diff\+Cost\+Function}}$<$ Cost\+Functor, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_cost_function_a9e973858fdbf3a2e5603e848d30e9ddc}{ceres\+::\+Cost\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classceres_1_1_auto_diff_cost_function_a36a5790fb6d9fec105e2d5a9d1dcef7b}\label{classceres_1_1_auto_diff_cost_function_a36a5790fb6d9fec105e2d5a9d1dcef7b}} 
+\index{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!functor\_@{functor\_}}
+\index{functor\_@{functor\_}!ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::AutoDiffCostFunction$<$ CostFunctor, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{functor\_}{functor\_}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , int k\+Num\+Residuals, int N0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+\mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr}{internal\+::scoped\+\_\+ptr}}$<$Cost\+Functor$>$ \mbox{\hyperlink{classceres_1_1_auto_diff_cost_function}{ceres\+::\+Auto\+Diff\+Cost\+Function}}$<$ Cost\+Functor, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::functor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{autodiff__cost__function_8h}{autodiff\+\_\+cost\+\_\+function.\+h}}\end{DoxyCompactItemize}

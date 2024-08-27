@@ -1,0 +1,350 @@
+\hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4}{}\doxysection{Eigen\+::Tensor\+Evaluator$<$ const Tensor\+Scan\+Op$<$ Op, Arg\+Type $>$, Device $>$ Struct Template Reference}
+\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4}\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Scan.\+h$>$}
+
+
+
+Collaboration diagram for Eigen\+::Tensor\+Evaluator$<$ const Tensor\+Scan\+Op$<$ Op, Arg\+Type $>$, Device $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a499e49b218e277cca43f7d65f3676e3c}{Is\+Aligned}} = false, 
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a46f0f39a9aaf879f23d3e81975d38673}{Packet\+Access}} = (internal\+::unpacket\+\_\+traits$<$Packet\+Return\+Type$>$\+::size $>$ 1), 
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48aa3b2ec341385d420b9ee61f8ec68ca0e}{Block\+Access}} = false, 
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a30e3e25f547982f1e40a604f0321caf0}{Layout}} = Tensor\+Evaluator$<$Arg\+Type, Device$>$\+::Layout, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48aef6e5e2b5745575a0d304fe0015228a2}{Coord\+Access}} = false, 
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a5ccfc05f87df56953693f8945af8ca84}{Raw\+Access}} = true
+ \}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a17c7594bcf953f0b96d8958ef314ca6a}{Xpr\+Type}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Xpr\+Type\+::\+Index}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_d_sizes}{D\+Sizes}}$<$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}}, \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a5b13aa31626d5e1462c6e8e807785547}{Num\+Dims}} $>$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1bb8ce7480ec674f2da99072903f4bb1}{Dimensions}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__const}{internal\+::remove\+\_\+const}}$<$ typename \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a4729aae7a2a4bfa4b28c6a3e0cf057bc}{Xpr\+Type\+::\+Scalar}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a4e0daf7e3caee923eb4e0d3a1434e13c}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a13b25e77a08992deabbd320172044e79}{Xpr\+Type\+::\+Coeff\+Return\+Type}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}}$<$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}{Coeff\+Return\+Type}}, Device $>$\+::type \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a2a64da9ddd785a65097d13bdab471ffe}{Packet\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ad07fc351d520f1f0e536b78af45f354c}{Self}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a2ee167468283faaf509984424b79d9bd}{Tensor\+Evaluator}} (const \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a17c7594bcf953f0b96d8958ef314ca6a}{Xpr\+Type}} \&op, const Device \&\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a4d2b94c9bc98b71561446328ec3146ba}{device}})
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1bb8ce7480ec674f2da99072903f4bb1}{Dimensions}} \& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_afa2eb488a11a6fa05a524f7a3d559757}{dimensions}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}} \& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_af7c3ba01ba504f5c75d47001c12f06a0}{stride}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}} \& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aa77c522f9b6179ca3942cf8f391a55f6}{size}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Op \& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a5fd93d13d26fef813b5534e9e03f8d03}{accumulator}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} bool \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a311f52464d604f18f51fda8e481e3b0f}{exclusive}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ Arg\+Type, Device $>$ \& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1ea5e6978c53f485f40f48510e7c04f1}{inner}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Device \& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a4d2b94c9bc98b71561446328ec3146ba}{device}} () const
+\item 
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} bool \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ab8ecc273f2b881402497509e981cc034}{eval\+Sub\+Exprs\+If\+Needed}} (\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a4e0daf7e3caee923eb4e0d3a1434e13c}{Scalar}} $\ast$\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a88c786fe95c4884fb8e800f43356c2b8}{data}})
+\item 
+{\footnotesize template$<$int Load\+Mode$>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a2a64da9ddd785a65097d13bdab471ffe}{Packet\+Return\+Type}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ac24b098dcf4897cae2520d6fae4d2999}{packet}} (\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}} index) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}{Coeff\+Return\+Type}} $\ast$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a88c786fe95c4884fb8e800f43356c2b8}{data}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}{Coeff\+Return\+Type}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0703003e85562fd90000c9d791d18889}{coeff}} (\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}} index) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_afec6afac064f8242daaea8a149574223}{cost\+Per\+Coeff}} (bool) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ac8bc0e2e65872986497524d3c9682912}{cleanup}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a5b13aa31626d5e1462c6e8e807785547}{Num\+Dims}} = \mbox{\hyperlink{struct_eigen_1_1internal_1_1array__size}{internal\+::array\+\_\+size}}$<$typename \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$Arg\+Type, Device$>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1bb8ce7480ec674f2da99072903f4bb1}{Dimensions}}$>$\+::value
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ Arg\+Type, Device $>$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ac53e81273239806e0b836cc0424bb105}{m\+\_\+impl}}
+\item 
+const Device \& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a22b1b8991912c36d52dcec88d58cef84}{m\+\_\+device}}
+\item 
+const bool \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a8ece257ec05ef3b28a1eb2fb41110102}{m\+\_\+exclusive}}
+\item 
+Op \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ae16ffca42f24d624acc27f09831b0d3d}{m\+\_\+accumulator}}
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a56adf08db08cc7fc567e0b970df89506}{m\+\_\+size}}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0e0ba4339405d35ceb2eb54de50e3443}{m\+\_\+stride}}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}{Coeff\+Return\+Type}} $\ast$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ae9d5833b7d3345ed8a00b883416154fc}{m\+\_\+output}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a13b25e77a08992deabbd320172044e79}{Xpr\+Type\+::\+Coeff\+Return\+Type}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1bb8ce7480ec674f2da99072903f4bb1}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1bb8ce7480ec674f2da99072903f4bb1}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!Dimensions@{Dimensions}}
+\index{Dimensions@{Dimensions}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{Dimensions}{Dimensions}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_d_sizes}{D\+Sizes}}$<$\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}}, \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a5b13aa31626d5e1462c6e8e807785547}{Num\+Dims}}$>$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1bb8ce7480ec674f2da99072903f4bb1}{Dimensions}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_abad0ac80094f927d232d462c0e38d67b}{Xpr\+Type\+::\+Index}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a2a64da9ddd785a65097d13bdab471ffe}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a2a64da9ddd785a65097d13bdab471ffe}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!PacketReturnType@{PacketReturnType}}
+\index{PacketReturnType@{PacketReturnType}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{PacketReturnType}{PacketReturnType}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_packet_type}{Packet\+Type}}$<$\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}{Coeff\+Return\+Type}}, Device$>$\+::type \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a2a64da9ddd785a65097d13bdab471ffe}{Packet\+Return\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a4e0daf7e3caee923eb4e0d3a1434e13c}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a4e0daf7e3caee923eb4e0d3a1434e13c}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__const}{internal\+::remove\+\_\+const}}$<$typename \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op_a4729aae7a2a4bfa4b28c6a3e0cf057bc}{Xpr\+Type\+::\+Scalar}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a4e0daf7e3caee923eb4e0d3a1434e13c}{Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ad07fc351d520f1f0e536b78af45f354c}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ad07fc351d520f1f0e536b78af45f354c}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!Self@{Self}}
+\index{Self@{Self}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{Self}{Self}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$Op, Arg\+Type$>$, Device$>$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ad07fc351d520f1f0e536b78af45f354c}{Self}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a17c7594bcf953f0b96d8958ef314ca6a}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a17c7594bcf953f0b96d8958ef314ca6a}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!XprType@{XprType}}
+\index{XprType@{XprType}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{XprType}{XprType}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$Op, Arg\+Type$>$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a17c7594bcf953f0b96d8958ef314ca6a}{Xpr\+Type}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsAligned@{IsAligned}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!IsAligned@{IsAligned}}}\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a499e49b218e277cca43f7d65f3676e3c}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a499e49b218e277cca43f7d65f3676e3c}} 
+Is\+Aligned&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PacketAccess@{PacketAccess}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!PacketAccess@{PacketAccess}}}\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a46f0f39a9aaf879f23d3e81975d38673}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a46f0f39a9aaf879f23d3e81975d38673}} 
+Packet\+Access&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BlockAccess@{BlockAccess}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!BlockAccess@{BlockAccess}}}\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48aa3b2ec341385d420b9ee61f8ec68ca0e}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48aa3b2ec341385d420b9ee61f8ec68ca0e}} 
+Block\+Access&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Layout@{Layout}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!Layout@{Layout}}}\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a30e3e25f547982f1e40a604f0321caf0}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a30e3e25f547982f1e40a604f0321caf0}} 
+Layout&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CoordAccess@{CoordAccess}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!CoordAccess@{CoordAccess}}}\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48aef6e5e2b5745575a0d304fe0015228a2}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48aef6e5e2b5745575a0d304fe0015228a2}} 
+Coord\+Access&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RawAccess@{RawAccess}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!RawAccess@{RawAccess}}}\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a5ccfc05f87df56953693f8945af8ca84}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a3e237bf91ca3c2e5c92230f5d3ec1e48a5ccfc05f87df56953693f8945af8ca84}} 
+Raw\+Access&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a2ee167468283faaf509984424b79d9bd}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a2ee167468283faaf509984424b79d9bd}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!TensorEvaluator@{TensorEvaluator}}
+\index{TensorEvaluator@{TensorEvaluator}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{TensorEvaluator()}{TensorEvaluator()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a17c7594bcf953f0b96d8958ef314ca6a}{Xpr\+Type}} \&}]{op,  }\item[{const Device \&}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a5fd93d13d26fef813b5534e9e03f8d03}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a5fd93d13d26fef813b5534e9e03f8d03}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!accumulator@{accumulator}}
+\index{accumulator@{accumulator}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{accumulator()}{accumulator()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Op\& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::accumulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ac8bc0e2e65872986497524d3c9682912}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ac8bc0e2e65872986497524d3c9682912}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0703003e85562fd90000c9d791d18889}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0703003e85562fd90000c9d791d18889}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}{Coeff\+Return\+Type}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_afec6afac064f8242daaea8a149574223}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_afec6afac064f8242daaea8a149574223}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!costPerCoeff@{costPerCoeff}}
+\index{costPerCoeff@{costPerCoeff}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{costPerCoeff()}{costPerCoeff()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_op_cost}{Tensor\+Op\+Cost}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::cost\+Per\+Coeff (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a88c786fe95c4884fb8e800f43356c2b8}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a88c786fe95c4884fb8e800f43356c2b8}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!data@{data}}
+\index{data@{data}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}{Coeff\+Return\+Type}}$\ast$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a4d2b94c9bc98b71561446328ec3146ba}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a4d2b94c9bc98b71561446328ec3146ba}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!device@{device}}
+\index{device@{device}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{device()}{device()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Device\& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_afa2eb488a11a6fa05a524f7a3d559757}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_afa2eb488a11a6fa05a524f7a3d559757}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{dimensions()}{dimensions()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1bb8ce7480ec674f2da99072903f4bb1}{Dimensions}}\& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ab8ecc273f2b881402497509e981cc034}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ab8ecc273f2b881402497509e981cc034}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!evalSubExprsIfNeeded@{evalSubExprsIfNeeded}}
+\index{evalSubExprsIfNeeded@{evalSubExprsIfNeeded}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{evalSubExprsIfNeeded()}{evalSubExprsIfNeeded()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} bool \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::eval\+Sub\+Exprs\+If\+Needed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a4e0daf7e3caee923eb4e0d3a1434e13c}{Scalar}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a311f52464d604f18f51fda8e481e3b0f}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a311f52464d604f18f51fda8e481e3b0f}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!exclusive@{exclusive}}
+\index{exclusive@{exclusive}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{exclusive()}{exclusive()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} bool \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::exclusive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1ea5e6978c53f485f40f48510e7c04f1}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1ea5e6978c53f485f40f48510e7c04f1}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!inner@{inner}}
+\index{inner@{inner}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{inner()}{inner()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$Arg\+Type, Device$>$\& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::inner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ac24b098dcf4897cae2520d6fae4d2999}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ac24b098dcf4897cae2520d6fae4d2999}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!packet@{packet}}
+\index{packet@{packet}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{packet()}{packet()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+template$<$int Load\+Mode$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a2a64da9ddd785a65097d13bdab471ffe}{Packet\+Return\+Type}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aa77c522f9b6179ca3942cf8f391a55f6}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aa77c522f9b6179ca3942cf8f391a55f6}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!size@{size}}
+\index{size@{size}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}}\& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_af7c3ba01ba504f5c75d47001c12f06a0}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_af7c3ba01ba504f5c75d47001c12f06a0}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!stride@{stride}}
+\index{stride@{stride}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{stride()}{stride()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}}\& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ae16ffca42f24d624acc27f09831b0d3d}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ae16ffca42f24d624acc27f09831b0d3d}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!m\_accumulator@{m\_accumulator}}
+\index{m\_accumulator@{m\_accumulator}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{m\_accumulator}{m\_accumulator}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+Op \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::m\+\_\+accumulator\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a22b1b8991912c36d52dcec88d58cef84}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a22b1b8991912c36d52dcec88d58cef84}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!m\_device@{m\_device}}
+\index{m\_device@{m\_device}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{m\_device}{m\_device}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+const Device\& \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::m\+\_\+device\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a8ece257ec05ef3b28a1eb2fb41110102}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a8ece257ec05ef3b28a1eb2fb41110102}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!m\_exclusive@{m\_exclusive}}
+\index{m\_exclusive@{m\_exclusive}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{m\_exclusive}{m\_exclusive}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+const bool \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::m\+\_\+exclusive\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ac53e81273239806e0b836cc0424bb105}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ac53e81273239806e0b836cc0424bb105}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!m\_impl@{m\_impl}}
+\index{m\_impl@{m\_impl}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{m\_impl}{m\_impl}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$Arg\+Type, Device$>$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::m\+\_\+impl\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ae9d5833b7d3345ed8a00b883416154fc}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_ae9d5833b7d3345ed8a00b883416154fc}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!m\_output@{m\_output}}
+\index{m\_output@{m\_output}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{m\_output}{m\_output}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0bfc2d8fbb176df79c9ae010b5b8fe58}{Coeff\+Return\+Type}}$\ast$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::m\+\_\+output\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a56adf08db08cc7fc567e0b970df89506}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a56adf08db08cc7fc567e0b970df89506}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!m\_size@{m\_size}}
+\index{m\_size@{m\_size}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{m\_size}{m\_size}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+const \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::m\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0e0ba4339405d35ceb2eb54de50e3443}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a0e0ba4339405d35ceb2eb54de50e3443}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!m\_stride@{m\_stride}}
+\index{m\_stride@{m\_stride}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{m\_stride}{m\_stride}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_aea11a717a3f04ad728e0476d86522136}{Index}} \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::m\+\_\+stride\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a5b13aa31626d5e1462c6e8e807785547}\label{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a5b13aa31626d5e1462c6e8e807785547}} 
+\index{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}!NumDims@{NumDims}}
+\index{NumDims@{NumDims}!Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$@{Eigen::TensorEvaluator$<$ const TensorScanOp$<$ Op, ArgType $>$, Device $>$}}
+\doxysubsubsection{\texorpdfstring{NumDims}{NumDims}}
+{\footnotesize\ttfamily template$<$typename Op , typename Arg\+Type , typename Device $>$ \\
+const int \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Eigen\+::\+Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_scan_op}{Tensor\+Scan\+Op}}$<$ Op, Arg\+Type $>$, Device $>$\+::Num\+Dims = \mbox{\hyperlink{struct_eigen_1_1internal_1_1array__size}{internal\+::array\+\_\+size}}$<$typename \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$Arg\+Type, Device$>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_scan_op_3_01_op_00_01_arg_type_01_4_00_01_device_01_4_a1bb8ce7480ec674f2da99072903f4bb1}{Dimensions}}$>$\+::value\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_scan_8h}{Tensor\+Scan.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\hypertarget{_std_list_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Stl\+Support/\+Std\+List.h File Reference}
+\label{_std_list_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/StlSupport/StdList.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/StlSupport/StdList.h}}
+{\ttfamily \#include \char`\"{}details.\+h\char`\"{}}\newline
+Include dependency graph for Std\+List.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{_std_list_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classstd_1_1list_3_01_t_00_01_e_i_g_e_n___a_l_i_g_n_e_d___a_l_l_o_c_a_t_o_r_3_01_t_01_4_01_4}{std\+::list$<$ T, E\+I\+G\+E\+N\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R$<$ T $>$ $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_std_list_8h_a00977ca40f62fb65257e20e85fde455b}{E\+I\+G\+E\+N\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+S\+T\+L\+\_\+\+L\+I\+S\+T\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+A\+T\+I\+ON}}(...)
+\item 
+\#define \mbox{\hyperlink{_std_list_8h_a16418db4c1b7800ad9345ebce661550f}{E\+I\+G\+E\+N\+\_\+\+S\+T\+D\+\_\+\+L\+I\+S\+T\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+B\+O\+DY}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_std_list_8h_a00977ca40f62fb65257e20e85fde455b}\label{_std_list_8h_a00977ca40f62fb65257e20e85fde455b}} 
+\index{StdList.h@{StdList.h}!EIGEN\_DEFINE\_STL\_LIST\_SPECIALIZATION@{EIGEN\_DEFINE\_STL\_LIST\_SPECIALIZATION}}
+\index{EIGEN\_DEFINE\_STL\_LIST\_SPECIALIZATION@{EIGEN\_DEFINE\_STL\_LIST\_SPECIALIZATION}!StdList.h@{StdList.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_DEFINE\_STL\_LIST\_SPECIALIZATION}{EIGEN\_DEFINE\_STL\_LIST\_SPECIALIZATION}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+S\+T\+L\+\_\+\+L\+I\+S\+T\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{namespace }\mbox{\hyperlink{namespacestd}{std}} \(\backslash\)}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{  template<> \(\backslash\)}
+\DoxyCodeLine{  class list<\_\_VA\_ARGS\_\_, std::allocator<\_\_VA\_ARGS\_\_> >           \(\backslash\)}
+\DoxyCodeLine{    : \textcolor{keyword}{public} list<\_\_VA\_ARGS\_\_, EIGEN\_ALIGNED\_ALLOCATOR<\_\_VA\_ARGS\_\_> > \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    typedef list<\_\_VA\_ARGS\_\_, EIGEN\_ALIGNED\_ALLOCATOR<\_\_VA\_ARGS\_\_> > list\_base; \(\backslash\)}
+\DoxyCodeLine{  public: \(\backslash\)}
+\DoxyCodeLine{    typedef \_\_VA\_ARGS\_\_ value\_type; \(\backslash\)}
+\DoxyCodeLine{    typedef list\_base::allocator\_type allocator\_type; \(\backslash\)}
+\DoxyCodeLine{    typedef list\_base::size\_type size\_type;  \(\backslash\)}
+\DoxyCodeLine{    typedef list\_base::iterator iterator;  \(\backslash\)}
+\DoxyCodeLine{    explicit list(\textcolor{keyword}{const} allocator\_type\& a = allocator\_type()) : list\_base(a) \{\}  \(\backslash\)}
+\DoxyCodeLine{    template<typename InputIterator> \(\backslash\)}
+\DoxyCodeLine{    list(InputIterator first, InputIterator last, \textcolor{keyword}{const} allocator\_type\& a = allocator\_type()) : list\_base(first, last, a) \{\} \(\backslash\)}
+\DoxyCodeLine{    list(\textcolor{keyword}{const} list\& c) : list\_base(c) \{\}  \(\backslash\)}
+\DoxyCodeLine{    explicit list(size\_type num, \textcolor{keyword}{const} value\_type\& val = value\_type()) : list\_base(num, val) \{\} \(\backslash\)}
+\DoxyCodeLine{    list(iterator start, iterator end) : list\_base(start, end) \{\}  \(\backslash\)}
+\DoxyCodeLine{    list\& \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a9aeebe0c7a58f909b5981d0992899aca}{operator=}}(\textcolor{keyword}{const} list\& \mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}}) \{  \(\backslash\)}
+\DoxyCodeLine{      list\_base::operator=(\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}});  \(\backslash\)}
+\DoxyCodeLine{      return *\textcolor{keyword}{this};  \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{  \}; \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+This section contains a convenience M\+A\+C\+RO which allows an easy specialization of std\+::list such that for data types with alignment issues the correct allocator is used automatically. \mbox{\Hypertarget{_std_list_8h_a16418db4c1b7800ad9345ebce661550f}\label{_std_list_8h_a16418db4c1b7800ad9345ebce661550f}} 
+\index{StdList.h@{StdList.h}!EIGEN\_STD\_LIST\_SPECIALIZATION\_BODY@{EIGEN\_STD\_LIST\_SPECIALIZATION\_BODY}}
+\index{EIGEN\_STD\_LIST\_SPECIALIZATION\_BODY@{EIGEN\_STD\_LIST\_SPECIALIZATION\_BODY}!StdList.h@{StdList.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STD\_LIST\_SPECIALIZATION\_BODY}{EIGEN\_STD\_LIST\_SPECIALIZATION\_BODY}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+D\+\_\+\+L\+I\+S\+T\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+B\+O\+DY}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{public}:  \(\backslash\)}
+\DoxyCodeLine{    typedef T value\_type; \(\backslash\)}
+\DoxyCodeLine{    typedef \textcolor{keyword}{typename} list\_base::allocator\_type allocator\_type; \(\backslash\)}
+\DoxyCodeLine{    typedef \textcolor{keyword}{typename} list\_base::size\_type size\_type;  \(\backslash\)}
+\DoxyCodeLine{    typedef \textcolor{keyword}{typename} list\_base::iterator iterator;  \(\backslash\)}
+\DoxyCodeLine{    typedef \textcolor{keyword}{typename} list\_base::const\_iterator const\_iterator;  \(\backslash\)}
+\DoxyCodeLine{    explicit list(\textcolor{keyword}{const} allocator\_type\& a = allocator\_type()) : list\_base(a) \{\}  \(\backslash\)}
+\DoxyCodeLine{    template<typename InputIterator> \(\backslash\)}
+\DoxyCodeLine{    list(InputIterator first, InputIterator last, \textcolor{keyword}{const} allocator\_type\& a = allocator\_type()) \(\backslash\)}
+\DoxyCodeLine{    : list\_base(first, last, a) \{\} \(\backslash\)}
+\DoxyCodeLine{    list(\textcolor{keyword}{const} list\& c) : list\_base(c) \{\}  \(\backslash\)}
+\DoxyCodeLine{    explicit list(size\_type num, \textcolor{keyword}{const} value\_type\& val = value\_type()) : list\_base(num, val) \{\} \(\backslash\)}
+\DoxyCodeLine{    list(iterator start, iterator end) : list\_base(start, end) \{\}  \(\backslash\)}
+\DoxyCodeLine{    list\& \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a9aeebe0c7a58f909b5981d0992899aca}{operator=}}(\textcolor{keyword}{const} list\& \mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}}) \{  \(\backslash\)}
+\DoxyCodeLine{    list\_base::operator=(\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}});  \(\backslash\)}
+\DoxyCodeLine{    return *\textcolor{keyword}{this}; \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}

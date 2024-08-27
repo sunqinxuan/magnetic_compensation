@@ -1,0 +1,56 @@
+\hypertarget{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e}{}\doxysection{Eigen\+::internal\+::triangular\+\_\+solver\+\_\+unroller$<$ Lhs, Rhs, Mode, Loop\+Index, Size, false $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e}\index{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$@{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$}}
+
+
+{\ttfamily \#include $<$Solve\+Triangular.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48ab938c05e4adb2442679a65942a42c011}{Is\+Lower}} = ((Mode\&Lower)==Lower), 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48a41983e47c8c4e2368ab0a56f0282c1d5}{Diag\+Index}} = Is\+Lower ? Loop\+Index \+: Size -\/ Loop\+Index -\/ 1, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48a36f4e8238fcf652017a3f3a62717e14b}{Start\+Index}} = Is\+Lower ? 0 \+: Diag\+Index+1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_a01b18f6c3a53d6b6f11763d3618b83c0}{run}} (const \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}} \&lhs, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48}\label{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Mode, int Loop\+Index, int Size$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsLower@{IsLower}!Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$@{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$}}\index{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$@{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$}!IsLower@{IsLower}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48ab938c05e4adb2442679a65942a42c011}\label{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48ab938c05e4adb2442679a65942a42c011}} 
+Is\+Lower&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DiagIndex@{DiagIndex}!Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$@{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$}}\index{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$@{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$}!DiagIndex@{DiagIndex}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48a41983e47c8c4e2368ab0a56f0282c1d5}\label{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48a41983e47c8c4e2368ab0a56f0282c1d5}} 
+Diag\+Index&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StartIndex@{StartIndex}!Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$@{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$}}\index{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$@{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$}!StartIndex@{StartIndex}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48a36f4e8238fcf652017a3f3a62717e14b}\label{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_ae064c04b6c9f86edfa0b2bfad8f56b48a36f4e8238fcf652017a3f3a62717e14b}} 
+Start\+Index&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_a01b18f6c3a53d6b6f11763d3618b83c0}\label{struct_eigen_1_1internal_1_1triangular__solver__unroller_3_01_lhs_00_01_rhs_00_01_mode_00_01_looefec01585c67928d42a9958d8c8f161e_a01b18f6c3a53d6b6f11763d3618b83c0}} 
+\index{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$@{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$}!run@{run}}
+\index{run@{run}!Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$@{Eigen::internal::triangular\_solver\_unroller$<$ Lhs, Rhs, Mode, LoopIndex, Size, false $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Mode, int Loop\+Index, int Size$>$ \\
+static void \mbox{\hyperlink{struct_eigen_1_1internal_1_1triangular__solver__unroller}{Eigen\+::internal\+::triangular\+\_\+solver\+\_\+unroller}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}, Mode, Loop\+Index, Size, \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}} $>$\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}} \&}]{lhs,  }\item[{\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_solve_triangular_8h}{Solve\+Triangular.\+h}}\end{DoxyCompactItemize}

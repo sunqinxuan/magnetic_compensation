@@ -1,0 +1,96 @@
+\hypertarget{class_eigen_1_1_identity_preconditioner}{}\doxysection{Eigen\+::Identity\+Preconditioner Class Reference}
+\label{class_eigen_1_1_identity_preconditioner}\index{Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}}
+
+
+A naive preconditioner which approximates any matrix as the identity matrix.  
+
+
+
+
+{\ttfamily \#include $<$Basic\+Preconditioners.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_identity_preconditioner_ae9336b170f2763da0fb9a73e6f6d40bb}{Identity\+Preconditioner}} ()
+\item 
+{\footnotesize template$<$typename Matrix\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_identity_preconditioner_a5fb381c622f38f3b8deb0775867cdf5f}{Identity\+Preconditioner}} (const Matrix\+Type \&)
+\item 
+{\footnotesize template$<$typename Matrix\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_identity_preconditioner}{Identity\+Preconditioner}} \& \mbox{\hyperlink{class_eigen_1_1_identity_preconditioner_a87036e0a457777e2c3df4c103b4f8233}{analyze\+Pattern}} (const Matrix\+Type \&)
+\item 
+{\footnotesize template$<$typename Matrix\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_identity_preconditioner}{Identity\+Preconditioner}} \& \mbox{\hyperlink{class_eigen_1_1_identity_preconditioner_a0d0c662f8811acabd6b69cfda901965f}{factorize}} (const Matrix\+Type \&)
+\item 
+{\footnotesize template$<$typename Matrix\+Type $>$ }\\\mbox{\hyperlink{class_eigen_1_1_identity_preconditioner}{Identity\+Preconditioner}} \& \mbox{\hyperlink{class_eigen_1_1_identity_preconditioner_af3c2afdd74084ffa2ae9174df0316695}{compute}} (const Matrix\+Type \&)
+\item 
+{\footnotesize template$<$typename Rhs $>$ }\\const Rhs \& \mbox{\hyperlink{class_eigen_1_1_identity_preconditioner_ade0afcd74021b444a488327d6dd0a07f}{solve}} (const Rhs \&b) const
+\item 
+\mbox{\hyperlink{group__enums_ga85fad7b87587764e5cf6b513a9e0ee5e}{Computation\+Info}} \mbox{\hyperlink{class_eigen_1_1_identity_preconditioner_a450681df926cb312fc71a324e150340c}{info}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A naive preconditioner which approximates any matrix as the identity matrix. 
+
+\textbackslash{}implsparsesolverconcept
+
+\begin{DoxySeeAlso}{See also}
+class \mbox{\hyperlink{class_eigen_1_1_diagonal_preconditioner}{Diagonal\+Preconditioner}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_identity_preconditioner_ae9336b170f2763da0fb9a73e6f6d40bb}\label{class_eigen_1_1_identity_preconditioner_ae9336b170f2763da0fb9a73e6f6d40bb}} 
+\index{Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}!IdentityPreconditioner@{IdentityPreconditioner}}
+\index{IdentityPreconditioner@{IdentityPreconditioner}!Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}}
+\doxysubsubsection{\texorpdfstring{IdentityPreconditioner()}{IdentityPreconditioner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Identity\+Preconditioner\+::\+Identity\+Preconditioner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_identity_preconditioner_a5fb381c622f38f3b8deb0775867cdf5f}\label{class_eigen_1_1_identity_preconditioner_a5fb381c622f38f3b8deb0775867cdf5f}} 
+\index{Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}!IdentityPreconditioner@{IdentityPreconditioner}}
+\index{IdentityPreconditioner@{IdentityPreconditioner}!Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}}
+\doxysubsubsection{\texorpdfstring{IdentityPreconditioner()}{IdentityPreconditioner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+Eigen\+::\+Identity\+Preconditioner\+::\+Identity\+Preconditioner (\begin{DoxyParamCaption}\item[{const Matrix\+Type \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_identity_preconditioner_a87036e0a457777e2c3df4c103b4f8233}\label{class_eigen_1_1_identity_preconditioner_a87036e0a457777e2c3df4c103b4f8233}} 
+\index{Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}!analyzePattern@{analyzePattern}}
+\index{analyzePattern@{analyzePattern}!Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}}
+\doxysubsubsection{\texorpdfstring{analyzePattern()}{analyzePattern()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_identity_preconditioner}{Identity\+Preconditioner}}\& Eigen\+::\+Identity\+Preconditioner\+::analyze\+Pattern (\begin{DoxyParamCaption}\item[{const Matrix\+Type \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_identity_preconditioner_af3c2afdd74084ffa2ae9174df0316695}\label{class_eigen_1_1_identity_preconditioner_af3c2afdd74084ffa2ae9174df0316695}} 
+\index{Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}!compute@{compute}}
+\index{compute@{compute}!Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_identity_preconditioner}{Identity\+Preconditioner}}\& Eigen\+::\+Identity\+Preconditioner\+::compute (\begin{DoxyParamCaption}\item[{const Matrix\+Type \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_identity_preconditioner_a0d0c662f8811acabd6b69cfda901965f}\label{class_eigen_1_1_identity_preconditioner_a0d0c662f8811acabd6b69cfda901965f}} 
+\index{Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}!factorize@{factorize}}
+\index{factorize@{factorize}!Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}}
+\doxysubsubsection{\texorpdfstring{factorize()}{factorize()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_identity_preconditioner}{Identity\+Preconditioner}}\& Eigen\+::\+Identity\+Preconditioner\+::factorize (\begin{DoxyParamCaption}\item[{const Matrix\+Type \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_identity_preconditioner_a450681df926cb312fc71a324e150340c}\label{class_eigen_1_1_identity_preconditioner_a450681df926cb312fc71a324e150340c}} 
+\index{Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}!info@{info}}
+\index{info@{info}!Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__enums_ga85fad7b87587764e5cf6b513a9e0ee5e}{Computation\+Info}} Eigen\+::\+Identity\+Preconditioner\+::info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_identity_preconditioner_ade0afcd74021b444a488327d6dd0a07f}\label{class_eigen_1_1_identity_preconditioner_ade0afcd74021b444a488327d6dd0a07f}} 
+\index{Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}!solve@{solve}}
+\index{solve@{solve}!Eigen::IdentityPreconditioner@{Eigen::IdentityPreconditioner}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily template$<$typename Rhs $>$ \\
+const Rhs\& Eigen\+::\+Identity\+Preconditioner\+::solve (\begin{DoxyParamCaption}\item[{const Rhs \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Iterative\+Linear\+Solvers/\mbox{\hyperlink{_basic_preconditioners_8h}{Basic\+Preconditioners.\+h}}\end{DoxyCompactItemize}

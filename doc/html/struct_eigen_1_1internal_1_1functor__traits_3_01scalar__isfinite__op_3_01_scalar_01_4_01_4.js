@@ -1,0 +1,5 @@
+var struct_eigen_1_1internal_1_1functor__traits_3_01scalar__isfinite__op_3_01_scalar_01_4_01_4 =
+[
+    [ "Cost", "struct_eigen_1_1internal_1_1functor__traits_3_01scalar__isfinite__op_3_01_scalar_01_4_01_4.html#a0812c7d69e934969ffabcd2ba8f69223a1578abafd8bafa962b1d7bb5b4b67337", null ],
+    [ "PacketAccess", "struct_eigen_1_1internal_1_1functor__traits_3_01scalar__isfinite__op_3_01_scalar_01_4_01_4.html#a0812c7d69e934969ffabcd2ba8f69223a3321fc7de7eb5533fc3dd54bdf94b505", null ]
+];

@@ -1,0 +1,190 @@
+\hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4}{}\doxysection{Eigen\+::Inverse\+Impl$<$ Permutation\+Type, Permutation\+Storage $>$ Class Template Reference}
+\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4}\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+
+
+{\ttfamily \#include $<$Permutation\+Matrix.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Inverse\+Impl$<$ Permutation\+Type, Permutation\+Storage $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Inverse\+Impl$<$ Permutation\+Type, Permutation\+Storage $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6ea20cd2beb7541b0a6f892dc1e06dc5430}{Rows\+At\+Compile\+Time}} = Perm\+Traits\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6ea20622f17223d1de3913c018d113dba28}{Cols\+At\+Compile\+Time}} = Perm\+Traits\+::Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6eaeac254b8223a2b6ede065f8cd5757857}{Max\+Rows\+At\+Compile\+Time}} = Perm\+Traits\+::Max\+Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6ea640acb4c42380e96b4f8232a44d4ced8}{Max\+Cols\+At\+Compile\+Time}} = Perm\+Traits\+::Max\+Cols\+At\+Compile\+Time
+ \}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_inverse}{Inverse}}$<$ Permutation\+Type $>$ \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9c2e8fec08e169e88e01c37cbc1ea69f}{Inverse\+Type}}
+\item 
+typedef Permutation\+Type\+::\+Dense\+Matrix\+Type \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a8596960618ffe5e72f897d0a53b35b21}{Dense\+Matrix\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Dense\+Derived $>$ }\\void \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a15b46084ae2bff6f2ee7f257ed15352f}{eval\+To}} (\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Dense\+Derived $>$ \&other) const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_acc9ba3ddfbc070e429319d0963ef87e5}{Plain\+Permutation\+Type}} \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9048319f60dc98831ddfd25a5f7d69a7}{eval}} () const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a8596960618ffe5e72f897d0a53b35b21}{Dense\+Matrix\+Type}} \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a17d9216ffff2de32c56b6ff82a3c2a9d}{to\+Dense\+Matrix}} () const
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\const \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$ \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9c2e8fec08e169e88e01c37cbc1ea69f}{Inverse\+Type}}, Other\+Derived, \mbox{\hyperlink{namespace_eigen_a15a3e26ba06f3c60d2f2e46f56045f27ab4d020163beae2ddb3ca6cdd296136bf}{Alias\+Free\+Product}} $>$ \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_abf863c3bf5bde58cead077f335bfff3a}{operator$\ast$}} (const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Other\+Derived $>$ \&matrix) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a4e4e291e8f5d7a2dff102102658edcf8}{Inverse\+Impl}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Permutation\+Type\+::\+Plain\+Permutation\+Type \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_acc9ba3ddfbc070e429319d0963ef87e5}{Plain\+Permutation\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ Permutation\+Type $>$ \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_aa8c2f57790e5b20f169c2dbf9465bbd0}{Perm\+Traits}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\const friend \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$ Other\+Derived, \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9c2e8fec08e169e88e01c37cbc1ea69f}{Inverse\+Type}}, \mbox{\hyperlink{namespace_eigen_a15a3e26ba06f3c60d2f2e46f56045f27ab4d020163beae2ddb3ca6cdd296136bf}{Alias\+Free\+Product}} $>$ \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ac5d8a683c3e6f7b9a02e67947c932593}{operator$\ast$}} (const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Other\+Derived $>$ \&matrix, const \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9c2e8fec08e169e88e01c37cbc1ea69f}{Inverse\+Type}} \&tr\+Perm)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a8596960618ffe5e72f897d0a53b35b21}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a8596960618ffe5e72f897d0a53b35b21}} 
+\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!DenseMatrixType@{DenseMatrixType}}
+\index{DenseMatrixType@{DenseMatrixType}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+\doxysubsubsection{\texorpdfstring{DenseMatrixType}{DenseMatrixType}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+typedef Permutation\+Type\+::\+Dense\+Matrix\+Type \mbox{\hyperlink{class_eigen_1_1_inverse_impl}{Eigen\+::\+Inverse\+Impl}}$<$ Permutation\+Type, \mbox{\hyperlink{struct_eigen_1_1_permutation_storage}{Permutation\+Storage}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a8596960618ffe5e72f897d0a53b35b21}{Dense\+Matrix\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9c2e8fec08e169e88e01c37cbc1ea69f}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9c2e8fec08e169e88e01c37cbc1ea69f}} 
+\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!InverseType@{InverseType}}
+\index{InverseType@{InverseType}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+\doxysubsubsection{\texorpdfstring{InverseType}{InverseType}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_inverse}{Inverse}}$<$Permutation\+Type$>$ \mbox{\hyperlink{class_eigen_1_1_inverse_impl}{Eigen\+::\+Inverse\+Impl}}$<$ Permutation\+Type, \mbox{\hyperlink{struct_eigen_1_1_permutation_storage}{Permutation\+Storage}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9c2e8fec08e169e88e01c37cbc1ea69f}{Inverse\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_aa8c2f57790e5b20f169c2dbf9465bbd0}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_aa8c2f57790e5b20f169c2dbf9465bbd0}} 
+\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!PermTraits@{PermTraits}}
+\index{PermTraits@{PermTraits}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+\doxysubsubsection{\texorpdfstring{PermTraits}{PermTraits}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$Permutation\+Type$>$ \mbox{\hyperlink{class_eigen_1_1_inverse_impl}{Eigen\+::\+Inverse\+Impl}}$<$ Permutation\+Type, \mbox{\hyperlink{struct_eigen_1_1_permutation_storage}{Permutation\+Storage}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_aa8c2f57790e5b20f169c2dbf9465bbd0}{Perm\+Traits}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_acc9ba3ddfbc070e429319d0963ef87e5}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_acc9ba3ddfbc070e429319d0963ef87e5}} 
+\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!PlainPermutationType@{PlainPermutationType}}
+\index{PlainPermutationType@{PlainPermutationType}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+\doxysubsubsection{\texorpdfstring{PlainPermutationType}{PlainPermutationType}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+typedef Permutation\+Type\+::\+Plain\+Permutation\+Type \mbox{\hyperlink{class_eigen_1_1_inverse_impl}{Eigen\+::\+Inverse\+Impl}}$<$ Permutation\+Type, \mbox{\hyperlink{struct_eigen_1_1_permutation_storage}{Permutation\+Storage}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_acc9ba3ddfbc070e429319d0963ef87e5}{Plain\+Permutation\+Type}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6e}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6e}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6ea20cd2beb7541b0a6f892dc1e06dc5430}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6ea20cd2beb7541b0a6f892dc1e06dc5430}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6ea20622f17223d1de3913c018d113dba28}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6ea20622f17223d1de3913c018d113dba28}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6eaeac254b8223a2b6ede065f8cd5757857}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6eaeac254b8223a2b6ede065f8cd5757857}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6ea640acb4c42380e96b4f8232a44d4ced8}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ab274cded463b0055c12ef65a01cd8b6ea640acb4c42380e96b4f8232a44d4ced8}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a4e4e291e8f5d7a2dff102102658edcf8}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a4e4e291e8f5d7a2dff102102658edcf8}} 
+\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!InverseImpl@{InverseImpl}}
+\index{InverseImpl@{InverseImpl}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+\doxysubsubsection{\texorpdfstring{InverseImpl()}{InverseImpl()}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_inverse_impl}{Eigen\+::\+Inverse\+Impl}}$<$ Permutation\+Type, \mbox{\hyperlink{struct_eigen_1_1_permutation_storage}{Permutation\+Storage}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_impl}{Inverse\+Impl}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9048319f60dc98831ddfd25a5f7d69a7}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9048319f60dc98831ddfd25a5f7d69a7}} 
+\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!eval@{eval}}
+\index{eval@{eval}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_acc9ba3ddfbc070e429319d0963ef87e5}{Plain\+Permutation\+Type}} \mbox{\hyperlink{class_eigen_1_1_inverse_impl}{Eigen\+::\+Inverse\+Impl}}$<$ Permutation\+Type, \mbox{\hyperlink{struct_eigen_1_1_permutation_storage}{Permutation\+Storage}} $>$\+::eval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the equivalent permutation matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a15b46084ae2bff6f2ee7f257ed15352f}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a15b46084ae2bff6f2ee7f257ed15352f}} 
+\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!evalTo@{evalTo}}
+\index{evalTo@{evalTo}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+\doxysubsubsection{\texorpdfstring{evalTo()}{evalTo()}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+template$<$typename Dense\+Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_inverse_impl}{Eigen\+::\+Inverse\+Impl}}$<$ Permutation\+Type, \mbox{\hyperlink{struct_eigen_1_1_permutation_storage}{Permutation\+Storage}} $>$\+::eval\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Dense\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_abf863c3bf5bde58cead077f335bfff3a}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_abf863c3bf5bde58cead077f335bfff3a}} 
+\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+template$<$typename Other\+Derived $>$ \\
+const \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9c2e8fec08e169e88e01c37cbc1ea69f}{Inverse\+Type}}, Other\+Derived, \mbox{\hyperlink{namespace_eigen_a15a3e26ba06f3c60d2f2e46f56045f27ab4d020163beae2ddb3ca6cdd296136bf}{Alias\+Free\+Product}}$>$ \mbox{\hyperlink{class_eigen_1_1_inverse_impl}{Eigen\+::\+Inverse\+Impl}}$<$ Permutation\+Type, \mbox{\hyperlink{struct_eigen_1_1_permutation_storage}{Permutation\+Storage}} $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Other\+Derived $>$ \&}]{matrix }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the matrix with the inverse permutation applied to the rows. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a17d9216ffff2de32c56b6ff82a3c2a9d}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a17d9216ffff2de32c56b6ff82a3c2a9d}} 
+\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!toDenseMatrix@{toDenseMatrix}}
+\index{toDenseMatrix@{toDenseMatrix}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+\doxysubsubsection{\texorpdfstring{toDenseMatrix()}{toDenseMatrix()}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a8596960618ffe5e72f897d0a53b35b21}{Dense\+Matrix\+Type}} \mbox{\hyperlink{class_eigen_1_1_inverse_impl}{Eigen\+::\+Inverse\+Impl}}$<$ Permutation\+Type, \mbox{\hyperlink{struct_eigen_1_1_permutation_storage}{Permutation\+Storage}} $>$\+::to\+Dense\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ac5d8a683c3e6f7b9a02e67947c932593}\label{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_ac5d8a683c3e6f7b9a02e67947c932593}} 
+\index{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$@{Eigen::InverseImpl$<$ PermutationType, PermutationStorage $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}}
+{\footnotesize\ttfamily template$<$typename Permutation\+Type $>$ \\
+template$<$typename Other\+Derived $>$ \\
+const friend \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$Other\+Derived, \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9c2e8fec08e169e88e01c37cbc1ea69f}{Inverse\+Type}}, \mbox{\hyperlink{namespace_eigen_a15a3e26ba06f3c60d2f2e46f56045f27ab4d020163beae2ddb3ca6cdd296136bf}{Alias\+Free\+Product}}$>$ operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Other\+Derived $>$ \&}]{matrix,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_inverse_impl_3_01_permutation_type_00_01_permutation_storage_01_4_a9c2e8fec08e169e88e01c37cbc1ea69f}{Inverse\+Type}} \&}]{tr\+Perm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyReturn}{Returns}
+the matrix with the inverse permutation applied to the columns. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_permutation_matrix_8h}{Permutation\+Matrix.\+h}}\end{DoxyCompactItemize}

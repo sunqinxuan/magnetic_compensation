@@ -1,0 +1,390 @@
+\hypertarget{_z_vector_2_packet_math_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Core/arch/\+Z\+Vector/\+Packet\+Math.h File Reference}
+\label{_z_vector_2_packet_math_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/Core/arch/ZVector/PacketMath.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/Core/arch/ZVector/PacketMath.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for Packet\+Math.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{_z_vector_2_packet_math_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1_packet4f}{Eigen\+::internal\+::\+Packet4f}}
+\item 
+union \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Eigen\+::internal\+::\+Packet}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits_3_01int_01_4}{Eigen\+::internal\+::packet\+\_\+traits$<$ int $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits_3_01float_01_4}{Eigen\+::internal\+::packet\+\_\+traits$<$ float $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits_3_01double_01_4}{Eigen\+::internal\+::packet\+\_\+traits$<$ double $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1unpacket__traits_3_01_packet4i_01_4}{Eigen\+::internal\+::unpacket\+\_\+traits$<$ Packet4i $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1unpacket__traits_3_01_packet4f_01_4}{Eigen\+::internal\+::unpacket\+\_\+traits$<$ Packet4f $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1unpacket__traits_3_01_packet2d_01_4}{Eigen\+::internal\+::unpacket\+\_\+traits$<$ Packet2d $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1palign__impl_3_01_offset_00_01_packet4i_01_4}{Eigen\+::internal\+::palign\+\_\+impl$<$ Offset, Packet4i $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1palign__impl_3_01_offset_00_01_packet4f_01_4}{Eigen\+::internal\+::palign\+\_\+impl$<$ Offset, Packet4f $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1palign__impl_3_01_offset_00_01_packet2d_01_4}{Eigen\+::internal\+::palign\+\_\+impl$<$ Offset, Packet2d $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1internal}{Eigen\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_ae36b255e934bcfd689e729d9e5ae98c5}{E\+I\+G\+E\+N\+\_\+\+C\+A\+C\+H\+E\+F\+R\+I\+E\+N\+D\+L\+Y\+\_\+\+P\+R\+O\+D\+U\+C\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}~4
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_a958e62a55f74a3ad89990843cda02d5e}{E\+I\+G\+E\+N\+\_\+\+H\+A\+S\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+\+M\+A\+DD}}
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_a2d1b45cf53ccec3f00c693c9740a34e6}{E\+I\+G\+E\+N\+\_\+\+H\+A\+S\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+\+C\+J\+M\+A\+DD}}
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_a97d0981515c4e49cdf6bd537d80d0e7f}{E\+I\+G\+E\+N\+\_\+\+A\+R\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+R\+E\+G\+I\+S\+T\+E\+RS}}~16
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_ac0f6308d1c3c0f4ed6b9ba3e845b7157}{\+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+F\+A\+S\+T\+\_\+\+Packet4i}}(N\+A\+ME,  X)~Packet4i p4i\+\_\+\#\#N\+A\+ME = reinterpret\+\_\+cast$<$Packet4i$>$(vec\+\_\+splat\+\_\+s32(X))
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_aa3355743f2129da0052f53c45884b30b}{\+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+F\+A\+S\+T\+\_\+\+Packet2d}}(N\+A\+ME,  X)~Packet2d p2d\+\_\+\#\#N\+A\+ME = reinterpret\+\_\+cast$<$Packet2d$>$(vec\+\_\+splat\+\_\+s64(X))
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_a7fdc727e46748e5ec67de1fce78bf293}{\+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+F\+A\+S\+T\+\_\+\+Packet2l}}(N\+A\+ME,  X)~Packet2l p2l\+\_\+\#\#N\+A\+ME = reinterpret\+\_\+cast$<$Packet2l$>$(vec\+\_\+splat\+\_\+s64(X))
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_a36426dcd60c8a41f43ead903d4935c9c}{\+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+Packet4i}}(N\+A\+ME,  X)~Packet4i p4i\+\_\+\#\#N\+A\+ME = pset1$<$Packet4i$>$(X)
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_a0f48c518e762640a6064167fe5b40949}{\+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+Packet2d}}(N\+A\+ME,  X)~Packet2d p2d\+\_\+\#\#N\+A\+ME = pset1$<$Packet2d$>$(X)
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_a2b6243221a745a8490a9c0ed953778ff}{\+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+Packet2l}}(N\+A\+ME,  X)~Packet2l p2l\+\_\+\#\#N\+A\+ME = pset1$<$Packet2l$>$(X)
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_a2f8f9c22c64a423ff251b67ff4c25f2e}{\+\_\+\+E\+I\+G\+E\+N\+\_\+\+M\+A\+S\+K\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}}~0xfffffffffffffff0
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_a500fe3c43980e6c7dc5c8c22fbb6281c}{\+\_\+\+E\+I\+G\+E\+N\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+P\+TR}}(x)~((std\+::ptrdiff\+\_\+t)(x) \& \mbox{\hyperlink{_z_vector_2_packet_math_8h_a2f8f9c22c64a423ff251b67ff4c25f2e}{\+\_\+\+E\+I\+G\+E\+N\+\_\+\+M\+A\+S\+K\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}})
+\item 
+\#define \mbox{\hyperlink{_z_vector_2_packet_math_8h_af180c9f89f97ac3309af05b73f7174b2}{E\+I\+G\+E\+N\+\_\+\+Z\+V\+E\+C\+T\+O\+R\+\_\+\+P\+R\+E\+F\+E\+T\+CH}}(A\+D\+DR)~asm( \char`\"{}   pfd \mbox{[}\%\mbox{[}addr\mbox{]}\mbox{]}\textbackslash{}n\char`\"{} \+:: \mbox{[}addr\mbox{]} \char`\"{}r\char`\"{} (A\+D\+DR) \+: \char`\"{}cc\char`\"{} );
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+\_\+\+\_\+vector unsigned long long \mbox{\hyperlink{namespace_eigen_1_1internal_af83dae7998b670a04db19e156e4258cb}{Eigen\+::internal\+::\+Packet2ul}}
+\item 
+typedef \+\_\+\+\_\+vector long long \mbox{\hyperlink{namespace_eigen_1_1internal_a09f246eaec5d186fa8217682db8d3cdd}{Eigen\+::internal\+::\+Packet2l}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{namespace_eigen_1_1internal_afbdf533875143a3098fc4e9f09ffabde}{Eigen\+::internal\+::ptranspose}} (Packet\+Block$<$ Packet4f, 4 $>$ \&kernel)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace_eigen_1_1internal_a0d0a3677eb761c7d67b3e233c6579fae}{Eigen\+::internal\+::operator$<$$<$}} (std\+::ostream \&s, const Packet4i \&v)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace_eigen_1_1internal_aa6202cd36045cfe9df10d714518c698e}{Eigen\+::internal\+::operator$<$$<$}} (std\+::ostream \&s, const Packet4ui \&v)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace_eigen_1_1internal_a53b387ca1108e588740ae260f135e92a}{Eigen\+::internal\+::operator$<$$<$}} (std\+::ostream \&s, const Packet2l \&v)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace_eigen_1_1internal_ad669a8d39acb42a9263fc671a05c1928}{Eigen\+::internal\+::operator$<$$<$}} (std\+::ostream \&s, const Packet2ul \&v)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace_eigen_1_1internal_ae64e06efdf49fafd6f4c039515d32e90}{Eigen\+::internal\+::operator$<$$<$}} (std\+::ostream \&s, const Packet2d \&v)
+\item 
+{\footnotesize template$<$int element$>$ }\\\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a086cd55d3b92f1ad1b99cd3dc50bb7ec}{Eigen\+::internal\+::vec\+\_\+splat\+\_\+packet4f}} (const Packet4f \&from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_ae1c0b08faef0da90bb6fa78856bcf726}{Eigen\+::internal\+::pload$<$ Packet4i $>$}} (const int $\ast$from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a63e92b056e3378b0853f510fdb6757b2}{Eigen\+::internal\+::pload$<$ Packet4f $>$}} (const float $\ast$from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a7b7d0a2fe1cb5ad90c8a7c8b61c5671a}{Eigen\+::internal\+::pload$<$ Packet2d $>$}} (const double $\ast$from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_a69543ee212c1a509337b1146984e5acc}{Eigen\+::internal\+::pstore$<$ int $>$}} (int $\ast$to, const Packet4i \&from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_a9ee8e4444b597c94c387d0c22c85adb3}{Eigen\+::internal\+::pstore$<$ float $>$}} (float $\ast$to, const Packet4f \&from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_a816c2c3a7c2e85df5e58fe5a794a1fc8}{Eigen\+::internal\+::pstore$<$ double $>$}} (double $\ast$to, const Packet2d \&from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a2531efc4e18dcd18aa6c28ea26b5fd4c}{Eigen\+::internal\+::pset1$<$ Packet4i $>$}} (const int \&from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a6024368181b050eb03ef7eea98f084ea}{Eigen\+::internal\+::pset1$<$ Packet2d $>$}} (const double \&from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a923941269228f9ceaf233636da958609}{Eigen\+::internal\+::pset1$<$ Packet4f $>$}} (const float \&from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_afd48b2326a98fc69541aebbc7b916e40}{Eigen\+::internal\+::pbroadcast4$<$ Packet4i $>$}} (const int $\ast$a, Packet4i \&a0, Packet4i \&a1, Packet4i \&a2, Packet4i \&a3)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_adb4795938f0301e168c416c4b53ea7ea}{Eigen\+::internal\+::pbroadcast4$<$ Packet4f $>$}} (const float $\ast$a, Packet4f \&a0, Packet4f \&a1, Packet4f \&a2, Packet4f \&a3)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_aa7c05c9c964fec8b1867c3ec9cb64806}{Eigen\+::internal\+::pbroadcast4$<$ Packet2d $>$}} (const double $\ast$a, Packet2d \&a0, Packet2d \&a1, Packet2d \&a2, Packet2d \&a3)
+\item 
+template$<$$>$ E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_ad1b61241ebacb0d1436b87089571eb33}{Eigen\+::internal\+::pgather$<$ int, Packet4i $>$}} (const int $\ast$from, Index stride)
+\item 
+template$<$$>$ E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a5edf629e883e10447347e830b8c9f06f}{Eigen\+::internal\+::pgather$<$ float, Packet4f $>$}} (const float $\ast$from, Index stride)
+\item 
+template$<$$>$ E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_ad5638aebcd54734e0ff846c96cf56224}{Eigen\+::internal\+::pgather$<$ double, Packet2d $>$}} (const double $\ast$from, Index stride)
+\item 
+template$<$$>$ E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{namespace_eigen_1_1internal_a4f1976274be8765e8b890106c1f0edba}{Eigen\+::internal\+::pscatter$<$ int, Packet4i $>$}} (int $\ast$to, const Packet4i \&from, Index stride)
+\item 
+template$<$$>$ E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{namespace_eigen_1_1internal_a98f3ee4a4735562e01d8054546b4352d}{Eigen\+::internal\+::pscatter$<$ float, Packet4f $>$}} (float $\ast$to, const Packet4f \&from, Index stride)
+\item 
+template$<$$>$ E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{namespace_eigen_1_1internal_a89d81798ac59258f60784b5900b350cf}{Eigen\+::internal\+::pscatter$<$ double, Packet2d $>$}} (double $\ast$to, const Packet2d \&from, Index stride)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a722391996fdea3f6d4b7b6b10b057b5a}{Eigen\+::internal\+::padd$<$ Packet4i $>$}} (const Packet4i \&a, const Packet4i \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a1b00ef4c11d9b491edfbee232e5bea00}{Eigen\+::internal\+::padd$<$ Packet4f $>$}} (const Packet4f \&a, const Packet4f \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a130a074afefb80e3e5a21127e1fa9a2c}{Eigen\+::internal\+::padd$<$ Packet2d $>$}} (const Packet2d \&a, const Packet2d \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a9694e7fa41c9bf4998fb8f4a5ea0da53}{Eigen\+::internal\+::psub$<$ Packet4i $>$}} (const Packet4i \&a, const Packet4i \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_ae2c3800ca35b419558f193185ca79a35}{Eigen\+::internal\+::psub$<$ Packet4f $>$}} (const Packet4f \&a, const Packet4f \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_ae29e411b8fe47ba97cda746ebf5745d9}{Eigen\+::internal\+::psub$<$ Packet2d $>$}} (const Packet2d \&a, const Packet2d \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_ac857e3cd556f2e2f05896b08cf703569}{Eigen\+::internal\+::pmul$<$ Packet4i $>$}} (const Packet4i \&a, const Packet4i \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a5828d050de45a585645f9a959b52a10c}{Eigen\+::internal\+::pmul$<$ Packet4f $>$}} (const Packet4f \&a, const Packet4f \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a7ddaaf72ad6b225759980160fdb93eb1}{Eigen\+::internal\+::pmul$<$ Packet2d $>$}} (const Packet2d \&a, const Packet2d \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_adaa877d95a0fab271f252265677f2459}{Eigen\+::internal\+::pdiv$<$ Packet4i $>$}} (const Packet4i \&, const Packet4i \&)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a7a2a0544bbabeb6b84840a1f856a76a5}{Eigen\+::internal\+::pdiv$<$ Packet4f $>$}} (const Packet4f \&a, const Packet4f \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a8d9b6dd22a9568380b3b54ece5eac0f0}{Eigen\+::internal\+::pdiv$<$ Packet2d $>$}} (const Packet2d \&a, const Packet2d \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_abb7e561b91aaf85a72025e78680b4843}{Eigen\+::internal\+::pnegate}} (const Packet4i \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_aed3b9988dbae5842d626ea606eb6b595}{Eigen\+::internal\+::pnegate}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a422cda909d8bb0c3d0e871a0c94ae939}{Eigen\+::internal\+::pnegate}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a5e7e367b9f82f6f704da66942b180e50}{Eigen\+::internal\+::pconj}} (const Packet4i \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_ad1ed084e8b17458cc7a6393aad90e8f7}{Eigen\+::internal\+::pconj}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_adee7703d8adb8884bef0a76838f24ffe}{Eigen\+::internal\+::pconj}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a42d9d7327cce6bb6f38b1f11df8d2289}{Eigen\+::internal\+::pmadd}} (const Packet4i \&a, const Packet4i \&b, const Packet4i \&c)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a74b4d1fb91602aebe1ae5742e8c2d566}{Eigen\+::internal\+::pmadd}} (const Packet4f \&a, const Packet4f \&b, const Packet4f \&c)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_abdf0ea7e126fdf116b7e4d9200f7a90f}{Eigen\+::internal\+::pmadd}} (const Packet2d \&a, const Packet2d \&b, const Packet2d \&c)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_ac2a7b21b9cb3ee5ba528785ee4eb82b4}{Eigen\+::internal\+::plset$<$ Packet4i $>$}} (const int \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_ae62a34e75a1b533d4baaea4a1719bd45}{Eigen\+::internal\+::plset$<$ Packet4f $>$}} (const float \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a997a475a7aab55264d8b830068e65106}{Eigen\+::internal\+::plset$<$ Packet2d $>$}} (const double \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_ab0fc91b2aa448d8ca108aeb812a4c444}{Eigen\+::internal\+::pmin$<$ Packet4i $>$}} (const Packet4i \&a, const Packet4i \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_acb800a8a7597c7cfe1955fcb2fe87e57}{Eigen\+::internal\+::pmin$<$ Packet2d $>$}} (const Packet2d \&a, const Packet2d \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a1247c9b2be448c969a8072b27d544355}{Eigen\+::internal\+::pmin$<$ Packet4f $>$}} (const Packet4f \&a, const Packet4f \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_ad9f57ee724ff8d0c74957beb4ad40d8e}{Eigen\+::internal\+::pmax$<$ Packet4i $>$}} (const Packet4i \&a, const Packet4i \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_aeab59aec7b70a1f67d9f060b55903ceb}{Eigen\+::internal\+::pmax$<$ Packet2d $>$}} (const Packet2d \&a, const Packet2d \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_afed49610891a1b453cf0ebf8f4fec3ce}{Eigen\+::internal\+::pmax$<$ Packet4f $>$}} (const Packet4f \&a, const Packet4f \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_acaff78969deba7b5ad84b29634b0428b}{Eigen\+::internal\+::pand$<$ Packet4i $>$}} (const Packet4i \&a, const Packet4i \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a2f485a60994bad5dd0593292d0f89c19}{Eigen\+::internal\+::pand$<$ Packet2d $>$}} (const Packet2d \&a, const Packet2d \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_acf375c264eb0355dc0a93084b32a2b0b}{Eigen\+::internal\+::pand$<$ Packet4f $>$}} (const Packet4f \&a, const Packet4f \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a1b9b1518331541832dbd38f5b9f575eb}{Eigen\+::internal\+::por$<$ Packet4i $>$}} (const Packet4i \&a, const Packet4i \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a4678ee0e598312caa5e7c62eee38b832}{Eigen\+::internal\+::por$<$ Packet2d $>$}} (const Packet2d \&a, const Packet2d \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a4fb4f0998cd8b159ab05449459d3ce56}{Eigen\+::internal\+::por$<$ Packet4f $>$}} (const Packet4f \&a, const Packet4f \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a571f141e28e911ac6e855018bfc00bb1}{Eigen\+::internal\+::pxor$<$ Packet4i $>$}} (const Packet4i \&a, const Packet4i \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a446e376a6b2d96f743deec927cfc934b}{Eigen\+::internal\+::pxor$<$ Packet2d $>$}} (const Packet2d \&a, const Packet2d \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_ab0a58ebc61dd0462933b4596c80eb2c9}{Eigen\+::internal\+::pxor$<$ Packet4f $>$}} (const Packet4f \&a, const Packet4f \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a772cc969145ff34b2f97462768acd7ac}{Eigen\+::internal\+::pandnot$<$ Packet4i $>$}} (const Packet4i \&a, const Packet4i \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a13e7cbe45ea9a179e16b7a8c1e2ea2dd}{Eigen\+::internal\+::pandnot$<$ Packet2d $>$}} (const Packet2d \&a, const Packet2d \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a00bb122bef7ee702b6300fc47db1fadf}{Eigen\+::internal\+::pandnot$<$ Packet4f $>$}} (const Packet4f \&a, const Packet4f \&b)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_aeb781b776890304f95de04eb38334c21}{Eigen\+::internal\+::pround$<$ Packet4f $>$}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_af045e33dd14e6fae168ee6094e461d9d}{Eigen\+::internal\+::pround$<$ Packet2d $>$}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a9d844855a379b4eea125140139fe5c40}{Eigen\+::internal\+::pceil$<$ Packet4f $>$}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_ac6302e439a7df6b9bee65c75aa2be26d}{Eigen\+::internal\+::pceil$<$ Packet2d $>$}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a7320ad2f9ea3e75c263fa8839b8fd89f}{Eigen\+::internal\+::pfloor$<$ Packet4f $>$}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_afcef5b81d59c0cde536eac077cc8e581}{Eigen\+::internal\+::pfloor$<$ Packet2d $>$}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a8ca7358422bc5068a529fb12256f17c0}{Eigen\+::internal\+::ploadu$<$ Packet4i $>$}} (const int $\ast$from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_ac7c8e9806e423b61bb6ec916769bd133}{Eigen\+::internal\+::ploadu$<$ Packet4f $>$}} (const float $\ast$from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_aad2aa0e94b436c07af15649aa08c5b10}{Eigen\+::internal\+::ploadu$<$ Packet2d $>$}} (const double $\ast$from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a3ddf82b3b7cd925ffb814a9baca92fe5}{Eigen\+::internal\+::ploaddup$<$ Packet4i $>$}} (const int $\ast$from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a4f98fd07c1d5009e6b536dd757688074}{Eigen\+::internal\+::ploaddup$<$ Packet4f $>$}} (const float $\ast$from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a422d191db7a3b5d19a59688e9138dc1c}{Eigen\+::internal\+::ploaddup$<$ Packet2d $>$}} (const double $\ast$from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_abe9341bd54c8f36e4add9c441481704c}{Eigen\+::internal\+::pstoreu$<$ int $>$}} (int $\ast$to, const Packet4i \&from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_aea49c19b4b3f450da1ff1a018e958eef}{Eigen\+::internal\+::pstoreu$<$ float $>$}} (float $\ast$to, const Packet4f \&from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_a3dfd013874cfa953711717da3b5b03c1}{Eigen\+::internal\+::pstoreu$<$ double $>$}} (double $\ast$to, const Packet2d \&from)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_af11b2c02aed99a41cf13ab7c867b5ab2}{Eigen\+::internal\+::prefetch$<$ int $>$}} (const int $\ast$addr)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_a84729d9dc9045c5aa096ce1c355da8cc}{Eigen\+::internal\+::prefetch$<$ float $>$}} (const float $\ast$addr)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_afd9b32ea1210628e6993a912fb0f301c}{Eigen\+::internal\+::prefetch$<$ double $>$}} (const double $\ast$addr)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int \mbox{\hyperlink{namespace_eigen_1_1internal_ac2a33e6980023c110d8a3e5c6ae91816}{Eigen\+::internal\+::pfirst$<$ Packet4i $>$}} (const Packet4i \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} float \mbox{\hyperlink{namespace_eigen_1_1internal_a2edd5c4942efc09fdf21a887d2311b6c}{Eigen\+::internal\+::pfirst$<$ Packet4f $>$}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double \mbox{\hyperlink{namespace_eigen_1_1internal_af4d7bfd00624245c9481aa794165acb8}{Eigen\+::internal\+::pfirst$<$ Packet2d $>$}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a2985360923239d7ae8237408c4a39e6b}{Eigen\+::internal\+::preverse}} (const Packet4i \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_afec2557d181b7c67d670cf51c628c103}{Eigen\+::internal\+::preverse}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_ab6feb0f00213b7e4222460244653db67}{Eigen\+::internal\+::preverse}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a163de947bfa2499ca30d044121d9bb0b}{Eigen\+::internal\+::pabs$<$ Packet4i $>$}} (const Packet4i \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_ab42ad42cb12bb736597e52f81b1ccaf7}{Eigen\+::internal\+::pabs$<$ Packet2d $>$}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a2636173af6863de34e156dfbf6ed6301}{Eigen\+::internal\+::pabs$<$ Packet4f $>$}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int \mbox{\hyperlink{namespace_eigen_1_1internal_acc5aba715ef7d93e46eb55406725ff24}{Eigen\+::internal\+::predux$<$ Packet4i $>$}} (const Packet4i \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double \mbox{\hyperlink{namespace_eigen_1_1internal_a09278c9f5a526f5e39c882f95238a65a}{Eigen\+::internal\+::predux$<$ Packet2d $>$}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} float \mbox{\hyperlink{namespace_eigen_1_1internal_ac452fae35fa261d87c7c36b3fd50b6ca}{Eigen\+::internal\+::predux$<$ Packet4f $>$}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_afe316a337f5fa28c1bd4683c70d1dfe6}{Eigen\+::internal\+::preduxp$<$ Packet4i $>$}} (const Packet4i $\ast$vecs)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_ac11481314738487cf1c84dba8c21ff8b}{Eigen\+::internal\+::preduxp$<$ Packet2d $>$}} (const Packet2d $\ast$vecs)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_a39cf655faeabd9cf2fa3eecdf8f9a870}{Eigen\+::internal\+::preduxp$<$ Packet4f $>$}} (const Packet4f $\ast$vecs)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int \mbox{\hyperlink{namespace_eigen_1_1internal_a64a70aad7e3c4cd7cd745f1cab35632b}{Eigen\+::internal\+::predux\+\_\+mul$<$ Packet4i $>$}} (const Packet4i \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double \mbox{\hyperlink{namespace_eigen_1_1internal_a8cc535b17cd693b49e3a29d50c8a1afb}{Eigen\+::internal\+::predux\+\_\+mul$<$ Packet2d $>$}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} float \mbox{\hyperlink{namespace_eigen_1_1internal_a7ff699d76ee5c82f775f7521476cd738}{Eigen\+::internal\+::predux\+\_\+mul$<$ Packet4f $>$}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int \mbox{\hyperlink{namespace_eigen_1_1internal_a547129a430eecaa551362390df1de9e8}{Eigen\+::internal\+::predux\+\_\+min$<$ Packet4i $>$}} (const Packet4i \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double \mbox{\hyperlink{namespace_eigen_1_1internal_a91a2407669903bcb8a10ea93751a4411}{Eigen\+::internal\+::predux\+\_\+min$<$ Packet2d $>$}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} float \mbox{\hyperlink{namespace_eigen_1_1internal_afd762b5442ff0b187fa8754c6b0b45c2}{Eigen\+::internal\+::predux\+\_\+min$<$ Packet4f $>$}} (const Packet4f \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} int \mbox{\hyperlink{namespace_eigen_1_1internal_ad28bd4ccd47c402564a0db725615a2cc}{Eigen\+::internal\+::predux\+\_\+max$<$ Packet4i $>$}} (const Packet4i \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} double \mbox{\hyperlink{namespace_eigen_1_1internal_a57f0f7472873a0e72fb6648aff40bd1e}{Eigen\+::internal\+::predux\+\_\+max$<$ Packet2d $>$}} (const Packet2d \&a)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} float \mbox{\hyperlink{namespace_eigen_1_1internal_a3f362a568c10197e5cd626364b40c3f8}{Eigen\+::internal\+::predux\+\_\+max$<$ Packet4f $>$}} (const Packet4f \&a)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{namespace_eigen_1_1internal_acbbc6edd7b5a3c83be4c59291e84595a}{Eigen\+::internal\+::ptranspose}} (Packet\+Block$<$ Packet4i, 4 $>$ \&kernel)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{namespace_eigen_1_1internal_af5d3a9a365815a41a96998616ac72242}{Eigen\+::internal\+::ptranspose}} (Packet\+Block$<$ Packet2d, 2 $>$ \&kernel)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4i \mbox{\hyperlink{namespace_eigen_1_1internal_a5b61c32bd045683391e8cff756fd0be2}{Eigen\+::internal\+::pblend}} (const Selector$<$ 4 $>$ \&if\+Packet, const Packet4i \&then\+Packet, const Packet4i \&else\+Packet)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet4f \mbox{\hyperlink{namespace_eigen_1_1internal_abaadd9aa6aafdf268f71646684340302}{Eigen\+::internal\+::pblend}} (const Selector$<$ 4 $>$ \&if\+Packet, const Packet4f \&then\+Packet, const Packet4f \&else\+Packet)
+\item 
+template$<$$>$ \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Packet2d \mbox{\hyperlink{namespace_eigen_1_1internal_a7370a006d1d0d00be298b21a0b74b8ae}{Eigen\+::internal\+::pblend}} (const Selector$<$ 2 $>$ \&if\+Packet, const Packet2d \&then\+Packet, const Packet2d \&else\+Packet)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_a500fe3c43980e6c7dc5c8c22fbb6281c}\label{_z_vector_2_packet_math_8h_a500fe3c43980e6c7dc5c8c22fbb6281c}} 
+\index{PacketMath.h@{PacketMath.h}!\_EIGEN\_ALIGNED\_PTR@{\_EIGEN\_ALIGNED\_PTR}}
+\index{\_EIGEN\_ALIGNED\_PTR@{\_EIGEN\_ALIGNED\_PTR}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{\_EIGEN\_ALIGNED\_PTR}{\_EIGEN\_ALIGNED\_PTR}}
+{\footnotesize\ttfamily \#define \+\_\+\+E\+I\+G\+E\+N\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+P\+TR(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((std\+::ptrdiff\+\_\+t)(x) \& \mbox{\hyperlink{_z_vector_2_packet_math_8h_a2f8f9c22c64a423ff251b67ff4c25f2e}{\+\_\+\+E\+I\+G\+E\+N\+\_\+\+M\+A\+S\+K\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}})}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_aa3355743f2129da0052f53c45884b30b}\label{_z_vector_2_packet_math_8h_aa3355743f2129da0052f53c45884b30b}} 
+\index{PacketMath.h@{PacketMath.h}!\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2d@{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2d}}
+\index{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2d@{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2d}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2d}{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2d}}
+{\footnotesize\ttfamily \#define \+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+F\+A\+S\+T\+\_\+\+Packet2d(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{X }\end{DoxyParamCaption})~Packet2d p2d\+\_\+\#\#N\+A\+ME = reinterpret\+\_\+cast$<$Packet2d$>$(vec\+\_\+splat\+\_\+s64(X))}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_a7fdc727e46748e5ec67de1fce78bf293}\label{_z_vector_2_packet_math_8h_a7fdc727e46748e5ec67de1fce78bf293}} 
+\index{PacketMath.h@{PacketMath.h}!\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2l@{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2l}}
+\index{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2l@{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2l}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2l}{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet2l}}
+{\footnotesize\ttfamily \#define \+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+F\+A\+S\+T\+\_\+\+Packet2l(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{X }\end{DoxyParamCaption})~Packet2l p2l\+\_\+\#\#N\+A\+ME = reinterpret\+\_\+cast$<$Packet2l$>$(vec\+\_\+splat\+\_\+s64(X))}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_ac0f6308d1c3c0f4ed6b9ba3e845b7157}\label{_z_vector_2_packet_math_8h_ac0f6308d1c3c0f4ed6b9ba3e845b7157}} 
+\index{PacketMath.h@{PacketMath.h}!\_EIGEN\_DECLARE\_CONST\_FAST\_Packet4i@{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet4i}}
+\index{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet4i@{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet4i}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet4i}{\_EIGEN\_DECLARE\_CONST\_FAST\_Packet4i}}
+{\footnotesize\ttfamily \#define \+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+F\+A\+S\+T\+\_\+\+Packet4i(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{X }\end{DoxyParamCaption})~Packet4i p4i\+\_\+\#\#N\+A\+ME = reinterpret\+\_\+cast$<$Packet4i$>$(vec\+\_\+splat\+\_\+s32(X))}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_a0f48c518e762640a6064167fe5b40949}\label{_z_vector_2_packet_math_8h_a0f48c518e762640a6064167fe5b40949}} 
+\index{PacketMath.h@{PacketMath.h}!\_EIGEN\_DECLARE\_CONST\_Packet2d@{\_EIGEN\_DECLARE\_CONST\_Packet2d}}
+\index{\_EIGEN\_DECLARE\_CONST\_Packet2d@{\_EIGEN\_DECLARE\_CONST\_Packet2d}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{\_EIGEN\_DECLARE\_CONST\_Packet2d}{\_EIGEN\_DECLARE\_CONST\_Packet2d}}
+{\footnotesize\ttfamily \#define \+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+Packet2d(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{X }\end{DoxyParamCaption})~Packet2d p2d\+\_\+\#\#N\+A\+ME = pset1$<$Packet2d$>$(X)}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_a2b6243221a745a8490a9c0ed953778ff}\label{_z_vector_2_packet_math_8h_a2b6243221a745a8490a9c0ed953778ff}} 
+\index{PacketMath.h@{PacketMath.h}!\_EIGEN\_DECLARE\_CONST\_Packet2l@{\_EIGEN\_DECLARE\_CONST\_Packet2l}}
+\index{\_EIGEN\_DECLARE\_CONST\_Packet2l@{\_EIGEN\_DECLARE\_CONST\_Packet2l}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{\_EIGEN\_DECLARE\_CONST\_Packet2l}{\_EIGEN\_DECLARE\_CONST\_Packet2l}}
+{\footnotesize\ttfamily \#define \+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+Packet2l(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{X }\end{DoxyParamCaption})~Packet2l p2l\+\_\+\#\#N\+A\+ME = pset1$<$Packet2l$>$(X)}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_a36426dcd60c8a41f43ead903d4935c9c}\label{_z_vector_2_packet_math_8h_a36426dcd60c8a41f43ead903d4935c9c}} 
+\index{PacketMath.h@{PacketMath.h}!\_EIGEN\_DECLARE\_CONST\_Packet4i@{\_EIGEN\_DECLARE\_CONST\_Packet4i}}
+\index{\_EIGEN\_DECLARE\_CONST\_Packet4i@{\_EIGEN\_DECLARE\_CONST\_Packet4i}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{\_EIGEN\_DECLARE\_CONST\_Packet4i}{\_EIGEN\_DECLARE\_CONST\_Packet4i}}
+{\footnotesize\ttfamily \#define \+\_\+\+E\+I\+G\+E\+N\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+\+Packet4i(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME,  }\item[{}]{X }\end{DoxyParamCaption})~Packet4i p4i\+\_\+\#\#N\+A\+ME = pset1$<$Packet4i$>$(X)}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_a2f8f9c22c64a423ff251b67ff4c25f2e}\label{_z_vector_2_packet_math_8h_a2f8f9c22c64a423ff251b67ff4c25f2e}} 
+\index{PacketMath.h@{PacketMath.h}!\_EIGEN\_MASK\_ALIGNMENT@{\_EIGEN\_MASK\_ALIGNMENT}}
+\index{\_EIGEN\_MASK\_ALIGNMENT@{\_EIGEN\_MASK\_ALIGNMENT}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{\_EIGEN\_MASK\_ALIGNMENT}{\_EIGEN\_MASK\_ALIGNMENT}}
+{\footnotesize\ttfamily \#define \+\_\+\+E\+I\+G\+E\+N\+\_\+\+M\+A\+S\+K\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT~0xfffffffffffffff0}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_a97d0981515c4e49cdf6bd537d80d0e7f}\label{_z_vector_2_packet_math_8h_a97d0981515c4e49cdf6bd537d80d0e7f}} 
+\index{PacketMath.h@{PacketMath.h}!EIGEN\_ARCH\_DEFAULT\_NUMBER\_OF\_REGISTERS@{EIGEN\_ARCH\_DEFAULT\_NUMBER\_OF\_REGISTERS}}
+\index{EIGEN\_ARCH\_DEFAULT\_NUMBER\_OF\_REGISTERS@{EIGEN\_ARCH\_DEFAULT\_NUMBER\_OF\_REGISTERS}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_ARCH\_DEFAULT\_NUMBER\_OF\_REGISTERS}{EIGEN\_ARCH\_DEFAULT\_NUMBER\_OF\_REGISTERS}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+A\+R\+C\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+R\+E\+G\+I\+S\+T\+E\+RS~16}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_ae36b255e934bcfd689e729d9e5ae98c5}\label{_z_vector_2_packet_math_8h_ae36b255e934bcfd689e729d9e5ae98c5}} 
+\index{PacketMath.h@{PacketMath.h}!EIGEN\_CACHEFRIENDLY\_PRODUCT\_THRESHOLD@{EIGEN\_CACHEFRIENDLY\_PRODUCT\_THRESHOLD}}
+\index{EIGEN\_CACHEFRIENDLY\_PRODUCT\_THRESHOLD@{EIGEN\_CACHEFRIENDLY\_PRODUCT\_THRESHOLD}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_CACHEFRIENDLY\_PRODUCT\_THRESHOLD}{EIGEN\_CACHEFRIENDLY\_PRODUCT\_THRESHOLD}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+C\+A\+C\+H\+E\+F\+R\+I\+E\+N\+D\+L\+Y\+\_\+\+P\+R\+O\+D\+U\+C\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD~4}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_a2d1b45cf53ccec3f00c693c9740a34e6}\label{_z_vector_2_packet_math_8h_a2d1b45cf53ccec3f00c693c9740a34e6}} 
+\index{PacketMath.h@{PacketMath.h}!EIGEN\_HAS\_SINGLE\_INSTRUCTION\_CJMADD@{EIGEN\_HAS\_SINGLE\_INSTRUCTION\_CJMADD}}
+\index{EIGEN\_HAS\_SINGLE\_INSTRUCTION\_CJMADD@{EIGEN\_HAS\_SINGLE\_INSTRUCTION\_CJMADD}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_HAS\_SINGLE\_INSTRUCTION\_CJMADD}{EIGEN\_HAS\_SINGLE\_INSTRUCTION\_CJMADD}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+H\+A\+S\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+\+C\+J\+M\+A\+DD}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_a958e62a55f74a3ad89990843cda02d5e}\label{_z_vector_2_packet_math_8h_a958e62a55f74a3ad89990843cda02d5e}} 
+\index{PacketMath.h@{PacketMath.h}!EIGEN\_HAS\_SINGLE\_INSTRUCTION\_MADD@{EIGEN\_HAS\_SINGLE\_INSTRUCTION\_MADD}}
+\index{EIGEN\_HAS\_SINGLE\_INSTRUCTION\_MADD@{EIGEN\_HAS\_SINGLE\_INSTRUCTION\_MADD}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_HAS\_SINGLE\_INSTRUCTION\_MADD}{EIGEN\_HAS\_SINGLE\_INSTRUCTION\_MADD}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+H\+A\+S\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+\+M\+A\+DD}
+
+\mbox{\Hypertarget{_z_vector_2_packet_math_8h_af180c9f89f97ac3309af05b73f7174b2}\label{_z_vector_2_packet_math_8h_af180c9f89f97ac3309af05b73f7174b2}} 
+\index{PacketMath.h@{PacketMath.h}!EIGEN\_ZVECTOR\_PREFETCH@{EIGEN\_ZVECTOR\_PREFETCH}}
+\index{EIGEN\_ZVECTOR\_PREFETCH@{EIGEN\_ZVECTOR\_PREFETCH}!PacketMath.h@{PacketMath.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_ZVECTOR\_PREFETCH}{EIGEN\_ZVECTOR\_PREFETCH}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+Z\+V\+E\+C\+T\+O\+R\+\_\+\+P\+R\+E\+F\+E\+T\+CH(\begin{DoxyParamCaption}\item[{}]{A\+D\+DR }\end{DoxyParamCaption})~asm( \char`\"{}   pfd \mbox{[}\%\mbox{[}addr\mbox{]}\mbox{]}\textbackslash{}n\char`\"{} \+:: \mbox{[}addr\mbox{]} \char`\"{}r\char`\"{} (A\+D\+DR) \+: \char`\"{}cc\char`\"{} );}
+

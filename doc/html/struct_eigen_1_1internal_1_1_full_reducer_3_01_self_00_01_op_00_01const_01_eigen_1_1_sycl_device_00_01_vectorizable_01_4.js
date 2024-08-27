@@ -1,0 +1,4 @@
+var struct_eigen_1_1internal_1_1_full_reducer_3_01_self_00_01_op_00_01const_01_eigen_1_1_sycl_device_00_01_vectorizable_01_4 =
+[
+    [ "CoeffReturnType", "struct_eigen_1_1internal_1_1_full_reducer_3_01_self_00_01_op_00_01const_01_eigen_1_1_sycl_device_00_01_vectorizable_01_4.html#aa02e68b933cb294854a8dd61a3952962", null ]
+];

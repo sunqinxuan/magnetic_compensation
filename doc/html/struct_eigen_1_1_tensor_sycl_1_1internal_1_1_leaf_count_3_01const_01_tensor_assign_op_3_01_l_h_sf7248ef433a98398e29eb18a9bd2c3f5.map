@@ -1,0 +1,5 @@
+<map id="Eigen::TensorSycl::internal::LeafCount&lt; const TensorAssignOp&lt; LHSExpr, RHSExpr &gt; &gt;" name="Eigen::TensorSycl::internal::LeafCount&lt; const TensorAssignOp&lt; LHSExpr, RHSExpr &gt; &gt;">
+<area shape="rect" id="node1" title="specialisation of the LeafCount struct when the node type is const TensorAssignOp" alt="" coords="19,109,205,180"/>
+<area shape="rect" id="node3" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_leaf_count_3_01_tensor_assign_op_3_01_l_h_s_expr_00_01_r_h_s_expr_01_4_01_4.html" title=" " alt="" coords="5,228,219,299"/>
+<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_category_count.html" title=" " alt="" coords="23,5,201,61"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Eigen::ScalarBinaryOpTraits&lt; ScalarA, ScalarB, BinaryOp &gt;" name="Eigen::ScalarBinaryOpTraits&lt; ScalarA, ScalarB, BinaryOp &gt;">
+<area shape="rect" id="node1" title="Determines whether the given binary operation of two numeric types is allowed and what the scalar ret..." alt="" coords="5,109,232,151"/>
+<area shape="rect" id="node2" href="$struct_eigen_1_1internal_1_1scalar__product__traits.html" title=" " alt="" coords="25,5,212,61"/>
+</map>

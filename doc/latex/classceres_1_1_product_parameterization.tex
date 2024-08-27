@@ -1,0 +1,167 @@
+\hypertarget{classceres_1_1_product_parameterization}{}\doxysection{ceres\+::Product\+Parameterization Class Reference}
+\label{classceres_1_1_product_parameterization}\index{ceres::ProductParameterization@{ceres::ProductParameterization}}
+
+
+{\ttfamily \#include $<$local\+\_\+parameterization.\+h$>$}
+
+
+
+Inheritance diagram for ceres\+::Product\+Parameterization\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classceres_1_1_product_parameterization__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ceres\+::Product\+Parameterization\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classceres_1_1_product_parameterization__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_product_parameterization_ad177e8bc431e2d7e8536aece2eeee002}{Product\+Parameterization}} (\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+param1, \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+param2)
+\item 
+\mbox{\hyperlink{classceres_1_1_product_parameterization_afa8bb083792a5f9302bdfa24695ce165}{Product\+Parameterization}} (\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+param1, \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+param2, \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+param3)
+\item 
+\mbox{\hyperlink{classceres_1_1_product_parameterization_a720e65db4a30e9cfc85d8624ba57df94}{Product\+Parameterization}} (\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+param1, \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+param2, \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+param3, \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+param4)
+\item 
+virtual \mbox{\hyperlink{classceres_1_1_product_parameterization_aed86c660e507807be25dd16031aa4233}{$\sim$\+Product\+Parameterization}} ()
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_product_parameterization_a9e42550669a5f63544d62d2bfb9daabc}{Plus}} (const double $\ast$x, const double $\ast$delta, double $\ast$x\+\_\+plus\+\_\+delta) const
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_product_parameterization_afc57f08ea90a5fadcd93f2bbdda1b9ef}{Compute\+Jacobian}} (const double $\ast$x, double $\ast$jacobian) const
+\item 
+virtual int \mbox{\hyperlink{classceres_1_1_product_parameterization_a55380269c867dc5e5444a5f36074e736}{Global\+Size}} () const
+\item 
+virtual int \mbox{\hyperlink{classceres_1_1_product_parameterization_a491994a68c231028650f353d7b05751e}{Local\+Size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classceres_1_1_product_parameterization_a48afd39348c3566f073071af4b734f22}{Init}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$ $>$ \mbox{\hyperlink{classceres_1_1_product_parameterization_ab382eab047ec6bd67ee037737338faf2}{local\+\_\+params\+\_\+}}
+\item 
+int \mbox{\hyperlink{classceres_1_1_product_parameterization_a8c4d115dc77d390cea4eb3a1f83bfac3}{local\+\_\+size\+\_\+}}
+\item 
+int \mbox{\hyperlink{classceres_1_1_product_parameterization_aaf34e577fbd11134692acb340975b96e}{global\+\_\+size\+\_\+}}
+\item 
+int \mbox{\hyperlink{classceres_1_1_product_parameterization_a03a62af1a7eaabde3410e45140176c3a}{buffer\+\_\+size\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_ad177e8bc431e2d7e8536aece2eeee002}\label{classceres_1_1_product_parameterization_ad177e8bc431e2d7e8536aece2eeee002}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!ProductParameterization@{ProductParameterization}}
+\index{ProductParameterization@{ProductParameterization}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{ProductParameterization()}{ProductParameterization()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily ceres\+::\+Product\+Parameterization\+::\+Product\+Parameterization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+param1,  }\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+param2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_afa8bb083792a5f9302bdfa24695ce165}\label{classceres_1_1_product_parameterization_afa8bb083792a5f9302bdfa24695ce165}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!ProductParameterization@{ProductParameterization}}
+\index{ProductParameterization@{ProductParameterization}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{ProductParameterization()}{ProductParameterization()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ceres\+::\+Product\+Parameterization\+::\+Product\+Parameterization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+param1,  }\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+param2,  }\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+param3 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_a720e65db4a30e9cfc85d8624ba57df94}\label{classceres_1_1_product_parameterization_a720e65db4a30e9cfc85d8624ba57df94}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!ProductParameterization@{ProductParameterization}}
+\index{ProductParameterization@{ProductParameterization}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{ProductParameterization()}{ProductParameterization()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ceres\+::\+Product\+Parameterization\+::\+Product\+Parameterization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+param1,  }\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+param2,  }\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+param3,  }\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+param4 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_aed86c660e507807be25dd16031aa4233}\label{classceres_1_1_product_parameterization_aed86c660e507807be25dd16031aa4233}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!````~ProductParameterization@{$\sim$ProductParameterization}}
+\index{````~ProductParameterization@{$\sim$ProductParameterization}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{$\sim$ProductParameterization()}{~ProductParameterization()}}
+{\footnotesize\ttfamily virtual ceres\+::\+Product\+Parameterization\+::$\sim$\+Product\+Parameterization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_afc57f08ea90a5fadcd93f2bbdda1b9ef}\label{classceres_1_1_product_parameterization_afc57f08ea90a5fadcd93f2bbdda1b9ef}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!ComputeJacobian@{ComputeJacobian}}
+\index{ComputeJacobian@{ComputeJacobian}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{ComputeJacobian()}{ComputeJacobian()}}
+{\footnotesize\ttfamily virtual bool ceres\+::\+Product\+Parameterization\+::\+Compute\+Jacobian (\begin{DoxyParamCaption}\item[{const double $\ast$}]{x,  }\item[{double $\ast$}]{jacobian }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_ab0e25130de878a2180d2b0b2caab6b95}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_a55380269c867dc5e5444a5f36074e736}\label{classceres_1_1_product_parameterization_a55380269c867dc5e5444a5f36074e736}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!GlobalSize@{GlobalSize}}
+\index{GlobalSize@{GlobalSize}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{GlobalSize()}{GlobalSize()}}
+{\footnotesize\ttfamily virtual int ceres\+::\+Product\+Parameterization\+::\+Global\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_a8f1ec16c46144c3808abf2ba189b6a18}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_a48afd39348c3566f073071af4b734f22}\label{classceres_1_1_product_parameterization_a48afd39348c3566f073071af4b734f22}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!Init@{Init}}
+\index{Init@{Init}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void ceres\+::\+Product\+Parameterization\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_a491994a68c231028650f353d7b05751e}\label{classceres_1_1_product_parameterization_a491994a68c231028650f353d7b05751e}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!LocalSize@{LocalSize}}
+\index{LocalSize@{LocalSize}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{LocalSize()}{LocalSize()}}
+{\footnotesize\ttfamily virtual int ceres\+::\+Product\+Parameterization\+::\+Local\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_ae5a6db8e21e101d43f20a3c9bc179ef5}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_a9e42550669a5f63544d62d2bfb9daabc}\label{classceres_1_1_product_parameterization_a9e42550669a5f63544d62d2bfb9daabc}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!Plus@{Plus}}
+\index{Plus@{Plus}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{Plus()}{Plus()}}
+{\footnotesize\ttfamily virtual bool ceres\+::\+Product\+Parameterization\+::\+Plus (\begin{DoxyParamCaption}\item[{const double $\ast$}]{x,  }\item[{const double $\ast$}]{delta,  }\item[{double $\ast$}]{x\+\_\+plus\+\_\+delta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_a8b21e4a5d0a0bc926b7e350f417b73dc}{ceres\+::\+Local\+Parameterization}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_a03a62af1a7eaabde3410e45140176c3a}\label{classceres_1_1_product_parameterization_a03a62af1a7eaabde3410e45140176c3a}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!buffer\_size\_@{buffer\_size\_}}
+\index{buffer\_size\_@{buffer\_size\_}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{buffer\_size\_}{buffer\_size\_}}
+{\footnotesize\ttfamily int ceres\+::\+Product\+Parameterization\+::buffer\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_aaf34e577fbd11134692acb340975b96e}\label{classceres_1_1_product_parameterization_aaf34e577fbd11134692acb340975b96e}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!global\_size\_@{global\_size\_}}
+\index{global\_size\_@{global\_size\_}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{global\_size\_}{global\_size\_}}
+{\footnotesize\ttfamily int ceres\+::\+Product\+Parameterization\+::global\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_ab382eab047ec6bd67ee037737338faf2}\label{classceres_1_1_product_parameterization_ab382eab047ec6bd67ee037737338faf2}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!local\_params\_@{local\_params\_}}
+\index{local\_params\_@{local\_params\_}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{local\_params\_}{local\_params\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}}$\ast$$>$ ceres\+::\+Product\+Parameterization\+::local\+\_\+params\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_product_parameterization_a8c4d115dc77d390cea4eb3a1f83bfac3}\label{classceres_1_1_product_parameterization_a8c4d115dc77d390cea4eb3a1f83bfac3}} 
+\index{ceres::ProductParameterization@{ceres::ProductParameterization}!local\_size\_@{local\_size\_}}
+\index{local\_size\_@{local\_size\_}!ceres::ProductParameterization@{ceres::ProductParameterization}}
+\doxysubsubsection{\texorpdfstring{local\_size\_}{local\_size\_}}
+{\footnotesize\ttfamily int ceres\+::\+Product\+Parameterization\+::local\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{local__parameterization_8h}{local\+\_\+parameterization.\+h}}\end{DoxyCompactItemize}

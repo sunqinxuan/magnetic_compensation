@@ -1,0 +1,186 @@
+\hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary}{}\doxysection{ceres\+::Gradient\+Problem\+Solver\+::Summary Struct Reference}
+\label{structceres_1_1_gradient_problem_solver_1_1_summary}\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+
+
+{\ttfamily \#include $<$gradient\+\_\+problem\+\_\+solver.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_a5e26f480303925325e6b8fb84fd1820e}{Summary}} ()
+\item 
+std\+::string \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_ace594178e0ea1fc63179d41ad511a4c0}{Brief\+Report}} () const
+\item 
+std\+::string \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_ac585302b2240d8cb90509e9ced5ff398}{Full\+Report}} () const
+\item 
+bool \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_a4145a4a9142939db8f8a350912c87098}{Is\+Solution\+Usable}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceceres_aa0af55255a692b07c79c9dcbc4ac201c}{Termination\+Type}} \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_a08aa673f9b24d563b56ae03dec20e8c2}{termination\+\_\+type}}
+\item 
+std\+::string \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_a3b1fdd7f05a3826fd034d75e687ad888}{message}}
+\item 
+double \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_a4542d85c4c5ccf8ed16dfd975e74997b}{initial\+\_\+cost}}
+\item 
+double \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_a61ded46afaa9d73e6d92cf8854ff21a0}{final\+\_\+cost}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structceres_1_1_iteration_summary}{Iteration\+Summary}} $>$ \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_a67ca92ac452d75c8dfee68fd0fae1f2f}{iterations}}
+\item 
+double \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_ac2e8d64fb1dabb80f2a6f46b6b07ee48}{total\+\_\+time\+\_\+in\+\_\+seconds}}
+\item 
+double \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_ac1256d62c1253cf9b861bbc4dfddcba0}{cost\+\_\+evaluation\+\_\+time\+\_\+in\+\_\+seconds}}
+\item 
+double \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_a08eac4556b33a6041cf61cc02122250a}{gradient\+\_\+evaluation\+\_\+time\+\_\+in\+\_\+seconds}}
+\item 
+double \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_aae46d12d142b3a85fd654597f32dfc17}{line\+\_\+search\+\_\+polynomial\+\_\+minimization\+\_\+time\+\_\+in\+\_\+seconds}}
+\item 
+int \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_a5f09dcb9f48e04ffcf9af4bf46ed7c21}{num\+\_\+parameters}}
+\item 
+int \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_adfbb8dc37e2d0f975ea3860a52478468}{num\+\_\+local\+\_\+parameters}}
+\item 
+\mbox{\hyperlink{namespaceceres_acd7e9893d80e5b363f8097884823e286}{Line\+Search\+Direction\+Type}} \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_acbc88c8e766bddb455a9eda31a7c4ece}{line\+\_\+search\+\_\+direction\+\_\+type}}
+\item 
+\mbox{\hyperlink{namespaceceres_a176a103ac532f76d7704744d180eb64c}{Line\+Search\+Type}} \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_aa3f0890e75112cdbea47f1b5ab2a15d1}{line\+\_\+search\+\_\+type}}
+\item 
+\mbox{\hyperlink{namespaceceres_a14d01715ac39ebb3f42a0bb8ae3004e0}{Line\+Search\+Interpolation\+Type}} \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_ab8c76a882f4f300505448aa06b173c1a}{line\+\_\+search\+\_\+interpolation\+\_\+type}}
+\item 
+\mbox{\hyperlink{namespaceceres_ab855c2e31894eb8b278d6f75d69beb60}{Nonlinear\+Conjugate\+Gradient\+Type}} \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_a53d1c42d0d0b9a6ea36c9d53bb042bde}{nonlinear\+\_\+conjugate\+\_\+gradient\+\_\+type}}
+\item 
+int \mbox{\hyperlink{structceres_1_1_gradient_problem_solver_1_1_summary_acc8c7664cdf2f48b46ba9f988d73e258}{max\+\_\+lbfgs\+\_\+rank}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_a5e26f480303925325e6b8fb84fd1820e}\label{structceres_1_1_gradient_problem_solver_1_1_summary_a5e26f480303925325e6b8fb84fd1820e}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!Summary@{Summary}}
+\index{Summary@{Summary}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{Summary()}{Summary()}}
+{\footnotesize\ttfamily ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::\+Summary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_ace594178e0ea1fc63179d41ad511a4c0}\label{structceres_1_1_gradient_problem_solver_1_1_summary_ace594178e0ea1fc63179d41ad511a4c0}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!BriefReport@{BriefReport}}
+\index{BriefReport@{BriefReport}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{BriefReport()}{BriefReport()}}
+{\footnotesize\ttfamily std\+::string ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::\+Brief\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_ac585302b2240d8cb90509e9ced5ff398}\label{structceres_1_1_gradient_problem_solver_1_1_summary_ac585302b2240d8cb90509e9ced5ff398}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!FullReport@{FullReport}}
+\index{FullReport@{FullReport}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{FullReport()}{FullReport()}}
+{\footnotesize\ttfamily std\+::string ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::\+Full\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_a4145a4a9142939db8f8a350912c87098}\label{structceres_1_1_gradient_problem_solver_1_1_summary_a4145a4a9142939db8f8a350912c87098}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!IsSolutionUsable@{IsSolutionUsable}}
+\index{IsSolutionUsable@{IsSolutionUsable}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{IsSolutionUsable()}{IsSolutionUsable()}}
+{\footnotesize\ttfamily bool ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::\+Is\+Solution\+Usable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_ac1256d62c1253cf9b861bbc4dfddcba0}\label{structceres_1_1_gradient_problem_solver_1_1_summary_ac1256d62c1253cf9b861bbc4dfddcba0}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!cost\_evaluation\_time\_in\_seconds@{cost\_evaluation\_time\_in\_seconds}}
+\index{cost\_evaluation\_time\_in\_seconds@{cost\_evaluation\_time\_in\_seconds}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{cost\_evaluation\_time\_in\_seconds}{cost\_evaluation\_time\_in\_seconds}}
+{\footnotesize\ttfamily double ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::cost\+\_\+evaluation\+\_\+time\+\_\+in\+\_\+seconds}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_a61ded46afaa9d73e6d92cf8854ff21a0}\label{structceres_1_1_gradient_problem_solver_1_1_summary_a61ded46afaa9d73e6d92cf8854ff21a0}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!final\_cost@{final\_cost}}
+\index{final\_cost@{final\_cost}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{final\_cost}{final\_cost}}
+{\footnotesize\ttfamily double ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::final\+\_\+cost}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_a08eac4556b33a6041cf61cc02122250a}\label{structceres_1_1_gradient_problem_solver_1_1_summary_a08eac4556b33a6041cf61cc02122250a}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!gradient\_evaluation\_time\_in\_seconds@{gradient\_evaluation\_time\_in\_seconds}}
+\index{gradient\_evaluation\_time\_in\_seconds@{gradient\_evaluation\_time\_in\_seconds}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{gradient\_evaluation\_time\_in\_seconds}{gradient\_evaluation\_time\_in\_seconds}}
+{\footnotesize\ttfamily double ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::gradient\+\_\+evaluation\+\_\+time\+\_\+in\+\_\+seconds}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_a4542d85c4c5ccf8ed16dfd975e74997b}\label{structceres_1_1_gradient_problem_solver_1_1_summary_a4542d85c4c5ccf8ed16dfd975e74997b}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!initial\_cost@{initial\_cost}}
+\index{initial\_cost@{initial\_cost}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{initial\_cost}{initial\_cost}}
+{\footnotesize\ttfamily double ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::initial\+\_\+cost}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_a67ca92ac452d75c8dfee68fd0fae1f2f}\label{structceres_1_1_gradient_problem_solver_1_1_summary_a67ca92ac452d75c8dfee68fd0fae1f2f}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!iterations@{iterations}}
+\index{iterations@{iterations}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{iterations}{iterations}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structceres_1_1_iteration_summary}{Iteration\+Summary}}$>$ ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::iterations}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_acbc88c8e766bddb455a9eda31a7c4ece}\label{structceres_1_1_gradient_problem_solver_1_1_summary_acbc88c8e766bddb455a9eda31a7c4ece}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!line\_search\_direction\_type@{line\_search\_direction\_type}}
+\index{line\_search\_direction\_type@{line\_search\_direction\_type}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{line\_search\_direction\_type}{line\_search\_direction\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_acd7e9893d80e5b363f8097884823e286}{Line\+Search\+Direction\+Type}} ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::line\+\_\+search\+\_\+direction\+\_\+type}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_ab8c76a882f4f300505448aa06b173c1a}\label{structceres_1_1_gradient_problem_solver_1_1_summary_ab8c76a882f4f300505448aa06b173c1a}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!line\_search\_interpolation\_type@{line\_search\_interpolation\_type}}
+\index{line\_search\_interpolation\_type@{line\_search\_interpolation\_type}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{line\_search\_interpolation\_type}{line\_search\_interpolation\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a14d01715ac39ebb3f42a0bb8ae3004e0}{Line\+Search\+Interpolation\+Type}} ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::line\+\_\+search\+\_\+interpolation\+\_\+type}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_aae46d12d142b3a85fd654597f32dfc17}\label{structceres_1_1_gradient_problem_solver_1_1_summary_aae46d12d142b3a85fd654597f32dfc17}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!line\_search\_polynomial\_minimization\_time\_in\_seconds@{line\_search\_polynomial\_minimization\_time\_in\_seconds}}
+\index{line\_search\_polynomial\_minimization\_time\_in\_seconds@{line\_search\_polynomial\_minimization\_time\_in\_seconds}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{line\_search\_polynomial\_minimization\_time\_in\_seconds}{line\_search\_polynomial\_minimization\_time\_in\_seconds}}
+{\footnotesize\ttfamily double ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::line\+\_\+search\+\_\+polynomial\+\_\+minimization\+\_\+time\+\_\+in\+\_\+seconds}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_aa3f0890e75112cdbea47f1b5ab2a15d1}\label{structceres_1_1_gradient_problem_solver_1_1_summary_aa3f0890e75112cdbea47f1b5ab2a15d1}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!line\_search\_type@{line\_search\_type}}
+\index{line\_search\_type@{line\_search\_type}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{line\_search\_type}{line\_search\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a176a103ac532f76d7704744d180eb64c}{Line\+Search\+Type}} ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::line\+\_\+search\+\_\+type}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_acc8c7664cdf2f48b46ba9f988d73e258}\label{structceres_1_1_gradient_problem_solver_1_1_summary_acc8c7664cdf2f48b46ba9f988d73e258}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!max\_lbfgs\_rank@{max\_lbfgs\_rank}}
+\index{max\_lbfgs\_rank@{max\_lbfgs\_rank}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{max\_lbfgs\_rank}{max\_lbfgs\_rank}}
+{\footnotesize\ttfamily int ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::max\+\_\+lbfgs\+\_\+rank}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_a3b1fdd7f05a3826fd034d75e687ad888}\label{structceres_1_1_gradient_problem_solver_1_1_summary_a3b1fdd7f05a3826fd034d75e687ad888}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!message@{message}}
+\index{message@{message}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily std\+::string ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::message}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_a53d1c42d0d0b9a6ea36c9d53bb042bde}\label{structceres_1_1_gradient_problem_solver_1_1_summary_a53d1c42d0d0b9a6ea36c9d53bb042bde}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!nonlinear\_conjugate\_gradient\_type@{nonlinear\_conjugate\_gradient\_type}}
+\index{nonlinear\_conjugate\_gradient\_type@{nonlinear\_conjugate\_gradient\_type}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{nonlinear\_conjugate\_gradient\_type}{nonlinear\_conjugate\_gradient\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_ab855c2e31894eb8b278d6f75d69beb60}{Nonlinear\+Conjugate\+Gradient\+Type}} ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::nonlinear\+\_\+conjugate\+\_\+gradient\+\_\+type}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_adfbb8dc37e2d0f975ea3860a52478468}\label{structceres_1_1_gradient_problem_solver_1_1_summary_adfbb8dc37e2d0f975ea3860a52478468}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!num\_local\_parameters@{num\_local\_parameters}}
+\index{num\_local\_parameters@{num\_local\_parameters}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{num\_local\_parameters}{num\_local\_parameters}}
+{\footnotesize\ttfamily int ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::num\+\_\+local\+\_\+parameters}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_a5f09dcb9f48e04ffcf9af4bf46ed7c21}\label{structceres_1_1_gradient_problem_solver_1_1_summary_a5f09dcb9f48e04ffcf9af4bf46ed7c21}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!num\_parameters@{num\_parameters}}
+\index{num\_parameters@{num\_parameters}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{num\_parameters}{num\_parameters}}
+{\footnotesize\ttfamily int ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::num\+\_\+parameters}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_a08aa673f9b24d563b56ae03dec20e8c2}\label{structceres_1_1_gradient_problem_solver_1_1_summary_a08aa673f9b24d563b56ae03dec20e8c2}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!termination\_type@{termination\_type}}
+\index{termination\_type@{termination\_type}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{termination\_type}{termination\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_aa0af55255a692b07c79c9dcbc4ac201c}{Termination\+Type}} ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::termination\+\_\+type}
+
+\mbox{\Hypertarget{structceres_1_1_gradient_problem_solver_1_1_summary_ac2e8d64fb1dabb80f2a6f46b6b07ee48}\label{structceres_1_1_gradient_problem_solver_1_1_summary_ac2e8d64fb1dabb80f2a6f46b6b07ee48}} 
+\index{ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}!total\_time\_in\_seconds@{total\_time\_in\_seconds}}
+\index{total\_time\_in\_seconds@{total\_time\_in\_seconds}!ceres::GradientProblemSolver::Summary@{ceres::GradientProblemSolver::Summary}}
+\doxysubsubsection{\texorpdfstring{total\_time\_in\_seconds}{total\_time\_in\_seconds}}
+{\footnotesize\ttfamily double ceres\+::\+Gradient\+Problem\+Solver\+::\+Summary\+::total\+\_\+time\+\_\+in\+\_\+seconds}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{gradient__problem__solver_8h}{gradient\+\_\+problem\+\_\+solver.\+h}}\end{DoxyCompactItemize}

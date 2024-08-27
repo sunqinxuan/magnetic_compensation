@@ -1,0 +1,34 @@
+\hypertarget{mic__compensation__api_8cc}{}\doxysection{src/api/mic\+\_\+compensation\+\_\+api.cc File Reference}
+\label{mic__compensation__api_8cc}\index{src/api/mic\_compensation\_api.cc@{src/api/mic\_compensation\_api.cc}}
+{\ttfamily \#include \char`\"{}api/mic\+\_\+compensation\+\_\+api.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/mic\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/mic\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/mic\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/mic\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/impl/mic\+\_\+ellipsoid\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/impl/mic\+\_\+tl\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/impl/mic\+\_\+tl\+\_\+component\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/impl/mic\+\_\+cabin\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/obeserver/mic\+\_\+state\+\_\+logger.\+h\char`\"{}}\newline
+Include dependency graph for mic\+\_\+compensation\+\_\+api.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mic__compensation__api_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemic}{mic}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ret\+\_\+t \mbox{\hyperlink{namespacemic_a11a69ccd0ea3c802c7d57bb7d098cbc3}{mic\+::mic\+\_\+init\+\_\+worker}} (const std\+::string model, const std\+::string model\+\_\+file, const std\+::string log\+\_\+file, const std\+::string config\+\_\+file)
+\item 
+ret\+\_\+t \mbox{\hyperlink{namespacemic_a3f9e47bc3d963d7b8d966a29b098dcc0}{mic\+::mic\+\_\+add\+\_\+data}} (const double timestamp, const mic\+\_\+mag\+\_\+t \&mag)
+\item 
+ret\+\_\+t \mbox{\hyperlink{namespacemic_ac4d985565f2918d3401886ebd5c3bd5e}{mic\+::mic\+\_\+compensate}} (const double timestamp, mic\+\_\+mag\+\_\+t \&out)
+\end{DoxyCompactItemize}

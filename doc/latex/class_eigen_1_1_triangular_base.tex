@@ -1,0 +1,352 @@
+\hypertarget{class_eigen_1_1_triangular_base}{}\doxysection{Eigen\+::Triangular\+Base$<$ Derived $>$ Class Template Reference}
+\label{class_eigen_1_1_triangular_base}\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+
+
+Base class for triangular part in a matrix.  
+
+
+
+
+{\ttfamily \#include $<$Triangular\+Matrix.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Triangular\+Base$<$ Derived $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_eigen_1_1_triangular_base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Triangular\+Base$<$ Derived $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_eigen_1_1_triangular_base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a67341d6eb827b38c8b0398348288c46d}{Mode}} = internal\+::traits$<$Derived$>$\+::Mode, 
+\mbox{\hyperlink{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a28ce43a5c6d827c3e8b2c8f000e92bff}{Rows\+At\+Compile\+Time}} = internal\+::traits$<$Derived$>$\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168abad1bac630eb1db3efea6149eace694b}{Cols\+At\+Compile\+Time}} = internal\+::traits$<$Derived$>$\+::Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a604215ed0cc236e76ac0442bb2524b6a}{Max\+Rows\+At\+Compile\+Time}} = internal\+::traits$<$Derived$>$\+::Max\+Rows\+At\+Compile\+Time, 
+\newline
+\mbox{\hyperlink{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a587cc9f36b01f17d69996a7d2d5dbe62}{Max\+Cols\+At\+Compile\+Time}} = internal\+::traits$<$Derived$>$\+::Max\+Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a41d03efb5f764a9e647974c83581ca0e}{Size\+At\+Compile\+Time}}, 
+\mbox{\hyperlink{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a8961c296cc1b742fa36f470b46736c16}{Max\+Size\+At\+Compile\+Time}}
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ Derived $>$\+::\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a95ff992a5c4c5debb41f6ae2f639e1f3}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_a11a793d02d96bbf60b21d9ba50f2c903}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_triangular_base_a72aec51bb5da83e4763583b0111752b3}{Storage\+Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_a72aec51bb5da83e4763583b0111752b3}{Storage\+Index}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ Derived $>$\+::Full\+Matrix\+Type \mbox{\hyperlink{class_eigen_1_1_triangular_base_a6a58f381cffe7c4ee285add36403ac6a}{Dense\+Matrix\+Type}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_triangular_base_a6a58f381cffe7c4ee285add36403ac6a}{Dense\+Matrix\+Type}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_ac8cb785868547eff2d002f4175539131}{Dense\+Type}}
+\item 
+typedef Derived const  \& \mbox{\hyperlink{class_eigen_1_1_triangular_base_a436c0051fb2e0a4522ce7b08479e422d}{Nested}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_afa53d673b6d448d12d7f58f6969040e0}{Triangular\+Base}} ()
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_acf2e635489bb39ffc6a950e5f1aeedff}{rows}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_af184f35153e5ab78f4c74891935a2d59}{cols}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_a09441b62cd9f54c630c45e33c611988c}{outer\+Stride}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_a76f0680c23b4b77f198d1c015ed942c2}{inner\+Stride}} () const
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_triangular_base_a553cc3b4723ed936675514ba019fa71a}{resize}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_acf2e635489bb39ffc6a950e5f1aeedff}{rows}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_af184f35153e5ab78f4c74891935a2d59}{cols}})
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_af08a690a41f4ce10fe63004fdcf58e3b}{coeff}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}} \& \mbox{\hyperlink{class_eigen_1_1_triangular_base_a2a82bec3d60e607e16ad628112d97958}{coeff\+Ref}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}})
+\item 
+{\footnotesize template$<$typename Other $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{class_eigen_1_1_triangular_base_ae93491f8454e133ff48202bf7c0c59e7}{copy\+Coeff}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}, Other \&other)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a213e5e80f7a1274075fd96df2bcc6}{operator()}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}} \& \mbox{\hyperlink{class_eigen_1_1_triangular_base_afd64351e253d77fe5fc57bf1e3bd2c45}{operator()}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}})
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived \& \mbox{\hyperlink{class_eigen_1_1_triangular_base_a51da31bdf699e9f8c50bf5710b9bc1dd}{derived}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived \& \mbox{\hyperlink{class_eigen_1_1_triangular_base_ac5f8c093e6639aed751c81e1bcac8504}{derived}} ()
+\item 
+{\footnotesize template$<$typename Dense\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{class_eigen_1_1_triangular_base_a829eee4c087fa168426d183a8ea7ae23}{eval\+To}} (\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Dense\+Derived $>$ \&other) const
+\item 
+{\footnotesize template$<$typename Dense\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{class_eigen_1_1_triangular_base_ad05367709c25defe72371a9fa83b9697}{eval\+To\+Lazy}} (\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Dense\+Derived $>$ \&other) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_a6a58f381cffe7c4ee285add36403ac6a}{Dense\+Matrix\+Type}} \mbox{\hyperlink{class_eigen_1_1_triangular_base_aa57795da6154a0fca8b9acb9de7a5497}{to\+Dense\+Matrix}} () const
+\item 
+{\footnotesize template$<$typename Dense\+Derived $>$ }\\void \mbox{\hyperlink{class_eigen_1_1_triangular_base_a604d4f76a376ced36f8b9c3374c76c3e}{eval\+To}} (\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Dense\+Derived $>$ \&other) const
+\item 
+{\footnotesize template$<$typename Dense\+Derived $>$ }\\void \mbox{\hyperlink{class_eigen_1_1_triangular_base_ab8db3e55eee50cdc56650b3498e235eb}{eval\+To\+Lazy}} (\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Dense\+Derived $>$ \&other) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_triangular_base_ac40fdb0c6fcf5b83e3122ae463ffb6f4}{check\+\_\+coordinates}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_triangular_base_ac12b1321e5d40095b532d57acb795b29}{check\+\_\+coordinates\+\_\+internal}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Derived$>$\newline
+class Eigen\+::\+Triangular\+Base$<$ Derived $>$}
+
+Base class for triangular part in a matrix. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a6a58f381cffe7c4ee285add36403ac6a}\label{class_eigen_1_1_triangular_base_a6a58f381cffe7c4ee285add36403ac6a}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!DenseMatrixType@{DenseMatrixType}}
+\index{DenseMatrixType@{DenseMatrixType}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{DenseMatrixType}{DenseMatrixType}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$Derived$>$\+::Full\+Matrix\+Type \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_triangular_base_a6a58f381cffe7c4ee285add36403ac6a}{Dense\+Matrix\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_ac8cb785868547eff2d002f4175539131}\label{class_eigen_1_1_triangular_base_ac8cb785868547eff2d002f4175539131}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!DenseType@{DenseType}}
+\index{DenseType@{DenseType}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{DenseType}{DenseType}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_triangular_base_a6a58f381cffe7c4ee285add36403ac6a}{Dense\+Matrix\+Type}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_triangular_base_ac8cb785868547eff2d002f4175539131}{Dense\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a436c0051fb2e0a4522ce7b08479e422d}\label{class_eigen_1_1_triangular_base_a436c0051fb2e0a4522ce7b08479e422d}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef Derived const\& \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_triangular_base_a436c0051fb2e0a4522ce7b08479e422d}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}\label{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$Derived$>$\+::\mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a72aec51bb5da83e4763583b0111752b3}\label{class_eigen_1_1_triangular_base_a72aec51bb5da83e4763583b0111752b3}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$Derived$>$\+::\mbox{\hyperlink{class_eigen_1_1_triangular_base_a72aec51bb5da83e4763583b0111752b3}{Storage\+Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_triangular_base_a72aec51bb5da83e4763583b0111752b3}{Storage\+Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a11a793d02d96bbf60b21d9ba50f2c903}\label{class_eigen_1_1_triangular_base_a11a793d02d96bbf60b21d9ba50f2c903}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$Derived$>$\+::\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a95ff992a5c4c5debb41f6ae2f639e1f3}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a95ff992a5c4c5debb41f6ae2f639e1f3}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168}\label{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mode@{Mode}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!Mode@{Mode}}}\mbox{\Hypertarget{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a67341d6eb827b38c8b0398348288c46d}\label{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a67341d6eb827b38c8b0398348288c46d}} 
+Mode&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a28ce43a5c6d827c3e8b2c8f000e92bff}\label{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a28ce43a5c6d827c3e8b2c8f000e92bff}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168abad1bac630eb1db3efea6149eace694b}\label{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168abad1bac630eb1db3efea6149eace694b}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a604215ed0cc236e76ac0442bb2524b6a}\label{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a604215ed0cc236e76ac0442bb2524b6a}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a587cc9f36b01f17d69996a7d2d5dbe62}\label{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a587cc9f36b01f17d69996a7d2d5dbe62}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SizeAtCompileTime@{SizeAtCompileTime}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!SizeAtCompileTime@{SizeAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a41d03efb5f764a9e647974c83581ca0e}\label{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a41d03efb5f764a9e647974c83581ca0e}} 
+Size\+At\+Compile\+Time&This is equal to the number of coefficients, i.\+e. the number of rows times the number of columns, or to {\itshape Dynamic} if this is not known at compile-\/time. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a28ce43a5c6d827c3e8b2c8f000e92bff}{Rows\+At\+Compile\+Time}}, \mbox{\hyperlink{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168abad1bac630eb1db3efea6149eace694b}{Cols\+At\+Compile\+Time}} 
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxSizeAtCompileTime@{MaxSizeAtCompileTime}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!MaxSizeAtCompileTime@{MaxSizeAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a8961c296cc1b742fa36f470b46736c16}\label{class_eigen_1_1_triangular_base_aa27d106396d8bd228f68d89535dc6168a8961c296cc1b742fa36f470b46736c16}} 
+Max\+Size\+At\+Compile\+Time&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_afa53d673b6d448d12d7f58f6969040e0}\label{class_eigen_1_1_triangular_base_afa53d673b6d448d12d7f58f6969040e0}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!TriangularBase@{TriangularBase}}
+\index{TriangularBase@{TriangularBase}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{TriangularBase()}{TriangularBase()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_triangular_base}{Triangular\+Base}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_ac40fdb0c6fcf5b83e3122ae463ffb6f4}\label{class_eigen_1_1_triangular_base_ac40fdb0c6fcf5b83e3122ae463ffb6f4}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!check\_coordinates@{check\_coordinates}}
+\index{check\_coordinates@{check\_coordinates}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{check\_coordinates()}{check\_coordinates()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::check\+\_\+coordinates (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{row,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_ac12b1321e5d40095b532d57acb795b29}\label{class_eigen_1_1_triangular_base_ac12b1321e5d40095b532d57acb795b29}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!check\_coordinates\_internal@{check\_coordinates\_internal}}
+\index{check\_coordinates\_internal@{check\_coordinates\_internal}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{check\_coordinates\_internal()}{check\_coordinates\_internal()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::check\+\_\+coordinates\+\_\+internal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_af08a690a41f4ce10fe63004fdcf58e3b}\label{class_eigen_1_1_triangular_base_af08a690a41f4ce10fe63004fdcf58e3b}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{row,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a2a82bec3d60e607e16ad628112d97958}\label{class_eigen_1_1_triangular_base_a2a82bec3d60e607e16ad628112d97958}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!coeffRef@{coeffRef}}
+\index{coeffRef@{coeffRef}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{coeffRef()}{coeffRef()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}}\& \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::coeff\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{row,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_af184f35153e5ab78f4c74891935a2d59}\label{class_eigen_1_1_triangular_base_af184f35153e5ab78f4c74891935a2d59}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_ae93491f8454e133ff48202bf7c0c59e7}\label{class_eigen_1_1_triangular_base_ae93491f8454e133ff48202bf7c0c59e7}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!copyCoeff@{copyCoeff}}
+\index{copyCoeff@{copyCoeff}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{copyCoeff()}{copyCoeff()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$typename Other $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::copy\+Coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{row,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{col,  }\item[{Other \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+Matrix\+Base\+::copy\+Coeff(row,col) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_ac5f8c093e6639aed751c81e1bcac8504}\label{class_eigen_1_1_triangular_base_ac5f8c093e6639aed751c81e1bcac8504}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!derived@{derived}}
+\index{derived@{derived}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{derived()}{derived()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived\& \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::derived (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a51da31bdf699e9f8c50bf5710b9bc1dd}\label{class_eigen_1_1_triangular_base_a51da31bdf699e9f8c50bf5710b9bc1dd}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!derived@{derived}}
+\index{derived@{derived}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{derived()}{derived()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived\& \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::derived (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a829eee4c087fa168426d183a8ea7ae23}\label{class_eigen_1_1_triangular_base_a829eee4c087fa168426d183a8ea7ae23}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!evalTo@{evalTo}}
+\index{evalTo@{evalTo}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{evalTo()}{evalTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$typename Dense\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::eval\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Dense\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a604d4f76a376ced36f8b9c3374c76c3e}\label{class_eigen_1_1_triangular_base_a604d4f76a376ced36f8b9c3374c76c3e}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!evalTo@{evalTo}}
+\index{evalTo@{evalTo}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{evalTo()}{evalTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$typename Dense\+Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::eval\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Dense\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const}
+
+Assigns a triangular or selfadjoint matrix to a dense matrix. If the matrix is triangular, the opposite part is set to zero. \mbox{\Hypertarget{class_eigen_1_1_triangular_base_ad05367709c25defe72371a9fa83b9697}\label{class_eigen_1_1_triangular_base_ad05367709c25defe72371a9fa83b9697}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!evalToLazy@{evalToLazy}}
+\index{evalToLazy@{evalToLazy}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{evalToLazy()}{evalToLazy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$typename Dense\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC void \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::eval\+To\+Lazy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Dense\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_ab8db3e55eee50cdc56650b3498e235eb}\label{class_eigen_1_1_triangular_base_ab8db3e55eee50cdc56650b3498e235eb}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!evalToLazy@{evalToLazy}}
+\index{evalToLazy@{evalToLazy}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{evalToLazy()}{evalToLazy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$typename Dense\+Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::eval\+To\+Lazy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Dense\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const}
+
+Assigns a triangular or selfadjoint matrix to a dense matrix. If the matrix is triangular, the opposite part is set to zero. \mbox{\Hypertarget{class_eigen_1_1_triangular_base_a76f0680c23b4b77f198d1c015ed942c2}\label{class_eigen_1_1_triangular_base_a76f0680c23b4b77f198d1c015ed942c2}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!innerStride@{innerStride}}
+\index{innerStride@{innerStride}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{innerStride()}{innerStride()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::inner\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_afd64351e253d77fe5fc57bf1e3bd2c45}\label{class_eigen_1_1_triangular_base_afd64351e253d77fe5fc57bf1e3bd2c45}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}}\& \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{row,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a66a213e5e80f7a1274075fd96df2bcc6}\label{class_eigen_1_1_triangular_base_a66a213e5e80f7a1274075fd96df2bcc6}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_a66a300711dd3f1a3c5e76cf5371c6cd8}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{row,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a09441b62cd9f54c630c45e33c611988c}\label{class_eigen_1_1_triangular_base_a09441b62cd9f54c630c45e33c611988c}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!outerStride@{outerStride}}
+\index{outerStride@{outerStride}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{outerStride()}{outerStride()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::outer\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_a553cc3b4723ed936675514ba019fa71a}\label{class_eigen_1_1_triangular_base_a553cc3b4723ed936675514ba019fa71a}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!resize@{resize}}
+\index{resize@{resize}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{rows,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_acf2e635489bb39ffc6a950e5f1aeedff}\label{class_eigen_1_1_triangular_base_acf2e635489bb39ffc6a950e5f1aeedff}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_triangular_base_aa57795da6154a0fca8b9acb9de7a5497}\label{class_eigen_1_1_triangular_base_aa57795da6154a0fca8b9acb9de7a5497}} 
+\index{Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}!toDenseMatrix@{toDenseMatrix}}
+\index{toDenseMatrix@{toDenseMatrix}!Eigen::TriangularBase$<$ Derived $>$@{Eigen::TriangularBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{toDenseMatrix()}{toDenseMatrix()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_triangular_base_a6a58f381cffe7c4ee285add36403ac6a}{Dense\+Matrix\+Type}} \mbox{\hyperlink{class_eigen_1_1_triangular_base}{Eigen\+::\+Triangular\+Base}}$<$ Derived $>$\+::to\+Dense\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_triangular_matrix_8h}{Triangular\+Matrix.\+h}}\end{DoxyCompactItemize}

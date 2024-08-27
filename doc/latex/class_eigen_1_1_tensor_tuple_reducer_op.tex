@@ -1,0 +1,186 @@
+\hypertarget{class_eigen_1_1_tensor_tuple_reducer_op}{}\doxysection{Eigen\+::Tensor\+Tuple\+Reducer\+Op$<$ Reduce\+Op, Dims, Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_tensor_tuple_reducer_op}\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Arg\+Max.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Tensor\+Tuple\+Reducer\+Op$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_tensor_tuple_reducer_op__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Tensor\+Tuple\+Reducer\+Op$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_tensor_tuple_reducer_op__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Tensor\+Tuple\+Reducer\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_aa9177073b5b64bfc7b6b9ff1ff773f19}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_aa9177073b5b64bfc7b6b9ff1ff773f19}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_aa9177073b5b64bfc7b6b9ff1ff773f19}{Scalar}} $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_afd4032323bbc353effde4d597f805743}{Real\+Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Tensor\+Tuple\+Reducer\+Op}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a0ce79b4f18fe2554cb5548d0b30f4008}{Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Tensor\+Tuple\+Reducer\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a8f88940b5898191b7622dfaaab035cde}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a8f88940b5898191b7622dfaaab035cde}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Tensor\+Tuple\+Reducer\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_ae3cee19dcb6704c32981737d0eec926e}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_ae3cee19dcb6704c32981737d0eec926e}{Index}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_ae3cee19dcb6704c32981737d0eec926e}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a65b018a64cbe9957152e1d6536faef49}{Coeff\+Return\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_ad3ec6f979fc4645fce33e76d3c7a76c9}{Tensor\+Tuple\+Reducer\+Op}} (const Xpr\+Type \&expr, const Reduce\+Op \&\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a1ff56aa318bc8e1695c8166a09b97c99}{reduce\+\_\+op}}, const int \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_acaea785a115dcb17be0d2b857170cfff}{return\+\_\+dim}}, const Dims \&\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a29ffe7797ddd859e7f85f35d6fdf35d2}{reduce\+\_\+dims}})
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Xpr\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_ae7eadf6e97b28e1ccbe2dbbb15e5c9bc}{expression}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Reduce\+Op \& \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a1ff56aa318bc8e1695c8166a09b97c99}{reduce\+\_\+op}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Dims \& \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a29ffe7797ddd859e7f85f35d6fdf35d2}{reduce\+\_\+dims}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC int \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_acaea785a115dcb17be0d2b857170cfff}{return\+\_\+dim}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_af281b690cde94999437b1894c0b7dbf4}{m\+\_\+xpr}}
+\item 
+const Reduce\+Op \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a7cbd840dc91eefe06dfff6465176efe8}{m\+\_\+reduce\+\_\+op}}
+\item 
+const int \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a25790ac9233364d66a932cbda9880a31}{m\+\_\+return\+\_\+dim}}
+\item 
+const Dims \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_af4bd7bd0c7a73fbb2f0440901101a713}{m\+\_\+reduce\+\_\+dims}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_a65b018a64cbe9957152e1d6536faef49}\label{class_eigen_1_1_tensor_tuple_reducer_op_a65b018a64cbe9957152e1d6536faef49}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_ae3cee19dcb6704c32981737d0eec926e}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a65b018a64cbe9957152e1d6536faef49}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_ae3cee19dcb6704c32981737d0eec926e}\label{class_eigen_1_1_tensor_tuple_reducer_op_ae3cee19dcb6704c32981737d0eec926e}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Tensor\+Tuple\+Reducer\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_ae3cee19dcb6704c32981737d0eec926e}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_ae3cee19dcb6704c32981737d0eec926e}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_a0ce79b4f18fe2554cb5548d0b30f4008}\label{class_eigen_1_1_tensor_tuple_reducer_op_a0ce79b4f18fe2554cb5548d0b30f4008}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Tensor\+Tuple\+Reducer\+Op}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a0ce79b4f18fe2554cb5548d0b30f4008}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_afd4032323bbc353effde4d597f805743}\label{class_eigen_1_1_tensor_tuple_reducer_op_afd4032323bbc353effde4d597f805743}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_aa9177073b5b64bfc7b6b9ff1ff773f19}{Scalar}}$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_afd4032323bbc353effde4d597f805743}{Real\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_aa9177073b5b64bfc7b6b9ff1ff773f19}\label{class_eigen_1_1_tensor_tuple_reducer_op_aa9177073b5b64bfc7b6b9ff1ff773f19}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Tensor\+Tuple\+Reducer\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_aa9177073b5b64bfc7b6b9ff1ff773f19}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_aa9177073b5b64bfc7b6b9ff1ff773f19}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_a8f88940b5898191b7622dfaaab035cde}\label{class_eigen_1_1_tensor_tuple_reducer_op_a8f88940b5898191b7622dfaaab035cde}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Tensor\+Tuple\+Reducer\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a8f88940b5898191b7622dfaaab035cde}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op_a8f88940b5898191b7622dfaaab035cde}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_ad3ec6f979fc4645fce33e76d3c7a76c9}\label{class_eigen_1_1_tensor_tuple_reducer_op_ad3ec6f979fc4645fce33e76d3c7a76c9}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!TensorTupleReducerOp@{TensorTupleReducerOp}}
+\index{TensorTupleReducerOp@{TensorTupleReducerOp}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{TensorTupleReducerOp()}{TensorTupleReducerOp()}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Tensor\+Tuple\+Reducer\+Op}} (\begin{DoxyParamCaption}\item[{const Xpr\+Type \&}]{expr,  }\item[{const Reduce\+Op \&}]{reduce\+\_\+op,  }\item[{const int}]{return\+\_\+dim,  }\item[{const Dims \&}]{reduce\+\_\+dims }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_ae7eadf6e97b28e1ccbe2dbbb15e5c9bc}\label{class_eigen_1_1_tensor_tuple_reducer_op_ae7eadf6e97b28e1ccbe2dbbb15e5c9bc}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!expression@{expression}}
+\index{expression@{expression}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{expression()}{expression()}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Xpr\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_a29ffe7797ddd859e7f85f35d6fdf35d2}\label{class_eigen_1_1_tensor_tuple_reducer_op_a29ffe7797ddd859e7f85f35d6fdf35d2}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!reduce\_dims@{reduce\_dims}}
+\index{reduce\_dims@{reduce\_dims}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{reduce\_dims()}{reduce\_dims()}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Dims\& \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::reduce\+\_\+dims (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_a1ff56aa318bc8e1695c8166a09b97c99}\label{class_eigen_1_1_tensor_tuple_reducer_op_a1ff56aa318bc8e1695c8166a09b97c99}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!reduce\_op@{reduce\_op}}
+\index{reduce\_op@{reduce\_op}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{reduce\_op()}{reduce\_op()}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Reduce\+Op\& \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::reduce\+\_\+op (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_acaea785a115dcb17be0d2b857170cfff}\label{class_eigen_1_1_tensor_tuple_reducer_op_acaea785a115dcb17be0d2b857170cfff}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!return\_dim@{return\_dim}}
+\index{return\_dim@{return\_dim}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{return\_dim()}{return\_dim()}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC int \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::return\+\_\+dim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_af4bd7bd0c7a73fbb2f0440901101a713}\label{class_eigen_1_1_tensor_tuple_reducer_op_af4bd7bd0c7a73fbb2f0440901101a713}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!m\_reduce\_dims@{m\_reduce\_dims}}
+\index{m\_reduce\_dims@{m\_reduce\_dims}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_reduce\_dims}{m\_reduce\_dims}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+const Dims \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::m\+\_\+reduce\+\_\+dims\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_a7cbd840dc91eefe06dfff6465176efe8}\label{class_eigen_1_1_tensor_tuple_reducer_op_a7cbd840dc91eefe06dfff6465176efe8}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!m\_reduce\_op@{m\_reduce\_op}}
+\index{m\_reduce\_op@{m\_reduce\_op}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_reduce\_op}{m\_reduce\_op}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+const Reduce\+Op \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::m\+\_\+reduce\+\_\+op\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_a25790ac9233364d66a932cbda9880a31}\label{class_eigen_1_1_tensor_tuple_reducer_op_a25790ac9233364d66a932cbda9880a31}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!m\_return\_dim@{m\_return\_dim}}
+\index{m\_return\_dim@{m\_return\_dim}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_return\_dim}{m\_return\_dim}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+const int \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::m\+\_\+return\+\_\+dim\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_tuple_reducer_op_af281b690cde94999437b1894c0b7dbf4}\label{class_eigen_1_1_tensor_tuple_reducer_op_af281b690cde94999437b1894c0b7dbf4}} 
+\index{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}!m\_xpr@{m\_xpr}}
+\index{m\_xpr@{m\_xpr}!Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$@{Eigen::TensorTupleReducerOp$<$ ReduceOp, Dims, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_xpr}{m\_xpr}}
+{\footnotesize\ttfamily template$<$typename Reduce\+Op , typename Dims , typename Xpr\+Type $>$ \\
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_tuple_reducer_op}{Eigen\+::\+Tensor\+Tuple\+Reducer\+Op}}$<$ Reduce\+Op, Dims, Xpr\+Type $>$\+::m\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_arg_max_8h}{Tensor\+Arg\+Max.\+h}}\end{DoxyCompactItemize}

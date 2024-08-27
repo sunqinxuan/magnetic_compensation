@@ -1,0 +1,5 @@
+var struct_eigen_1_1internal_1_1functor__traits_3_01scalar__difference__op_3_01_lhs_scalar_00_01_rhs_scalar_01_4_01_4 =
+[
+    [ "Cost", "struct_eigen_1_1internal_1_1functor__traits_3_01scalar__difference__op_3_01_lhs_scalar_00_01_rhs_scalar_01_4_01_4.html#a7c41584d2198fe24a17462e29258fd17a03b5c56a10a8ff14a7c42b7c62f5bca2", null ],
+    [ "PacketAccess", "struct_eigen_1_1internal_1_1functor__traits_3_01scalar__difference__op_3_01_lhs_scalar_00_01_rhs_scalar_01_4_01_4.html#a7c41584d2198fe24a17462e29258fd17ad0e5f9c9d78fe7ead56e7fe159790e63", null ]
+];

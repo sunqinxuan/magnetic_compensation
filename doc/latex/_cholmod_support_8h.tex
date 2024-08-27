@@ -1,0 +1,52 @@
+\hypertarget{_cholmod_support_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Cholmod\+Support/\+Cholmod\+Support.h File Reference}
+\label{_cholmod_support_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/CholmodSupport/CholmodSupport.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/CholmodSupport/CholmodSupport.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1cholmod__configure__matrix}{Eigen\+::internal\+::cholmod\+\_\+configure\+\_\+matrix$<$ Scalar $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1cholmod__configure__matrix_3_01double_01_4}{Eigen\+::internal\+::cholmod\+\_\+configure\+\_\+matrix$<$ double $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1cholmod__configure__matrix_3_01std_1_1complex_3_01double_01_4_01_4}{Eigen\+::internal\+::cholmod\+\_\+configure\+\_\+matrix$<$ std\+::complex$<$ double $>$ $>$}}
+\item 
+class \mbox{\hyperlink{class_eigen_1_1_cholmod_base}{Eigen\+::\+Cholmod\+Base$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo, Derived $>$}}
+\begin{DoxyCompactList}\small\item\em The base class for the direct Cholesky factorization of Cholmod. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_l_t}{Eigen\+::\+Cholmod\+Simplicial\+L\+L\+T$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$}}
+\begin{DoxyCompactList}\small\item\em A simplicial direct Cholesky (\mbox{\hyperlink{class_eigen_1_1_l_l_t}{L\+LT}}) factorization and solver based on Cholmod. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Eigen\+::\+Cholmod\+Simplicial\+L\+D\+L\+T$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$}}
+\begin{DoxyCompactList}\small\item\em A simplicial direct Cholesky (\mbox{\hyperlink{class_eigen_1_1_l_d_l_t}{L\+D\+LT}}) factorization and solver based on Cholmod. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_eigen_1_1_cholmod_supernodal_l_l_t}{Eigen\+::\+Cholmod\+Supernodal\+L\+L\+T$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$}}
+\begin{DoxyCompactList}\small\item\em A supernodal Cholesky (\mbox{\hyperlink{class_eigen_1_1_l_l_t}{L\+LT}}) factorization and solver based on Cholmod. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_eigen_1_1_cholmod_decomposition}{Eigen\+::\+Cholmod\+Decomposition$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$}}
+\begin{DoxyCompactList}\small\item\em A general Cholesky factorization and solver based on Cholmod. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1internal}{Eigen\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_eigen_a8cf3958430069971186dfd7afe6864b3}{Eigen\+::\+Cholmod\+Mode}} \{ \mbox{\hyperlink{namespace_eigen_a8cf3958430069971186dfd7afe6864b3a2f616d8b9a216fc3cfb0160e9e6e58c3}{Eigen\+::\+Cholmod\+Auto}}, 
+\mbox{\hyperlink{namespace_eigen_a8cf3958430069971186dfd7afe6864b3a031d7f8f7669f0187e1158f1437bf91f}{Eigen\+::\+Cholmod\+Simplicial\+L\+Lt}}, 
+\mbox{\hyperlink{namespace_eigen_a8cf3958430069971186dfd7afe6864b3a8e4f36dc21204895aad4f61f7db56f2d}{Eigen\+::\+Cholmod\+Supernodal\+L\+Lt}}, 
+\mbox{\hyperlink{namespace_eigen_a8cf3958430069971186dfd7afe6864b3a7aeffd34337a5201939d7f55bb3bd689}{Eigen\+::\+Cholmod\+L\+D\+Lt}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename \+\_\+\+Scalar , int \+\_\+\+Options, typename \+\_\+\+Storage\+Index $>$ }\\cholmod\+\_\+sparse \mbox{\hyperlink{namespace_eigen_ac9fb9e40cfc9ddbdc7da84ee01bb7545}{Eigen\+::view\+As\+Cholmod}} (Ref$<$ Sparse\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Options, \+\_\+\+Storage\+Index $>$ $>$ mat)
+\item 
+{\footnotesize template$<$typename \+\_\+\+Scalar , int \+\_\+\+Options, typename \+\_\+\+Index $>$ }\\const cholmod\+\_\+sparse \mbox{\hyperlink{namespace_eigen_a1e270b05389cb0c686c0dbb8696ea930}{Eigen\+::view\+As\+Cholmod}} (const Sparse\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Options, \+\_\+\+Index $>$ \&mat)
+\item 
+{\footnotesize template$<$typename \+\_\+\+Scalar , int \+\_\+\+Options, typename \+\_\+\+Index $>$ }\\const cholmod\+\_\+sparse \mbox{\hyperlink{namespace_eigen_ae05afad80a00ea7af7432a096875d2e0}{Eigen\+::view\+As\+Cholmod}} (const Sparse\+Vector$<$ \+\_\+\+Scalar, \+\_\+\+Options, \+\_\+\+Index $>$ \&mat)
+\item 
+{\footnotesize template$<$typename \+\_\+\+Scalar , int \+\_\+\+Options, typename \+\_\+\+Index , unsigned int Up\+Lo$>$ }\\cholmod\+\_\+sparse \mbox{\hyperlink{namespace_eigen_afacb818b18280e2e1ab73836ab74cab5}{Eigen\+::view\+As\+Cholmod}} (const Sparse\+Self\+Adjoint\+View$<$ const Sparse\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Options, \+\_\+\+Index $>$, Up\+Lo $>$ \&mat)
+\item 
+{\footnotesize template$<$typename Derived $>$ }\\cholmod\+\_\+dense \mbox{\hyperlink{namespace_eigen_a92fe7b595099051fa1d1c443641a6de3}{Eigen\+::view\+As\+Cholmod}} (Matrix\+Base$<$ Derived $>$ \&mat)
+\item 
+{\footnotesize template$<$typename Scalar , int Flags, typename Storage\+Index $>$ }\\Mapped\+Sparse\+Matrix$<$ Scalar, Flags, Storage\+Index $>$ \mbox{\hyperlink{namespace_eigen_aad43574b96b756041bd8037c4b61e0d9}{Eigen\+::view\+As\+Eigen}} (cholmod\+\_\+sparse \&cm)
+\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\hypertarget{struct_eigen_1_1internal_1_1_prod_reducer}{}\doxysection{Eigen\+::internal\+::Prod\+Reducer$<$ T $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1_prod_reducer}\index{Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Functors.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer_aa24c0a12f0cb8ec2c12a978e63c65b27}{reduce}} (const T t, T $\ast$accum) const
+\item 
+{\footnotesize template$<$typename Packet $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer_a93136dafe31ae00c5a9de5150e8f2f66}{reduce\+Packet}} (const \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \&p, \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} $\ast$accum) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer_a6609e47e6b26429236c89d3f33e0fb0c}{initialize}} () const
+\item 
+{\footnotesize template$<$typename Packet $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer_ad211cbb6d1f2a98e554134b84dbd7ca8}{initialize\+Packet}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer_a95049bb4b4c277f8b04c5e6dcb5087d1}{finalize}} (const T accum) const
+\item 
+{\footnotesize template$<$typename Packet $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer_a98d6abc15b8ad6b6b8c87b2cdb32912f}{finalize\+Packet}} (const \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \&vaccum) const
+\item 
+{\footnotesize template$<$typename Packet $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer_a323559d5af0d53d1b36a258a7555958e}{finalize\+Both}} (const T saccum, const \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \&vaccum) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer_af3e8e09b9e97bfc3c7e396d1c9e0a29a}{Packet\+Access}} = \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{packet\+\_\+traits}}$<$T$>$\+::Has\+Mul
+\item 
+static const bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer_a3e1ddaa6230f317263c4376e8a3eba62}{Is\+Stateful}} = \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_prod_reducer_a95049bb4b4c277f8b04c5e6dcb5087d1}\label{struct_eigen_1_1internal_1_1_prod_reducer_a95049bb4b4c277f8b04c5e6dcb5087d1}} 
+\index{Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}!finalize@{finalize}}
+\index{finalize@{finalize}!Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer}{Eigen\+::internal\+::\+Prod\+Reducer}}$<$ T $>$\+::finalize (\begin{DoxyParamCaption}\item[{const T}]{accum }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_prod_reducer_a323559d5af0d53d1b36a258a7555958e}\label{struct_eigen_1_1internal_1_1_prod_reducer_a323559d5af0d53d1b36a258a7555958e}} 
+\index{Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}!finalizeBoth@{finalizeBoth}}
+\index{finalizeBoth@{finalizeBoth}!Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{finalizeBoth()}{finalizeBoth()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Packet $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer}{Eigen\+::internal\+::\+Prod\+Reducer}}$<$ T $>$\+::finalize\+Both (\begin{DoxyParamCaption}\item[{const T}]{saccum,  }\item[{const \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \&}]{vaccum }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_prod_reducer_a98d6abc15b8ad6b6b8c87b2cdb32912f}\label{struct_eigen_1_1internal_1_1_prod_reducer_a98d6abc15b8ad6b6b8c87b2cdb32912f}} 
+\index{Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}!finalizePacket@{finalizePacket}}
+\index{finalizePacket@{finalizePacket}!Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{finalizePacket()}{finalizePacket()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Packet $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer}{Eigen\+::internal\+::\+Prod\+Reducer}}$<$ T $>$\+::finalize\+Packet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \&}]{vaccum }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_prod_reducer_a6609e47e6b26429236c89d3f33e0fb0c}\label{struct_eigen_1_1internal_1_1_prod_reducer_a6609e47e6b26429236c89d3f33e0fb0c}} 
+\index{Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}!initialize@{initialize}}
+\index{initialize@{initialize}!Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer}{Eigen\+::internal\+::\+Prod\+Reducer}}$<$ T $>$\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_prod_reducer_ad211cbb6d1f2a98e554134b84dbd7ca8}\label{struct_eigen_1_1internal_1_1_prod_reducer_ad211cbb6d1f2a98e554134b84dbd7ca8}} 
+\index{Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}!initializePacket@{initializePacket}}
+\index{initializePacket@{initializePacket}!Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{initializePacket()}{initializePacket()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Packet $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer}{Eigen\+::internal\+::\+Prod\+Reducer}}$<$ T $>$\+::initialize\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_prod_reducer_aa24c0a12f0cb8ec2c12a978e63c65b27}\label{struct_eigen_1_1internal_1_1_prod_reducer_aa24c0a12f0cb8ec2c12a978e63c65b27}} 
+\index{Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}!reduce@{reduce}}
+\index{reduce@{reduce}!Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reduce()}{reduce()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer}{Eigen\+::internal\+::\+Prod\+Reducer}}$<$ T $>$\+::reduce (\begin{DoxyParamCaption}\item[{const T}]{t,  }\item[{T $\ast$}]{accum }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_prod_reducer_a93136dafe31ae00c5a9de5150e8f2f66}\label{struct_eigen_1_1internal_1_1_prod_reducer_a93136dafe31ae00c5a9de5150e8f2f66}} 
+\index{Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}!reducePacket@{reducePacket}}
+\index{reducePacket@{reducePacket}!Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reducePacket()}{reducePacket()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Packet $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer}{Eigen\+::internal\+::\+Prod\+Reducer}}$<$ T $>$\+::reduce\+Packet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} \&}]{p,  }\item[{\mbox{\hyperlink{union_eigen_1_1internal_1_1_packet}{Packet}} $\ast$}]{accum }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_prod_reducer_a3e1ddaa6230f317263c4376e8a3eba62}\label{struct_eigen_1_1internal_1_1_prod_reducer_a3e1ddaa6230f317263c4376e8a3eba62}} 
+\index{Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}!IsStateful@{IsStateful}}
+\index{IsStateful@{IsStateful}!Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsStateful}{IsStateful}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer}{Eigen\+::internal\+::\+Prod\+Reducer}}$<$ T $>$\+::Is\+Stateful = \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_prod_reducer_af3e8e09b9e97bfc3c7e396d1c9e0a29a}\label{struct_eigen_1_1internal_1_1_prod_reducer_af3e8e09b9e97bfc3c7e396d1c9e0a29a}} 
+\index{Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}!PacketAccess@{PacketAccess}}
+\index{PacketAccess@{PacketAccess}!Eigen::internal::ProdReducer$<$ T $>$@{Eigen::internal::ProdReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PacketAccess}{PacketAccess}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1_prod_reducer}{Eigen\+::internal\+::\+Prod\+Reducer}}$<$ T $>$\+::Packet\+Access = \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{packet\+\_\+traits}}$<$T$>$\+::Has\+Mul\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_functors_8h}{Tensor\+Functors.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\hypertarget{classceres_1_1_numeric_diff_cost_function}{}\doxysection{ceres\+::Numeric\+Diff\+Cost\+Function$<$ Cost\+Functor, method, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$ Class Template Reference}
+\label{classceres_1_1_numeric_diff_cost_function}\index{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+
+
+{\ttfamily \#include $<$numeric\+\_\+diff\+\_\+cost\+\_\+function.\+h$>$}
+
+
+
+Inheritance diagram for ceres\+::Numeric\+Diff\+Cost\+Function$<$ Cost\+Functor, method, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classceres_1_1_numeric_diff_cost_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ceres\+::Numeric\+Diff\+Cost\+Function$<$ Cost\+Functor, method, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classceres_1_1_numeric_diff_cost_function__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function_a8c3f57a02a777a202a791a3c9cb702f1}{Numeric\+Diff\+Cost\+Function}} (Cost\+Functor $\ast$functor, \mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6}{Ownership}} ownership=\mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6ab1f05a852675f0f192b93bcacdf38a20}{T\+A\+K\+E\+\_\+\+O\+W\+N\+E\+R\+S\+H\+IP}}, int \mbox{\hyperlink{classceres_1_1_cost_function_a6d4bd07102c6effa91f87ee2a4a944f7}{num\+\_\+residuals}}=k\+Num\+Residuals, const \mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}} \&options=\mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}}())
+\item 
+\mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function_a8067c21e22148a48d5a44173696d2e1c}{$\sim$\+Numeric\+Diff\+Cost\+Function}} ()
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function_af34e769fb2ba4f5b0b082acf5ed66621}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr}{internal\+::scoped\+\_\+ptr}}$<$ Cost\+Functor $>$ \mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function_a58e45c02604f24b8a86164c1a3daa841}{functor\+\_\+}}
+\item 
+\mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6}{Ownership}} \mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function_a4203df82904802c096d552eccfb97ea6}{ownership\+\_\+}}
+\item 
+\mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}} \mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function_afd6bb3ac6e0edec14e7912bb46085280}{options\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classceres_1_1_numeric_diff_cost_function_a8c3f57a02a777a202a791a3c9cb702f1}\label{classceres_1_1_numeric_diff_cost_function_a8c3f57a02a777a202a791a3c9cb702f1}} 
+\index{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!NumericDiffCostFunction@{NumericDiffCostFunction}}
+\index{NumericDiffCostFunction@{NumericDiffCostFunction}!ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{NumericDiffCostFunction()}{NumericDiffCostFunction()}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL, int k\+Num\+Residuals = 0, int N0 = 0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+\mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function}{ceres\+::\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::\mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function}{Numeric\+Diff\+Cost\+Function}} (\begin{DoxyParamCaption}\item[{Cost\+Functor $\ast$}]{functor,  }\item[{\mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6}{Ownership}}}]{ownership = {\ttfamily \mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6ab1f05a852675f0f192b93bcacdf38a20}{T\+A\+K\+E\+\_\+\+O\+W\+N\+E\+R\+S\+H\+IP}}},  }\item[{int}]{num\+\_\+residuals = {\ttfamily kNumResiduals},  }\item[{const \mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}} \&}]{options = {\ttfamily \mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_numeric_diff_cost_function_a8067c21e22148a48d5a44173696d2e1c}\label{classceres_1_1_numeric_diff_cost_function_a8067c21e22148a48d5a44173696d2e1c}} 
+\index{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!````~NumericDiffCostFunction@{$\sim$NumericDiffCostFunction}}
+\index{````~NumericDiffCostFunction@{$\sim$NumericDiffCostFunction}!ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$NumericDiffCostFunction()}{~NumericDiffCostFunction()}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL, int k\+Num\+Residuals = 0, int N0 = 0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+\mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function}{ceres\+::\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::$\sim$\mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function}{Numeric\+Diff\+Cost\+Function}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_numeric_diff_cost_function_af34e769fb2ba4f5b0b082acf5ed66621}\label{classceres_1_1_numeric_diff_cost_function_af34e769fb2ba4f5b0b082acf5ed66621}} 
+\index{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL, int k\+Num\+Residuals = 0, int N0 = 0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+virtual bool \mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function}{ceres\+::\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_cost_function_a9e973858fdbf3a2e5603e848d30e9ddc}{ceres\+::\+Cost\+Function}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classceres_1_1_numeric_diff_cost_function_a58e45c02604f24b8a86164c1a3daa841}\label{classceres_1_1_numeric_diff_cost_function_a58e45c02604f24b8a86164c1a3daa841}} 
+\index{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!functor\_@{functor\_}}
+\index{functor\_@{functor\_}!ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{functor\_}{functor\_}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL, int k\+Num\+Residuals = 0, int N0 = 0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+\mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr}{internal\+::scoped\+\_\+ptr}}$<$Cost\+Functor$>$ \mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function}{ceres\+::\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::functor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_numeric_diff_cost_function_afd6bb3ac6e0edec14e7912bb46085280}\label{classceres_1_1_numeric_diff_cost_function_afd6bb3ac6e0edec14e7912bb46085280}} 
+\index{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!options\_@{options\_}}
+\index{options\_@{options\_}!ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{options\_}{options\_}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL, int k\+Num\+Residuals = 0, int N0 = 0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+\mbox{\hyperlink{structceres_1_1_numeric_diff_options}{Numeric\+Diff\+Options}} \mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function}{ceres\+::\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::options\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_numeric_diff_cost_function_a4203df82904802c096d552eccfb97ea6}\label{classceres_1_1_numeric_diff_cost_function_a4203df82904802c096d552eccfb97ea6}} 
+\index{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}!ownership\_@{ownership\_}}
+\index{ownership\_@{ownership\_}!ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$@{ceres::NumericDiffCostFunction$<$ CostFunctor, method, kNumResiduals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}
+\doxysubsubsection{\texorpdfstring{ownership\_}{ownership\_}}
+{\footnotesize\ttfamily template$<$typename Cost\+Functor , Numeric\+Diff\+Method\+Type method = C\+E\+N\+T\+R\+AL, int k\+Num\+Residuals = 0, int N0 = 0, int N1 = 0, int N2 = 0, int N3 = 0, int N4 = 0, int N5 = 0, int N6 = 0, int N7 = 0, int N8 = 0, int N9 = 0$>$ \\
+\mbox{\hyperlink{namespaceceres_aea3810d0caff6f6c72aebadbf674a4d6}{Ownership}} \mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function}{ceres\+::\+Numeric\+Diff\+Cost\+Function}}$<$ Cost\+Functor, method, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$\+::ownership\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{numeric__diff__cost__function_8h}{numeric\+\_\+diff\+\_\+cost\+\_\+function.\+h}}\end{DoxyCompactItemize}

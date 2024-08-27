@@ -1,0 +1,357 @@
+\hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h}{}\doxysection{3rd\+\_\+party/ceres-\/1.12.0/include/gflags/gflags.h File Reference}
+\label{ceres-1_812_80_2include_2gflags_2gflags_8h}\index{3rd\_party/ceres-\/1.12.0/include/gflags/gflags.h@{3rd\_party/ceres-\/1.12.0/include/gflags/gflags.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}gflags\+\_\+declare.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gflags\+\_\+gflags.\+h\char`\"{}}\newline
+Include dependency graph for gflags.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ceres-1_812_80_2include_2gflags_2gflags_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_1_1_command_line_flag_info}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Command\+Line\+Flag\+Info}}
+\item 
+class \mbox{\hyperlink{class_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_1_1_flag_saver}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Flag\+Saver}}
+\item 
+class \mbox{\hyperlink{class_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_1_1_flag_registerer}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Flag\+Registerer}}
+\item 
+struct \mbox{\hyperlink{structf_l_b_1_1_compile_assert}{f\+L\+B\+::\+Compile\+Assert}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE}}
+\item 
+ \mbox{\hyperlink{namespacef_l_b}{f\+LB}}
+\item 
+ \mbox{\hyperlink{namespacef_l_s}{f\+LS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a03860ea6ee44d001c79e5af203651d5c}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+F\+L\+AG}}
+\item 
+\#define \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_adf87f791d0ff26e5c5359225930da184}{D\+E\+F\+I\+N\+E\+\_\+validator}}(name,  validator)
+\item 
+\#define \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a872aff5dae6b12538420bdacd2869d90}{M\+A\+Y\+B\+E\+\_\+\+S\+T\+R\+I\+P\+P\+E\+D\+\_\+\+H\+E\+LP}}(txt)~txt
+\item 
+\#define \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_ad9d9e4fc382a6fae0c3d06c55364ced1}{D\+E\+F\+I\+N\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}}(type,  shorttype,  name,  value,  help)
+\item 
+\#define \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a315237dcd20ce003eb2f5e5357ed8da1}{D\+E\+F\+I\+N\+E\+\_\+bool}}(name,  val,  txt)
+\item 
+\#define \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a0f98f2f925d3cef08cf65f512b88230f}{D\+E\+F\+I\+N\+E\+\_\+int32}}(name,  val,  txt)
+\item 
+\#define \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a7976fc247349071651517c5cc4c881e3}{D\+E\+F\+I\+N\+E\+\_\+int64}}(name,  val,  txt)
+\item 
+\#define \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a7d240238de6c0759c20ce2c804a9860e}{D\+E\+F\+I\+N\+E\+\_\+uint64}}(name,  val,  txt)
+\item 
+\#define \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a04c7bb3afeca475e0f11d8f3eaf1383d}{D\+E\+F\+I\+N\+E\+\_\+double}}(name,  val,  txt)~\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags_8h_ad9d9e4fc382a6fae0c3d06c55364ced1}{D\+E\+F\+I\+N\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}}(double, D, name, val, txt)
+\item 
+\#define \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a0ac3b0cf491d002a12e819bcb8d79d67}{D\+E\+F\+I\+N\+E\+\_\+string}}(name,  val,  txt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Compile\+Assert \mbox{\hyperlink{namespacef_l_b_a2de1be5ae36822f837a104c4a09d8ff5}{f\+L\+B\+::expected\+\_\+sizeof\+\_\+double\+\_\+neq\+\_\+sizeof\+\_\+bool}}\mbox{[}(sizeof(double) !=sizeof(bool)) ? 1 \+:-\/1\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a684aef047dd3be3960beab5aecd18a84}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Register\+Flag\+Validator}} (const bool $\ast$flag, bool($\ast$validate\+\_\+fn)(const char $\ast$, bool))
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a9ad8d9322ca98e69457ee5c293fc85a3}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Register\+Flag\+Validator}} (const int32 $\ast$flag, bool($\ast$validate\+\_\+fn)(const char $\ast$, int32))
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a36d81ad24d98b494d5a2674be08a3572}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Register\+Flag\+Validator}} (const int64 $\ast$flag, bool($\ast$validate\+\_\+fn)(const char $\ast$, int64))
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a2a527f08548249fb92e2205a04c2f0e1}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Register\+Flag\+Validator}} (const uint64 $\ast$flag, bool($\ast$validate\+\_\+fn)(const char $\ast$, uint64))
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_aa73e0956d12959115508894194974e2e}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Register\+Flag\+Validator}} (const double $\ast$flag, bool($\ast$validate\+\_\+fn)(const char $\ast$, double))
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_ab9508fafc50f115c1554d9c9bae8c04b}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Register\+Flag\+Validator}} (const std\+::string $\ast$flag, bool($\ast$validate\+\_\+fn)(const char $\ast$, const std\+::string \&))
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_ae1f8d83ef21f4b5f7e2af46b1c9bcbd5}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Get\+All\+Flags}} (std\+::vector$<$ Command\+Line\+Flag\+Info $>$ $\ast$O\+U\+T\+P\+UT)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a4ff02e12c7fa41ddfcca2eda34edc525}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Show\+Usage\+With\+Flags}} (const char $\ast$argv0)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_ae58d1d3fe9b679bf2f5675b61951494d}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Show\+Usage\+With\+Flags\+Restrict}} (const char $\ast$argv0, const char $\ast$restrict)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} std\+::string \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a556a6279fa552e88de30970e50595f99}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Describe\+One\+Flag}} (const Command\+Line\+Flag\+Info \&flag)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_acec4ce92ca14e334cc7fd7c751d2d66b}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Set\+Argv}} (int argc, const char $\ast$$\ast$argv)
+\item 
+const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a485c6671a5b772300726a13d09697e7e}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Get\+Argvs}} ()
+\item 
+const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} char $\ast$ \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a127a40ac0dbba14b2afdd61b0b343d3d}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Get\+Argv}} ()
+\item 
+const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} char $\ast$ \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a2ab1fae637d625ed31375ffa86ac82f6}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Get\+Argv0}} ()
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} uint32 \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a7c037be382081a1c8440d841adeb33da}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Get\+Argv\+Sum}} ()
+\item 
+const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} char $\ast$ \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a6ad47c51c5b09057245e16933304f6e3}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Program\+Invocation\+Name}} ()
+\item 
+const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} char $\ast$ \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_ab2222d639d7a3bb571f18c8635055830}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Program\+Invocation\+Short\+Name}} ()
+\item 
+const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} char $\ast$ \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a5da2170ca1aa21bfb69fe108617e0a0f}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Program\+Usage}} ()
+\item 
+const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} char $\ast$ \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a44211cc84120c2ff66344ffefdf0df0f}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Version\+String}} ()
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a2d864865f087a426390d3527a4c9e57b}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Get\+Command\+Line\+Option}} (const char $\ast$name, std\+::string $\ast$O\+U\+T\+P\+UT)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a3bc464c4d9308cdf156f7a1fe330e389}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Get\+Command\+Line\+Flag\+Info}} (const char $\ast$name, Command\+Line\+Flag\+Info $\ast$O\+U\+T\+P\+UT)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} Command\+Line\+Flag\+Info \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a55640f47aff8b8a3e419611dc8172c5e}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Get\+Command\+Line\+Flag\+Info\+Or\+Die}} (const char $\ast$name)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} std\+::string \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a1efe92f3c65d5daa5bf9c2148981998e}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Set\+Command\+Line\+Option}} (const char $\ast$name, const char $\ast$value)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} std\+::string \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a1b43998aca90d34a4e828a05b83df68c}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Set\+Command\+Line\+Option\+With\+Mode}} (const char $\ast$name, const char $\ast$value, Flag\+Setting\+Mode set\+\_\+mode)
+\item 
+class \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} \mbox{\hyperlink{class_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_1_1_flag_saver}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Flag\+Saver}} \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a682ceea6d89fa3161f6dfa58afdfec1c}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+\_\+\+\_\+attribute}} ((unused))
+\item 
+\mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a9b129bcb10ecbbc1c97982a192bea863}{Flag\+Saver}} ()
+\item 
+\mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a86b138aa7e83b2209c2c55cfa313433e}{$\sim$\+Flag\+Saver}} ()
+\item 
+\mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_aa892441b1dc09ba2a358c3c5de3069ef}{Flag\+Saver}} (const Flag\+Saver \&)
+\item 
+void \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a9aeebe0c7a58f909b5981d0992899aca}{operator=}} (const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags_8h_aa892441b1dc09ba2a358c3c5de3069ef}{Flag\+Saver}} \&)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} std\+::string \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a5409eaabca33505b856323a45e795516}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Commandline\+Flags\+Into\+String}} ()
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_acf6c4d7ea65b6f185ad130d36fa49810}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Read\+Flags\+From\+String}} (const std\+::string \&flagfilecontents, const char $\ast$prog\+\_\+name, bool errors\+\_\+are\+\_\+fatal)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_af07d034987271a5c1fb2f6f8c012b2cf}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Append\+Flags\+Into\+File}} (const std\+::string \&filename, const char $\ast$prog\+\_\+name)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_aa4434691e9c178f20683849d3d0cd0dd}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Read\+From\+Flags\+File}} (const std\+::string \&filename, const char $\ast$prog\+\_\+name, bool errors\+\_\+are\+\_\+fatal)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_af15f6bf73ab73da7d363210df7663ebc}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Bool\+From\+Env}} (const char $\ast$varname, bool defval)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} int32 \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a7758e76440a50bc8edef985d8070777c}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Int32\+From\+Env}} (const char $\ast$varname, int32 defval)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} int64 \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a8f713859844bedc934aa5e6990aec362}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Int64\+From\+Env}} (const char $\ast$varname, int64 defval)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} uint64 \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a9784b80749bf969e9608cff84527147c}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Uint64\+From\+Env}} (const char $\ast$varname, uint64 defval)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} double \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a75740f55b885d830fac666999a57870e}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Double\+From\+Env}} (const char $\ast$varname, double defval)
+\item 
+const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} char $\ast$ \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a47c291241902ac1c52748aa2bb9b6201}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+String\+From\+Env}} (const char $\ast$varname, const char $\ast$defval)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a6cae600f9a8925b6cd61162d99c8a39f}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Set\+Usage\+Message}} (const std\+::string \&usage)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a02be50080330970cbda62acf72d4f049}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Set\+Version\+String}} (const std\+::string \&version)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} uint32 \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a1b5e67ff05303ff025ba6c046934bd83}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Parse\+Command\+Line\+Flags}} (int $\ast$argc, char $\ast$$\ast$$\ast$argv, bool remove\+\_\+flags)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} uint32 \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a279d484af10bfbe5665a5655d16e5172}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Parse\+Command\+Line\+Non\+Help\+Flags}} (int $\ast$argc, char $\ast$$\ast$$\ast$argv, bool remove\+\_\+flags)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a54ddda77ec893438bd2faf0b6a114fe9}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Handle\+Command\+Line\+Help\+Flags}} ()
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a1ce76dc3deebfb14d82bba08d39dae02}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Allow\+Command\+Line\+Reparsing}} ()
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_adfdb75d18218c04afb5eafbed26b1705}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Reparse\+Command\+Line\+Non\+Help\+Flags}} ()
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a3789286752e128fc9714937cd000f0d3}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Shut\+Down\+Command\+Line\+Flags}} ()
+\item 
+{\footnotesize template$<$typename From $>$ }\\double \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} \mbox{\hyperlink{namespacef_l_b_a44b10cd752a6c2d26e2f3cf1681ce9a3}{f\+L\+B\+::\+Is\+Bool\+Flag}} (const From \&from)
+\item 
+\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespacef_l_b_a467c1bc95ab8e3d9f035be7f3af1a822}{f\+L\+B\+::\+Is\+Bool\+Flag}} (bool from)
+\item 
+clstring $\ast$ \mbox{\hyperlink{namespacef_l_s_a6c7045aabe9208d1adef185b78db39cd}{f\+L\+S\+::dont\+\_\+pass0to\+D\+E\+F\+I\+N\+E\+\_\+string}} (char $\ast$stringspot, const char $\ast$value)
+\item 
+clstring $\ast$ \mbox{\hyperlink{namespacef_l_s_ab18b14f845169b9f81e1db21c8094ff7}{f\+L\+S\+::dont\+\_\+pass0to\+D\+E\+F\+I\+N\+E\+\_\+string}} (char $\ast$stringspot, const clstring \&value)
+\item 
+clstring $\ast$ \mbox{\hyperlink{namespacef_l_s_a9d49c430509e86262e2b169b892c65be}{f\+L\+S\+::dont\+\_\+pass0to\+D\+E\+F\+I\+N\+E\+\_\+string}} (char $\ast$stringspot, int value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a959788fbbf7621922b671250ad568369}{S\+E\+T\+\_\+\+F\+L\+A\+G\+S\+\_\+\+V\+A\+L\+UE}}
+\item 
+\mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a3a39b5e7a1f93ae9abb376f43f733a21}{S\+E\+T\+\_\+\+F\+L\+A\+G\+\_\+\+I\+F\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\item 
+class Flag\+Saver\+Impl $\ast$ \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a8b210de03e3b09e8cf9ae786924b1d24}{impl\+\_\+}}
+\item 
+class \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} \mbox{\hyperlink{class_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_1_1_flag_registerer}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+Flag\+Registerer}} \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a98149f2963ae58ae3e0106c879fc3a9a}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::\+\_\+\+\_\+attribute}}
+\item 
+const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags__declare_8h_ab630d48e0b993f39ca96b0c4401f01cf}{G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} char \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_a4c07d5a102dd55e4084b16cd7b96c447}{G\+F\+L\+A\+G\+S\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+::k\+Stripped\+Flag\+Help}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a315237dcd20ce003eb2f5e5357ed8da1}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a315237dcd20ce003eb2f5e5357ed8da1}} 
+\index{gflags.h@{gflags.h}!DEFINE\_bool@{DEFINE\_bool}}
+\index{DEFINE\_bool@{DEFINE\_bool}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_bool}{DEFINE\_bool}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+bool(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{val,  }\item[{}]{txt }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacef_l_b}{fLB}} \{                                                       \(\backslash\)}
+\DoxyCodeLine{    typedef ::fLB::CompileAssert FLAG\_\#\#name\#\#\_value\_is\_not\_a\_bool[     \(\backslash\)}
+\DoxyCodeLine{            (\textcolor{keyword}{sizeof}(\mbox{\hyperlink{namespacef_l_b_a467c1bc95ab8e3d9f035be7f3af1a822}{::fLB::IsBoolFlag}}(val)) != \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}))? 1: -\/1]; \(\backslash\)}
+\DoxyCodeLine{  \}                                                                     \(\backslash\)}
+\DoxyCodeLine{  DEFINE\_VARIABLE(\textcolor{keywordtype}{bool}, B, name, val, txt)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a04c7bb3afeca475e0f11d8f3eaf1383d}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a04c7bb3afeca475e0f11d8f3eaf1383d}} 
+\index{gflags.h@{gflags.h}!DEFINE\_double@{DEFINE\_double}}
+\index{DEFINE\_double@{DEFINE\_double}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_double}{DEFINE\_double}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+double(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{val,  }\item[{}]{txt }\end{DoxyParamCaption})~\mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags_8h_ad9d9e4fc382a6fae0c3d06c55364ced1}{D\+E\+F\+I\+N\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}}(double, D, name, val, txt)}
+
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a0f98f2f925d3cef08cf65f512b88230f}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a0f98f2f925d3cef08cf65f512b88230f}} 
+\index{gflags.h@{gflags.h}!DEFINE\_int32@{DEFINE\_int32}}
+\index{DEFINE\_int32@{DEFINE\_int32}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_int32}{DEFINE\_int32}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+int32(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{val,  }\item[{}]{txt }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{   \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_ad9d9e4fc382a6fae0c3d06c55364ced1}{DEFINE\_VARIABLE}}(\mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_ab5e093ecf2996943821e773cdf22140a}{GFLAGS\_NAMESPACE::int32}}, I, \(\backslash\)}
+\DoxyCodeLine{                   name, val, txt)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a7976fc247349071651517c5cc4c881e3}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a7976fc247349071651517c5cc4c881e3}} 
+\index{gflags.h@{gflags.h}!DEFINE\_int64@{DEFINE\_int64}}
+\index{DEFINE\_int64@{DEFINE\_int64}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_int64}{DEFINE\_int64}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+int64(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{val,  }\item[{}]{txt }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{   \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_ad9d9e4fc382a6fae0c3d06c55364ced1}{DEFINE\_VARIABLE}}(\mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_aedc4fdd5cc24ffefc1a7d07a841e9798}{GFLAGS\_NAMESPACE::int64}}, I64, \(\backslash\)}
+\DoxyCodeLine{                   name, val, txt)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a0ac3b0cf491d002a12e819bcb8d79d67}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a0ac3b0cf491d002a12e819bcb8d79d67}} 
+\index{gflags.h@{gflags.h}!DEFINE\_string@{DEFINE\_string}}
+\index{DEFINE\_string@{DEFINE\_string}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_string}{DEFINE\_string}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+string(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{val,  }\item[{}]{txt }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacef_l_s}{fLS}} \{                                                           \mbox{\hyperlink{namespacef_l_s_a1b41ccd11a207a35ef8eae177682761c}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{namespacef_l_s_a1b41ccd11a207a35ef8eae177682761c}{    using ::fLS::clstring}};                                                  \(\backslash\)}
+\DoxyCodeLine{    static \textcolor{keyword}{union }\{ \textcolor{keywordtype}{void}* align; \textcolor{keywordtype}{char} s[\textcolor{keyword}{sizeof}(\mbox{\hyperlink{namespacef_l_s_a1b41ccd11a207a35ef8eae177682761c}{clstring}})]; \} s\_\#\#name[2];    \(\backslash\)}
+\DoxyCodeLine{    clstring* \textcolor{keyword}{const} FLAGS\_no\#\#name = ::fLS::                                \(\backslash\)}
+\DoxyCodeLine{                                   dont\_pass0toDEFINE\_string(s\_\#\#name[0].s, \(\backslash\)}
+\DoxyCodeLine{                                                             val);          \(\backslash\)}
+\DoxyCodeLine{    static \mbox{\hyperlink{class_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_1_1_flag_registerer}{GFLAGS\_NAMESPACE::FlagRegisterer}} o\_\#\#name(                       \(\backslash\)}
+\DoxyCodeLine{        \#name, \textcolor{stringliteral}{"string"}, \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a872aff5dae6b12538420bdacd2869d90}{MAYBE\_STRIPPED\_HELP}}(txt), \_\_FILE\_\_,                \(\backslash\)}
+\DoxyCodeLine{        s\_\#\#name[0].s, \textcolor{keyword}{new} (s\_\#\#name[1].s) \mbox{\hyperlink{namespacef_l_s_a1b41ccd11a207a35ef8eae177682761c}{clstring}}(*FLAGS\_no\#\#name));      \(\backslash\)}
+\DoxyCodeLine{    extern \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a03860ea6ee44d001c79e5af203651d5c}{GFLAGS\_DLL\_DEFINE\_FLAG}} \mbox{\hyperlink{namespacef_l_s_a1b41ccd11a207a35ef8eae177682761c}{clstring}}\& FLAGS\_\#\#name;                   \(\backslash\)}
+\DoxyCodeLine{    using fLS::FLAGS\_\#\#name;                                                \(\backslash\)}
+\DoxyCodeLine{    clstring\& FLAGS\_\#\#name = *FLAGS\_no\#\#name;                               \(\backslash\)}
+\DoxyCodeLine{  \}                                                                         \(\backslash\)}
+\DoxyCodeLine{  using fLS::FLAGS\_\#\#name}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a7d240238de6c0759c20ce2c804a9860e}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a7d240238de6c0759c20ce2c804a9860e}} 
+\index{gflags.h@{gflags.h}!DEFINE\_uint64@{DEFINE\_uint64}}
+\index{DEFINE\_uint64@{DEFINE\_uint64}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_uint64}{DEFINE\_uint64}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+uint64(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{val,  }\item[{}]{txt }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{   \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_ad9d9e4fc382a6fae0c3d06c55364ced1}{DEFINE\_VARIABLE}}(\mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_af2914c2ad1f9bf454f663ddcc5c934d5}{GFLAGS\_NAMESPACE::uint64}}, U64, \(\backslash\)}
+\DoxyCodeLine{                   name, val, txt)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_adf87f791d0ff26e5c5359225930da184}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_adf87f791d0ff26e5c5359225930da184}} 
+\index{gflags.h@{gflags.h}!DEFINE\_validator@{DEFINE\_validator}}
+\index{DEFINE\_validator@{DEFINE\_validator}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_validator}{DEFINE\_validator}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+validator(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{validator }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{bool} name\#\#\_validator\_registered = \mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_ab9508fafc50f115c1554d9c9bae8c04b}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{namespace_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_ab9508fafc50f115c1554d9c9bae8c04b}{            GFLAGS\_NAMESPACE::RegisterFlagValidator}}(\&FLAGS\_\#\#name, validator)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_ad9d9e4fc382a6fae0c3d06c55364ced1}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_ad9d9e4fc382a6fae0c3d06c55364ced1}} 
+\index{gflags.h@{gflags.h}!DEFINE\_VARIABLE@{DEFINE\_VARIABLE}}
+\index{DEFINE\_VARIABLE@{DEFINE\_VARIABLE}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_VARIABLE}{DEFINE\_VARIABLE}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{shorttype,  }\item[{}]{name,  }\item[{}]{value,  }\item[{}]{help }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{namespace }fL\#\#shorttype \{                                             \(\backslash\)}
+\DoxyCodeLine{    static \textcolor{keyword}{const} type FLAGS\_nono\#\#name = \mbox{\hyperlink{namespacedetail_a47b1bb0bbd3596589ed9187059c312efa2063c1608d6e0baf80249c42e2be5804}{value}};                         \(\backslash\)}
+\DoxyCodeLine{    \textcolor{comment}{/* We always want to export defined variables, dll or no */}         \(\backslash\)}
+\DoxyCodeLine{    GFLAGS\_DLL\_DEFINE\_FLAG type FLAGS\_\#\#name = FLAGS\_nono\#\#name;        \(\backslash\)}
+\DoxyCodeLine{    type FLAGS\_no\#\#name = FLAGS\_nono\#\#name;                             \(\backslash\)}
+\DoxyCodeLine{    static \mbox{\hyperlink{class_g_f_l_a_g_s___n_a_m_e_s_p_a_c_e_1_1_flag_registerer}{GFLAGS\_NAMESPACE::FlagRegisterer}} o\_\#\#name(                   \(\backslash\)}
+\DoxyCodeLine{      \#name, \#type, \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a872aff5dae6b12538420bdacd2869d90}{MAYBE\_STRIPPED\_HELP}}(help), \_\_FILE\_\_,                \(\backslash\)}
+\DoxyCodeLine{      \&FLAGS\_\#\#name, \&FLAGS\_no\#\#name);                                  \(\backslash\)}
+\DoxyCodeLine{  \}                                                                     \(\backslash\)}
+\DoxyCodeLine{  using fL\#\#shorttype::FLAGS\_\#\#name}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a03860ea6ee44d001c79e5af203651d5c}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a03860ea6ee44d001c79e5af203651d5c}} 
+\index{gflags.h@{gflags.h}!GFLAGS\_DLL\_DEFINE\_FLAG@{GFLAGS\_DLL\_DEFINE\_FLAG}}
+\index{GFLAGS\_DLL\_DEFINE\_FLAG@{GFLAGS\_DLL\_DEFINE\_FLAG}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{GFLAGS\_DLL\_DEFINE\_FLAG}{GFLAGS\_DLL\_DEFINE\_FLAG}}
+{\footnotesize\ttfamily \#define G\+F\+L\+A\+G\+S\+\_\+\+D\+L\+L\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+F\+L\+AG}
+
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a872aff5dae6b12538420bdacd2869d90}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a872aff5dae6b12538420bdacd2869d90}} 
+\index{gflags.h@{gflags.h}!MAYBE\_STRIPPED\_HELP@{MAYBE\_STRIPPED\_HELP}}
+\index{MAYBE\_STRIPPED\_HELP@{MAYBE\_STRIPPED\_HELP}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{MAYBE\_STRIPPED\_HELP}{MAYBE\_STRIPPED\_HELP}}
+{\footnotesize\ttfamily \#define M\+A\+Y\+B\+E\+\_\+\+S\+T\+R\+I\+P\+P\+E\+D\+\_\+\+H\+E\+LP(\begin{DoxyParamCaption}\item[{}]{txt }\end{DoxyParamCaption})~txt}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a9b129bcb10ecbbc1c97982a192bea863}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a9b129bcb10ecbbc1c97982a192bea863}} 
+\index{gflags.h@{gflags.h}!FlagSaver@{FlagSaver}}
+\index{FlagSaver@{FlagSaver}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{FlagSaver()}{FlagSaver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \+\_\+\+\_\+attribute\+::\+Flag\+Saver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_aa892441b1dc09ba2a358c3c5de3069ef}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_aa892441b1dc09ba2a358c3c5de3069ef}} 
+\index{gflags.h@{gflags.h}!FlagSaver@{FlagSaver}}
+\index{FlagSaver@{FlagSaver}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{FlagSaver()}{FlagSaver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \+\_\+\+\_\+attribute\+::\+Flag\+Saver (\begin{DoxyParamCaption}\item[{const Flag\+Saver \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a9aeebe0c7a58f909b5981d0992899aca}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a9aeebe0c7a58f909b5981d0992899aca}} 
+\index{gflags.h@{gflags.h}!operator=@{operator=}}
+\index{operator=@{operator=}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+attribute\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{gflag-2_81_82_2include_2gflags_2gflags_8h_aa892441b1dc09ba2a358c3c5de3069ef}{Flag\+Saver}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a86b138aa7e83b2209c2c55cfa313433e}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a86b138aa7e83b2209c2c55cfa313433e}} 
+\index{gflags.h@{gflags.h}!````~FlagSaver@{$\sim$FlagSaver}}
+\index{````~FlagSaver@{$\sim$FlagSaver}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{$\sim$FlagSaver()}{~FlagSaver()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+attribute\+::$\sim$\+Flag\+Saver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a8b210de03e3b09e8cf9ae786924b1d24}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a8b210de03e3b09e8cf9ae786924b1d24}} 
+\index{gflags.h@{gflags.h}!impl\_@{impl\_}}
+\index{impl\_@{impl\_}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{impl\_}{impl\_}}
+{\footnotesize\ttfamily class Flag\+Saver\+Impl$\ast$ impl\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a3a39b5e7a1f93ae9abb376f43f733a21}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a3a39b5e7a1f93ae9abb376f43f733a21}} 
+\index{gflags.h@{gflags.h}!SET\_FLAG\_IF\_DEFAULT@{SET\_FLAG\_IF\_DEFAULT}}
+\index{SET\_FLAG\_IF\_DEFAULT@{SET\_FLAG\_IF\_DEFAULT}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{SET\_FLAG\_IF\_DEFAULT}{SET\_FLAG\_IF\_DEFAULT}}
+{\footnotesize\ttfamily S\+E\+T\+\_\+\+F\+L\+A\+G\+\_\+\+I\+F\+\_\+\+D\+E\+F\+A\+U\+LT}
+
+\mbox{\Hypertarget{ceres-1_812_80_2include_2gflags_2gflags_8h_a959788fbbf7621922b671250ad568369}\label{ceres-1_812_80_2include_2gflags_2gflags_8h_a959788fbbf7621922b671250ad568369}} 
+\index{gflags.h@{gflags.h}!SET\_FLAGS\_VALUE@{SET\_FLAGS\_VALUE}}
+\index{SET\_FLAGS\_VALUE@{SET\_FLAGS\_VALUE}!gflags.h@{gflags.h}}
+\doxysubsubsection{\texorpdfstring{SET\_FLAGS\_VALUE}{SET\_FLAGS\_VALUE}}
+{\footnotesize\ttfamily S\+E\+T\+\_\+\+F\+L\+A\+G\+S\+\_\+\+V\+A\+L\+UE}
+

@@ -1,0 +1,121 @@
+\hypertarget{class_eigen_1_1_no_alias}{}\doxysection{Eigen\+::No\+Alias$<$ Expression\+Type, Storage\+Base $>$ Class Template Reference}
+\label{class_eigen_1_1_no_alias}\index{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}}
+
+
+Pseudo expression providing an operator = assuming no aliasing.  
+
+
+
+
+{\ttfamily \#include $<$No\+Alias.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Expression\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_no_alias_a21bcfc565d15f2c6010fe7916d0ea7a6}{Scalar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_no_alias_a5f394631fdd75723476bc8aa39f9c65f}{No\+Alias}} (Expression\+Type \&\mbox{\hyperlink{class_eigen_1_1_no_alias_a7b487c830713e3e38c839cdb3e2be6f9}{expression}})
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Expression\+Type \& \mbox{\hyperlink{class_eigen_1_1_no_alias_a226e32f7cda9c7bb708256b4e66ae609}{operator=}} (const Storage\+Base$<$ Other\+Derived $>$ \&other)
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Expression\+Type \& \mbox{\hyperlink{class_eigen_1_1_no_alias_a2436b0de67b4aeecb4376977161cc238}{operator+=}} (const Storage\+Base$<$ Other\+Derived $>$ \&other)
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Expression\+Type \& \mbox{\hyperlink{class_eigen_1_1_no_alias_a3b2c32fd05aea8b1e1b61754711ed0e8}{operator-\/=}} (const Storage\+Base$<$ Other\+Derived $>$ \&other)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Expression\+Type \& \mbox{\hyperlink{class_eigen_1_1_no_alias_a7b487c830713e3e38c839cdb3e2be6f9}{expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Expression\+Type \& \mbox{\hyperlink{class_eigen_1_1_no_alias_ab61d2c9d39ef278fcc8182b7322752ca}{m\+\_\+expression}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Expression\+Type, template$<$ typename $>$ class Storage\+Base$>$\newline
+class Eigen\+::\+No\+Alias$<$ Expression\+Type, Storage\+Base $>$}
+
+Pseudo expression providing an operator = assuming no aliasing. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Expression\+Type} & the type of the object on which to do the lazy assignment\\
+\hline
+\end{DoxyTemplParams}
+This class represents an expression with special assignment operators assuming no aliasing between the target expression and the source expression. More precisely it alloas to bypass the Eval\+Before\+Assign\+Bit flag of the source expression. It is the return type of \mbox{\hyperlink{class_eigen_1_1_matrix_base_a2c1085de7645f23f240876388457da0b}{Matrix\+Base\+::noalias()}} and most of the time this is the only way it is used.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_matrix_base_a2c1085de7645f23f240876388457da0b}{Matrix\+Base\+::noalias()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_no_alias_a21bcfc565d15f2c6010fe7916d0ea7a6}\label{class_eigen_1_1_no_alias_a21bcfc565d15f2c6010fe7916d0ea7a6}} 
+\index{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , template$<$ typename $>$ class Storage\+Base$>$ \\
+typedef Expression\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_no_alias}{Eigen\+::\+No\+Alias}}$<$ Expression\+Type, Storage\+Base $>$\+::\mbox{\hyperlink{class_eigen_1_1_no_alias_a21bcfc565d15f2c6010fe7916d0ea7a6}{Scalar}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_no_alias_a5f394631fdd75723476bc8aa39f9c65f}\label{class_eigen_1_1_no_alias_a5f394631fdd75723476bc8aa39f9c65f}} 
+\index{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}!NoAlias@{NoAlias}}
+\index{NoAlias@{NoAlias}!Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}}
+\doxysubsubsection{\texorpdfstring{NoAlias()}{NoAlias()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , template$<$ typename $>$ class Storage\+Base$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_no_alias}{Eigen\+::\+No\+Alias}}$<$ Expression\+Type, Storage\+Base $>$\+::\mbox{\hyperlink{class_eigen_1_1_no_alias}{No\+Alias}} (\begin{DoxyParamCaption}\item[{Expression\+Type \&}]{expression }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_no_alias_a7b487c830713e3e38c839cdb3e2be6f9}\label{class_eigen_1_1_no_alias_a7b487c830713e3e38c839cdb3e2be6f9}} 
+\index{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}!expression@{expression}}
+\index{expression@{expression}!Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}}
+\doxysubsubsection{\texorpdfstring{expression()}{expression()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , template$<$ typename $>$ class Storage\+Base$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Expression\+Type\& \mbox{\hyperlink{class_eigen_1_1_no_alias}{Eigen\+::\+No\+Alias}}$<$ Expression\+Type, Storage\+Base $>$\+::expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_no_alias_a2436b0de67b4aeecb4376977161cc238}\label{class_eigen_1_1_no_alias_a2436b0de67b4aeecb4376977161cc238}} 
+\index{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , template$<$ typename $>$ class Storage\+Base$>$ \\
+template$<$typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Expression\+Type\& \mbox{\hyperlink{class_eigen_1_1_no_alias}{Eigen\+::\+No\+Alias}}$<$ Expression\+Type, Storage\+Base $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const Storage\+Base$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_no_alias_a3b2c32fd05aea8b1e1b61754711ed0e8}\label{class_eigen_1_1_no_alias_a3b2c32fd05aea8b1e1b61754711ed0e8}} 
+\index{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , template$<$ typename $>$ class Storage\+Base$>$ \\
+template$<$typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Expression\+Type\& \mbox{\hyperlink{class_eigen_1_1_no_alias}{Eigen\+::\+No\+Alias}}$<$ Expression\+Type, Storage\+Base $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const Storage\+Base$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_no_alias_a226e32f7cda9c7bb708256b4e66ae609}\label{class_eigen_1_1_no_alias_a226e32f7cda9c7bb708256b4e66ae609}} 
+\index{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , template$<$ typename $>$ class Storage\+Base$>$ \\
+template$<$typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Expression\+Type\& \mbox{\hyperlink{class_eigen_1_1_no_alias}{Eigen\+::\+No\+Alias}}$<$ Expression\+Type, Storage\+Base $>$\+::operator= (\begin{DoxyParamCaption}\item[{const Storage\+Base$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_no_alias_ab61d2c9d39ef278fcc8182b7322752ca}\label{class_eigen_1_1_no_alias_ab61d2c9d39ef278fcc8182b7322752ca}} 
+\index{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}!m\_expression@{m\_expression}}
+\index{m\_expression@{m\_expression}!Eigen::NoAlias$<$ ExpressionType, StorageBase $>$@{Eigen::NoAlias$<$ ExpressionType, StorageBase $>$}}
+\doxysubsubsection{\texorpdfstring{m\_expression}{m\_expression}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , template$<$ typename $>$ class Storage\+Base$>$ \\
+Expression\+Type\& \mbox{\hyperlink{class_eigen_1_1_no_alias}{Eigen\+::\+No\+Alias}}$<$ Expression\+Type, Storage\+Base $>$\+::m\+\_\+expression\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_no_alias_8h}{No\+Alias.\+h}}\end{DoxyCompactItemize}

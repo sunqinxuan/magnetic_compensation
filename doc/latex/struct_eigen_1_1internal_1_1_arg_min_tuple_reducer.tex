@@ -1,0 +1,68 @@
+\hypertarget{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer}{}\doxysection{Eigen\+::internal\+::Arg\+Min\+Tuple\+Reducer$<$ T $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer}\index{Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Functors.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_a8d45c619743b0bf25d8530529c2bd69b}{reduce}} (const T \&t, T $\ast$accum) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_a3861e16cd31e4f06c3d726dae9956fd9}{initialize}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_aa825ab40b1079197432a31f70acce2dd}{finalize}} (const T \&accum) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_aacd129bb14aa56b9035bcbfba747c308}{Packet\+Access}} = \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+static const bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_a8629a68afdb40db5d922ecc2f1c6503e}{Is\+Stateful}} = \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_aa825ab40b1079197432a31f70acce2dd}\label{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_aa825ab40b1079197432a31f70acce2dd}} 
+\index{Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}!finalize@{finalize}}
+\index{finalize@{finalize}!Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer}{Eigen\+::internal\+::\+Arg\+Min\+Tuple\+Reducer}}$<$ T $>$\+::finalize (\begin{DoxyParamCaption}\item[{const T \&}]{accum }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_a3861e16cd31e4f06c3d726dae9956fd9}\label{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_a3861e16cd31e4f06c3d726dae9956fd9}} 
+\index{Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}!initialize@{initialize}}
+\index{initialize@{initialize}!Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} T \mbox{\hyperlink{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer}{Eigen\+::internal\+::\+Arg\+Min\+Tuple\+Reducer}}$<$ T $>$\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_a8d45c619743b0bf25d8530529c2bd69b}\label{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_a8d45c619743b0bf25d8530529c2bd69b}} 
+\index{Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}!reduce@{reduce}}
+\index{reduce@{reduce}!Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reduce()}{reduce()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer}{Eigen\+::internal\+::\+Arg\+Min\+Tuple\+Reducer}}$<$ T $>$\+::reduce (\begin{DoxyParamCaption}\item[{const T \&}]{t,  }\item[{T $\ast$}]{accum }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_a8629a68afdb40db5d922ecc2f1c6503e}\label{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_a8629a68afdb40db5d922ecc2f1c6503e}} 
+\index{Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}!IsStateful@{IsStateful}}
+\index{IsStateful@{IsStateful}!Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsStateful}{IsStateful}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer}{Eigen\+::internal\+::\+Arg\+Min\+Tuple\+Reducer}}$<$ T $>$\+::Is\+Stateful = \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_aacd129bb14aa56b9035bcbfba747c308}\label{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer_aacd129bb14aa56b9035bcbfba747c308}} 
+\index{Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}!PacketAccess@{PacketAccess}}
+\index{PacketAccess@{PacketAccess}!Eigen::internal::ArgMinTupleReducer$<$ T $>$@{Eigen::internal::ArgMinTupleReducer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PacketAccess}{PacketAccess}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1_arg_min_tuple_reducer}{Eigen\+::internal\+::\+Arg\+Min\+Tuple\+Reducer}}$<$ T $>$\+::Packet\+Access = \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_functors_8h}{Tensor\+Functors.\+h}}\end{DoxyCompactItemize}

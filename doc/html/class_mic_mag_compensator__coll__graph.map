@@ -1,0 +1,5 @@
+<map id="MicMagCompensator" name="MicMagCompensator">
+<area shape="rect" id="node1" title="basic class for magnetic compensator" alt="" coords="202,124,362,151"/>
+<area shape="rect" id="node2" href="$class_mic_observable.html" title=" " alt="" coords="5,13,292,39"/>
+<area shape="rect" id="node3" href="$class_mic_data_storer.html" title=" " alt="" coords="317,5,517,47"/>
+</map>

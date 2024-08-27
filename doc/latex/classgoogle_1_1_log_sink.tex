@@ -1,0 +1,55 @@
+\hypertarget{classgoogle_1_1_log_sink}{}\doxysection{google\+::Log\+Sink Class Reference}
+\label{classgoogle_1_1_log_sink}\index{google::LogSink@{google::LogSink}}
+
+
+{\ttfamily \#include $<$logging.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classgoogle_1_1_log_sink_a67eb5021086d96184e579bbdc8b9cd87}{$\sim$\+Log\+Sink}} ()
+\item 
+virtual void \mbox{\hyperlink{classgoogle_1_1_log_sink_a28ff212e0862398aa97978dc1da08896}{send}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} severity, const char $\ast$full\+\_\+filename, const char $\ast$base\+\_\+filename, int line, const struct \+::tm $\ast$tm\+\_\+time, const char $\ast$message, size\+\_\+t message\+\_\+len)=0
+\item 
+virtual void \mbox{\hyperlink{classgoogle_1_1_log_sink_ae0f78cf0671809962085d5ad14567d21}{Wait\+Till\+Sent}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classgoogle_1_1_log_sink_aa3bfeb17a771a59f27954b2e4a19df03}{To\+String}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} severity, const char $\ast$\mbox{\hyperlink{3rd__party_2tolles-lawson_2_c_make_lists_8txt_afbbe76c98bd0d8b6ca5a03175563eb71}{file}}, int line, const struct \+::tm $\ast$tm\+\_\+time, const char $\ast$message, size\+\_\+t message\+\_\+len)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgoogle_1_1_log_sink_a67eb5021086d96184e579bbdc8b9cd87}\label{classgoogle_1_1_log_sink_a67eb5021086d96184e579bbdc8b9cd87}} 
+\index{google::LogSink@{google::LogSink}!````~LogSink@{$\sim$LogSink}}
+\index{````~LogSink@{$\sim$LogSink}!google::LogSink@{google::LogSink}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogSink()}{~LogSink()}}
+{\footnotesize\ttfamily virtual google\+::\+Log\+Sink\+::$\sim$\+Log\+Sink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgoogle_1_1_log_sink_a28ff212e0862398aa97978dc1da08896}\label{classgoogle_1_1_log_sink_a28ff212e0862398aa97978dc1da08896}} 
+\index{google::LogSink@{google::LogSink}!send@{send}}
+\index{send@{send}!google::LogSink@{google::LogSink}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily virtual void google\+::\+Log\+Sink\+::send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}}}]{severity,  }\item[{const char $\ast$}]{full\+\_\+filename,  }\item[{const char $\ast$}]{base\+\_\+filename,  }\item[{int}]{line,  }\item[{const struct \+::tm $\ast$}]{tm\+\_\+time,  }\item[{const char $\ast$}]{message,  }\item[{size\+\_\+t}]{message\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classgoogle_1_1_log_sink_aa3bfeb17a771a59f27954b2e4a19df03}\label{classgoogle_1_1_log_sink_aa3bfeb17a771a59f27954b2e4a19df03}} 
+\index{google::LogSink@{google::LogSink}!ToString@{ToString}}
+\index{ToString@{ToString}!google::LogSink@{google::LogSink}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily static std\+::string google\+::\+Log\+Sink\+::\+To\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}}}]{severity,  }\item[{const char $\ast$}]{file,  }\item[{int}]{line,  }\item[{const struct \+::tm $\ast$}]{tm\+\_\+time,  }\item[{const char $\ast$}]{message,  }\item[{size\+\_\+t}]{message\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classgoogle_1_1_log_sink_ae0f78cf0671809962085d5ad14567d21}\label{classgoogle_1_1_log_sink_ae0f78cf0671809962085d5ad14567d21}} 
+\index{google::LogSink@{google::LogSink}!WaitTillSent@{WaitTillSent}}
+\index{WaitTillSent@{WaitTillSent}!google::LogSink@{google::LogSink}}
+\doxysubsubsection{\texorpdfstring{WaitTillSent()}{WaitTillSent()}}
+{\footnotesize\ttfamily virtual void google\+::\+Log\+Sink\+::\+Wait\+Till\+Sent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/glog-\/0.\+4.\+0/include/glog/\mbox{\hyperlink{logging_8h}{logging.\+h}}\end{DoxyCompactItemize}

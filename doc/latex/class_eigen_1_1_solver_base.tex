@@ -1,0 +1,273 @@
+\hypertarget{class_eigen_1_1_solver_base}{}\doxysection{Eigen\+::Solver\+Base$<$ Derived $>$ Class Template Reference}
+\label{class_eigen_1_1_solver_base}\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+
+
+A base class for matrix decomposition and solvers.  
+
+
+
+
+{\ttfamily \#include $<$Solver\+Base.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Solver\+Base$<$ Derived $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_eigen_1_1_solver_base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Solver\+Base$<$ Derived $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_eigen_1_1_solver_base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda2a478017a27efa168c261c5912587d51}{Rows\+At\+Compile\+Time}} = internal\+::traits$<$Derived$>$\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda6783746e5b80618fac0144caed7a2e2c}{Cols\+At\+Compile\+Time}} = internal\+::traits$<$Derived$>$\+::Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8edac1bc1e38db37882d030e7251b5124127}{Size\+At\+Compile\+Time}}, 
+\mbox{\hyperlink{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda80d33cf8a5021bb1078557864db17bd6}{Max\+Rows\+At\+Compile\+Time}} = internal\+::traits$<$Derived$>$\+::Max\+Rows\+At\+Compile\+Time, 
+\newline
+\mbox{\hyperlink{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8edab9a5dd736751d1496e1b596346b09a08}{Max\+Cols\+At\+Compile\+Time}} = internal\+::traits$<$Derived$>$\+::Max\+Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8edab6587456c1e72db29cd78d13e47e6886}{Max\+Size\+At\+Compile\+Time}}, 
+\mbox{\hyperlink{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda8439060629feb88f327d9fd6729fdd79}{Is\+Vector\+At\+Compile\+Time}}
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+Base}}$<$ Derived $>$ \mbox{\hyperlink{class_eigen_1_1_solver_base_a12798f4bbad57ef378b087801ab90cfe}{Base}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_solver_base_a8013b6454a87289d3e1cd138615af3d3}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1add__const}{internal\+::add\+\_\+const}}$<$ \mbox{\hyperlink{class_eigen_1_1_transpose}{Transpose}}$<$ const Derived $>$ $>$\+::type \mbox{\hyperlink{class_eigen_1_1_solver_base_ab99f15ef1fa6885e393ea809ca402946}{Const\+Transpose\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{internal\+::conditional}}$<$ \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}{Scalar}} $>$\+::Is\+Complex, \mbox{\hyperlink{class_eigen_1_1_cwise_unary_op}{Cwise\+Unary\+Op}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1scalar__conjugate__op}{internal\+::scalar\+\_\+conjugate\+\_\+op}}$<$ \mbox{\hyperlink{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}{Scalar}} $>$, \mbox{\hyperlink{class_eigen_1_1_solver_base_ab99f15ef1fa6885e393ea809ca402946}{Const\+Transpose\+Return\+Type}} $>$, \mbox{\hyperlink{class_eigen_1_1_solver_base_ab99f15ef1fa6885e393ea809ca402946}{Const\+Transpose\+Return\+Type}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_solver_base_a8fd44c45359c0102af1a47752c2b8c82}{Adjoint\+Return\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_solver_base_a4d5e5baddfba3790ab1a5f247dcc4dc1}{Solver\+Base}} ()
+\item 
+\mbox{\hyperlink{class_eigen_1_1_solver_base_a5a9bb1cec6324ffd4016319e9ae94477}{$\sim$\+Solver\+Base}} ()
+\item 
+{\footnotesize template$<$typename Rhs $>$ }\\const \mbox{\hyperlink{class_eigen_1_1_solve}{Solve}}$<$ Derived, Rhs $>$ \mbox{\hyperlink{class_eigen_1_1_solver_base_a7fd647d110487799205df6f99547879d}{solve}} (const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Rhs $>$ \&b) const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_solver_base_ab99f15ef1fa6885e393ea809ca402946}{Const\+Transpose\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_solver_base_a732e75b5132bb4db3775916927b0e86c}{transpose}} () const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_solver_base_a8fd44c45359c0102af1a47752c2b8c82}{Adjoint\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_solver_base_a05a3686a89888681c8e0c2bcab6d1ce5}{adjoint}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived \& \mbox{\hyperlink{class_eigen_1_1_solver_base_a324b16961a11d2ecfd2d1b7dd7946545}{derived}} ()
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived \& \mbox{\hyperlink{class_eigen_1_1_solver_base_affa3cf01b59af4c503f5f126b3601907}{derived}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Derived$>$\newline
+class Eigen\+::\+Solver\+Base$<$ Derived $>$}
+
+A base class for matrix decomposition and solvers. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Derived} & the actual type of the decomposition/solver.\\
+\hline
+\end{DoxyTemplParams}
+Any matrix decomposition inheriting this base class provide the following A\+PI\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{MatrixType A, \mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}}, \mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}};}
+\DoxyCodeLine{DecompositionType dec(A);}
+\DoxyCodeLine{\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}} = dec.solve(\mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}});             \textcolor{comment}{// solve A   * x = b}}
+\DoxyCodeLine{\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}} = dec.transpose().solve(\mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}}); \textcolor{comment}{// solve A\string^T * x = b}}
+\DoxyCodeLine{\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}} = dec.adjoint().solve(\mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}});   \textcolor{comment}{// solve A'  * x = b}}
+\end{DoxyCode}
+
+
+\begin{DoxyWarning}{Warning}
+Currently, any other usage of \mbox{\hyperlink{class_eigen_1_1_solver_base_a732e75b5132bb4db3775916927b0e86c}{transpose()}} and \mbox{\hyperlink{class_eigen_1_1_solver_base_a05a3686a89888681c8e0c2bcab6d1ce5}{adjoint()}} are not supported and will produce compilation errors.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+class \mbox{\hyperlink{class_eigen_1_1_partial_piv_l_u}{Partial\+Piv\+LU}}, class \mbox{\hyperlink{class_eigen_1_1_full_piv_l_u}{Full\+Piv\+LU}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_a8fd44c45359c0102af1a47752c2b8c82}\label{class_eigen_1_1_solver_base_a8fd44c45359c0102af1a47752c2b8c82}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!AdjointReturnType@{AdjointReturnType}}
+\index{AdjointReturnType@{AdjointReturnType}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{AdjointReturnType}{AdjointReturnType}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{internal\+::conditional}}$<$\mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}{Scalar}}$>$\+::Is\+Complex, \mbox{\hyperlink{class_eigen_1_1_cwise_unary_op}{Cwise\+Unary\+Op}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1scalar__conjugate__op}{internal\+::scalar\+\_\+conjugate\+\_\+op}}$<$\mbox{\hyperlink{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}{Scalar}}$>$, \mbox{\hyperlink{class_eigen_1_1_solver_base_ab99f15ef1fa6885e393ea809ca402946}{Const\+Transpose\+Return\+Type}}$>$, \mbox{\hyperlink{class_eigen_1_1_solver_base_ab99f15ef1fa6885e393ea809ca402946}{Const\+Transpose\+Return\+Type}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_solver_base}{Eigen\+::\+Solver\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_solver_base_a8fd44c45359c0102af1a47752c2b8c82}{Adjoint\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_a12798f4bbad57ef378b087801ab90cfe}\label{class_eigen_1_1_solver_base_a12798f4bbad57ef378b087801ab90cfe}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+Base}}$<$Derived$>$ \mbox{\hyperlink{class_eigen_1_1_solver_base}{Eigen\+::\+Solver\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_solver_base_a12798f4bbad57ef378b087801ab90cfe}{Base}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_a8013b6454a87289d3e1cd138615af3d3}\label{class_eigen_1_1_solver_base_a8013b6454a87289d3e1cd138615af3d3}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_solver_base}{Eigen\+::\+Solver\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_solver_base_a8013b6454a87289d3e1cd138615af3d3}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_ab99f15ef1fa6885e393ea809ca402946}\label{class_eigen_1_1_solver_base_ab99f15ef1fa6885e393ea809ca402946}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!ConstTransposeReturnType@{ConstTransposeReturnType}}
+\index{ConstTransposeReturnType@{ConstTransposeReturnType}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{ConstTransposeReturnType}{ConstTransposeReturnType}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1add__const}{internal\+::add\+\_\+const}}$<$\mbox{\hyperlink{class_eigen_1_1_transpose}{Transpose}}$<$const Derived$>$ $>$\+::type \mbox{\hyperlink{class_eigen_1_1_solver_base}{Eigen\+::\+Solver\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_solver_base_ab99f15ef1fa6885e393ea809ca402946}{Const\+Transpose\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}\label{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$Derived$>$\+::\mbox{\hyperlink{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_solver_base}{Eigen\+::\+Solver\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_solver_base_a08184e3c085cce33f80b5a37376d52ab}{Scalar}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8ed}\label{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8ed}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda2a478017a27efa168c261c5912587d51}\label{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda2a478017a27efa168c261c5912587d51}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda6783746e5b80618fac0144caed7a2e2c}\label{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda6783746e5b80618fac0144caed7a2e2c}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SizeAtCompileTime@{SizeAtCompileTime}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!SizeAtCompileTime@{SizeAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8edac1bc1e38db37882d030e7251b5124127}\label{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8edac1bc1e38db37882d030e7251b5124127}} 
+Size\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda80d33cf8a5021bb1078557864db17bd6}\label{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda80d33cf8a5021bb1078557864db17bd6}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8edab9a5dd736751d1496e1b596346b09a08}\label{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8edab9a5dd736751d1496e1b596346b09a08}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxSizeAtCompileTime@{MaxSizeAtCompileTime}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!MaxSizeAtCompileTime@{MaxSizeAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8edab6587456c1e72db29cd78d13e47e6886}\label{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8edab6587456c1e72db29cd78d13e47e6886}} 
+Max\+Size\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsVectorAtCompileTime@{IsVectorAtCompileTime}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!IsVectorAtCompileTime@{IsVectorAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda8439060629feb88f327d9fd6729fdd79}\label{class_eigen_1_1_solver_base_ab2c27c896946a65c33e47fa78f92d8eda8439060629feb88f327d9fd6729fdd79}} 
+Is\+Vector\+At\+Compile\+Time&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_a4d5e5baddfba3790ab1a5f247dcc4dc1}\label{class_eigen_1_1_solver_base_a4d5e5baddfba3790ab1a5f247dcc4dc1}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!SolverBase@{SolverBase}}
+\index{SolverBase@{SolverBase}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{SolverBase()}{SolverBase()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_solver_base}{Eigen\+::\+Solver\+Base}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_solver_base}{Solver\+Base}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor \mbox{\Hypertarget{class_eigen_1_1_solver_base_a5a9bb1cec6324ffd4016319e9ae94477}\label{class_eigen_1_1_solver_base_a5a9bb1cec6324ffd4016319e9ae94477}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!````~SolverBase@{$\sim$SolverBase}}
+\index{````~SolverBase@{$\sim$SolverBase}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SolverBase()}{~SolverBase()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_solver_base}{Eigen\+::\+Solver\+Base}}$<$ Derived $>$\+::$\sim$\mbox{\hyperlink{class_eigen_1_1_solver_base}{Solver\+Base}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_a05a3686a89888681c8e0c2bcab6d1ce5}\label{class_eigen_1_1_solver_base_a05a3686a89888681c8e0c2bcab6d1ce5}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!adjoint@{adjoint}}
+\index{adjoint@{adjoint}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{adjoint()}{adjoint()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_solver_base_a8fd44c45359c0102af1a47752c2b8c82}{Adjoint\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_solver_base}{Eigen\+::\+Solver\+Base}}$<$ Derived $>$\+::adjoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the adjoint of the factored matrix
+\end{DoxyReturn}
+A typical usage is to solve for the adjoint problem A\textquotesingle{} x = b\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}} = dec.adjoint().solve(\mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}}); }
+\end{DoxyCode}
+
+
+For real scalar types, this function is equivalent to \mbox{\hyperlink{class_eigen_1_1_solver_base_a732e75b5132bb4db3775916927b0e86c}{transpose()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_solver_base_a732e75b5132bb4db3775916927b0e86c}{transpose()}}, \mbox{\hyperlink{class_eigen_1_1_solver_base_a7fd647d110487799205df6f99547879d}{solve()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_a324b16961a11d2ecfd2d1b7dd7946545}\label{class_eigen_1_1_solver_base_a324b16961a11d2ecfd2d1b7dd7946545}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!derived@{derived}}
+\index{derived@{derived}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{derived()}{derived()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived\& \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+::\+Eigen\+Base}}$<$ Derived $>$\+::derived\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a reference to the derived object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_affa3cf01b59af4c503f5f126b3601907}\label{class_eigen_1_1_solver_base_affa3cf01b59af4c503f5f126b3601907}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!derived@{derived}}
+\index{derived@{derived}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{derived()}{derived()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived\& \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+::\+Eigen\+Base}}$<$ Derived $>$\+::derived\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a const reference to the derived object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_a7fd647d110487799205df6f99547879d}\label{class_eigen_1_1_solver_base_a7fd647d110487799205df6f99547879d}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!solve@{solve}}
+\index{solve@{solve}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$typename Rhs $>$ \\
+const \mbox{\hyperlink{class_eigen_1_1_solve}{Solve}}$<$Derived, Rhs$>$ \mbox{\hyperlink{class_eigen_1_1_solver_base}{Eigen\+::\+Solver\+Base}}$<$ Derived $>$\+::solve (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Rhs $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the solution x of $ A x = b $ using the current decomposition of A. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_solver_base_a732e75b5132bb4db3775916927b0e86c}\label{class_eigen_1_1_solver_base_a732e75b5132bb4db3775916927b0e86c}} 
+\index{Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}!transpose@{transpose}}
+\index{transpose@{transpose}!Eigen::SolverBase$<$ Derived $>$@{Eigen::SolverBase$<$ Derived $>$}}
+\doxysubsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_solver_base_ab99f15ef1fa6885e393ea809ca402946}{Const\+Transpose\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_solver_base}{Eigen\+::\+Solver\+Base}}$<$ Derived $>$\+::transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the transposed of the factored matrix.
+\end{DoxyReturn}
+A typical usage is to solve for the transposed problem A$^\wedge$T x = b\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}} = dec.transpose().solve(\mbox{\hyperlink{namespace_eigen_1_1numext_af1d2b94ba113d92ef00dbf9a6aa97eb1}{b}}); }
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_solver_base_a05a3686a89888681c8e0c2bcab6d1ce5}{adjoint()}}, \mbox{\hyperlink{class_eigen_1_1_solver_base_a7fd647d110487799205df6f99547879d}{solve()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_solver_base_8h}{Solver\+Base.\+h}}\end{DoxyCompactItemize}

@@ -198,6 +198,8 @@ namespace tl
     }
     TL_A_filt_ = TL_A_;
 
+    degeneration(TL_A_filt_);
+
     // linear regression to get TL coefficients;
     std::vector<double> residual;
     linear_regression(TL_beta_, residual, B_filt, TL_A_filt_, 0);
@@ -441,6 +443,8 @@ namespace tl
       TL_A_filt_ = TL_A_;
     }
 
+    degeneration(TL_A_filt_);
+
     // linear regression to get TL coefficients;
     std::vector<double> residual;
     linear_regression(TL_beta_, residual, B_filt, TL_A_filt_, lambda);
@@ -636,43 +640,46 @@ namespace tl
     {
       res_sq[i] = residual[i] * residual[i];
     }
-    double sum=std::accumulate(std::begin(res_sq),std::end(res_sq),0.0);
-    return sqrt(sum/residual.size());
+    double sum = std::accumulate(std::begin(res_sq), std::end(res_sq), 0.0);
+    return sqrt(sum / residual.size());
   }
 
-  //
-  // void TollesLawson::getFilterCoeffAB(int n, double lowcut, double highcut,
-  //                                    int fs, std::vector<double> &acof_vec,
-  //                                    std::vector<double> &bcof_vec) {
-  //
-  //  double nyq = 0.5 * fs;
-  //  double f1f = lowcut / nyq;
-  //  double f2f = highcut / nyq;
-  //  double sf; // scaling factor
-  //
-  //  double *acof;
-  //  int *bcof;
-  //  /* calculate the d coefficients */
-  //  acof = dcof_bwbp(n, f1f, f2f);
-  //  if (acof == NULL) {
-  //    perror("Unable to calculate d coefficients");
-  //  }
-  //
-  //  /* calculate the c coefficients */
-  //  bcof = ccof_bwbp(n);
-  //  if (bcof == NULL) {
-  //    perror("Unable to calculate c coefficients");
-  //  }
-  //
-  //  sf = sf_bwbp(n, f1f, f2f); /* scaling factor for the c coefficients */
-  //
-  //  /* create the filter coefficient file */
-  //  for (int i = 0; i <= 2 * n; ++i) {
-  //    bcof_vec.push_back((double)bcof[i] * sf);
-  //  }
-  //
-  //  for (int i = 0; i <= 2 * n; ++i)
-  //    acof_vec.push_back(acof[i]);
-  //}
+  void TollesLawson::degeneration(const std::vector<std::vector<double>> &TL_A)
+  {
+    unsigned int dim = TL_A.size();
+    unsigned int N = TL_A[0].size();
+    Eigen::MatrixXd A_matrix = Eigen::MatrixXd::Identity(N, dim);
+    for (size_t i = 0; i < dim; ++i)
+    {
+      for (size_t j = 0; j < N; ++j)
+      {
+        A_matrix(j, i) = TL_A[i][j];
+      }
+    }
+    Eigen::MatrixXd ATA = A_matrix.transpose() * A_matrix;
+    Eigen::SelfAdjointEigenSolver<Eigen::MatrixXd> es(ATA);
+    // Eigen::MatrixXd evec = es.eigenvectors();
+    Eigen::VectorXd eval = es.eigenvalues();
+    cout << "ATA eigenvalues: " << endl
+         << eval.transpose() << endl;
+    // cout<<"ATA eigenvectors: "<<endl<<evec<<endl;
+
+    double sigma_min = sqrt(eval(0));
+    double sigma_max = sqrt(eval(dim - 1));
+    if (sigma_min > 1e-3)
+    {
+      double condition_k = sigma_max / sigma_min;
+      cout << "condition number = " << condition_k << endl;
+    }
+    else
+    {
+      cerr << "errors solving eigenvalues of ATA" << endl;
+    }
+
+    // Eigen::JacobiSVD<Eigen::MatrixXd> svd(A_matrix, Eigen::ComputeFullU | Eigen::ComputeFullV);
+    // Eigen::JacobiSVD<Eigen::MatrixXd, Eigen::ComputeThinU | Eigen::ComputeThinV> svd(A_matrix);
+    // cout << "A_matrix singular values: " << endl
+    //      << svd.singularValues().transpose() << endl;
+  }
 
 } // namespace magnav

@@ -1,0 +1,189 @@
+\hypertarget{class_eigen_1_1_tensor_cwise_ternary_op}{}\doxysection{Eigen\+::Tensor\+Cwise\+Ternary\+Op$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_tensor_cwise_ternary_op}\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Expr.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Tensor\+Cwise\+Ternary\+Op$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_tensor_cwise_ternary_op__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Tensor\+Cwise\+Ternary\+Op$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_tensor_cwise_ternary_op__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Tensor\+Cwise\+Ternary\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa614f75a90955515aca655c235c265a7}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa614f75a90955515aca655c235c265a7}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa614f75a90955515aca655c235c265a7}{Scalar}} $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a699120599172d21e180c1d225d5be8d3}{Real\+Scalar}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa614f75a90955515aca655c235c265a7}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a635a3636bd33daf89bd3b8ba7ce8d8d3}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Tensor\+Cwise\+Ternary\+Op}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_af36d41e63405bbc2d9f04459fdba127d}{Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Tensor\+Cwise\+Ternary\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a253e04fe3005aaf9836d44e60e9bba5a}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a253e04fe3005aaf9836d44e60e9bba5a}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Tensor\+Cwise\+Ternary\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa2c55a3cab4374f31060a8f68791966e}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa2c55a3cab4374f31060a8f68791966e}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a2d0bbb3f1a0c80e53b0db2bdbcb382ed}{Tensor\+Cwise\+Ternary\+Op}} (const Arg1\+Xpr\+Type \&arg1, const Arg2\+Xpr\+Type \&arg2, const Arg3\+Xpr\+Type \&arg3, const Ternary\+Op \&func=Ternary\+Op())
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Ternary\+Op \& \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_af5f763f1383bb23046343756961a352e}{functor}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Arg1\+Xpr\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a807b14e4bd6435b5ddcb0051e54348e0}{arg1\+Expression}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Arg2\+Xpr\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a33e99f7c864b008e578e0be29e075234}{arg2\+Expression}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Arg3\+Xpr\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_ad3a6a668c63fa73069c382b97a6af19d}{arg3\+Expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Arg1\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_ad139df8823218db6b62b30c30de61082}{m\+\_\+arg1\+\_\+xpr}}
+\item 
+Arg2\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa1a1599bddcc1e4f1b310040c2844bf5}{m\+\_\+arg2\+\_\+xpr}}
+\item 
+Arg3\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a444fc01e31173cb192ac22b9fa52c97b}{m\+\_\+arg3\+\_\+xpr}}
+\item 
+const Ternary\+Op \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_ac360f0a5d920835cea7e2d8741101e06}{m\+\_\+functor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_a635a3636bd33daf89bd3b8ba7ce8d8d3}\label{class_eigen_1_1_tensor_cwise_ternary_op_a635a3636bd33daf89bd3b8ba7ce8d8d3}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa614f75a90955515aca655c235c265a7}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a635a3636bd33daf89bd3b8ba7ce8d8d3}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_aa2c55a3cab4374f31060a8f68791966e}\label{class_eigen_1_1_tensor_cwise_ternary_op_aa2c55a3cab4374f31060a8f68791966e}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Tensor\+Cwise\+Ternary\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa2c55a3cab4374f31060a8f68791966e}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa2c55a3cab4374f31060a8f68791966e}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_af36d41e63405bbc2d9f04459fdba127d}\label{class_eigen_1_1_tensor_cwise_ternary_op_af36d41e63405bbc2d9f04459fdba127d}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Tensor\+Cwise\+Ternary\+Op}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_af36d41e63405bbc2d9f04459fdba127d}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_a699120599172d21e180c1d225d5be8d3}\label{class_eigen_1_1_tensor_cwise_ternary_op_a699120599172d21e180c1d225d5be8d3}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa614f75a90955515aca655c235c265a7}{Scalar}}$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a699120599172d21e180c1d225d5be8d3}{Real\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_aa614f75a90955515aca655c235c265a7}\label{class_eigen_1_1_tensor_cwise_ternary_op_aa614f75a90955515aca655c235c265a7}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Tensor\+Cwise\+Ternary\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa614f75a90955515aca655c235c265a7}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_aa614f75a90955515aca655c235c265a7}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_a253e04fe3005aaf9836d44e60e9bba5a}\label{class_eigen_1_1_tensor_cwise_ternary_op_a253e04fe3005aaf9836d44e60e9bba5a}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Tensor\+Cwise\+Ternary\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a253e04fe3005aaf9836d44e60e9bba5a}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op_a253e04fe3005aaf9836d44e60e9bba5a}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_a2d0bbb3f1a0c80e53b0db2bdbcb382ed}\label{class_eigen_1_1_tensor_cwise_ternary_op_a2d0bbb3f1a0c80e53b0db2bdbcb382ed}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!TensorCwiseTernaryOp@{TensorCwiseTernaryOp}}
+\index{TensorCwiseTernaryOp@{TensorCwiseTernaryOp}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{TensorCwiseTernaryOp()}{TensorCwiseTernaryOp()}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Tensor\+Cwise\+Ternary\+Op}} (\begin{DoxyParamCaption}\item[{const Arg1\+Xpr\+Type \&}]{arg1,  }\item[{const Arg2\+Xpr\+Type \&}]{arg2,  }\item[{const Arg3\+Xpr\+Type \&}]{arg3,  }\item[{const Ternary\+Op \&}]{func = {\ttfamily TernaryOp()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_a807b14e4bd6435b5ddcb0051e54348e0}\label{class_eigen_1_1_tensor_cwise_ternary_op_a807b14e4bd6435b5ddcb0051e54348e0}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!arg1Expression@{arg1Expression}}
+\index{arg1Expression@{arg1Expression}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{arg1Expression()}{arg1Expression()}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Arg1\+Xpr\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::arg1\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the nested expressions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_a33e99f7c864b008e578e0be29e075234}\label{class_eigen_1_1_tensor_cwise_ternary_op_a33e99f7c864b008e578e0be29e075234}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!arg2Expression@{arg2Expression}}
+\index{arg2Expression@{arg2Expression}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{arg2Expression()}{arg2Expression()}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Arg2\+Xpr\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::arg2\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_ad3a6a668c63fa73069c382b97a6af19d}\label{class_eigen_1_1_tensor_cwise_ternary_op_ad3a6a668c63fa73069c382b97a6af19d}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!arg3Expression@{arg3Expression}}
+\index{arg3Expression@{arg3Expression}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{arg3Expression()}{arg3Expression()}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Arg3\+Xpr\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::arg3\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_af5f763f1383bb23046343756961a352e}\label{class_eigen_1_1_tensor_cwise_ternary_op_af5f763f1383bb23046343756961a352e}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!functor@{functor}}
+\index{functor@{functor}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{functor()}{functor()}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Ternary\+Op\& \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::functor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_ad139df8823218db6b62b30c30de61082}\label{class_eigen_1_1_tensor_cwise_ternary_op_ad139df8823218db6b62b30c30de61082}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!m\_arg1\_xpr@{m\_arg1\_xpr}}
+\index{m\_arg1\_xpr@{m\_arg1\_xpr}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_arg1\_xpr}{m\_arg1\_xpr}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+Arg1\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::m\+\_\+arg1\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_aa1a1599bddcc1e4f1b310040c2844bf5}\label{class_eigen_1_1_tensor_cwise_ternary_op_aa1a1599bddcc1e4f1b310040c2844bf5}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!m\_arg2\_xpr@{m\_arg2\_xpr}}
+\index{m\_arg2\_xpr@{m\_arg2\_xpr}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_arg2\_xpr}{m\_arg2\_xpr}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+Arg2\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::m\+\_\+arg2\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_a444fc01e31173cb192ac22b9fa52c97b}\label{class_eigen_1_1_tensor_cwise_ternary_op_a444fc01e31173cb192ac22b9fa52c97b}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!m\_arg3\_xpr@{m\_arg3\_xpr}}
+\index{m\_arg3\_xpr@{m\_arg3\_xpr}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_arg3\_xpr}{m\_arg3\_xpr}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+Arg3\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::m\+\_\+arg3\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_cwise_ternary_op_ac360f0a5d920835cea7e2d8741101e06}\label{class_eigen_1_1_tensor_cwise_ternary_op_ac360f0a5d920835cea7e2d8741101e06}} 
+\index{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}!m\_functor@{m\_functor}}
+\index{m\_functor@{m\_functor}!Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$@{Eigen::TensorCwiseTernaryOp$<$ TernaryOp, Arg1XprType, Arg2XprType, Arg3XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_functor}{m\_functor}}
+{\footnotesize\ttfamily template$<$typename Ternary\+Op , typename Arg1\+Xpr\+Type , typename Arg2\+Xpr\+Type , typename Arg3\+Xpr\+Type $>$ \\
+const Ternary\+Op \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_ternary_op}{Eigen\+::\+Tensor\+Cwise\+Ternary\+Op}}$<$ Ternary\+Op, Arg1\+Xpr\+Type, Arg2\+Xpr\+Type, Arg3\+Xpr\+Type $>$\+::m\+\_\+functor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_expr_8h}{Tensor\+Expr.\+h}}\end{DoxyCompactItemize}

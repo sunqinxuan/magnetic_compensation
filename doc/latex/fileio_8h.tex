@@ -1,0 +1,46 @@
+\hypertarget{fileio_8h}{}\doxysection{include/fileio/fileio.h File Reference}
+\label{fileio_8h}\index{include/fileio/fileio.h@{include/fileio/fileio.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}common/mic\+\_\+prerequisite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/mic\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+Include dependency graph for fileio.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fileio_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mic__prerequisite_8h_ac3afdc1b2ec865ffb74d6eb75764462e}{M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+S\+T\+A\+RT}} ret\+\_\+t \mbox{\hyperlink{fileio_8h_ae86c11d94ac89234fbfb4394888a2bee}{get\+\_\+line\+\_\+data}} (const std\+::vector$<$ float64\+\_\+t $>$ \&data\+\_\+line, mic\+\_\+mag\+\_\+t \&mag)
+\item 
+ret\+\_\+t \mbox{\hyperlink{fileio_8h_aa2aa837e475863ed043554cdffc80657}{read\+\_\+line}} (std\+::ifstream \&infile, std\+::vector$<$ float64\+\_\+t $>$ \&data)
+\item 
+ret\+\_\+t \mbox{\hyperlink{fileio_8h_ab33e4b892b25c9ab759d296948dc3acb}{load\+\_\+data}} (std\+::string file\+\_\+name, \mbox{\hyperlink{mic__mag__compensator_8h_adf559014919b63e147862635173c91bc}{mic\+\_\+mag\+\_\+compensator\+\_\+shared\+\_\+ptr}} mag\+\_\+compensator\+\_\+ptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fileio_8h_ae86c11d94ac89234fbfb4394888a2bee}\label{fileio_8h_ae86c11d94ac89234fbfb4394888a2bee}} 
+\index{fileio.h@{fileio.h}!get\_line\_data@{get\_line\_data}}
+\index{get\_line\_data@{get\_line\_data}!fileio.h@{fileio.h}}
+\doxysubsubsection{\texorpdfstring{get\_line\_data()}{get\_line\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__prerequisite_8h_ac3afdc1b2ec865ffb74d6eb75764462e}{M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+S\+T\+A\+RT}} ret\+\_\+t get\+\_\+line\+\_\+data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float64\+\_\+t $>$ \&}]{data\+\_\+line,  }\item[{mic\+\_\+mag\+\_\+t \&}]{mag }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fileio_8h_ab33e4b892b25c9ab759d296948dc3acb}\label{fileio_8h_ab33e4b892b25c9ab759d296948dc3acb}} 
+\index{fileio.h@{fileio.h}!load\_data@{load\_data}}
+\index{load\_data@{load\_data}!fileio.h@{fileio.h}}
+\doxysubsubsection{\texorpdfstring{load\_data()}{load\_data()}}
+{\footnotesize\ttfamily ret\+\_\+t load\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{mic__mag__compensator_8h_adf559014919b63e147862635173c91bc}{mic\+\_\+mag\+\_\+compensator\+\_\+shared\+\_\+ptr}}}]{mag\+\_\+compensator\+\_\+ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fileio_8h_aa2aa837e475863ed043554cdffc80657}\label{fileio_8h_aa2aa837e475863ed043554cdffc80657}} 
+\index{fileio.h@{fileio.h}!read\_line@{read\_line}}
+\index{read\_line@{read\_line}!fileio.h@{fileio.h}}
+\doxysubsubsection{\texorpdfstring{read\_line()}{read\_line()}}
+{\footnotesize\ttfamily ret\+\_\+t read\+\_\+line (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{infile,  }\item[{std\+::vector$<$ float64\+\_\+t $>$ \&}]{data }\end{DoxyParamCaption})}
+

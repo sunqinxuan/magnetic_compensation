@@ -1,0 +1,116 @@
+\hypertarget{classceres_1_1_homogeneous_vector_parameterization}{}\doxysection{ceres\+::Homogeneous\+Vector\+Parameterization Class Reference}
+\label{classceres_1_1_homogeneous_vector_parameterization}\index{ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}}
+
+
+{\ttfamily \#include $<$local\+\_\+parameterization.\+h$>$}
+
+
+
+Inheritance diagram for ceres\+::Homogeneous\+Vector\+Parameterization\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classceres_1_1_homogeneous_vector_parameterization__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ceres\+::Homogeneous\+Vector\+Parameterization\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classceres_1_1_homogeneous_vector_parameterization__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_homogeneous_vector_parameterization_afe891e29df556fa34fc76bcc6724329e}{Homogeneous\+Vector\+Parameterization}} (int size)
+\item 
+virtual \mbox{\hyperlink{classceres_1_1_homogeneous_vector_parameterization_a80f9550f025850d0f73e1124a9e641aa}{$\sim$\+Homogeneous\+Vector\+Parameterization}} ()
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_homogeneous_vector_parameterization_a89794e555395b3a2914bb338bb5c6d99}{Plus}} (const double $\ast$x, const double $\ast$delta, double $\ast$x\+\_\+plus\+\_\+delta) const
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_homogeneous_vector_parameterization_aec136f610e59eeb132e3678416e88745}{Compute\+Jacobian}} (const double $\ast$x, double $\ast$jacobian) const
+\item 
+virtual int \mbox{\hyperlink{classceres_1_1_homogeneous_vector_parameterization_a22ed668e8679b60abc0b11c6e88aecf3}{Global\+Size}} () const
+\item 
+virtual int \mbox{\hyperlink{classceres_1_1_homogeneous_vector_parameterization_a305558be872e375b19f8aff04467fcfb}{Local\+Size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classceres_1_1_homogeneous_vector_parameterization_a1c43e507e1e397883f607309caede4a6}{size\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classceres_1_1_homogeneous_vector_parameterization_afe891e29df556fa34fc76bcc6724329e}\label{classceres_1_1_homogeneous_vector_parameterization_afe891e29df556fa34fc76bcc6724329e}} 
+\index{ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}!HomogeneousVectorParameterization@{HomogeneousVectorParameterization}}
+\index{HomogeneousVectorParameterization@{HomogeneousVectorParameterization}!ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}}
+\doxysubsubsection{\texorpdfstring{HomogeneousVectorParameterization()}{HomogeneousVectorParameterization()}}
+{\footnotesize\ttfamily ceres\+::\+Homogeneous\+Vector\+Parameterization\+::\+Homogeneous\+Vector\+Parameterization (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classceres_1_1_homogeneous_vector_parameterization_a80f9550f025850d0f73e1124a9e641aa}\label{classceres_1_1_homogeneous_vector_parameterization_a80f9550f025850d0f73e1124a9e641aa}} 
+\index{ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}!````~HomogeneousVectorParameterization@{$\sim$HomogeneousVectorParameterization}}
+\index{````~HomogeneousVectorParameterization@{$\sim$HomogeneousVectorParameterization}!ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}}
+\doxysubsubsection{\texorpdfstring{$\sim$HomogeneousVectorParameterization()}{~HomogeneousVectorParameterization()}}
+{\footnotesize\ttfamily virtual ceres\+::\+Homogeneous\+Vector\+Parameterization\+::$\sim$\+Homogeneous\+Vector\+Parameterization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_homogeneous_vector_parameterization_aec136f610e59eeb132e3678416e88745}\label{classceres_1_1_homogeneous_vector_parameterization_aec136f610e59eeb132e3678416e88745}} 
+\index{ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}!ComputeJacobian@{ComputeJacobian}}
+\index{ComputeJacobian@{ComputeJacobian}!ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}}
+\doxysubsubsection{\texorpdfstring{ComputeJacobian()}{ComputeJacobian()}}
+{\footnotesize\ttfamily virtual bool ceres\+::\+Homogeneous\+Vector\+Parameterization\+::\+Compute\+Jacobian (\begin{DoxyParamCaption}\item[{const double $\ast$}]{x,  }\item[{double $\ast$}]{jacobian }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_ab0e25130de878a2180d2b0b2caab6b95}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_homogeneous_vector_parameterization_a22ed668e8679b60abc0b11c6e88aecf3}\label{classceres_1_1_homogeneous_vector_parameterization_a22ed668e8679b60abc0b11c6e88aecf3}} 
+\index{ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}!GlobalSize@{GlobalSize}}
+\index{GlobalSize@{GlobalSize}!ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}}
+\doxysubsubsection{\texorpdfstring{GlobalSize()}{GlobalSize()}}
+{\footnotesize\ttfamily virtual int ceres\+::\+Homogeneous\+Vector\+Parameterization\+::\+Global\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_a8f1ec16c46144c3808abf2ba189b6a18}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_homogeneous_vector_parameterization_a305558be872e375b19f8aff04467fcfb}\label{classceres_1_1_homogeneous_vector_parameterization_a305558be872e375b19f8aff04467fcfb}} 
+\index{ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}!LocalSize@{LocalSize}}
+\index{LocalSize@{LocalSize}!ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}}
+\doxysubsubsection{\texorpdfstring{LocalSize()}{LocalSize()}}
+{\footnotesize\ttfamily virtual int ceres\+::\+Homogeneous\+Vector\+Parameterization\+::\+Local\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_ae5a6db8e21e101d43f20a3c9bc179ef5}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_homogeneous_vector_parameterization_a89794e555395b3a2914bb338bb5c6d99}\label{classceres_1_1_homogeneous_vector_parameterization_a89794e555395b3a2914bb338bb5c6d99}} 
+\index{ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}!Plus@{Plus}}
+\index{Plus@{Plus}!ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}}
+\doxysubsubsection{\texorpdfstring{Plus()}{Plus()}}
+{\footnotesize\ttfamily virtual bool ceres\+::\+Homogeneous\+Vector\+Parameterization\+::\+Plus (\begin{DoxyParamCaption}\item[{const double $\ast$}]{x,  }\item[{const double $\ast$}]{delta,  }\item[{double $\ast$}]{x\+\_\+plus\+\_\+delta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_a8b21e4a5d0a0bc926b7e350f417b73dc}{ceres\+::\+Local\+Parameterization}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classceres_1_1_homogeneous_vector_parameterization_a1c43e507e1e397883f607309caede4a6}\label{classceres_1_1_homogeneous_vector_parameterization_a1c43e507e1e397883f607309caede4a6}} 
+\index{ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}!size\_@{size\_}}
+\index{size\_@{size\_}!ceres::HomogeneousVectorParameterization@{ceres::HomogeneousVectorParameterization}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily const int ceres\+::\+Homogeneous\+Vector\+Parameterization\+::size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{local__parameterization_8h}{local\+\_\+parameterization.\+h}}\end{DoxyCompactItemize}

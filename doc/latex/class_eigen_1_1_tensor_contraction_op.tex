@@ -1,0 +1,162 @@
+\hypertarget{class_eigen_1_1_tensor_contraction_op}{}\doxysection{Eigen\+::Tensor\+Contraction\+Op$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_tensor_contraction_op}\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Contraction.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Tensor\+Contraction\+Op$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_tensor_contraction_op__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Tensor\+Contraction\+Op$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_tensor_contraction_op__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Tensor\+Contraction\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_ad71e40c21098c8ef448b43496b08a39c}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_ad71e40c21098c8ef448b43496b08a39c}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1internal_1_1gebp__traits}{internal\+::gebp\+\_\+traits}}$<$ typename Lhs\+Xpr\+Type\+::\+Coeff\+Return\+Type, typename Rhs\+Xpr\+Type\+::\+Coeff\+Return\+Type $>$\+::Res\+Scalar \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_aa23288e0007b2689605fbcb8aae1801e}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Tensor\+Contraction\+Op}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a61f4957b7c6b0d31750d909d65e3bcde}{Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Tensor\+Contraction\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a6d21e364994b36ff1684f4ca4980c4fe}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a6d21e364994b36ff1684f4ca4980c4fe}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Tensor\+Contraction\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a83eae7a702b928e780f93d13449215eb}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a83eae7a702b928e780f93d13449215eb}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_acc33200398e6a8cbfdb772b631933019}{Tensor\+Contraction\+Op}} (const Lhs\+Xpr\+Type \&lhs, const Rhs\+Xpr\+Type \&rhs, const Indices \&dims)
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Indices \& \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_aaedcab4d7cafec5ec2ec7e910bcc4b42}{indices}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Lhs\+Xpr\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a5249e2e242fb701fe75b2218ae82e878}{lhs\+Expression}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Rhs\+Xpr\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_afd01acc4931a72fb7dd1b2c632815df2}{rhs\+Expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Lhs\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a8aae66aafa4e39bb351eb53550a9471f}{m\+\_\+lhs\+\_\+xpr}}
+\item 
+Rhs\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_aa4f138424d2c44d237be1c589716bb7c}{m\+\_\+rhs\+\_\+xpr}}
+\item 
+const Indices \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_ac85f1c9887937f1a3d242b021a570f06}{m\+\_\+indices}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_aa23288e0007b2689605fbcb8aae1801e}\label{class_eigen_1_1_tensor_contraction_op_aa23288e0007b2689605fbcb8aae1801e}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1internal_1_1gebp__traits}{internal\+::gebp\+\_\+traits}}$<$typename Lhs\+Xpr\+Type\+::\+Coeff\+Return\+Type, typename Rhs\+Xpr\+Type\+::\+Coeff\+Return\+Type$>$\+::Res\+Scalar \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_aa23288e0007b2689605fbcb8aae1801e}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_a83eae7a702b928e780f93d13449215eb}\label{class_eigen_1_1_tensor_contraction_op_a83eae7a702b928e780f93d13449215eb}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Tensor\+Contraction\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a83eae7a702b928e780f93d13449215eb}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a83eae7a702b928e780f93d13449215eb}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_a61f4957b7c6b0d31750d909d65e3bcde}\label{class_eigen_1_1_tensor_contraction_op_a61f4957b7c6b0d31750d909d65e3bcde}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Tensor\+Contraction\+Op}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a61f4957b7c6b0d31750d909d65e3bcde}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_ad71e40c21098c8ef448b43496b08a39c}\label{class_eigen_1_1_tensor_contraction_op_ad71e40c21098c8ef448b43496b08a39c}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Tensor\+Contraction\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_ad71e40c21098c8ef448b43496b08a39c}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_ad71e40c21098c8ef448b43496b08a39c}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_a6d21e364994b36ff1684f4ca4980c4fe}\label{class_eigen_1_1_tensor_contraction_op_a6d21e364994b36ff1684f4ca4980c4fe}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Tensor\+Contraction\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a6d21e364994b36ff1684f4ca4980c4fe}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op_a6d21e364994b36ff1684f4ca4980c4fe}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_acc33200398e6a8cbfdb772b631933019}\label{class_eigen_1_1_tensor_contraction_op_acc33200398e6a8cbfdb772b631933019}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!TensorContractionOp@{TensorContractionOp}}
+\index{TensorContractionOp@{TensorContractionOp}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{TensorContractionOp()}{TensorContractionOp()}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Tensor\+Contraction\+Op}} (\begin{DoxyParamCaption}\item[{const Lhs\+Xpr\+Type \&}]{lhs,  }\item[{const Rhs\+Xpr\+Type \&}]{rhs,  }\item[{const Indices \&}]{dims }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_aaedcab4d7cafec5ec2ec7e910bcc4b42}\label{class_eigen_1_1_tensor_contraction_op_aaedcab4d7cafec5ec2ec7e910bcc4b42}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!indices@{indices}}
+\index{indices@{indices}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{indices()}{indices()}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Indices\& \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_a5249e2e242fb701fe75b2218ae82e878}\label{class_eigen_1_1_tensor_contraction_op_a5249e2e242fb701fe75b2218ae82e878}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!lhsExpression@{lhsExpression}}
+\index{lhsExpression@{lhsExpression}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{lhsExpression()}{lhsExpression()}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Lhs\+Xpr\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::lhs\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the nested expressions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_afd01acc4931a72fb7dd1b2c632815df2}\label{class_eigen_1_1_tensor_contraction_op_afd01acc4931a72fb7dd1b2c632815df2}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!rhsExpression@{rhsExpression}}
+\index{rhsExpression@{rhsExpression}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{rhsExpression()}{rhsExpression()}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Rhs\+Xpr\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::rhs\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_ac85f1c9887937f1a3d242b021a570f06}\label{class_eigen_1_1_tensor_contraction_op_ac85f1c9887937f1a3d242b021a570f06}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!m\_indices@{m\_indices}}
+\index{m\_indices@{m\_indices}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_indices}{m\_indices}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+const Indices \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::m\+\_\+indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_a8aae66aafa4e39bb351eb53550a9471f}\label{class_eigen_1_1_tensor_contraction_op_a8aae66aafa4e39bb351eb53550a9471f}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!m\_lhs\_xpr@{m\_lhs\_xpr}}
+\index{m\_lhs\_xpr@{m\_lhs\_xpr}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_lhs\_xpr}{m\_lhs\_xpr}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+Lhs\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::m\+\_\+lhs\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_contraction_op_aa4f138424d2c44d237be1c589716bb7c}\label{class_eigen_1_1_tensor_contraction_op_aa4f138424d2c44d237be1c589716bb7c}} 
+\index{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}!m\_rhs\_xpr@{m\_rhs\_xpr}}
+\index{m\_rhs\_xpr@{m\_rhs\_xpr}!Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$@{Eigen::TensorContractionOp$<$ Indices, LhsXprType, RhsXprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_rhs\_xpr}{m\_rhs\_xpr}}
+{\footnotesize\ttfamily template$<$typename Indices , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+Rhs\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_contraction_op}{Eigen\+::\+Tensor\+Contraction\+Op}}$<$ Indices, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$\+::m\+\_\+rhs\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_contraction_8h}{Tensor\+Contraction.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+var struct_eigen_1_1internal_1_1quat__product_3_01_architecture_1_1_s_s_e_00_01_derived_00_01_other_derived_00_01float_01_4 =
+[
+    [ "AAlignment", "struct_eigen_1_1internal_1_1quat__product_3_01_architecture_1_1_s_s_e_00_01_derived_00_01_other_derived_00_01float_01_4.html#a09d1979eed221b3535036973f41d4cc5aafed905538ccd889b5d977d4775ecfd8", null ],
+    [ "BAlignment", "struct_eigen_1_1internal_1_1quat__product_3_01_architecture_1_1_s_s_e_00_01_derived_00_01_other_derived_00_01float_01_4.html#a09d1979eed221b3535036973f41d4cc5accdd44bd28984c657f0bb098db1dfc2b", null ],
+    [ "ResAlignment", "struct_eigen_1_1internal_1_1quat__product_3_01_architecture_1_1_s_s_e_00_01_derived_00_01_other_derived_00_01float_01_4.html#a09d1979eed221b3535036973f41d4cc5a9df52f731f3b0295c67c3977acad8c6b", null ]
+];

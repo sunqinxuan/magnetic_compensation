@@ -1,0 +1,44 @@
+\hypertarget{struct_eigen_1_1internal_1_1plain__col__type}{}\doxysection{Eigen\+::internal\+::plain\+\_\+col\+\_\+type$<$ Expression\+Type, Scalar $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1plain__col__type}\index{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$}}
+
+
+{\ttfamily \#include $<$Xpr\+Helper.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$ Scalar, Expression\+Type\+::\+Rows\+At\+Compile\+Time, 1, Expression\+Type\+::\+Plain\+Object\+::\+Options \&$\sim$\mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, Expression\+Type\+::\+Max\+Rows\+At\+Compile\+Time, 1 $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_ac75ab0cd71ee5bed5adbd9b77eeba12a}{Matrix\+Col\+Type}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_array}{Array}}$<$ Scalar, Expression\+Type\+::\+Rows\+At\+Compile\+Time, 1, Expression\+Type\+::\+Plain\+Object\+::\+Options \&$\sim$\mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, Expression\+Type\+::\+Max\+Rows\+At\+Compile\+Time, 1 $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_a17712acb2f07a712205370a99a62f402}{Array\+Col\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{conditional}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1is__same}{is\+\_\+same}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ Expression\+Type $>$\+::Xpr\+Kind, \mbox{\hyperlink{struct_eigen_1_1_matrix_xpr}{Matrix\+Xpr}} $>$\+::value, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_ac75ab0cd71ee5bed5adbd9b77eeba12a}{Matrix\+Col\+Type}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_a17712acb2f07a712205370a99a62f402}{Array\+Col\+Type}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_a0084ea2ac7f2803ac1c1c13e968e6b04}{type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_a0084ea2ac7f2803ac1c1c13e968e6b04}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1plain__col__type_a17712acb2f07a712205370a99a62f402}\label{struct_eigen_1_1internal_1_1plain__col__type_a17712acb2f07a712205370a99a62f402}} 
+\index{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$}!ArrayColType@{ArrayColType}}
+\index{ArrayColType@{ArrayColType}!Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{ArrayColType}{ArrayColType}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , typename Scalar  = typename Expression\+Type\+::\+Scalar$>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_array}{Array}}$<$Scalar, Expression\+Type\+::\+Rows\+At\+Compile\+Time, 1, Expression\+Type\+::\+Plain\+Object\+::\+Options \& $\sim$\mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, Expression\+Type\+::\+Max\+Rows\+At\+Compile\+Time, 1$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type}{Eigen\+::internal\+::plain\+\_\+col\+\_\+type}}$<$ Expression\+Type, Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_a17712acb2f07a712205370a99a62f402}{Array\+Col\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1plain__col__type_ac75ab0cd71ee5bed5adbd9b77eeba12a}\label{struct_eigen_1_1internal_1_1plain__col__type_ac75ab0cd71ee5bed5adbd9b77eeba12a}} 
+\index{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$}!MatrixColType@{MatrixColType}}
+\index{MatrixColType@{MatrixColType}!Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{MatrixColType}{MatrixColType}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , typename Scalar  = typename Expression\+Type\+::\+Scalar$>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$Scalar, Expression\+Type\+::\+Rows\+At\+Compile\+Time, 1, Expression\+Type\+::\+Plain\+Object\+::\+Options \& $\sim$\mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, Expression\+Type\+::\+Max\+Rows\+At\+Compile\+Time, 1$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type}{Eigen\+::internal\+::plain\+\_\+col\+\_\+type}}$<$ Expression\+Type, Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_ac75ab0cd71ee5bed5adbd9b77eeba12a}{Matrix\+Col\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1plain__col__type_a0084ea2ac7f2803ac1c1c13e968e6b04}\label{struct_eigen_1_1internal_1_1plain__col__type_a0084ea2ac7f2803ac1c1c13e968e6b04}} 
+\index{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$}!type@{type}}
+\index{type@{type}!Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$@{Eigen::internal::plain\_col\_type$<$ ExpressionType, Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type , typename Scalar  = typename Expression\+Type\+::\+Scalar$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{conditional}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1is__same}{is\+\_\+same}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$Expression\+Type$>$\+::Xpr\+Kind, \mbox{\hyperlink{struct_eigen_1_1_matrix_xpr}{Matrix\+Xpr}} $>$\+::value, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_ac75ab0cd71ee5bed5adbd9b77eeba12a}{Matrix\+Col\+Type}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_a17712acb2f07a712205370a99a62f402}{Array\+Col\+Type}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_a0084ea2ac7f2803ac1c1c13e968e6b04}{type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type}{Eigen\+::internal\+::plain\+\_\+col\+\_\+type}}$<$ Expression\+Type, Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1plain__col__type_a0084ea2ac7f2803ac1c1c13e968e6b04}{type}}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/util/\mbox{\hyperlink{_xpr_helper_8h}{Xpr\+Helper.\+h}}\end{DoxyCompactItemize}

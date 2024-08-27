@@ -1,0 +1,152 @@
+\hypertarget{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{}\doxysection{Eigen\+::Cholmod\+Simplicial\+L\+D\+LT$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$ Class Template Reference}
+\label{class_eigen_1_1_cholmod_simplicial_l_d_l_t}\index{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}}
+
+
+A simplicial direct Cholesky (\mbox{\hyperlink{class_eigen_1_1_l_d_l_t}{L\+D\+LT}}) factorization and solver based on Cholmod.  
+
+
+
+
+{\ttfamily \#include $<$Cholmod\+Support.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Cholmod\+Simplicial\+L\+D\+LT$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_cholmod_simplicial_l_d_l_t__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Cholmod\+Simplicial\+L\+D\+LT$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_cholmod_simplicial_l_d_l_t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+\_\+\+Matrix\+Type \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a25eb39d9c0d5baef08fda965444cb27e}{Matrix\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_aa804d5c72980bf74cc0da72d3b282c45}{Cholmod\+Simplicial\+L\+D\+LT}} ()
+\item 
+\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a98280cac66601a0ef98d28de1a430061}{Cholmod\+Simplicial\+L\+D\+LT}} (const \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a25eb39d9c0d5baef08fda965444cb27e}{Matrix\+Type}} \&matrix)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_ad710a54d3331dca280e25b4fb00ce8ec}{$\sim$\+Cholmod\+Simplicial\+L\+D\+LT}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a368110df5fb61cbebbce2c43bcc8faa7}{init}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_cholmod_base}{Cholmod\+Base}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo, \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Cholmod\+Simplicial\+L\+D\+LT}} $>$ \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_ab16ab3714278d2bcdcbfbadf4131011b}{Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cholmod\+\_\+common \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a160c7925c7d7272b721b7c5c715403db}{m\+\_\+cholmod}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename \+\_\+\+Matrix\+Type, int \+\_\+\+Up\+Lo = Lower$>$\newline
+class Eigen\+::\+Cholmod\+Simplicial\+L\+D\+L\+T$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$}
+
+A simplicial direct Cholesky (\mbox{\hyperlink{class_eigen_1_1_l_d_l_t}{L\+D\+LT}}) factorization and solver based on Cholmod. 
+
+This class allows to solve for A.\+X = B sparse linear problems via a simplicial L\+D\+L$^\wedge$T Cholesky factorization using the Cholmod library. This simplicial variant is equivalent to \mbox{\hyperlink{namespace_eigen}{Eigen}}\textquotesingle{}s built-\/in \mbox{\hyperlink{class_eigen_1_1_simplicial_l_d_l_t}{Simplicial\+L\+D\+LT}} class. Therefore, it has little practical interest. The sparse matrix A must be selfadjoint and positive definite. The vectors or matrices X and B can be either dense or sparse.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \+\_\+\+Matrix\+Type} & the type of the sparse matrix A, it must be a Sparse\+Matrix$<$$>$ \\
+\hline
+{\em \+\_\+\+Up\+Lo} & the triangular part that will be used for the computations. It can be Lower or Upper. Default is Lower.\\
+\hline
+\end{DoxyTemplParams}
+\textbackslash{}implsparsesolverconcept
+
+This class supports all kind of Sparse\+Matrix$<$$>$\+: row or column major; upper, lower, or both; compressed or non compressed.
+
+\begin{DoxyWarning}{Warning}
+Only double precision real and complex scalar types are supported by Cholmod.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+Tutorial\+Sparse\+Solver\+Concept, class \mbox{\hyperlink{class_eigen_1_1_cholmod_supernodal_l_l_t}{Cholmod\+Supernodal\+L\+LT}}, class \mbox{\hyperlink{class_eigen_1_1_simplicial_l_d_l_t}{Simplicial\+L\+D\+LT}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_cholmod_simplicial_l_d_l_t_ab16ab3714278d2bcdcbfbadf4131011b}\label{class_eigen_1_1_cholmod_simplicial_l_d_l_t_ab16ab3714278d2bcdcbfbadf4131011b}} 
+\index{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , int \+\_\+\+Up\+Lo = Lower$>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_cholmod_base}{Cholmod\+Base}}$<$\+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo, \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Cholmod\+Simplicial\+L\+D\+LT}}$>$ \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Eigen\+::\+Cholmod\+Simplicial\+L\+D\+LT}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$\+::\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_ab16ab3714278d2bcdcbfbadf4131011b}{Base}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a25eb39d9c0d5baef08fda965444cb27e}\label{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a25eb39d9c0d5baef08fda965444cb27e}} 
+\index{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}!MatrixType@{MatrixType}}
+\index{MatrixType@{MatrixType}!Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}}
+\doxysubsubsection{\texorpdfstring{MatrixType}{MatrixType}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , int \+\_\+\+Up\+Lo = Lower$>$ \\
+typedef \+\_\+\+Matrix\+Type \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Eigen\+::\+Cholmod\+Simplicial\+L\+D\+LT}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$\+::\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a25eb39d9c0d5baef08fda965444cb27e}{Matrix\+Type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_cholmod_simplicial_l_d_l_t_aa804d5c72980bf74cc0da72d3b282c45}\label{class_eigen_1_1_cholmod_simplicial_l_d_l_t_aa804d5c72980bf74cc0da72d3b282c45}} 
+\index{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}!CholmodSimplicialLDLT@{CholmodSimplicialLDLT}}
+\index{CholmodSimplicialLDLT@{CholmodSimplicialLDLT}!Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}}
+\doxysubsubsection{\texorpdfstring{CholmodSimplicialLDLT()}{CholmodSimplicialLDLT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , int \+\_\+\+Up\+Lo = Lower$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Eigen\+::\+Cholmod\+Simplicial\+L\+D\+LT}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$\+::\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Cholmod\+Simplicial\+L\+D\+LT}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a98280cac66601a0ef98d28de1a430061}\label{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a98280cac66601a0ef98d28de1a430061}} 
+\index{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}!CholmodSimplicialLDLT@{CholmodSimplicialLDLT}}
+\index{CholmodSimplicialLDLT@{CholmodSimplicialLDLT}!Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}}
+\doxysubsubsection{\texorpdfstring{CholmodSimplicialLDLT()}{CholmodSimplicialLDLT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , int \+\_\+\+Up\+Lo = Lower$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Eigen\+::\+Cholmod\+Simplicial\+L\+D\+LT}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$\+::\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Cholmod\+Simplicial\+L\+D\+LT}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a25eb39d9c0d5baef08fda965444cb27e}{Matrix\+Type}} \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_cholmod_simplicial_l_d_l_t_ad710a54d3331dca280e25b4fb00ce8ec}\label{class_eigen_1_1_cholmod_simplicial_l_d_l_t_ad710a54d3331dca280e25b4fb00ce8ec}} 
+\index{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}!````~CholmodSimplicialLDLT@{$\sim$CholmodSimplicialLDLT}}
+\index{````~CholmodSimplicialLDLT@{$\sim$CholmodSimplicialLDLT}!Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$CholmodSimplicialLDLT()}{~CholmodSimplicialLDLT()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , int \+\_\+\+Up\+Lo = Lower$>$ \\
+\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Eigen\+::\+Cholmod\+Simplicial\+L\+D\+LT}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$\+::$\sim$\mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Cholmod\+Simplicial\+L\+D\+LT}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a368110df5fb61cbebbce2c43bcc8faa7}\label{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a368110df5fb61cbebbce2c43bcc8faa7}} 
+\index{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}!init@{init}}
+\index{init@{init}!Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , int \+\_\+\+Up\+Lo = Lower$>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_cholmod_simplicial_l_d_l_t}{Eigen\+::\+Cholmod\+Simplicial\+L\+D\+LT}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo $>$\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a160c7925c7d7272b721b7c5c715403db}\label{class_eigen_1_1_cholmod_simplicial_l_d_l_t_a160c7925c7d7272b721b7c5c715403db}} 
+\index{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}!m\_cholmod@{m\_cholmod}}
+\index{m\_cholmod@{m\_cholmod}!Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$@{Eigen::CholmodSimplicialLDLT$<$ \_MatrixType, \_UpLo $>$}}
+\doxysubsubsection{\texorpdfstring{m\_cholmod}{m\_cholmod}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Matrix\+Type , int \+\_\+\+Up\+Lo = Lower$>$ \\
+cholmod\+\_\+common \mbox{\hyperlink{class_eigen_1_1_cholmod_base}{Eigen\+::\+Cholmod\+Base}}$<$ \+\_\+\+Matrix\+Type, \+\_\+\+Up\+Lo, Derived $>$\+::m\+\_\+cholmod\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Cholmod\+Support/\mbox{\hyperlink{_cholmod_support_8h}{Cholmod\+Support.\+h}}\end{DoxyCompactItemize}

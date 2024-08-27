@@ -1,0 +1,91 @@
+\hypertarget{_std_deque_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Stl\+Support/\+Std\+Deque.h File Reference}
+\label{_std_deque_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/StlSupport/StdDeque.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/StlSupport/StdDeque.h}}
+{\ttfamily \#include \char`\"{}details.\+h\char`\"{}}\newline
+Include dependency graph for Std\+Deque.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{_std_deque_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classstd_1_1deque_3_01_t_00_01_e_i_g_e_n___a_l_i_g_n_e_d___a_l_l_o_c_a_t_o_r_3_01_t_01_4_01_4}{std\+::deque$<$ T, E\+I\+G\+E\+N\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R$<$ T $>$ $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_std_deque_8h_a91feeea5b87bb351e76ed5686a5a3539}{E\+I\+G\+E\+N\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+S\+T\+L\+\_\+\+D\+E\+Q\+U\+E\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+A\+T\+I\+ON}}(...)
+\item 
+\#define \mbox{\hyperlink{_std_deque_8h_a5f36f557b2a31b81a9cec0dd50530218}{E\+I\+G\+E\+N\+\_\+\+S\+T\+D\+\_\+\+D\+E\+Q\+U\+E\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+B\+O\+DY}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_std_deque_8h_a91feeea5b87bb351e76ed5686a5a3539}\label{_std_deque_8h_a91feeea5b87bb351e76ed5686a5a3539}} 
+\index{StdDeque.h@{StdDeque.h}!EIGEN\_DEFINE\_STL\_DEQUE\_SPECIALIZATION@{EIGEN\_DEFINE\_STL\_DEQUE\_SPECIALIZATION}}
+\index{EIGEN\_DEFINE\_STL\_DEQUE\_SPECIALIZATION@{EIGEN\_DEFINE\_STL\_DEQUE\_SPECIALIZATION}!StdDeque.h@{StdDeque.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_DEFINE\_STL\_DEQUE\_SPECIALIZATION}{EIGEN\_DEFINE\_STL\_DEQUE\_SPECIALIZATION}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+S\+T\+L\+\_\+\+D\+E\+Q\+U\+E\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{namespace }\mbox{\hyperlink{namespacestd}{std}} \(\backslash\)}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{  template<> \(\backslash\)}
+\DoxyCodeLine{  class deque<\_\_VA\_ARGS\_\_, std::allocator<\_\_VA\_ARGS\_\_> >           \(\backslash\)}
+\DoxyCodeLine{    : \textcolor{keyword}{public} deque<\_\_VA\_ARGS\_\_, EIGEN\_ALIGNED\_ALLOCATOR<\_\_VA\_ARGS\_\_> > \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    typedef deque<\_\_VA\_ARGS\_\_, EIGEN\_ALIGNED\_ALLOCATOR<\_\_VA\_ARGS\_\_> > deque\_base; \(\backslash\)}
+\DoxyCodeLine{  public: \(\backslash\)}
+\DoxyCodeLine{    typedef \_\_VA\_ARGS\_\_ value\_type; \(\backslash\)}
+\DoxyCodeLine{    typedef deque\_base::allocator\_type allocator\_type; \(\backslash\)}
+\DoxyCodeLine{    typedef deque\_base::size\_type size\_type;  \(\backslash\)}
+\DoxyCodeLine{    typedef deque\_base::iterator iterator;  \(\backslash\)}
+\DoxyCodeLine{    explicit deque(\textcolor{keyword}{const} allocator\_type\& a = allocator\_type()) : deque\_base(a) \{\}  \(\backslash\)}
+\DoxyCodeLine{    template<typename InputIterator> \(\backslash\)}
+\DoxyCodeLine{    deque(InputIterator first, InputIterator last, \textcolor{keyword}{const} allocator\_type\& a = allocator\_type()) : deque\_base(first, last, a) \{\} \(\backslash\)}
+\DoxyCodeLine{    deque(\textcolor{keyword}{const} deque\& c) : deque\_base(c) \{\}  \(\backslash\)}
+\DoxyCodeLine{    explicit deque(size\_type num, \textcolor{keyword}{const} value\_type\& val = value\_type()) : deque\_base(num, val) \{\} \(\backslash\)}
+\DoxyCodeLine{    deque(iterator start, iterator end) : deque\_base(start, end) \{\}  \(\backslash\)}
+\DoxyCodeLine{    deque\& \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a9aeebe0c7a58f909b5981d0992899aca}{operator=}}(\textcolor{keyword}{const} deque\& \mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}}) \{  \(\backslash\)}
+\DoxyCodeLine{      deque\_base::operator=(\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}});  \(\backslash\)}
+\DoxyCodeLine{      return *\textcolor{keyword}{this};  \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{  \}; \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+This section contains a convenience M\+A\+C\+RO which allows an easy specialization of std\+::deque such that for data types with alignment issues the correct allocator is used automatically. \mbox{\Hypertarget{_std_deque_8h_a5f36f557b2a31b81a9cec0dd50530218}\label{_std_deque_8h_a5f36f557b2a31b81a9cec0dd50530218}} 
+\index{StdDeque.h@{StdDeque.h}!EIGEN\_STD\_DEQUE\_SPECIALIZATION\_BODY@{EIGEN\_STD\_DEQUE\_SPECIALIZATION\_BODY}}
+\index{EIGEN\_STD\_DEQUE\_SPECIALIZATION\_BODY@{EIGEN\_STD\_DEQUE\_SPECIALIZATION\_BODY}!StdDeque.h@{StdDeque.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_STD\_DEQUE\_SPECIALIZATION\_BODY}{EIGEN\_STD\_DEQUE\_SPECIALIZATION\_BODY}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+S\+T\+D\+\_\+\+D\+E\+Q\+U\+E\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+B\+O\+DY}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{public}:  \(\backslash\)}
+\DoxyCodeLine{    typedef T value\_type; \(\backslash\)}
+\DoxyCodeLine{    typedef \textcolor{keyword}{typename} deque\_base::allocator\_type allocator\_type; \(\backslash\)}
+\DoxyCodeLine{    typedef \textcolor{keyword}{typename} deque\_base::size\_type size\_type;  \(\backslash\)}
+\DoxyCodeLine{    typedef \textcolor{keyword}{typename} deque\_base::iterator iterator;  \(\backslash\)}
+\DoxyCodeLine{    typedef \textcolor{keyword}{typename} deque\_base::const\_iterator const\_iterator;  \(\backslash\)}
+\DoxyCodeLine{    explicit deque(\textcolor{keyword}{const} allocator\_type\& a = allocator\_type()) : deque\_base(a) \{\}  \(\backslash\)}
+\DoxyCodeLine{    template<typename InputIterator> \(\backslash\)}
+\DoxyCodeLine{    deque(InputIterator first, InputIterator last, \textcolor{keyword}{const} allocator\_type\& a = allocator\_type()) \(\backslash\)}
+\DoxyCodeLine{    : deque\_base(first, last, a) \{\} \(\backslash\)}
+\DoxyCodeLine{    deque(\textcolor{keyword}{const} deque\& c) : deque\_base(c) \{\}  \(\backslash\)}
+\DoxyCodeLine{    explicit deque(size\_type num, \textcolor{keyword}{const} value\_type\& val = value\_type()) : deque\_base(num, val) \{\} \(\backslash\)}
+\DoxyCodeLine{    deque(iterator start, iterator end) : deque\_base(start, end) \{\}  \(\backslash\)}
+\DoxyCodeLine{    deque\& \mbox{\hyperlink{ceres-1_812_80_2include_2gflags_2gflags_8h_a9aeebe0c7a58f909b5981d0992899aca}{operator=}}(\textcolor{keyword}{const} deque\& \mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}}) \{  \(\backslash\)}
+\DoxyCodeLine{      deque\_base::operator=(\mbox{\hyperlink{namespace_eigen_1_1numext_ac5e96d65e0b577673dd47bfe1068cdd9}{x}});  \(\backslash\)}
+\DoxyCodeLine{      return *\textcolor{keyword}{this};  \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}

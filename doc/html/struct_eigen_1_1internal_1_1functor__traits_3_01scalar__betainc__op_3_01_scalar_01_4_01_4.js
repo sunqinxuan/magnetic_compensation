@@ -1,0 +1,5 @@
+var struct_eigen_1_1internal_1_1functor__traits_3_01scalar__betainc__op_3_01_scalar_01_4_01_4 =
+[
+    [ "Cost", "struct_eigen_1_1internal_1_1functor__traits_3_01scalar__betainc__op_3_01_scalar_01_4_01_4.html#a2b465ecd12a1198be1aef1113e492ad7acecb7846847afd1b37b57f0ad2cf813f", null ],
+    [ "PacketAccess", "struct_eigen_1_1internal_1_1functor__traits_3_01scalar__betainc__op_3_01_scalar_01_4_01_4.html#a2b465ecd12a1198be1aef1113e492ad7a66ece46f82e79f8eee11a7110e32b233", null ]
+];

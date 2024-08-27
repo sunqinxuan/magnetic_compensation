@@ -1,0 +1,94 @@
+\hypertarget{class_cost_function_creator}{}\doxysection{Cost\+Function\+Creator Class Reference}
+\label{class_cost_function_creator}\index{CostFunctionCreator@{CostFunctionCreator}}
+
+
+{\ttfamily \#include $<$mic\+\_\+ellipsoid\+\_\+mag\+\_\+compensator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cost_function_creator_a5e06475bf5fb8794d43535d0fc825f3c}{Cost\+Function\+Creator}} (const matrix\+\_\+3f\+\_\+t \&coeff\+\_\+\+D\+\_\+tilde\+\_\+inv, const vector\+\_\+3f\+\_\+t \&coeff\+\_\+o\+\_\+hat, const matrix\+\_\+3f\+\_\+t \&rotation\+\_\+r\+\_\+c, const vector\+\_\+3f\+\_\+t \&mag\+\_\+r, const vector\+\_\+3f\+\_\+t \&mag\+\_\+c)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{class_cost_function_creator_ab4b06595f0e0137e30469ec720894a86}{operator()}} (const T $\ast$const quaternion, T $\ast$residual\+\_\+ptr) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static ceres\+::\+Cost\+Function $\ast$ \mbox{\hyperlink{class_cost_function_creator_a0020f4e515932a3e49e91b4a0d7356e3}{Create}} (const matrix\+\_\+3f\+\_\+t \&coeff\+\_\+\+D\+\_\+tilde\+\_\+inv, const vector\+\_\+3f\+\_\+t \&coeff\+\_\+o\+\_\+hat, const matrix\+\_\+3f\+\_\+t \&rotation\+\_\+r\+\_\+c, const vector\+\_\+3f\+\_\+t \&mag\+\_\+r, const vector\+\_\+3f\+\_\+t \&mag\+\_\+c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+matrix\+\_\+3f\+\_\+t \mbox{\hyperlink{class_cost_function_creator_a3c453607565f6379be6dc2f785d8c8b8}{coeff\+\_\+\+D\+\_\+tilde\+\_\+inv\+\_\+}}
+\item 
+vector\+\_\+3f\+\_\+t \mbox{\hyperlink{class_cost_function_creator_ace00adfeae7e464644139e10658e871f}{coeff\+\_\+o\+\_\+hat\+\_\+}}
+\item 
+matrix\+\_\+3f\+\_\+t \mbox{\hyperlink{class_cost_function_creator_a8df419ea260db534116057d359b8c077}{rotation\+\_\+r\+\_\+c\+\_\+}}
+\item 
+vector\+\_\+3f\+\_\+t \mbox{\hyperlink{class_cost_function_creator_a7dc24c635bccb7f801f4a0ba1a9b8972}{mag\+\_\+r\+\_\+}}
+\item 
+vector\+\_\+3f\+\_\+t \mbox{\hyperlink{class_cost_function_creator_a863350b890ae0cf77d34fad174c1d077}{mag\+\_\+c\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cost_function_creator_a5e06475bf5fb8794d43535d0fc825f3c}\label{class_cost_function_creator_a5e06475bf5fb8794d43535d0fc825f3c}} 
+\index{CostFunctionCreator@{CostFunctionCreator}!CostFunctionCreator@{CostFunctionCreator}}
+\index{CostFunctionCreator@{CostFunctionCreator}!CostFunctionCreator@{CostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{CostFunctionCreator()}{CostFunctionCreator()}}
+{\footnotesize\ttfamily Cost\+Function\+Creator\+::\+Cost\+Function\+Creator (\begin{DoxyParamCaption}\item[{const matrix\+\_\+3f\+\_\+t \&}]{coeff\+\_\+\+D\+\_\+tilde\+\_\+inv,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{coeff\+\_\+o\+\_\+hat,  }\item[{const matrix\+\_\+3f\+\_\+t \&}]{rotation\+\_\+r\+\_\+c,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{mag\+\_\+r,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{mag\+\_\+c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cost_function_creator_a0020f4e515932a3e49e91b4a0d7356e3}\label{class_cost_function_creator_a0020f4e515932a3e49e91b4a0d7356e3}} 
+\index{CostFunctionCreator@{CostFunctionCreator}!Create@{Create}}
+\index{Create@{Create}!CostFunctionCreator@{CostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static ceres\+::\+Cost\+Function$\ast$ Cost\+Function\+Creator\+::\+Create (\begin{DoxyParamCaption}\item[{const matrix\+\_\+3f\+\_\+t \&}]{coeff\+\_\+\+D\+\_\+tilde\+\_\+inv,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{coeff\+\_\+o\+\_\+hat,  }\item[{const matrix\+\_\+3f\+\_\+t \&}]{rotation\+\_\+r\+\_\+c,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{mag\+\_\+r,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{mag\+\_\+c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_cost_function_creator_ab4b06595f0e0137e30469ec720894a86}\label{class_cost_function_creator_ab4b06595f0e0137e30469ec720894a86}} 
+\index{CostFunctionCreator@{CostFunctionCreator}!operator()@{operator()}}
+\index{operator()@{operator()}!CostFunctionCreator@{CostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool Cost\+Function\+Creator\+::operator() (\begin{DoxyParamCaption}\item[{const T $\ast$const}]{quaternion,  }\item[{T $\ast$}]{residual\+\_\+ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cost_function_creator_a3c453607565f6379be6dc2f785d8c8b8}\label{class_cost_function_creator_a3c453607565f6379be6dc2f785d8c8b8}} 
+\index{CostFunctionCreator@{CostFunctionCreator}!coeff\_D\_tilde\_inv\_@{coeff\_D\_tilde\_inv\_}}
+\index{coeff\_D\_tilde\_inv\_@{coeff\_D\_tilde\_inv\_}!CostFunctionCreator@{CostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{coeff\_D\_tilde\_inv\_}{coeff\_D\_tilde\_inv\_}}
+{\footnotesize\ttfamily matrix\+\_\+3f\+\_\+t Cost\+Function\+Creator\+::coeff\+\_\+\+D\+\_\+tilde\+\_\+inv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_cost_function_creator_ace00adfeae7e464644139e10658e871f}\label{class_cost_function_creator_ace00adfeae7e464644139e10658e871f}} 
+\index{CostFunctionCreator@{CostFunctionCreator}!coeff\_o\_hat\_@{coeff\_o\_hat\_}}
+\index{coeff\_o\_hat\_@{coeff\_o\_hat\_}!CostFunctionCreator@{CostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{coeff\_o\_hat\_}{coeff\_o\_hat\_}}
+{\footnotesize\ttfamily vector\+\_\+3f\+\_\+t Cost\+Function\+Creator\+::coeff\+\_\+o\+\_\+hat\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_cost_function_creator_a863350b890ae0cf77d34fad174c1d077}\label{class_cost_function_creator_a863350b890ae0cf77d34fad174c1d077}} 
+\index{CostFunctionCreator@{CostFunctionCreator}!mag\_c\_@{mag\_c\_}}
+\index{mag\_c\_@{mag\_c\_}!CostFunctionCreator@{CostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{mag\_c\_}{mag\_c\_}}
+{\footnotesize\ttfamily vector\+\_\+3f\+\_\+t Cost\+Function\+Creator\+::mag\+\_\+c\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_cost_function_creator_a7dc24c635bccb7f801f4a0ba1a9b8972}\label{class_cost_function_creator_a7dc24c635bccb7f801f4a0ba1a9b8972}} 
+\index{CostFunctionCreator@{CostFunctionCreator}!mag\_r\_@{mag\_r\_}}
+\index{mag\_r\_@{mag\_r\_}!CostFunctionCreator@{CostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{mag\_r\_}{mag\_r\_}}
+{\footnotesize\ttfamily vector\+\_\+3f\+\_\+t Cost\+Function\+Creator\+::mag\+\_\+r\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_cost_function_creator_a8df419ea260db534116057d359b8c077}\label{class_cost_function_creator_a8df419ea260db534116057d359b8c077}} 
+\index{CostFunctionCreator@{CostFunctionCreator}!rotation\_r\_c\_@{rotation\_r\_c\_}}
+\index{rotation\_r\_c\_@{rotation\_r\_c\_}!CostFunctionCreator@{CostFunctionCreator}}
+\doxysubsubsection{\texorpdfstring{rotation\_r\_c\_}{rotation\_r\_c\_}}
+{\footnotesize\ttfamily matrix\+\_\+3f\+\_\+t Cost\+Function\+Creator\+::rotation\+\_\+r\+\_\+c\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mic\+\_\+mag\+\_\+compensator/impl/\mbox{\hyperlink{mic__ellipsoid__mag__compensator_8h}{mic\+\_\+ellipsoid\+\_\+mag\+\_\+compensator.\+h}}\end{DoxyCompactItemize}

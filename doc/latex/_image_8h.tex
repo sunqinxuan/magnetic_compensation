@@ -1,0 +1,45 @@
+\hypertarget{_image_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/misc/\+Image.h File Reference}
+\label{_image_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/misc/Image.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/misc/Image.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01image__retval__base_3_01_decomposition_type_01_4_01_4}{Eigen\+::internal\+::traits$<$ image\+\_\+retval\+\_\+base$<$ Decomposition\+Type $>$ $>$}}
+\item 
+class \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base}{Eigen\+::internal\+::image\+\_\+retval\+\_\+base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1internal}{Eigen\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_image_8h_a626ffea4030fe7858dc958a680c53679}{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+H\+E\+L\+P\+E\+RS}}(Decomposition\+Type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_image_8h_a626ffea4030fe7858dc958a680c53679}\label{_image_8h_a626ffea4030fe7858dc958a680c53679}} 
+\index{Image.h@{Image.h}!EIGEN\_MAKE\_IMAGE\_HELPERS@{EIGEN\_MAKE\_IMAGE\_HELPERS}}
+\index{EIGEN\_MAKE\_IMAGE\_HELPERS@{EIGEN\_MAKE\_IMAGE\_HELPERS}!Image.h@{Image.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_MAKE\_IMAGE\_HELPERS}{EIGEN\_MAKE\_IMAGE\_HELPERS}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+H\+E\+L\+P\+E\+RS(\begin{DoxyParamCaption}\item[{}]{Decomposition\+Type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{typedef} \textcolor{keyword}{typename} DecompositionType::MatrixType MatrixType; \(\backslash\)}
+\DoxyCodeLine{  typedef \textcolor{keyword}{typename} MatrixType::Scalar Scalar; \(\backslash\)}
+\DoxyCodeLine{  typedef \textcolor{keyword}{typename} MatrixType::RealScalar RealScalar; \(\backslash\)}
+\DoxyCodeLine{  typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1image__retval__base}{Eigen::internal::image\_retval\_base<DecompositionType>}} Base; \(\backslash\)}
+\DoxyCodeLine{  using Base::dec; \(\backslash\)}
+\DoxyCodeLine{  using Base::originalMatrix; \(\backslash\)}
+\DoxyCodeLine{  using Base::rank; \(\backslash\)}
+\DoxyCodeLine{  using Base::rows; \(\backslash\)}
+\DoxyCodeLine{  using Base::cols; \(\backslash\)}
+\DoxyCodeLine{  image\_retval(\textcolor{keyword}{const} DecompositionType\& dec, \textcolor{keyword}{const} MatrixType\& originalMatrix) \(\backslash\)}
+\DoxyCodeLine{    : Base(dec, originalMatrix) \{\}}
+
+\end{DoxyCode}

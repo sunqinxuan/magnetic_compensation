@@ -1,0 +1,64 @@
+\hypertarget{mic__logger_8cc}{}\doxysection{src/common/mic\+\_\+logger.cc File Reference}
+\label{mic__logger_8cc}\index{src/common/mic\_logger.cc@{src/common/mic\_logger.cc}}
+{\ttfamily \#include \char`\"{}common/mic\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+Include dependency graph for mic\+\_\+logger.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mic__logger_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mic__logger_8cc_a8e698b87e369730bfd0f236d27a1c9c8}{M\+I\+C\+\_\+\+M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+M\+S\+G\+\_\+\+S\+I\+ZE}}~(4096)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mic__logger_8cc_abebacce48933a5dfc92652d451fcf8da}{M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+B\+A\+S\+I\+C\+\_\+\+I\+N\+FO}} (const char\+\_\+t $\ast$info,...)
+\item 
+void \mbox{\hyperlink{mic__logger_8cc_a710ace882a37f2f85cf3f34282f45996}{M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}} (const char\+\_\+t $\ast$info,...)
+\item 
+void \mbox{\hyperlink{mic__logger_8cc_af842a15c1c392736f36e1fea4951e066}{M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+W\+A\+RN}} (const char\+\_\+t $\ast$info,...)
+\item 
+void \mbox{\hyperlink{mic__logger_8cc_a36e26db5aae95becfd07465a2645783c}{M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+E\+RR}} (const char\+\_\+t $\ast$info,...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mic__logger_8cc_a8e698b87e369730bfd0f236d27a1c9c8}\label{mic__logger_8cc_a8e698b87e369730bfd0f236d27a1c9c8}} 
+\index{mic\_logger.cc@{mic\_logger.cc}!MIC\_MAX\_LOG\_MSG\_SIZE@{MIC\_MAX\_LOG\_MSG\_SIZE}}
+\index{MIC\_MAX\_LOG\_MSG\_SIZE@{MIC\_MAX\_LOG\_MSG\_SIZE}!mic\_logger.cc@{mic\_logger.cc}}
+\doxysubsubsection{\texorpdfstring{MIC\_MAX\_LOG\_MSG\_SIZE}{MIC\_MAX\_LOG\_MSG\_SIZE}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+M\+S\+G\+\_\+\+S\+I\+ZE~(4096)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mic__logger_8cc_abebacce48933a5dfc92652d451fcf8da}\label{mic__logger_8cc_abebacce48933a5dfc92652d451fcf8da}} 
+\index{mic\_logger.cc@{mic\_logger.cc}!MIC\_LOG\_BASIC\_INFO@{MIC\_LOG\_BASIC\_INFO}}
+\index{MIC\_LOG\_BASIC\_INFO@{MIC\_LOG\_BASIC\_INFO}!mic\_logger.cc@{mic\_logger.cc}}
+\doxysubsubsection{\texorpdfstring{MIC\_LOG\_BASIC\_INFO()}{MIC\_LOG\_BASIC\_INFO()}}
+{\footnotesize\ttfamily void M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+B\+A\+S\+I\+C\+\_\+\+I\+N\+FO (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mic__logger_8cc_a710ace882a37f2f85cf3f34282f45996}\label{mic__logger_8cc_a710ace882a37f2f85cf3f34282f45996}} 
+\index{mic\_logger.cc@{mic\_logger.cc}!MIC\_LOG\_DEBUG\_INFO@{MIC\_LOG\_DEBUG\_INFO}}
+\index{MIC\_LOG\_DEBUG\_INFO@{MIC\_LOG\_DEBUG\_INFO}!mic\_logger.cc@{mic\_logger.cc}}
+\doxysubsubsection{\texorpdfstring{MIC\_LOG\_DEBUG\_INFO()}{MIC\_LOG\_DEBUG\_INFO()}}
+{\footnotesize\ttfamily void M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+I\+N\+FO (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mic__logger_8cc_a36e26db5aae95becfd07465a2645783c}\label{mic__logger_8cc_a36e26db5aae95becfd07465a2645783c}} 
+\index{mic\_logger.cc@{mic\_logger.cc}!MIC\_LOG\_ERR@{MIC\_LOG\_ERR}}
+\index{MIC\_LOG\_ERR@{MIC\_LOG\_ERR}!mic\_logger.cc@{mic\_logger.cc}}
+\doxysubsubsection{\texorpdfstring{MIC\_LOG\_ERR()}{MIC\_LOG\_ERR()}}
+{\footnotesize\ttfamily void M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+E\+RR (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mic__logger_8cc_af842a15c1c392736f36e1fea4951e066}\label{mic__logger_8cc_af842a15c1c392736f36e1fea4951e066}} 
+\index{mic\_logger.cc@{mic\_logger.cc}!MIC\_LOG\_WARN@{MIC\_LOG\_WARN}}
+\index{MIC\_LOG\_WARN@{MIC\_LOG\_WARN}!mic\_logger.cc@{mic\_logger.cc}}
+\doxysubsubsection{\texorpdfstring{MIC\_LOG\_WARN()}{MIC\_LOG\_WARN()}}
+{\footnotesize\ttfamily void M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+W\+A\+RN (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info,  }\item[{}]{... }\end{DoxyParamCaption})}
+

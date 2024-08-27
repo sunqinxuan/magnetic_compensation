@@ -1,0 +1,5 @@
+var struct_eigen_1_1internal_1_1reducer__traits_3_01_sum_reducer_3_01_t_01_4_00_01_device_01_4 =
+[
+    [ "Cost", "struct_eigen_1_1internal_1_1reducer__traits_3_01_sum_reducer_3_01_t_01_4_00_01_device_01_4.html#a76d9220b3b1fba6ad3b2a018c6acc719a82db3e82afadc00f05aef234fa9552d7", null ],
+    [ "PacketAccess", "struct_eigen_1_1internal_1_1reducer__traits_3_01_sum_reducer_3_01_t_01_4_00_01_device_01_4.html#a76d9220b3b1fba6ad3b2a018c6acc719a2f93935c174c3de996b5e6a40c3a7876", null ]
+];

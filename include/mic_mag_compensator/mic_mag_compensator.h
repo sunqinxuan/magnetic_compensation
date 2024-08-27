@@ -19,6 +19,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
+/**
+ * @file mic_mag_compensator.h
+ * @brief basic class for magnetic compensation
+ * @details
+ * @author Qinxuan Sun
+ * @version 0.1
+ * @date 2024-08-26
+ * @copyright Copyright (C) 2024 Qinxuan Sun. All rights reserved.
+ */
 #ifndef MIC_MAG_COMPENSATOR
 #define MIC_MAG_COMPENSATOR
 
@@ -43,6 +52,9 @@ enum class MicMagCompensatorState : uint8_t
 };
 using mic_state_t = MicMagCompensatorState;
 
+/**
+ * @brief basic class for magnetic compensator
+ */
 class MicMagCompensator : public MicObservable<MicMagCompensator>
 {
 public:
@@ -53,6 +65,14 @@ public:
     // mic_nav_state_estimator_t &get_nav_state_estimator();
     float64_t get_curr_time() { return _curr_time_stamp; }
 
+    /**
+     * @brief add data (magnetic measurements and navigation states of the aircraft) to the compensator
+     * @param ts timestamp
+     * @param mag_data magnetic measurement at time ts
+     * @param nav_state (optional) navigation state at time ts
+     * @return ret_t
+     * @retval if the data is successfully added
+     */
     ret_t add_data(
         const float64_t ts,
         const mic_mag_t &mag_data,

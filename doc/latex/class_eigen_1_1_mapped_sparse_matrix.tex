@@ -1,0 +1,112 @@
+\hypertarget{class_eigen_1_1_mapped_sparse_matrix}{}\doxysection{Eigen\+::Mapped\+Sparse\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index $>$ Class Template Reference}
+\label{class_eigen_1_1_mapped_sparse_matrix}\index{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}}
+
+
+\mbox{\hyperlink{struct_eigen_1_1_sparse}{Sparse}} matrix.  
+
+
+
+
+{\ttfamily \#include $<$Mapped\+Sparse\+Matrix.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Mapped\+Sparse\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_mapped_sparse_matrix__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Mapped\+Sparse\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_mapped_sparse_matrix__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Base\+::\+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_adf73cc50ae4835aa4db56740dffacbc2}{Storage\+Index}}
+\item 
+typedef Base\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_a70e97a4e9933f2d92b30a24f0b8fe02a}{Scalar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_a126bf868e2a441dd0d677805c2de1fa8}{Mapped\+Sparse\+Matrix}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} rows, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} cols, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} nnz, \mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_adf73cc50ae4835aa4db56740dffacbc2}{Storage\+Index}} $\ast$outer\+Index\+Ptr, \mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_adf73cc50ae4835aa4db56740dffacbc2}{Storage\+Index}} $\ast$inner\+Index\+Ptr, \mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_a70e97a4e9933f2d92b30a24f0b8fe02a}{Scalar}} $\ast$value\+Ptr, \mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_adf73cc50ae4835aa4db56740dffacbc2}{Storage\+Index}} $\ast$inner\+Non\+Zero\+Ptr=0)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_a0c36a53853f1659ea59447bcb9a20799}{$\sim$\+Mapped\+Sparse\+Matrix}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_map}{Map}}$<$ \mbox{\hyperlink{class_eigen_1_1_sparse_matrix}{Sparse\+Matrix}}$<$ \+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index $>$ $>$ \mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_a8f8dc91765aaded83a9f9ef156fc996a}{Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename \+\_\+\+Scalar, int \+\_\+\+Flags, typename \+\_\+\+Storage\+Index$>$\newline
+class Eigen\+::\+Mapped\+Sparse\+Matrix$<$ \+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index $>$}
+
+\mbox{\hyperlink{struct_eigen_1_1_sparse}{Sparse}} matrix. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000037}{Deprecated}}]Use \mbox{\hyperlink{class_eigen_1_1_map}{Map}}$<$Sparse\+Matrix$<$$>$ $>$ \end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+Scalar} & the scalar type, i.\+e. the type of the coefficients\\
+\hline
+\end{DoxyParams}
+See \href{http://www.netlib.org/linalg/html_templates/node91.html}{\texttt{ http\+://www.\+netlib.\+org/linalg/html\+\_\+templates/node91.\+html}} for details on the storage scheme. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_mapped_sparse_matrix_a8f8dc91765aaded83a9f9ef156fc996a}\label{class_eigen_1_1_mapped_sparse_matrix_a8f8dc91765aaded83a9f9ef156fc996a}} 
+\index{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar , int \+\_\+\+Flags, typename \+\_\+\+Storage\+Index $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_map}{Map}}$<$\mbox{\hyperlink{class_eigen_1_1_sparse_matrix}{Sparse\+Matrix}}$<$\+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index$>$ $>$ \mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix}{Eigen\+::\+Mapped\+Sparse\+Matrix}}$<$ \+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index $>$\+::\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_a8f8dc91765aaded83a9f9ef156fc996a}{Base}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_mapped_sparse_matrix_a70e97a4e9933f2d92b30a24f0b8fe02a}\label{class_eigen_1_1_mapped_sparse_matrix_a70e97a4e9933f2d92b30a24f0b8fe02a}} 
+\index{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar , int \+\_\+\+Flags, typename \+\_\+\+Storage\+Index $>$ \\
+typedef Base\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix}{Eigen\+::\+Mapped\+Sparse\+Matrix}}$<$ \+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index $>$\+::\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_a70e97a4e9933f2d92b30a24f0b8fe02a}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_mapped_sparse_matrix_adf73cc50ae4835aa4db56740dffacbc2}\label{class_eigen_1_1_mapped_sparse_matrix_adf73cc50ae4835aa4db56740dffacbc2}} 
+\index{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar , int \+\_\+\+Flags, typename \+\_\+\+Storage\+Index $>$ \\
+typedef Base\+::\+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix}{Eigen\+::\+Mapped\+Sparse\+Matrix}}$<$ \+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index $>$\+::\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_adf73cc50ae4835aa4db56740dffacbc2}{Storage\+Index}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_mapped_sparse_matrix_a126bf868e2a441dd0d677805c2de1fa8}\label{class_eigen_1_1_mapped_sparse_matrix_a126bf868e2a441dd0d677805c2de1fa8}} 
+\index{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}!MappedSparseMatrix@{MappedSparseMatrix}}
+\index{MappedSparseMatrix@{MappedSparseMatrix}!Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}}
+\doxysubsubsection{\texorpdfstring{MappedSparseMatrix()}{MappedSparseMatrix()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar , int \+\_\+\+Flags, typename \+\_\+\+Storage\+Index $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix}{Eigen\+::\+Mapped\+Sparse\+Matrix}}$<$ \+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index $>$\+::\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix}{Mapped\+Sparse\+Matrix}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{rows,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{cols,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{nnz,  }\item[{\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_adf73cc50ae4835aa4db56740dffacbc2}{Storage\+Index}} $\ast$}]{outer\+Index\+Ptr,  }\item[{\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_adf73cc50ae4835aa4db56740dffacbc2}{Storage\+Index}} $\ast$}]{inner\+Index\+Ptr,  }\item[{\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_a70e97a4e9933f2d92b30a24f0b8fe02a}{Scalar}} $\ast$}]{value\+Ptr,  }\item[{\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix_adf73cc50ae4835aa4db56740dffacbc2}{Storage\+Index}} $\ast$}]{inner\+Non\+Zero\+Ptr = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_mapped_sparse_matrix_a0c36a53853f1659ea59447bcb9a20799}\label{class_eigen_1_1_mapped_sparse_matrix_a0c36a53853f1659ea59447bcb9a20799}} 
+\index{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}!````~MappedSparseMatrix@{$\sim$MappedSparseMatrix}}
+\index{````~MappedSparseMatrix@{$\sim$MappedSparseMatrix}!Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$@{Eigen::MappedSparseMatrix$<$ \_Scalar, \_Flags, \_StorageIndex $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$MappedSparseMatrix()}{~MappedSparseMatrix()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar , int \+\_\+\+Flags, typename \+\_\+\+Storage\+Index $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix}{Eigen\+::\+Mapped\+Sparse\+Matrix}}$<$ \+\_\+\+Scalar, \+\_\+\+Flags, \+\_\+\+Storage\+Index $>$\+::$\sim$\mbox{\hyperlink{class_eigen_1_1_mapped_sparse_matrix}{Mapped\+Sparse\+Matrix}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Empty destructor 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Sparse\+Core/\mbox{\hyperlink{_mapped_sparse_matrix_8h}{Mapped\+Sparse\+Matrix.\+h}}\end{DoxyCompactItemize}

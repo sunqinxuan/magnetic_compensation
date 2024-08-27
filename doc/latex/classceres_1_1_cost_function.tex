@@ -1,0 +1,125 @@
+\hypertarget{classceres_1_1_cost_function}{}\doxysection{ceres\+::Cost\+Function Class Reference}
+\label{classceres_1_1_cost_function}\index{ceres::CostFunction@{ceres::CostFunction}}
+
+
+{\ttfamily \#include $<$cost\+\_\+function.\+h$>$}
+
+
+
+Inheritance diagram for ceres\+::Cost\+Function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classceres_1_1_cost_function__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_cost_function_af5ea7a075b74f7b72bad79bcef43b784}{Cost\+Function}} ()
+\item 
+virtual \mbox{\hyperlink{classceres_1_1_cost_function_a80857f26da84f7923a32aeedd2122671}{$\sim$\+Cost\+Function}} ()
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_cost_function_a9e973858fdbf3a2e5603e848d30e9ddc}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const =0
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{namespaceceres_ad72735d027a192c091fd08b38e111e7e}{int32}} $>$ \& \mbox{\hyperlink{classceres_1_1_cost_function_ab37589eabcc4c00e2979b0fcde1dc9e6}{parameter\+\_\+block\+\_\+sizes}} () const
+\item 
+int \mbox{\hyperlink{classceres_1_1_cost_function_a6d4bd07102c6effa91f87ee2a4a944f7}{num\+\_\+residuals}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceceres_ad72735d027a192c091fd08b38e111e7e}{int32}} $>$ $\ast$ \mbox{\hyperlink{classceres_1_1_cost_function_a6b3c587cfd9634ab2d3a07d315fa23ac}{mutable\+\_\+parameter\+\_\+block\+\_\+sizes}} ()
+\item 
+void \mbox{\hyperlink{classceres_1_1_cost_function_adb22bc2c453e3cb0c33a6d445da1b9f9}{set\+\_\+num\+\_\+residuals}} (int \mbox{\hyperlink{classceres_1_1_cost_function_a6d4bd07102c6effa91f87ee2a4a944f7}{num\+\_\+residuals}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_cost_function_ae1b91f20772e84fad1e79547d84ca89b}{C\+E\+R\+E\+S\+\_\+\+D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+P\+Y\+\_\+\+A\+N\+D\+\_\+\+A\+S\+S\+I\+GN}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceceres_ad72735d027a192c091fd08b38e111e7e}{int32}} $>$ \mbox{\hyperlink{classceres_1_1_cost_function_a53a4b306b3cc2c2e2764b0c869e9079a}{parameter\+\_\+block\+\_\+sizes\+\_\+}}
+\item 
+int \mbox{\hyperlink{classceres_1_1_cost_function_a2efd30a3404e82796f60ed435ad99efe}{num\+\_\+residuals\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classceres_1_1_cost_function_af5ea7a075b74f7b72bad79bcef43b784}\label{classceres_1_1_cost_function_af5ea7a075b74f7b72bad79bcef43b784}} 
+\index{ceres::CostFunction@{ceres::CostFunction}!CostFunction@{CostFunction}}
+\index{CostFunction@{CostFunction}!ceres::CostFunction@{ceres::CostFunction}}
+\doxysubsubsection{\texorpdfstring{CostFunction()}{CostFunction()}}
+{\footnotesize\ttfamily ceres\+::\+Cost\+Function\+::\+Cost\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_cost_function_a80857f26da84f7923a32aeedd2122671}\label{classceres_1_1_cost_function_a80857f26da84f7923a32aeedd2122671}} 
+\index{ceres::CostFunction@{ceres::CostFunction}!````~CostFunction@{$\sim$CostFunction}}
+\index{````~CostFunction@{$\sim$CostFunction}!ceres::CostFunction@{ceres::CostFunction}}
+\doxysubsubsection{\texorpdfstring{$\sim$CostFunction()}{~CostFunction()}}
+{\footnotesize\ttfamily virtual ceres\+::\+Cost\+Function\+::$\sim$\+Cost\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_cost_function_ae1b91f20772e84fad1e79547d84ca89b}\label{classceres_1_1_cost_function_ae1b91f20772e84fad1e79547d84ca89b}} 
+\index{ceres::CostFunction@{ceres::CostFunction}!CERES\_DISALLOW\_COPY\_AND\_ASSIGN@{CERES\_DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{CERES\_DISALLOW\_COPY\_AND\_ASSIGN@{CERES\_DISALLOW\_COPY\_AND\_ASSIGN}!ceres::CostFunction@{ceres::CostFunction}}
+\doxysubsubsection{\texorpdfstring{CERES\_DISALLOW\_COPY\_AND\_ASSIGN()}{CERES\_DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily ceres\+::\+Cost\+Function\+::\+C\+E\+R\+E\+S\+\_\+\+D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+P\+Y\+\_\+\+A\+N\+D\+\_\+\+A\+S\+S\+I\+GN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_cost_function_a9e973858fdbf3a2e5603e848d30e9ddc}\label{classceres_1_1_cost_function_a9e973858fdbf3a2e5603e848d30e9ddc}} 
+\index{ceres::CostFunction@{ceres::CostFunction}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!ceres::CostFunction@{ceres::CostFunction}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool ceres\+::\+Cost\+Function\+::\+Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classceres_1_1_numeric_diff_cost_function_af34e769fb2ba4f5b0b082acf5ed66621}{ceres\+::\+Numeric\+Diff\+Cost\+Function$<$ Cost\+Functor, method, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}, \mbox{\hyperlink{classceres_1_1_auto_diff_cost_function_a3abb9962f50a86eefa33a3d3a06d5e55}{ceres\+::\+Auto\+Diff\+Cost\+Function$<$ Cost\+Functor, k\+Num\+Residuals, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9 $>$}}, \mbox{\hyperlink{classceres_1_1_dynamic_numeric_diff_cost_function_a7aefdf52db55dc016de2cb9215dccb54}{ceres\+::\+Dynamic\+Numeric\+Diff\+Cost\+Function$<$ Cost\+Functor, method $>$}}, \mbox{\hyperlink{classceres_1_1_conditioned_cost_function_ad6fd324536f86103d645803a3cd21861}{ceres\+::\+Conditioned\+Cost\+Function}}, \mbox{\hyperlink{classceres_1_1_dynamic_auto_diff_cost_function_aba470d6d92fe97564583b4d8ac65c2d5}{ceres\+::\+Dynamic\+Auto\+Diff\+Cost\+Function$<$ Cost\+Functor, Stride $>$}}, and \mbox{\hyperlink{classceres_1_1_normal_prior_a08cba3316e34f138a31670532c241f96}{ceres\+::\+Normal\+Prior}}.
+
+\mbox{\Hypertarget{classceres_1_1_cost_function_a6b3c587cfd9634ab2d3a07d315fa23ac}\label{classceres_1_1_cost_function_a6b3c587cfd9634ab2d3a07d315fa23ac}} 
+\index{ceres::CostFunction@{ceres::CostFunction}!mutable\_parameter\_block\_sizes@{mutable\_parameter\_block\_sizes}}
+\index{mutable\_parameter\_block\_sizes@{mutable\_parameter\_block\_sizes}!ceres::CostFunction@{ceres::CostFunction}}
+\doxysubsubsection{\texorpdfstring{mutable\_parameter\_block\_sizes()}{mutable\_parameter\_block\_sizes()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceceres_ad72735d027a192c091fd08b38e111e7e}{int32}}$>$$\ast$ ceres\+::\+Cost\+Function\+::mutable\+\_\+parameter\+\_\+block\+\_\+sizes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classceres_1_1_cost_function_a6d4bd07102c6effa91f87ee2a4a944f7}\label{classceres_1_1_cost_function_a6d4bd07102c6effa91f87ee2a4a944f7}} 
+\index{ceres::CostFunction@{ceres::CostFunction}!num\_residuals@{num\_residuals}}
+\index{num\_residuals@{num\_residuals}!ceres::CostFunction@{ceres::CostFunction}}
+\doxysubsubsection{\texorpdfstring{num\_residuals()}{num\_residuals()}}
+{\footnotesize\ttfamily int ceres\+::\+Cost\+Function\+::num\+\_\+residuals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_cost_function_ab37589eabcc4c00e2979b0fcde1dc9e6}\label{classceres_1_1_cost_function_ab37589eabcc4c00e2979b0fcde1dc9e6}} 
+\index{ceres::CostFunction@{ceres::CostFunction}!parameter\_block\_sizes@{parameter\_block\_sizes}}
+\index{parameter\_block\_sizes@{parameter\_block\_sizes}!ceres::CostFunction@{ceres::CostFunction}}
+\doxysubsubsection{\texorpdfstring{parameter\_block\_sizes()}{parameter\_block\_sizes()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{namespaceceres_ad72735d027a192c091fd08b38e111e7e}{int32}}$>$\& ceres\+::\+Cost\+Function\+::parameter\+\_\+block\+\_\+sizes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_cost_function_adb22bc2c453e3cb0c33a6d445da1b9f9}\label{classceres_1_1_cost_function_adb22bc2c453e3cb0c33a6d445da1b9f9}} 
+\index{ceres::CostFunction@{ceres::CostFunction}!set\_num\_residuals@{set\_num\_residuals}}
+\index{set\_num\_residuals@{set\_num\_residuals}!ceres::CostFunction@{ceres::CostFunction}}
+\doxysubsubsection{\texorpdfstring{set\_num\_residuals()}{set\_num\_residuals()}}
+{\footnotesize\ttfamily void ceres\+::\+Cost\+Function\+::set\+\_\+num\+\_\+residuals (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+residuals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classceres_1_1_cost_function_a2efd30a3404e82796f60ed435ad99efe}\label{classceres_1_1_cost_function_a2efd30a3404e82796f60ed435ad99efe}} 
+\index{ceres::CostFunction@{ceres::CostFunction}!num\_residuals\_@{num\_residuals\_}}
+\index{num\_residuals\_@{num\_residuals\_}!ceres::CostFunction@{ceres::CostFunction}}
+\doxysubsubsection{\texorpdfstring{num\_residuals\_}{num\_residuals\_}}
+{\footnotesize\ttfamily int ceres\+::\+Cost\+Function\+::num\+\_\+residuals\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_cost_function_a53a4b306b3cc2c2e2764b0c869e9079a}\label{classceres_1_1_cost_function_a53a4b306b3cc2c2e2764b0c869e9079a}} 
+\index{ceres::CostFunction@{ceres::CostFunction}!parameter\_block\_sizes\_@{parameter\_block\_sizes\_}}
+\index{parameter\_block\_sizes\_@{parameter\_block\_sizes\_}!ceres::CostFunction@{ceres::CostFunction}}
+\doxysubsubsection{\texorpdfstring{parameter\_block\_sizes\_}{parameter\_block\_sizes\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceceres_ad72735d027a192c091fd08b38e111e7e}{int32}}$>$ ceres\+::\+Cost\+Function\+::parameter\+\_\+block\+\_\+sizes\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{cost__function_8h}{cost\+\_\+function.\+h}}\end{DoxyCompactItemize}

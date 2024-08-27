@@ -1,0 +1,94 @@
+\hypertarget{classceres_1_1_eigen_quaternion_parameterization}{}\doxysection{ceres\+::Eigen\+Quaternion\+Parameterization Class Reference}
+\label{classceres_1_1_eigen_quaternion_parameterization}\index{ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}}
+
+
+{\ttfamily \#include $<$local\+\_\+parameterization.\+h$>$}
+
+
+
+Inheritance diagram for ceres\+::Eigen\+Quaternion\+Parameterization\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classceres_1_1_eigen_quaternion_parameterization__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ceres\+::Eigen\+Quaternion\+Parameterization\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classceres_1_1_eigen_quaternion_parameterization__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classceres_1_1_eigen_quaternion_parameterization_ac553c1bf52739a036e3ca8ce0e130dcd}{$\sim$\+Eigen\+Quaternion\+Parameterization}} ()
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_eigen_quaternion_parameterization_af3374e4d1397f32d2b7d33f2da6c12b2}{Plus}} (const double $\ast$x, const double $\ast$delta, double $\ast$x\+\_\+plus\+\_\+delta) const
+\item 
+virtual bool \mbox{\hyperlink{classceres_1_1_eigen_quaternion_parameterization_a854e9e65e777b46ad984f9378c058bf3}{Compute\+Jacobian}} (const double $\ast$x, double $\ast$jacobian) const
+\item 
+virtual int \mbox{\hyperlink{classceres_1_1_eigen_quaternion_parameterization_ac77ac286aefb9744841178e65d1c8bb9}{Global\+Size}} () const
+\item 
+virtual int \mbox{\hyperlink{classceres_1_1_eigen_quaternion_parameterization_aa0084aa78731de42778405a57e5a09a5}{Local\+Size}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classceres_1_1_eigen_quaternion_parameterization_ac553c1bf52739a036e3ca8ce0e130dcd}\label{classceres_1_1_eigen_quaternion_parameterization_ac553c1bf52739a036e3ca8ce0e130dcd}} 
+\index{ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}!````~EigenQuaternionParameterization@{$\sim$EigenQuaternionParameterization}}
+\index{````~EigenQuaternionParameterization@{$\sim$EigenQuaternionParameterization}!ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}}
+\doxysubsubsection{\texorpdfstring{$\sim$EigenQuaternionParameterization()}{~EigenQuaternionParameterization()}}
+{\footnotesize\ttfamily virtual ceres\+::\+Eigen\+Quaternion\+Parameterization\+::$\sim$\+Eigen\+Quaternion\+Parameterization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_eigen_quaternion_parameterization_a854e9e65e777b46ad984f9378c058bf3}\label{classceres_1_1_eigen_quaternion_parameterization_a854e9e65e777b46ad984f9378c058bf3}} 
+\index{ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}!ComputeJacobian@{ComputeJacobian}}
+\index{ComputeJacobian@{ComputeJacobian}!ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}}
+\doxysubsubsection{\texorpdfstring{ComputeJacobian()}{ComputeJacobian()}}
+{\footnotesize\ttfamily virtual bool ceres\+::\+Eigen\+Quaternion\+Parameterization\+::\+Compute\+Jacobian (\begin{DoxyParamCaption}\item[{const double $\ast$}]{x,  }\item[{double $\ast$}]{jacobian }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_ab0e25130de878a2180d2b0b2caab6b95}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_eigen_quaternion_parameterization_ac77ac286aefb9744841178e65d1c8bb9}\label{classceres_1_1_eigen_quaternion_parameterization_ac77ac286aefb9744841178e65d1c8bb9}} 
+\index{ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}!GlobalSize@{GlobalSize}}
+\index{GlobalSize@{GlobalSize}!ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}}
+\doxysubsubsection{\texorpdfstring{GlobalSize()}{GlobalSize()}}
+{\footnotesize\ttfamily virtual int ceres\+::\+Eigen\+Quaternion\+Parameterization\+::\+Global\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_a8f1ec16c46144c3808abf2ba189b6a18}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_eigen_quaternion_parameterization_aa0084aa78731de42778405a57e5a09a5}\label{classceres_1_1_eigen_quaternion_parameterization_aa0084aa78731de42778405a57e5a09a5}} 
+\index{ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}!LocalSize@{LocalSize}}
+\index{LocalSize@{LocalSize}!ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}}
+\doxysubsubsection{\texorpdfstring{LocalSize()}{LocalSize()}}
+{\footnotesize\ttfamily virtual int ceres\+::\+Eigen\+Quaternion\+Parameterization\+::\+Local\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_ae5a6db8e21e101d43f20a3c9bc179ef5}{ceres\+::\+Local\+Parameterization}}.
+
+\mbox{\Hypertarget{classceres_1_1_eigen_quaternion_parameterization_af3374e4d1397f32d2b7d33f2da6c12b2}\label{classceres_1_1_eigen_quaternion_parameterization_af3374e4d1397f32d2b7d33f2da6c12b2}} 
+\index{ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}!Plus@{Plus}}
+\index{Plus@{Plus}!ceres::EigenQuaternionParameterization@{ceres::EigenQuaternionParameterization}}
+\doxysubsubsection{\texorpdfstring{Plus()}{Plus()}}
+{\footnotesize\ttfamily virtual bool ceres\+::\+Eigen\+Quaternion\+Parameterization\+::\+Plus (\begin{DoxyParamCaption}\item[{const double $\ast$}]{x,  }\item[{const double $\ast$}]{delta,  }\item[{double $\ast$}]{x\+\_\+plus\+\_\+delta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classceres_1_1_local_parameterization_a8b21e4a5d0a0bc926b7e350f417b73dc}{ceres\+::\+Local\+Parameterization}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{local__parameterization_8h}{local\+\_\+parameterization.\+h}}\end{DoxyCompactItemize}

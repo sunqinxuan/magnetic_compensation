@@ -1,0 +1,4 @@
+var struct_eigen_1_1internal_1_1quat__conj_3_01_architecture_1_1_s_s_e_00_01_derived_00_01double_01_4 =
+[
+    [ "ResAlignment", "struct_eigen_1_1internal_1_1quat__conj_3_01_architecture_1_1_s_s_e_00_01_derived_00_01double_01_4.html#a1921d1c9d39279846e92b10f0e3a3059adbba493a0126521b64456bf1d9db8aac", null ]
+];

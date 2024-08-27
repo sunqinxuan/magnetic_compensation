@@ -1,0 +1,41 @@
+\hypertarget{_householder_q_r___l_a_p_a_c_k_e_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Q\+R/\+Householder\+Q\+R\+\_\+\+L\+A\+P\+A\+C\+KE.h File Reference}
+\label{_householder_q_r___l_a_p_a_c_k_e_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/QR/HouseholderQR\_LAPACKE.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/QR/HouseholderQR\_LAPACKE.h}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1internal}{Eigen\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_householder_q_r___l_a_p_a_c_k_e_8h_a11a5365550874294e82ff39d3b0bc450}{E\+I\+G\+E\+N\+\_\+\+L\+A\+P\+A\+C\+K\+E\+\_\+\+Q\+R\+\_\+\+N\+O\+P\+IV}}(E\+I\+G\+T\+Y\+PE,  L\+A\+P\+A\+C\+K\+E\+\_\+\+T\+Y\+PE,  L\+A\+P\+A\+C\+K\+E\+\_\+\+P\+R\+E\+F\+IX)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_householder_q_r___l_a_p_a_c_k_e_8h_a11a5365550874294e82ff39d3b0bc450}\label{_householder_q_r___l_a_p_a_c_k_e_8h_a11a5365550874294e82ff39d3b0bc450}} 
+\index{HouseholderQR\_LAPACKE.h@{HouseholderQR\_LAPACKE.h}!EIGEN\_LAPACKE\_QR\_NOPIV@{EIGEN\_LAPACKE\_QR\_NOPIV}}
+\index{EIGEN\_LAPACKE\_QR\_NOPIV@{EIGEN\_LAPACKE\_QR\_NOPIV}!HouseholderQR\_LAPACKE.h@{HouseholderQR\_LAPACKE.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_LAPACKE\_QR\_NOPIV}{EIGEN\_LAPACKE\_QR\_NOPIV}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+L\+A\+P\+A\+C\+K\+E\+\_\+\+Q\+R\+\_\+\+N\+O\+P\+IV(\begin{DoxyParamCaption}\item[{}]{E\+I\+G\+T\+Y\+PE,  }\item[{}]{L\+A\+P\+A\+C\+K\+E\+\_\+\+T\+Y\+PE,  }\item[{}]{L\+A\+P\+A\+C\+K\+E\+\_\+\+P\+R\+E\+F\+IX }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename} MatrixQR, \textcolor{keyword}{typename} HCoeffs> \(\backslash\)}
+\DoxyCodeLine{struct householder\_qr\_inplace\_blocked<MatrixQR, HCoeffs, EIGTYPE, true> \(\backslash\)}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{  static \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_eigen_1_1_tensor_sycl_a789ef14500d782279cc4bb95e6ba3dbd}{run}}(MatrixQR\& mat, HCoeffs\& hCoeffs, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} = 32, \(\backslash\)}
+\DoxyCodeLine{      \textcolor{keyword}{typename} MatrixQR::Scalar* = 0) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    lapack\_int m = (\mbox{\hyperlink{lapacke_8h_a6a77be44f67ecce372380a594623086a}{lapack\_int}}) mat.rows(); \(\backslash\)}
+\DoxyCodeLine{    lapack\_int n = (\mbox{\hyperlink{lapacke_8h_a6a77be44f67ecce372380a594623086a}{lapack\_int}}) mat.cols(); \(\backslash\)}
+\DoxyCodeLine{    lapack\_int lda = (\mbox{\hyperlink{lapacke_8h_a6a77be44f67ecce372380a594623086a}{lapack\_int}}) mat.outerStride(); \(\backslash\)}
+\DoxyCodeLine{    lapack\_int matrix\_order = (MatrixQR::IsRowMajor) ? \mbox{\hyperlink{lapacke_8h_a8738e8c10f9bda5776ce9e1915ba4ccf}{LAPACK\_ROW\_MAJOR}} : \mbox{\hyperlink{lapacke_8h_a38486f0ba7a9ed3ea3bcea8e4a1d1817}{LAPACK\_COL\_MAJOR}}; \(\backslash\)}
+\DoxyCodeLine{    LAPACKE\_\#\#LAPACKE\_PREFIX\#\#geqrf( matrix\_order, m, n, (LAPACKE\_TYPE*)mat.data(), lda, (LAPACKE\_TYPE*)hCoeffs.data()); \(\backslash\)}
+\DoxyCodeLine{    hCoeffs.adjointInPlace(); \(\backslash\)}
+\DoxyCodeLine{  \} \(\backslash\)}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}

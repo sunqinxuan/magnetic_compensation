@@ -1,0 +1,130 @@
+\hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4}{}\doxysection{Eigen\+::internal\+::traits$<$ Tensor\+Cwise\+Binary\+Op$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4}\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Expr.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_ad342c64d98ca736aa7e0fc38361b1d4caa21a0a266bd0235fd7fc0c4f3ded40ed}{Flags}} = 0
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1result__of}{result\+\_\+of}}$<$ Binary\+Op(typename Lhs\+Xpr\+Type\+::\+Scalar, typename Rhs\+Xpr\+Type\+::\+Scalar)$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a88016389c9fea2cfc12fcce308838023}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ Lhs\+Xpr\+Type $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a7bd685c8ba7afdf6f36c97b80b7ef930}{Xpr\+Traits}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__storage__type}{promote\+\_\+storage\+\_\+type}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ Lhs\+Xpr\+Type $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9fffec7d2af116109975b9577f180f6e}{Storage\+Kind}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ Rhs\+Xpr\+Type $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9fffec7d2af116109975b9577f180f6e}{Storage\+Kind}} $>$\+::ret \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9fffec7d2af116109975b9577f180f6e}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__index__type}{promote\+\_\+index\+\_\+type}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ Lhs\+Xpr\+Type $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a75877c36499910711ad654e7cc893bbf}{Index}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ Rhs\+Xpr\+Type $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a75877c36499910711ad654e7cc893bbf}{Index}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a75877c36499910711ad654e7cc893bbf}{Index}}
+\item 
+typedef Lhs\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_afef33b53a0e383e04db11ebb521317b0}{Lhs\+Nested}}
+\item 
+typedef Rhs\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a41263e98f9ba5ddf6caff9ba9dd036ee}{Rhs\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_afef33b53a0e383e04db11ebb521317b0}{Lhs\+Nested}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a38374fbee53bd78d58495606b45547c4}{\+\_\+\+Lhs\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a41263e98f9ba5ddf6caff9ba9dd036ee}{Rhs\+Nested}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_aa452acb455394355825a1f95608a0b05}{\+\_\+\+Rhs\+Nested}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_af135aeb8b2cfeadbd626141dda335471}{Num\+Dimensions}} = Xpr\+Traits\+::\+Num\+Dimensions
+\item 
+static const int \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9412f1ba9326ee2f59443ecf93d57554}{Layout}} = Xpr\+Traits\+::\+Layout
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a38374fbee53bd78d58495606b45547c4}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a38374fbee53bd78d58495606b45547c4}} 
+\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!\_LhsNested@{\_LhsNested}}
+\index{\_LhsNested@{\_LhsNested}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{\_LhsNested}{\_LhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_afef33b53a0e383e04db11ebb521317b0}{Lhs\+Nested}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_binary_op}{Tensor\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a38374fbee53bd78d58495606b45547c4}{\+\_\+\+Lhs\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_aa452acb455394355825a1f95608a0b05}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_aa452acb455394355825a1f95608a0b05}} 
+\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!\_RhsNested@{\_RhsNested}}
+\index{\_RhsNested@{\_RhsNested}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{\_RhsNested}{\_RhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a41263e98f9ba5ddf6caff9ba9dd036ee}{Rhs\+Nested}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_binary_op}{Tensor\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_aa452acb455394355825a1f95608a0b05}{\+\_\+\+Rhs\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a75877c36499910711ad654e7cc893bbf}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a75877c36499910711ad654e7cc893bbf}} 
+\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__index__type}{promote\+\_\+index\+\_\+type}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$Lhs\+Xpr\+Type$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a75877c36499910711ad654e7cc893bbf}{Index}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$Rhs\+Xpr\+Type$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a75877c36499910711ad654e7cc893bbf}{Index}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_binary_op}{Tensor\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a75877c36499910711ad654e7cc893bbf}{Index}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_afef33b53a0e383e04db11ebb521317b0}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_afef33b53a0e383e04db11ebb521317b0}} 
+\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!LhsNested@{LhsNested}}
+\index{LhsNested@{LhsNested}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{LhsNested}{LhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef Lhs\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_binary_op}{Tensor\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_afef33b53a0e383e04db11ebb521317b0}{Lhs\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a41263e98f9ba5ddf6caff9ba9dd036ee}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a41263e98f9ba5ddf6caff9ba9dd036ee}} 
+\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!RhsNested@{RhsNested}}
+\index{RhsNested@{RhsNested}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{RhsNested}{RhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef Rhs\+Xpr\+Type\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_binary_op}{Tensor\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a41263e98f9ba5ddf6caff9ba9dd036ee}{Rhs\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a88016389c9fea2cfc12fcce308838023}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a88016389c9fea2cfc12fcce308838023}} 
+\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1result__of}{result\+\_\+of}}$<$ Binary\+Op(typename Lhs\+Xpr\+Type\+::\+Scalar, typename Rhs\+Xpr\+Type\+::\+Scalar)$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_binary_op}{Tensor\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a88016389c9fea2cfc12fcce308838023}{Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9fffec7d2af116109975b9577f180f6e}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9fffec7d2af116109975b9577f180f6e}} 
+\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__storage__type}{promote\+\_\+storage\+\_\+type}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$Lhs\+Xpr\+Type$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9fffec7d2af116109975b9577f180f6e}{Storage\+Kind}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$Rhs\+Xpr\+Type$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9fffec7d2af116109975b9577f180f6e}{Storage\+Kind}}$>$\+::ret \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_binary_op}{Tensor\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9fffec7d2af116109975b9577f180f6e}{Storage\+Kind}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a7bd685c8ba7afdf6f36c97b80b7ef930}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a7bd685c8ba7afdf6f36c97b80b7ef930}} 
+\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!XprTraits@{XprTraits}}
+\index{XprTraits@{XprTraits}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{XprTraits}{XprTraits}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$Lhs\+Xpr\+Type$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_binary_op}{Tensor\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a7bd685c8ba7afdf6f36c97b80b7ef930}{Xpr\+Traits}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_ad342c64d98ca736aa7e0fc38361b1d4c}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_ad342c64d98ca736aa7e0fc38361b1d4c}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_ad342c64d98ca736aa7e0fc38361b1d4caa21a0a266bd0235fd7fc0c4f3ded40ed}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_ad342c64d98ca736aa7e0fc38361b1d4caa21a0a266bd0235fd7fc0c4f3ded40ed}} 
+Flags&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9412f1ba9326ee2f59443ecf93d57554}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_a9412f1ba9326ee2f59443ecf93d57554}} 
+\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!Layout@{Layout}}
+\index{Layout@{Layout}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Layout}{Layout}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+const int \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_binary_op}{Tensor\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$\+::Layout = Xpr\+Traits\+::\+Layout\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_af135aeb8b2cfeadbd626141dda335471}\label{struct_eigen_1_1internal_1_1traits_3_01_tensor_cwise_binary_op_3_01_binary_op_00_01_lhs_xpr_type_00_01_rhs_xpr_type_01_4_01_4_af135aeb8b2cfeadbd626141dda335471}} 
+\index{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}!NumDimensions@{NumDimensions}}
+\index{NumDimensions@{NumDimensions}!Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$@{Eigen::internal::traits$<$ TensorCwiseBinaryOp$<$ BinaryOp, LhsXprType, RhsXprType $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{NumDimensions}{NumDimensions}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs\+Xpr\+Type , typename Rhs\+Xpr\+Type $>$ \\
+const int \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_cwise_binary_op}{Tensor\+Cwise\+Binary\+Op}}$<$ Binary\+Op, Lhs\+Xpr\+Type, Rhs\+Xpr\+Type $>$ $>$\+::Num\+Dimensions = Xpr\+Traits\+::\+Num\+Dimensions\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_expr_8h}{Tensor\+Expr.\+h}}\end{DoxyCompactItemize}

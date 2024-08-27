@@ -1,0 +1,27 @@
+var structceres_1_1_gradient_problem_solver_1_1_options =
+[
+    [ "Options", "structceres_1_1_gradient_problem_solver_1_1_options.html#af1e012a1e677e601ee75823cf2553487", null ],
+    [ "IsValid", "structceres_1_1_gradient_problem_solver_1_1_options.html#a28477af327569c8c4391002f1af520f0", null ],
+    [ "callbacks", "structceres_1_1_gradient_problem_solver_1_1_options.html#ad8c3b06367a07b097e4280294c0e98bf", null ],
+    [ "function_tolerance", "structceres_1_1_gradient_problem_solver_1_1_options.html#a0d6d061511c23906d3dffb482977cb63", null ],
+    [ "gradient_tolerance", "structceres_1_1_gradient_problem_solver_1_1_options.html#a0a682c37e1493ffe4471c9a09deb70c5", null ],
+    [ "line_search_direction_type", "structceres_1_1_gradient_problem_solver_1_1_options.html#ab595e283b195272e05c7f4116f9f9e89", null ],
+    [ "line_search_interpolation_type", "structceres_1_1_gradient_problem_solver_1_1_options.html#a12215f1e34bf1e614fbfaddf3c7930ba", null ],
+    [ "line_search_sufficient_curvature_decrease", "structceres_1_1_gradient_problem_solver_1_1_options.html#a480ed77bdd783db2ea8d8f67998f307b", null ],
+    [ "line_search_sufficient_function_decrease", "structceres_1_1_gradient_problem_solver_1_1_options.html#a48eb739a63194c370306896c64ea1068", null ],
+    [ "line_search_type", "structceres_1_1_gradient_problem_solver_1_1_options.html#a9a4b880398fe59164a349bfc85c0d226", null ],
+    [ "logging_type", "structceres_1_1_gradient_problem_solver_1_1_options.html#a71bd992257d7f1b8b50409b5d333c583", null ],
+    [ "max_lbfgs_rank", "structceres_1_1_gradient_problem_solver_1_1_options.html#adc005a9eb90ebd39f4c089a970facdc9", null ],
+    [ "max_line_search_step_contraction", "structceres_1_1_gradient_problem_solver_1_1_options.html#ac73b25b3ae9126bf65b783ced426c12e", null ],
+    [ "max_line_search_step_expansion", "structceres_1_1_gradient_problem_solver_1_1_options.html#acb64d08b1df5a2e735138a8f2d892246", null ],
+    [ "max_num_iterations", "structceres_1_1_gradient_problem_solver_1_1_options.html#ab2cb752f9159c733fa557f8bbe8018fd", null ],
+    [ "max_num_line_search_direction_restarts", "structceres_1_1_gradient_problem_solver_1_1_options.html#a51e6a3469c816038b019695e254be29d", null ],
+    [ "max_num_line_search_step_size_iterations", "structceres_1_1_gradient_problem_solver_1_1_options.html#a5eed20fbdffdaadeb256d8f219a0a84f", null ],
+    [ "max_solver_time_in_seconds", "structceres_1_1_gradient_problem_solver_1_1_options.html#ada01862dd39019c82d6dc20c68877c15", null ],
+    [ "min_line_search_step_contraction", "structceres_1_1_gradient_problem_solver_1_1_options.html#a1327f8f4d008d1b798f7b750bcc897cf", null ],
+    [ "min_line_search_step_size", "structceres_1_1_gradient_problem_solver_1_1_options.html#af9dafcc33ae1d6b1b0d932d85f173596", null ],
+    [ "minimizer_progress_to_stdout", "structceres_1_1_gradient_problem_solver_1_1_options.html#acb8936d3853bad94e22425dab3d04859", null ],
+    [ "nonlinear_conjugate_gradient_type", "structceres_1_1_gradient_problem_solver_1_1_options.html#a509247e4347474789238a6428caec36d", null ],
+    [ "parameter_tolerance", "structceres_1_1_gradient_problem_solver_1_1_options.html#a0be186fce3bdfa7b334fb35d980cc9e5", null ],
+    [ "use_approximate_eigenvalue_bfgs_scaling", "structceres_1_1_gradient_problem_solver_1_1_options.html#ad3459fa84147ee611092eea7416a4530", null ]
+];

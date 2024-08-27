@@ -1,0 +1,223 @@
+\hypertarget{class_eigen_1_1_jacobi_rotation}{}\doxysection{Eigen\+::Jacobi\+Rotation Class Reference}
+\label{class_eigen_1_1_jacobi_rotation}\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+
+
+\mbox{\hyperlink{class_rotation}{Rotation}} given by a cosine-\/sine pair.  
+
+
+
+
+{\ttfamily \#include $<$Forward\+Declarations.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$ Scalar $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}{Real\+Scalar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a2d8cd006c58ec7f89ffadf182a2f5926}{Jacobi\+Rotation}} ()
+\item 
+\mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a0a86ccb0947e7e37dfd91c656483f207}{Jacobi\+Rotation}} (const Scalar \&\mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_abc5f4e69c76a83346d679f18369eac2f}{c}}, const Scalar \&\mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_aa4cffb43f9acd3e2be4719f60c226c9f}{s}})
+\item 
+Scalar \& \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_abc5f4e69c76a83346d679f18369eac2f}{c}} ()
+\item 
+Scalar \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a4fafb6d63f530538a5d19e7a6d282f39}{c}} () const
+\item 
+Scalar \& \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_aa4cffb43f9acd3e2be4719f60c226c9f}{s}} ()
+\item 
+Scalar \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a0403c501ce39b1308377705d3f5cd990}{s}} () const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_jacobi_rotation}{Jacobi\+Rotation}} \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_af97d161cc650d4675ac87efb970e599d}{operator$\ast$}} (const \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation}{Jacobi\+Rotation}} \&other)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_jacobi_rotation}{Jacobi\+Rotation}} \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a00530123585e987d724cc042bd15fa16}{transpose}} () const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_jacobi_rotation}{Jacobi\+Rotation}} \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_aba693b5d01d9153c979bbd3be00d49c0}{adjoint}} () const
+\item 
+{\footnotesize template$<$typename Derived $>$ }\\bool \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a0f95b8d08df1ff8c5d82e408a45f56d2}{make\+Jacobi}} (const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Derived $>$ \&, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} p, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} q)
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a8b5702735f5ec621993b252ef88cbc02}{make\+Jacobi}} (const \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}{Real\+Scalar}} \&x, const Scalar \&\mbox{\hyperlink{namespace_eigen_ae998329a5bd49a32b6048a27e1a232a0}{y}}, const \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}{Real\+Scalar}} \&z)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_ae54abee36e7e8a4a54694ae79e090795}{make\+Givens}} (const Scalar \&p, const Scalar \&q, Scalar $\ast$r=0)
+\item 
+{\footnotesize template$<$typename Scalar $>$ }\\bool \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_afe3f5660f40c331d191a086d93dc066b}{make\+Jacobi}} (const \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}{Real\+Scalar}} \&x, const Scalar \&\mbox{\hyperlink{namespace_eigen_ae998329a5bd49a32b6048a27e1a232a0}{y}}, const \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}{Real\+Scalar}} \&z)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a68e31bd404925395217841ba7cdea111}{make\+Givens}} (const Scalar \&p, const Scalar \&q, Scalar $\ast$r, \mbox{\hyperlink{struct_eigen_1_1internal_1_1true__type}{internal\+::true\+\_\+type}})
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a4a7c7e90d1ab101aad7e73d919357068}{make\+Givens}} (const Scalar \&p, const Scalar \&q, Scalar $\ast$r, \mbox{\hyperlink{struct_eigen_1_1internal_1_1false__type}{internal\+::false\+\_\+type}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Scalar \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a8e26aba4ce54bc39dbbc94de7a986bec}{m\+\_\+c}}
+\item 
+Scalar \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a8b1dfe814f6fe2c18bd2d3f20fe8b58e}{m\+\_\+s}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_rotation}{Rotation}} given by a cosine-\/sine pair. 
+
+\textbackslash{}jacobi\+\_\+module
+
+This class represents a Jacobi or Givens rotation. This is a 2D rotation in the plane {\ttfamily J} of angle $ \theta $ defined by its cosine {\ttfamily c} and sine {\ttfamily s} as follow\+: $ J = \left ( \begin{array}{cc} c & \overline s \\ -s & \overline c \end{array} \right ) $
+
+You can apply the respective counter-\/clockwise rotation to a column vector {\ttfamily v} by applying its adjoint on the left\+: $ v = J^* v $ that translates to the following \mbox{\hyperlink{namespace_eigen}{Eigen}} code\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{v.applyOnTheLeft(J.adjoint());}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_matrix_base_a3a08ad41e81d8ad4a37b5d5c7490e765}{Matrix\+Base\+::apply\+On\+The\+Left()}}, \mbox{\hyperlink{class_eigen_1_1_matrix_base_a45d91752925d2757fc8058a293b15462}{Matrix\+Base\+::apply\+On\+The\+Right()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}\label{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Num\+Traits}}$<$Scalar$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}{Eigen\+::\+Jacobi\+Rotation\+::\+Real\+Scalar}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a2d8cd006c58ec7f89ffadf182a2f5926}\label{class_eigen_1_1_jacobi_rotation_a2d8cd006c58ec7f89ffadf182a2f5926}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!JacobiRotation@{JacobiRotation}}
+\index{JacobiRotation@{JacobiRotation}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{JacobiRotation()}{JacobiRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Jacobi\+Rotation\+::\+Jacobi\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor without any initialization. \mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a0a86ccb0947e7e37dfd91c656483f207}\label{class_eigen_1_1_jacobi_rotation_a0a86ccb0947e7e37dfd91c656483f207}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!JacobiRotation@{JacobiRotation}}
+\index{JacobiRotation@{JacobiRotation}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{JacobiRotation()}{JacobiRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Jacobi\+Rotation\+::\+Jacobi\+Rotation (\begin{DoxyParamCaption}\item[{const Scalar \&}]{c,  }\item[{const Scalar \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a planar rotation from a cosine-\/sine pair ({\itshape c}, {\ttfamily s}). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_aba693b5d01d9153c979bbd3be00d49c0}\label{class_eigen_1_1_jacobi_rotation_aba693b5d01d9153c979bbd3be00d49c0}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!adjoint@{adjoint}}
+\index{adjoint@{adjoint}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{adjoint()}{adjoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation}{Jacobi\+Rotation}} Eigen\+::\+Jacobi\+Rotation\+::adjoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the adjoint transformation \mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_abc5f4e69c76a83346d679f18369eac2f}\label{class_eigen_1_1_jacobi_rotation_abc5f4e69c76a83346d679f18369eac2f}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!c@{c}}
+\index{c@{c}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{c()}{c()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Scalar\& Eigen\+::\+Jacobi\+Rotation\+::c (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a4fafb6d63f530538a5d19e7a6d282f39}\label{class_eigen_1_1_jacobi_rotation_a4fafb6d63f530538a5d19e7a6d282f39}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!c@{c}}
+\index{c@{c}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{c()}{c()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Scalar Eigen\+::\+Jacobi\+Rotation\+::c (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a4a7c7e90d1ab101aad7e73d919357068}\label{class_eigen_1_1_jacobi_rotation_a4a7c7e90d1ab101aad7e73d919357068}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!makeGivens@{makeGivens}}
+\index{makeGivens@{makeGivens}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{makeGivens()}{makeGivens()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Eigen\+::\+Jacobi\+Rotation\+::make\+Givens (\begin{DoxyParamCaption}\item[{const Scalar \&}]{p,  }\item[{const Scalar \&}]{q,  }\item[{Scalar $\ast$}]{r,  }\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1false__type}{internal\+::false\+\_\+type}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a68e31bd404925395217841ba7cdea111}\label{class_eigen_1_1_jacobi_rotation_a68e31bd404925395217841ba7cdea111}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!makeGivens@{makeGivens}}
+\index{makeGivens@{makeGivens}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{makeGivens()}{makeGivens()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Eigen\+::\+Jacobi\+Rotation\+::make\+Givens (\begin{DoxyParamCaption}\item[{const Scalar \&}]{p,  }\item[{const Scalar \&}]{q,  }\item[{Scalar $\ast$}]{r,  }\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1true__type}{internal\+::true\+\_\+type}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_ae54abee36e7e8a4a54694ae79e090795}\label{class_eigen_1_1_jacobi_rotation_ae54abee36e7e8a4a54694ae79e090795}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!makeGivens@{makeGivens}}
+\index{makeGivens@{makeGivens}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{makeGivens()}{makeGivens()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Eigen\+::\+Jacobi\+Rotation\+::make\+Givens (\begin{DoxyParamCaption}\item[{const Scalar \&}]{p,  }\item[{const Scalar \&}]{q,  }\item[{Scalar $\ast$}]{r = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a0f95b8d08df1ff8c5d82e408a45f56d2}\label{class_eigen_1_1_jacobi_rotation_a0f95b8d08df1ff8c5d82e408a45f56d2}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!makeJacobi@{makeJacobi}}
+\index{makeJacobi@{makeJacobi}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{makeJacobi()}{makeJacobi()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+bool Eigen\+::\+Jacobi\+Rotation\+::make\+Jacobi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ Derived $>$ \&}]{m,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{p,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Makes {\ttfamily $\ast$this} as a Jacobi rotation {\ttfamily J} such that applying {\itshape J} on both the right and left sides of the 2x2 selfadjoint matrix $ B = \left ( \begin{array}{cc} \text{this}_{pp} & \text{this}_{pq} \\ (\text{this}_{pq})^* & \text{this}_{qq} \end{array} \right )$ yields a diagonal matrix $ A = J^* B J $
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+Jacobi\+Rotation\+::make\+Jacobi(\+Real\+Scalar, Scalar, Real\+Scalar), \mbox{\hyperlink{class_eigen_1_1_matrix_base_a3a08ad41e81d8ad4a37b5d5c7490e765}{Matrix\+Base\+::apply\+On\+The\+Left()}}, \mbox{\hyperlink{class_eigen_1_1_matrix_base_a45d91752925d2757fc8058a293b15462}{Matrix\+Base\+::apply\+On\+The\+Right()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a8b5702735f5ec621993b252ef88cbc02}\label{class_eigen_1_1_jacobi_rotation_a8b5702735f5ec621993b252ef88cbc02}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!makeJacobi@{makeJacobi}}
+\index{makeJacobi@{makeJacobi}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{makeJacobi()}{makeJacobi()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Eigen\+::\+Jacobi\+Rotation\+::make\+Jacobi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}{Real\+Scalar}} \&}]{x,  }\item[{const Scalar \&}]{y,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}{Real\+Scalar}} \&}]{z }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_afe3f5660f40c331d191a086d93dc066b}\label{class_eigen_1_1_jacobi_rotation_afe3f5660f40c331d191a086d93dc066b}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!makeJacobi@{makeJacobi}}
+\index{makeJacobi@{makeJacobi}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{makeJacobi()}{makeJacobi()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Scalar $>$ \\
+bool Eigen\+::\+Jacobi\+Rotation\+::make\+Jacobi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}{Real\+Scalar}} \&}]{x,  }\item[{const Scalar \&}]{y,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation_a32dae27026e885ddb04532200a28b3b7}{Real\+Scalar}} \&}]{z }\end{DoxyParamCaption})}
+
+Makes {\ttfamily $\ast$this} as a Jacobi rotation {\itshape J} such that applying {\itshape J} on both the right and left sides of the selfadjoint 2x2 matrix $ B = \left ( \begin{array}{cc} x & y \\ \overline y & z \end{array} \right )$ yields a diagonal matrix $ A = J^* B J $
+
+\begin{DoxySeeAlso}{See also}
+Matrix\+Base\+::make\+Jacobi(const Matrix\+Base$<$\+Derived$>$\&, Index, Index), \mbox{\hyperlink{class_eigen_1_1_matrix_base_a3a08ad41e81d8ad4a37b5d5c7490e765}{Matrix\+Base\+::apply\+On\+The\+Left()}}, \mbox{\hyperlink{class_eigen_1_1_matrix_base_a45d91752925d2757fc8058a293b15462}{Matrix\+Base\+::apply\+On\+The\+Right()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_af97d161cc650d4675ac87efb970e599d}\label{class_eigen_1_1_jacobi_rotation_af97d161cc650d4675ac87efb970e599d}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation}{Jacobi\+Rotation}} Eigen\+::\+Jacobi\+Rotation\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation}{Jacobi\+Rotation}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Concatenates two planar rotation \mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_aa4cffb43f9acd3e2be4719f60c226c9f}\label{class_eigen_1_1_jacobi_rotation_aa4cffb43f9acd3e2be4719f60c226c9f}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!s@{s}}
+\index{s@{s}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{s()}{s()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Scalar\& Eigen\+::\+Jacobi\+Rotation\+::s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a0403c501ce39b1308377705d3f5cd990}\label{class_eigen_1_1_jacobi_rotation_a0403c501ce39b1308377705d3f5cd990}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!s@{s}}
+\index{s@{s}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{s()}{s()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Scalar Eigen\+::\+Jacobi\+Rotation\+::s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a00530123585e987d724cc042bd15fa16}\label{class_eigen_1_1_jacobi_rotation_a00530123585e987d724cc042bd15fa16}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!transpose@{transpose}}
+\index{transpose@{transpose}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_jacobi_rotation}{Jacobi\+Rotation}} Eigen\+::\+Jacobi\+Rotation\+::transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the transposed transformation 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a8e26aba4ce54bc39dbbc94de7a986bec}\label{class_eigen_1_1_jacobi_rotation_a8e26aba4ce54bc39dbbc94de7a986bec}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!m\_c@{m\_c}}
+\index{m\_c@{m\_c}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{m\_c}{m\_c}}
+{\footnotesize\ttfamily Scalar Eigen\+::\+Jacobi\+Rotation\+::m\+\_\+c\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_jacobi_rotation_a8b1dfe814f6fe2c18bd2d3f20fe8b58e}\label{class_eigen_1_1_jacobi_rotation_a8b1dfe814f6fe2c18bd2d3f20fe8b58e}} 
+\index{Eigen::JacobiRotation@{Eigen::JacobiRotation}!m\_s@{m\_s}}
+\index{m\_s@{m\_s}!Eigen::JacobiRotation@{Eigen::JacobiRotation}}
+\doxysubsubsection{\texorpdfstring{m\_s}{m\_s}}
+{\footnotesize\ttfamily Scalar Eigen\+::\+Jacobi\+Rotation\+::m\+\_\+s\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/util/\mbox{\hyperlink{_forward_declarations_8h}{Forward\+Declarations.\+h}}\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Jacobi/\mbox{\hyperlink{_jacobi_8h}{Jacobi.\+h}}\end{DoxyCompactItemize}

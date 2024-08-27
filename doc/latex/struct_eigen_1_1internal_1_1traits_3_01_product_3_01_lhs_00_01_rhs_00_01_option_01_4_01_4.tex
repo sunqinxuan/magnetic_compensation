@@ -1,0 +1,133 @@
+\hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4}{}\doxysection{Eigen\+::internal\+::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4}\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}
+
+
+{\ttfamily \#include $<$Product.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa0c86fbf463668c2174d73628e7f71269}{Rows\+At\+Compile\+Time}} = Lhs\+Traits\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa2471c4a250eb747025df4e9bd788ded7}{Cols\+At\+Compile\+Time}} = Rhs\+Traits\+::Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa2bc714111e81afbfedba763318ec6a26}{Max\+Rows\+At\+Compile\+Time}} = Lhs\+Traits\+::Max\+Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa8e984ef6938187f6860b9d5cb334a485}{Max\+Cols\+At\+Compile\+Time}} = Rhs\+Traits\+::Max\+Cols\+At\+Compile\+Time, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa7a829eda6fe7b2daaf6bdd8a38bc684c}{Inner\+Size}} = E\+I\+G\+E\+N\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+I\+N\+\_\+\+P\+R\+E\+F\+E\+R\+\_\+\+F\+I\+X\+ED(Lhs\+Traits\+::Cols\+At\+Compile\+Time, Rhs\+Traits\+::Rows\+At\+Compile\+Time), 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa8fedff91fd8f342a7205e3a39771f994}{Flags}}
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{remove\+\_\+all}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd76e36f8afc58da6d2d5646b671807}{Lhs\+Cleaned}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{remove\+\_\+all}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd90d8da68fa0e0877534a52aa0ad62}{Rhs\+Cleaned}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd76e36f8afc58da6d2d5646b671807}{Lhs\+Cleaned}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a2558de0f7d3f7e00f3e129406665a1dc}{Lhs\+Traits}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd90d8da68fa0e0877534a52aa0ad62}{Rhs\+Cleaned}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5c368e4a12fcde66f08ea07ab706c037}{Rhs\+Traits}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_matrix_xpr}{Matrix\+Xpr}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a120ac65f1353062ed28220521a12cbb4}{Xpr\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_scalar_binary_op_traits}{Scalar\+Binary\+Op\+Traits}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd76e36f8afc58da6d2d5646b671807}{Lhs\+Cleaned}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a780b9b2fadba314795f26828b0a595f2}{Scalar}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd90d8da68fa0e0877534a52aa0ad62}{Rhs\+Cleaned}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a780b9b2fadba314795f26828b0a595f2}{Scalar}} $>$\+::Return\+Type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a780b9b2fadba314795f26828b0a595f2}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1product__promote__storage__type}{product\+\_\+promote\+\_\+storage\+\_\+type}}$<$ typename Lhs\+Traits\+::\+Storage\+Kind, typename Rhs\+Traits\+::\+Storage\+Kind, \mbox{\hyperlink{struct_eigen_1_1internal_1_1product__type}{internal\+::product\+\_\+type}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$\+::ret $>$\+::ret \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6730dadec4953678689c03ff60f6ad7e}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__index__type}{promote\+\_\+index\+\_\+type}}$<$ typename Lhs\+Traits\+::\+Storage\+Index, typename Rhs\+Traits\+::\+Storage\+Index $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_ad010e31abcd1be347b28e292a4b2a924}{Storage\+Index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd76e36f8afc58da6d2d5646b671807}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd76e36f8afc58da6d2d5646b671807}} 
+\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!LhsCleaned@{LhsCleaned}}
+\index{LhsCleaned@{LhsCleaned}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{LhsCleaned}{LhsCleaned}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Option$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{remove\+\_\+all}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}, Option $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd76e36f8afc58da6d2d5646b671807}{Lhs\+Cleaned}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a2558de0f7d3f7e00f3e129406665a1dc}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a2558de0f7d3f7e00f3e129406665a1dc}} 
+\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!LhsTraits@{LhsTraits}}
+\index{LhsTraits@{LhsTraits}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{LhsTraits}{LhsTraits}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Option$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd76e36f8afc58da6d2d5646b671807}{Lhs\+Cleaned}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}, Option $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a2558de0f7d3f7e00f3e129406665a1dc}{Lhs\+Traits}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd90d8da68fa0e0877534a52aa0ad62}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd90d8da68fa0e0877534a52aa0ad62}} 
+\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!RhsCleaned@{RhsCleaned}}
+\index{RhsCleaned@{RhsCleaned}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{RhsCleaned}{RhsCleaned}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Option$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{remove\+\_\+all}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}, Option $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd90d8da68fa0e0877534a52aa0ad62}{Rhs\+Cleaned}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5c368e4a12fcde66f08ea07ab706c037}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5c368e4a12fcde66f08ea07ab706c037}} 
+\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!RhsTraits@{RhsTraits}}
+\index{RhsTraits@{RhsTraits}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{RhsTraits}{RhsTraits}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Option$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd90d8da68fa0e0877534a52aa0ad62}{Rhs\+Cleaned}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}, Option $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5c368e4a12fcde66f08ea07ab706c037}{Rhs\+Traits}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a780b9b2fadba314795f26828b0a595f2}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a780b9b2fadba314795f26828b0a595f2}} 
+\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Option$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_scalar_binary_op_traits}{Scalar\+Binary\+Op\+Traits}}$<$typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd76e36f8afc58da6d2d5646b671807}{Lhs\+Cleaned}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a780b9b2fadba314795f26828b0a595f2}{Scalar}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6fd90d8da68fa0e0877534a52aa0ad62}{Rhs\+Cleaned}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a780b9b2fadba314795f26828b0a595f2}{Scalar}}$>$\+::Return\+Type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}, Option $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a780b9b2fadba314795f26828b0a595f2}{Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_ad010e31abcd1be347b28e292a4b2a924}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_ad010e31abcd1be347b28e292a4b2a924}} 
+\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Option$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__index__type}{promote\+\_\+index\+\_\+type}}$<$typename Lhs\+Traits\+::\+Storage\+Index, typename Rhs\+Traits\+::\+Storage\+Index$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}, Option $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_ad010e31abcd1be347b28e292a4b2a924}{Storage\+Index}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6730dadec4953678689c03ff60f6ad7e}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6730dadec4953678689c03ff60f6ad7e}} 
+\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Option$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1product__promote__storage__type}{product\+\_\+promote\+\_\+storage\+\_\+type}}$<$typename Lhs\+Traits\+::\+Storage\+Kind, typename Rhs\+Traits\+::\+Storage\+Kind, \mbox{\hyperlink{struct_eigen_1_1internal_1_1product__type}{internal\+::product\+\_\+type}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}},\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}$>$\+::ret$>$\+::ret \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}, Option $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a6730dadec4953678689c03ff60f6ad7e}{Storage\+Kind}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a120ac65f1353062ed28220521a12cbb4}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a120ac65f1353062ed28220521a12cbb4}} 
+\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!XprKind@{XprKind}}
+\index{XprKind@{XprKind}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{XprKind}{XprKind}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Option$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_matrix_xpr}{Matrix\+Xpr}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_product}{Product}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}, Option $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a120ac65f1353062ed28220521a12cbb4}{Xpr\+Kind}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bf}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bf}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Lhs , typename Rhs , int Option$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa0c86fbf463668c2174d73628e7f71269}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa0c86fbf463668c2174d73628e7f71269}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa2471c4a250eb747025df4e9bd788ded7}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa2471c4a250eb747025df4e9bd788ded7}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa2bc714111e81afbfedba763318ec6a26}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa2bc714111e81afbfedba763318ec6a26}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa8e984ef6938187f6860b9d5cb334a485}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa8e984ef6938187f6860b9d5cb334a485}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InnerSize@{InnerSize}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!InnerSize@{InnerSize}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa7a829eda6fe7b2daaf6bdd8a38bc684c}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa7a829eda6fe7b2daaf6bdd8a38bc684c}} 
+Inner\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}}\index{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$@{Eigen::internal::traits$<$ Product$<$ Lhs, Rhs, Option $>$ $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa8fedff91fd8f342a7205e3a39771f994}\label{struct_eigen_1_1internal_1_1traits_3_01_product_3_01_lhs_00_01_rhs_00_01_option_01_4_01_4_a5a7217320181ebff46a2b5716e6487bfa8fedff91fd8f342a7205e3a39771f994}} 
+Flags&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_product_8h}{Product.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,221 @@
+\hypertarget{class_eigen_1_1_nest_by_value}{}\doxysection{Eigen\+::Nest\+By\+Value$<$ Expression\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_nest_by_value}\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+
+
+Expression which must be nested by value.  
+
+
+
+
+{\ttfamily \#include $<$Nest\+By\+Value.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Nest\+By\+Value$<$ Expression\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_eigen_1_1_nest_by_value__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Nest\+By\+Value$<$ Expression\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_eigen_1_1_nest_by_value__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1dense__xpr__base}{internal\+::dense\+\_\+xpr\+\_\+base}}$<$ \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Nest\+By\+Value}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a2fcd27ed9fea5ac518b80d2ff26de783}{Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a36ac9cd7a82641ad3f4c50451fee22e0}{Nest\+By\+Value}} (const Expression\+Type \&matrix)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a6189cde894ab7404cea84cf16c3efd37}{rows}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a9eba96fa3c83f4b7c0aaf7d8fe052120}{cols}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a2de24c7efae5719c76ecb95546097746}{outer\+Stride}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_nest_by_value_ad9de9e6f7ca57353f5b2a700d6fc2ba2}{inner\+Stride}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a2d2f72e271d1edb6be73bd21514886fb}{coeff}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Scalar \& \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a465607f8c26fd6259b3a1ce8ed868d24}{coeff\+Ref}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}})
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a3fb83acf1557377700e4b5dee450bc7c}{coeff}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} index) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Scalar \& \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a18a3445c5f65d1d786b7f034228c5281}{coeff\+Ref}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} index)
+\item 
+{\footnotesize template$<$int Load\+Mode$>$ }\\const Packet\+Scalar \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a4471429c46ad8b6e606630e3369a8df1}{packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+{\footnotesize template$<$int Load\+Mode$>$ }\\void \mbox{\hyperlink{class_eigen_1_1_nest_by_value_abe03d889bd5bef238d965f08ecbe8662}{write\+Packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}, const Packet\+Scalar \&x)
+\item 
+{\footnotesize template$<$int Load\+Mode$>$ }\\const Packet\+Scalar \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a939564a3561ff07f9fd9ea882e244e23}{packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} index) const
+\item 
+{\footnotesize template$<$int Load\+Mode$>$ }\\void \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a61afcf4b01414da4f319778c849c8288}{write\+Packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} index, const Packet\+Scalar \&x)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_nest_by_value_aa0573f625c3e1a5307a7effd6e9b158c}{operator const Expression\+Type \&}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Expression\+Type \mbox{\hyperlink{class_eigen_1_1_nest_by_value_a87876bf6943bdab360aa9e31ce20950e}{m\+\_\+expression}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Expression\+Type$>$\newline
+class Eigen\+::\+Nest\+By\+Value$<$ Expression\+Type $>$}
+
+Expression which must be nested by value. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Expression\+Type} & the type of the object of which we are requiring nesting-\/by-\/value\\
+\hline
+\end{DoxyTemplParams}
+This class is the return type of \mbox{\hyperlink{class_eigen_1_1_dense_base_a3e2761e2b6da74dba1d17b40cc918bf7}{Matrix\+Base\+::nest\+By\+Value()}} and most of the time this is the only way it is used.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_dense_base_a3e2761e2b6da74dba1d17b40cc918bf7}{Matrix\+Base\+::nest\+By\+Value()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a2fcd27ed9fea5ac518b80d2ff26de783}\label{class_eigen_1_1_nest_by_value_a2fcd27ed9fea5ac518b80d2ff26de783}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1dense__xpr__base}{internal\+::dense\+\_\+xpr\+\_\+base}}$<$\mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Nest\+By\+Value}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_nest_by_value_a2fcd27ed9fea5ac518b80d2ff26de783}{Base}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a36ac9cd7a82641ad3f4c50451fee22e0}\label{class_eigen_1_1_nest_by_value_a36ac9cd7a82641ad3f4c50451fee22e0}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!NestByValue@{NestByValue}}
+\index{NestByValue@{NestByValue}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{NestByValue()}{NestByValue()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Nest\+By\+Value}} (\begin{DoxyParamCaption}\item[{const Expression\+Type \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a3fb83acf1557377700e4b5dee450bc7c}\label{class_eigen_1_1_nest_by_value_a3fb83acf1557377700e4b5dee450bc7c}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a2d2f72e271d1edb6be73bd21514886fb}\label{class_eigen_1_1_nest_by_value_a2d2f72e271d1edb6be73bd21514886fb}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a18a3445c5f65d1d786b7f034228c5281}\label{class_eigen_1_1_nest_by_value_a18a3445c5f65d1d786b7f034228c5281}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!coeffRef@{coeffRef}}
+\index{coeffRef@{coeffRef}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{coeffRef()}{coeffRef()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Scalar\& \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::coeff\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a465607f8c26fd6259b3a1ce8ed868d24}\label{class_eigen_1_1_nest_by_value_a465607f8c26fd6259b3a1ce8ed868d24}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!coeffRef@{coeffRef}}
+\index{coeffRef@{coeffRef}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{coeffRef()}{coeffRef()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Scalar\& \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::coeff\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a9eba96fa3c83f4b7c0aaf7d8fe052120}\label{class_eigen_1_1_nest_by_value_a9eba96fa3c83f4b7c0aaf7d8fe052120}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_ad9de9e6f7ca57353f5b2a700d6fc2ba2}\label{class_eigen_1_1_nest_by_value_ad9de9e6f7ca57353f5b2a700d6fc2ba2}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!innerStride@{innerStride}}
+\index{innerStride@{innerStride}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{innerStride()}{innerStride()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::inner\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_aa0573f625c3e1a5307a7effd6e9b158c}\label{class_eigen_1_1_nest_by_value_aa0573f625c3e1a5307a7effd6e9b158c}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!operator const ExpressionType \&@{operator const ExpressionType \&}}
+\index{operator const ExpressionType \&@{operator const ExpressionType \&}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{operator const ExpressionType \&()}{operator const ExpressionType \&()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::operator const Expression\+Type \& (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a2de24c7efae5719c76ecb95546097746}\label{class_eigen_1_1_nest_by_value_a2de24c7efae5719c76ecb95546097746}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!outerStride@{outerStride}}
+\index{outerStride@{outerStride}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{outerStride()}{outerStride()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::outer\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a939564a3561ff07f9fd9ea882e244e23}\label{class_eigen_1_1_nest_by_value_a939564a3561ff07f9fd9ea882e244e23}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!packet@{packet}}
+\index{packet@{packet}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{packet()}{packet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+template$<$int Load\+Mode$>$ \\
+const Packet\+Scalar \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a4471429c46ad8b6e606630e3369a8df1}\label{class_eigen_1_1_nest_by_value_a4471429c46ad8b6e606630e3369a8df1}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!packet@{packet}}
+\index{packet@{packet}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{packet()}{packet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+template$<$int Load\+Mode$>$ \\
+const Packet\+Scalar \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a6189cde894ab7404cea84cf16c3efd37}\label{class_eigen_1_1_nest_by_value_a6189cde894ab7404cea84cf16c3efd37}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a61afcf4b01414da4f319778c849c8288}\label{class_eigen_1_1_nest_by_value_a61afcf4b01414da4f319778c849c8288}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!writePacket@{writePacket}}
+\index{writePacket@{writePacket}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{writePacket()}{writePacket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+template$<$int Load\+Mode$>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::write\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{index,  }\item[{const Packet\+Scalar \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_abe03d889bd5bef238d965f08ecbe8662}\label{class_eigen_1_1_nest_by_value_abe03d889bd5bef238d965f08ecbe8662}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!writePacket@{writePacket}}
+\index{writePacket@{writePacket}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{writePacket()}{writePacket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+template$<$int Load\+Mode$>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::write\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col,  }\item[{const Packet\+Scalar \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_nest_by_value_a87876bf6943bdab360aa9e31ce20950e}\label{class_eigen_1_1_nest_by_value_a87876bf6943bdab360aa9e31ce20950e}} 
+\index{Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}!m\_expression@{m\_expression}}
+\index{m\_expression@{m\_expression}!Eigen::NestByValue$<$ ExpressionType $>$@{Eigen::NestByValue$<$ ExpressionType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_expression}{m\_expression}}
+{\footnotesize\ttfamily template$<$typename Expression\+Type $>$ \\
+const Expression\+Type \mbox{\hyperlink{class_eigen_1_1_nest_by_value}{Eigen\+::\+Nest\+By\+Value}}$<$ Expression\+Type $>$\+::m\+\_\+expression\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_nest_by_value_8h}{Nest\+By\+Value.\+h}}\end{DoxyCompactItemize}

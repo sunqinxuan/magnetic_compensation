@@ -17,7 +17,7 @@
 USING_NAMESPACE_MIC;
 
 DEFINE_string(model, "ellipsoid", "ellipsoid, tl, tlc or cabin");
-DEFINE_string(file, "Flt1002_1002.2.txt", "file to load data");
+DEFINE_string(file, "Flt1002_1002.02.txt", "file to load data");
 
 int main(int argc, char *argv[])
 {

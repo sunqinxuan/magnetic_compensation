@@ -1,0 +1,50 @@
+\hypertarget{struct_eigen_1_1internal_1_1dot__nocheck}{}\doxysection{Eigen\+::internal\+::dot\+\_\+nocheck$<$ T, U, Need\+To\+Transpose $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1dot__nocheck}\index{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$@{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$}}
+
+
+{\ttfamily \#include $<$Dot.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1scalar__conj__product__op}{scalar\+\_\+conj\+\_\+product\+\_\+op}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ T $>$\+::Scalar, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ U $>$\+::Scalar $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1dot__nocheck_abf2c27baaf29d5b30c6e6c4683e4b85a}{conj\+\_\+prod}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1scalar__conj__product__op_a123d7697ac23673cd7d4f1645dd6dd17}{conj\+\_\+prod\+::result\+\_\+type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1dot__nocheck_a13097f7d273a417cbdc3556f5e500c42}{Res\+Scalar}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC static \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1dot__nocheck_a13097f7d273a417cbdc3556f5e500c42}{Res\+Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1dot__nocheck_a0cbd69a6c59affd92970f3b66b209c86}{run}} (const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ T $>$ \&a, const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ U $>$ \&b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1dot__nocheck_abf2c27baaf29d5b30c6e6c4683e4b85a}\label{struct_eigen_1_1internal_1_1dot__nocheck_abf2c27baaf29d5b30c6e6c4683e4b85a}} 
+\index{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$@{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$}!conj\_prod@{conj\_prod}}
+\index{conj\_prod@{conj\_prod}!Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$@{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$}}
+\doxysubsubsection{\texorpdfstring{conj\_prod}{conj\_prod}}
+{\footnotesize\ttfamily template$<$typename T , typename U , bool Need\+To\+Transpose = T\+::\+Is\+Vector\+At\+Compile\+Time \&\& U\+::\+Is\+Vector\+At\+Compile\+Time \&\& ((int(\+T\+::\+Rows\+At\+Compile\+Time) == 1 \&\& int(\+U\+::\+Cols\+At\+Compile\+Time) == 1)                      $\vert$                                               (int(\+T\+::\+Cols\+At\+Compile\+Time) == 1 \&\& int(\+U\+::\+Rows\+At\+Compile\+Time) == 1))$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1scalar__conj__product__op}{scalar\+\_\+conj\+\_\+product\+\_\+op}}$<$typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$T$>$\+::Scalar,typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$U$>$\+::Scalar$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1dot__nocheck}{Eigen\+::internal\+::dot\+\_\+nocheck}}$<$ T, U, Need\+To\+Transpose $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1dot__nocheck_abf2c27baaf29d5b30c6e6c4683e4b85a}{conj\+\_\+prod}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1dot__nocheck_a13097f7d273a417cbdc3556f5e500c42}\label{struct_eigen_1_1internal_1_1dot__nocheck_a13097f7d273a417cbdc3556f5e500c42}} 
+\index{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$@{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$}!ResScalar@{ResScalar}}
+\index{ResScalar@{ResScalar}!Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$@{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$}}
+\doxysubsubsection{\texorpdfstring{ResScalar}{ResScalar}}
+{\footnotesize\ttfamily template$<$typename T , typename U , bool Need\+To\+Transpose = T\+::\+Is\+Vector\+At\+Compile\+Time \&\& U\+::\+Is\+Vector\+At\+Compile\+Time \&\& ((int(\+T\+::\+Rows\+At\+Compile\+Time) == 1 \&\& int(\+U\+::\+Cols\+At\+Compile\+Time) == 1)                      $\vert$                                               (int(\+T\+::\+Cols\+At\+Compile\+Time) == 1 \&\& int(\+U\+::\+Rows\+At\+Compile\+Time) == 1))$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1scalar__conj__product__op_a123d7697ac23673cd7d4f1645dd6dd17}{conj\+\_\+prod\+::result\+\_\+type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1dot__nocheck}{Eigen\+::internal\+::dot\+\_\+nocheck}}$<$ T, U, Need\+To\+Transpose $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1dot__nocheck_a13097f7d273a417cbdc3556f5e500c42}{Res\+Scalar}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1dot__nocheck_a0cbd69a6c59affd92970f3b66b209c86}\label{struct_eigen_1_1internal_1_1dot__nocheck_a0cbd69a6c59affd92970f3b66b209c86}} 
+\index{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$@{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$}!run@{run}}
+\index{run@{run}!Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$@{Eigen::internal::dot\_nocheck$<$ T, U, NeedToTranspose $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename T , typename U , bool Need\+To\+Transpose = T\+::\+Is\+Vector\+At\+Compile\+Time \&\& U\+::\+Is\+Vector\+At\+Compile\+Time \&\& ((int(\+T\+::\+Rows\+At\+Compile\+Time) == 1 \&\& int(\+U\+::\+Cols\+At\+Compile\+Time) == 1)                      $\vert$                                               (int(\+T\+::\+Cols\+At\+Compile\+Time) == 1 \&\& int(\+U\+::\+Rows\+At\+Compile\+Time) == 1))$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC static \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1dot__nocheck_a13097f7d273a417cbdc3556f5e500c42}{Res\+Scalar}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1dot__nocheck}{Eigen\+::internal\+::dot\+\_\+nocheck}}$<$ T, U, Need\+To\+Transpose $>$\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ T $>$ \&}]{a,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_matrix_base}{Matrix\+Base}}$<$ U $>$ \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_dot_8h}{Dot.\+h}}\end{DoxyCompactItemize}

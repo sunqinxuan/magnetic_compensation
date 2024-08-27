@@ -1,0 +1,96 @@
+\hypertarget{_vectorwise_op_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Core/\+Vectorwise\+Op.h File Reference}
+\label{_vectorwise_op_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/Core/VectorwiseOp.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/Core/VectorwiseOp.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Eigen\+::\+Partial\+Redux\+Expr}}
+\begin{DoxyCompactList}\small\item\em Generic expression of a partially reduxed matrix. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_partial_redux_expr_3_01_matrix_type_00_01_member_op_00_01_direction_01_4_01_4}{Eigen\+::internal\+::traits$<$ Partial\+Redux\+Expr$<$ Matrix\+Type, Member\+Op, Direction $>$ $>$}}
+\item 
+class \mbox{\hyperlink{class_eigen_1_1_partial_redux_expr}{Eigen\+::\+Partial\+Redux\+Expr}}
+\begin{DoxyCompactList}\small\item\em Generic expression of a partially reduxed matrix. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1member__lpnorm}{Eigen\+::internal\+::member\+\_\+lpnorm$<$ p, Result\+Type $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1member__lpnorm_1_1_cost}{Eigen\+::internal\+::member\+\_\+lpnorm$<$ p, Result\+Type $>$\+::\+Cost$<$ Scalar, Size $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1member__redux}{Eigen\+::internal\+::member\+\_\+redux$<$ Binary\+Op, Scalar $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1internal_1_1member__redux_1_1_cost}{Eigen\+::internal\+::member\+\_\+redux$<$ Binary\+Op, Scalar $>$\+::\+Cost$<$ \+\_\+\+Scalar, Size $>$}}
+\item 
+class \mbox{\hyperlink{class_eigen_1_1_vectorwise_op}{Eigen\+::\+Vectorwise\+Op}}
+\begin{DoxyCompactList}\small\item\em Pseudo expression providing partial reduction operations. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_vectorwise_op_1_1_return_type}{Eigen\+::\+Vectorwise\+Op\+::\+Return\+Type$<$ Functor, Scalar\+\_\+ $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_vectorwise_op_1_1_redux_return_type}{Eigen\+::\+Vectorwise\+Op\+::\+Redux\+Return\+Type$<$ Binary\+Op $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_vectorwise_op_1_1_extended_type}{Eigen\+::\+Vectorwise\+Op\+::\+Extended\+Type$<$ Other\+Derived $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_vectorwise_op_1_1_opposite_extended_type}{Eigen\+::\+Vectorwise\+Op\+::\+Opposite\+Extended\+Type$<$ Other\+Derived $>$}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_vectorwise_op_1_1_lp_norm_return_type}{Eigen\+::\+Vectorwise\+Op\+::\+Lp\+Norm\+Return\+Type$<$ p $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1internal}{Eigen\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_vectorwise_op_8h_a86253cd67c16821514cc4fbf30f9eb6b}{E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}}(M\+E\+M\+B\+ER,  C\+O\+ST)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_ab39eeebdbbd13c2d3a1cc14318f82b7c}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (squared\+Norm, Size $\ast$Num\+Traits$<$ Scalar $>$\+::Mul\+Cost+(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_af0728ee4134f879abe9121af16def656}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (norm,(Size+5) $\ast$Num\+Traits$<$ Scalar $>$\+::Mul\+Cost+(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_aba307df48bf366dbd67f8874a8c17834}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (stable\+Norm,(Size+5) $\ast$Num\+Traits$<$ Scalar $>$\+::Mul\+Cost+(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_a679d4a1ffba4b41232f135265bfeed29}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (blue\+Norm,(Size+5) $\ast$Num\+Traits$<$ Scalar $>$\+::Mul\+Cost+(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_a561e210ddabd80c15133261e8f3fee32}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (hypot\+Norm,(Size-\/1) $\ast$functor\+\_\+traits$<$ scalar\+\_\+hypot\+\_\+op$<$ Scalar $>$ $>$\+::Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_a7facfa7241d92132c1cfde113d6774a4}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (sum,(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_aaa428334b11b154759d5032d49fb3187}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (mean,(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost+Num\+Traits$<$ Scalar $>$\+::Mul\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_a0de7f95e5f1fa492a604ce76af2f966d}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (min\+Coeff,(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_a920afb1ffeeb1df9e20b5305d44b4e9e}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (max\+Coeff,(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_a5aa49c0ad0ba41a6fa7e0900181a0364}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (all,(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_a988e8c367db47dcf2de8007b672e0a3d}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (any,(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_a6bb963b8c61914561f26ad3cef3fde15}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (count,(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Add\+Cost)
+\item 
+\mbox{\hyperlink{namespace_eigen_1_1internal_a96b0b3e5538aa46b51c1db27fc372160}{Eigen\+::internal\+::\+E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR}} (prod,(Size-\/1) $\ast$Num\+Traits$<$ Scalar $>$\+::Mul\+Cost)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_vectorwise_op_8h_a86253cd67c16821514cc4fbf30f9eb6b}\label{_vectorwise_op_8h_a86253cd67c16821514cc4fbf30f9eb6b}} 
+\index{VectorwiseOp.h@{VectorwiseOp.h}!EIGEN\_MEMBER\_FUNCTOR@{EIGEN\_MEMBER\_FUNCTOR}}
+\index{EIGEN\_MEMBER\_FUNCTOR@{EIGEN\_MEMBER\_FUNCTOR}!VectorwiseOp.h@{VectorwiseOp.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_MEMBER\_FUNCTOR}{EIGEN\_MEMBER\_FUNCTOR}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+F\+U\+N\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{M\+E\+M\+B\+ER,  }\item[{}]{C\+O\+ST }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{template} <\textcolor{keyword}{typename} ResultType>                                        \(\backslash\)}
+\DoxyCodeLine{  struct member\_\#\#MEMBER \{                                              \(\backslash\)}
+\DoxyCodeLine{    EIGEN\_EMPTY\_STRUCT\_CTOR(member\_\#\#MEMBER)                            \(\backslash\)}
+\DoxyCodeLine{    typedef ResultType result\_type;                                     \(\backslash\)}
+\DoxyCodeLine{    template<typename Scalar, int Size> \textcolor{keyword}{struct }Cost                     \(\backslash\)}
+\DoxyCodeLine{    \{ \textcolor{keyword}{enum} \{ \mbox{\hyperlink{namespacedetail_a47b1bb0bbd3596589ed9187059c312efa2063c1608d6e0baf80249c42e2be5804}{value}} = COST \}; \};                                         \(\backslash\)}
+\DoxyCodeLine{    template<typename XprType>                                          \(\backslash\)}
+\DoxyCodeLine{    EIGEN\_DEVICE\_FUNC EIGEN\_STRONG\_INLINE                               \(\backslash\)}
+\DoxyCodeLine{    ResultType operator()(\textcolor{keyword}{const} XprType\& mat) \textcolor{keyword}{const}                     \(\backslash\)}
+\DoxyCodeLine{    \{ \textcolor{keywordflow}{return} mat.MEMBER(); \} \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}

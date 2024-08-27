@@ -1,0 +1,27 @@
+var ceres_1_812_80_2include_2ceres_2rotation_8h =
+[
+    [ "MatrixAdapter", "structceres_1_1_matrix_adapter.html", "structceres_1_1_matrix_adapter" ],
+    [ "MatrixAdapter", "structceres_1_1_matrix_adapter.html", "structceres_1_1_matrix_adapter" ],
+    [ "AngleAxisRotatePoint", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a3de3cc0060579bca157028a0a481ed97", null ],
+    [ "AngleAxisToQuaternion", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a98fa9c6405a41de89083e1d8da55a986", null ],
+    [ "AngleAxisToRotationMatrix", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a94ece6b8e7faa769c2ca7c05b253495b", null ],
+    [ "AngleAxisToRotationMatrix", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a672a5276e9531e7a680e7fe3596297a3", null ],
+    [ "ColumnMajorAdapter3x3", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a0500fcd7e01e8a0d8f0fcd752d9a6015", null ],
+    [ "CrossProduct", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#ab7ad5277935019a5e5f76db11c9958df", null ],
+    [ "DotProduct", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#ac70b0a04e2a7e6d1fff88358b189db01", null ],
+    [ "EulerAnglesToRotationMatrix", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#afe510a5b3fdc9001d95d40496a7d7074", null ],
+    [ "EulerAnglesToRotationMatrix", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#ad9ac3ab9cb0064f717640e2a259884ad", null ],
+    [ "QuaternionProduct", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#ab47743b0e2c5b04837f4755ba3aa9cfc", null ],
+    [ "QuaternionRotatePoint", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#ab8d00fc11dc79215beb9c8d09085c650", null ],
+    [ "QuaternionToAngleAxis", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#aa68081e4af2f2b8c62896f55f9f1ece2", null ],
+    [ "QuaternionToRotation", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a73693f22a0591ec0c6337c6caa8dbb3f", null ],
+    [ "QuaternionToRotation", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#aba60be7f2c881e1eff19132dbece7a9e", null ],
+    [ "QuaternionToScaledRotation", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a91396cfc97966b68c73f1ff251954c3d", null ],
+    [ "QuaternionToScaledRotation", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a53590daf0f20450dcde7928d51816375", null ],
+    [ "RotationMatrixToAngleAxis", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#ab5b88aa5c90d92630bcafcd3009f5c2d", null ],
+    [ "RotationMatrixToAngleAxis", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a6abbd9b955dd891fbfdd0113a8f208ae", null ],
+    [ "RotationMatrixToQuaternion", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a2b6a921817dda9a58c7015a3e2c3de69", null ],
+    [ "RotationMatrixToQuaternion", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#aaaf832d35a41469025f344dda76bd462", null ],
+    [ "RowMajorAdapter3x3", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#a24522eea38579ddde26aa54dddb432d4", null ],
+    [ "UnitQuaternionRotatePoint", "ceres-1_812_80_2include_2ceres_2rotation_8h.html#afd6bb18a7e986acde30f9bfd59afd6b4", null ]
+];

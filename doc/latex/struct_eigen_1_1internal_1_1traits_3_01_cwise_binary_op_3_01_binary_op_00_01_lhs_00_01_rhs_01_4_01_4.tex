@@ -1,0 +1,144 @@
+\hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4}{}\doxysection{Eigen\+::internal\+::traits$<$ Cwise\+Binary\+Op$<$ Binary\+Op, Lhs, Rhs $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4}\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}
+
+
+{\ttfamily \#include $<$Cwise\+Binary\+Op.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21a3a93998852161a3303d98f7eb8bdd258}{Rows\+At\+Compile\+Time}} = traits$<$Ancestor$>$\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21aa46956b2a0d94c6ddaebcc19d34fecfc}{Cols\+At\+Compile\+Time}} = traits$<$Ancestor$>$\+::Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21a0925cc10eca4ef7e8309d47f2f466634}{Max\+Rows\+At\+Compile\+Time}} = traits$<$Ancestor$>$\+::Max\+Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21aa7fa6318427e88bc4213bd0370adb892}{Max\+Cols\+At\+Compile\+Time}} = traits$<$Ancestor$>$\+::Max\+Cols\+At\+Compile\+Time
+ \}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a37fe685f2b1c9436c8bd55168e9dfb01a20d5937b969db54f666b85d19043ae57}{Flags}} = cwise\+\_\+promote\+\_\+storage\+\_\+order$<$typename traits$<$Lhs$>$\+::Storage\+Kind,typename traits$<$Rhs$>$\+::Storage\+Kind,\+\_\+\+Lhs\+Nested\+::Flags \& Row\+Major\+Bit,\+\_\+\+Rhs\+Nested\+::Flags \& Row\+Major\+Bit$>$\+::value
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{remove\+\_\+all}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_afabc96be713b502009dfe217045d8248}{Ancestor}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_afabc96be713b502009dfe217045d8248}{Ancestor}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a9ed2c0723977ac9cb53448b82bb79ced}{Xpr\+Kind}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a9ed2c0723977ac9cb53448b82bb79ced}{Xpr\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1result__of}{result\+\_\+of}}$<$ Binary\+Op(const typename Lhs\+::\+Scalar \&, const typename Rhs\+::\+Scalar \&) $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a98036d3d2f44b28a6cf76ef3ed6a299c}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1cwise__promote__storage__type}{cwise\+\_\+promote\+\_\+storage\+\_\+type}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a1a16cc45c6cee640f7e36d6b444ed396}{Storage\+Kind}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a1a16cc45c6cee640f7e36d6b444ed396}{Storage\+Kind}}, Binary\+Op $>$\+::ret \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a1a16cc45c6cee640f7e36d6b444ed396}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__index__type}{promote\+\_\+index\+\_\+type}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_aab6f87a7cb551da9ec4df150314bb490}{Storage\+Index}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_aab6f87a7cb551da9ec4df150314bb490}{Storage\+Index}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_aab6f87a7cb551da9ec4df150314bb490}{Storage\+Index}}
+\item 
+typedef Lhs\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a8fed753b3298010bd51e25bbae71c435}{Lhs\+Nested}}
+\item 
+typedef Rhs\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a59de2b2b29033b7cfab53e1f5b52718c}{Rhs\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a8fed753b3298010bd51e25bbae71c435}{Lhs\+Nested}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_ae328452c3cfd91628ea98b98414e0b2a}{\+\_\+\+Lhs\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a59de2b2b29033b7cfab53e1f5b52718c}{Rhs\+Nested}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a84219d0382f4733aef9a89ae5929772a}{\+\_\+\+Rhs\+Nested}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_ae328452c3cfd91628ea98b98414e0b2a}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_ae328452c3cfd91628ea98b98414e0b2a}} 
+\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!\_LhsNested@{\_LhsNested}}
+\index{\_LhsNested@{\_LhsNested}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{\_LhsNested}{\_LhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a8fed753b3298010bd51e25bbae71c435}{Lhs\+Nested}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_ae328452c3cfd91628ea98b98414e0b2a}{\+\_\+\+Lhs\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a84219d0382f4733aef9a89ae5929772a}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a84219d0382f4733aef9a89ae5929772a}} 
+\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!\_RhsNested@{\_RhsNested}}
+\index{\_RhsNested@{\_RhsNested}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{\_RhsNested}{\_RhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a59de2b2b29033b7cfab53e1f5b52718c}{Rhs\+Nested}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a84219d0382f4733aef9a89ae5929772a}{\+\_\+\+Rhs\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_afabc96be713b502009dfe217045d8248}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_afabc96be713b502009dfe217045d8248}} 
+\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!Ancestor@{Ancestor}}
+\index{Ancestor@{Ancestor}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Ancestor}{Ancestor}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{remove\+\_\+all}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_afabc96be713b502009dfe217045d8248}{Ancestor}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a8fed753b3298010bd51e25bbae71c435}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a8fed753b3298010bd51e25bbae71c435}} 
+\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!LhsNested@{LhsNested}}
+\index{LhsNested@{LhsNested}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{LhsNested}{LhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef Lhs\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a8fed753b3298010bd51e25bbae71c435}{Lhs\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a59de2b2b29033b7cfab53e1f5b52718c}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a59de2b2b29033b7cfab53e1f5b52718c}} 
+\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!RhsNested@{RhsNested}}
+\index{RhsNested@{RhsNested}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{RhsNested}{RhsNested}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef Rhs\+::\+Nested \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a59de2b2b29033b7cfab53e1f5b52718c}{Rhs\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a98036d3d2f44b28a6cf76ef3ed6a299c}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a98036d3d2f44b28a6cf76ef3ed6a299c}} 
+\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1result__of}{result\+\_\+of}}$<$ Binary\+Op( const typename Lhs\+::\+Scalar\&, const typename Rhs\+::\+Scalar\& ) $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a98036d3d2f44b28a6cf76ef3ed6a299c}{Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_aab6f87a7cb551da9ec4df150314bb490}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_aab6f87a7cb551da9ec4df150314bb490}} 
+\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__index__type}{promote\+\_\+index\+\_\+type}}$<$typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_aab6f87a7cb551da9ec4df150314bb490}{Storage\+Index}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_aab6f87a7cb551da9ec4df150314bb490}{Storage\+Index}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_aab6f87a7cb551da9ec4df150314bb490}{Storage\+Index}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a1a16cc45c6cee640f7e36d6b444ed396}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a1a16cc45c6cee640f7e36d6b444ed396}} 
+\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1cwise__promote__storage__type}{cwise\+\_\+promote\+\_\+storage\+\_\+type}}$<$typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a1a16cc45c6cee640f7e36d6b444ed396}{Storage\+Kind}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a1a16cc45c6cee640f7e36d6b444ed396}{Storage\+Kind}}, Binary\+Op$>$\+::ret \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a1a16cc45c6cee640f7e36d6b444ed396}{Storage\+Kind}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a9ed2c0723977ac9cb53448b82bb79ced}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a9ed2c0723977ac9cb53448b82bb79ced}} 
+\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!XprKind@{XprKind}}
+\index{XprKind@{XprKind}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{XprKind}{XprKind}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_afabc96be713b502009dfe217045d8248}{Ancestor}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a9ed2c0723977ac9cb53448b82bb79ced}{Xpr\+Kind}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_cwise_binary_op}{Cwise\+Binary\+Op}}$<$ Binary\+Op, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a1a7f4ccbeaf23168b50a83680f8f35fb}{Lhs}}, \mbox{\hyperlink{namespace_eigen_1_1internal_adbe68ef900818155217291a61ec64682a6c8de80f9984c6a6da22b7c288fee57d}{Rhs}} $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a9ed2c0723977ac9cb53448b82bb79ced}{Xpr\+Kind}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21a3a93998852161a3303d98f7eb8bdd258}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21a3a93998852161a3303d98f7eb8bdd258}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21aa46956b2a0d94c6ddaebcc19d34fecfc}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21aa46956b2a0d94c6ddaebcc19d34fecfc}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21a0925cc10eca4ef7e8309d47f2f466634}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21a0925cc10eca4ef7e8309d47f2f466634}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21aa7fa6318427e88bc4213bd0370adb892}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a0dbb840e97cd51e83351fd1e3f062f21aa7fa6318427e88bc4213bd0370adb892}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a37fe685f2b1c9436c8bd55168e9dfb01}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a37fe685f2b1c9436c8bd55168e9dfb01}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Binary\+Op , typename Lhs , typename Rhs $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$@{Eigen::internal::traits$<$ CwiseBinaryOp$<$ BinaryOp, Lhs, Rhs $>$ $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a37fe685f2b1c9436c8bd55168e9dfb01a20d5937b969db54f666b85d19043ae57}\label{struct_eigen_1_1internal_1_1traits_3_01_cwise_binary_op_3_01_binary_op_00_01_lhs_00_01_rhs_01_4_01_4_a37fe685f2b1c9436c8bd55168e9dfb01a20d5937b969db54f666b85d19043ae57}} 
+Flags&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_cwise_binary_op_8h}{Cwise\+Binary\+Op.\+h}}\end{DoxyCompactItemize}

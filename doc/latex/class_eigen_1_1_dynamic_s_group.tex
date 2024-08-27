@@ -1,0 +1,302 @@
+\hypertarget{class_eigen_1_1_dynamic_s_group}{}\doxysection{Eigen\+::Dynamic\+S\+Group Class Reference}
+\label{class_eigen_1_1_dynamic_s_group}\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+
+
+Dynamic symmetry group.  
+
+
+
+
+{\ttfamily \#include $<$Dynamic\+Symmetry.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Dynamic\+S\+Group\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{class_eigen_1_1_dynamic_s_group__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}}
+\item 
+struct \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a4f0023200589f65ecc3d32f1cd787a66}{Dynamic\+S\+Group}} ()
+\item 
+\mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a5f1f473d1f482b43e3b25b560dfc75c7}{Dynamic\+S\+Group}} (const \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} \&o)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_aa9bc1a645dabd45f2771bff3f53e438e}{Dynamic\+S\+Group}} (\mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} \&\&o)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} \& \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a1e713d6200cfaa2bfa72d08c18cb0b3a}{operator=}} (const \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} \&o)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} \& \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a8661b8489f8027f096700433b1890eac}{operator=}} (\mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} \&\&o)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_ab6d3580987345d4ef81c139e8399147b}{add}} (int one, int two, int flags=0)
+\item 
+{\footnotesize template$<$typename Gen\+\_\+ $>$ }\\void \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a1bdc8d772a461f809baef36a0ad1e21a}{add}} (Gen\+\_\+)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a2efbaedb2063d418df9e3056b7616b20}{add\+Symmetry}} (int one, int two)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_ac8415c3653c3c1e7053f8f930f2b9e24}{add\+Anti\+Symmetry}} (int one, int two)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a2faa098d02f0715fc82699ec1cf999c1}{add\+Hermiticity}} (int one, int two)
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a4391a25c9d7edff1b2806f6f5be3c7b7}{add\+Anti\+Hermiticity}} (int one, int two)
+\item 
+{\footnotesize template$<$typename Op , typename RV , typename Index , std\+::size\+\_\+t N, typename... Args$>$ }\\RV \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_ad201a814e4a7147a044ff104f992d1e7}{apply}} (const std\+::array$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, N $>$ \&idx, RV initial, Args \&\&... args) const
+\item 
+{\footnotesize template$<$typename Op , typename RV , typename Index , typename... Args$>$ }\\RV \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_ae77f8b44a874bcff6c52c1f82cd5a5c2}{apply}} (const std\+::vector$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} $>$ \&idx, RV initial, Args \&\&... args) const
+\item 
+int \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a8272d8c971713b3e328a13c33ac38b20}{global\+Flags}} () const
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_acb5356798035ce1ae0d00eec033ef32f}{size}} () const
+\item 
+{\footnotesize template$<$typename Tensor\+\_\+ , typename... Index\+Types$>$ }\\\mbox{\hyperlink{class_eigen_1_1internal_1_1tensor__symmetry__value__setter}{internal\+::tensor\+\_\+symmetry\+\_\+value\+\_\+setter}}$<$ Tensor\+\_\+, \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} $>$ \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a0d1f3c6ef73e3661a568ce888b6cca58}{operator()}} (Tensor\+\_\+ \&tensor, typename Tensor\+\_\+\+::\+Index first\+Index, Index\+Types... other\+Indices) const
+\item 
+{\footnotesize template$<$typename Tensor\+\_\+ $>$ }\\\mbox{\hyperlink{class_eigen_1_1internal_1_1tensor__symmetry__value__setter}{internal\+::tensor\+\_\+symmetry\+\_\+value\+\_\+setter}}$<$ Tensor\+\_\+, \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} $>$ \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a22aed98eb89f2775943663efec999ae6}{operator()}} (Tensor\+\_\+ \&tensor, std\+::array$<$ typename Tensor\+\_\+\+::\+Index, Tensor\+\_\+\+::\+Num\+Indices $>$ const \&indices) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Index , std\+::size\+\_\+t N, int... n$>$ }\\std\+::array$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, N $>$ \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a1f559fedce53525fa0ec07e537b622ef}{h\+\_\+permute}} (std\+::size\+\_\+t which, const std\+::array$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, N $>$ \&idx, internal\+::numeric\+\_\+list$<$ int, n... $>$) const
+\item 
+{\footnotesize template$<$typename Index $>$ }\\std\+::vector$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} $>$ \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a10add55bc7bda5c1443bc793f99fb8b1}{h\+\_\+permute}} (std\+::size\+\_\+t which, std\+::vector$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} $>$ idx) const
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_aea4e19fe3f69431011fdcd9564440cb4}{ge}} (\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}} const \&g) const
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_ab824a475ab89a390d1834e9d5219c69d}{mul}} (\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}}, \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}}) const
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_af50fde79369ffc48c32adfe2c27147ff}{mul}} (\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}} g1, \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} g2) const
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a0bc3c11ca00f0f2197606f54710dff93}{mul}} (\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} g1, \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}} g2) const
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a3f2018caedd42155f75edb746da0bdb9}{mul}} (\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}} g1, \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}} g2) const
+\item 
+int \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_acf3ea13b275cb452d0f45262b6c58fb4}{find\+Element}} (\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} e) const
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a22a01159b940d1013ddb84e1f3930f8a}{update\+Global\+Flags}} (int flag\+Diff\+Of\+Same\+Generator)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a21ea7f41f1c7cd105dc7117b2f40bcd8}{m\+\_\+num\+Indices}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} $>$ \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_adea9a8480b5f7637abc7ada5ce031173}{m\+\_\+elements}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}} $>$ \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_a46dcc0186df140ce690004b6f65ae0c2}{m\+\_\+generators}}
+\item 
+int \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group_ac46bd5e69ae93f28e666b6741f7bc046}{m\+\_\+global\+Flags}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dynamic symmetry group. 
+
+The Dynamic\+S\+Group class represents a symmetry group that need not be known at compile time. It is useful if one wants to support arbitrary run-\/time defineable symmetries for tensors, but it is also instantiated if a symmetry group is defined at compile time that would be either too large for the compiler to reasonably generate (using templates to calculate this at compile time is very inefficient) or that the compiler could generate the group but that it wouldn\textquotesingle{}t make sense to unroll the loop for setting coefficients anymore. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a4f0023200589f65ecc3d32f1cd787a66}\label{class_eigen_1_1_dynamic_s_group_a4f0023200589f65ecc3d32f1cd787a66}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!DynamicSGroup@{DynamicSGroup}}
+\index{DynamicSGroup@{DynamicSGroup}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{DynamicSGroup()}{DynamicSGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Eigen\+::\+Dynamic\+S\+Group\+::\+Dynamic\+S\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a5f1f473d1f482b43e3b25b560dfc75c7}\label{class_eigen_1_1_dynamic_s_group_a5f1f473d1f482b43e3b25b560dfc75c7}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!DynamicSGroup@{DynamicSGroup}}
+\index{DynamicSGroup@{DynamicSGroup}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{DynamicSGroup()}{DynamicSGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Eigen\+::\+Dynamic\+S\+Group\+::\+Dynamic\+S\+Group (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} \&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_aa9bc1a645dabd45f2771bff3f53e438e}\label{class_eigen_1_1_dynamic_s_group_aa9bc1a645dabd45f2771bff3f53e438e}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!DynamicSGroup@{DynamicSGroup}}
+\index{DynamicSGroup@{DynamicSGroup}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{DynamicSGroup()}{DynamicSGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Eigen\+::\+Dynamic\+S\+Group\+::\+Dynamic\+S\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} \&\&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a1bdc8d772a461f809baef36a0ad1e21a}\label{class_eigen_1_1_dynamic_s_group_a1bdc8d772a461f809baef36a0ad1e21a}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!add@{add}}
+\index{add@{add}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Gen\+\_\+ $>$ \\
+void Eigen\+::\+Dynamic\+S\+Group\+::add (\begin{DoxyParamCaption}\item[{Gen\+\_\+}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_ab6d3580987345d4ef81c139e8399147b}\label{class_eigen_1_1_dynamic_s_group_ab6d3580987345d4ef81c139e8399147b}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!add@{add}}
+\index{add@{add}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Eigen\+::\+Dynamic\+S\+Group\+::add (\begin{DoxyParamCaption}\item[{int}]{one,  }\item[{int}]{two,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a4391a25c9d7edff1b2806f6f5be3c7b7}\label{class_eigen_1_1_dynamic_s_group_a4391a25c9d7edff1b2806f6f5be3c7b7}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!addAntiHermiticity@{addAntiHermiticity}}
+\index{addAntiHermiticity@{addAntiHermiticity}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{addAntiHermiticity()}{addAntiHermiticity()}}
+{\footnotesize\ttfamily void Eigen\+::\+Dynamic\+S\+Group\+::add\+Anti\+Hermiticity (\begin{DoxyParamCaption}\item[{int}]{one,  }\item[{int}]{two }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_ac8415c3653c3c1e7053f8f930f2b9e24}\label{class_eigen_1_1_dynamic_s_group_ac8415c3653c3c1e7053f8f930f2b9e24}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!addAntiSymmetry@{addAntiSymmetry}}
+\index{addAntiSymmetry@{addAntiSymmetry}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{addAntiSymmetry()}{addAntiSymmetry()}}
+{\footnotesize\ttfamily void Eigen\+::\+Dynamic\+S\+Group\+::add\+Anti\+Symmetry (\begin{DoxyParamCaption}\item[{int}]{one,  }\item[{int}]{two }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a2faa098d02f0715fc82699ec1cf999c1}\label{class_eigen_1_1_dynamic_s_group_a2faa098d02f0715fc82699ec1cf999c1}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!addHermiticity@{addHermiticity}}
+\index{addHermiticity@{addHermiticity}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{addHermiticity()}{addHermiticity()}}
+{\footnotesize\ttfamily void Eigen\+::\+Dynamic\+S\+Group\+::add\+Hermiticity (\begin{DoxyParamCaption}\item[{int}]{one,  }\item[{int}]{two }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a2efbaedb2063d418df9e3056b7616b20}\label{class_eigen_1_1_dynamic_s_group_a2efbaedb2063d418df9e3056b7616b20}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!addSymmetry@{addSymmetry}}
+\index{addSymmetry@{addSymmetry}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{addSymmetry()}{addSymmetry()}}
+{\footnotesize\ttfamily void Eigen\+::\+Dynamic\+S\+Group\+::add\+Symmetry (\begin{DoxyParamCaption}\item[{int}]{one,  }\item[{int}]{two }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_ad201a814e4a7147a044ff104f992d1e7}\label{class_eigen_1_1_dynamic_s_group_ad201a814e4a7147a044ff104f992d1e7}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!apply@{apply}}
+\index{apply@{apply}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Op , typename RV , typename Index , std\+::size\+\_\+t N, typename... Args$>$ \\
+RV Eigen\+::\+Dynamic\+S\+Group\+::apply (\begin{DoxyParamCaption}\item[{const std\+::array$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, N $>$ \&}]{idx,  }\item[{RV}]{initial,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_ae77f8b44a874bcff6c52c1f82cd5a5c2}\label{class_eigen_1_1_dynamic_s_group_ae77f8b44a874bcff6c52c1f82cd5a5c2}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!apply@{apply}}
+\index{apply@{apply}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Op , typename RV , typename Index , typename... Args$>$ \\
+RV Eigen\+::\+Dynamic\+S\+Group\+::apply (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} $>$ \&}]{idx,  }\item[{RV}]{initial,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_acf3ea13b275cb452d0f45262b6c58fb4}\label{class_eigen_1_1_dynamic_s_group_acf3ea13b275cb452d0f45262b6c58fb4}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!findElement@{findElement}}
+\index{findElement@{findElement}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{findElement()}{findElement()}}
+{\footnotesize\ttfamily int Eigen\+::\+Dynamic\+S\+Group\+::find\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}}}]{e }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_aea4e19fe3f69431011fdcd9564440cb4}\label{class_eigen_1_1_dynamic_s_group_aea4e19fe3f69431011fdcd9564440cb4}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!ge@{ge}}
+\index{ge@{ge}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{ge()}{ge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} Eigen\+::\+Dynamic\+S\+Group\+::ge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}} const \&}]{g }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a8272d8c971713b3e328a13c33ac38b20}\label{class_eigen_1_1_dynamic_s_group_a8272d8c971713b3e328a13c33ac38b20}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!globalFlags@{globalFlags}}
+\index{globalFlags@{globalFlags}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{globalFlags()}{globalFlags()}}
+{\footnotesize\ttfamily int Eigen\+::\+Dynamic\+S\+Group\+::global\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a1f559fedce53525fa0ec07e537b622ef}\label{class_eigen_1_1_dynamic_s_group_a1f559fedce53525fa0ec07e537b622ef}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!h\_permute@{h\_permute}}
+\index{h\_permute@{h\_permute}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{h\_permute()}{h\_permute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Index , std\+::size\+\_\+t N, int... n$>$ \\
+std\+::array$<$\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, N$>$ Eigen\+::\+Dynamic\+S\+Group\+::h\+\_\+permute (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{which,  }\item[{const std\+::array$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, N $>$ \&}]{idx,  }\item[{internal\+::numeric\+\_\+list$<$ int, n... $>$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a10add55bc7bda5c1443bc793f99fb8b1}\label{class_eigen_1_1_dynamic_s_group_a10add55bc7bda5c1443bc793f99fb8b1}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!h\_permute@{h\_permute}}
+\index{h\_permute@{h\_permute}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{h\_permute()}{h\_permute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Index $>$ \\
+std\+::vector$<$\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}$>$ Eigen\+::\+Dynamic\+S\+Group\+::h\+\_\+permute (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{which,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} $>$}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a3f2018caedd42155f75edb746da0bdb9}\label{class_eigen_1_1_dynamic_s_group_a3f2018caedd42155f75edb746da0bdb9}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!mul@{mul}}
+\index{mul@{mul}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{mul()}{mul()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} Eigen\+::\+Dynamic\+S\+Group\+::mul (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}}}]{g1,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}}}]{g2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_af50fde79369ffc48c32adfe2c27147ff}\label{class_eigen_1_1_dynamic_s_group_af50fde79369ffc48c32adfe2c27147ff}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!mul@{mul}}
+\index{mul@{mul}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{mul()}{mul()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} Eigen\+::\+Dynamic\+S\+Group\+::mul (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}}}]{g1,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}}}]{g2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a0bc3c11ca00f0f2197606f54710dff93}\label{class_eigen_1_1_dynamic_s_group_a0bc3c11ca00f0f2197606f54710dff93}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!mul@{mul}}
+\index{mul@{mul}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{mul()}{mul()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}} Eigen\+::\+Dynamic\+S\+Group\+::mul (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}}}]{g1,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}}}]{g2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_ab824a475ab89a390d1834e9d5219c69d}\label{class_eigen_1_1_dynamic_s_group_ab824a475ab89a390d1834e9d5219c69d}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!mul@{mul}}
+\index{mul@{mul}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{mul()}{mul()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Dynamic\+S\+Group\+::\+Group\+Element}} Eigen\+::\+Dynamic\+S\+Group\+::mul (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}}}]{g1,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}}}]{g2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a22aed98eb89f2775943663efec999ae6}\label{class_eigen_1_1_dynamic_s_group_a22aed98eb89f2775943663efec999ae6}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!operator()@{operator()}}
+\index{operator()@{operator()}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Tensor\+\_\+ $>$ \\
+\mbox{\hyperlink{class_eigen_1_1internal_1_1tensor__symmetry__value__setter}{internal\+::tensor\+\_\+symmetry\+\_\+value\+\_\+setter}}$<$Tensor\+\_\+, \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}}$>$ Eigen\+::\+Dynamic\+S\+Group\+::operator() (\begin{DoxyParamCaption}\item[{Tensor\+\_\+ \&}]{tensor,  }\item[{std\+::array$<$ typename Tensor\+\_\+\+::\+Index, Tensor\+\_\+\+::\+Num\+Indices $>$ const \&}]{indices }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a0d1f3c6ef73e3661a568ce888b6cca58}\label{class_eigen_1_1_dynamic_s_group_a0d1f3c6ef73e3661a568ce888b6cca58}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!operator()@{operator()}}
+\index{operator()@{operator()}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Tensor\+\_\+ , typename... Index\+Types$>$ \\
+\mbox{\hyperlink{class_eigen_1_1internal_1_1tensor__symmetry__value__setter}{internal\+::tensor\+\_\+symmetry\+\_\+value\+\_\+setter}}$<$Tensor\+\_\+, \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}}$>$ Eigen\+::\+Dynamic\+S\+Group\+::operator() (\begin{DoxyParamCaption}\item[{Tensor\+\_\+ \&}]{tensor,  }\item[{typename Tensor\+\_\+\+::\+Index}]{first\+Index,  }\item[{Index\+Types...}]{other\+Indices }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a1e713d6200cfaa2bfa72d08c18cb0b3a}\label{class_eigen_1_1_dynamic_s_group_a1e713d6200cfaa2bfa72d08c18cb0b3a}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!operator=@{operator=}}
+\index{operator=@{operator=}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}}\& Eigen\+::\+Dynamic\+S\+Group\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} \&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a8661b8489f8027f096700433b1890eac}\label{class_eigen_1_1_dynamic_s_group_a8661b8489f8027f096700433b1890eac}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!operator=@{operator=}}
+\index{operator=@{operator=}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}}\& Eigen\+::\+Dynamic\+S\+Group\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_dynamic_s_group}{Dynamic\+S\+Group}} \&\&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_acb5356798035ce1ae0d00eec033ef32f}\label{class_eigen_1_1_dynamic_s_group_acb5356798035ce1ae0d00eec033ef32f}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!size@{size}}
+\index{size@{size}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Eigen\+::\+Dynamic\+S\+Group\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a22a01159b940d1013ddb84e1f3930f8a}\label{class_eigen_1_1_dynamic_s_group_a22a01159b940d1013ddb84e1f3930f8a}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!updateGlobalFlags@{updateGlobalFlags}}
+\index{updateGlobalFlags@{updateGlobalFlags}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{updateGlobalFlags()}{updateGlobalFlags()}}
+{\footnotesize\ttfamily void Eigen\+::\+Dynamic\+S\+Group\+::update\+Global\+Flags (\begin{DoxyParamCaption}\item[{int}]{flag\+Diff\+Of\+Same\+Generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_adea9a8480b5f7637abc7ada5ce031173}\label{class_eigen_1_1_dynamic_s_group_adea9a8480b5f7637abc7ada5ce031173}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!m\_elements@{m\_elements}}
+\index{m\_elements@{m\_elements}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{m\_elements}{m\_elements}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_group_element}{Group\+Element}}$>$ Eigen\+::\+Dynamic\+S\+Group\+::m\+\_\+elements\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a46dcc0186df140ce690004b6f65ae0c2}\label{class_eigen_1_1_dynamic_s_group_a46dcc0186df140ce690004b6f65ae0c2}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!m\_generators@{m\_generators}}
+\index{m\_generators@{m\_generators}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{m\_generators}{m\_generators}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_eigen_1_1_dynamic_s_group_1_1_generator}{Generator}}$>$ Eigen\+::\+Dynamic\+S\+Group\+::m\+\_\+generators\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_ac46bd5e69ae93f28e666b6741f7bc046}\label{class_eigen_1_1_dynamic_s_group_ac46bd5e69ae93f28e666b6741f7bc046}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!m\_globalFlags@{m\_globalFlags}}
+\index{m\_globalFlags@{m\_globalFlags}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{m\_globalFlags}{m\_globalFlags}}
+{\footnotesize\ttfamily int Eigen\+::\+Dynamic\+S\+Group\+::m\+\_\+global\+Flags\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dynamic_s_group_a21ea7f41f1c7cd105dc7117b2f40bcd8}\label{class_eigen_1_1_dynamic_s_group_a21ea7f41f1c7cd105dc7117b2f40bcd8}} 
+\index{Eigen::DynamicSGroup@{Eigen::DynamicSGroup}!m\_numIndices@{m\_numIndices}}
+\index{m\_numIndices@{m\_numIndices}!Eigen::DynamicSGroup@{Eigen::DynamicSGroup}}
+\doxysubsubsection{\texorpdfstring{m\_numIndices}{m\_numIndices}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Eigen\+::\+Dynamic\+S\+Group\+::m\+\_\+num\+Indices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor\+Symmetry/\mbox{\hyperlink{_dynamic_symmetry_8h}{Dynamic\+Symmetry.\+h}}\end{DoxyCompactItemize}

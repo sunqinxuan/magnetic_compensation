@@ -1,0 +1,4 @@
+<map id="Eigen::TensorSycl::internal::LeafCount&lt; TensorMap&lt; PlainObjectType, Options_, MakePointer_ &gt; &gt;" name="Eigen::TensorSycl::internal::LeafCount&lt; TensorMap&lt; PlainObjectType, Options_, MakePointer_ &gt; &gt;">
+<area shape="rect" id="node1" title="specialisation of the LeafCount struct when the node type is TensorMap" alt="" coords="296,5,527,76"/>
+<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_leaf_count_3_01const_01_tensor_map_3_01_plain_objec08bcb0680d80100f2b3fbeaf58853ef2.html" title="specialisation of the LeafCount struct when the node type is const TensorMap" alt="" coords="5,5,248,76"/>
+</map>

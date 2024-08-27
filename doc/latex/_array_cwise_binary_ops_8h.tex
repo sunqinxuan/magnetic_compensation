@@ -1,0 +1,264 @@
+\hypertarget{_array_cwise_binary_ops_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/plugins/\+Array\+Cwise\+Binary\+Ops.h File Reference}
+\label{_array_cwise_binary_ops_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/plugins/ArrayCwiseBinaryOps.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/plugins/ArrayCwiseBinaryOps.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{_array_cwise_binary_ops_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_array_cwise_binary_ops_8h_a6a8d2a8ea7a0f9ed810c737915f70a4f}{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+C\+W\+I\+S\+E\+\_\+\+C\+O\+M\+P\+\_\+\+OP}}(OP,  C\+O\+M\+P\+A\+R\+A\+T\+OR)
+\item 
+\#define \mbox{\hyperlink{_array_cwise_binary_ops_8h_aa061fa766f3b25c6d04b1683c23036e9}{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+C\+W\+I\+S\+E\+\_\+\+C\+O\+M\+P\+\_\+\+R\+\_\+\+OP}}(OP,  R\+\_\+\+OP,  R\+C\+O\+M\+P\+A\+R\+A\+T\+OR)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{_array_cwise_binary_ops_8h_ad3c16049c5bae9f54fb23349fda752b7}{E\+I\+G\+E\+N\+\_\+\+C\+W\+I\+S\+E\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}} (Derived, Other\+Derived, product) operator$\ast$(const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+quotient\+\_\+op$<$ Scalar, typename Other\+Derived\+::\+Scalar $>$, const Derived, const Other\+Derived $>$ \mbox{\hyperlink{_array_cwise_binary_ops_8h_a4568661b177e9413ef00b6960b11336e}{operator/}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+boolean\+\_\+xor\+\_\+op, const Derived, const Other\+Derived $>$ \mbox{\hyperlink{_array_cwise_binary_ops_8h_ad08307e8b562c2b4e50519d21ac3775b}{operator$^\wedge$}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&other) const
+\item 
+{\footnotesize template$<$typename DerivedQ $>$ }\\const Cwise\+Binary\+Op$<$ internal\+::scalar\+\_\+zeta\+\_\+op$<$ Scalar $>$, const Derived, const DerivedQ $>$ \mbox{\hyperlink{_array_cwise_binary_ops_8h_ab07fc1709316abedda49c2b1fe0400f4}{zeta}} (const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ DerivedQ $>$ \&q) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_array_cwise_binary_ops_8h_a6a8d2a8ea7a0f9ed810c737915f70a4f}\label{_array_cwise_binary_ops_8h_a6a8d2a8ea7a0f9ed810c737915f70a4f}} 
+\index{ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}!EIGEN\_MAKE\_CWISE\_COMP\_OP@{EIGEN\_MAKE\_CWISE\_COMP\_OP}}
+\index{EIGEN\_MAKE\_CWISE\_COMP\_OP@{EIGEN\_MAKE\_CWISE\_COMP\_OP}!ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_MAKE\_CWISE\_COMP\_OP}{EIGEN\_MAKE\_CWISE\_COMP\_OP}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+C\+W\+I\+S\+E\+\_\+\+C\+O\+M\+P\+\_\+\+OP(\begin{DoxyParamCaption}\item[{}]{OP,  }\item[{}]{C\+O\+M\+P\+A\+R\+A\+T\+OR }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename} OtherDerived> \(\backslash\)}
+\DoxyCodeLine{EIGEN\_DEVICE\_FUNC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{EIGEN\_STRONG\_INLINE}} \textcolor{keyword}{const} CwiseBinaryOp<internal::scalar\_cmp\_op<Scalar, typename OtherDerived::Scalar, internal::cmp\_ \#\# COMPARATOR>, \textcolor{keyword}{const} Derived, \textcolor{keyword}{const} OtherDerived> \(\backslash\)}
+\DoxyCodeLine{OP(\textcolor{keyword}{const} EIGEN\_CURRENT\_STORAGE\_BASE\_CLASS<OtherDerived> \&other) \textcolor{keyword}{const} \(\backslash\)}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{  return CwiseBinaryOp<internal::scalar\_cmp\_op<Scalar, typename OtherDerived::Scalar, internal::cmp\_ \#\# COMPARATOR>, \textcolor{keyword}{const} Derived, \textcolor{keyword}{const} OtherDerived>(derived(), other.derived()); \(\backslash\)}
+\DoxyCodeLine{\}\(\backslash\)}
+\DoxyCodeLine{typedef CwiseBinaryOp<internal::scalar\_cmp\_op<Scalar,Scalar, internal::cmp\_ \#\# COMPARATOR>, \textcolor{keyword}{const} Derived, \textcolor{keyword}{const} CwiseNullaryOp<internal::scalar\_constant\_op<Scalar>, PlainObject> > Cmp \#\# COMPARATOR \#\# ReturnType; \(\backslash\)}
+\DoxyCodeLine{typedef CwiseBinaryOp<internal::scalar\_cmp\_op<Scalar,Scalar, internal::cmp\_ \#\# COMPARATOR>, \textcolor{keyword}{const} CwiseNullaryOp<internal::scalar\_constant\_op<Scalar>, PlainObject>, \textcolor{keyword}{const} Derived > RCmp \#\# COMPARATOR \#\# ReturnType; \(\backslash\)}
+\DoxyCodeLine{EIGEN\_DEVICE\_FUNC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{EIGEN\_STRONG\_INLINE}} \textcolor{keyword}{const} Cmp \#\# COMPARATOR \#\# ReturnType \(\backslash\)}
+\DoxyCodeLine{OP(\textcolor{keyword}{const} Scalar\& s)\textcolor{keyword}{ const }\{ \(\backslash\)}
+\DoxyCodeLine{  return this-\/>OP(Derived::PlainObject::Constant(rows(), cols(), s)); \(\backslash\)}
+\DoxyCodeLine{\} \(\backslash\)}
+\DoxyCodeLine{EIGEN\_DEVICE\_FUNC \textcolor{keyword}{friend} \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{EIGEN\_STRONG\_INLINE}} \textcolor{keyword}{const} RCmp \#\# COMPARATOR \#\# ReturnType \(\backslash\)}
+\DoxyCodeLine{OP(\textcolor{keyword}{const} Scalar\& s, \textcolor{keyword}{const} EIGEN\_CURRENT\_STORAGE\_BASE\_CLASS<Derived>\& d) \{ \(\backslash\)}
+\DoxyCodeLine{  return Derived::PlainObject::Constant(d.rows(), d.cols(), s).OP(d); \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise power of {\ttfamily $\ast$this} to the given array of {\itshape exponents}.
+\end{DoxyReturn}
+This function computes the coefficient-\/wise power.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \mbox{\Hypertarget{_array_cwise_binary_ops_8h_aa061fa766f3b25c6d04b1683c23036e9}\label{_array_cwise_binary_ops_8h_aa061fa766f3b25c6d04b1683c23036e9}} 
+\index{ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}!EIGEN\_MAKE\_CWISE\_COMP\_R\_OP@{EIGEN\_MAKE\_CWISE\_COMP\_R\_OP}}
+\index{EIGEN\_MAKE\_CWISE\_COMP\_R\_OP@{EIGEN\_MAKE\_CWISE\_COMP\_R\_OP}!ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_MAKE\_CWISE\_COMP\_R\_OP}{EIGEN\_MAKE\_CWISE\_COMP\_R\_OP}}
+{\footnotesize\ttfamily \#define E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+C\+W\+I\+S\+E\+\_\+\+C\+O\+M\+P\+\_\+\+R\+\_\+\+OP(\begin{DoxyParamCaption}\item[{}]{OP,  }\item[{}]{R\+\_\+\+OP,  }\item[{}]{R\+C\+O\+M\+P\+A\+R\+A\+T\+OR }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename} OtherDerived> \(\backslash\)}
+\DoxyCodeLine{EIGEN\_DEVICE\_FUNC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{EIGEN\_STRONG\_INLINE}} \textcolor{keyword}{const} CwiseBinaryOp<internal::scalar\_cmp\_op<typename OtherDerived::Scalar, Scalar, internal::cmp\_\#\#RCOMPARATOR>, \textcolor{keyword}{const} OtherDerived, \textcolor{keyword}{const} Derived> \(\backslash\)}
+\DoxyCodeLine{OP(\textcolor{keyword}{const} EIGEN\_CURRENT\_STORAGE\_BASE\_CLASS<OtherDerived> \&other) \textcolor{keyword}{const} \(\backslash\)}
+\DoxyCodeLine{\{ \(\backslash\)}
+\DoxyCodeLine{  return CwiseBinaryOp<internal::scalar\_cmp\_op<typename OtherDerived::Scalar, Scalar, internal::cmp\_\#\#RCOMPARATOR>, \textcolor{keyword}{const} OtherDerived, \textcolor{keyword}{const} Derived>(other.derived(), derived()); \(\backslash\)}
+\DoxyCodeLine{\} \(\backslash\)}
+\DoxyCodeLine{EIGEN\_DEVICE\_FUNC \(\backslash\)}
+\DoxyCodeLine{inline \textcolor{keyword}{const} RCmp \#\# RCOMPARATOR \#\# ReturnType \(\backslash\)}
+\DoxyCodeLine{OP(\textcolor{keyword}{const} Scalar\& s)\textcolor{keyword}{ const }\{ \(\backslash\)}
+\DoxyCodeLine{  return Derived::PlainObject::Constant(rows(), cols(), s).R\_OP(*\textcolor{keyword}{this}); \(\backslash\)}
+\DoxyCodeLine{\} \(\backslash\)}
+\DoxyCodeLine{friend \textcolor{keyword}{inline} \textcolor{keyword}{const} Cmp \#\# RCOMPARATOR \#\# ReturnType \(\backslash\)}
+\DoxyCodeLine{OP(\textcolor{keyword}{const} Scalar\& s, \textcolor{keyword}{const} Derived\& d) \{ \(\backslash\)}
+\DoxyCodeLine{  return d.R\_OP(Derived::PlainObject::Constant(d.rows(), d.cols(), s)); \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_array_cwise_binary_ops_8h_ad3c16049c5bae9f54fb23349fda752b7}\label{_array_cwise_binary_ops_8h_ad3c16049c5bae9f54fb23349fda752b7}} 
+\index{ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}!EIGEN\_CWISE\_BINARY\_RETURN\_TYPE@{EIGEN\_CWISE\_BINARY\_RETURN\_TYPE}}
+\index{EIGEN\_CWISE\_BINARY\_RETURN\_TYPE@{EIGEN\_CWISE\_BINARY\_RETURN\_TYPE}!ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{EIGEN\_CWISE\_BINARY\_RETURN\_TYPE()}{EIGEN\_CWISE\_BINARY\_RETURN\_TYPE()}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} E\+I\+G\+E\+N\+\_\+\+C\+W\+I\+S\+E\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE (\begin{DoxyParamCaption}\item[{Derived}]{,  }\item[{Other\+Derived}]{,  }\item[{product}]{ }\end{DoxyParamCaption}) const \&}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient wise product of {\ttfamily $\ast$this} and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Matrix\+Base\+::cwise\+Product 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_array_cwise_binary_ops_8h_a4568661b177e9413ef00b6960b11336e}\label{_array_cwise_binary_ops_8h_a4568661b177e9413ef00b6960b11336e}} 
+\index{ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}!operator/@{operator/}}
+\index{operator/@{operator/}!ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC const \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+quotient\+\_\+op$<$Scalar,typename Other\+Derived\+::\+Scalar$>$, const Derived, const Other\+Derived$>$ operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient wise quotient of {\ttfamily $\ast$this} and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Matrix\+Base\+::cwise\+Quotient 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_array_cwise_binary_ops_8h_ad08307e8b562c2b4e50519d21ac3775b}\label{_array_cwise_binary_ops_8h_ad08307e8b562c2b4e50519d21ac3775b}} 
+\index{ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}!operator$^\wedge$@{operator$^\wedge$}}
+\index{operator$^\wedge$@{operator$^\wedge$}!ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{operator$^\wedge$()}{operator^()}}
+{\footnotesize\ttfamily template$<$typename Other\+Derived $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+boolean\+\_\+xor\+\_\+op, const Derived, const Other\+Derived$>$ operator$^\wedge$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ Other\+Derived $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise $<$ operator of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+all(), any(), \mbox{\hyperlink{namespace_eigen_1_1half__impl_ae2d126fe490e2f085810497b7433fc4f}{operator$>$()}}, \mbox{\hyperlink{namespace_eigen_1_1half__impl_ace64ce8ae6eeb055434d53bce8dd6c7c}{operator$<$=()}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise $<$= operator of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+all(), any(), \mbox{\hyperlink{namespace_eigen_1_1half__impl_a38e68d56f7aa9b2503343a10c907d735}{operator$>$=()}}, \mbox{\hyperlink{json_8hpp_af8c9bbaed20be0634a2e522f54265d96}{operator$<$()}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise $>$ operator of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+all(), any(), \mbox{\hyperlink{namespace_eigen_1_1half__impl_a38e68d56f7aa9b2503343a10c907d735}{operator$>$=()}}, \mbox{\hyperlink{json_8hpp_af8c9bbaed20be0634a2e522f54265d96}{operator$<$()}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise $>$= operator of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+all(), any(), \mbox{\hyperlink{namespace_eigen_1_1half__impl_ae2d126fe490e2f085810497b7433fc4f}{operator$>$()}}, \mbox{\hyperlink{namespace_eigen_1_1half__impl_ace64ce8ae6eeb055434d53bce8dd6c7c}{operator$<$=()}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise == operator of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+this performs an exact comparison, which is generally a bad idea with floating-\/point types. In order to check for equality between two vectors or matrices with floating-\/point coefficients, it is generally a far better idea to use a fuzzy comparison as provided by \mbox{\hyperlink{namespace_eigen_1_1internal_a7c83f2257c639f3d550f5d7d7c69ca3b}{is\+Approx()}} and \mbox{\hyperlink{namespace_eigen_1_1internal_a84d9a116f1410c45670db495257f64ac}{is\+Much\+Smaller\+Than()}}.
+\end{DoxyWarning}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+all(), any(), \mbox{\hyperlink{namespace_eigen_1_1internal_a7c83f2257c639f3d550f5d7d7c69ca3b}{is\+Approx()}}, \mbox{\hyperlink{namespace_eigen_1_1internal_a84d9a116f1410c45670db495257f64ac}{is\+Much\+Smaller\+Than()}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise != operator of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+this performs an exact comparison, which is generally a bad idea with floating-\/point types. In order to check for equality between two vectors or matrices with floating-\/point coefficients, it is generally a far better idea to use a fuzzy comparison as provided by \mbox{\hyperlink{namespace_eigen_1_1internal_a7c83f2257c639f3d550f5d7d7c69ca3b}{is\+Approx()}} and \mbox{\hyperlink{namespace_eigen_1_1internal_a84d9a116f1410c45670db495257f64ac}{is\+Much\+Smaller\+Than()}}.
+\end{DoxyWarning}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+all(), any(), \mbox{\hyperlink{namespace_eigen_1_1internal_a7c83f2257c639f3d550f5d7d7c69ca3b}{is\+Approx()}}, \mbox{\hyperlink{namespace_eigen_1_1internal_a84d9a116f1410c45670db495257f64ac}{is\+Much\+Smaller\+Than()}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise $^\wedge$ operator of $\ast$this and {\itshape other} 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+this operator is for expression of bool only.
+\end{DoxyWarning}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_common_cwise_binary_ops_8h_a389d242eaf451d33c6ea101c0295a4f3}{operator\&\&()}}, select() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_array_cwise_binary_ops_8h_ab07fc1709316abedda49c2b1fe0400f4}\label{_array_cwise_binary_ops_8h_ab07fc1709316abedda49c2b1fe0400f4}} 
+\index{ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}!zeta@{zeta}}
+\index{zeta@{zeta}!ArrayCwiseBinaryOps.h@{ArrayCwiseBinaryOps.h}}
+\doxysubsubsection{\texorpdfstring{zeta()}{zeta()}}
+{\footnotesize\ttfamily template$<$typename DerivedQ $>$ \\
+const Cwise\+Binary\+Op$<$internal\+::scalar\+\_\+zeta\+\_\+op$<$Scalar$>$, const Derived, const DerivedQ$>$ zeta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_sparse_matrix_base_8h_a140b988ffa480af0799d873ce22898f2}{E\+I\+G\+E\+N\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+S\+E\+\_\+\+C\+L\+A\+SS}}$<$ DerivedQ $>$ \&}]{q }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of the coefficient-\/wise zeta function.
+\end{DoxyReturn}
+\textbackslash{}specialfunctions\+\_\+module
+
+It returns the Riemann zeta function of two arguments {\ttfamily $\ast$this} and {\itshape q\+:} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$this} & is the exposent, it must be $>$ 1 \\
+\hline
+{\em q} & is the shift, it must be $>$ 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function supports only float and double scalar types. To support other scalar types, the user has to provide implementations of zeta(\+T,\+T) for any scalar type T to be supported.
+\end{DoxyNote}
+This method is an alias for zeta($\ast$this,q);
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespace_eigen_ade7c45ba55113cf0c89e33972f3da434}{Eigen\+::zeta()}} 
+\end{DoxySeeAlso}

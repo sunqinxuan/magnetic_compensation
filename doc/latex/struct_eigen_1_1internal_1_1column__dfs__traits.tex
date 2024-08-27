@@ -1,0 +1,148 @@
+\hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits}{}\doxysection{Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits$<$ Index\+Vector, Scalar\+Vector $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1column__dfs__traits}\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}
+
+
+{\ttfamily \#include $<$Sparse\+L\+U\+\_\+column\+\_\+dfs.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits$<$ Index\+Vector, Scalar\+Vector $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{struct_eigen_1_1internal_1_1column__dfs__traits__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits$<$ Index\+Vector, Scalar\+Vector $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{struct_eigen_1_1internal_1_1column__dfs__traits__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_abc28a09a5719ee72658d56f6fbd39b5aac2db34d827867e8cf18833f266f945dc}{Expand\+Mem}} = true
+ \}
+\item 
+typedef Scalar\+Vector\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}{Scalar}}
+\item 
+typedef Index\+Vector\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}{Storage\+Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a84be35a20707d05cdf72d18e7755ae96}{column\+\_\+dfs\+\_\+traits}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} jcol, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \&jsuper, typename \mbox{\hyperlink{class_eigen_1_1internal_1_1_sparse_l_u_impl}{Sparse\+L\+U\+Impl}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}{Scalar}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}{Storage\+Index}} $>$\+::Global\+L\+U\+\_\+t \&glu, \mbox{\hyperlink{class_eigen_1_1internal_1_1_sparse_l_u_impl}{Sparse\+L\+U\+Impl}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}{Scalar}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}{Storage\+Index}} $>$ \&lu\+Impl)
+\item 
+bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a034a1bf7ad2d7a4ba7e8c91463dc3f36}{update\+\_\+segrep}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}})
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a5b48ce6fa5fa373fd784033df70959ff}{mem\+\_\+expand}} (Index\+Vector \&lsub, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \&nextl, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} chmark)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_aeb425429d726efde9a63eea217549a0d}{m\+\_\+jcol}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a899dbc434353f1d05b512169a2f57e87}{m\+\_\+jsuper\+\_\+ref}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1_sparse_l_u_impl}{Sparse\+L\+U\+Impl}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}{Scalar}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}{Storage\+Index}} $>$\+::Global\+L\+U\+\_\+t \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8a373ddef6de2fd2462c06534a052118}{m\+\_\+glu}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1_sparse_l_u_impl}{Sparse\+L\+U\+Impl}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}{Scalar}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}{Storage\+Index}} $>$ \& \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a0bfbf67afd5463fd9b10fc6d9bcefedb}{m\+\_\+lu\+Impl}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}\label{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}} 
+\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Index\+Vector , typename Scalar\+Vector $>$ \\
+typedef Scalar\+Vector\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits}{Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits}}$<$ Index\+Vector, Scalar\+Vector $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}{Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}\label{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}} 
+\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename Index\+Vector , typename Scalar\+Vector $>$ \\
+typedef Index\+Vector\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits}{Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits}}$<$ Index\+Vector, Scalar\+Vector $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}{Storage\+Index}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_abc28a09a5719ee72658d56f6fbd39b5a}\label{struct_eigen_1_1internal_1_1column__dfs__traits_abc28a09a5719ee72658d56f6fbd39b5a}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Index\+Vector , typename Scalar\+Vector $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ExpandMem@{ExpandMem}!Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}!ExpandMem@{ExpandMem}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_abc28a09a5719ee72658d56f6fbd39b5aac2db34d827867e8cf18833f266f945dc}\label{struct_eigen_1_1internal_1_1column__dfs__traits_abc28a09a5719ee72658d56f6fbd39b5aac2db34d827867e8cf18833f266f945dc}} 
+Expand\+Mem&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_a84be35a20707d05cdf72d18e7755ae96}\label{struct_eigen_1_1internal_1_1column__dfs__traits_a84be35a20707d05cdf72d18e7755ae96}} 
+\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}!column\_dfs\_traits@{column\_dfs\_traits}}
+\index{column\_dfs\_traits@{column\_dfs\_traits}!Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}
+\doxysubsubsection{\texorpdfstring{column\_dfs\_traits()}{column\_dfs\_traits()}}
+{\footnotesize\ttfamily template$<$typename Index\+Vector , typename Scalar\+Vector $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits}{Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits}}$<$ Index\+Vector, Scalar\+Vector $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits}{column\+\_\+dfs\+\_\+traits}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{jcol,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \&}]{jsuper,  }\item[{typename \mbox{\hyperlink{class_eigen_1_1internal_1_1_sparse_l_u_impl}{Sparse\+L\+U\+Impl}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}{Scalar}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}{Storage\+Index}} $>$\+::Global\+L\+U\+\_\+t \&}]{glu,  }\item[{\mbox{\hyperlink{class_eigen_1_1internal_1_1_sparse_l_u_impl}{Sparse\+L\+U\+Impl}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}{Scalar}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}{Storage\+Index}} $>$ \&}]{lu\+Impl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_a5b48ce6fa5fa373fd784033df70959ff}\label{struct_eigen_1_1internal_1_1column__dfs__traits_a5b48ce6fa5fa373fd784033df70959ff}} 
+\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}!mem\_expand@{mem\_expand}}
+\index{mem\_expand@{mem\_expand}!Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}
+\doxysubsubsection{\texorpdfstring{mem\_expand()}{mem\_expand()}}
+{\footnotesize\ttfamily template$<$typename Index\+Vector , typename Scalar\+Vector $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits}{Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits}}$<$ Index\+Vector, Scalar\+Vector $>$\+::mem\+\_\+expand (\begin{DoxyParamCaption}\item[{Index\+Vector \&}]{lsub,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \&}]{nextl,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{chmark }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_a034a1bf7ad2d7a4ba7e8c91463dc3f36}\label{struct_eigen_1_1internal_1_1column__dfs__traits_a034a1bf7ad2d7a4ba7e8c91463dc3f36}} 
+\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}!update\_segrep@{update\_segrep}}
+\index{update\_segrep@{update\_segrep}!Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}
+\doxysubsubsection{\texorpdfstring{update\_segrep()}{update\_segrep()}}
+{\footnotesize\ttfamily template$<$typename Index\+Vector , typename Scalar\+Vector $>$ \\
+bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits}{Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits}}$<$ Index\+Vector, Scalar\+Vector $>$\+::update\+\_\+segrep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_a8a373ddef6de2fd2462c06534a052118}\label{struct_eigen_1_1internal_1_1column__dfs__traits_a8a373ddef6de2fd2462c06534a052118}} 
+\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}!m\_glu@{m\_glu}}
+\index{m\_glu@{m\_glu}!Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}
+\doxysubsubsection{\texorpdfstring{m\_glu}{m\_glu}}
+{\footnotesize\ttfamily template$<$typename Index\+Vector , typename Scalar\+Vector $>$ \\
+\mbox{\hyperlink{class_eigen_1_1internal_1_1_sparse_l_u_impl}{Sparse\+L\+U\+Impl}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}{Scalar}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}{Storage\+Index}}$>$\+::Global\+L\+U\+\_\+t\& \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits}{Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits}}$<$ Index\+Vector, Scalar\+Vector $>$\+::m\+\_\+glu}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_aeb425429d726efde9a63eea217549a0d}\label{struct_eigen_1_1internal_1_1column__dfs__traits_aeb425429d726efde9a63eea217549a0d}} 
+\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}!m\_jcol@{m\_jcol}}
+\index{m\_jcol@{m\_jcol}!Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}
+\doxysubsubsection{\texorpdfstring{m\_jcol}{m\_jcol}}
+{\footnotesize\ttfamily template$<$typename Index\+Vector , typename Scalar\+Vector $>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits}{Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits}}$<$ Index\+Vector, Scalar\+Vector $>$\+::m\+\_\+jcol}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_a899dbc434353f1d05b512169a2f57e87}\label{struct_eigen_1_1internal_1_1column__dfs__traits_a899dbc434353f1d05b512169a2f57e87}} 
+\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}!m\_jsuper\_ref@{m\_jsuper\_ref}}
+\index{m\_jsuper\_ref@{m\_jsuper\_ref}!Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}
+\doxysubsubsection{\texorpdfstring{m\_jsuper\_ref}{m\_jsuper\_ref}}
+{\footnotesize\ttfamily template$<$typename Index\+Vector , typename Scalar\+Vector $>$ \\
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}\& \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits}{Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits}}$<$ Index\+Vector, Scalar\+Vector $>$\+::m\+\_\+jsuper\+\_\+ref}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1column__dfs__traits_a0bfbf67afd5463fd9b10fc6d9bcefedb}\label{struct_eigen_1_1internal_1_1column__dfs__traits_a0bfbf67afd5463fd9b10fc6d9bcefedb}} 
+\index{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}!m\_luImpl@{m\_luImpl}}
+\index{m\_luImpl@{m\_luImpl}!Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$@{Eigen::internal::column\_dfs\_traits$<$ IndexVector, ScalarVector $>$}}
+\doxysubsubsection{\texorpdfstring{m\_luImpl}{m\_luImpl}}
+{\footnotesize\ttfamily template$<$typename Index\+Vector , typename Scalar\+Vector $>$ \\
+\mbox{\hyperlink{class_eigen_1_1internal_1_1_sparse_l_u_impl}{Sparse\+L\+U\+Impl}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a8adc38f8b5e97c0ab3c8a90b1fd5cb9b}{Scalar}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits_a7c5616d5178c49c1374613aefa1d68ec}{Storage\+Index}}$>$\& \mbox{\hyperlink{struct_eigen_1_1internal_1_1column__dfs__traits}{Eigen\+::internal\+::column\+\_\+dfs\+\_\+traits}}$<$ Index\+Vector, Scalar\+Vector $>$\+::m\+\_\+lu\+Impl}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Sparse\+L\+U/\mbox{\hyperlink{_sparse_l_u__column__dfs_8h}{Sparse\+L\+U\+\_\+column\+\_\+dfs.\+h}}\end{DoxyCompactItemize}

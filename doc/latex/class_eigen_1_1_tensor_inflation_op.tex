@@ -1,0 +1,132 @@
+\hypertarget{class_eigen_1_1_tensor_inflation_op}{}\doxysection{Eigen\+::Tensor\+Inflation\+Op$<$ Strides, Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_tensor_inflation_op}\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Forward\+Declarations.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Tensor\+Inflation\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a236d797b18abd1a3b63f20f2d421342e}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a236d797b18abd1a3b63f20f2d421342e}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a236d797b18abd1a3b63f20f2d421342e}{Scalar}} $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a328f34b1ae6629d1ceff82b08b538144}{Real\+Scalar}}
+\item 
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a434347894bf1e84b4932cf62b205c185}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Tensor\+Inflation\+Op}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a8d5118ec09afae8fd420cbebd370b281}{Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Tensor\+Inflation\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_ae9a66f9458b7bb430952017d88c46bba}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_ae9a66f9458b7bb430952017d88c46bba}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Tensor\+Inflation\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_afe1a7224db27007325cbee73f0287d2a}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_afe1a7224db27007325cbee73f0287d2a}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a16f2a510d49ead47bb7039b66cfdfd50}{Tensor\+Inflation\+Op}} (const Xpr\+Type \&expr, const Strides \&\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_ab7c7ceb21fe8ea8d9bc976ff9573a4ce}{strides}})
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Strides \& \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_ab7c7ceb21fe8ea8d9bc976ff9573a4ce}{strides}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Xpr\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a37749a990846a95e7eddfb859037a8f3}{expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a4b4667f8c883f8cfdbbd01aada0fd7c9}{m\+\_\+xpr}}
+\item 
+const Strides \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a91289cb6f3f01a973104bd99f3952b88}{m\+\_\+strides}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_a434347894bf1e84b4932cf62b205c185}\label{class_eigen_1_1_tensor_inflation_op_a434347894bf1e84b4932cf62b205c185}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a434347894bf1e84b4932cf62b205c185}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_afe1a7224db27007325cbee73f0287d2a}\label{class_eigen_1_1_tensor_inflation_op_afe1a7224db27007325cbee73f0287d2a}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Tensor\+Inflation\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_afe1a7224db27007325cbee73f0287d2a}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_afe1a7224db27007325cbee73f0287d2a}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_a8d5118ec09afae8fd420cbebd370b281}\label{class_eigen_1_1_tensor_inflation_op_a8d5118ec09afae8fd420cbebd370b281}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Tensor\+Inflation\+Op}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a8d5118ec09afae8fd420cbebd370b281}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_a328f34b1ae6629d1ceff82b08b538144}\label{class_eigen_1_1_tensor_inflation_op_a328f34b1ae6629d1ceff82b08b538144}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a236d797b18abd1a3b63f20f2d421342e}{Scalar}}$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a328f34b1ae6629d1ceff82b08b538144}{Real\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_a236d797b18abd1a3b63f20f2d421342e}\label{class_eigen_1_1_tensor_inflation_op_a236d797b18abd1a3b63f20f2d421342e}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Tensor\+Inflation\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a236d797b18abd1a3b63f20f2d421342e}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_a236d797b18abd1a3b63f20f2d421342e}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_ae9a66f9458b7bb430952017d88c46bba}\label{class_eigen_1_1_tensor_inflation_op_ae9a66f9458b7bb430952017d88c46bba}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Tensor\+Inflation\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_ae9a66f9458b7bb430952017d88c46bba}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op_ae9a66f9458b7bb430952017d88c46bba}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_a16f2a510d49ead47bb7039b66cfdfd50}\label{class_eigen_1_1_tensor_inflation_op_a16f2a510d49ead47bb7039b66cfdfd50}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!TensorInflationOp@{TensorInflationOp}}
+\index{TensorInflationOp@{TensorInflationOp}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{TensorInflationOp()}{TensorInflationOp()}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Tensor\+Inflation\+Op}} (\begin{DoxyParamCaption}\item[{const Xpr\+Type \&}]{expr,  }\item[{const Strides \&}]{strides }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_a37749a990846a95e7eddfb859037a8f3}\label{class_eigen_1_1_tensor_inflation_op_a37749a990846a95e7eddfb859037a8f3}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!expression@{expression}}
+\index{expression@{expression}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{expression()}{expression()}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Xpr\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_ab7c7ceb21fe8ea8d9bc976ff9573a4ce}\label{class_eigen_1_1_tensor_inflation_op_ab7c7ceb21fe8ea8d9bc976ff9573a4ce}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!strides@{strides}}
+\index{strides@{strides}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{strides()}{strides()}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Strides\& \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_a91289cb6f3f01a973104bd99f3952b88}\label{class_eigen_1_1_tensor_inflation_op_a91289cb6f3f01a973104bd99f3952b88}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!m\_strides@{m\_strides}}
+\index{m\_strides@{m\_strides}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_strides}{m\_strides}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+const Strides \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::m\+\_\+strides\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_inflation_op_a4b4667f8c883f8cfdbbd01aada0fd7c9}\label{class_eigen_1_1_tensor_inflation_op_a4b4667f8c883f8cfdbbd01aada0fd7c9}} 
+\index{Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}!m\_xpr@{m\_xpr}}
+\index{m\_xpr@{m\_xpr}!Eigen::TensorInflationOp$<$ Strides, XprType $>$@{Eigen::TensorInflationOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_xpr}{m\_xpr}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_inflation_op}{Eigen\+::\+Tensor\+Inflation\+Op}}$<$ Strides, Xpr\+Type $>$\+::m\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_forward_declarations_8h}{Tensor\+Forward\+Declarations.\+h}}\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_inflation_8h}{Tensor\+Inflation.\+h}}\end{DoxyCompactItemize}

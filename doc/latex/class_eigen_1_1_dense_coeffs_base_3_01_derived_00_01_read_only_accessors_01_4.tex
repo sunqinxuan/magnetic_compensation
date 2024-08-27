@@ -1,0 +1,493 @@
+\hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4}{}\doxysection{Eigen\+::Dense\+Coeffs\+Base$<$ Derived, Read\+Only\+Accessors $>$ Class Template Reference}
+\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4}\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+
+
+Base class providing read-\/only coefficient access to matrices and arrays.  
+
+
+
+
+{\ttfamily \#include $<$Dense\+Coeffs\+Base.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Dense\+Coeffs\+Base$<$ Derived, Read\+Only\+Accessors $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Dense\+Coeffs\+Base$<$ Derived, Read\+Only\+Accessors $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a23f6aafda3b1bfa4c10e36c93a8cbab3}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a23f6aafda3b1bfa4c10e36c93a8cbab3}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ Derived $>$\+::\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{internal\+::packet\+\_\+traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a02dabf6e25a95eaf14ac09d923171c02}{Packet\+Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{internal\+::conditional}}$<$ bool(\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$ Derived $>$\+::Flags \&\mbox{\hyperlink{group__flags_gae2c323957f20dfdc6cb8f44428eaec1a}{Lvalue\+Bit}}), const \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}} \&, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{internal\+::conditional}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1is__arithmetic}{internal\+::is\+\_\+arithmetic}}$<$ \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}} $>$\+::value, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}}, const \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}} $>$\+::type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1add__const__on__value__type__if__arithmetic}{internal\+::add\+\_\+const\+\_\+on\+\_\+value\+\_\+type\+\_\+if\+\_\+arithmetic}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{internal\+::packet\+\_\+traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}} $>$\+::type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8e26781497417a67ece3f22fd7234fc6}{Packet\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+Base}}$<$ Derived $>$ \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad54041ce176686d856856e04561bb52a}{Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_acedd7d0a5410efb640b2104fc5bb348d}{row\+Index\+By\+Outer\+Inner}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} outer, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} inner) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a80e4641ade64c70fbdf330e17f4fcef6}{col\+Index\+By\+Outer\+Inner}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} outer, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} inner) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad41647ef695f9a5a58a9a0f50e2ae064}{coeff}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a834378f1a0ca131fc8d9c3896e3ae386}{coeff\+By\+Outer\+Inner}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} outer, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} inner) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a29ac34389e098ec963ebb2ebd351335a}{operator()}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad52344ad1f42852db71996590d2de0de}{coeff}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} index) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26422dfa7b2bf859d4304663c36de10}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} index) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a679c7e69917baa1abf2c2f82725ae470}{operator()}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} index) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a36fb246141b6ea5ab5289d7eb6afdf6e}{x}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_af2cb257225cf4348136a37fa9333ccda}{y}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a9040af2dcad8961168daafe09c1b1dc4}{z}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a422892fbb6b2eecce243776c3b8452ab}{w}} () const
+\item 
+{\footnotesize template$<$int Load\+Mode$>$ }\\\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8e26781497417a67ece3f22fd7234fc6}{Packet\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a9f1f55e50671fba111f4c21688b252f2}{packet}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}) const
+\item 
+{\footnotesize template$<$int Load\+Mode$>$ }\\\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8e26781497417a67ece3f22fd7234fc6}{Packet\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a91eb68efc00646608415e7ac9df5310e}{packet\+By\+Outer\+Inner}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} outer, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} inner) const
+\item 
+{\footnotesize template$<$int Load\+Mode$>$ }\\\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8e26781497417a67ece3f22fd7234fc6}{Packet\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a59cdfd584816b409afd021aafed30606}{packet}} (\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} index) const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8141320ba8df384426c298b32b000d8e}{rows}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a7b0b45c7351847696c911ce8aa2abbdb}{cols}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ac2c9348df3bb9c0044dbae6c278a8977}{size}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived \& \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a324b16961a11d2ecfd2d1b7dd7946545}{derived}} ()
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived \& \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_affa3cf01b59af4c503f5f126b3601907}{derived}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ac1b834c8222721b900d7bb91bc3d4567}{coeff\+Ref}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a47c507b0d579ba42740363f57d549f95}{coeff\+Ref\+By\+Outer\+Inner}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a1497ef99438a57400149d5e292134fc9}{write\+Packet}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a633d9c2cd95f967bf5479217b74b3213}{write\+Packet\+By\+Outer\+Inner}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a6cbdd39aa5b5de038fde7f4c81f34312}{copy\+Coeff}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a5ed8120db43363368215c9d3dd329dad}{copy\+Coeff\+By\+Outer\+Inner}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a50ccbdb1feb09f5099fc79e64c426493}{copy\+Packet}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_adc157a322db2e4d4ab9657c9604cbf11}{copy\+Packet\+By\+Outer\+Inner}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a4105f95049fb46e76c3ef7d5235fbe19}{stride}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abed12aefb9b2e8e1c70e9c388adba481}{inner\+Stride}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a3042f0d7b82fa16ab993f266d09745e0}{outer\+Stride}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a5a331419022ccf26cede98cff8b83dfc}{row\+Stride}} ()
+\item 
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26de0024e88bdc5aa7b94c7871c6cd6}{col\+Stride}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Derived$>$\newline
+class Eigen\+::\+Dense\+Coeffs\+Base$<$ Derived, Read\+Only\+Accessors $>$}
+
+Base class providing read-\/only coefficient access to matrices and arrays. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Derived} & Type of the derived class \\
+\hline
+{\em \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}}} & Constant indicating read-\/only access\\
+\hline
+\end{DoxyTemplParams}
+This class defines the {\ttfamily operator()} {\ttfamily const} function and friends, which can be used to read specific entries of a matrix or array.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_write_accessors_01_4}{Dense\+Coeffs\+Base$<$\+Derived, Write\+Accessors$>$}}, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_direct_accessors_01_4}{Dense\+Coeffs\+Base$<$\+Derived, Direct\+Accessors$>$}}, Topic\+Class\+Hierarchy 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad54041ce176686d856856e04561bb52a}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad54041ce176686d856856e04561bb52a}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+Base}}$<$Derived$>$ \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad54041ce176686d856856e04561bb52a}{Base}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{internal\+::conditional}}$<$bool(\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$Derived$>$\+::Flags\&\mbox{\hyperlink{group__flags_gae2c323957f20dfdc6cb8f44428eaec1a}{Lvalue\+Bit}}), const \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}}\&, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{internal\+::conditional}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1is__arithmetic}{internal\+::is\+\_\+arithmetic}}$<$\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}}$>$\+::value, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}}, const \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}}$>$\+::type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8e26781497417a67ece3f22fd7234fc6}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8e26781497417a67ece3f22fd7234fc6}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!PacketReturnType@{PacketReturnType}}
+\index{PacketReturnType@{PacketReturnType}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{PacketReturnType}{PacketReturnType}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1add__const__on__value__type__if__arithmetic}{internal\+::add\+\_\+const\+\_\+on\+\_\+value\+\_\+type\+\_\+if\+\_\+arithmetic}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{internal\+::packet\+\_\+traits}}$<$\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}}$>$\+::type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8e26781497417a67ece3f22fd7234fc6}{Packet\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a02dabf6e25a95eaf14ac09d923171c02}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a02dabf6e25a95eaf14ac09d923171c02}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!PacketScalar@{PacketScalar}}
+\index{PacketScalar@{PacketScalar}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{PacketScalar}{PacketScalar}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1packet__traits}{internal\+::packet\+\_\+traits}}$<$\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a02dabf6e25a95eaf14ac09d923171c02}{Packet\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$Derived$>$\+::\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abaff3dbe17d66e75354817eae696b6ac}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a23f6aafda3b1bfa4c10e36c93a8cbab3}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a23f6aafda3b1bfa4c10e36c93a8cbab3}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{internal\+::traits}}$<$Derived$>$\+::\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a23f6aafda3b1bfa4c10e36c93a8cbab3}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a23f6aafda3b1bfa4c10e36c93a8cbab3}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad52344ad1f42852db71996590d2de0de}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad52344ad1f42852db71996590d2de0de}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Short version\+: don\textquotesingle{}t use this function, use \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26422dfa7b2bf859d4304663c36de10}{operator\mbox{[}$\,$\mbox{]}(\+Index) const }} instead.
+
+Long version\+: this function is similar to \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26422dfa7b2bf859d4304663c36de10}{operator\mbox{[}$\,$\mbox{]}(\+Index) const }}, but without the assertion. Use this for limiting the performance cost of debugging code when doing repeated coefficient access. Only use this when it is guaranteed that the parameter {\itshape index} is in range.
+
+If E\+I\+G\+E\+N\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+G\+I\+NG is defined, an assertion will be made, making this function equivalent to \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26422dfa7b2bf859d4304663c36de10}{operator\mbox{[}$\,$\mbox{]}(\+Index) const }}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26422dfa7b2bf859d4304663c36de10}{operator\mbox{[}$\,$\mbox{]}(\+Index) const}}, coeff\+Ref(\+Index), \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad41647ef695f9a5a58a9a0f50e2ae064}{coeff(\+Index,\+Index) const}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad41647ef695f9a5a58a9a0f50e2ae064}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad41647ef695f9a5a58a9a0f50e2ae064}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{row,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Short version\+: don\textquotesingle{}t use this function, use \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a29ac34389e098ec963ebb2ebd351335a}{operator()(\+Index,\+Index) const }} instead.
+
+Long version\+: this function is similar to \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a29ac34389e098ec963ebb2ebd351335a}{operator()(\+Index,\+Index) const }}, but without the assertion. Use this for limiting the performance cost of debugging code when doing repeated coefficient access. Only use this when it is guaranteed that the parameters {\itshape row} and {\itshape col} are in range.
+
+If E\+I\+G\+E\+N\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+D\+E\+B\+U\+G\+G\+I\+NG is defined, an assertion will be made, making this function equivalent to \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a29ac34389e098ec963ebb2ebd351335a}{operator()(\+Index,\+Index) const }}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a29ac34389e098ec963ebb2ebd351335a}{operator()(\+Index,\+Index) const}}, coeff\+Ref(\+Index,\+Index), \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad52344ad1f42852db71996590d2de0de}{coeff(\+Index) const}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a834378f1a0ca131fc8d9c3896e3ae386}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a834378f1a0ca131fc8d9c3896e3ae386}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!coeffByOuterInner@{coeffByOuterInner}}
+\index{coeffByOuterInner@{coeffByOuterInner}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{coeffByOuterInner()}{coeffByOuterInner()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::coeff\+By\+Outer\+Inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{outer,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{inner }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ac1b834c8222721b900d7bb91bc3d4567}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ac1b834c8222721b900d7bb91bc3d4567}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!coeffRef@{coeffRef}}
+\index{coeffRef@{coeffRef}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{coeffRef()}{coeffRef()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::coeff\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a47c507b0d579ba42740363f57d549f95}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a47c507b0d579ba42740363f57d549f95}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!coeffRefByOuterInner@{coeffRefByOuterInner}}
+\index{coeffRefByOuterInner@{coeffRefByOuterInner}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{coeffRefByOuterInner()}{coeffRefByOuterInner()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::coeff\+Ref\+By\+Outer\+Inner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a80e4641ade64c70fbdf330e17f4fcef6}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a80e4641ade64c70fbdf330e17f4fcef6}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!colIndexByOuterInner@{colIndexByOuterInner}}
+\index{colIndexByOuterInner@{colIndexByOuterInner}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{colIndexByOuterInner()}{colIndexByOuterInner()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::col\+Index\+By\+Outer\+Inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{outer,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{inner }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a7b0b45c7351847696c911ce8aa2abbdb}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a7b0b45c7351847696c911ce8aa2abbdb}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+::\+Eigen\+Base}}$<$ Derived $>$\+::cols\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of columns. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a8141320ba8df384426c298b32b000d8e}{rows()}}, Cols\+At\+Compile\+Time 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26de0024e88bdc5aa7b94c7871c6cd6}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26de0024e88bdc5aa7b94c7871c6cd6}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!colStride@{colStride}}
+\index{colStride@{colStride}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{colStride()}{colStride()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::col\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a6cbdd39aa5b5de038fde7f4c81f34312}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a6cbdd39aa5b5de038fde7f4c81f34312}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!copyCoeff@{copyCoeff}}
+\index{copyCoeff@{copyCoeff}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{copyCoeff()}{copyCoeff()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::copy\+Coeff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a5ed8120db43363368215c9d3dd329dad}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a5ed8120db43363368215c9d3dd329dad}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!copyCoeffByOuterInner@{copyCoeffByOuterInner}}
+\index{copyCoeffByOuterInner@{copyCoeffByOuterInner}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{copyCoeffByOuterInner()}{copyCoeffByOuterInner()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::copy\+Coeff\+By\+Outer\+Inner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a50ccbdb1feb09f5099fc79e64c426493}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a50ccbdb1feb09f5099fc79e64c426493}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!copyPacket@{copyPacket}}
+\index{copyPacket@{copyPacket}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{copyPacket()}{copyPacket()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::copy\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_adc157a322db2e4d4ab9657c9604cbf11}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_adc157a322db2e4d4ab9657c9604cbf11}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!copyPacketByOuterInner@{copyPacketByOuterInner}}
+\index{copyPacketByOuterInner@{copyPacketByOuterInner}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{copyPacketByOuterInner()}{copyPacketByOuterInner()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::copy\+Packet\+By\+Outer\+Inner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a324b16961a11d2ecfd2d1b7dd7946545}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a324b16961a11d2ecfd2d1b7dd7946545}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!derived@{derived}}
+\index{derived@{derived}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{derived()}{derived()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived\& \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+::\+Eigen\+Base}}$<$ Derived $>$\+::derived\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a reference to the derived object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_affa3cf01b59af4c503f5f126b3601907}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_affa3cf01b59af4c503f5f126b3601907}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!derived@{derived}}
+\index{derived@{derived}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{derived()}{derived()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived\& \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+::\+Eigen\+Base}}$<$ Derived $>$\+::derived\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a const reference to the derived object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abed12aefb9b2e8e1c70e9c388adba481}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_abed12aefb9b2e8e1c70e9c388adba481}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!innerStride@{innerStride}}
+\index{innerStride@{innerStride}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{innerStride()}{innerStride()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::inner\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a679c7e69917baa1abf2c2f82725ae470}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a679c7e69917baa1abf2c2f82725ae470}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the coefficient at given index.
+\end{DoxyReturn}
+This is synonymous to \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26422dfa7b2bf859d4304663c36de10}{operator\mbox{[}$\,$\mbox{]}(\+Index) const}}.
+
+This method is allowed only for vector expressions, and for matrix expressions having the Linear\+Access\+Bit.
+
+\begin{DoxySeeAlso}{See also}
+operator\mbox{[}$\,$\mbox{]}(\+Index), \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a29ac34389e098ec963ebb2ebd351335a}{operator()(\+Index,\+Index) const}}, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a36fb246141b6ea5ab5289d7eb6afdf6e}{x() const}}, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_af2cb257225cf4348136a37fa9333ccda}{y() const}}, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a9040af2dcad8961168daafe09c1b1dc4}{z() const}}, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a422892fbb6b2eecce243776c3b8452ab}{w() const}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a29ac34389e098ec963ebb2ebd351335a}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a29ac34389e098ec963ebb2ebd351335a}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{row,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the coefficient at given the given row and column.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+operator()(\+Index,\+Index), operator\mbox{[}$\,$\mbox{]}(\+Index) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26422dfa7b2bf859d4304663c36de10}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ad26422dfa7b2bf859d4304663c36de10}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the coefficient at given index.
+\end{DoxyReturn}
+This method is allowed only for vector expressions, and for matrix expressions having the Linear\+Access\+Bit.
+
+\begin{DoxySeeAlso}{See also}
+operator\mbox{[}$\,$\mbox{]}(\+Index), \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a29ac34389e098ec963ebb2ebd351335a}{operator()(\+Index,\+Index) const}}, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a36fb246141b6ea5ab5289d7eb6afdf6e}{x() const}}, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_af2cb257225cf4348136a37fa9333ccda}{y() const}}, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a9040af2dcad8961168daafe09c1b1dc4}{z() const}}, \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a422892fbb6b2eecce243776c3b8452ab}{w() const}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a3042f0d7b82fa16ab993f266d09745e0}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a3042f0d7b82fa16ab993f266d09745e0}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!outerStride@{outerStride}}
+\index{outerStride@{outerStride}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{outerStride()}{outerStride()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::outer\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a59cdfd584816b409afd021aafed30606}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a59cdfd584816b409afd021aafed30606}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!packet@{packet}}
+\index{packet@{packet}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{packet()}{packet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$int Load\+Mode$>$ \\
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8e26781497417a67ece3f22fd7234fc6}{Packet\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a9f1f55e50671fba111f4c21688b252f2}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a9f1f55e50671fba111f4c21688b252f2}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!packet@{packet}}
+\index{packet@{packet}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{packet()}{packet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$int Load\+Mode$>$ \\
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8e26781497417a67ece3f22fd7234fc6}{Packet\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{row,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a91eb68efc00646608415e7ac9df5310e}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a91eb68efc00646608415e7ac9df5310e}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!packetByOuterInner@{packetByOuterInner}}
+\index{packetByOuterInner@{packetByOuterInner}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{packetByOuterInner()}{packetByOuterInner()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$int Load\+Mode$>$ \\
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8e26781497417a67ece3f22fd7234fc6}{Packet\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::packet\+By\+Outer\+Inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{outer,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{inner }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_acedd7d0a5410efb640b2104fc5bb348d}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_acedd7d0a5410efb640b2104fc5bb348d}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!rowIndexByOuterInner@{rowIndexByOuterInner}}
+\index{rowIndexByOuterInner@{rowIndexByOuterInner}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{rowIndexByOuterInner()}{rowIndexByOuterInner()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::row\+Index\+By\+Outer\+Inner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{outer,  }\item[{\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}}}]{inner }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8141320ba8df384426c298b32b000d8e}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a8141320ba8df384426c298b32b000d8e}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+::\+Eigen\+Base}}$<$ Derived $>$\+::rows\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of rows. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a7b0b45c7351847696c911ce8aa2abbdb}{cols()}}, Rows\+At\+Compile\+Time 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a5a331419022ccf26cede98cff8b83dfc}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a5a331419022ccf26cede98cff8b83dfc}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!rowStride@{rowStride}}
+\index{rowStride@{rowStride}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{rowStride()}{rowStride()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::row\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ac2c9348df3bb9c0044dbae6c278a8977}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_ac2c9348df3bb9c0044dbae6c278a8977}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!size@{size}}
+\index{size@{size}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a554f30542cc2316add4b1ea0a492ff02}{Index}} \mbox{\hyperlink{struct_eigen_1_1_eigen_base}{Eigen\+::\+Eigen\+Base}}$<$ Derived $>$\+::size\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of coefficients, which is \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a8141320ba8df384426c298b32b000d8e}{rows()}}$\ast$cols(). 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_eigen_1_1_eigen_base_a8141320ba8df384426c298b32b000d8e}{rows()}}, \mbox{\hyperlink{struct_eigen_1_1_eigen_base_a7b0b45c7351847696c911ce8aa2abbdb}{cols()}}, Size\+At\+Compile\+Time. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a4105f95049fb46e76c3ef7d5235fbe19}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a4105f95049fb46e76c3ef7d5235fbe19}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!stride@{stride}}
+\index{stride@{stride}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{stride()}{stride()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a422892fbb6b2eecce243776c3b8452ab}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a422892fbb6b2eecce243776c3b8452ab}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!w@{w}}
+\index{w@{w}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{w()}{w()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::w (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+equivalent to operator\mbox{[}$\,$\mbox{]}(3). ~\newline
+ \mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a1497ef99438a57400149d5e292134fc9}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a1497ef99438a57400149d5e292134fc9}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!writePacket@{writePacket}}
+\index{writePacket@{writePacket}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{writePacket()}{writePacket()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::write\+Packet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a633d9c2cd95f967bf5479217b74b3213}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a633d9c2cd95f967bf5479217b74b3213}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!writePacketByOuterInner@{writePacketByOuterInner}}
+\index{writePacketByOuterInner@{writePacketByOuterInner}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{writePacketByOuterInner()}{writePacketByOuterInner()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::write\+Packet\+By\+Outer\+Inner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a36fb246141b6ea5ab5289d7eb6afdf6e}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a36fb246141b6ea5ab5289d7eb6afdf6e}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!x@{x}}
+\index{x@{x}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+equivalent to operator\mbox{[}$\,$\mbox{]}(0). ~\newline
+ \mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_af2cb257225cf4348136a37fa9333ccda}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_af2cb257225cf4348136a37fa9333ccda}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!y@{y}}
+\index{y@{y}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{y()}{y()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+equivalent to operator\mbox{[}$\,$\mbox{]}(1). ~\newline
+ \mbox{\Hypertarget{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a9040af2dcad8961168daafe09c1b1dc4}\label{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a9040af2dcad8961168daafe09c1b1dc4}} 
+\index{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}!z@{z}}
+\index{z@{z}!Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$@{Eigen::DenseCoeffsBase$<$ Derived, ReadOnlyAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{z()}{z()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4_a319733b154359455412966947319fa0a}{Coeff\+Return\+Type}} \mbox{\hyperlink{class_eigen_1_1_dense_coeffs_base}{Eigen\+::\+Dense\+Coeffs\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$\+::z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+equivalent to operator\mbox{[}$\,$\mbox{]}(2). ~\newline
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_dense_coeffs_base_8h}{Dense\+Coeffs\+Base.\+h}}\end{DoxyCompactItemize}

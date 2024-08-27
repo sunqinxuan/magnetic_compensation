@@ -1,0 +1,186 @@
+\hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator}{}\doxysection{Eigen\+::Sparse\+Compressed\+Base\+::Reverse\+Inner\+Iterator Class Reference}
+\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator}\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+
+
+{\ttfamily \#include $<$Sparse\+Compressed\+Base.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Sparse\+Compressed\+Base\+::Reverse\+Inner\+Iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Sparse\+Compressed\+Base\+::Reverse\+Inner\+Iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a2b81ff68e9ec99ae7c8e9c57b5e413df}{Reverse\+Inner\+Iterator}} (const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}} \&mat, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_ae126d4b37b36128a839e57fb1b5de43f}{outer}})
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_afa35966e0d45ea8c8f410611ef7703d4}{Reverse\+Inner\+Iterator}} (const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}} \&mat)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a17de275e0ca288cac4494b2958a13b8b}{Reverse\+Inner\+Iterator}} (const \mbox{\hyperlink{class_eigen_1_1internal_1_1_compressed_storage}{internal\+::\+Compressed\+Storage}}$<$ Scalar, Storage\+Index $>$ \&data)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator}{Reverse\+Inner\+Iterator}} \& \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a13ea24afcb17a1fa28e7d3a38c629da9}{operator-\/-\/}} ()
+\item 
+const Scalar \& \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_acb0ec02cba70c0d11c473b8a55876e6f}{value}} () const
+\item 
+Scalar \& \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_aca7be2d9b4bb52509d6cd2c61b2876aa}{value\+Ref}} ()
+\item 
+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_af8c860b6de4847f088b8e47a48681575}{index}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_ae126d4b37b36128a839e57fb1b5de43f}{outer}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a1315d89b8b71aa52c24de10925a9190e}{row}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a5548b21e030bbfe455ce233256bff4a9}{col}} () const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a98a653459932b6d3c55860f96c99c230}{operator bool}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1internal_1_1variable__if__dynamic}{internal\+::variable\+\_\+if\+\_\+dynamic}}$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Derived\+::\+Is\+Vector\+At\+Compile\+Time?0\+:\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}} $>$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a0ef3e7c12113a06881e5da056b895490}{Outer\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Scalar $\ast$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_ae7efbd6a8157ec6728d08cc0958063a7}{m\+\_\+values}}
+\item 
+const Storage\+Index $\ast$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a11bf1fe64665339d9d981cd0feae575d}{m\+\_\+indices}}
+\item 
+const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a0ef3e7c12113a06881e5da056b895490}{Outer\+Type}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_af3f7002c39d153f6c1937e1609a4195f}{m\+\_\+outer}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a9f747ad5686db3d55e2f9f4731daad7c}{m\+\_\+start}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_add81196fcdb02580580ddba5dbc84658}{m\+\_\+id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a0ef3e7c12113a06881e5da056b895490}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a0ef3e7c12113a06881e5da056b895490}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!OuterType@{OuterType}}
+\index{OuterType@{OuterType}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{OuterType}{OuterType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1internal_1_1variable__if__dynamic}{internal\+::variable\+\_\+if\+\_\+dynamic}}$<$\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}},Derived\+::\+Is\+Vector\+At\+Compile\+Time?0\+:\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}$>$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a0ef3e7c12113a06881e5da056b895490}{Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::\+Outer\+Type}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a2b81ff68e9ec99ae7c8e9c57b5e413df}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a2b81ff68e9ec99ae7c8e9c57b5e413df}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!ReverseInnerIterator@{ReverseInnerIterator}}
+\index{ReverseInnerIterator@{ReverseInnerIterator}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{ReverseInnerIterator()}{ReverseInnerIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::\+Reverse\+Inner\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}} \&}]{mat,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{outer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_afa35966e0d45ea8c8f410611ef7703d4}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_afa35966e0d45ea8c8f410611ef7703d4}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!ReverseInnerIterator@{ReverseInnerIterator}}
+\index{ReverseInnerIterator@{ReverseInnerIterator}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{ReverseInnerIterator()}{ReverseInnerIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::\+Reverse\+Inner\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}} \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a17de275e0ca288cac4494b2958a13b8b}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a17de275e0ca288cac4494b2958a13b8b}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!ReverseInnerIterator@{ReverseInnerIterator}}
+\index{ReverseInnerIterator@{ReverseInnerIterator}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{ReverseInnerIterator()}{ReverseInnerIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::\+Reverse\+Inner\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1internal_1_1_compressed_storage}{internal\+::\+Compressed\+Storage}}$<$ Scalar, Storage\+Index $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a5548b21e030bbfe455ce233256bff4a9}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a5548b21e030bbfe455ce233256bff4a9}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!col@{col}}
+\index{col@{col}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{col()}{col()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_af8c860b6de4847f088b8e47a48681575}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_af8c860b6de4847f088b8e47a48681575}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!index@{index}}
+\index{index@{index}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily Storage\+Index Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a98a653459932b6d3c55860f96c99c230}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a98a653459932b6d3c55860f96c99c230}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a13ea24afcb17a1fa28e7d3a38c629da9}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a13ea24afcb17a1fa28e7d3a38c629da9}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator}{Reverse\+Inner\+Iterator}}\& Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_ae126d4b37b36128a839e57fb1b5de43f}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_ae126d4b37b36128a839e57fb1b5de43f}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!outer@{outer}}
+\index{outer@{outer}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{outer()}{outer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::outer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a1315d89b8b71aa52c24de10925a9190e}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a1315d89b8b71aa52c24de10925a9190e}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!row@{row}}
+\index{row@{row}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_acb0ec02cba70c0d11c473b8a55876e6f}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_acb0ec02cba70c0d11c473b8a55876e6f}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!value@{value}}
+\index{value@{value}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily const Scalar\& Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_aca7be2d9b4bb52509d6cd2c61b2876aa}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_aca7be2d9b4bb52509d6cd2c61b2876aa}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!valueRef@{valueRef}}
+\index{valueRef@{valueRef}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{valueRef()}{valueRef()}}
+{\footnotesize\ttfamily Scalar\& Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::value\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_add81196fcdb02580580ddba5dbc84658}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_add81196fcdb02580580ddba5dbc84658}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!m\_id@{m\_id}}
+\index{m\_id@{m\_id}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{m\_id}{m\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a11bf1fe64665339d9d981cd0feae575d}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a11bf1fe64665339d9d981cd0feae575d}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!m\_indices@{m\_indices}}
+\index{m\_indices@{m\_indices}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{m\_indices}{m\_indices}}
+{\footnotesize\ttfamily const Storage\+Index$\ast$ Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::m\+\_\+indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_af3f7002c39d153f6c1937e1609a4195f}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_af3f7002c39d153f6c1937e1609a4195f}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!m\_outer@{m\_outer}}
+\index{m\_outer@{m\_outer}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{m\_outer}{m\_outer}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a0ef3e7c12113a06881e5da056b895490}{Outer\+Type}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::m\+\_\+outer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a9f747ad5686db3d55e2f9f4731daad7c}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_a9f747ad5686db3d55e2f9f4731daad7c}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!m\_start@{m\_start}}
+\index{m\_start@{m\_start}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{m\_start}{m\_start}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::m\+\_\+start\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_ae7efbd6a8157ec6728d08cc0958063a7}\label{class_eigen_1_1_sparse_compressed_base_1_1_reverse_inner_iterator_ae7efbd6a8157ec6728d08cc0958063a7}} 
+\index{Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}!m\_values@{m\_values}}
+\index{m\_values@{m\_values}!Eigen::SparseCompressedBase::ReverseInnerIterator@{Eigen::SparseCompressedBase::ReverseInnerIterator}}
+\doxysubsubsection{\texorpdfstring{m\_values}{m\_values}}
+{\footnotesize\ttfamily const Scalar$\ast$ Eigen\+::\+Sparse\+Compressed\+Base\+::\+Reverse\+Inner\+Iterator\+::m\+\_\+values\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Sparse\+Core/\mbox{\hyperlink{_sparse_compressed_base_8h}{Sparse\+Compressed\+Base.\+h}}\end{DoxyCompactItemize}

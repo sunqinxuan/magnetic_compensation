@@ -1,0 +1,1478 @@
+\hypertarget{logging_8h}{}\doxysection{3rd\+\_\+party/glog-\/0.4.0/include/glog/logging.h File Reference}
+\label{logging_8h}\index{3rd\_party/glog-\/0.4.0/include/glog/logging.h@{3rd\_party/glog-\/0.4.0/include/glog/logging.h}}
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$iosfwd$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}glog/log\+\_\+severity.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}glog/vlog\+\_\+is\+\_\+on.\+h\char`\"{}}\newline
+Include dependency graph for logging.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logging_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logging_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgoogle_1_1_check_op_string}{google\+::\+Check\+Op\+String}}
+\item 
+struct \mbox{\hyperlink{structgoogle_1_1_dummy_class_to_define_operator}{google\+::\+Dummy\+Class\+To\+Define\+Operator}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1base_1_1_check_op_message_builder}{google\+::base\+::\+Check\+Op\+Message\+Builder}}
+\item 
+struct \mbox{\hyperlink{structgoogle_1_1glog__internal__namespace___1_1_compile_assert}{google\+::glog\+\_\+internal\+\_\+namespace\+\_\+\+::\+Compile\+Assert$<$ bool $>$}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1base__logging_1_1_log_stream_buf}{google\+::base\+\_\+logging\+::\+Log\+Stream\+Buf}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1_log_message}{google\+::\+Log\+Message}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1_log_message_1_1_log_stream}{google\+::\+Log\+Message\+::\+Log\+Stream}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1_log_message_fatal}{google\+::\+Log\+Message\+Fatal}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1_errno_log_message}{google\+::\+Errno\+Log\+Message}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1_log_message_voidify}{google\+::\+Log\+Message\+Voidify}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1_log_sink}{google\+::\+Log\+Sink}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1base_1_1_logger}{google\+::base\+::\+Logger}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1_null_stream}{google\+::\+Null\+Stream}}
+\item 
+class \mbox{\hyperlink{classgoogle_1_1_null_stream_fatal}{google\+::\+Null\+Stream\+Fatal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacegoogle}{google}}
+\item 
+ \mbox{\hyperlink{namespacegoogle_1_1base}{google\+::base}}
+\item 
+ \mbox{\hyperlink{namespacegoogle_1_1base_1_1internal}{google\+::base\+::internal}}
+\item 
+ \mbox{\hyperlink{namespacegoogle_1_1glog__internal__namespace__}{google\+::glog\+\_\+internal\+\_\+namespace\+\_\+}}
+\item 
+ \mbox{\hyperlink{namespacegoogle_1_1base__logging}{google\+::base\+\_\+logging}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logging_8h_a895b90089c47c98e4bbc1f63e1fba191}{G\+L\+O\+G\+\_\+\+M\+S\+V\+C\+\_\+\+P\+U\+S\+H\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+W\+A\+R\+N\+I\+NG}}(n)
+\item 
+\#define \mbox{\hyperlink{logging_8h_af460ba0566bf6437fc70ccaadf220118}{G\+L\+O\+G\+\_\+\+M\+S\+V\+C\+\_\+\+P\+O\+P\+\_\+\+W\+A\+R\+N\+I\+NG}}()
+\item 
+\#define \mbox{\hyperlink{logging_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_a1734b3ada3968f3601877db95fa57d76}{G\+O\+O\+G\+L\+E\+\_\+\+S\+T\+R\+I\+P\+\_\+\+L\+OG}}~0
+\item 
+\#define \mbox{\hyperlink{logging_8h_a09001211989f041c5f3fa7b69bf58eb2}{G\+O\+O\+G\+L\+E\+\_\+\+P\+R\+E\+D\+I\+C\+T\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+N\+O\+T\+\_\+\+T\+A\+K\+EN}}(x)~(\+\_\+\+\_\+builtin\+\_\+expect(x, 0))
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab3ddad002390914cf4106022c60ef0d6}{G\+O\+O\+G\+L\+E\+\_\+\+P\+R\+E\+D\+I\+C\+T\+\_\+\+F\+A\+L\+SE}}(x)~(\+\_\+\+\_\+builtin\+\_\+expect(x, 0))
+\item 
+\#define \mbox{\hyperlink{logging_8h_a38dbe94ed04eccf967ebe59e5ebe165e}{G\+O\+O\+G\+L\+E\+\_\+\+P\+R\+E\+D\+I\+C\+T\+\_\+\+T\+R\+UE}}(x)~(\+\_\+\+\_\+builtin\+\_\+expect(!!(x), 1))
+\item 
+\#define \mbox{\hyperlink{logging_8h_a4246e4954effbe2b7309dea8d0be4091}{M\+U\+S\+T\+\_\+\+U\+N\+D\+E\+F\+\_\+\+G\+F\+L\+A\+G\+S\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+A\+C\+R\+OS}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab964cbd5bef36b1948f4fc622aa10c98}{D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}}(type,  shorttype,  name,  tn)
+\item 
+\#define \mbox{\hyperlink{logging_8h_aa0726b1f417a7327ac669eee54dd035a}{D\+E\+C\+L\+A\+R\+E\+\_\+bool}}(name)~\mbox{\hyperlink{logging_8h_ab964cbd5bef36b1948f4fc622aa10c98}{D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}}(bool, B, name, bool)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a84f6eccece2cf31451a29ae28fff137b}{D\+E\+C\+L\+A\+R\+E\+\_\+int32}}(name)~\mbox{\hyperlink{logging_8h_ab964cbd5bef36b1948f4fc622aa10c98}{D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}}(\mbox{\hyperlink{namespacegoogle_a55bebe2bafcd7d70769349aad34ab306}{google\+::int32}}, I, name, int32)
+\item 
+\#define \mbox{\hyperlink{logging_8h_acca687510c29941c98876ec7100ce9de}{D\+E\+C\+L\+A\+R\+E\+\_\+string}}(name)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab9d086c197ac1f7f149f73bbc05d391b}{C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_a27059a960f3d60491d57d5328dd04949}{L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+I\+N\+FO}}(message)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ac0f169bc6a3f1250538bf9b86c9bf83b}{C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_a8bba74f743c85faaa59b79b4d11a3b8c}{L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+W\+A\+R\+N\+I\+NG}}(message)
+\item 
+\#define \mbox{\hyperlink{logging_8h_acf124ca2fa51ef730b81b2de1761d9f2}{C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_a2c8a11d7e8cfeaa25e4da200aef3b61c}{L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+E\+R\+R\+OR}}(message)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a5bb038831e3c346ecfb2201b7c854e7f}{C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_a12b9d4b49361613f366c2c66c8019017}{L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+A\+T\+AL}}(message)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a9f3902b081f68e0ef12b38eb52739698}{D\+C\+H\+E\+C\+K\+\_\+\+I\+S\+\_\+\+ON}}()~1
+\item 
+\#define \mbox{\hyperlink{logging_8h_a41940376b5c5743b584bf95408f4c442}{C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+D\+F\+A\+T\+AL}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_a930ad12d78857a7184b15e6e1e0c4b45}{G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}}(counter)~\mbox{\hyperlink{classgoogle_1_1_log_message}{google\+::\+Log\+Message}}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \mbox{\hyperlink{log__severity_8h_af3c2db675e75f2074724f754d3cf7885}{google\+::\+G\+L\+O\+G\+\_\+\+I\+N\+FO}}, counter, \&\mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google\+::\+Log\+Message\+::\+Send\+To\+Log}})
+\item 
+\#define \mbox{\hyperlink{logging_8h_aa064c8bce1a9b8103221af95da828e76}{S\+Y\+S\+L\+O\+G\+\_\+\+I\+N\+FO}}(counter)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a030b9683afe518733d25a27695c8b6cc}{G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}}(counter)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a820f091989b1e85a4728a9818fdcfb7e}{S\+Y\+S\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}}(counter)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a5b18cf71dc5bf81e554e3247a6e55f59}{G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}}(counter)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a2e1c9947244f6d46509f5b4713183cce}{S\+Y\+S\+L\+O\+G\+\_\+\+E\+R\+R\+OR}}(counter)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a48e95a312894ebd3c37d32a11c598635}{G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}}(counter)
+\item 
+\#define \mbox{\hyperlink{logging_8h_af8855f312b15c336d9b4e5530cb37a39}{S\+Y\+S\+L\+O\+G\+\_\+\+F\+A\+T\+AL}}(counter)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a75db5949a74765f565a4cda8582ff690}{G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+D\+F\+A\+T\+AL}}(counter)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a3eb4d4ad8da2d68b560f4a75226212a2}{S\+Y\+S\+L\+O\+G\+\_\+\+D\+F\+A\+T\+AL}}(counter)
+\item 
+\#define \mbox{\hyperlink{logging_8h_accad43a85d781d53381cd53a9894b6ae}{L\+OG}}(severity)~C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+ \#\# severity.\+stream()
+\item 
+\#define \mbox{\hyperlink{logging_8h_aec55dbc0eb86bb6a02de6f05fac15b83}{S\+Y\+S\+L\+OG}}(severity)~S\+Y\+S\+L\+O\+G\+\_\+ \#\# severity(0).stream()
+\item 
+\#define \mbox{\hyperlink{logging_8h_afe0db805034aed653baceffe344a69b7}{L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+I\+NK}}(sink,  severity)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ad08ed1356a00e1593c81303a44f06480}{L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+I\+N\+K\+\_\+\+B\+U\+T\+\_\+\+N\+O\+T\+\_\+\+T\+O\+\_\+\+L\+O\+G\+F\+I\+LE}}(sink,  severity)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a8881a484db9fc42ff4c5d4e124448929}{L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+NG}}(severity,  message)~L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\#\#severity(static\+\_\+cast$<$string$\ast$$>$(message)).stream()
+\item 
+\#define \mbox{\hyperlink{logging_8h_a184d91a90ad6bfc00ca7b361ef173a59}{L\+O\+G\+\_\+\+S\+T\+R\+I\+NG}}(severity,  outvec)~L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\#\#severity(static\+\_\+cast$<$std\+::vector$<$std\+::string$>$$\ast$$>$(outvec)).stream()
+\item 
+\#define \mbox{\hyperlink{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}{L\+O\+G\+\_\+\+IF}}(severity,  condition)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ad7a43d8ca082105d21e75c822aa2cf21}{S\+Y\+S\+L\+O\+G\+\_\+\+IF}}(severity,  condition)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a4054e3ae5c28b364d0edd2b4a8b66c51}{L\+O\+G\+\_\+\+A\+S\+S\+E\+RT}}(condition)~\mbox{\hyperlink{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}{L\+O\+G\+\_\+\+IF}}(\mbox{\hyperlink{log__severity_8h_acdd38e3c9f22f127d7776920e3079eda}{F\+A\+T\+AL}}, !(condition)) $<$$<$ \char`\"{}Assert failed\+: \char`\"{} \#condition
+\item 
+\#define \mbox{\hyperlink{logging_8h_abc77aea95e5c8144159322c9fd919808}{S\+Y\+S\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT}}(condition)~\mbox{\hyperlink{logging_8h_ad7a43d8ca082105d21e75c822aa2cf21}{S\+Y\+S\+L\+O\+G\+\_\+\+IF}}(\mbox{\hyperlink{log__severity_8h_acdd38e3c9f22f127d7776920e3079eda}{F\+A\+T\+AL}}, !(condition)) $<$$<$ \char`\"{}Assert failed\+: \char`\"{} \#condition
+\item 
+\#define \mbox{\hyperlink{logging_8h_a3e1cfef60e774a81f30eaddf26a3a274}{C\+H\+E\+CK}}(condition)
+\item 
+\#define \mbox{\hyperlink{logging_8h_af7e4c72192ede9234317383b0c103c06}{D\+E\+F\+I\+N\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+P\+\_\+\+I\+M\+PL}}(name,  op)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ad99b8d8c9e55c7dc8b7de868f9269319}{C\+H\+E\+C\+K\+\_\+\+O\+P\+\_\+\+L\+OG}}(name,  op,  val1,  val2,  \mbox{\hyperlink{_array_cwise_unary_ops_8h_adcd4635357c94f6ea3a3cfae6a2ccd58}{log}})
+\item 
+\#define \mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(name,  op,  val1,  val2)~\mbox{\hyperlink{logging_8h_ad99b8d8c9e55c7dc8b7de868f9269319}{C\+H\+E\+C\+K\+\_\+\+O\+P\+\_\+\+L\+OG}}(name, op, val1, val2, \mbox{\hyperlink{classgoogle_1_1_log_message_fatal}{google\+::\+Log\+Message\+Fatal}})
+\item 
+\#define \mbox{\hyperlink{logging_8h_a7c0ce053b28d53aa4eaf3eb7fb71663b}{C\+H\+E\+C\+K\+\_\+\+EQ}}(val1,  val2)~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+EQ, ==, val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab25e01a2942b821d66371fc68d53f2eb}{C\+H\+E\+C\+K\+\_\+\+NE}}(val1,  val2)~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+NE, !=, val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ae4db23f10f5d4aad6d735f5a74cd6f8c}{C\+H\+E\+C\+K\+\_\+\+LE}}(val1,  val2)~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+LE, $<$=, val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a4bd2e815ca2f702a4b6aa744b1ff3b82}{C\+H\+E\+C\+K\+\_\+\+LT}}(val1,  val2)~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+LT, $<$ , val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a7cc25402ecd7591b4c39934dd656b1f9}{C\+H\+E\+C\+K\+\_\+\+GE}}(val1,  val2)~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+GE, $>$=, val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a7e03ec13560fa94a8fea569960d7efc6}{C\+H\+E\+C\+K\+\_\+\+GT}}(val1,  val2)~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+GT, $>$ , val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab4f4dc044a2ed1eb76fac50c769973fa}{C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+N\+U\+LL}}(val)~\mbox{\hyperlink{namespacegoogle_a8d45a5c6cc4aa93aaeb72ec2189f2637}{google\+::\+Check\+Not\+Null}}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \char`\"{}\textquotesingle{}\char`\"{} \#val \char`\"{}\textquotesingle{} Must be non N\+U\+LL\char`\"{}, (val))
+\item 
+\#define \mbox{\hyperlink{logging_8h_aa5e68ab717cb82e0225d04d09126b47e}{D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+O\+P\+\_\+\+I\+M\+PL}}(func,  expected)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a02189e07ec87f02d6312b38bf35918f4}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+OP}}(func,  op,  expected,  s1,  s2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ad16cc5f247382150f402b7c9365cb4e7}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+EQ}}(s1,  s2)~\mbox{\hyperlink{logging_8h_a02189e07ec87f02d6312b38bf35918f4}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+OP}}(strcmp, ==, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, s1, s2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a3f16e4372f664c60d5dd95421a171a4b}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+NE}}(s1,  s2)~\mbox{\hyperlink{logging_8h_a02189e07ec87f02d6312b38bf35918f4}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+OP}}(strcmp, !=, \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}, s1, s2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a857e59ac16481af7fc86f54c774f84c9}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+EQ}}(s1,  s2)~\mbox{\hyperlink{logging_8h_a02189e07ec87f02d6312b38bf35918f4}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+OP}}(strcasecmp, ==, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, s1, s2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab8e59a3e48687f8db849d28901f0bac8}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+NE}}(s1,  s2)~\mbox{\hyperlink{logging_8h_a02189e07ec87f02d6312b38bf35918f4}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+OP}}(strcasecmp, !=, \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}, s1, s2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a6d72eab724b016cb69670079f80123a4}{C\+H\+E\+C\+K\+\_\+\+I\+N\+D\+EX}}(I,  A)~\mbox{\hyperlink{logging_8h_a3e1cfef60e774a81f30eaddf26a3a274}{C\+H\+E\+CK}}(I $<$ (sizeof(A)/sizeof(A\mbox{[}0\mbox{]})))
+\item 
+\#define \mbox{\hyperlink{logging_8h_a1530833807d43fd53ea60132c018aa0f}{C\+H\+E\+C\+K\+\_\+\+B\+O\+U\+ND}}(B,  A)~\mbox{\hyperlink{logging_8h_a3e1cfef60e774a81f30eaddf26a3a274}{C\+H\+E\+CK}}(B $<$= (sizeof(A)/sizeof(A\mbox{[}0\mbox{]})))
+\item 
+\#define \mbox{\hyperlink{logging_8h_a48c22e2eb9eb1d558aa30a4a17825c3f}{C\+H\+E\+C\+K\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+EQ}}(val1,  val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ae79de732599c32aca5f9cf43a15f829a}{C\+H\+E\+C\+K\+\_\+\+N\+E\+AR}}(val1,  val2,  margin)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab2a4f3825f639b85c460a0ecafab8f84}{P\+L\+OG}}(severity)~\mbox{\hyperlink{logging_8h_af7973ac792709dc3def04e15cd4389d2}{G\+O\+O\+G\+L\+E\+\_\+\+P\+L\+OG}}(severity, 0).stream()
+\item 
+\#define \mbox{\hyperlink{logging_8h_af7973ac792709dc3def04e15cd4389d2}{G\+O\+O\+G\+L\+E\+\_\+\+P\+L\+OG}}(severity,  counter)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a20a0cbd13ac9ede8ee7e41a82ab7c200}{P\+L\+O\+G\+\_\+\+IF}}(severity,  condition)
+\item 
+\#define \mbox{\hyperlink{logging_8h_acd390a47656c861c03f4f4cdf1dbfb81}{P\+C\+H\+E\+CK}}(condition)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a2a0246a68dfbe2ec0465fec56513f8e3}{C\+H\+E\+C\+K\+\_\+\+E\+RR}}(invocation)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab0ef47b957c4edd7e75cca6c38cd7a13}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+N\+\_\+\+V\+A\+R\+N\+A\+ME}}(base,  line)~\mbox{\hyperlink{logging_8h_a1176bd2012f50fd8ed35e422939df159}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+N\+\_\+\+V\+A\+R\+N\+A\+M\+E\+\_\+\+C\+O\+N\+C\+AT}}(base, line)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a1176bd2012f50fd8ed35e422939df159}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+N\+\_\+\+V\+A\+R\+N\+A\+M\+E\+\_\+\+C\+O\+N\+C\+AT}}(base,  line)~base \#\# line
+\item 
+\#define \mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{L\+O\+G\+\_\+\+O\+C\+C\+U\+R\+R\+E\+N\+C\+ES}}~\mbox{\hyperlink{logging_8h_ab0ef47b957c4edd7e75cca6c38cd7a13}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+N\+\_\+\+V\+A\+R\+N\+A\+ME}}(occurrences\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{L\+O\+G\+\_\+\+O\+C\+C\+U\+R\+R\+E\+N\+C\+E\+S\+\_\+\+M\+O\+D\+\_\+N}}~\mbox{\hyperlink{logging_8h_ab0ef47b957c4edd7e75cca6c38cd7a13}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+N\+\_\+\+V\+A\+R\+N\+A\+ME}}(occurrences\+\_\+mod\+\_\+n\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{logging_8h_aa321a7b734f6f0c9c1905b3ab421e250}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity,  n,  what\+\_\+to\+\_\+do)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a7eb9b33343a474ae5b7352b5cf0686bc}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity,  condition,  n,  what\+\_\+to\+\_\+do)
+\item 
+\#define \mbox{\hyperlink{logging_8h_aafe267ea6e159dd46f38fa22d7347c43}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+P\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity,  n,  what\+\_\+to\+\_\+do)
+\item 
+\#define \mbox{\hyperlink{logging_8h_adabea66c27a9cc615c19a36b63a3a6e1}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+F\+I\+R\+S\+T\+\_\+N}}(severity,  n,  what\+\_\+to\+\_\+do)
+\item 
+\#define \mbox{\hyperlink{logging_8h_af82a891b32a8f8fc5a663fb96c3e6032}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity,  n)~\mbox{\hyperlink{logging_8h_aa321a7b734f6f0c9c1905b3ab421e250}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, (n), \mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google\+::\+Log\+Message\+::\+Send\+To\+Log}})
+\item 
+\#define \mbox{\hyperlink{logging_8h_ac70fb29939438041a7f1b8a5f735efaf}{S\+Y\+S\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity,  n)~\mbox{\hyperlink{logging_8h_aa321a7b734f6f0c9c1905b3ab421e250}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, (n), \mbox{\hyperlink{classgoogle_1_1_log_message_a280f5264a8abf2f5a227e0501d8d33bb}{google\+::\+Log\+Message\+::\+Send\+To\+Syslog\+And\+Log}})
+\item 
+\#define \mbox{\hyperlink{logging_8h_a83655214d5ee3aecdb16cda62a6ee78f}{P\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity,  n)~\mbox{\hyperlink{logging_8h_aafe267ea6e159dd46f38fa22d7347c43}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+P\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, (n), \mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google\+::\+Log\+Message\+::\+Send\+To\+Log}})
+\item 
+\#define \mbox{\hyperlink{logging_8h_a11a0a0af0f450d7c6f810d960aa408fc}{L\+O\+G\+\_\+\+F\+I\+R\+S\+T\+\_\+N}}(severity,  n)~\mbox{\hyperlink{logging_8h_adabea66c27a9cc615c19a36b63a3a6e1}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+F\+I\+R\+S\+T\+\_\+N}}(severity, (n), \mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google\+::\+Log\+Message\+::\+Send\+To\+Log}})
+\item 
+\#define \mbox{\hyperlink{logging_8h_a7ec40db06c543205a8220f538bcf3dba}{L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity,  condition,  n)~\mbox{\hyperlink{logging_8h_a7eb9b33343a474ae5b7352b5cf0686bc}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, (condition), (n), \mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google\+::\+Log\+Message\+::\+Send\+To\+Log}})
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab7306bf70c40488d8dae52babe684672}{G\+L\+O\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}~E\+R\+R\+O\+R\+\_\+macro\+\_\+is\+\_\+defined\+\_\+\+Define\+\_\+\+G\+L\+O\+G\+\_\+\+N\+O\+\_\+\+A\+B\+B\+R\+E\+V\+I\+A\+T\+E\+D\+\_\+\+S\+E\+V\+E\+R\+I\+T\+I\+E\+S\+\_\+before\+\_\+including\+\_\+logging\+\_\+h\+\_\+\+See\+\_\+the\+\_\+document\+\_\+for\+\_\+detail
+\item 
+\#define \mbox{\hyperlink{logging_8h_a95512c2c3703b76f887e88de3884512f}{C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+0}}~\mbox{\hyperlink{logging_8h_ab7306bf70c40488d8dae52babe684672}{G\+L\+O\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_ae4b13e28e611aaa4d1dbd7a87f3c9da4}{S\+Y\+S\+L\+O\+G\+\_\+0}}~\mbox{\hyperlink{logging_8h_ab7306bf70c40488d8dae52babe684672}{G\+L\+O\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_a85c99ff687febf1587d300220daa1425}{L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+0}}~\mbox{\hyperlink{logging_8h_ab7306bf70c40488d8dae52babe684672}{G\+L\+O\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_a0114cb70fef9f78846a6cb810acb7a0d}{G\+L\+O\+G\+\_\+0}}~\mbox{\hyperlink{logging_8h_ab7306bf70c40488d8dae52babe684672}{G\+L\+O\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}
+\item 
+\#define \mbox{\hyperlink{logging_8h_a30c3e3c313489ab5e42bb12fcfcc5968}{D\+L\+OG}}(severity)~\mbox{\hyperlink{logging_8h_accad43a85d781d53381cd53a9894b6ae}{L\+OG}}(severity)
+\item 
+\#define \mbox{\hyperlink{logging_8h_aa8321e154105ff593fc7160e3f1a5d91}{D\+V\+L\+OG}}(verboselevel)~\mbox{\hyperlink{logging_8h_afcaa7cadd41741bb855c2ada1d2ef927}{V\+L\+OG}}(verboselevel)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a0581caafbd212149004303f517163b1f}{D\+L\+O\+G\+\_\+\+IF}}(severity,  condition)~\mbox{\hyperlink{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}{L\+O\+G\+\_\+\+IF}}(severity, condition)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a4a177338f5a5cfbcfd42e9b23dbfb3a8}{D\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity,  n)~\mbox{\hyperlink{logging_8h_af82a891b32a8f8fc5a663fb96c3e6032}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, n)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ae63d59929f859e1f99bba723bb75a9a5}{D\+L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity,  condition,  n)~\mbox{\hyperlink{logging_8h_a7ec40db06c543205a8220f538bcf3dba}{L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, condition, n)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a94c6e5c8f21a9927c1a7905273bd3580}{D\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT}}(condition)~\mbox{\hyperlink{logging_8h_a4054e3ae5c28b364d0edd2b4a8b66c51}{L\+O\+G\+\_\+\+A\+S\+S\+E\+RT}}(condition)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ae17f8119c108cf3070bad3449c7e0006}{D\+C\+H\+E\+CK}}(condition)~\mbox{\hyperlink{logging_8h_a3e1cfef60e774a81f30eaddf26a3a274}{C\+H\+E\+CK}}(condition)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ae89df3243bbb8341130c7b3f44145ea0}{D\+C\+H\+E\+C\+K\+\_\+\+EQ}}(val1,  val2)~\mbox{\hyperlink{logging_8h_a7c0ce053b28d53aa4eaf3eb7fb71663b}{C\+H\+E\+C\+K\+\_\+\+EQ}}(val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a46e69120fbd3b36e6960e096d23b66f0}{D\+C\+H\+E\+C\+K\+\_\+\+NE}}(val1,  val2)~\mbox{\hyperlink{logging_8h_ab25e01a2942b821d66371fc68d53f2eb}{C\+H\+E\+C\+K\+\_\+\+NE}}(val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a4395e95bab44e222cb2e77251017a0e2}{D\+C\+H\+E\+C\+K\+\_\+\+LE}}(val1,  val2)~\mbox{\hyperlink{logging_8h_ae4db23f10f5d4aad6d735f5a74cd6f8c}{C\+H\+E\+C\+K\+\_\+\+LE}}(val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab62f5ed8f2d48e29802be0cbbcd1359a}{D\+C\+H\+E\+C\+K\+\_\+\+LT}}(val1,  val2)~\mbox{\hyperlink{logging_8h_a4bd2e815ca2f702a4b6aa744b1ff3b82}{C\+H\+E\+C\+K\+\_\+\+LT}}(val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_aae2dc65d9ea248d54bf39daa986dd295}{D\+C\+H\+E\+C\+K\+\_\+\+GE}}(val1,  val2)~\mbox{\hyperlink{logging_8h_a7cc25402ecd7591b4c39934dd656b1f9}{C\+H\+E\+C\+K\+\_\+\+GE}}(val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_ab4f56aa24c4c9cddc47a6abd2d747f9a}{D\+C\+H\+E\+C\+K\+\_\+\+GT}}(val1,  val2)~\mbox{\hyperlink{logging_8h_a7e03ec13560fa94a8fea569960d7efc6}{C\+H\+E\+C\+K\+\_\+\+GT}}(val1, val2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a6d69864e324a3b692627d880b87bd97e}{D\+C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+N\+U\+LL}}(val)~\mbox{\hyperlink{logging_8h_ab4f4dc044a2ed1eb76fac50c769973fa}{C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+N\+U\+LL}}(val)
+\item 
+\#define \mbox{\hyperlink{logging_8h_aa6b2c8ddf8cdcef4f746279ecb982b9f}{D\+C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+EQ}}(str1,  str2)~\mbox{\hyperlink{logging_8h_ad16cc5f247382150f402b7c9365cb4e7}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+EQ}}(str1, str2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a5b9b78816a2c9f24e6d8251e2307411d}{D\+C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+EQ}}(str1,  str2)~\mbox{\hyperlink{logging_8h_a857e59ac16481af7fc86f54c774f84c9}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+EQ}}(str1, str2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a6ffae63a3a6db3db9e59b175c8825fb1}{D\+C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+NE}}(str1,  str2)~\mbox{\hyperlink{logging_8h_a3f16e4372f664c60d5dd95421a171a4b}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+NE}}(str1, str2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a1954c380d5f703797c5f19902debd1ea}{D\+C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+NE}}(str1,  str2)~\mbox{\hyperlink{logging_8h_ab8e59a3e48687f8db849d28901f0bac8}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+NE}}(str1, str2)
+\item 
+\#define \mbox{\hyperlink{logging_8h_afcaa7cadd41741bb855c2ada1d2ef927}{V\+L\+OG}}(verboselevel)~\mbox{\hyperlink{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}{L\+O\+G\+\_\+\+IF}}(\mbox{\hyperlink{log__severity_8h_ab4a2cbab234914b320b7fae11b6e8cb9}{I\+N\+FO}}, \mbox{\hyperlink{vlog__is__on_8h_a956152cad330225654d128f35c00efce}{V\+L\+O\+G\+\_\+\+I\+S\+\_\+\+ON}}(verboselevel))
+\item 
+\#define \mbox{\hyperlink{logging_8h_a23ff71a41fd1136b4995b7284cd074bd}{V\+L\+O\+G\+\_\+\+IF}}(verboselevel,  condition)~\mbox{\hyperlink{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}{L\+O\+G\+\_\+\+IF}}(\mbox{\hyperlink{log__severity_8h_ab4a2cbab234914b320b7fae11b6e8cb9}{I\+N\+FO}}, (condition) \&\& \mbox{\hyperlink{vlog__is__on_8h_a956152cad330225654d128f35c00efce}{V\+L\+O\+G\+\_\+\+I\+S\+\_\+\+ON}}(verboselevel))
+\item 
+\#define \mbox{\hyperlink{logging_8h_a231d72af39556639c895c90740a8efe0}{V\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(verboselevel,  n)~\mbox{\hyperlink{logging_8h_a7ec40db06c543205a8220f538bcf3dba}{L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(\mbox{\hyperlink{log__severity_8h_ab4a2cbab234914b320b7fae11b6e8cb9}{I\+N\+FO}}, \mbox{\hyperlink{vlog__is__on_8h_a956152cad330225654d128f35c00efce}{V\+L\+O\+G\+\_\+\+I\+S\+\_\+\+ON}}(verboselevel), n)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a6aa0a593da05f08bcb96ebe434132c04}{V\+L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(verboselevel,  condition,  n)~\mbox{\hyperlink{logging_8h_a7ec40db06c543205a8220f538bcf3dba}{L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(\mbox{\hyperlink{log__severity_8h_ab4a2cbab234914b320b7fae11b6e8cb9}{I\+N\+FO}}, (condition) \&\& \mbox{\hyperlink{vlog__is__on_8h_a956152cad330225654d128f35c00efce}{V\+L\+O\+G\+\_\+\+I\+S\+\_\+\+ON}}(verboselevel), n)
+\item 
+\#define \mbox{\hyperlink{logging_8h_a27e05b8a7807c1a43ff9518a13134b1f}{L\+O\+G\+\_\+\+A\+T\+\_\+\+L\+E\+V\+EL}}(severity)~\mbox{\hyperlink{classgoogle_1_1_log_message}{google\+::\+Log\+Message}}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, severity).stream()
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int32\+\_\+t \mbox{\hyperlink{namespacegoogle_a55bebe2bafcd7d70769349aad34ab306}{google\+::int32}}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{namespacegoogle_aadb7c40e1467f063704376104ab098b5}{google\+::uint32}}
+\item 
+typedef int64\+\_\+t \mbox{\hyperlink{namespacegoogle_ae9b72d8ddf29764a3106318ad4434457}{google\+::int64}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{namespacegoogle_aa0d181ba41bf57de9a5c5db905da4767}{google\+::uint64}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacegoogle_a1ea5678ee7aa6131308446d333351fa1}{google\+::\+P\+R\+I\+V\+A\+T\+E\+\_\+\+Counter}} \{ \mbox{\hyperlink{namespacegoogle_a1ea5678ee7aa6131308446d333351fa1a7f5f9acf00c9ae7969b9777147e9ff7b}{google\+::\+C\+O\+U\+N\+T\+ER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{logging_8h_a5ca1def5a8d64f95306757194c1783de}{D\+E\+C\+L\+A\+R\+E\+\_\+bool}} (logtostderr)
+\item 
+\mbox{\hyperlink{logging_8h_a1792d503ba36495c54dcfe9670ae5030}{D\+E\+C\+L\+A\+R\+E\+\_\+bool}} (alsologtostderr)
+\item 
+\mbox{\hyperlink{logging_8h_a21be737d6d2eccb1d18b46d771e79939}{D\+E\+C\+L\+A\+R\+E\+\_\+bool}} (colorlogtostderr)
+\item 
+\mbox{\hyperlink{logging_8h_a63b732ad5f1863cc497a3a425ea615ee}{D\+E\+C\+L\+A\+R\+E\+\_\+int32}} (stderrthreshold)
+\item 
+\mbox{\hyperlink{logging_8h_a281787e06c2fd93bf09b565dd36dc964}{D\+E\+C\+L\+A\+R\+E\+\_\+bool}} (log\+\_\+prefix)
+\item 
+\mbox{\hyperlink{logging_8h_a2e722295f629a1e03617c0eaedb36e6d}{D\+E\+C\+L\+A\+R\+E\+\_\+int32}} (logbuflevel)
+\item 
+\mbox{\hyperlink{logging_8h_aaa1fe66d5e52ed2ca0f9d5b83a4b9a03}{D\+E\+C\+L\+A\+R\+E\+\_\+int32}} (logbufsecs)
+\item 
+\mbox{\hyperlink{logging_8h_af5a191984ab836ee0c9a77a71db693eb}{D\+E\+C\+L\+A\+R\+E\+\_\+int32}} (minloglevel)
+\item 
+\mbox{\hyperlink{logging_8h_a0543dfdd00e18090d7cfbdabf86af966}{D\+E\+C\+L\+A\+R\+E\+\_\+string}} (log\+\_\+dir)
+\item 
+\mbox{\hyperlink{logging_8h_aa0556a4970f3f4951def3dedb59dc481}{D\+E\+C\+L\+A\+R\+E\+\_\+int32}} (logfile\+\_\+mode)
+\item 
+\mbox{\hyperlink{logging_8h_a3681c21e3efd03c0155fcabd7b37c053}{D\+E\+C\+L\+A\+R\+E\+\_\+string}} (log\+\_\+link)
+\item 
+\mbox{\hyperlink{logging_8h_a94556ace7c2a23e9bea2b1b30edbadb3}{D\+E\+C\+L\+A\+R\+E\+\_\+int32}} (v)
+\item 
+\mbox{\hyperlink{logging_8h_aa33cd6dd166264a73df940df5aa8417e}{D\+E\+C\+L\+A\+R\+E\+\_\+int32}} (max\+\_\+log\+\_\+size)
+\item 
+\mbox{\hyperlink{logging_8h_ae0337f04714c3ec997e2a5f58583205b}{D\+E\+C\+L\+A\+R\+E\+\_\+bool}} (stop\+\_\+logging\+\_\+if\+\_\+full\+\_\+disk)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_aad5dd9370b037d1de1ebd279bc627f3c}{google\+::\+Init\+Google\+Logging}} (const char $\ast$argv0)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a8d72714581f545a783dcceb342f514ee}{google\+::\+Shutdown\+Google\+Logging}} ()
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a9c2ac82fbac45fe75bd2fb40ee9e4c0f}{google\+::\+Install\+Failure\+Function}} (void($\ast$fail\+\_\+func)())
+\item 
+{\footnotesize template$<$class T $>$ }\\const T \& \mbox{\hyperlink{namespacegoogle_a0ba5fffbf590b7c21dc78bd8f31c54a6}{google\+::\+Get\+Referenceable\+Value}} (const T \&t)
+\item 
+char \mbox{\hyperlink{namespacegoogle_a80d05eb238d7d95eb5471ffd4437c9d4}{google\+::\+Get\+Referenceable\+Value}} (char t)
+\item 
+unsigned char \mbox{\hyperlink{namespacegoogle_a8dcfdaf010deb65ca2d5d5f819f67252}{google\+::\+Get\+Referenceable\+Value}} (unsigned char t)
+\item 
+signed char \mbox{\hyperlink{namespacegoogle_af2c12c2f1bc6ab200566b05c2d805c53}{google\+::\+Get\+Referenceable\+Value}} (signed char t)
+\item 
+short \mbox{\hyperlink{namespacegoogle_a09d0b6811b41bf93e1aecd4e6499ee2a}{google\+::\+Get\+Referenceable\+Value}} (short t)
+\item 
+unsigned short \mbox{\hyperlink{namespacegoogle_ac05491eabe08c42664dd7f7f23382aa4}{google\+::\+Get\+Referenceable\+Value}} (unsigned short t)
+\item 
+int \mbox{\hyperlink{namespacegoogle_abfb30e3382589c8190fe6cb3bae8911c}{google\+::\+Get\+Referenceable\+Value}} (int t)
+\item 
+unsigned int \mbox{\hyperlink{namespacegoogle_a10fd61a1e975ccd31174afd08163b93d}{google\+::\+Get\+Referenceable\+Value}} (unsigned int t)
+\item 
+long \mbox{\hyperlink{namespacegoogle_aeb602ae05087db1953ea483f4b976c2a}{google\+::\+Get\+Referenceable\+Value}} (long t)
+\item 
+unsigned long \mbox{\hyperlink{namespacegoogle_a4b99a207e1c5afe4591a5db11d0e64b7}{google\+::\+Get\+Referenceable\+Value}} (unsigned long t)
+\item 
+long long \mbox{\hyperlink{namespacegoogle_af6796cf0699135ad8b89e5c39b0efbc3}{google\+::\+Get\+Referenceable\+Value}} (long long t)
+\item 
+unsigned long long \mbox{\hyperlink{namespacegoogle_ab10c9ef7bdaa5b187af2c17c7cce9aa5}{google\+::\+Get\+Referenceable\+Value}} (unsigned long long t)
+\item 
+std\+::ostream \& \mbox{\hyperlink{logging_8h_a4760c8f7e6130e106d6f316cab864bdd}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{structgoogle_1_1_dummy_class_to_define_operator}{google\+::\+Dummy\+Class\+To\+Define\+Operator}} \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacegoogle_a914049143a7ff3a624cabe5865165314}{google\+::\+Make\+Check\+Op\+Value\+String}} (std\+::ostream $\ast$os, const T \&v)
+\item 
+template$<$$>$ \mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a3cfec6d724f40e5989a0d6c93b3fc115}{google\+::\+Make\+Check\+Op\+Value\+String}} (std\+::ostream $\ast$os, const char \&v)
+\item 
+template$<$$>$ \mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a2e2984f11d87849a762ea048f738ad54}{google\+::\+Make\+Check\+Op\+Value\+String}} (std\+::ostream $\ast$os, const signed char \&v)
+\item 
+template$<$$>$ \mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a0e50ee5b1a04febdb5327d6b1f49b6a8}{google\+::\+Make\+Check\+Op\+Value\+String}} (std\+::ostream $\ast$os, const unsigned char \&v)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::string $\ast$ \mbox{\hyperlink{namespacegoogle_a3664e685f09fc3d61fe6e8195e6d0c6b}{google\+::\+Make\+Check\+Op\+String}} (const T1 \&v1, const T2 \&v2, const char $\ast$exprtext) \+\_\+\+\_\+attribute\+\_\+\+\_\+((noinline))
+\item 
+\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} \mbox{\hyperlink{namespacegoogle_1_1base_1_1internal_a6fbb77363e065d912d50a6caf3ba5171}{google\+::base\+::internal\+::\+Normalize\+Severity}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} s)
+\item 
+\mbox{\hyperlink{namespacegoogle_aee81ffdfc965248d23f8fe29e15f7743}{google\+::\+D\+E\+F\+I\+N\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+P\+\_\+\+I\+M\+PL}} (Check\+\_\+\+EQ,==) D\+E\+F\+I\+N\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+P\+\_\+\+I\+M\+PL(Check\+\_\+\+NE
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespacegoogle_1_1glog__internal__namespace___a5cdcd8cd2cabe232b8590d14d6477130}{google\+::glog\+\_\+internal\+\_\+namespace\+\_\+\+::\+Is\+Failure\+Signal\+Handler\+Installed}} ()
+\item 
+void \mbox{\hyperlink{namespacegoogle_a5fed6bd083f90bad59257fcd3fe42809}{google\+::\+Log\+At\+Level}} (int const severity, std\+::string const \&msg)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{namespacegoogle_a8d45a5c6cc4aa93aaeb72ec2189f2637}{google\+::\+Check\+Not\+Null}} (const char $\ast$\mbox{\hyperlink{3rd__party_2tolles-lawson_2_c_make_lists_8txt_afbbe76c98bd0d8b6ca5a03175563eb71}{file}}, int line, const char $\ast$names, T $\ast$t)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} std\+::ostream \& \mbox{\hyperlink{namespacegoogle_af1c8db3ec5007ecf0711c4f3df9bbef7}{google\+::operator$<$$<$}} (std\+::ostream \&os, const P\+R\+I\+V\+A\+T\+E\+\_\+\+Counter \&)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_acefbe299476180e8e1b203d28182d0d3}{google\+::\+Flush\+Log\+Files}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} min\+\_\+severity)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a6583c8b8a112fc0afe54f5ad14e60296}{google\+::\+Flush\+Log\+Files\+Unsafe}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} min\+\_\+severity)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a8eb02ff335b7ca1e2b4d90206fda6191}{google\+::\+Set\+Log\+Destination}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} severity, const char $\ast$base\+\_\+filename)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a5fb66fd919286814977f7290470a11ba}{google\+::\+Set\+Log\+Symlink}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} severity, const char $\ast$symlink\+\_\+basename)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a7974eeef42b2404fa8f7573b61da2eaf}{google\+::\+Add\+Log\+Sink}} (Log\+Sink $\ast$destination)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_ac81a1b4f4520a2b291fe4207b52bc01c}{google\+::\+Remove\+Log\+Sink}} (Log\+Sink $\ast$destination)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a7f973fe70fc37f6d5590f48d4e0ab7e1}{google\+::\+Set\+Log\+Filename\+Extension}} (const char $\ast$filename\+\_\+extension)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_ae0a94f86fad816d122d5287e98a8354f}{google\+::\+Set\+Stderr\+Logging}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} min\+\_\+severity)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_ab02f845bb7eadd63135f6de3771d6a8c}{google\+::\+Log\+To\+Stderr}} ()
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a47d18e089f28e7985814b9cca25f2daa}{google\+::\+Set\+Email\+Logging}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} min\+\_\+severity, const char $\ast$addresses)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} bool \mbox{\hyperlink{namespacegoogle_ab3a83fdbe89f3651ee1047d1b49b205a}{google\+::\+Send\+Email}} (const char $\ast$dest, const char $\ast$subject, const char $\ast$body)
+\item 
+const \mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{namespacegoogle_a2410a818be9d01854284112752a2741f}{google\+::\+Get\+Logging\+Directories}} ()
+\item 
+void \mbox{\hyperlink{namespacegoogle_a1aa6e0778052e12afb4aff3117821dd7}{google\+::\+Test\+Only\+\_\+\+Clear\+Logging\+Directories\+List}} ()
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a73548feb9d78f9cebdc08b2149908f97}{google\+::\+Get\+Existing\+Temp\+Directories}} (std\+::vector$<$ std\+::string $>$ $\ast$list)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a305343858d7c59dd31e70cbf9b1d1322}{google\+::\+Reprint\+Fatal\+Message}} ()
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_adeeb5bd5478994973f616fb3d7e2f5df}{google\+::\+Truncate\+Log\+File}} (const char $\ast$path, int64 limit, int64 keep)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_abb984f0aa9f90c6abe8babfd0c643896}{google\+::\+Truncate\+Stdout\+Stderr}} ()
+\item 
+const \mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} char $\ast$ \mbox{\hyperlink{namespacegoogle_a4cb4ce66a204f5ab8468c548e5d88015}{google\+::\+Get\+Log\+Severity\+Name}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} severity)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} Logger $\ast$ \mbox{\hyperlink{namespacegoogle_1_1base_a6c4849360088583c4d8c434921efa244}{google\+::base\+::\+Get\+Logger}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} level)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_1_1base_af7ed83e7dbbc14445fcb488d645f23dc}{google\+::base\+::\+Set\+Logger}} (\mbox{\hyperlink{log__severity_8h_a88e450ea80e6caaddd7d4ad0864b651d}{Log\+Severity}} level, Logger $\ast$logger)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} int \mbox{\hyperlink{namespacegoogle_a6adbe73d0247853826e669a34e374833}{google\+::posix\+\_\+strerror\+\_\+r}} (int err, char $\ast$buf, size\+\_\+t len)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} std\+::string \mbox{\hyperlink{namespacegoogle_af9590bb6b13099ee9783e5b4e40c0113}{google\+::\+Str\+Error}} (int err)
+\item 
+{\footnotesize template$<$class T $>$ }\\Null\+Stream \& \mbox{\hyperlink{namespacegoogle_a1fdcae44e9b01948802f185a09800cb6}{google\+::operator$<$$<$}} (Null\+Stream \&str, const T \&)
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a13d602cd013e628efb0cb73766c3200a}{google\+::\+Install\+Failure\+Signal\+Handler}} ()
+\item 
+\mbox{\hyperlink{vlog__is__on_8h_a980c97856a47502c2877b93460f44f87}{G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}} void \mbox{\hyperlink{namespacegoogle_a162b38c6356ff8f74cd6534350a8d69d}{google\+::\+Install\+Failure\+Writer}} (void($\ast$writer)(const char $\ast$data, int size))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{logging_8h_a3e1cfef60e774a81f30eaddf26a3a274}\label{logging_8h_a3e1cfef60e774a81f30eaddf26a3a274}} 
+\index{logging.h@{logging.h}!CHECK@{CHECK}}
+\index{CHECK@{CHECK}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK}{CHECK}}
+{\footnotesize\ttfamily \#define C\+H\+E\+CK(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}{LOG\_IF}}(\mbox{\hyperlink{log__severity_8h_acdd38e3c9f22f127d7776920e3079eda}{FATAL}}, \mbox{\hyperlink{logging_8h_a09001211989f041c5f3fa7b69bf58eb2}{GOOGLE\_PREDICT\_BRANCH\_NOT\_TAKEN}}(!(condition))) \(\backslash\)}
+\DoxyCodeLine{             << \textcolor{stringliteral}{"Check failed: "} \#condition \textcolor{stringliteral}{" "}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a1530833807d43fd53ea60132c018aa0f}\label{logging_8h_a1530833807d43fd53ea60132c018aa0f}} 
+\index{logging.h@{logging.h}!CHECK\_BOUND@{CHECK\_BOUND}}
+\index{CHECK\_BOUND@{CHECK\_BOUND}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_BOUND}{CHECK\_BOUND}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+B\+O\+U\+ND(\begin{DoxyParamCaption}\item[{}]{B,  }\item[{}]{A }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a3e1cfef60e774a81f30eaddf26a3a274}{C\+H\+E\+CK}}(B $<$= (sizeof(A)/sizeof(A\mbox{[}0\mbox{]})))}
+
+\mbox{\Hypertarget{logging_8h_a48c22e2eb9eb1d558aa30a4a17825c3f}\label{logging_8h_a48c22e2eb9eb1d558aa30a4a17825c3f}} 
+\index{logging.h@{logging.h}!CHECK\_DOUBLE\_EQ@{CHECK\_DOUBLE\_EQ}}
+\index{CHECK\_DOUBLE\_EQ@{CHECK\_DOUBLE\_EQ}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_DOUBLE\_EQ}{CHECK\_DOUBLE\_EQ}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{                                           \(\backslash\)}
+\DoxyCodeLine{    CHECK\_LE((val1), (val2)+0.000000000000001L); \(\backslash\)}
+\DoxyCodeLine{    CHECK\_GE((val1), (val2)-\/0.000000000000001L); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a7c0ce053b28d53aa4eaf3eb7fb71663b}\label{logging_8h_a7c0ce053b28d53aa4eaf3eb7fb71663b}} 
+\index{logging.h@{logging.h}!CHECK\_EQ@{CHECK\_EQ}}
+\index{CHECK\_EQ@{CHECK\_EQ}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_EQ}{CHECK\_EQ}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+EQ, ==, val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_a2a0246a68dfbe2ec0465fec56513f8e3}\label{logging_8h_a2a0246a68dfbe2ec0465fec56513f8e3}} 
+\index{logging.h@{logging.h}!CHECK\_ERR@{CHECK\_ERR}}
+\index{CHECK\_ERR@{CHECK\_ERR}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_ERR}{CHECK\_ERR}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+E\+RR(\begin{DoxyParamCaption}\item[{}]{invocation }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{logging_8h_a20a0cbd13ac9ede8ee7e41a82ab7c200}{PLOG\_IF}}(\mbox{\hyperlink{log__severity_8h_acdd38e3c9f22f127d7776920e3079eda}{FATAL}}, \mbox{\hyperlink{logging_8h_a09001211989f041c5f3fa7b69bf58eb2}{GOOGLE\_PREDICT\_BRANCH\_NOT\_TAKEN}}((invocation) == -\/1))    \(\backslash\)}
+\DoxyCodeLine{        << \#invocation}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a7cc25402ecd7591b4c39934dd656b1f9}\label{logging_8h_a7cc25402ecd7591b4c39934dd656b1f9}} 
+\index{logging.h@{logging.h}!CHECK\_GE@{CHECK\_GE}}
+\index{CHECK\_GE@{CHECK\_GE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_GE}{CHECK\_GE}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+GE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+GE, $>$=, val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_a7e03ec13560fa94a8fea569960d7efc6}\label{logging_8h_a7e03ec13560fa94a8fea569960d7efc6}} 
+\index{logging.h@{logging.h}!CHECK\_GT@{CHECK\_GT}}
+\index{CHECK\_GT@{CHECK\_GT}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_GT}{CHECK\_GT}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+GT(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+GT, $>$ , val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_a6d72eab724b016cb69670079f80123a4}\label{logging_8h_a6d72eab724b016cb69670079f80123a4}} 
+\index{logging.h@{logging.h}!CHECK\_INDEX@{CHECK\_INDEX}}
+\index{CHECK\_INDEX@{CHECK\_INDEX}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_INDEX}{CHECK\_INDEX}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+I\+N\+D\+EX(\begin{DoxyParamCaption}\item[{}]{I,  }\item[{}]{A }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a3e1cfef60e774a81f30eaddf26a3a274}{C\+H\+E\+CK}}(I $<$ (sizeof(A)/sizeof(A\mbox{[}0\mbox{]})))}
+
+\mbox{\Hypertarget{logging_8h_ae4db23f10f5d4aad6d735f5a74cd6f8c}\label{logging_8h_ae4db23f10f5d4aad6d735f5a74cd6f8c}} 
+\index{logging.h@{logging.h}!CHECK\_LE@{CHECK\_LE}}
+\index{CHECK\_LE@{CHECK\_LE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_LE}{CHECK\_LE}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+LE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+LE, $<$=, val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_a4bd2e815ca2f702a4b6aa744b1ff3b82}\label{logging_8h_a4bd2e815ca2f702a4b6aa744b1ff3b82}} 
+\index{logging.h@{logging.h}!CHECK\_LT@{CHECK\_LT}}
+\index{CHECK\_LT@{CHECK\_LT}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_LT}{CHECK\_LT}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+LT(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+LT, $<$ , val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_ab25e01a2942b821d66371fc68d53f2eb}\label{logging_8h_ab25e01a2942b821d66371fc68d53f2eb}} 
+\index{logging.h@{logging.h}!CHECK\_NE@{CHECK\_NE}}
+\index{CHECK\_NE@{CHECK\_NE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_NE}{CHECK\_NE}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+NE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}{C\+H\+E\+C\+K\+\_\+\+OP}}(\+\_\+\+NE, !=, val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_ae79de732599c32aca5f9cf43a15f829a}\label{logging_8h_ae79de732599c32aca5f9cf43a15f829a}} 
+\index{logging.h@{logging.h}!CHECK\_NEAR@{CHECK\_NEAR}}
+\index{CHECK\_NEAR@{CHECK\_NEAR}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_NEAR}{CHECK\_NEAR}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+N\+E\+AR(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2,  }\item[{}]{margin }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{                                           \(\backslash\)}
+\DoxyCodeLine{    CHECK\_LE((val1), (val2)+(margin));           \(\backslash\)}
+\DoxyCodeLine{    CHECK\_GE((val1), (val2)-\/(margin));           \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_ab4f4dc044a2ed1eb76fac50c769973fa}\label{logging_8h_ab4f4dc044a2ed1eb76fac50c769973fa}} 
+\index{logging.h@{logging.h}!CHECK\_NOTNULL@{CHECK\_NOTNULL}}
+\index{CHECK\_NOTNULL@{CHECK\_NOTNULL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_NOTNULL}{CHECK\_NOTNULL}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+N\+U\+LL(\begin{DoxyParamCaption}\item[{}]{val }\end{DoxyParamCaption})~\mbox{\hyperlink{namespacegoogle_a8d45a5c6cc4aa93aaeb72ec2189f2637}{google\+::\+Check\+Not\+Null}}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \char`\"{}\textquotesingle{}\char`\"{} \#val \char`\"{}\textquotesingle{} Must be non N\+U\+LL\char`\"{}, (val))}
+
+\mbox{\Hypertarget{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}\label{logging_8h_a5e079236bd9b8ce194b290a4f4e5bbcb}} 
+\index{logging.h@{logging.h}!CHECK\_OP@{CHECK\_OP}}
+\index{CHECK\_OP@{CHECK\_OP}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_OP}{CHECK\_OP}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+OP(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{op,  }\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_ad99b8d8c9e55c7dc8b7de868f9269319}{C\+H\+E\+C\+K\+\_\+\+O\+P\+\_\+\+L\+OG}}(name, op, val1, val2, \mbox{\hyperlink{classgoogle_1_1_log_message_fatal}{google\+::\+Log\+Message\+Fatal}})}
+
+\mbox{\Hypertarget{logging_8h_ad99b8d8c9e55c7dc8b7de868f9269319}\label{logging_8h_ad99b8d8c9e55c7dc8b7de868f9269319}} 
+\index{logging.h@{logging.h}!CHECK\_OP\_LOG@{CHECK\_OP\_LOG}}
+\index{CHECK\_OP\_LOG@{CHECK\_OP\_LOG}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_OP\_LOG}{CHECK\_OP\_LOG}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+O\+P\+\_\+\+L\+OG(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{op,  }\item[{}]{val1,  }\item[{}]{val2,  }\item[{}]{\mbox{\hyperlink{_array_cwise_unary_ops_8h_adcd4635357c94f6ea3a3cfae6a2ccd58}{log}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{while} (google::\_Check\_string* \_result =                \(\backslash\)}
+\DoxyCodeLine{         google::Check\#\#name\#\#Impl(                      \(\backslash\)}
+\DoxyCodeLine{             \mbox{\hyperlink{namespacegoogle_a0ba5fffbf590b7c21dc78bd8f31c54a6}{google::GetReferenceableValue}}(val1),        \(\backslash\)}
+\DoxyCodeLine{             \mbox{\hyperlink{namespacegoogle_a0ba5fffbf590b7c21dc78bd8f31c54a6}{google::GetReferenceableValue}}(val2),        \(\backslash\)}
+\DoxyCodeLine{             \#val1 \textcolor{stringliteral}{" "} \#op \textcolor{stringliteral}{" "} \#val2))                                  \(\backslash\)}
+\DoxyCodeLine{    log(\_\_FILE\_\_, \_\_LINE\_\_,                                             \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{structgoogle_1_1_check_op_string}{google::CheckOpString}}(\_result)).stream()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a857e59ac16481af7fc86f54c774f84c9}\label{logging_8h_a857e59ac16481af7fc86f54c774f84c9}} 
+\index{logging.h@{logging.h}!CHECK\_STRCASEEQ@{CHECK\_STRCASEEQ}}
+\index{CHECK\_STRCASEEQ@{CHECK\_STRCASEEQ}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_STRCASEEQ}{CHECK\_STRCASEEQ}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+EQ(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a02189e07ec87f02d6312b38bf35918f4}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+OP}}(strcasecmp, ==, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, s1, s2)}
+
+\mbox{\Hypertarget{logging_8h_ab8e59a3e48687f8db849d28901f0bac8}\label{logging_8h_ab8e59a3e48687f8db849d28901f0bac8}} 
+\index{logging.h@{logging.h}!CHECK\_STRCASENE@{CHECK\_STRCASENE}}
+\index{CHECK\_STRCASENE@{CHECK\_STRCASENE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_STRCASENE}{CHECK\_STRCASENE}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+NE(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a02189e07ec87f02d6312b38bf35918f4}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+OP}}(strcasecmp, !=, \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}, s1, s2)}
+
+\mbox{\Hypertarget{logging_8h_ad16cc5f247382150f402b7c9365cb4e7}\label{logging_8h_ad16cc5f247382150f402b7c9365cb4e7}} 
+\index{logging.h@{logging.h}!CHECK\_STREQ@{CHECK\_STREQ}}
+\index{CHECK\_STREQ@{CHECK\_STREQ}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_STREQ}{CHECK\_STREQ}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+EQ(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a02189e07ec87f02d6312b38bf35918f4}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+OP}}(strcmp, ==, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, s1, s2)}
+
+\mbox{\Hypertarget{logging_8h_a3f16e4372f664c60d5dd95421a171a4b}\label{logging_8h_a3f16e4372f664c60d5dd95421a171a4b}} 
+\index{logging.h@{logging.h}!CHECK\_STRNE@{CHECK\_STRNE}}
+\index{CHECK\_STRNE@{CHECK\_STRNE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_STRNE}{CHECK\_STRNE}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+NE(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a02189e07ec87f02d6312b38bf35918f4}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+OP}}(strcmp, !=, \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}, s1, s2)}
+
+\mbox{\Hypertarget{logging_8h_a02189e07ec87f02d6312b38bf35918f4}\label{logging_8h_a02189e07ec87f02d6312b38bf35918f4}} 
+\index{logging.h@{logging.h}!CHECK\_STROP@{CHECK\_STROP}}
+\index{CHECK\_STROP@{CHECK\_STROP}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_STROP}{CHECK\_STROP}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+OP(\begin{DoxyParamCaption}\item[{}]{func,  }\item[{}]{op,  }\item[{}]{expected,  }\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{while} (\mbox{\hyperlink{structgoogle_1_1_check_op_string}{google::CheckOpString}} \_result = \(\backslash\)}
+\DoxyCodeLine{         google::Check\#\#func\#\#expected\#\#Impl((s1), (s2), \(\backslash\)}
+\DoxyCodeLine{                                     \#s1 \textcolor{stringliteral}{" "} \#op \textcolor{stringliteral}{" "} \#s2)) \(\backslash\)}
+\DoxyCodeLine{    LOG(\mbox{\hyperlink{log__severity_8h_acdd38e3c9f22f127d7776920e3079eda}{FATAL}}) << *\_result.str\_}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a95512c2c3703b76f887e88de3884512f}\label{logging_8h_a95512c2c3703b76f887e88de3884512f}} 
+\index{logging.h@{logging.h}!COMPACT\_GOOGLE\_LOG\_0@{COMPACT\_GOOGLE\_LOG\_0}}
+\index{COMPACT\_GOOGLE\_LOG\_0@{COMPACT\_GOOGLE\_LOG\_0}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{COMPACT\_GOOGLE\_LOG\_0}{COMPACT\_GOOGLE\_LOG\_0}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+0~\mbox{\hyperlink{logging_8h_ab7306bf70c40488d8dae52babe684672}{G\+L\+O\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}}
+
+\mbox{\Hypertarget{logging_8h_a41940376b5c5743b584bf95408f4c442}\label{logging_8h_a41940376b5c5743b584bf95408f4c442}} 
+\index{logging.h@{logging.h}!COMPACT\_GOOGLE\_LOG\_DFATAL@{COMPACT\_GOOGLE\_LOG\_DFATAL}}
+\index{COMPACT\_GOOGLE\_LOG\_DFATAL@{COMPACT\_GOOGLE\_LOG\_DFATAL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{COMPACT\_GOOGLE\_LOG\_DFATAL}{COMPACT\_GOOGLE\_LOG\_DFATAL}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+D\+F\+A\+T\+AL}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}( \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_ac452c4c8ec1cbc24dd074e260aa0b617}{google::GLOG\_FATAL}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_acf124ca2fa51ef730b81b2de1761d9f2}\label{logging_8h_acf124ca2fa51ef730b81b2de1761d9f2}} 
+\index{logging.h@{logging.h}!COMPACT\_GOOGLE\_LOG\_ERROR@{COMPACT\_GOOGLE\_LOG\_ERROR}}
+\index{COMPACT\_GOOGLE\_LOG\_ERROR@{COMPACT\_GOOGLE\_LOG\_ERROR}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{COMPACT\_GOOGLE\_LOG\_ERROR}{COMPACT\_GOOGLE\_LOG\_ERROR}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}( \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_aec61ff6c741224bbf1d230d40449aa30}{google::GLOG\_ERROR}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a5bb038831e3c346ecfb2201b7c854e7f}\label{logging_8h_a5bb038831e3c346ecfb2201b7c854e7f}} 
+\index{logging.h@{logging.h}!COMPACT\_GOOGLE\_LOG\_FATAL@{COMPACT\_GOOGLE\_LOG\_FATAL}}
+\index{COMPACT\_GOOGLE\_LOG\_FATAL@{COMPACT\_GOOGLE\_LOG\_FATAL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{COMPACT\_GOOGLE\_LOG\_FATAL}{COMPACT\_GOOGLE\_LOG\_FATAL}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{classgoogle_1_1_log_message_fatal}{google::LogMessageFatal}}( \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_ab9d086c197ac1f7f149f73bbc05d391b}\label{logging_8h_ab9d086c197ac1f7f149f73bbc05d391b}} 
+\index{logging.h@{logging.h}!COMPACT\_GOOGLE\_LOG\_INFO@{COMPACT\_GOOGLE\_LOG\_INFO}}
+\index{COMPACT\_GOOGLE\_LOG\_INFO@{COMPACT\_GOOGLE\_LOG\_INFO}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{COMPACT\_GOOGLE\_LOG\_INFO}{COMPACT\_GOOGLE\_LOG\_INFO}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}( \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_ac0f169bc6a3f1250538bf9b86c9bf83b}\label{logging_8h_ac0f169bc6a3f1250538bf9b86c9bf83b}} 
+\index{logging.h@{logging.h}!COMPACT\_GOOGLE\_LOG\_WARNING@{COMPACT\_GOOGLE\_LOG\_WARNING}}
+\index{COMPACT\_GOOGLE\_LOG\_WARNING@{COMPACT\_GOOGLE\_LOG\_WARNING}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{COMPACT\_GOOGLE\_LOG\_WARNING}{COMPACT\_GOOGLE\_LOG\_WARNING}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}( \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_a060366d0d0ff85fce6de37e905fea54c}{google::GLOG\_WARNING}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_ae17f8119c108cf3070bad3449c7e0006}\label{logging_8h_ae17f8119c108cf3070bad3449c7e0006}} 
+\index{logging.h@{logging.h}!DCHECK@{DCHECK}}
+\index{DCHECK@{DCHECK}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK}{DCHECK}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+CK(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a3e1cfef60e774a81f30eaddf26a3a274}{C\+H\+E\+CK}}(condition)}
+
+\mbox{\Hypertarget{logging_8h_ae89df3243bbb8341130c7b3f44145ea0}\label{logging_8h_ae89df3243bbb8341130c7b3f44145ea0}} 
+\index{logging.h@{logging.h}!DCHECK\_EQ@{DCHECK\_EQ}}
+\index{DCHECK\_EQ@{DCHECK\_EQ}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_EQ}{DCHECK\_EQ}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a7c0ce053b28d53aa4eaf3eb7fb71663b}{C\+H\+E\+C\+K\+\_\+\+EQ}}(val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_aae2dc65d9ea248d54bf39daa986dd295}\label{logging_8h_aae2dc65d9ea248d54bf39daa986dd295}} 
+\index{logging.h@{logging.h}!DCHECK\_GE@{DCHECK\_GE}}
+\index{DCHECK\_GE@{DCHECK\_GE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_GE}{DCHECK\_GE}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+GE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a7cc25402ecd7591b4c39934dd656b1f9}{C\+H\+E\+C\+K\+\_\+\+GE}}(val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_ab4f56aa24c4c9cddc47a6abd2d747f9a}\label{logging_8h_ab4f56aa24c4c9cddc47a6abd2d747f9a}} 
+\index{logging.h@{logging.h}!DCHECK\_GT@{DCHECK\_GT}}
+\index{DCHECK\_GT@{DCHECK\_GT}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_GT}{DCHECK\_GT}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+GT(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a7e03ec13560fa94a8fea569960d7efc6}{C\+H\+E\+C\+K\+\_\+\+GT}}(val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_a9f3902b081f68e0ef12b38eb52739698}\label{logging_8h_a9f3902b081f68e0ef12b38eb52739698}} 
+\index{logging.h@{logging.h}!DCHECK\_IS\_ON@{DCHECK\_IS\_ON}}
+\index{DCHECK\_IS\_ON@{DCHECK\_IS\_ON}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_IS\_ON}{DCHECK\_IS\_ON}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+I\+S\+\_\+\+ON(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~1}
+
+\mbox{\Hypertarget{logging_8h_a4395e95bab44e222cb2e77251017a0e2}\label{logging_8h_a4395e95bab44e222cb2e77251017a0e2}} 
+\index{logging.h@{logging.h}!DCHECK\_LE@{DCHECK\_LE}}
+\index{DCHECK\_LE@{DCHECK\_LE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_LE}{DCHECK\_LE}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+LE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_ae4db23f10f5d4aad6d735f5a74cd6f8c}{C\+H\+E\+C\+K\+\_\+\+LE}}(val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_ab62f5ed8f2d48e29802be0cbbcd1359a}\label{logging_8h_ab62f5ed8f2d48e29802be0cbbcd1359a}} 
+\index{logging.h@{logging.h}!DCHECK\_LT@{DCHECK\_LT}}
+\index{DCHECK\_LT@{DCHECK\_LT}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_LT}{DCHECK\_LT}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+LT(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a4bd2e815ca2f702a4b6aa744b1ff3b82}{C\+H\+E\+C\+K\+\_\+\+LT}}(val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_a46e69120fbd3b36e6960e096d23b66f0}\label{logging_8h_a46e69120fbd3b36e6960e096d23b66f0}} 
+\index{logging.h@{logging.h}!DCHECK\_NE@{DCHECK\_NE}}
+\index{DCHECK\_NE@{DCHECK\_NE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_NE}{DCHECK\_NE}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+NE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_ab25e01a2942b821d66371fc68d53f2eb}{C\+H\+E\+C\+K\+\_\+\+NE}}(val1, val2)}
+
+\mbox{\Hypertarget{logging_8h_a6d69864e324a3b692627d880b87bd97e}\label{logging_8h_a6d69864e324a3b692627d880b87bd97e}} 
+\index{logging.h@{logging.h}!DCHECK\_NOTNULL@{DCHECK\_NOTNULL}}
+\index{DCHECK\_NOTNULL@{DCHECK\_NOTNULL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_NOTNULL}{DCHECK\_NOTNULL}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+N\+U\+LL(\begin{DoxyParamCaption}\item[{}]{val }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_ab4f4dc044a2ed1eb76fac50c769973fa}{C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+N\+U\+LL}}(val)}
+
+\mbox{\Hypertarget{logging_8h_a5b9b78816a2c9f24e6d8251e2307411d}\label{logging_8h_a5b9b78816a2c9f24e6d8251e2307411d}} 
+\index{logging.h@{logging.h}!DCHECK\_STRCASEEQ@{DCHECK\_STRCASEEQ}}
+\index{DCHECK\_STRCASEEQ@{DCHECK\_STRCASEEQ}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_STRCASEEQ}{DCHECK\_STRCASEEQ}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+EQ(\begin{DoxyParamCaption}\item[{}]{str1,  }\item[{}]{str2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a857e59ac16481af7fc86f54c774f84c9}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+EQ}}(str1, str2)}
+
+\mbox{\Hypertarget{logging_8h_a1954c380d5f703797c5f19902debd1ea}\label{logging_8h_a1954c380d5f703797c5f19902debd1ea}} 
+\index{logging.h@{logging.h}!DCHECK\_STRCASENE@{DCHECK\_STRCASENE}}
+\index{DCHECK\_STRCASENE@{DCHECK\_STRCASENE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_STRCASENE}{DCHECK\_STRCASENE}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+NE(\begin{DoxyParamCaption}\item[{}]{str1,  }\item[{}]{str2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_ab8e59a3e48687f8db849d28901f0bac8}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+C\+A\+S\+E\+NE}}(str1, str2)}
+
+\mbox{\Hypertarget{logging_8h_aa6b2c8ddf8cdcef4f746279ecb982b9f}\label{logging_8h_aa6b2c8ddf8cdcef4f746279ecb982b9f}} 
+\index{logging.h@{logging.h}!DCHECK\_STREQ@{DCHECK\_STREQ}}
+\index{DCHECK\_STREQ@{DCHECK\_STREQ}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_STREQ}{DCHECK\_STREQ}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+EQ(\begin{DoxyParamCaption}\item[{}]{str1,  }\item[{}]{str2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_ad16cc5f247382150f402b7c9365cb4e7}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+EQ}}(str1, str2)}
+
+\mbox{\Hypertarget{logging_8h_a6ffae63a3a6db3db9e59b175c8825fb1}\label{logging_8h_a6ffae63a3a6db3db9e59b175c8825fb1}} 
+\index{logging.h@{logging.h}!DCHECK\_STRNE@{DCHECK\_STRNE}}
+\index{DCHECK\_STRNE@{DCHECK\_STRNE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DCHECK\_STRNE}{DCHECK\_STRNE}}
+{\footnotesize\ttfamily \#define D\+C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+NE(\begin{DoxyParamCaption}\item[{}]{str1,  }\item[{}]{str2 }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a3f16e4372f664c60d5dd95421a171a4b}{C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+NE}}(str1, str2)}
+
+\mbox{\Hypertarget{logging_8h_aa0726b1f417a7327ac669eee54dd035a}\label{logging_8h_aa0726b1f417a7327ac669eee54dd035a}} 
+\index{logging.h@{logging.h}!DECLARE\_bool@{DECLARE\_bool}}
+\index{DECLARE\_bool@{DECLARE\_bool}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_bool}{DECLARE\_bool}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+bool(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_ab964cbd5bef36b1948f4fc622aa10c98}{D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}}(bool, B, name, bool)}
+
+\mbox{\Hypertarget{logging_8h_aa5e68ab717cb82e0225d04d09126b47e}\label{logging_8h_aa5e68ab717cb82e0225d04d09126b47e}} 
+\index{logging.h@{logging.h}!DECLARE\_CHECK\_STROP\_IMPL@{DECLARE\_CHECK\_STROP\_IMPL}}
+\index{DECLARE\_CHECK\_STROP\_IMPL@{DECLARE\_CHECK\_STROP\_IMPL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_CHECK\_STROP\_IMPL}{DECLARE\_CHECK\_STROP\_IMPL}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+T\+R\+O\+P\+\_\+\+I\+M\+PL(\begin{DoxyParamCaption}\item[{}]{func,  }\item[{}]{expected }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{logging_8h_a980c97856a47502c2877b93460f44f87}{GOOGLE\_GLOG\_DLL\_DECL}} std::string* Check\#\#func\#\#expected\#\#Impl( \(\backslash\)}
+\DoxyCodeLine{      \textcolor{keyword}{const} \textcolor{keywordtype}{char}* s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* s2, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* names);}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a84f6eccece2cf31451a29ae28fff137b}\label{logging_8h_a84f6eccece2cf31451a29ae28fff137b}} 
+\index{logging.h@{logging.h}!DECLARE\_int32@{DECLARE\_int32}}
+\index{DECLARE\_int32@{DECLARE\_int32}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_int32}{DECLARE\_int32}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+int32(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_ab964cbd5bef36b1948f4fc622aa10c98}{D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}}(\mbox{\hyperlink{namespacegoogle_a55bebe2bafcd7d70769349aad34ab306}{google\+::int32}}, I, name, int32)}
+
+\mbox{\Hypertarget{logging_8h_acca687510c29941c98876ec7100ce9de}\label{logging_8h_acca687510c29941c98876ec7100ce9de}} 
+\index{logging.h@{logging.h}!DECLARE\_string@{DECLARE\_string}}
+\index{DECLARE\_string@{DECLARE\_string}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_string}{DECLARE\_string}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+string(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacef_l_s}{fLS}} \{                                                       \(\backslash\)}
+\DoxyCodeLine{    extern \mbox{\hyperlink{logging_8h_a980c97856a47502c2877b93460f44f87}{GOOGLE\_GLOG\_DLL\_DECL}} std::string\& FLAGS\_\#\#name;              \(\backslash\)}
+\DoxyCodeLine{  \}                                                                     \(\backslash\)}
+\DoxyCodeLine{  using fLS::FLAGS\_\#\#name}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_ab964cbd5bef36b1948f4fc622aa10c98}\label{logging_8h_ab964cbd5bef36b1948f4fc622aa10c98}} 
+\index{logging.h@{logging.h}!DECLARE\_VARIABLE@{DECLARE\_VARIABLE}}
+\index{DECLARE\_VARIABLE@{DECLARE\_VARIABLE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_VARIABLE}{DECLARE\_VARIABLE}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{shorttype,  }\item[{}]{name,  }\item[{}]{tn }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{namespace }fL\#\#shorttype \{                                             \(\backslash\)}
+\DoxyCodeLine{    extern \mbox{\hyperlink{logging_8h_a980c97856a47502c2877b93460f44f87}{GOOGLE\_GLOG\_DLL\_DECL}} type FLAGS\_\#\#name;                      \(\backslash\)}
+\DoxyCodeLine{  \}                                                                     \(\backslash\)}
+\DoxyCodeLine{  using fL\#\#shorttype::FLAGS\_\#\#name}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_af7e4c72192ede9234317383b0c103c06}\label{logging_8h_af7e4c72192ede9234317383b0c103c06}} 
+\index{logging.h@{logging.h}!DEFINE\_CHECK\_OP\_IMPL@{DEFINE\_CHECK\_OP\_IMPL}}
+\index{DEFINE\_CHECK\_OP\_IMPL@{DEFINE\_CHECK\_OP\_IMPL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_CHECK\_OP\_IMPL}{DEFINE\_CHECK\_OP\_IMPL}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+P\+\_\+\+I\+M\+PL(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{op }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{template} <\textcolor{keyword}{typename} T1, \textcolor{keyword}{typename} T2> \(\backslash\)}
+\DoxyCodeLine{  inline std::string* name\#\#Impl(\textcolor{keyword}{const} T1\& v1, \textcolor{keyword}{const} T2\& v2,    \(\backslash\)}
+\DoxyCodeLine{                            \textcolor{keyword}{const} \textcolor{keywordtype}{char}* exprtext) \{ \(\backslash\)}
+\DoxyCodeLine{    if (\mbox{\hyperlink{logging_8h_a38dbe94ed04eccf967ebe59e5ebe165e}{GOOGLE\_PREDICT\_TRUE}}(v1 op v2)) \textcolor{keywordflow}{return} NULL; \(\backslash\)}
+\DoxyCodeLine{    else \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacegoogle_a3664e685f09fc3d61fe6e8195e6d0c6b}{MakeCheckOpString}}(v1, v2, exprtext); \(\backslash\)}
+\DoxyCodeLine{  \} \(\backslash\)}
+\DoxyCodeLine{  inline std::string* name\#\#Impl(\textcolor{keywordtype}{int} v1, \textcolor{keywordtype}{int} v2, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* exprtext) \{ \(\backslash\)}
+\DoxyCodeLine{    return name\#\#Impl<int, int>(v1, v2, exprtext); \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a30c3e3c313489ab5e42bb12fcfcc5968}\label{logging_8h_a30c3e3c313489ab5e42bb12fcfcc5968}} 
+\index{logging.h@{logging.h}!DLOG@{DLOG}}
+\index{DLOG@{DLOG}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DLOG}{DLOG}}
+{\footnotesize\ttfamily \#define D\+L\+OG(\begin{DoxyParamCaption}\item[{}]{severity }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_accad43a85d781d53381cd53a9894b6ae}{L\+OG}}(severity)}
+
+\mbox{\Hypertarget{logging_8h_a94c6e5c8f21a9927c1a7905273bd3580}\label{logging_8h_a94c6e5c8f21a9927c1a7905273bd3580}} 
+\index{logging.h@{logging.h}!DLOG\_ASSERT@{DLOG\_ASSERT}}
+\index{DLOG\_ASSERT@{DLOG\_ASSERT}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DLOG\_ASSERT}{DLOG\_ASSERT}}
+{\footnotesize\ttfamily \#define D\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a4054e3ae5c28b364d0edd2b4a8b66c51}{L\+O\+G\+\_\+\+A\+S\+S\+E\+RT}}(condition)}
+
+\mbox{\Hypertarget{logging_8h_a4a177338f5a5cfbcfd42e9b23dbfb3a8}\label{logging_8h_a4a177338f5a5cfbcfd42e9b23dbfb3a8}} 
+\index{logging.h@{logging.h}!DLOG\_EVERY\_N@{DLOG\_EVERY\_N}}
+\index{DLOG\_EVERY\_N@{DLOG\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DLOG\_EVERY\_N}{DLOG\_EVERY\_N}}
+{\footnotesize\ttfamily \#define D\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{n }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_af82a891b32a8f8fc5a663fb96c3e6032}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, n)}
+
+\mbox{\Hypertarget{logging_8h_a0581caafbd212149004303f517163b1f}\label{logging_8h_a0581caafbd212149004303f517163b1f}} 
+\index{logging.h@{logging.h}!DLOG\_IF@{DLOG\_IF}}
+\index{DLOG\_IF@{DLOG\_IF}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DLOG\_IF}{DLOG\_IF}}
+{\footnotesize\ttfamily \#define D\+L\+O\+G\+\_\+\+IF(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{condition }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}{L\+O\+G\+\_\+\+IF}}(severity, condition)}
+
+\mbox{\Hypertarget{logging_8h_ae63d59929f859e1f99bba723bb75a9a5}\label{logging_8h_ae63d59929f859e1f99bba723bb75a9a5}} 
+\index{logging.h@{logging.h}!DLOG\_IF\_EVERY\_N@{DLOG\_IF\_EVERY\_N}}
+\index{DLOG\_IF\_EVERY\_N@{DLOG\_IF\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DLOG\_IF\_EVERY\_N}{DLOG\_IF\_EVERY\_N}}
+{\footnotesize\ttfamily \#define D\+L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{condition,  }\item[{}]{n }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a7ec40db06c543205a8220f538bcf3dba}{L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, condition, n)}
+
+\mbox{\Hypertarget{logging_8h_aa8321e154105ff593fc7160e3f1a5d91}\label{logging_8h_aa8321e154105ff593fc7160e3f1a5d91}} 
+\index{logging.h@{logging.h}!DVLOG@{DVLOG}}
+\index{DVLOG@{DVLOG}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DVLOG}{DVLOG}}
+{\footnotesize\ttfamily \#define D\+V\+L\+OG(\begin{DoxyParamCaption}\item[{}]{verboselevel }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_afcaa7cadd41741bb855c2ada1d2ef927}{V\+L\+OG}}(verboselevel)}
+
+\mbox{\Hypertarget{logging_8h_a0114cb70fef9f78846a6cb810acb7a0d}\label{logging_8h_a0114cb70fef9f78846a6cb810acb7a0d}} 
+\index{logging.h@{logging.h}!GLOG\_0@{GLOG\_0}}
+\index{GLOG\_0@{GLOG\_0}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GLOG\_0}{GLOG\_0}}
+{\footnotesize\ttfamily \#define G\+L\+O\+G\+\_\+0~\mbox{\hyperlink{logging_8h_ab7306bf70c40488d8dae52babe684672}{G\+L\+O\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}}
+
+\mbox{\Hypertarget{logging_8h_ab7306bf70c40488d8dae52babe684672}\label{logging_8h_ab7306bf70c40488d8dae52babe684672}} 
+\index{logging.h@{logging.h}!GLOG\_ERROR\_MSG@{GLOG\_ERROR\_MSG}}
+\index{GLOG\_ERROR\_MSG@{GLOG\_ERROR\_MSG}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GLOG\_ERROR\_MSG}{GLOG\_ERROR\_MSG}}
+{\footnotesize\ttfamily \#define G\+L\+O\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG~E\+R\+R\+O\+R\+\_\+macro\+\_\+is\+\_\+defined\+\_\+\+Define\+\_\+\+G\+L\+O\+G\+\_\+\+N\+O\+\_\+\+A\+B\+B\+R\+E\+V\+I\+A\+T\+E\+D\+\_\+\+S\+E\+V\+E\+R\+I\+T\+I\+E\+S\+\_\+before\+\_\+including\+\_\+logging\+\_\+h\+\_\+\+See\+\_\+the\+\_\+document\+\_\+for\+\_\+detail}
+
+\mbox{\Hypertarget{logging_8h_af460ba0566bf6437fc70ccaadf220118}\label{logging_8h_af460ba0566bf6437fc70ccaadf220118}} 
+\index{logging.h@{logging.h}!GLOG\_MSVC\_POP\_WARNING@{GLOG\_MSVC\_POP\_WARNING}}
+\index{GLOG\_MSVC\_POP\_WARNING@{GLOG\_MSVC\_POP\_WARNING}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GLOG\_MSVC\_POP\_WARNING}{GLOG\_MSVC\_POP\_WARNING}}
+{\footnotesize\ttfamily \#define G\+L\+O\+G\+\_\+\+M\+S\+V\+C\+\_\+\+P\+O\+P\+\_\+\+W\+A\+R\+N\+I\+NG(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a895b90089c47c98e4bbc1f63e1fba191}\label{logging_8h_a895b90089c47c98e4bbc1f63e1fba191}} 
+\index{logging.h@{logging.h}!GLOG\_MSVC\_PUSH\_DISABLE\_WARNING@{GLOG\_MSVC\_PUSH\_DISABLE\_WARNING}}
+\index{GLOG\_MSVC\_PUSH\_DISABLE\_WARNING@{GLOG\_MSVC\_PUSH\_DISABLE\_WARNING}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GLOG\_MSVC\_PUSH\_DISABLE\_WARNING}{GLOG\_MSVC\_PUSH\_DISABLE\_WARNING}}
+{\footnotesize\ttfamily \#define G\+L\+O\+G\+\_\+\+M\+S\+V\+C\+\_\+\+P\+U\+S\+H\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+W\+A\+R\+N\+I\+NG(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a980c97856a47502c2877b93460f44f87}\label{logging_8h_a980c97856a47502c2877b93460f44f87}} 
+\index{logging.h@{logging.h}!GOOGLE\_GLOG\_DLL\_DECL@{GOOGLE\_GLOG\_DLL\_DECL}}
+\index{GOOGLE\_GLOG\_DLL\_DECL@{GOOGLE\_GLOG\_DLL\_DECL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_GLOG\_DLL\_DECL}{GOOGLE\_GLOG\_DLL\_DECL}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+G\+L\+O\+G\+\_\+\+D\+L\+L\+\_\+\+D\+E\+CL}
+
+\mbox{\Hypertarget{logging_8h_a75db5949a74765f565a4cda8582ff690}\label{logging_8h_a75db5949a74765f565a4cda8582ff690}} 
+\index{logging.h@{logging.h}!GOOGLE\_LOG\_DFATAL@{GOOGLE\_LOG\_DFATAL}}
+\index{GOOGLE\_LOG\_DFATAL@{GOOGLE\_LOG\_DFATAL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_LOG\_DFATAL}{GOOGLE\_LOG\_DFATAL}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+D\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{counter }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(\_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_a8e90ad21d91c634c22b7bbaaee792283}{google::DFATAL\_LEVEL}}, counter, \(\backslash\)}
+\DoxyCodeLine{  \&\mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google::LogMessage::SendToLog}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a5b18cf71dc5bf81e554e3247a6e55f59}\label{logging_8h_a5b18cf71dc5bf81e554e3247a6e55f59}} 
+\index{logging.h@{logging.h}!GOOGLE\_LOG\_ERROR@{GOOGLE\_LOG\_ERROR}}
+\index{GOOGLE\_LOG\_ERROR@{GOOGLE\_LOG\_ERROR}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_LOG\_ERROR}{GOOGLE\_LOG\_ERROR}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{counter }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(\_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_aec61ff6c741224bbf1d230d40449aa30}{google::GLOG\_ERROR}}, counter, \(\backslash\)}
+\DoxyCodeLine{  \&\mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google::LogMessage::SendToLog}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a48e95a312894ebd3c37d32a11c598635}\label{logging_8h_a48e95a312894ebd3c37d32a11c598635}} 
+\index{logging.h@{logging.h}!GOOGLE\_LOG\_FATAL@{GOOGLE\_LOG\_FATAL}}
+\index{GOOGLE\_LOG\_FATAL@{GOOGLE\_LOG\_FATAL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_LOG\_FATAL}{GOOGLE\_LOG\_FATAL}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{counter }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(\_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_ac452c4c8ec1cbc24dd074e260aa0b617}{google::GLOG\_FATAL}}, counter, \(\backslash\)}
+\DoxyCodeLine{  \&\mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google::LogMessage::SendToLog}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a930ad12d78857a7184b15e6e1e0c4b45}\label{logging_8h_a930ad12d78857a7184b15e6e1e0c4b45}} 
+\index{logging.h@{logging.h}!GOOGLE\_LOG\_INFO@{GOOGLE\_LOG\_INFO}}
+\index{GOOGLE\_LOG\_INFO@{GOOGLE\_LOG\_INFO}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_LOG\_INFO}{GOOGLE\_LOG\_INFO}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{counter }\end{DoxyParamCaption})~\mbox{\hyperlink{classgoogle_1_1_log_message}{google\+::\+Log\+Message}}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \mbox{\hyperlink{log__severity_8h_af3c2db675e75f2074724f754d3cf7885}{google\+::\+G\+L\+O\+G\+\_\+\+I\+N\+FO}}, counter, \&\mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google\+::\+Log\+Message\+::\+Send\+To\+Log}})}
+
+\mbox{\Hypertarget{logging_8h_a030b9683afe518733d25a27695c8b6cc}\label{logging_8h_a030b9683afe518733d25a27695c8b6cc}} 
+\index{logging.h@{logging.h}!GOOGLE\_LOG\_WARNING@{GOOGLE\_LOG\_WARNING}}
+\index{GOOGLE\_LOG\_WARNING@{GOOGLE\_LOG\_WARNING}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_LOG\_WARNING}{GOOGLE\_LOG\_WARNING}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG(\begin{DoxyParamCaption}\item[{}]{counter }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(\_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_a060366d0d0ff85fce6de37e905fea54c}{google::GLOG\_WARNING}}, counter, \(\backslash\)}
+\DoxyCodeLine{  \&\mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google::LogMessage::SendToLog}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_af7973ac792709dc3def04e15cd4389d2}\label{logging_8h_af7973ac792709dc3def04e15cd4389d2}} 
+\index{logging.h@{logging.h}!GOOGLE\_PLOG@{GOOGLE\_PLOG}}
+\index{GOOGLE\_PLOG@{GOOGLE\_PLOG}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_PLOG}{GOOGLE\_PLOG}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+P\+L\+OG(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{counter }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_errno_log_message}{google::ErrnoLogMessage}}( \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_, google::GLOG\_ \#\# severity, counter, \(\backslash\)}
+\DoxyCodeLine{      \&\mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google::LogMessage::SendToLog}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a09001211989f041c5f3fa7b69bf58eb2}\label{logging_8h_a09001211989f041c5f3fa7b69bf58eb2}} 
+\index{logging.h@{logging.h}!GOOGLE\_PREDICT\_BRANCH\_NOT\_TAKEN@{GOOGLE\_PREDICT\_BRANCH\_NOT\_TAKEN}}
+\index{GOOGLE\_PREDICT\_BRANCH\_NOT\_TAKEN@{GOOGLE\_PREDICT\_BRANCH\_NOT\_TAKEN}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_PREDICT\_BRANCH\_NOT\_TAKEN}{GOOGLE\_PREDICT\_BRANCH\_NOT\_TAKEN}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+P\+R\+E\+D\+I\+C\+T\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+N\+O\+T\+\_\+\+T\+A\+K\+EN(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\+\_\+\+\_\+builtin\+\_\+expect(x, 0))}
+
+\mbox{\Hypertarget{logging_8h_ab3ddad002390914cf4106022c60ef0d6}\label{logging_8h_ab3ddad002390914cf4106022c60ef0d6}} 
+\index{logging.h@{logging.h}!GOOGLE\_PREDICT\_FALSE@{GOOGLE\_PREDICT\_FALSE}}
+\index{GOOGLE\_PREDICT\_FALSE@{GOOGLE\_PREDICT\_FALSE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_PREDICT\_FALSE}{GOOGLE\_PREDICT\_FALSE}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+P\+R\+E\+D\+I\+C\+T\+\_\+\+F\+A\+L\+SE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\+\_\+\+\_\+builtin\+\_\+expect(x, 0))}
+
+\mbox{\Hypertarget{logging_8h_a38dbe94ed04eccf967ebe59e5ebe165e}\label{logging_8h_a38dbe94ed04eccf967ebe59e5ebe165e}} 
+\index{logging.h@{logging.h}!GOOGLE\_PREDICT\_TRUE@{GOOGLE\_PREDICT\_TRUE}}
+\index{GOOGLE\_PREDICT\_TRUE@{GOOGLE\_PREDICT\_TRUE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_PREDICT\_TRUE}{GOOGLE\_PREDICT\_TRUE}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+P\+R\+E\+D\+I\+C\+T\+\_\+\+T\+R\+UE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\+\_\+\+\_\+builtin\+\_\+expect(!!(x), 1))}
+
+\mbox{\Hypertarget{logging_8h_a1734b3ada3968f3601877db95fa57d76}\label{logging_8h_a1734b3ada3968f3601877db95fa57d76}} 
+\index{logging.h@{logging.h}!GOOGLE\_STRIP\_LOG@{GOOGLE\_STRIP\_LOG}}
+\index{GOOGLE\_STRIP\_LOG@{GOOGLE\_STRIP\_LOG}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{GOOGLE\_STRIP\_LOG}{GOOGLE\_STRIP\_LOG}}
+{\footnotesize\ttfamily \#define G\+O\+O\+G\+L\+E\+\_\+\+S\+T\+R\+I\+P\+\_\+\+L\+OG~0}
+
+\mbox{\Hypertarget{logging_8h_accad43a85d781d53381cd53a9894b6ae}\label{logging_8h_accad43a85d781d53381cd53a9894b6ae}} 
+\index{logging.h@{logging.h}!LOG@{LOG}}
+\index{LOG@{LOG}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG}{LOG}}
+{\footnotesize\ttfamily \#define L\+OG(\begin{DoxyParamCaption}\item[{}]{severity }\end{DoxyParamCaption})~C\+O\+M\+P\+A\+C\+T\+\_\+\+G\+O\+O\+G\+L\+E\+\_\+\+L\+O\+G\+\_\+ \#\# severity.\+stream()}
+
+\mbox{\Hypertarget{logging_8h_a4054e3ae5c28b364d0edd2b4a8b66c51}\label{logging_8h_a4054e3ae5c28b364d0edd2b4a8b66c51}} 
+\index{logging.h@{logging.h}!LOG\_ASSERT@{LOG\_ASSERT}}
+\index{LOG\_ASSERT@{LOG\_ASSERT}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_ASSERT}{LOG\_ASSERT}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}{L\+O\+G\+\_\+\+IF}}(\mbox{\hyperlink{log__severity_8h_acdd38e3c9f22f127d7776920e3079eda}{F\+A\+T\+AL}}, !(condition)) $<$$<$ \char`\"{}Assert failed\+: \char`\"{} \#condition}
+
+\mbox{\Hypertarget{logging_8h_a27e05b8a7807c1a43ff9518a13134b1f}\label{logging_8h_a27e05b8a7807c1a43ff9518a13134b1f}} 
+\index{logging.h@{logging.h}!LOG\_AT\_LEVEL@{LOG\_AT\_LEVEL}}
+\index{LOG\_AT\_LEVEL@{LOG\_AT\_LEVEL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_AT\_LEVEL}{LOG\_AT\_LEVEL}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+A\+T\+\_\+\+L\+E\+V\+EL(\begin{DoxyParamCaption}\item[{}]{severity }\end{DoxyParamCaption})~\mbox{\hyperlink{classgoogle_1_1_log_message}{google\+::\+Log\+Message}}(\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, severity).stream()}
+
+\mbox{\Hypertarget{logging_8h_af82a891b32a8f8fc5a663fb96c3e6032}\label{logging_8h_af82a891b32a8f8fc5a663fb96c3e6032}} 
+\index{logging.h@{logging.h}!LOG\_EVERY\_N@{LOG\_EVERY\_N}}
+\index{LOG\_EVERY\_N@{LOG\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_EVERY\_N}{LOG\_EVERY\_N}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{n }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_aa321a7b734f6f0c9c1905b3ab421e250}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, (n), \mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google\+::\+Log\+Message\+::\+Send\+To\+Log}})}
+
+\mbox{\Hypertarget{logging_8h_ab0ef47b957c4edd7e75cca6c38cd7a13}\label{logging_8h_ab0ef47b957c4edd7e75cca6c38cd7a13}} 
+\index{logging.h@{logging.h}!LOG\_EVERY\_N\_VARNAME@{LOG\_EVERY\_N\_VARNAME}}
+\index{LOG\_EVERY\_N\_VARNAME@{LOG\_EVERY\_N\_VARNAME}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_EVERY\_N\_VARNAME}{LOG\_EVERY\_N\_VARNAME}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+N\+\_\+\+V\+A\+R\+N\+A\+ME(\begin{DoxyParamCaption}\item[{}]{base,  }\item[{}]{line }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a1176bd2012f50fd8ed35e422939df159}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+N\+\_\+\+V\+A\+R\+N\+A\+M\+E\+\_\+\+C\+O\+N\+C\+AT}}(base, line)}
+
+\mbox{\Hypertarget{logging_8h_a1176bd2012f50fd8ed35e422939df159}\label{logging_8h_a1176bd2012f50fd8ed35e422939df159}} 
+\index{logging.h@{logging.h}!LOG\_EVERY\_N\_VARNAME\_CONCAT@{LOG\_EVERY\_N\_VARNAME\_CONCAT}}
+\index{LOG\_EVERY\_N\_VARNAME\_CONCAT@{LOG\_EVERY\_N\_VARNAME\_CONCAT}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_EVERY\_N\_VARNAME\_CONCAT}{LOG\_EVERY\_N\_VARNAME\_CONCAT}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+N\+\_\+\+V\+A\+R\+N\+A\+M\+E\+\_\+\+C\+O\+N\+C\+AT(\begin{DoxyParamCaption}\item[{}]{base,  }\item[{}]{line }\end{DoxyParamCaption})~base \#\# line}
+
+\mbox{\Hypertarget{logging_8h_a11a0a0af0f450d7c6f810d960aa408fc}\label{logging_8h_a11a0a0af0f450d7c6f810d960aa408fc}} 
+\index{logging.h@{logging.h}!LOG\_FIRST\_N@{LOG\_FIRST\_N}}
+\index{LOG\_FIRST\_N@{LOG\_FIRST\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_FIRST\_N}{LOG\_FIRST\_N}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+F\+I\+R\+S\+T\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{n }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_adabea66c27a9cc615c19a36b63a3a6e1}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+F\+I\+R\+S\+T\+\_\+N}}(severity, (n), \mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google\+::\+Log\+Message\+::\+Send\+To\+Log}})}
+
+\mbox{\Hypertarget{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}\label{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}} 
+\index{logging.h@{logging.h}!LOG\_IF@{LOG\_IF}}
+\index{LOG\_IF@{LOG\_IF}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_IF}{LOG\_IF}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+IF(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{condition }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}\textcolor{keyword}{>}(0),             \(\backslash\)}
+\DoxyCodeLine{  !(condition) ? (\mbox{\hyperlink{namespacedetail_af35a0fd8336e885df74b1a0100d2ec20}{void}}) 0 : \mbox{\hyperlink{classgoogle_1_1_log_message_voidify}{google::LogMessageVoidify}}() \& \mbox{\hyperlink{logging_8h_accad43a85d781d53381cd53a9894b6ae}{LOG}}(severity)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a7ec40db06c543205a8220f538bcf3dba}\label{logging_8h_a7ec40db06c543205a8220f538bcf3dba}} 
+\index{logging.h@{logging.h}!LOG\_IF\_EVERY\_N@{LOG\_IF\_EVERY\_N}}
+\index{LOG\_IF\_EVERY\_N@{LOG\_IF\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_IF\_EVERY\_N}{LOG\_IF\_EVERY\_N}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{condition,  }\item[{}]{n }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a7eb9b33343a474ae5b7352b5cf0686bc}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, (condition), (n), \mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google\+::\+Log\+Message\+::\+Send\+To\+Log}})}
+
+\mbox{\Hypertarget{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}\label{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}} 
+\index{logging.h@{logging.h}!LOG\_OCCURRENCES@{LOG\_OCCURRENCES}}
+\index{LOG\_OCCURRENCES@{LOG\_OCCURRENCES}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_OCCURRENCES}{LOG\_OCCURRENCES}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+O\+C\+C\+U\+R\+R\+E\+N\+C\+ES~\mbox{\hyperlink{logging_8h_ab0ef47b957c4edd7e75cca6c38cd7a13}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+N\+\_\+\+V\+A\+R\+N\+A\+ME}}(occurrences\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}\label{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}} 
+\index{logging.h@{logging.h}!LOG\_OCCURRENCES\_MOD\_N@{LOG\_OCCURRENCES\_MOD\_N}}
+\index{LOG\_OCCURRENCES\_MOD\_N@{LOG\_OCCURRENCES\_MOD\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_OCCURRENCES\_MOD\_N}{LOG\_OCCURRENCES\_MOD\_N}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+O\+C\+C\+U\+R\+R\+E\+N\+C\+E\+S\+\_\+\+M\+O\+D\+\_\+N~\mbox{\hyperlink{logging_8h_ab0ef47b957c4edd7e75cca6c38cd7a13}{L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+N\+\_\+\+V\+A\+R\+N\+A\+ME}}(occurrences\+\_\+mod\+\_\+n\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{logging_8h_a184d91a90ad6bfc00ca7b361ef173a59}\label{logging_8h_a184d91a90ad6bfc00ca7b361ef173a59}} 
+\index{logging.h@{logging.h}!LOG\_STRING@{LOG\_STRING}}
+\index{LOG\_STRING@{LOG\_STRING}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_STRING}{LOG\_STRING}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+S\+T\+R\+I\+NG(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{outvec }\end{DoxyParamCaption})~L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\#\#severity(static\+\_\+cast$<$std\+::vector$<$std\+::string$>$$\ast$$>$(outvec)).stream()}
+
+\mbox{\Hypertarget{logging_8h_afe0db805034aed653baceffe344a69b7}\label{logging_8h_afe0db805034aed653baceffe344a69b7}} 
+\index{logging.h@{logging.h}!LOG\_TO\_SINK@{LOG\_TO\_SINK}}
+\index{LOG\_TO\_SINK@{LOG\_TO\_SINK}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_TO\_SINK}{LOG\_TO\_SINK}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+I\+NK(\begin{DoxyParamCaption}\item[{}]{sink,  }\item[{}]{severity }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(                                    \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_,                                               \(\backslash\)}
+\DoxyCodeLine{      google::GLOG\_ \#\# severity,                         \(\backslash\)}
+\DoxyCodeLine{      \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classgoogle_1_1_log_sink}{google::LogSink}}*\textcolor{keyword}{>}(sink), \textcolor{keyword}{true}).\mbox{\hyperlink{classgoogle_1_1_log_message_ac8ca582584fbfbf55e7e6f49404a3160}{stream}}()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_ad08ed1356a00e1593c81303a44f06480}\label{logging_8h_ad08ed1356a00e1593c81303a44f06480}} 
+\index{logging.h@{logging.h}!LOG\_TO\_SINK\_BUT\_NOT\_TO\_LOGFILE@{LOG\_TO\_SINK\_BUT\_NOT\_TO\_LOGFILE}}
+\index{LOG\_TO\_SINK\_BUT\_NOT\_TO\_LOGFILE@{LOG\_TO\_SINK\_BUT\_NOT\_TO\_LOGFILE}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_TO\_SINK\_BUT\_NOT\_TO\_LOGFILE}{LOG\_TO\_SINK\_BUT\_NOT\_TO\_LOGFILE}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+I\+N\+K\+\_\+\+B\+U\+T\+\_\+\+N\+O\+T\+\_\+\+T\+O\+\_\+\+L\+O\+G\+F\+I\+LE(\begin{DoxyParamCaption}\item[{}]{sink,  }\item[{}]{severity }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(                                    \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_,                                               \(\backslash\)}
+\DoxyCodeLine{      google::GLOG\_ \#\# severity,                         \(\backslash\)}
+\DoxyCodeLine{      \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classgoogle_1_1_log_sink}{google::LogSink}}*\textcolor{keyword}{>}(sink), \textcolor{keyword}{false}).\mbox{\hyperlink{classgoogle_1_1_log_message_ac8ca582584fbfbf55e7e6f49404a3160}{stream}}()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a8881a484db9fc42ff4c5d4e124448929}\label{logging_8h_a8881a484db9fc42ff4c5d4e124448929}} 
+\index{logging.h@{logging.h}!LOG\_TO\_STRING@{LOG\_TO\_STRING}}
+\index{LOG\_TO\_STRING@{LOG\_TO\_STRING}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_TO\_STRING}{LOG\_TO\_STRING}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+NG(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{message }\end{DoxyParamCaption})~L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\#\#severity(static\+\_\+cast$<$string$\ast$$>$(message)).stream()}
+
+\mbox{\Hypertarget{logging_8h_a85c99ff687febf1587d300220daa1425}\label{logging_8h_a85c99ff687febf1587d300220daa1425}} 
+\index{logging.h@{logging.h}!LOG\_TO\_STRING\_0@{LOG\_TO\_STRING\_0}}
+\index{LOG\_TO\_STRING\_0@{LOG\_TO\_STRING\_0}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_TO\_STRING\_0}{LOG\_TO\_STRING\_0}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+0~\mbox{\hyperlink{logging_8h_ab7306bf70c40488d8dae52babe684672}{G\+L\+O\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}}
+
+\mbox{\Hypertarget{logging_8h_a2c8a11d7e8cfeaa25e4da200aef3b61c}\label{logging_8h_a2c8a11d7e8cfeaa25e4da200aef3b61c}} 
+\index{logging.h@{logging.h}!LOG\_TO\_STRING\_ERROR@{LOG\_TO\_STRING\_ERROR}}
+\index{LOG\_TO\_STRING\_ERROR@{LOG\_TO\_STRING\_ERROR}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_TO\_STRING\_ERROR}{LOG\_TO\_STRING\_ERROR}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}( \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_aec61ff6c741224bbf1d230d40449aa30}{google::GLOG\_ERROR}}, message)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a12b9d4b49361613f366c2c66c8019017}\label{logging_8h_a12b9d4b49361613f366c2c66c8019017}} 
+\index{logging.h@{logging.h}!LOG\_TO\_STRING\_FATAL@{LOG\_TO\_STRING\_FATAL}}
+\index{LOG\_TO\_STRING\_FATAL@{LOG\_TO\_STRING\_FATAL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_TO\_STRING\_FATAL}{LOG\_TO\_STRING\_FATAL}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}( \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_ac452c4c8ec1cbc24dd074e260aa0b617}{google::GLOG\_FATAL}}, message)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a27059a960f3d60491d57d5328dd04949}\label{logging_8h_a27059a960f3d60491d57d5328dd04949}} 
+\index{logging.h@{logging.h}!LOG\_TO\_STRING\_INFO@{LOG\_TO\_STRING\_INFO}}
+\index{LOG\_TO\_STRING\_INFO@{LOG\_TO\_STRING\_INFO}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_TO\_STRING\_INFO}{LOG\_TO\_STRING\_INFO}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}( \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_af3c2db675e75f2074724f754d3cf7885}{google::GLOG\_INFO}}, message)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a8bba74f743c85faaa59b79b4d11a3b8c}\label{logging_8h_a8bba74f743c85faaa59b79b4d11a3b8c}} 
+\index{logging.h@{logging.h}!LOG\_TO\_STRING\_WARNING@{LOG\_TO\_STRING\_WARNING}}
+\index{LOG\_TO\_STRING\_WARNING@{LOG\_TO\_STRING\_WARNING}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_TO\_STRING\_WARNING}{LOG\_TO\_STRING\_WARNING}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+W\+A\+R\+N\+I\+NG(\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}( \(\backslash\)}
+\DoxyCodeLine{      \_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_a060366d0d0ff85fce6de37e905fea54c}{google::GLOG\_WARNING}}, message)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a4246e4954effbe2b7309dea8d0be4091}\label{logging_8h_a4246e4954effbe2b7309dea8d0be4091}} 
+\index{logging.h@{logging.h}!MUST\_UNDEF\_GFLAGS\_DECLARE\_MACROS@{MUST\_UNDEF\_GFLAGS\_DECLARE\_MACROS}}
+\index{MUST\_UNDEF\_GFLAGS\_DECLARE\_MACROS@{MUST\_UNDEF\_GFLAGS\_DECLARE\_MACROS}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{MUST\_UNDEF\_GFLAGS\_DECLARE\_MACROS}{MUST\_UNDEF\_GFLAGS\_DECLARE\_MACROS}}
+{\footnotesize\ttfamily \#define M\+U\+S\+T\+\_\+\+U\+N\+D\+E\+F\+\_\+\+G\+F\+L\+A\+G\+S\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+A\+C\+R\+OS}
+
+\mbox{\Hypertarget{logging_8h_acd390a47656c861c03f4f4cdf1dbfb81}\label{logging_8h_acd390a47656c861c03f4f4cdf1dbfb81}} 
+\index{logging.h@{logging.h}!PCHECK@{PCHECK}}
+\index{PCHECK@{PCHECK}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{PCHECK}{PCHECK}}
+{\footnotesize\ttfamily \#define P\+C\+H\+E\+CK(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \mbox{\hyperlink{logging_8h_a20a0cbd13ac9ede8ee7e41a82ab7c200}{PLOG\_IF}}(\mbox{\hyperlink{log__severity_8h_acdd38e3c9f22f127d7776920e3079eda}{FATAL}}, \mbox{\hyperlink{logging_8h_a09001211989f041c5f3fa7b69bf58eb2}{GOOGLE\_PREDICT\_BRANCH\_NOT\_TAKEN}}(!(condition))) \(\backslash\)}
+\DoxyCodeLine{              << \textcolor{stringliteral}{"Check failed: "} \#condition \textcolor{stringliteral}{" "}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_ab2a4f3825f639b85c460a0ecafab8f84}\label{logging_8h_ab2a4f3825f639b85c460a0ecafab8f84}} 
+\index{logging.h@{logging.h}!PLOG@{PLOG}}
+\index{PLOG@{PLOG}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{PLOG}{PLOG}}
+{\footnotesize\ttfamily \#define P\+L\+OG(\begin{DoxyParamCaption}\item[{}]{severity }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_af7973ac792709dc3def04e15cd4389d2}{G\+O\+O\+G\+L\+E\+\_\+\+P\+L\+OG}}(severity, 0).stream()}
+
+\mbox{\Hypertarget{logging_8h_a83655214d5ee3aecdb16cda62a6ee78f}\label{logging_8h_a83655214d5ee3aecdb16cda62a6ee78f}} 
+\index{logging.h@{logging.h}!PLOG\_EVERY\_N@{PLOG\_EVERY\_N}}
+\index{PLOG\_EVERY\_N@{PLOG\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{PLOG\_EVERY\_N}{PLOG\_EVERY\_N}}
+{\footnotesize\ttfamily \#define P\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{n }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_aafe267ea6e159dd46f38fa22d7347c43}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+P\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, (n), \mbox{\hyperlink{classgoogle_1_1_log_message_a9e5a720f240cdc127bf846e76bdaf43b}{google\+::\+Log\+Message\+::\+Send\+To\+Log}})}
+
+\mbox{\Hypertarget{logging_8h_a20a0cbd13ac9ede8ee7e41a82ab7c200}\label{logging_8h_a20a0cbd13ac9ede8ee7e41a82ab7c200}} 
+\index{logging.h@{logging.h}!PLOG\_IF@{PLOG\_IF}}
+\index{PLOG\_IF@{PLOG\_IF}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{PLOG\_IF}{PLOG\_IF}}
+{\footnotesize\ttfamily \#define P\+L\+O\+G\+\_\+\+IF(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{condition }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}\textcolor{keyword}{>}(0),              \(\backslash\)}
+\DoxyCodeLine{  !(condition) ? (\mbox{\hyperlink{namespacedetail_af35a0fd8336e885df74b1a0100d2ec20}{void}}) 0 : \mbox{\hyperlink{classgoogle_1_1_log_message_voidify}{google::LogMessageVoidify}}() \& \mbox{\hyperlink{logging_8h_ab2a4f3825f639b85c460a0ecafab8f84}{PLOG}}(severity)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_aa321a7b734f6f0c9c1905b3ab421e250}\label{logging_8h_aa321a7b734f6f0c9c1905b3ab421e250}} 
+\index{logging.h@{logging.h}!SOME\_KIND\_OF\_LOG\_EVERY\_N@{SOME\_KIND\_OF\_LOG\_EVERY\_N}}
+\index{SOME\_KIND\_OF\_LOG\_EVERY\_N@{SOME\_KIND\_OF\_LOG\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SOME\_KIND\_OF\_LOG\_EVERY\_N}{SOME\_KIND\_OF\_LOG\_EVERY\_N}}
+{\footnotesize\ttfamily \#define S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{n,  }\item[{}]{what\+\_\+to\+\_\+do }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}} = 0, \mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}} = 0; \(\backslash\)}
+\DoxyCodeLine{  ++\mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}}; \(\backslash\)}
+\DoxyCodeLine{  if (++\mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}} > n) \mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}} -\/= n; \(\backslash\)}
+\DoxyCodeLine{  if (\mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}} == 1) \(\backslash\)}
+\DoxyCodeLine{    google::LogMessage( \(\backslash\)}
+\DoxyCodeLine{        \_\_FILE\_\_, \_\_LINE\_\_, google::GLOG\_ \#\# severity, \mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}}, \(\backslash\)}
+\DoxyCodeLine{        \&what\_to\_do).stream()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_adabea66c27a9cc615c19a36b63a3a6e1}\label{logging_8h_adabea66c27a9cc615c19a36b63a3a6e1}} 
+\index{logging.h@{logging.h}!SOME\_KIND\_OF\_LOG\_FIRST\_N@{SOME\_KIND\_OF\_LOG\_FIRST\_N}}
+\index{SOME\_KIND\_OF\_LOG\_FIRST\_N@{SOME\_KIND\_OF\_LOG\_FIRST\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SOME\_KIND\_OF\_LOG\_FIRST\_N}{SOME\_KIND\_OF\_LOG\_FIRST\_N}}
+{\footnotesize\ttfamily \#define S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+F\+I\+R\+S\+T\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{n,  }\item[{}]{what\+\_\+to\+\_\+do }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}} = 0; \(\backslash\)}
+\DoxyCodeLine{  if (\mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}} <= n) \(\backslash\)}
+\DoxyCodeLine{    ++\mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}}; \(\backslash\)}
+\DoxyCodeLine{  if (\mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}} <= n) \(\backslash\)}
+\DoxyCodeLine{    google::LogMessage( \(\backslash\)}
+\DoxyCodeLine{        \_\_FILE\_\_, \_\_LINE\_\_, google::GLOG\_ \#\# severity, \mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}}, \(\backslash\)}
+\DoxyCodeLine{        \&what\_to\_do).stream()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a7eb9b33343a474ae5b7352b5cf0686bc}\label{logging_8h_a7eb9b33343a474ae5b7352b5cf0686bc}} 
+\index{logging.h@{logging.h}!SOME\_KIND\_OF\_LOG\_IF\_EVERY\_N@{SOME\_KIND\_OF\_LOG\_IF\_EVERY\_N}}
+\index{SOME\_KIND\_OF\_LOG\_IF\_EVERY\_N@{SOME\_KIND\_OF\_LOG\_IF\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SOME\_KIND\_OF\_LOG\_IF\_EVERY\_N}{SOME\_KIND\_OF\_LOG\_IF\_EVERY\_N}}
+{\footnotesize\ttfamily \#define S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{condition,  }\item[{}]{n,  }\item[{}]{what\+\_\+to\+\_\+do }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}} = 0, \mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}} = 0; \(\backslash\)}
+\DoxyCodeLine{  ++\mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}}; \(\backslash\)}
+\DoxyCodeLine{  if (condition \&\& \(\backslash\)}
+\DoxyCodeLine{      ((\mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}}=(\mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}} + 1) \% n) == (1 \% n))) \(\backslash\)}
+\DoxyCodeLine{    google::LogMessage( \(\backslash\)}
+\DoxyCodeLine{        \_\_FILE\_\_, \_\_LINE\_\_, google::GLOG\_ \#\# severity, \mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}}, \(\backslash\)}
+\DoxyCodeLine{                 \&what\_to\_do).stream()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_aafe267ea6e159dd46f38fa22d7347c43}\label{logging_8h_aafe267ea6e159dd46f38fa22d7347c43}} 
+\index{logging.h@{logging.h}!SOME\_KIND\_OF\_PLOG\_EVERY\_N@{SOME\_KIND\_OF\_PLOG\_EVERY\_N}}
+\index{SOME\_KIND\_OF\_PLOG\_EVERY\_N@{SOME\_KIND\_OF\_PLOG\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SOME\_KIND\_OF\_PLOG\_EVERY\_N}{SOME\_KIND\_OF\_PLOG\_EVERY\_N}}
+{\footnotesize\ttfamily \#define S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+P\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{n,  }\item[{}]{what\+\_\+to\+\_\+do }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}} = 0, \mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}} = 0; \(\backslash\)}
+\DoxyCodeLine{  ++\mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}}; \(\backslash\)}
+\DoxyCodeLine{  if (++\mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}} > n) \mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}} -\/= n; \(\backslash\)}
+\DoxyCodeLine{  if (\mbox{\hyperlink{logging_8h_aee39ee903c682fc1051a229e9bbdc1c6}{LOG\_OCCURRENCES\_MOD\_N}} == 1) \(\backslash\)}
+\DoxyCodeLine{    google::ErrnoLogMessage( \(\backslash\)}
+\DoxyCodeLine{        \_\_FILE\_\_, \_\_LINE\_\_, google::GLOG\_ \#\# severity, \mbox{\hyperlink{logging_8h_ad2f0f75bbbcfef5965d899e8c8058c5b}{LOG\_OCCURRENCES}}, \(\backslash\)}
+\DoxyCodeLine{        \&what\_to\_do).stream()}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_aec55dbc0eb86bb6a02de6f05fac15b83}\label{logging_8h_aec55dbc0eb86bb6a02de6f05fac15b83}} 
+\index{logging.h@{logging.h}!SYSLOG@{SYSLOG}}
+\index{SYSLOG@{SYSLOG}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SYSLOG}{SYSLOG}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+L\+OG(\begin{DoxyParamCaption}\item[{}]{severity }\end{DoxyParamCaption})~S\+Y\+S\+L\+O\+G\+\_\+ \#\# severity(0).stream()}
+
+\mbox{\Hypertarget{logging_8h_ae4b13e28e611aaa4d1dbd7a87f3c9da4}\label{logging_8h_ae4b13e28e611aaa4d1dbd7a87f3c9da4}} 
+\index{logging.h@{logging.h}!SYSLOG\_0@{SYSLOG\_0}}
+\index{SYSLOG\_0@{SYSLOG\_0}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SYSLOG\_0}{SYSLOG\_0}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+L\+O\+G\+\_\+0~\mbox{\hyperlink{logging_8h_ab7306bf70c40488d8dae52babe684672}{G\+L\+O\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+SG}}}
+
+\mbox{\Hypertarget{logging_8h_abc77aea95e5c8144159322c9fd919808}\label{logging_8h_abc77aea95e5c8144159322c9fd919808}} 
+\index{logging.h@{logging.h}!SYSLOG\_ASSERT@{SYSLOG\_ASSERT}}
+\index{SYSLOG\_ASSERT@{SYSLOG\_ASSERT}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SYSLOG\_ASSERT}{SYSLOG\_ASSERT}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+L\+O\+G\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_ad7a43d8ca082105d21e75c822aa2cf21}{S\+Y\+S\+L\+O\+G\+\_\+\+IF}}(\mbox{\hyperlink{log__severity_8h_acdd38e3c9f22f127d7776920e3079eda}{F\+A\+T\+AL}}, !(condition)) $<$$<$ \char`\"{}Assert failed\+: \char`\"{} \#condition}
+
+\mbox{\Hypertarget{logging_8h_a3eb4d4ad8da2d68b560f4a75226212a2}\label{logging_8h_a3eb4d4ad8da2d68b560f4a75226212a2}} 
+\index{logging.h@{logging.h}!SYSLOG\_DFATAL@{SYSLOG\_DFATAL}}
+\index{SYSLOG\_DFATAL@{SYSLOG\_DFATAL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SYSLOG\_DFATAL}{SYSLOG\_DFATAL}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+L\+O\+G\+\_\+\+D\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{counter }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(\_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_a8e90ad21d91c634c22b7bbaaee792283}{google::DFATAL\_LEVEL}}, counter, \(\backslash\)}
+\DoxyCodeLine{  \&\mbox{\hyperlink{classgoogle_1_1_log_message_a280f5264a8abf2f5a227e0501d8d33bb}{google::LogMessage::SendToSyslogAndLog}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a2e1c9947244f6d46509f5b4713183cce}\label{logging_8h_a2e1c9947244f6d46509f5b4713183cce}} 
+\index{logging.h@{logging.h}!SYSLOG\_ERROR@{SYSLOG\_ERROR}}
+\index{SYSLOG\_ERROR@{SYSLOG\_ERROR}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SYSLOG\_ERROR}{SYSLOG\_ERROR}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+L\+O\+G\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{counter }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(\_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_aec61ff6c741224bbf1d230d40449aa30}{google::GLOG\_ERROR}}, counter, \(\backslash\)}
+\DoxyCodeLine{  \&\mbox{\hyperlink{classgoogle_1_1_log_message_a280f5264a8abf2f5a227e0501d8d33bb}{google::LogMessage::SendToSyslogAndLog}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_ac70fb29939438041a7f1b8a5f735efaf}\label{logging_8h_ac70fb29939438041a7f1b8a5f735efaf}} 
+\index{logging.h@{logging.h}!SYSLOG\_EVERY\_N@{SYSLOG\_EVERY\_N}}
+\index{SYSLOG\_EVERY\_N@{SYSLOG\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SYSLOG\_EVERY\_N}{SYSLOG\_EVERY\_N}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{n }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_aa321a7b734f6f0c9c1905b3ab421e250}{S\+O\+M\+E\+\_\+\+K\+I\+N\+D\+\_\+\+O\+F\+\_\+\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(severity, (n), \mbox{\hyperlink{classgoogle_1_1_log_message_a280f5264a8abf2f5a227e0501d8d33bb}{google\+::\+Log\+Message\+::\+Send\+To\+Syslog\+And\+Log}})}
+
+\mbox{\Hypertarget{logging_8h_af8855f312b15c336d9b4e5530cb37a39}\label{logging_8h_af8855f312b15c336d9b4e5530cb37a39}} 
+\index{logging.h@{logging.h}!SYSLOG\_FATAL@{SYSLOG\_FATAL}}
+\index{SYSLOG\_FATAL@{SYSLOG\_FATAL}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SYSLOG\_FATAL}{SYSLOG\_FATAL}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+L\+O\+G\+\_\+\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{counter }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(\_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_ac452c4c8ec1cbc24dd074e260aa0b617}{google::GLOG\_FATAL}}, counter, \(\backslash\)}
+\DoxyCodeLine{  \&\mbox{\hyperlink{classgoogle_1_1_log_message_a280f5264a8abf2f5a227e0501d8d33bb}{google::LogMessage::SendToSyslogAndLog}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_ad7a43d8ca082105d21e75c822aa2cf21}\label{logging_8h_ad7a43d8ca082105d21e75c822aa2cf21}} 
+\index{logging.h@{logging.h}!SYSLOG\_IF@{SYSLOG\_IF}}
+\index{SYSLOG\_IF@{SYSLOG\_IF}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SYSLOG\_IF}{SYSLOG\_IF}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+L\+O\+G\+\_\+\+IF(\begin{DoxyParamCaption}\item[{}]{severity,  }\item[{}]{condition }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}\textcolor{keyword}{>}(0),                \(\backslash\)}
+\DoxyCodeLine{  !(condition) ? (\mbox{\hyperlink{namespacedetail_af35a0fd8336e885df74b1a0100d2ec20}{void}}) 0 : \mbox{\hyperlink{classgoogle_1_1_log_message_voidify}{google::LogMessageVoidify}}() \& \mbox{\hyperlink{logging_8h_aec55dbc0eb86bb6a02de6f05fac15b83}{SYSLOG}}(severity)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_aa064c8bce1a9b8103221af95da828e76}\label{logging_8h_aa064c8bce1a9b8103221af95da828e76}} 
+\index{logging.h@{logging.h}!SYSLOG\_INFO@{SYSLOG\_INFO}}
+\index{SYSLOG\_INFO@{SYSLOG\_INFO}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SYSLOG\_INFO}{SYSLOG\_INFO}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+L\+O\+G\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{counter }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(\_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_af3c2db675e75f2074724f754d3cf7885}{google::GLOG\_INFO}}, counter, \(\backslash\)}
+\DoxyCodeLine{  \&\mbox{\hyperlink{classgoogle_1_1_log_message_a280f5264a8abf2f5a227e0501d8d33bb}{google::LogMessage::SendToSyslogAndLog}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_a820f091989b1e85a4728a9818fdcfb7e}\label{logging_8h_a820f091989b1e85a4728a9818fdcfb7e}} 
+\index{logging.h@{logging.h}!SYSLOG\_WARNING@{SYSLOG\_WARNING}}
+\index{SYSLOG\_WARNING@{SYSLOG\_WARNING}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{SYSLOG\_WARNING}{SYSLOG\_WARNING}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+L\+O\+G\+\_\+\+W\+A\+R\+N\+I\+NG(\begin{DoxyParamCaption}\item[{}]{counter }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{classgoogle_1_1_log_message}{google::LogMessage}}(\_\_FILE\_\_, \_\_LINE\_\_, \mbox{\hyperlink{log__severity_8h_a060366d0d0ff85fce6de37e905fea54c}{google::GLOG\_WARNING}}, counter, \(\backslash\)}
+\DoxyCodeLine{  \&\mbox{\hyperlink{classgoogle_1_1_log_message_a280f5264a8abf2f5a227e0501d8d33bb}{google::LogMessage::SendToSyslogAndLog}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{logging_8h_afcaa7cadd41741bb855c2ada1d2ef927}\label{logging_8h_afcaa7cadd41741bb855c2ada1d2ef927}} 
+\index{logging.h@{logging.h}!VLOG@{VLOG}}
+\index{VLOG@{VLOG}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{VLOG}{VLOG}}
+{\footnotesize\ttfamily \#define V\+L\+OG(\begin{DoxyParamCaption}\item[{}]{verboselevel }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}{L\+O\+G\+\_\+\+IF}}(\mbox{\hyperlink{log__severity_8h_ab4a2cbab234914b320b7fae11b6e8cb9}{I\+N\+FO}}, \mbox{\hyperlink{vlog__is__on_8h_a956152cad330225654d128f35c00efce}{V\+L\+O\+G\+\_\+\+I\+S\+\_\+\+ON}}(verboselevel))}
+
+\mbox{\Hypertarget{logging_8h_a231d72af39556639c895c90740a8efe0}\label{logging_8h_a231d72af39556639c895c90740a8efe0}} 
+\index{logging.h@{logging.h}!VLOG\_EVERY\_N@{VLOG\_EVERY\_N}}
+\index{VLOG\_EVERY\_N@{VLOG\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{VLOG\_EVERY\_N}{VLOG\_EVERY\_N}}
+{\footnotesize\ttfamily \#define V\+L\+O\+G\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{verboselevel,  }\item[{}]{n }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a7ec40db06c543205a8220f538bcf3dba}{L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(\mbox{\hyperlink{log__severity_8h_ab4a2cbab234914b320b7fae11b6e8cb9}{I\+N\+FO}}, \mbox{\hyperlink{vlog__is__on_8h_a956152cad330225654d128f35c00efce}{V\+L\+O\+G\+\_\+\+I\+S\+\_\+\+ON}}(verboselevel), n)}
+
+\mbox{\Hypertarget{logging_8h_a23ff71a41fd1136b4995b7284cd074bd}\label{logging_8h_a23ff71a41fd1136b4995b7284cd074bd}} 
+\index{logging.h@{logging.h}!VLOG\_IF@{VLOG\_IF}}
+\index{VLOG\_IF@{VLOG\_IF}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{VLOG\_IF}{VLOG\_IF}}
+{\footnotesize\ttfamily \#define V\+L\+O\+G\+\_\+\+IF(\begin{DoxyParamCaption}\item[{}]{verboselevel,  }\item[{}]{condition }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a09f7d88282cf92c9f231270ac113e5c6}{L\+O\+G\+\_\+\+IF}}(\mbox{\hyperlink{log__severity_8h_ab4a2cbab234914b320b7fae11b6e8cb9}{I\+N\+FO}}, (condition) \&\& \mbox{\hyperlink{vlog__is__on_8h_a956152cad330225654d128f35c00efce}{V\+L\+O\+G\+\_\+\+I\+S\+\_\+\+ON}}(verboselevel))}
+
+\mbox{\Hypertarget{logging_8h_a6aa0a593da05f08bcb96ebe434132c04}\label{logging_8h_a6aa0a593da05f08bcb96ebe434132c04}} 
+\index{logging.h@{logging.h}!VLOG\_IF\_EVERY\_N@{VLOG\_IF\_EVERY\_N}}
+\index{VLOG\_IF\_EVERY\_N@{VLOG\_IF\_EVERY\_N}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{VLOG\_IF\_EVERY\_N}{VLOG\_IF\_EVERY\_N}}
+{\footnotesize\ttfamily \#define V\+L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N(\begin{DoxyParamCaption}\item[{}]{verboselevel,  }\item[{}]{condition,  }\item[{}]{n }\end{DoxyParamCaption})~\mbox{\hyperlink{logging_8h_a7ec40db06c543205a8220f538bcf3dba}{L\+O\+G\+\_\+\+I\+F\+\_\+\+E\+V\+E\+R\+Y\+\_\+N}}(\mbox{\hyperlink{log__severity_8h_ab4a2cbab234914b320b7fae11b6e8cb9}{I\+N\+FO}}, (condition) \&\& \mbox{\hyperlink{vlog__is__on_8h_a956152cad330225654d128f35c00efce}{V\+L\+O\+G\+\_\+\+I\+S\+\_\+\+ON}}(verboselevel), n)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{logging_8h_a1792d503ba36495c54dcfe9670ae5030}\label{logging_8h_a1792d503ba36495c54dcfe9670ae5030}} 
+\index{logging.h@{logging.h}!DECLARE\_bool@{DECLARE\_bool}}
+\index{DECLARE\_bool@{DECLARE\_bool}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_bool()}{DECLARE\_bool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+bool (\begin{DoxyParamCaption}\item[{alsologtostderr}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a21be737d6d2eccb1d18b46d771e79939}\label{logging_8h_a21be737d6d2eccb1d18b46d771e79939}} 
+\index{logging.h@{logging.h}!DECLARE\_bool@{DECLARE\_bool}}
+\index{DECLARE\_bool@{DECLARE\_bool}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_bool()}{DECLARE\_bool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+bool (\begin{DoxyParamCaption}\item[{colorlogtostderr}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a281787e06c2fd93bf09b565dd36dc964}\label{logging_8h_a281787e06c2fd93bf09b565dd36dc964}} 
+\index{logging.h@{logging.h}!DECLARE\_bool@{DECLARE\_bool}}
+\index{DECLARE\_bool@{DECLARE\_bool}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_bool()}{DECLARE\_bool()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+bool (\begin{DoxyParamCaption}\item[{log\+\_\+prefix}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a5ca1def5a8d64f95306757194c1783de}\label{logging_8h_a5ca1def5a8d64f95306757194c1783de}} 
+\index{logging.h@{logging.h}!DECLARE\_bool@{DECLARE\_bool}}
+\index{DECLARE\_bool@{DECLARE\_bool}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_bool()}{DECLARE\_bool()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+bool (\begin{DoxyParamCaption}\item[{logtostderr}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_ae0337f04714c3ec997e2a5f58583205b}\label{logging_8h_ae0337f04714c3ec997e2a5f58583205b}} 
+\index{logging.h@{logging.h}!DECLARE\_bool@{DECLARE\_bool}}
+\index{DECLARE\_bool@{DECLARE\_bool}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_bool()}{DECLARE\_bool()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+bool (\begin{DoxyParamCaption}\item[{stop\+\_\+logging\+\_\+if\+\_\+full\+\_\+disk}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a2e722295f629a1e03617c0eaedb36e6d}\label{logging_8h_a2e722295f629a1e03617c0eaedb36e6d}} 
+\index{logging.h@{logging.h}!DECLARE\_int32@{DECLARE\_int32}}
+\index{DECLARE\_int32@{DECLARE\_int32}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_int32()}{DECLARE\_int32()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+int32 (\begin{DoxyParamCaption}\item[{logbuflevel}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_aaa1fe66d5e52ed2ca0f9d5b83a4b9a03}\label{logging_8h_aaa1fe66d5e52ed2ca0f9d5b83a4b9a03}} 
+\index{logging.h@{logging.h}!DECLARE\_int32@{DECLARE\_int32}}
+\index{DECLARE\_int32@{DECLARE\_int32}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_int32()}{DECLARE\_int32()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+int32 (\begin{DoxyParamCaption}\item[{logbufsecs}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_aa0556a4970f3f4951def3dedb59dc481}\label{logging_8h_aa0556a4970f3f4951def3dedb59dc481}} 
+\index{logging.h@{logging.h}!DECLARE\_int32@{DECLARE\_int32}}
+\index{DECLARE\_int32@{DECLARE\_int32}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_int32()}{DECLARE\_int32()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+int32 (\begin{DoxyParamCaption}\item[{logfile\+\_\+mode}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_aa33cd6dd166264a73df940df5aa8417e}\label{logging_8h_aa33cd6dd166264a73df940df5aa8417e}} 
+\index{logging.h@{logging.h}!DECLARE\_int32@{DECLARE\_int32}}
+\index{DECLARE\_int32@{DECLARE\_int32}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_int32()}{DECLARE\_int32()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+int32 (\begin{DoxyParamCaption}\item[{max\+\_\+log\+\_\+size}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_af5a191984ab836ee0c9a77a71db693eb}\label{logging_8h_af5a191984ab836ee0c9a77a71db693eb}} 
+\index{logging.h@{logging.h}!DECLARE\_int32@{DECLARE\_int32}}
+\index{DECLARE\_int32@{DECLARE\_int32}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_int32()}{DECLARE\_int32()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+int32 (\begin{DoxyParamCaption}\item[{minloglevel}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a63b732ad5f1863cc497a3a425ea615ee}\label{logging_8h_a63b732ad5f1863cc497a3a425ea615ee}} 
+\index{logging.h@{logging.h}!DECLARE\_int32@{DECLARE\_int32}}
+\index{DECLARE\_int32@{DECLARE\_int32}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_int32()}{DECLARE\_int32()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+int32 (\begin{DoxyParamCaption}\item[{stderrthreshold}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a94556ace7c2a23e9bea2b1b30edbadb3}\label{logging_8h_a94556ace7c2a23e9bea2b1b30edbadb3}} 
+\index{logging.h@{logging.h}!DECLARE\_int32@{DECLARE\_int32}}
+\index{DECLARE\_int32@{DECLARE\_int32}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_int32()}{DECLARE\_int32()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+int32 (\begin{DoxyParamCaption}\item[{v}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a0543dfdd00e18090d7cfbdabf86af966}\label{logging_8h_a0543dfdd00e18090d7cfbdabf86af966}} 
+\index{logging.h@{logging.h}!DECLARE\_string@{DECLARE\_string}}
+\index{DECLARE\_string@{DECLARE\_string}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_string()}{DECLARE\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+string (\begin{DoxyParamCaption}\item[{log\+\_\+dir}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a3681c21e3efd03c0155fcabd7b37c053}\label{logging_8h_a3681c21e3efd03c0155fcabd7b37c053}} 
+\index{logging.h@{logging.h}!DECLARE\_string@{DECLARE\_string}}
+\index{DECLARE\_string@{DECLARE\_string}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_string()}{DECLARE\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+string (\begin{DoxyParamCaption}\item[{log\+\_\+link}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logging_8h_a4760c8f7e6130e106d6f316cab864bdd}\label{logging_8h_a4760c8f7e6130e106d6f316cab864bdd}} 
+\index{logging.h@{logging.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!logging.h@{logging.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{structgoogle_1_1_dummy_class_to_define_operator}{google\+::\+Dummy\+Class\+To\+Define\+Operator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

@@ -1,0 +1,64 @@
+\hypertarget{namespaceinternal}{}\doxysection{internal Namespace Reference}
+\label{namespaceinternal}\index{internal@{internal}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structinternal_1_1colamd__col}{colamd\+\_\+col}}
+\item 
+struct \mbox{\hyperlink{structinternal_1_1_colamd___row}{Colamd\+\_\+\+Row}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Index\+Type $>$ }\\Index\+Type \mbox{\hyperlink{namespaceinternal_a9334b3273c8d552d9dce545771271df6}{colamd\+\_\+c}} (Index\+Type n\+\_\+col)
+\item 
+{\footnotesize template$<$typename Index\+Type $>$ }\\Index\+Type \mbox{\hyperlink{namespaceinternal_a7aaab7bd925c78071c636749a9fe4fa8}{colamd\+\_\+r}} (Index\+Type n\+\_\+row)
+\item 
+{\footnotesize template$<$typename Index\+Type $>$ }\\Index\+Type \mbox{\hyperlink{namespaceinternal_a6702fb80a0ef276ea3b9e2e65a8f12a1}{colamd\+\_\+recommended}} (Index\+Type nnz, Index\+Type n\+\_\+row, Index\+Type n\+\_\+col)
+\begin{DoxyCompactList}\small\item\em Returns the recommended value of Alen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceinternal_a9334b3273c8d552d9dce545771271df6}\label{namespaceinternal_a9334b3273c8d552d9dce545771271df6}} 
+\index{internal@{internal}!colamd\_c@{colamd\_c}}
+\index{colamd\_c@{colamd\_c}!internal@{internal}}
+\doxysubsubsection{\texorpdfstring{colamd\_c()}{colamd\_c()}}
+{\footnotesize\ttfamily template$<$typename Index\+Type $>$ \\
+Index\+Type internal\+::colamd\+\_\+c (\begin{DoxyParamCaption}\item[{Index\+Type}]{n\+\_\+col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceinternal_a7aaab7bd925c78071c636749a9fe4fa8}\label{namespaceinternal_a7aaab7bd925c78071c636749a9fe4fa8}} 
+\index{internal@{internal}!colamd\_r@{colamd\_r}}
+\index{colamd\_r@{colamd\_r}!internal@{internal}}
+\doxysubsubsection{\texorpdfstring{colamd\_r()}{colamd\_r()}}
+{\footnotesize\ttfamily template$<$typename Index\+Type $>$ \\
+Index\+Type internal\+::colamd\+\_\+r (\begin{DoxyParamCaption}\item[{Index\+Type}]{n\+\_\+row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceinternal_a6702fb80a0ef276ea3b9e2e65a8f12a1}\label{namespaceinternal_a6702fb80a0ef276ea3b9e2e65a8f12a1}} 
+\index{internal@{internal}!colamd\_recommended@{colamd\_recommended}}
+\index{colamd\_recommended@{colamd\_recommended}!internal@{internal}}
+\doxysubsubsection{\texorpdfstring{colamd\_recommended()}{colamd\_recommended()}}
+{\footnotesize\ttfamily template$<$typename Index\+Type $>$ \\
+Index\+Type internal\+::colamd\+\_\+recommended (\begin{DoxyParamCaption}\item[{Index\+Type}]{nnz,  }\item[{Index\+Type}]{n\+\_\+row,  }\item[{Index\+Type}]{n\+\_\+col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the recommended value of Alen. 
+
+Returns recommended value of Alen for use by colamd. ~\newline
+ Returns -\/1 if any input argument is negative. ~\newline
+ The use of this routine or macro is optional. ~\newline
+ Note that the macro uses its arguments more than once, so be careful for side effects, if you pass expressions as arguments to C\+O\+L\+A\+M\+D\+\_\+\+R\+E\+C\+O\+M\+M\+E\+N\+D\+ED. ~\newline
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em nnz} & nonzeros in A \\
+\hline
+{\em n\+\_\+row} & number of rows in A \\
+\hline
+{\em n\+\_\+col} & number of columns in A \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+recommended value of Alen for use by colamd 
+\end{DoxyReturn}

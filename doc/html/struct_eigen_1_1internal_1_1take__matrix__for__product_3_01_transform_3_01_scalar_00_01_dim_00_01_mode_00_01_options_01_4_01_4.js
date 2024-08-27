@@ -1,0 +1,5 @@
+var struct_eigen_1_1internal_1_1take__matrix__for__product_3_01_transform_3_01_scalar_00_01_dim_00_01_mode_00_01_options_01_4_01_4 =
+[
+    [ "TransformType", "struct_eigen_1_1internal_1_1take__matrix__for__product_3_01_transform_3_01_scalar_00_01_dim_00_01_mode_00_01_options_01_4_01_4.html#a77ad015b5e9252d508f1086bae3a5f81", null ],
+    [ "type", "struct_eigen_1_1internal_1_1take__matrix__for__product_3_01_transform_3_01_scalar_00_01_dim_00_01_mode_00_01_options_01_4_01_4.html#ad574e3463713b46e368dd2f77ff468a2", null ]
+];

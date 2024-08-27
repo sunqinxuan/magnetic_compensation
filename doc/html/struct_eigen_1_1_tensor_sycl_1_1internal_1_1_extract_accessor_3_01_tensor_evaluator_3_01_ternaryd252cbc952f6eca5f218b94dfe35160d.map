@@ -1,0 +1,4 @@
+<map id="Eigen::TensorSycl::internal::ExtractAccessor&lt; TensorEvaluator&lt; TernaryCategory&lt; OP, Arg1Expr, Arg2Expr, Arg3Expr &gt;, Dev &gt; &gt;" name="Eigen::TensorSycl::internal::ExtractAccessor&lt; TensorEvaluator&lt; TernaryCategory&lt; OP, Arg1Expr, Arg2Expr, Arg3Expr &gt;, Dev &gt; &gt;">
+<area shape="rect" id="node1" title="specialisation of the ExtractAccessor struct when the node type is TensorCwiseTernaryOp" alt="" coords="291,5,553,91"/>
+<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01const_010235c7f46e01985cfd9706474c83e49e.html" title=" " alt="" coords="5,5,243,91"/>
+</map>

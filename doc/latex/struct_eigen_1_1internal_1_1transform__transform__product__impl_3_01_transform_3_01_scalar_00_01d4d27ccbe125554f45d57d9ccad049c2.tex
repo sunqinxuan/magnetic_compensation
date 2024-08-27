@@ -1,0 +1,59 @@
+\hypertarget{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2}{}\doxysection{Eigen\+::internal\+::transform\+\_\+transform\+\_\+product\+\_\+impl$<$ Transform$<$ Scalar, Dim, Lhs\+Mode, Lhs\+Options $>$, Transform$<$ Scalar, Dim, Rhs\+Mode, Rhs\+Options $>$, true $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2}\index{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$@{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$}}
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, Lhs\+Mode, Lhs\+Options $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a722d33f259faecdbcf058d882396dd70}{Lhs}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, Rhs\+Mode, Rhs\+Options $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_aa6109d556c2eb2ca710c505a1ff70270}{Rhs}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, \mbox{\hyperlink{group__enums_ggaee59a86102f150923b0cac6d4ff05107a0f7338b8672884554e8642bce9e44183}{Projective}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a5b14b1cfdb418e95a1abacac11d3551d}{Result\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a5b14b1cfdb418e95a1abacac11d3551d}{Result\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a5c2f729e0816d41cabc8784ef67cd48e}{run}} (const \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a722d33f259faecdbcf058d882396dd70}{Lhs}} \&lhs, const \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_aa6109d556c2eb2ca710c505a1ff70270}{Rhs}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a722d33f259faecdbcf058d882396dd70}\label{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a722d33f259faecdbcf058d882396dd70}} 
+\index{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$@{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$}!Lhs@{Lhs}}
+\index{Lhs@{Lhs}!Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$@{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$}}
+\doxysubsubsection{\texorpdfstring{Lhs}{Lhs}}
+{\footnotesize\ttfamily template$<$typename Scalar , int Dim, int Lhs\+Mode, int Lhs\+Options, int Rhs\+Mode, int Rhs\+Options$>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$Scalar,Dim,Lhs\+Mode,Lhs\+Options$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl}{Eigen\+::internal\+::transform\+\_\+transform\+\_\+product\+\_\+impl}}$<$ \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, Lhs\+Mode, Lhs\+Options $>$, \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, Rhs\+Mode, Rhs\+Options $>$, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a722d33f259faecdbcf058d882396dd70}{Lhs}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a5b14b1cfdb418e95a1abacac11d3551d}\label{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a5b14b1cfdb418e95a1abacac11d3551d}} 
+\index{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$@{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$}!ResultType@{ResultType}}
+\index{ResultType@{ResultType}!Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$@{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$}}
+\doxysubsubsection{\texorpdfstring{ResultType}{ResultType}}
+{\footnotesize\ttfamily template$<$typename Scalar , int Dim, int Lhs\+Mode, int Lhs\+Options, int Rhs\+Mode, int Rhs\+Options$>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$Scalar,Dim,\mbox{\hyperlink{group__enums_ggaee59a86102f150923b0cac6d4ff05107a0f7338b8672884554e8642bce9e44183}{Projective}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl}{Eigen\+::internal\+::transform\+\_\+transform\+\_\+product\+\_\+impl}}$<$ \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, Lhs\+Mode, Lhs\+Options $>$, \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, Rhs\+Mode, Rhs\+Options $>$, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a5b14b1cfdb418e95a1abacac11d3551d}{Result\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_aa6109d556c2eb2ca710c505a1ff70270}\label{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_aa6109d556c2eb2ca710c505a1ff70270}} 
+\index{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$@{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$}!Rhs@{Rhs}}
+\index{Rhs@{Rhs}!Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$@{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$}}
+\doxysubsubsection{\texorpdfstring{Rhs}{Rhs}}
+{\footnotesize\ttfamily template$<$typename Scalar , int Dim, int Lhs\+Mode, int Lhs\+Options, int Rhs\+Mode, int Rhs\+Options$>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$Scalar,Dim,Rhs\+Mode,Rhs\+Options$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl}{Eigen\+::internal\+::transform\+\_\+transform\+\_\+product\+\_\+impl}}$<$ \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, Lhs\+Mode, Lhs\+Options $>$, \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, Rhs\+Mode, Rhs\+Options $>$, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_aa6109d556c2eb2ca710c505a1ff70270}{Rhs}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a5c2f729e0816d41cabc8784ef67cd48e}\label{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a5c2f729e0816d41cabc8784ef67cd48e}} 
+\index{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$@{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$}!run@{run}}
+\index{run@{run}!Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$@{Eigen::internal::transform\_transform\_product\_impl$<$ Transform$<$ Scalar, Dim, LhsMode, LhsOptions $>$, Transform$<$ Scalar, Dim, RhsMode, RhsOptions $>$, true $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename Scalar , int Dim, int Lhs\+Mode, int Lhs\+Options, int Rhs\+Mode, int Rhs\+Options$>$ \\
+static \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a5b14b1cfdb418e95a1abacac11d3551d}{Result\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl}{Eigen\+::internal\+::transform\+\_\+transform\+\_\+product\+\_\+impl}}$<$ \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, Lhs\+Mode, Lhs\+Options $>$, \mbox{\hyperlink{class_eigen_1_1_transform}{Transform}}$<$ Scalar, Dim, Rhs\+Mode, Rhs\+Options $>$, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_a722d33f259faecdbcf058d882396dd70}{Lhs}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{struct_eigen_1_1internal_1_1transform__transform__product__impl_3_01_transform_3_01_scalar_00_01d4d27ccbe125554f45d57d9ccad049c2_aa6109d556c2eb2ca710c505a1ff70270}{Rhs}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Geometry/\mbox{\hyperlink{_transform_8h}{Transform.\+h}}\end{DoxyCompactItemize}

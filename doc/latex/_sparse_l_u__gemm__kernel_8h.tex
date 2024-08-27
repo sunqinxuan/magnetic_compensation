@@ -1,0 +1,78 @@
+\hypertarget{_sparse_l_u__gemm__kernel_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/\+Sparse\+L\+U/\+Sparse\+L\+U\+\_\+gemm\+\_\+kernel.h File Reference}
+\label{_sparse_l_u__gemm__kernel_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/SparseLU/SparseLU\_gemm\_kernel.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/SparseLU/SparseLU\_gemm\_kernel.h}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1internal}{Eigen\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_sparse_l_u__gemm__kernel_8h_a123b338eb701cf369ce139a337568d8b}{K\+M\+A\+DD}}(c,  a,  b,  tmp)~\{tmp = b; tmp = pmul(a,tmp); c = padd(c,tmp);\}
+\item 
+\#define \mbox{\hyperlink{_sparse_l_u__gemm__kernel_8h_ac0f8112df7f88a3da625a17fbf9f0152}{W\+O\+RK}}(I)
+\item 
+\#define \mbox{\hyperlink{_sparse_l_u__gemm__kernel_8h_ac0f8112df7f88a3da625a17fbf9f0152}{W\+O\+RK}}(I)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Scalar $>$ }\\\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_aa715c1fe854205b27e962ee7d7e06faf}{E\+I\+G\+E\+N\+\_\+\+D\+O\+N\+T\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{namespace_eigen_1_1internal_a32f426c047271d8068ce90f72ff64632}{Eigen\+::internal\+::sparselu\+\_\+gemm}} (Index m, Index n, Index d, const Scalar $\ast$A, Index lda, const Scalar $\ast$B, Index ldb, Scalar $\ast$C, Index ldc)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_sparse_l_u__gemm__kernel_8h_a123b338eb701cf369ce139a337568d8b}\label{_sparse_l_u__gemm__kernel_8h_a123b338eb701cf369ce139a337568d8b}} 
+\index{SparseLU\_gemm\_kernel.h@{SparseLU\_gemm\_kernel.h}!KMADD@{KMADD}}
+\index{KMADD@{KMADD}!SparseLU\_gemm\_kernel.h@{SparseLU\_gemm\_kernel.h}}
+\doxysubsubsection{\texorpdfstring{KMADD}{KMADD}}
+{\footnotesize\ttfamily \#define K\+M\+A\+DD(\begin{DoxyParamCaption}\item[{}]{c,  }\item[{}]{a,  }\item[{}]{b,  }\item[{}]{tmp }\end{DoxyParamCaption})~\{tmp = b; tmp = pmul(a,tmp); c = padd(c,tmp);\}}
+
+\mbox{\Hypertarget{_sparse_l_u__gemm__kernel_8h_ac0f8112df7f88a3da625a17fbf9f0152}\label{_sparse_l_u__gemm__kernel_8h_ac0f8112df7f88a3da625a17fbf9f0152}} 
+\index{SparseLU\_gemm\_kernel.h@{SparseLU\_gemm\_kernel.h}!WORK@{WORK}}
+\index{WORK@{WORK}!SparseLU\_gemm\_kernel.h@{SparseLU\_gemm\_kernel.h}}
+\doxysubsubsection{\texorpdfstring{WORK}{WORK}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define W\+O\+RK(\begin{DoxyParamCaption}\item[{}]{I }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                     c0 = pload<Packet>(C0+i+(I)*PacketSize);    \(\backslash\)}
+\DoxyCodeLine{                     c1 = pload<Packet>(C1+i+(I)*PacketSize);    \(\backslash\)}
+\DoxyCodeLine{                     KMADD(c0, a0, b00, t0)                      \(\backslash\)}
+\DoxyCodeLine{                     KMADD(c1, a0, b01, t1)                      \(\backslash\)}
+\DoxyCodeLine{                     a0 = pload<Packet>(A0+i+(I+1)*PacketSize);  \(\backslash\)}
+\DoxyCodeLine{                     KMADD(c0, a1, b10, t0)                      \(\backslash\)}
+\DoxyCodeLine{                     KMADD(c1, a1, b11, t1)                      \(\backslash\)}
+\DoxyCodeLine{                     a1 = pload<Packet>(A1+i+(I+1)*PacketSize);  \(\backslash\)}
+\DoxyCodeLine{          if(RK==4)\{ \mbox{\hyperlink{_sparse_l_u__gemm__kernel_8h_a123b338eb701cf369ce139a337568d8b}{KMADD}}(c0, a2, b20, t0)                     \}\(\backslash\)}
+\DoxyCodeLine{          if(RK==4)\{ \mbox{\hyperlink{_sparse_l_u__gemm__kernel_8h_a123b338eb701cf369ce139a337568d8b}{KMADD}}(c1, a2, b21, t1)                     \}\(\backslash\)}
+\DoxyCodeLine{          if(RK==4)\{ a2 = pload<Packet>(A2+i+(I+1)*PacketSize); \}\(\backslash\)}
+\DoxyCodeLine{          if(RK==4)\{ \mbox{\hyperlink{_sparse_l_u__gemm__kernel_8h_a123b338eb701cf369ce139a337568d8b}{KMADD}}(c0, a3, b30, t0)                     \}\(\backslash\)}
+\DoxyCodeLine{          if(RK==4)\{ \mbox{\hyperlink{_sparse_l_u__gemm__kernel_8h_a123b338eb701cf369ce139a337568d8b}{KMADD}}(c1, a3, b31, t1)                     \}\(\backslash\)}
+\DoxyCodeLine{          if(RK==4)\{ a3 = pload<Packet>(A3+i+(I+1)*PacketSize); \}\(\backslash\)}
+\DoxyCodeLine{                     pstore(C0+i+(I)*PacketSize, c0);            \(\backslash\)}
+\DoxyCodeLine{                     pstore(C1+i+(I)*PacketSize, c1)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_sparse_l_u__gemm__kernel_8h_ac0f8112df7f88a3da625a17fbf9f0152}\label{_sparse_l_u__gemm__kernel_8h_ac0f8112df7f88a3da625a17fbf9f0152}} 
+\index{SparseLU\_gemm\_kernel.h@{SparseLU\_gemm\_kernel.h}!WORK@{WORK}}
+\index{WORK@{WORK}!SparseLU\_gemm\_kernel.h@{SparseLU\_gemm\_kernel.h}}
+\doxysubsubsection{\texorpdfstring{WORK}{WORK}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define W\+O\+RK(\begin{DoxyParamCaption}\item[{}]{I }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                   c0 = pload<Packet>(C0+i+(I)*PacketSize);     \(\backslash\)}
+\DoxyCodeLine{                   KMADD(c0, a0, b00, t0)                       \(\backslash\)}
+\DoxyCodeLine{                   a0 = pload<Packet>(A0+i+(I+1)*PacketSize);   \(\backslash\)}
+\DoxyCodeLine{                   KMADD(c0, a1, b10, t0)                       \(\backslash\)}
+\DoxyCodeLine{                   a1 = pload<Packet>(A1+i+(I+1)*PacketSize);   \(\backslash\)}
+\DoxyCodeLine{        if(RK==4)\{ \mbox{\hyperlink{_sparse_l_u__gemm__kernel_8h_a123b338eb701cf369ce139a337568d8b}{KMADD}}(c0, a2, b20, t0)                      \}\(\backslash\)}
+\DoxyCodeLine{        if(RK==4)\{ a2 = pload<Packet>(A2+i+(I+1)*PacketSize);  \}\(\backslash\)}
+\DoxyCodeLine{        if(RK==4)\{ \mbox{\hyperlink{_sparse_l_u__gemm__kernel_8h_a123b338eb701cf369ce139a337568d8b}{KMADD}}(c0, a3, b30, t0)                      \}\(\backslash\)}
+\DoxyCodeLine{        if(RK==4)\{ a3 = pload<Packet>(A3+i+(I+1)*PacketSize);  \}\(\backslash\)}
+\DoxyCodeLine{                   pstore(C0+i+(I)*PacketSize, c0);}
+
+\end{DoxyCode}

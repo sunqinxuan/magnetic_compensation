@@ -1,0 +1,222 @@
+\hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator}{}\doxysection{Eigen\+::Sparse\+Compressed\+Base\+::Inner\+Iterator Class Reference}
+\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator}\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+
+
+{\ttfamily \#include $<$Sparse\+Compressed\+Base.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Sparse\+Compressed\+Base\+::Inner\+Iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Sparse\+Compressed\+Base\+::Inner\+Iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2ca187f3d1918750ccd7ae367d4bc20c}{Inner\+Iterator}} ()
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2c02953d7443e6ab335ce5e40cbda411}{Inner\+Iterator}} (const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator}{Inner\+Iterator}} \&other)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator}{Inner\+Iterator}} \& \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2a0769f4a4748b6b01512bcdcb54842e}{operator=}} (const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator}{Inner\+Iterator}} \&other)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_aa1c4fd27ea8f141234fe0409542c07e3}{Inner\+Iterator}} (const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}} \&mat, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_af671a2808a26621c11384ffdcd1345cd}{outer}})
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a9147fde5fa66434121cc4acf7cb89f4c}{Inner\+Iterator}} (const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}} \&mat)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_aac64b7570f3a92a85a4011f74bb529b7}{Inner\+Iterator}} (const \mbox{\hyperlink{class_eigen_1_1internal_1_1_compressed_storage}{internal\+::\+Compressed\+Storage}}$<$ Scalar, Storage\+Index $>$ \&data)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator}{Inner\+Iterator}} \& \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a8a276a986dba9f7e9f0c9a4924e9867b}{operator++}} ()
+\item 
+const Scalar \& \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a1fa8e4d078538cce76ef7df32071f2ea}{value}} () const
+\item 
+Scalar \& \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a0e9b8cd7f5224bfd7c28587a91fe9d1c}{value\+Ref}} ()
+\item 
+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_abbbf4416d9af9ac61535932ffeb2e476}{index}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_af671a2808a26621c11384ffdcd1345cd}{outer}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a23d31492816913f98457bd169f1b6233}{row}} () const
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a328b944ae54cf8a739b809f3891a5207}{col}} () const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_aa298e67c0fcfd102fb5d3e9e23649434}{operator bool}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1internal_1_1variable__if__dynamic}{internal\+::variable\+\_\+if\+\_\+dynamic}}$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Derived\+::\+Is\+Vector\+At\+Compile\+Time?0\+:\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}} $>$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2e43c235807bd47a48d899ea12ab0acf}{Outer\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Scalar $\ast$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_adcd3002e614f6fffa10f43f0ce7fbbe4}{m\+\_\+values}}
+\item 
+const Storage\+Index $\ast$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a1885a743114add15e92d45ed969879f1}{m\+\_\+indices}}
+\item 
+const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2e43c235807bd47a48d899ea12ab0acf}{Outer\+Type}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_ab977d7a984fff3ece7992a4ec2332bd0}{m\+\_\+outer}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a4a027ced9ab2c6e22c19a11e6c66fd39}{m\+\_\+id}}
+\item 
+\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a22d2c1e8bcc018f168f440febeec1d26}{m\+\_\+end}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a1ea98293121a37a0bc838fbc034cc77b}{Inner\+Iterator}} (const \mbox{\hyperlink{class_eigen_1_1_sparse_matrix_base}{Sparse\+Matrix\+Base}}$<$ T $>$ \&, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_af671a2808a26621c11384ffdcd1345cd}{outer}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2e43c235807bd47a48d899ea12ab0acf}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2e43c235807bd47a48d899ea12ab0acf}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!OuterType@{OuterType}}
+\index{OuterType@{OuterType}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{OuterType}{OuterType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_eigen_1_1internal_1_1variable__if__dynamic}{internal\+::variable\+\_\+if\+\_\+dynamic}}$<$\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}},Derived\+::\+Is\+Vector\+At\+Compile\+Time?0\+:\mbox{\hyperlink{namespace_eigen_ad81fa7195215a0ce30017dfac309f0b2}{Dynamic}}$>$ \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2e43c235807bd47a48d899ea12ab0acf}{Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::\+Outer\+Type}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2ca187f3d1918750ccd7ae367d4bc20c}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2ca187f3d1918750ccd7ae367d4bc20c}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!InnerIterator@{InnerIterator}}
+\index{InnerIterator@{InnerIterator}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{InnerIterator()}{InnerIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::\+Inner\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2c02953d7443e6ab335ce5e40cbda411}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2c02953d7443e6ab335ce5e40cbda411}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!InnerIterator@{InnerIterator}}
+\index{InnerIterator@{InnerIterator}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{InnerIterator()}{InnerIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::\+Inner\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator}{Inner\+Iterator}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_aa1c4fd27ea8f141234fe0409542c07e3}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_aa1c4fd27ea8f141234fe0409542c07e3}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!InnerIterator@{InnerIterator}}
+\index{InnerIterator@{InnerIterator}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{InnerIterator()}{InnerIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::\+Inner\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}} \&}]{mat,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{outer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a9147fde5fa66434121cc4acf7cb89f4c}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a9147fde5fa66434121cc4acf7cb89f4c}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!InnerIterator@{InnerIterator}}
+\index{InnerIterator@{InnerIterator}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{InnerIterator()}{InnerIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::\+Inner\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base}{Sparse\+Compressed\+Base}} \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_aac64b7570f3a92a85a4011f74bb529b7}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_aac64b7570f3a92a85a4011f74bb529b7}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!InnerIterator@{InnerIterator}}
+\index{InnerIterator@{InnerIterator}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{InnerIterator()}{InnerIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::\+Inner\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1internal_1_1_compressed_storage}{internal\+::\+Compressed\+Storage}}$<$ Scalar, Storage\+Index $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a1ea98293121a37a0bc838fbc034cc77b}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a1ea98293121a37a0bc838fbc034cc77b}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!InnerIterator@{InnerIterator}}
+\index{InnerIterator@{InnerIterator}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{InnerIterator()}{InnerIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::\+Inner\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_sparse_matrix_base}{Sparse\+Matrix\+Base}}$<$ T $>$ \&}]{,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{outer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a328b944ae54cf8a739b809f3891a5207}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a328b944ae54cf8a739b809f3891a5207}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!col@{col}}
+\index{col@{col}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{col()}{col()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_abbbf4416d9af9ac61535932ffeb2e476}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_abbbf4416d9af9ac61535932ffeb2e476}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!index@{index}}
+\index{index@{index}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily Storage\+Index Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_aa298e67c0fcfd102fb5d3e9e23649434}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_aa298e67c0fcfd102fb5d3e9e23649434}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a8a276a986dba9f7e9f0c9a4924e9867b}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a8a276a986dba9f7e9f0c9a4924e9867b}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator}{Inner\+Iterator}}\& Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2a0769f4a4748b6b01512bcdcb54842e}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2a0769f4a4748b6b01512bcdcb54842e}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!operator=@{operator=}}
+\index{operator=@{operator=}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator}{Inner\+Iterator}}\& Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator}{Inner\+Iterator}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_af671a2808a26621c11384ffdcd1345cd}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_af671a2808a26621c11384ffdcd1345cd}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!outer@{outer}}
+\index{outer@{outer}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{outer()}{outer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::outer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a23d31492816913f98457bd169f1b6233}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a23d31492816913f98457bd169f1b6233}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!row@{row}}
+\index{row@{row}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a1fa8e4d078538cce76ef7df32071f2ea}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a1fa8e4d078538cce76ef7df32071f2ea}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!value@{value}}
+\index{value@{value}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily const Scalar\& Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a0e9b8cd7f5224bfd7c28587a91fe9d1c}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a0e9b8cd7f5224bfd7c28587a91fe9d1c}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!valueRef@{valueRef}}
+\index{valueRef@{valueRef}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{valueRef()}{valueRef()}}
+{\footnotesize\ttfamily Scalar\& Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::value\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a22d2c1e8bcc018f168f440febeec1d26}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a22d2c1e8bcc018f168f440febeec1d26}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!m\_end@{m\_end}}
+\index{m\_end@{m\_end}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{m\_end}{m\_end}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::m\+\_\+end\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a4a027ced9ab2c6e22c19a11e6c66fd39}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a4a027ced9ab2c6e22c19a11e6c66fd39}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!m\_id@{m\_id}}
+\index{m\_id@{m\_id}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{m\_id}{m\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a1885a743114add15e92d45ed969879f1}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a1885a743114add15e92d45ed969879f1}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!m\_indices@{m\_indices}}
+\index{m\_indices@{m\_indices}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{m\_indices}{m\_indices}}
+{\footnotesize\ttfamily const Storage\+Index$\ast$ Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::m\+\_\+indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_ab977d7a984fff3ece7992a4ec2332bd0}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_ab977d7a984fff3ece7992a4ec2332bd0}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!m\_outer@{m\_outer}}
+\index{m\_outer@{m\_outer}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{m\_outer}{m\_outer}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_a2e43c235807bd47a48d899ea12ab0acf}{Outer\+Type}} Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::m\+\_\+outer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_adcd3002e614f6fffa10f43f0ce7fbbe4}\label{class_eigen_1_1_sparse_compressed_base_1_1_inner_iterator_adcd3002e614f6fffa10f43f0ce7fbbe4}} 
+\index{Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}!m\_values@{m\_values}}
+\index{m\_values@{m\_values}!Eigen::SparseCompressedBase::InnerIterator@{Eigen::SparseCompressedBase::InnerIterator}}
+\doxysubsubsection{\texorpdfstring{m\_values}{m\_values}}
+{\footnotesize\ttfamily const Scalar$\ast$ Eigen\+::\+Sparse\+Compressed\+Base\+::\+Inner\+Iterator\+::m\+\_\+values\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Sparse\+Core/\mbox{\hyperlink{_sparse_compressed_base_8h}{Sparse\+Compressed\+Base.\+h}}\end{DoxyCompactItemize}

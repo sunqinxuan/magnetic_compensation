@@ -1,0 +1,5 @@
+<map id="Eigen::TensorSycl::internal::LeafCount&lt; TensorSelectOp&lt; IfExpr, ThenExpr, ElseExpr &gt; &gt;" name="Eigen::TensorSycl::internal::LeafCount&lt; TensorSelectOp&lt; IfExpr, ThenExpr, ElseExpr &gt; &gt;">
+<area shape="rect" id="node1" title="specialisation of the LeafCount struct when the node type is TensorSelectOp" alt="" coords="563,5,757,76"/>
+<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_leaf_count_3_01const_01_tensor_select_op_3_01_if_ex72978f23c8cb9bf12d74a334fc0db28e.html" title="specialisation of the LeafCount struct when the node type is const TensorSelectOp is an exception" alt="" coords="276,5,515,76"/>
+<area shape="rect" id="node3" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_category_count.html" title=" " alt="" coords="5,13,228,69"/>
+</map>

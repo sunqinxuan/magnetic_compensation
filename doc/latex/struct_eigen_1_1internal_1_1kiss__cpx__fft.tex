@@ -1,0 +1,165 @@
+\hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft}{}\doxysection{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft$<$ \+\_\+\+Scalar $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1kiss__cpx__fft}\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+
+
+{\ttfamily \#include $<$ei\+\_\+kissfft\+\_\+impl.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+\_\+\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a806bd268f40020d2a0610351e4287261}{Scalar}}
+\item 
+typedef std\+::complex$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a806bd268f40020d2a0610351e4287261}{Scalar}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a85cd6612b484e94c4b0ae3aaff4a3ca8}{make\+\_\+twiddles}} (int nfft, bool \mbox{\hyperlink{_array_cwise_unary_ops_8h_a6bbf910050f42a24192e2fe5e4423eac}{inverse}})
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a61700af00cc2068ccc57003333a23ad1}{factorize}} (int nfft)
+\item 
+{\footnotesize template$<$typename \+\_\+\+Src $>$ }\\void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a7ea71feb0d8704656596f2909dba9271}{work}} (int stage, \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$xout, const \+\_\+\+Src $\ast$xin, size\+\_\+t fstride, size\+\_\+t in\+\_\+stride)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a79580867cbe4b457c42b21745789b362}{bfly2}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$Fout, const size\+\_\+t fstride, int m)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aa5c67750f3ced8773739a0ba964e2485}{bfly4}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$Fout, const size\+\_\+t fstride, const size\+\_\+t m)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a91e8db66ee520362382a514b8784c307}{bfly3}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$Fout, const size\+\_\+t fstride, const size\+\_\+t m)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a62690918301f7eb99af959474f7ea9d6}{bfly5}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$Fout, const size\+\_\+t fstride, const size\+\_\+t m)
+\item 
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_ade4207c7737f57f4b38f7aa9d2f007cf}{bfly\+\_\+generic}} (\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$Fout, const size\+\_\+t fstride, int m, int p)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a61a1b1bb99a8909668a0c85d94f0c0fb}{m\+\_\+twiddles}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_acb58101896208289c8c848326171ebf8}{m\+\_\+stage\+Radix}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a8d96505dd42ef0bf059b216c7327dde4}{m\+\_\+stage\+Remainder}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a1d71e46adfdbec7e3612930ff9be001f}{m\+\_\+scratch\+Buf}}
+\item 
+bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aa3b231f9307f37011a9cb168cdc0ffa0}{m\+\_\+inverse}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!Complex@{Complex}}
+\index{Complex@{Complex}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{Complex}{Complex}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef std\+::complex$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a806bd268f40020d2a0610351e4287261}{Scalar}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_a806bd268f40020d2a0610351e4287261}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_a806bd268f40020d2a0610351e4287261}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+typedef \+\_\+\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_a806bd268f40020d2a0610351e4287261}{Scalar}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_a79580867cbe4b457c42b21745789b362}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_a79580867cbe4b457c42b21745789b362}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!bfly2@{bfly2}}
+\index{bfly2@{bfly2}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{bfly2()}{bfly2()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::bfly2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$}]{Fout,  }\item[{const size\+\_\+t}]{fstride,  }\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_a91e8db66ee520362382a514b8784c307}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_a91e8db66ee520362382a514b8784c307}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!bfly3@{bfly3}}
+\index{bfly3@{bfly3}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{bfly3()}{bfly3()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::bfly3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$}]{Fout,  }\item[{const size\+\_\+t}]{fstride,  }\item[{const size\+\_\+t}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_aa5c67750f3ced8773739a0ba964e2485}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_aa5c67750f3ced8773739a0ba964e2485}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!bfly4@{bfly4}}
+\index{bfly4@{bfly4}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{bfly4()}{bfly4()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::bfly4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$}]{Fout,  }\item[{const size\+\_\+t}]{fstride,  }\item[{const size\+\_\+t}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_a62690918301f7eb99af959474f7ea9d6}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_a62690918301f7eb99af959474f7ea9d6}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!bfly5@{bfly5}}
+\index{bfly5@{bfly5}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{bfly5()}{bfly5()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::bfly5 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$}]{Fout,  }\item[{const size\+\_\+t}]{fstride,  }\item[{const size\+\_\+t}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_ade4207c7737f57f4b38f7aa9d2f007cf}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_ade4207c7737f57f4b38f7aa9d2f007cf}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!bfly\_generic@{bfly\_generic}}
+\index{bfly\_generic@{bfly\_generic}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{bfly\_generic()}{bfly\_generic()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::bfly\+\_\+generic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$}]{Fout,  }\item[{const size\+\_\+t}]{fstride,  }\item[{int}]{m,  }\item[{int}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_a61700af00cc2068ccc57003333a23ad1}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_a61700af00cc2068ccc57003333a23ad1}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!factorize@{factorize}}
+\index{factorize@{factorize}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{factorize()}{factorize()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::factorize (\begin{DoxyParamCaption}\item[{int}]{nfft }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_a85cd6612b484e94c4b0ae3aaff4a3ca8}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_a85cd6612b484e94c4b0ae3aaff4a3ca8}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!make\_twiddles@{make\_twiddles}}
+\index{make\_twiddles@{make\_twiddles}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{make\_twiddles()}{make\_twiddles()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::make\+\_\+twiddles (\begin{DoxyParamCaption}\item[{int}]{nfft,  }\item[{bool}]{inverse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_a7ea71feb0d8704656596f2909dba9271}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_a7ea71feb0d8704656596f2909dba9271}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!work@{work}}
+\index{work@{work}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{work()}{work()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+template$<$typename \+\_\+\+Src $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::work (\begin{DoxyParamCaption}\item[{int}]{stage,  }\item[{\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}} $\ast$}]{xout,  }\item[{const \+\_\+\+Src $\ast$}]{xin,  }\item[{size\+\_\+t}]{fstride,  }\item[{size\+\_\+t}]{in\+\_\+stride }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_aa3b231f9307f37011a9cb168cdc0ffa0}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_aa3b231f9307f37011a9cb168cdc0ffa0}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!m\_inverse@{m\_inverse}}
+\index{m\_inverse@{m\_inverse}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_inverse}{m\_inverse}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+inverse}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_a1d71e46adfdbec7e3612930ff9be001f}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_a1d71e46adfdbec7e3612930ff9be001f}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!m\_scratchBuf@{m\_scratchBuf}}
+\index{m\_scratchBuf@{m\_scratchBuf}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_scratchBuf}{m\_scratchBuf}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+std\+::vector$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+scratch\+Buf}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_acb58101896208289c8c848326171ebf8}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_acb58101896208289c8c848326171ebf8}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!m\_stageRadix@{m\_stageRadix}}
+\index{m\_stageRadix@{m\_stageRadix}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_stageRadix}{m\_stageRadix}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+stage\+Radix}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_a8d96505dd42ef0bf059b216c7327dde4}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_a8d96505dd42ef0bf059b216c7327dde4}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!m\_stageRemainder@{m\_stageRemainder}}
+\index{m\_stageRemainder@{m\_stageRemainder}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_stageRemainder}{m\_stageRemainder}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+stage\+Remainder}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1kiss__cpx__fft_a61a1b1bb99a8909668a0c85d94f0c0fb}\label{struct_eigen_1_1internal_1_1kiss__cpx__fft_a61a1b1bb99a8909668a0c85d94f0c0fb}} 
+\index{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}!m\_twiddles@{m\_twiddles}}
+\index{m\_twiddles@{m\_twiddles}!Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$@{Eigen::internal::kiss\_cpx\_fft$<$ \_Scalar $>$}}
+\doxysubsubsection{\texorpdfstring{m\_twiddles}{m\_twiddles}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Scalar $>$ \\
+std\+::vector$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft_aef8846826abbab3cf75ab0c1c32d7a45}{Complex}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1kiss__cpx__fft}{Eigen\+::internal\+::kiss\+\_\+cpx\+\_\+fft}}$<$ \+\_\+\+Scalar $>$\+::m\+\_\+twiddles}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/src/\+F\+F\+T/\mbox{\hyperlink{ei__kissfft__impl_8h}{ei\+\_\+kissfft\+\_\+impl.\+h}}\end{DoxyCompactItemize}

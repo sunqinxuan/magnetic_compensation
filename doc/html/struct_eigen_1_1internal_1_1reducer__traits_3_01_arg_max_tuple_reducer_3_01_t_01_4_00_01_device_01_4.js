@@ -1,0 +1,5 @@
+var struct_eigen_1_1internal_1_1reducer__traits_3_01_arg_max_tuple_reducer_3_01_t_01_4_00_01_device_01_4 =
+[
+    [ "Cost", "struct_eigen_1_1internal_1_1reducer__traits_3_01_arg_max_tuple_reducer_3_01_t_01_4_00_01_device_01_4.html#adaa19fc341c0bdec36c52c1acf055ac8a9dc364d25054ce582a78a985cd5a8be0", null ],
+    [ "PacketAccess", "struct_eigen_1_1internal_1_1reducer__traits_3_01_arg_max_tuple_reducer_3_01_t_01_4_00_01_device_01_4.html#adaa19fc341c0bdec36c52c1acf055ac8abf68e58d62e2523da3c50188ef0e2d84", null ]
+];

@@ -1,0 +1,176 @@
+\hypertarget{class_eigen_1_1_inverse}{}\doxysection{Eigen\+::Inverse$<$ Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_inverse}\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+
+
+Expression of the inverse of another expression.  
+
+
+
+
+{\ttfamily \#include $<$Inverse.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Inverse$<$ Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_eigen_1_1_inverse__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Inverse$<$ Xpr\+Type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_inverse__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Xpr\+Type\+::\+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_inverse_a24a2e9d42e51ebbfebb19abf69189277}{Storage\+Index}}
+\item 
+typedef Xpr\+Type\+::\+Plain\+Object \mbox{\hyperlink{class_eigen_1_1_inverse_a43944177f0ff3b1674204d5ee7e9ccb3}{Plain\+Object}}
+\item 
+typedef Xpr\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_inverse_aec6048fd8cc031a99b0f458841b3811f}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{internal\+::ref\+\_\+selector}}$<$ Xpr\+Type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_inverse_a0c69f9e9bc52018fe6a3dec47d363066}{Xpr\+Type\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ \mbox{\hyperlink{class_eigen_1_1_inverse_a0c69f9e9bc52018fe6a3dec47d363066}{Xpr\+Type\+Nested}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_inverse_a9785bc56c3c90a9435d6248d2706b17c}{Xpr\+Type\+Nested\+Cleaned}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{internal\+::ref\+\_\+selector}}$<$ \mbox{\hyperlink{class_eigen_1_1_inverse}{Inverse}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_inverse_a47767cc8b6793334f19aa67834191bc5}{Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ Xpr\+Type $>$\+::type \mbox{\hyperlink{class_eigen_1_1_inverse_a35e730de4de44f631213d25001e3edc3}{Nested\+Expression}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_inverse_ac3dcdb58c1416882e33b90c5547589c0}{Inverse}} (const Xpr\+Type \&xpr)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_inverse_af41ff0c72ffb6782474bab6e1ec2ac11}{rows}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_inverse_a506af9d762f0285fe8bd719fff034e4d}{cols}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_inverse_a9785bc56c3c90a9435d6248d2706b17c}{Xpr\+Type\+Nested\+Cleaned}} \& \mbox{\hyperlink{class_eigen_1_1_inverse_a7862d6077326a63cd81b3967fc5cee48}{nested\+Expression}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_inverse_a0c69f9e9bc52018fe6a3dec47d363066}{Xpr\+Type\+Nested}} \mbox{\hyperlink{class_eigen_1_1_inverse_a702bb2d052c32edff4d7cf646b3bf039}{m\+\_\+xpr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Xpr\+Type$>$\newline
+class Eigen\+::\+Inverse$<$ Xpr\+Type $>$}
+
+Expression of the inverse of another expression. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Xpr\+Type} & the type of the expression we are taking the inverse\\
+\hline
+\end{DoxyTemplParams}
+This class represents an abstract expression of A.\+inverse() and most of the time this is the only way it is used. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_a47767cc8b6793334f19aa67834191bc5}\label{class_eigen_1_1_inverse_a47767cc8b6793334f19aa67834191bc5}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{internal\+::ref\+\_\+selector}}$<$\mbox{\hyperlink{class_eigen_1_1_inverse}{Inverse}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_a47767cc8b6793334f19aa67834191bc5}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_a35e730de4de44f631213d25001e3edc3}\label{class_eigen_1_1_inverse_a35e730de4de44f631213d25001e3edc3}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!NestedExpression@{NestedExpression}}
+\index{NestedExpression@{NestedExpression}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{NestedExpression}{NestedExpression}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$Xpr\+Type$>$\+::type \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_a35e730de4de44f631213d25001e3edc3}{Nested\+Expression}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_a43944177f0ff3b1674204d5ee7e9ccb3}\label{class_eigen_1_1_inverse_a43944177f0ff3b1674204d5ee7e9ccb3}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!PlainObject@{PlainObject}}
+\index{PlainObject@{PlainObject}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{PlainObject}{PlainObject}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Plain\+Object \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_a43944177f0ff3b1674204d5ee7e9ccb3}{Plain\+Object}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_aec6048fd8cc031a99b0f458841b3811f}\label{class_eigen_1_1_inverse_aec6048fd8cc031a99b0f458841b3811f}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_aec6048fd8cc031a99b0f458841b3811f}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_a24a2e9d42e51ebbfebb19abf69189277}\label{class_eigen_1_1_inverse_a24a2e9d42e51ebbfebb19abf69189277}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_a24a2e9d42e51ebbfebb19abf69189277}{Storage\+Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_a0c69f9e9bc52018fe6a3dec47d363066}\label{class_eigen_1_1_inverse_a0c69f9e9bc52018fe6a3dec47d363066}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!XprTypeNested@{XprTypeNested}}
+\index{XprTypeNested@{XprTypeNested}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{XprTypeNested}{XprTypeNested}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{internal\+::ref\+\_\+selector}}$<$Xpr\+Type$>$\+::type \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_a0c69f9e9bc52018fe6a3dec47d363066}{Xpr\+Type\+Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_a9785bc56c3c90a9435d6248d2706b17c}\label{class_eigen_1_1_inverse_a9785bc56c3c90a9435d6248d2706b17c}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!XprTypeNestedCleaned@{XprTypeNestedCleaned}}
+\index{XprTypeNestedCleaned@{XprTypeNestedCleaned}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{XprTypeNestedCleaned}{XprTypeNestedCleaned}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$\mbox{\hyperlink{class_eigen_1_1_inverse_a0c69f9e9bc52018fe6a3dec47d363066}{Xpr\+Type\+Nested}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse_a9785bc56c3c90a9435d6248d2706b17c}{Xpr\+Type\+Nested\+Cleaned}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_ac3dcdb58c1416882e33b90c5547589c0}\label{class_eigen_1_1_inverse_ac3dcdb58c1416882e33b90c5547589c0}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_inverse}{Inverse}} (\begin{DoxyParamCaption}\item[{const Xpr\+Type \&}]{xpr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_a506af9d762f0285fe8bd719fff034e4d}\label{class_eigen_1_1_inverse_a506af9d762f0285fe8bd719fff034e4d}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_a7862d6077326a63cd81b3967fc5cee48}\label{class_eigen_1_1_inverse_a7862d6077326a63cd81b3967fc5cee48}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!nestedExpression@{nestedExpression}}
+\index{nestedExpression@{nestedExpression}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{nestedExpression()}{nestedExpression()}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_inverse_a9785bc56c3c90a9435d6248d2706b17c}{Xpr\+Type\+Nested\+Cleaned}}\& \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::nested\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_inverse_af41ff0c72ffb6782474bab6e1ec2ac11}\label{class_eigen_1_1_inverse_af41ff0c72ffb6782474bab6e1ec2ac11}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!rows@{rows}}
+\index{rows@{rows}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_inverse_a702bb2d052c32edff4d7cf646b3bf039}\label{class_eigen_1_1_inverse_a702bb2d052c32edff4d7cf646b3bf039}} 
+\index{Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}!m\_xpr@{m\_xpr}}
+\index{m\_xpr@{m\_xpr}!Eigen::Inverse$<$ XprType $>$@{Eigen::Inverse$<$ XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_xpr}{m\_xpr}}
+{\footnotesize\ttfamily template$<$typename Xpr\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_inverse_a0c69f9e9bc52018fe6a3dec47d363066}{Xpr\+Type\+Nested}} \mbox{\hyperlink{class_eigen_1_1_inverse}{Eigen\+::\+Inverse}}$<$ Xpr\+Type $>$\+::m\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_inverse_8h}{Inverse.\+h}}\end{DoxyCompactItemize}

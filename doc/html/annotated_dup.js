@@ -1,0 +1,28 @@
+var annotated_dup =
+[
+    [ "mic", "namespacemic.html", "namespacemic" ],
+    [ "CabinCostFunctionCreator", "class_cabin_cost_function_creator.html", "class_cabin_cost_function_creator" ],
+    [ "CostFunctionCreator", "class_cost_function_creator.html", "class_cost_function_creator" ],
+    [ "MicBashFileLogger", "class_mic_bash_file_logger.html", "class_mic_bash_file_logger" ],
+    [ "MicBashPrinter", "class_mic_bash_printer.html", "class_mic_bash_printer" ],
+    [ "MicCabinMagCompensator", "class_mic_cabin_mag_compensator.html", "class_mic_cabin_mag_compensator" ],
+    [ "MicConfig", "class_mic_config.html", "class_mic_config" ],
+    [ "MicDataStorer", "class_mic_data_storer.html", "class_mic_data_storer" ],
+    [ "MicEllipsoidMagCompensator", "class_mic_ellipsoid_mag_compensator.html", "class_mic_ellipsoid_mag_compensator" ],
+    [ "MicFileWriter", "class_mic_file_writer.html", "class_mic_file_writer" ],
+    [ "MicJsonConfig", "class_mic_json_config.html", "class_mic_json_config" ],
+    [ "MicKFINSEstimator", "class_mic_k_f_i_n_s_estimator.html", "class_mic_k_f_i_n_s_estimator" ],
+    [ "MicLogger", "class_mic_logger.html", "class_mic_logger" ],
+    [ "MicMagCompensator", "class_mic_mag_compensator.html", "class_mic_mag_compensator" ],
+    [ "MicNavStateEstimator", "class_mic_nav_state_estimator.html", "class_mic_nav_state_estimator" ],
+    [ "MicObservable", "class_mic_observable.html", "class_mic_observable" ],
+    [ "MicObserver", "class_mic_observer.html", "class_mic_observer" ],
+    [ "MicParamType", "struct_mic_param_type.html", null ],
+    [ "MicStateLogger", "class_mic_state_logger.html", "class_mic_state_logger" ],
+    [ "MicTLComponentMagCompensator", "class_mic_t_l_component_mag_compensator.html", "class_mic_t_l_component_mag_compensator" ],
+    [ "MicTLMagCompensator", "class_mic_t_l_mag_compensator.html", "class_mic_t_l_mag_compensator" ],
+    [ "MicUtils", "class_mic_utils.html", null ],
+    [ "tuple_index", "structtuple__index.html", null ],
+    [ "tuple_index< T, std::tuple< T, Types... > >", "structtuple__index_3_01_t_00_01std_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ],
+    [ "tuple_index< T, std::tuple< U, Types... > >", "structtuple__index_3_01_t_00_01std_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4.html", null ]
+];

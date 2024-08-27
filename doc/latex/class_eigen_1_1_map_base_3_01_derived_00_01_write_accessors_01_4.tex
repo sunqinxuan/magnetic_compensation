@@ -1,0 +1,221 @@
+\hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4}{}\doxysection{Eigen\+::Map\+Base$<$ Derived, Write\+Accessors $>$ Class Template Reference}
+\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4}\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+
+
+Base class for non-\/const dense \mbox{\hyperlink{class_eigen_1_1_map}{Map}} and \mbox{\hyperlink{class_eigen_1_1_block}{Block}} expression with direct access.  
+
+
+
+
+{\ttfamily \#include $<$Map\+Base.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Map\+Base$<$ Derived, Write\+Accessors $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Map\+Base$<$ Derived, Write\+Accessors $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_map_base}{Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$ \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a4f52766f5ba30aba67e8768c13aa6d24}{Base}}
+\item 
+typedef Base\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ac76e1c5cbac21882c60626c02775fa0a}{Scalar}}
+\item 
+typedef Base\+::\+Packet\+Scalar \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a18d59d76ec7b5b0dd3eb81b5f8a98497}{Packet\+Scalar}}
+\item 
+typedef Base\+::\+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a58118130780691f37741e8deb726472a}{Storage\+Index}}
+\item 
+typedef Base\+::\+Pointer\+Type \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a8da8a981ab5c8612edae694d182e1a0d}{Pointer\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{internal\+::conditional}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1is__lvalue}{internal\+::is\+\_\+lvalue}}$<$ Derived $>$\+::value, \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_abe44c0f927ddaf98ee7a69ac2dd34ea6}{Scalar}}, const \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_abe44c0f927ddaf98ee7a69ac2dd34ea6}{Scalar}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a85fa506ce575c6d08d5abb70f70bf8a3}{Scalar\+With\+Const\+If\+Not\+Lvalue}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_abe44c0f927ddaf98ee7a69ac2dd34ea6}{Scalar}} $\ast$ \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ac9d345eb192e2ba6c780ec4df5d739c4}{data}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a85fa506ce575c6d08d5abb70f70bf8a3}{Scalar\+With\+Const\+If\+Not\+Lvalue}} $\ast$ \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a3423792f520c05c542caccc54f2a0c82}{data}} ()
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a85fa506ce575c6d08d5abb70f70bf8a3}{Scalar\+With\+Const\+If\+Not\+Lvalue}} \& \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ac076a38c2b84ac6628ec3b56a643a706}{coeff\+Ref}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}})
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a85fa506ce575c6d08d5abb70f70bf8a3}{Scalar\+With\+Const\+If\+Not\+Lvalue}} \& \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a34608cf1fd4e4e244197057fbcba142d}{coeff\+Ref}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} index)
+\item 
+{\footnotesize template$<$int Store\+Mode$>$ }\\void \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a7caddcdb9331c5bb3a81f92f65997778}{write\+Packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}, const \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a364a4ac68dbf6626b45f5d8b49f2b6ff}{Packet\+Scalar}} \&val)
+\item 
+{\footnotesize template$<$int Store\+Mode$>$ }\\void \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a963656f086c7a9a22acd4aee8a9b980d}{write\+Packet}} (\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} index, const \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a364a4ac68dbf6626b45f5d8b49f2b6ff}{Packet\+Scalar}} \&val)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a41c11ab1e84f38b23ca4be87c62189d3}{Map\+Base}} (\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a1253626db86df74441cfa2476fd68396}{Pointer\+Type}} data\+Ptr)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a5f67bed14fedc7ab503238016e6bb36d}{Map\+Base}} (\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a1253626db86df74441cfa2476fd68396}{Pointer\+Type}} data\+Ptr, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} vec\+Size)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ab03acae12350d28e0cd58316e3347ef6}{Map\+Base}} (\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a1253626db86df74441cfa2476fd68396}{Pointer\+Type}} data\+Ptr, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a78b3ab4983de51f112e6a062ac8f6ffd}{rows}}, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}} \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_ad345a6b995b9894e9b076ee174876659}{cols}})
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived \& \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a2ac24e4004f5bcd43f467c721afb8d6c}{operator=}} (const \mbox{\hyperlink{class_eigen_1_1_map_base}{Map\+Base}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_map_base}{Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}} $>$ \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a8d3877be783babc96555cfb1b30fb495}{Read\+Only\+Map\+Base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Derived$>$\newline
+class Eigen\+::\+Map\+Base$<$ Derived, Write\+Accessors $>$}
+
+Base class for non-\/const dense \mbox{\hyperlink{class_eigen_1_1_map}{Map}} and \mbox{\hyperlink{class_eigen_1_1_block}{Block}} expression with direct access. 
+
+This base class provides the non-\/const low-\/level accessors (e.\+g. coeff and coeff\+Ref) of dense \mbox{\hyperlink{class_eigen_1_1_map}{Map}} and \mbox{\hyperlink{class_eigen_1_1_block}{Block}} objects with direct access. It inherits \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4}{Map\+Base$<$\+Derived, Read\+Only\+Accessors$>$}} which defines the const variant for reading specific entries.
+
+\begin{DoxySeeAlso}{See also}
+class \mbox{\hyperlink{class_eigen_1_1_map}{Map}}, class \mbox{\hyperlink{class_eigen_1_1_block}{Block}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a4f52766f5ba30aba67e8768c13aa6d24}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a4f52766f5ba30aba67e8768c13aa6d24}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!Base@{Base}}
+\index{Base@{Base}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_map_base}{Map\+Base}}$<$Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}}$>$ \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a2166493966c7516ad2b8d5dac152cc61}{Base}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a18d59d76ec7b5b0dd3eb81b5f8a98497}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a18d59d76ec7b5b0dd3eb81b5f8a98497}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!PacketScalar@{PacketScalar}}
+\index{PacketScalar@{PacketScalar}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{PacketScalar}{PacketScalar}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef Base\+::\+Packet\+Scalar \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a364a4ac68dbf6626b45f5d8b49f2b6ff}{Packet\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a8da8a981ab5c8612edae694d182e1a0d}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a8da8a981ab5c8612edae694d182e1a0d}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!PointerType@{PointerType}}
+\index{PointerType@{PointerType}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{PointerType}{PointerType}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef Base\+::\+Pointer\+Type \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a1253626db86df74441cfa2476fd68396}{Pointer\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a8d3877be783babc96555cfb1b30fb495}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a8d3877be783babc96555cfb1b30fb495}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!ReadOnlyMapBase@{ReadOnlyMapBase}}
+\index{ReadOnlyMapBase@{ReadOnlyMapBase}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{ReadOnlyMapBase}{ReadOnlyMapBase}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_map_base}{Map\+Base}}$<$Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5daa1f2b0e6a668b11f2958940965d2b572}{Read\+Only\+Accessors}}$>$ \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a8d3877be783babc96555cfb1b30fb495}{Read\+Only\+Map\+Base}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ac76e1c5cbac21882c60626c02775fa0a}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ac76e1c5cbac21882c60626c02775fa0a}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef Base\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_abe44c0f927ddaf98ee7a69ac2dd34ea6}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a85fa506ce575c6d08d5abb70f70bf8a3}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a85fa506ce575c6d08d5abb70f70bf8a3}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!ScalarWithConstIfNotLvalue@{ScalarWithConstIfNotLvalue}}
+\index{ScalarWithConstIfNotLvalue@{ScalarWithConstIfNotLvalue}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{ScalarWithConstIfNotLvalue}{ScalarWithConstIfNotLvalue}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{internal\+::conditional}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1is__lvalue}{internal\+::is\+\_\+lvalue}}$<$Derived$>$\+::value, \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_abe44c0f927ddaf98ee7a69ac2dd34ea6}{Scalar}}, const \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_abe44c0f927ddaf98ee7a69ac2dd34ea6}{Scalar}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a85fa506ce575c6d08d5abb70f70bf8a3}{Scalar\+With\+Const\+If\+Not\+Lvalue}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a58118130780691f37741e8deb726472a}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a58118130780691f37741e8deb726472a}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+typedef Base\+::\+Storage\+Index \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a58118130780691f37741e8deb726472a}{Storage\+Index}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a41c11ab1e84f38b23ca4be87c62189d3}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a41c11ab1e84f38b23ca4be87c62189d3}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!MapBase@{MapBase}}
+\index{MapBase@{MapBase}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{MapBase()}{MapBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_map_base}{Map\+Base}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a1253626db86df74441cfa2476fd68396}{Pointer\+Type}}}]{data\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a5f67bed14fedc7ab503238016e6bb36d}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a5f67bed14fedc7ab503238016e6bb36d}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!MapBase@{MapBase}}
+\index{MapBase@{MapBase}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{MapBase()}{MapBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_map_base}{Map\+Base}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a1253626db86df74441cfa2476fd68396}{Pointer\+Type}}}]{data\+Ptr,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{vec\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ab03acae12350d28e0cd58316e3347ef6}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ab03acae12350d28e0cd58316e3347ef6}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!MapBase@{MapBase}}
+\index{MapBase@{MapBase}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{MapBase()}{MapBase()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_map_base}{Map\+Base}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a1253626db86df74441cfa2476fd68396}{Pointer\+Type}}}]{data\+Ptr,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{rows,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a34608cf1fd4e4e244197057fbcba142d}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a34608cf1fd4e4e244197057fbcba142d}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!coeffRef@{coeffRef}}
+\index{coeffRef@{coeffRef}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{coeffRef()}{coeffRef()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a85fa506ce575c6d08d5abb70f70bf8a3}{Scalar\+With\+Const\+If\+Not\+Lvalue}}\& \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::coeff\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ac076a38c2b84ac6628ec3b56a643a706}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ac076a38c2b84ac6628ec3b56a643a706}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!coeffRef@{coeffRef}}
+\index{coeffRef@{coeffRef}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{coeffRef()}{coeffRef()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a85fa506ce575c6d08d5abb70f70bf8a3}{Scalar\+With\+Const\+If\+Not\+Lvalue}}\& \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::coeff\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a3423792f520c05c542caccc54f2a0c82}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a3423792f520c05c542caccc54f2a0c82}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!data@{data}}
+\index{data@{data}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a85fa506ce575c6d08d5abb70f70bf8a3}{Scalar\+With\+Const\+If\+Not\+Lvalue}}$\ast$ \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ac9d345eb192e2ba6c780ec4df5d739c4}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_ac9d345eb192e2ba6c780ec4df5d739c4}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!data@{data}}
+\index{data@{data}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_abe44c0f927ddaf98ee7a69ac2dd34ea6}{Scalar}}$\ast$ \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a2ac24e4004f5bcd43f467c721afb8d6c}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a2ac24e4004f5bcd43f467c721afb8d6c}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Derived\& \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_map_base}{Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a963656f086c7a9a22acd4aee8a9b980d}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a963656f086c7a9a22acd4aee8a9b980d}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!writePacket@{writePacket}}
+\index{writePacket@{writePacket}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{writePacket()}{writePacket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$int Store\+Mode$>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::write\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{index,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a364a4ac68dbf6626b45f5d8b49f2b6ff}{Packet\+Scalar}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a7caddcdb9331c5bb3a81f92f65997778}\label{class_eigen_1_1_map_base_3_01_derived_00_01_write_accessors_01_4_a7caddcdb9331c5bb3a81f92f65997778}} 
+\index{Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}!writePacket@{writePacket}}
+\index{writePacket@{writePacket}!Eigen::MapBase$<$ Derived, WriteAccessors $>$@{Eigen::MapBase$<$ Derived, WriteAccessors $>$}}
+\doxysubsubsection{\texorpdfstring{writePacket()}{writePacket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+template$<$int Store\+Mode$>$ \\
+void \mbox{\hyperlink{class_eigen_1_1_map_base}{Eigen\+::\+Map\+Base}}$<$ Derived, \mbox{\hyperlink{group__enums_gga9f93eac38eb83deb0e8dbd42ddf11d5dabcadf08230fb1a5ef7b3195745d3a458}{Write\+Accessors}} $>$\+::write\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{row,  }\item[{\mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}}]{col,  }\item[{const \mbox{\hyperlink{class_eigen_1_1_map_base_3_01_derived_00_01_read_only_accessors_01_4_a364a4ac68dbf6626b45f5d8b49f2b6ff}{Packet\+Scalar}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_map_base_8h}{Map\+Base.\+h}}\end{DoxyCompactItemize}

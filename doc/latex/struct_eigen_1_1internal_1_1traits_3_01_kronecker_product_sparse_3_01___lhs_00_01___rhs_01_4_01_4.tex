@@ -1,0 +1,145 @@
+\hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4}{}\doxysection{Eigen\+::internal\+::traits$<$ Kronecker\+Product\+Sparse$<$ \+\_\+\+Lhs, \+\_\+\+Rhs $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}
+
+
+{\ttfamily \#include $<$Kronecker\+Tensor\+Product.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a21e8f1c16807e696d4efea0325d539fc}{Lhs\+Flags}} = Lhs\+::Flags, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6acdf873162e6f4fbfb4279eaad49dc02c}{Rhs\+Flags}} = Rhs\+::Flags, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6ac18e47cc1da6dd276b1a6eb5bd4f1de0}{Rows\+At\+Compile\+Time}} = size\+\_\+at\+\_\+compile\+\_\+time$<$traits$<$Lhs$>$\+::Rows\+At\+Compile\+Time, traits$<$Rhs$>$\+::Rows\+At\+Compile\+Time$>$\+::ret, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6ab421eaf0be43dac8bd9fd4f84c4b4ef9}{Cols\+At\+Compile\+Time}} = size\+\_\+at\+\_\+compile\+\_\+time$<$traits$<$Lhs$>$\+::Cols\+At\+Compile\+Time, traits$<$Rhs$>$\+::Cols\+At\+Compile\+Time$>$\+::ret, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a395fb32499330991090defaa65bb951e}{Max\+Rows\+At\+Compile\+Time}} = size\+\_\+at\+\_\+compile\+\_\+time$<$traits$<$Lhs$>$\+::Max\+Rows\+At\+Compile\+Time, traits$<$Rhs$>$\+::Max\+Rows\+At\+Compile\+Time$>$\+::ret, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6aaee6f0b0b1cc4057a2111e1e2e6d6ccc}{Max\+Cols\+At\+Compile\+Time}} = size\+\_\+at\+\_\+compile\+\_\+time$<$traits$<$Lhs$>$\+::Max\+Cols\+At\+Compile\+Time, traits$<$Rhs$>$\+::Max\+Cols\+At\+Compile\+Time$>$\+::ret, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a67dd07a68f59d0d233428feb334f4030}{Eval\+To\+Row\+Major}} = (Lhs\+Flags \& Rhs\+Flags \& Row\+Major\+Bit), 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a4620de75fd0abe0c420a10bd8eaf6e7b}{Removed\+Bits}} = $\sim$(Eval\+To\+Row\+Major ? 0 \+: Row\+Major\+Bit), 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a5c5de59e4dacd0851729e0c014a308f4}{Flags}}, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6ab7fde96c9f377d0364365300bef05222}{Coeff\+Read\+Cost}} = Huge\+Cost
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_matrix_xpr}{Matrix\+Xpr}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a996450f73c890690ea9352e359687051}{Xpr\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{remove\+\_\+all}}$<$ \+\_\+\+Lhs $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a65604fef861f55abaae9bb5d2a3f1b0d}{Lhs}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{remove\+\_\+all}}$<$ \+\_\+\+Rhs $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a24c9abd6946cab3b5df78c6135f7128d}{Rhs}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_scalar_binary_op_traits}{Scalar\+Binary\+Op\+Traits}}$<$ typename Lhs\+::\+Scalar, typename Rhs\+::\+Scalar $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac585cb0997c2082703f4efeb70329f14}{Return\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a26da8c98571ee9451b95e774507ba355}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1cwise__promote__storage__type}{cwise\+\_\+promote\+\_\+storage\+\_\+type}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a65604fef861f55abaae9bb5d2a3f1b0d}{Lhs}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a1dd945a0f986623e82aba647e8e3819b}{Storage\+Kind}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a24c9abd6946cab3b5df78c6135f7128d}{Rhs}} $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a1dd945a0f986623e82aba647e8e3819b}{Storage\+Kind}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1scalar__product__op}{scalar\+\_\+product\+\_\+op}}$<$ typename Lhs\+::\+Scalar, typename Rhs\+::\+Scalar $>$ $>$\+::ret \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a1dd945a0f986623e82aba647e8e3819b}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__index__type}{promote\+\_\+index\+\_\+type}}$<$ typename Lhs\+::\+Storage\+Index, typename Rhs\+::\+Storage\+Index $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ae173aa6751ac0dbc111e047d583f1866}{Storage\+Index}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_sparse_matrix}{Sparse\+Matrix}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a26da8c98571ee9451b95e774507ba355}{Scalar}}, 0, \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ae173aa6751ac0dbc111e047d583f1866}{Storage\+Index}} $>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac585cb0997c2082703f4efeb70329f14}{Return\+Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a65604fef861f55abaae9bb5d2a3f1b0d}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a65604fef861f55abaae9bb5d2a3f1b0d}} 
+\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!Lhs@{Lhs}}
+\index{Lhs@{Lhs}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Lhs}{Lhs}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Lhs , typename \+\_\+\+Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{remove\+\_\+all}}$<$\+\_\+\+Lhs$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_kronecker_product_sparse}{Kronecker\+Product\+Sparse}}$<$ \+\_\+\+Lhs, \+\_\+\+Rhs $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a65604fef861f55abaae9bb5d2a3f1b0d}{Lhs}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac585cb0997c2082703f4efeb70329f14}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac585cb0997c2082703f4efeb70329f14}} 
+\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!ReturnType@{ReturnType}}
+\index{ReturnType@{ReturnType}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{ReturnType}{ReturnType}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Lhs , typename \+\_\+\+Rhs $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_sparse_matrix}{Sparse\+Matrix}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a26da8c98571ee9451b95e774507ba355}{Scalar}}, 0, \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ae173aa6751ac0dbc111e047d583f1866}{Storage\+Index}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_kronecker_product_sparse}{Kronecker\+Product\+Sparse}}$<$ \+\_\+\+Lhs, \+\_\+\+Rhs $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac585cb0997c2082703f4efeb70329f14}{Return\+Type}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a24c9abd6946cab3b5df78c6135f7128d}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a24c9abd6946cab3b5df78c6135f7128d}} 
+\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!Rhs@{Rhs}}
+\index{Rhs@{Rhs}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Rhs}{Rhs}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Lhs , typename \+\_\+\+Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{remove\+\_\+all}}$<$\+\_\+\+Rhs$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_kronecker_product_sparse}{Kronecker\+Product\+Sparse}}$<$ \+\_\+\+Lhs, \+\_\+\+Rhs $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a24c9abd6946cab3b5df78c6135f7128d}{Rhs}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a26da8c98571ee9451b95e774507ba355}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a26da8c98571ee9451b95e774507ba355}} 
+\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Lhs , typename \+\_\+\+Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_scalar_binary_op_traits}{Scalar\+Binary\+Op\+Traits}}$<$typename Lhs\+::\+Scalar, typename Rhs\+::\+Scalar$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac585cb0997c2082703f4efeb70329f14}{Return\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_kronecker_product_sparse}{Kronecker\+Product\+Sparse}}$<$ \+\_\+\+Lhs, \+\_\+\+Rhs $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a26da8c98571ee9451b95e774507ba355}{Scalar}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ae173aa6751ac0dbc111e047d583f1866}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ae173aa6751ac0dbc111e047d583f1866}} 
+\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!StorageIndex@{StorageIndex}}
+\index{StorageIndex@{StorageIndex}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageIndex}{StorageIndex}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Lhs , typename \+\_\+\+Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1promote__index__type}{promote\+\_\+index\+\_\+type}}$<$typename Lhs\+::\+Storage\+Index, typename Rhs\+::\+Storage\+Index$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_kronecker_product_sparse}{Kronecker\+Product\+Sparse}}$<$ \+\_\+\+Lhs, \+\_\+\+Rhs $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ae173aa6751ac0dbc111e047d583f1866}{Storage\+Index}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a1dd945a0f986623e82aba647e8e3819b}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a1dd945a0f986623e82aba647e8e3819b}} 
+\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Lhs , typename \+\_\+\+Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1cwise__promote__storage__type}{cwise\+\_\+promote\+\_\+storage\+\_\+type}}$<$typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a65604fef861f55abaae9bb5d2a3f1b0d}{Lhs}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a1dd945a0f986623e82aba647e8e3819b}{Storage\+Kind}}, typename \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{traits}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a24c9abd6946cab3b5df78c6135f7128d}{Rhs}}$>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a1dd945a0f986623e82aba647e8e3819b}{Storage\+Kind}}, \mbox{\hyperlink{struct_eigen_1_1internal_1_1scalar__product__op}{scalar\+\_\+product\+\_\+op}}$<$typename Lhs\+::\+Scalar, typename Rhs\+::\+Scalar$>$ $>$\+::ret \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_kronecker_product_sparse}{Kronecker\+Product\+Sparse}}$<$ \+\_\+\+Lhs, \+\_\+\+Rhs $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a1dd945a0f986623e82aba647e8e3819b}{Storage\+Kind}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a996450f73c890690ea9352e359687051}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a996450f73c890690ea9352e359687051}} 
+\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!XprKind@{XprKind}}
+\index{XprKind@{XprKind}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{XprKind}{XprKind}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Lhs , typename \+\_\+\+Rhs $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_matrix_xpr}{Matrix\+Xpr}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_kronecker_product_sparse}{Kronecker\+Product\+Sparse}}$<$ \+\_\+\+Lhs, \+\_\+\+Rhs $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_a996450f73c890690ea9352e359687051}{Xpr\+Kind}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Lhs , typename \+\_\+\+Rhs $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LhsFlags@{LhsFlags}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!LhsFlags@{LhsFlags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a21e8f1c16807e696d4efea0325d539fc}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a21e8f1c16807e696d4efea0325d539fc}} 
+Lhs\+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RhsFlags@{RhsFlags}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!RhsFlags@{RhsFlags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6acdf873162e6f4fbfb4279eaad49dc02c}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6acdf873162e6f4fbfb4279eaad49dc02c}} 
+Rhs\+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6ac18e47cc1da6dd276b1a6eb5bd4f1de0}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6ac18e47cc1da6dd276b1a6eb5bd4f1de0}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6ab421eaf0be43dac8bd9fd4f84c4b4ef9}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6ab421eaf0be43dac8bd9fd4f84c4b4ef9}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a395fb32499330991090defaa65bb951e}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a395fb32499330991090defaa65bb951e}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6aaee6f0b0b1cc4057a2111e1e2e6d6ccc}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6aaee6f0b0b1cc4057a2111e1e2e6d6ccc}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EvalToRowMajor@{EvalToRowMajor}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!EvalToRowMajor@{EvalToRowMajor}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a67dd07a68f59d0d233428feb334f4030}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a67dd07a68f59d0d233428feb334f4030}} 
+Eval\+To\+Row\+Major&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RemovedBits@{RemovedBits}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!RemovedBits@{RemovedBits}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a4620de75fd0abe0c420a10bd8eaf6e7b}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a4620de75fd0abe0c420a10bd8eaf6e7b}} 
+Removed\+Bits&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a5c5de59e4dacd0851729e0c014a308f4}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6a5c5de59e4dacd0851729e0c014a308f4}} 
+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CoeffReadCost@{CoeffReadCost}!Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}}\index{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$@{Eigen::internal::traits$<$ KroneckerProductSparse$<$ \_Lhs, \_Rhs $>$ $>$}!CoeffReadCost@{CoeffReadCost}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6ab7fde96c9f377d0364365300bef05222}\label{struct_eigen_1_1internal_1_1traits_3_01_kronecker_product_sparse_3_01___lhs_00_01___rhs_01_4_01_4_ac7cb656215b193a3fe955e0e43307de6ab7fde96c9f377d0364365300bef05222}} 
+Coeff\+Read\+Cost&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/src/\+Kronecker\+Product/\mbox{\hyperlink{_kronecker_tensor_product_8h}{Kronecker\+Tensor\+Product.\+h}}\end{DoxyCompactItemize}

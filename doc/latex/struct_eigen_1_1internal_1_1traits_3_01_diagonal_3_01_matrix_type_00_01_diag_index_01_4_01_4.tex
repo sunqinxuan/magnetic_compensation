@@ -1,0 +1,122 @@
+\hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4}{}\doxysection{Eigen\+::internal\+::traits$<$ Diagonal$<$ Matrix\+Type, Diag\+Index $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4}\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}
+
+
+{\ttfamily \#include $<$Diagonal.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::internal\+::traits$<$ Diagonal$<$ Matrix\+Type, Diag\+Index $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::internal\+::traits$<$ Diagonal$<$ Matrix\+Type, Diag\+Index $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda76340e36cbca00c44afdf582dbfbcf79}{Rows\+At\+Compile\+Time}}, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cddab48fddf43c5896b15df0c7d38420c8e7}{Cols\+At\+Compile\+Time}} = 1, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda2bf3194bd43e163efb25ed625776ac37}{Max\+Rows\+At\+Compile\+Time}}, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda3ad6093abb0b580d090ec6ddc18028dc}{Max\+Cols\+At\+Compile\+Time}} = 1, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda06cce71f4ff7afe7252c912e4c829dec}{Mask\+Lvalue\+Bit}} = is\+\_\+lvalue$<$Matrix\+Type$>$\+::value ? Lvalue\+Bit \+: 0, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda21f501608afd7f4b102f5490824f215b}{Flags}} = (unsigned int)\+\_\+\+Matrix\+Type\+Nested\+::Flags \& (Row\+Major\+Bit $\vert$ Mask\+Lvalue\+Bit $\vert$ Direct\+Access\+Bit) \& $\sim$\+Row\+Major\+Bit, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cddae785cbc9822fe614ec62b0d2ae08368d}{Matrix\+Type\+Outer\+Stride}} = outer\+\_\+stride\+\_\+at\+\_\+compile\+\_\+time$<$Matrix\+Type$>$\+::ret, 
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cddab31432562c88b84a047c7bbd378a4915}{Inner\+Stride\+At\+Compile\+Time}} = Matrix\+Type\+Outer\+Stride == Dynamic ? Dynamic \+: Matrix\+Type\+Outer\+Stride+1, 
+\newline
+\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda5591fcf382bda15adf004fad473bb1a0}{Outer\+Stride\+At\+Compile\+Time}} = 0
+ \}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{ref\+\_\+selector}}$<$ Matrix\+Type $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_aadca7c151a56c6b83fbcc717d5b77667}{Matrix\+Type\+Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_aadca7c151a56c6b83fbcc717d5b77667}{Matrix\+Type\+Nested}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a1e1e771fa8ef2e2332d224e813e64a84}{\+\_\+\+Matrix\+Type\+Nested}}
+\item 
+typedef Matrix\+Type\+::\+Storage\+Kind \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a7255733bcda46fcc7cc0bcaafaf92506}{Storage\+Kind}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a1e1e771fa8ef2e2332d224e813e64a84}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a1e1e771fa8ef2e2332d224e813e64a84}} 
+\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!\_MatrixTypeNested@{\_MatrixTypeNested}}
+\index{\_MatrixTypeNested@{\_MatrixTypeNested}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{\_MatrixTypeNested}{\_MatrixTypeNested}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Diag\+Index$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__reference}{remove\+\_\+reference}}$<$\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_aadca7c151a56c6b83fbcc717d5b77667}{Matrix\+Type\+Nested}}$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_diagonal}{Diagonal}}$<$ Matrix\+Type, Diag\+Index $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a1e1e771fa8ef2e2332d224e813e64a84}{\+\_\+\+Matrix\+Type\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_aadca7c151a56c6b83fbcc717d5b77667}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_aadca7c151a56c6b83fbcc717d5b77667}} 
+\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!MatrixTypeNested@{MatrixTypeNested}}
+\index{MatrixTypeNested@{MatrixTypeNested}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{MatrixTypeNested}{MatrixTypeNested}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Diag\+Index$>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1ref__selector}{ref\+\_\+selector}}$<$Matrix\+Type$>$\+::type \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_diagonal}{Diagonal}}$<$ Matrix\+Type, Diag\+Index $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_aadca7c151a56c6b83fbcc717d5b77667}{Matrix\+Type\+Nested}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a7255733bcda46fcc7cc0bcaafaf92506}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a7255733bcda46fcc7cc0bcaafaf92506}} 
+\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Diag\+Index$>$ \\
+typedef Matrix\+Type\+::\+Storage\+Kind \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_diagonal}{Diagonal}}$<$ Matrix\+Type, Diag\+Index $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a7255733bcda46fcc7cc0bcaafaf92506}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdd}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdd}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type , int Diag\+Index$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda76340e36cbca00c44afdf582dbfbcf79}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda76340e36cbca00c44afdf582dbfbcf79}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cddab48fddf43c5896b15df0c7d38420c8e7}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cddab48fddf43c5896b15df0c7d38420c8e7}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda2bf3194bd43e163efb25ed625776ac37}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda2bf3194bd43e163efb25ed625776ac37}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxColsAtCompileTime@{MaxColsAtCompileTime}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!MaxColsAtCompileTime@{MaxColsAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda3ad6093abb0b580d090ec6ddc18028dc}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda3ad6093abb0b580d090ec6ddc18028dc}} 
+Max\+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaskLvalueBit@{MaskLvalueBit}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!MaskLvalueBit@{MaskLvalueBit}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda06cce71f4ff7afe7252c912e4c829dec}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda06cce71f4ff7afe7252c912e4c829dec}} 
+Mask\+Lvalue\+Bit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!Flags@{Flags}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda21f501608afd7f4b102f5490824f215b}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda21f501608afd7f4b102f5490824f215b}} 
+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MatrixTypeOuterStride@{MatrixTypeOuterStride}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!MatrixTypeOuterStride@{MatrixTypeOuterStride}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cddae785cbc9822fe614ec62b0d2ae08368d}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cddae785cbc9822fe614ec62b0d2ae08368d}} 
+Matrix\+Type\+Outer\+Stride&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InnerStrideAtCompileTime@{InnerStrideAtCompileTime}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!InnerStrideAtCompileTime@{InnerStrideAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cddab31432562c88b84a047c7bbd378a4915}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cddab31432562c88b84a047c7bbd378a4915}} 
+Inner\+Stride\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OuterStrideAtCompileTime@{OuterStrideAtCompileTime}!Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}}\index{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$@{Eigen::internal::traits$<$ Diagonal$<$ MatrixType, DiagIndex $>$ $>$}!OuterStrideAtCompileTime@{OuterStrideAtCompileTime}}}\mbox{\Hypertarget{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda5591fcf382bda15adf004fad473bb1a0}\label{struct_eigen_1_1internal_1_1traits_3_01_diagonal_3_01_matrix_type_00_01_diag_index_01_4_01_4_a5ffeda1e4fec495cc002ce2f74cb0cdda5591fcf382bda15adf004fad473bb1a0}} 
+Outer\+Stride\+At\+Compile\+Time&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+Core/\mbox{\hyperlink{_diagonal_8h}{Diagonal.\+h}}\end{DoxyCompactItemize}

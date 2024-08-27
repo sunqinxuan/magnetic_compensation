@@ -1,0 +1,48 @@
+\hypertarget{_market_i_o_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/unsupported/\+Eigen/src/\+Sparse\+Extra/\+Market\+IO.h File Reference}
+\label{_market_i_o_8h}\index{3rd\_party/eigen-\/3.3.9/unsupported/Eigen/src/SparseExtra/MarketIO.h@{3rd\_party/eigen-\/3.3.9/unsupported/Eigen/src/SparseExtra/MarketIO.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Market\+I\+O.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{_market_i_o_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_eigen}{Eigen}}
+\item 
+ \mbox{\hyperlink{namespace_eigen_1_1internal}{Eigen\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Scalar , typename Index\+Type $>$ }\\bool \mbox{\hyperlink{namespace_eigen_1_1internal_a4dab6dece03390104ebc60872eb86b2e}{Eigen\+::internal\+::\+Get\+Market\+Line}} (std\+::stringstream \&line, Index\+Type \&M, Index\+Type \&N, Index\+Type \&i, Index\+Type \&j, Scalar \&value)
+\item 
+{\footnotesize template$<$typename Scalar , typename Index\+Type $>$ }\\bool \mbox{\hyperlink{namespace_eigen_1_1internal_af8092874b7149fd79194c9ea5048405c}{Eigen\+::internal\+::\+Get\+Market\+Line}} (std\+::stringstream \&line, Index\+Type \&M, Index\+Type \&N, Index\+Type \&i, Index\+Type \&j, std\+::complex$<$ Scalar $>$ \&value)
+\item 
+{\footnotesize template$<$typename Real\+Scalar $>$ }\\void \mbox{\hyperlink{namespace_eigen_1_1internal_aa17f2e52fbfff17514d7539272af985b}{Eigen\+::internal\+::\+Get\+Vector\+Elt}} (const std\+::string \&line, Real\+Scalar \&val)
+\item 
+{\footnotesize template$<$typename Real\+Scalar $>$ }\\void \mbox{\hyperlink{namespace_eigen_1_1internal_ad54520cf6e59094347485ae12d251b0b}{Eigen\+::internal\+::\+Get\+Vector\+Elt}} (const std\+::string \&line, std\+::complex$<$ Real\+Scalar $>$ \&val)
+\item 
+{\footnotesize template$<$typename Scalar $>$ }\\void \mbox{\hyperlink{namespace_eigen_1_1internal_a07de4b2f7e69c49f64526d949633b815}{Eigen\+::internal\+::put\+Market\+Header}} (std\+::string \&header, int sym)
+\item 
+{\footnotesize template$<$typename Scalar $>$ }\\void \mbox{\hyperlink{namespace_eigen_1_1internal_ab51b65f073e663c1728400cbee6d198f}{Eigen\+::internal\+::\+Put\+Matrix\+Elt}} (Scalar value, int \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, int \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}, std\+::ofstream \&out)
+\item 
+{\footnotesize template$<$typename Scalar $>$ }\\void \mbox{\hyperlink{namespace_eigen_1_1internal_a27151df12e7a9a6e106e2078dda79683}{Eigen\+::internal\+::\+Put\+Matrix\+Elt}} (std\+::complex$<$ Scalar $>$ value, int \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}}, int \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}}, std\+::ofstream \&out)
+\item 
+{\footnotesize template$<$typename Scalar $>$ }\\void \mbox{\hyperlink{namespace_eigen_1_1internal_ae2c2feff7d83462d5ddeb10ba4360ecb}{Eigen\+::internal\+::put\+Vector\+Elt}} (Scalar value, std\+::ofstream \&out)
+\item 
+{\footnotesize template$<$typename Scalar $>$ }\\void \mbox{\hyperlink{namespace_eigen_1_1internal_af8aa46d8901e6b53e28d933d4cf5cf7d}{Eigen\+::internal\+::put\+Vector\+Elt}} (std\+::complex$<$ Scalar $>$ value, std\+::ofstream \&out)
+\item 
+bool \mbox{\hyperlink{namespace_eigen_a05ffc60521f5447623d7709a1419d7ac}{Eigen\+::get\+Market\+Header}} (const std\+::string \&filename, int \&sym, bool \&iscomplex, bool \&isvector)
+\item 
+{\footnotesize template$<$typename Sparse\+Matrix\+Type $>$ }\\bool \mbox{\hyperlink{namespace_eigen_a35610696b22ae58bdd51d96468956455}{Eigen\+::load\+Market}} (Sparse\+Matrix\+Type \&mat, const std\+::string \&filename)
+\item 
+{\footnotesize template$<$typename Vector\+Type $>$ }\\bool \mbox{\hyperlink{namespace_eigen_a0b97a7af6c8af0fa0455723203b24853}{Eigen\+::load\+Market\+Vector}} (Vector\+Type \&vec, const std\+::string \&filename)
+\item 
+{\footnotesize template$<$typename Sparse\+Matrix\+Type $>$ }\\bool \mbox{\hyperlink{namespace_eigen_a33d673f7e2dfee413dec4395a6a40f46}{Eigen\+::save\+Market}} (const Sparse\+Matrix\+Type \&mat, const std\+::string \&filename, int sym=0)
+\item 
+{\footnotesize template$<$typename Vector\+Type $>$ }\\bool \mbox{\hyperlink{namespace_eigen_a43fb1aaef616814a2c030a7986ed0afd}{Eigen\+::save\+Market\+Vector}} (const Vector\+Type \&vec, const std\+::string \&filename)
+\end{DoxyCompactItemize}

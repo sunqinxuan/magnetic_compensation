@@ -1,0 +1,68 @@
+\hypertarget{calibrate_8cc}{}\doxysection{test/calibrate.cc File Reference}
+\label{calibrate_8cc}\index{test/calibrate.cc@{test/calibrate.cc}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$gflags/gflags.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common/mic\+\_\+prerequisite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/mic\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/mic\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data\+\_\+storer/mic\+\_\+data\+\_\+storer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/mic\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/obeserver/mic\+\_\+state\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/impl/mic\+\_\+ellipsoid\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/impl/mic\+\_\+tl\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/impl/mic\+\_\+tl\+\_\+component\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mic\+\_\+mag\+\_\+compensator/impl/mic\+\_\+cabin\+\_\+mag\+\_\+compensator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fileio/fileio.\+h\char`\"{}}\newline
+Include dependency graph for calibrate.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{calibrate_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{calibrate_8cc_a37584d08e5358ae8f97a72e22a070186}{D\+E\+F\+I\+N\+E\+\_\+string}} (model, \char`\"{}ellipsoid\char`\"{}, \char`\"{}ellipsoid, tl, tlc or cabin\char`\"{})
+\item 
+\mbox{\hyperlink{calibrate_8cc_a08b22228bd3f2b64c05afd2105d519a6}{D\+E\+F\+I\+N\+E\+\_\+string}} (\mbox{\hyperlink{3rd__party_2tolles-lawson_2_c_make_lists_8txt_afbbe76c98bd0d8b6ca5a03175563eb71}{file}}, \char`\"{}Flt1002\+\_\+1002.\+02.\+txt\char`\"{}, \char`\"{}\mbox{\hyperlink{3rd__party_2tolles-lawson_2_c_make_lists_8txt_afbbe76c98bd0d8b6ca5a03175563eb71}{file}} to load data\char`\"{})
+\item 
+int \mbox{\hyperlink{calibrate_8cc_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{calibrate_8cc_a7644833dba27408f270a7b4b8b9ec921}{U\+S\+I\+N\+G\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+M\+IC}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{calibrate_8cc_a08b22228bd3f2b64c05afd2105d519a6}\label{calibrate_8cc_a08b22228bd3f2b64c05afd2105d519a6}} 
+\index{calibrate.cc@{calibrate.cc}!DEFINE\_string@{DEFINE\_string}}
+\index{DEFINE\_string@{DEFINE\_string}!calibrate.cc@{calibrate.cc}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_string()}{DEFINE\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily D\+E\+F\+I\+N\+E\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{3rd__party_2tolles-lawson_2_c_make_lists_8txt_afbbe76c98bd0d8b6ca5a03175563eb71}{file}}}]{,  }\item[{\char`\"{}Flt1002\+\_\+1002.\+02.\+txt\char`\"{}}]{,  }\item[{\char`\"{}file to load data\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{calibrate_8cc_a37584d08e5358ae8f97a72e22a070186}\label{calibrate_8cc_a37584d08e5358ae8f97a72e22a070186}} 
+\index{calibrate.cc@{calibrate.cc}!DEFINE\_string@{DEFINE\_string}}
+\index{DEFINE\_string@{DEFINE\_string}!calibrate.cc@{calibrate.cc}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_string()}{DEFINE\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily D\+E\+F\+I\+N\+E\+\_\+string (\begin{DoxyParamCaption}\item[{model}]{,  }\item[{\char`\"{}ellipsoid\char`\"{}}]{,  }\item[{\char`\"{}}]{ellipsoid,  }\item[{tl}]{,  }\item[{tlc or cabin\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{calibrate_8cc_a0ddf1224851353fc92bfbff6f499fa97}\label{calibrate_8cc_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{calibrate.cc@{calibrate.cc}!main@{main}}
+\index{main@{main}!calibrate.cc@{calibrate.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{calibrate_8cc_a7644833dba27408f270a7b4b8b9ec921}\label{calibrate_8cc_a7644833dba27408f270a7b4b8b9ec921}} 
+\index{calibrate.cc@{calibrate.cc}!USING\_NAMESPACE\_MIC@{USING\_NAMESPACE\_MIC}}
+\index{USING\_NAMESPACE\_MIC@{USING\_NAMESPACE\_MIC}!calibrate.cc@{calibrate.cc}}
+\doxysubsubsection{\texorpdfstring{USING\_NAMESPACE\_MIC}{USING\_NAMESPACE\_MIC}}
+{\footnotesize\ttfamily U\+S\+I\+N\+G\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+M\+IC}
+

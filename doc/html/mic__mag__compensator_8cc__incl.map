@@ -1,0 +1,28 @@
+<map id="src/mic_mag_compensator/mic_mag_compensator.cc" name="src/mic_mag_compensator/mic_mag_compensator.cc">
+<area shape="rect" id="node1" title=" " alt="" coords="518,5,716,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="415,102,488,129"/>
+<area shape="rect" id="node3" href="$mic__mag__compensator_8h.html" title="basic class for magnetic compensation" alt="" coords="823,184,1014,225"/>
+<area shape="rect" id="node23" href="$mic__kf__ins__estimator_8h.html" title=" " alt="" coords="512,95,722,136"/>
+<area shape="rect" id="node4" href="$mic__prerequisite_8h.html" title=" " alt="" coords="204,512,408,539"/>
+<area shape="rect" id="node11" href="$mic__utils_8h.html" title=" " alt="" coords="841,281,996,307"/>
+<area shape="rect" id="node15" href="$mic__data__storer_8h.html" title=" " alt="" coords="473,273,633,315"/>
+<area shape="rect" id="node5" title=" " alt="" coords="51,661,143,688"/>
+<area shape="rect" id="node6" title=" " alt="" coords="263,661,390,688"/>
+<area shape="rect" id="node7" title=" " alt="" coords="230,587,294,613"/>
+<area shape="rect" id="node8" title=" " alt="" coords="318,587,385,613"/>
+<area shape="rect" id="node9" href="$mic__base_8h.html" title=" " alt="" coords="86,587,206,613"/>
+<area shape="rect" id="node10" title=" " alt="" coords="460,587,537,613"/>
+<area shape="rect" id="node12" title=" " alt="" coords="929,363,993,389"/>
+<area shape="rect" id="node13" title=" " alt="" coords="759,363,822,389"/>
+<area shape="rect" id="node14" title=" " alt="" coords="846,363,905,389"/>
+<area shape="rect" id="node16" href="$mic__config_8h.html" title=" " alt="" coords="208,363,375,389"/>
+<area shape="rect" id="node20" title=" " alt="" coords="489,363,540,389"/>
+<area shape="rect" id="node21" title=" " alt="" coords="564,363,619,389"/>
+<area shape="rect" id="node22" title=" " alt="" coords="643,363,735,389"/>
+<area shape="rect" id="node17" href="$mic__logger_8h.html" title=" " alt="" coords="39,437,206,464"/>
+<area shape="rect" id="node18" title=" " alt="" coords="378,437,454,464"/>
+<area shape="rect" id="node19" title=" " alt="" coords="230,437,354,464"/>
+<area shape="rect" id="node24" title=" " alt="" coords="662,191,798,218"/>
+<area shape="rect" id="node25" title=" " alt="" coords="492,191,638,218"/>
+<area shape="rect" id="node26" href="$mic__nav__state__estimator_8h.html" title=" " alt="" coords="265,184,468,225"/>
+</map>

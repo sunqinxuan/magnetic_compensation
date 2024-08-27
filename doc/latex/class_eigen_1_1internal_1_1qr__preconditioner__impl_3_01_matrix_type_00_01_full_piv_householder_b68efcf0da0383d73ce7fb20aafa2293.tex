@@ -1,0 +1,126 @@
+\hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293}{}\doxysection{Eigen\+::internal\+::qr\+\_\+preconditioner\+\_\+impl$<$ Matrix\+Type, Full\+Piv\+Householder\+Q\+R\+Preconditioner, Precondition\+If\+More\+Rows\+Than\+Cols, true $>$ Class Template Reference}
+\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293}\index{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}}
+
+
+{\ttfamily \#include $<$Jacobi\+S\+V\+D.\+h$>$}
+
+
+
+Collaboration diagram for Eigen\+::internal\+::qr\+\_\+preconditioner\+\_\+impl$<$ Matrix\+Type, Full\+Piv\+Householder\+Q\+R\+Preconditioner, Precondition\+If\+More\+Rows\+Than\+Cols, true $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_47c6eb5d1fa7c2ccb84873068d9b2139}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aefac04646de84f44a8376e8c5fa64922112}{Rows\+At\+Compile\+Time}} = Matrix\+Type\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aefafe974d81c81f824bd0e4a51c62028ba6}{Max\+Rows\+At\+Compile\+Time}} = Matrix\+Type\+::Max\+Rows\+At\+Compile\+Time
+ \}
+\item 
+typedef Matrix\+Type\+::\+Scalar \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6598c76a30eba4be4175fd6024520646}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$ \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6598c76a30eba4be4175fd6024520646}{Scalar}}, 1, \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aefac04646de84f44a8376e8c5fa64922112}{Rows\+At\+Compile\+Time}}, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, 1, \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aefafe974d81c81f824bd0e4a51c62028ba6}{Max\+Rows\+At\+Compile\+Time}} $>$ \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_acd199f9e16acf39324487c2bcff62fc1}{Workspace\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_aaf51bc2637a96e8069128f3ee9eb1726}{allocate}} (const \mbox{\hyperlink{class_eigen_1_1_jacobi_s_v_d}{Jacobi\+S\+VD}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}} $>$ \&svd)
+\item 
+bool \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_ab9e7960349091e9d4c44b9a0a31b0931}{run}} (\mbox{\hyperlink{class_eigen_1_1_jacobi_s_v_d}{Jacobi\+S\+VD}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}} $>$ \&svd, const Matrix\+Type \&matrix)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_full_piv_householder_q_r}{Full\+Piv\+Householder\+QR}}$<$ Matrix\+Type $>$ \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6cfa033c3b8ae2e0327bdebd87c9a9fc}{Q\+R\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6cfa033c3b8ae2e0327bdebd87c9a9fc}{Q\+R\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_af0e3bc8bad9bda049439c273114d9d83}{m\+\_\+qr}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_acd199f9e16acf39324487c2bcff62fc1}{Workspace\+Type}} \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a79d0dd33c1e3c04b9b6d2a5271fc9b0f}{m\+\_\+workspace}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6cfa033c3b8ae2e0327bdebd87c9a9fc}\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6cfa033c3b8ae2e0327bdebd87c9a9fc}} 
+\index{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}!QRType@{QRType}}
+\index{QRType@{QRType}!Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}}
+\doxysubsubsection{\texorpdfstring{QRType}{QRType}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_full_piv_householder_q_r}{Full\+Piv\+Householder\+QR}}$<$Matrix\+Type$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1qr__preconditioner__impl}{Eigen\+::internal\+::qr\+\_\+preconditioner\+\_\+impl}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}}, \mbox{\hyperlink{namespace_eigen_1_1internal_ae7c2e23c56d732944ce112f8e166eeb0af43dd09c4617ed9311811a15db114b62}{Precondition\+If\+More\+Rows\+Than\+Cols}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6cfa033c3b8ae2e0327bdebd87c9a9fc}{Q\+R\+Type}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6598c76a30eba4be4175fd6024520646}\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6598c76a30eba4be4175fd6024520646}} 
+\index{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+typedef Matrix\+Type\+::\+Scalar \mbox{\hyperlink{struct_eigen_1_1internal_1_1qr__preconditioner__impl}{Eigen\+::internal\+::qr\+\_\+preconditioner\+\_\+impl}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}}, \mbox{\hyperlink{namespace_eigen_1_1internal_ae7c2e23c56d732944ce112f8e166eeb0af43dd09c4617ed9311811a15db114b62}{Precondition\+If\+More\+Rows\+Than\+Cols}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6598c76a30eba4be4175fd6024520646}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_acd199f9e16acf39324487c2bcff62fc1}\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_acd199f9e16acf39324487c2bcff62fc1}} 
+\index{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}!WorkspaceType@{WorkspaceType}}
+\index{WorkspaceType@{WorkspaceType}!Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}}
+\doxysubsubsection{\texorpdfstring{WorkspaceType}{WorkspaceType}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$\mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6598c76a30eba4be4175fd6024520646}{Scalar}}, 1, \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aefac04646de84f44a8376e8c5fa64922112}{Rows\+At\+Compile\+Time}}, \mbox{\hyperlink{group__enums_ggaacded1a18ae58b0f554751f6cdf9eb13a77c993a8d9f6efe5c1159fb2ab07dd4f}{Row\+Major}}, 1, \mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aefafe974d81c81f824bd0e4a51c62028ba6}{Max\+Rows\+At\+Compile\+Time}}$>$ \mbox{\hyperlink{struct_eigen_1_1internal_1_1qr__preconditioner__impl}{Eigen\+::internal\+::qr\+\_\+preconditioner\+\_\+impl}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}}, \mbox{\hyperlink{namespace_eigen_1_1internal_ae7c2e23c56d732944ce112f8e166eeb0af43dd09c4617ed9311811a15db114b62}{Precondition\+If\+More\+Rows\+Than\+Cols}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_acd199f9e16acf39324487c2bcff62fc1}{Workspace\+Type}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aef}\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aef}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}}\index{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aefac04646de84f44a8376e8c5fa64922112}\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aefac04646de84f44a8376e8c5fa64922112}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaxRowsAtCompileTime@{MaxRowsAtCompileTime}!Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}}\index{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}!MaxRowsAtCompileTime@{MaxRowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aefafe974d81c81f824bd0e4a51c62028ba6}\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a9746c411fdae94bc17e32bad89ca5aefafe974d81c81f824bd0e4a51c62028ba6}} 
+Max\+Rows\+At\+Compile\+Time&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_aaf51bc2637a96e8069128f3ee9eb1726}\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_aaf51bc2637a96e8069128f3ee9eb1726}} 
+\index{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}!allocate@{allocate}}
+\index{allocate@{allocate}!Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+void \mbox{\hyperlink{struct_eigen_1_1internal_1_1qr__preconditioner__impl}{Eigen\+::internal\+::qr\+\_\+preconditioner\+\_\+impl}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}}, \mbox{\hyperlink{namespace_eigen_1_1internal_ae7c2e23c56d732944ce112f8e166eeb0af43dd09c4617ed9311811a15db114b62}{Precondition\+If\+More\+Rows\+Than\+Cols}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::allocate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_jacobi_s_v_d}{Jacobi\+S\+VD}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}} $>$ \&}]{svd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_ab9e7960349091e9d4c44b9a0a31b0931}\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_ab9e7960349091e9d4c44b9a0a31b0931}} 
+\index{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}!run@{run}}
+\index{run@{run}!Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+bool \mbox{\hyperlink{struct_eigen_1_1internal_1_1qr__preconditioner__impl}{Eigen\+::internal\+::qr\+\_\+preconditioner\+\_\+impl}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}}, \mbox{\hyperlink{namespace_eigen_1_1internal_ae7c2e23c56d732944ce112f8e166eeb0af43dd09c4617ed9311811a15db114b62}{Precondition\+If\+More\+Rows\+Than\+Cols}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_jacobi_s_v_d}{Jacobi\+S\+VD}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}} $>$ \&}]{svd,  }\item[{const Matrix\+Type \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_af0e3bc8bad9bda049439c273114d9d83}\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_af0e3bc8bad9bda049439c273114d9d83}} 
+\index{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}!m\_qr@{m\_qr}}
+\index{m\_qr@{m\_qr}!Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}}
+\doxysubsubsection{\texorpdfstring{m\_qr}{m\_qr}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a6cfa033c3b8ae2e0327bdebd87c9a9fc}{Q\+R\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1qr__preconditioner__impl}{Eigen\+::internal\+::qr\+\_\+preconditioner\+\_\+impl}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}}, \mbox{\hyperlink{namespace_eigen_1_1internal_ae7c2e23c56d732944ce112f8e166eeb0af43dd09c4617ed9311811a15db114b62}{Precondition\+If\+More\+Rows\+Than\+Cols}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::m\+\_\+qr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a79d0dd33c1e3c04b9b6d2a5271fc9b0f}\label{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_a79d0dd33c1e3c04b9b6d2a5271fc9b0f}} 
+\index{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}!m\_workspace@{m\_workspace}}
+\index{m\_workspace@{m\_workspace}!Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$@{Eigen::internal::qr\_preconditioner\_impl$<$ MatrixType, FullPivHouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true $>$}}
+\doxysubsubsection{\texorpdfstring{m\_workspace}{m\_workspace}}
+{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1internal_1_1qr__preconditioner__impl_3_01_matrix_type_00_01_full_piv_householder_b68efcf0da0383d73ce7fb20aafa2293_acd199f9e16acf39324487c2bcff62fc1}{Workspace\+Type}} \mbox{\hyperlink{struct_eigen_1_1internal_1_1qr__preconditioner__impl}{Eigen\+::internal\+::qr\+\_\+preconditioner\+\_\+impl}}$<$ Matrix\+Type, \mbox{\hyperlink{group__enums_gga46eba0d5c621f590b8cf1b53af31d56eabd745dcaff7019c5f918c68809e5ea50}{Full\+Piv\+Householder\+Q\+R\+Preconditioner}}, \mbox{\hyperlink{namespace_eigen_1_1internal_ae7c2e23c56d732944ce112f8e166eeb0af43dd09c4617ed9311811a15db114b62}{Precondition\+If\+More\+Rows\+Than\+Cols}}, \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$\+::m\+\_\+workspace\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/\+Eigen/src/\+S\+V\+D/\mbox{\hyperlink{_jacobi_s_v_d_8h}{Jacobi\+S\+V\+D.\+h}}\end{DoxyCompactItemize}

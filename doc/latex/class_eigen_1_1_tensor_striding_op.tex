@@ -1,0 +1,151 @@
+\hypertarget{class_eigen_1_1_tensor_striding_op}{}\doxysection{Eigen\+::Tensor\+Striding\+Op$<$ Strides, Xpr\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_tensor_striding_op}\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Forward\+Declarations.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a7597b239cf2e9d030ee205806c545edb}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a7597b239cf2e9d030ee205806c545edb}{Scalar}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a7597b239cf2e9d030ee205806c545edb}{Scalar}} $>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_af1cfc253058507847f617fc701e04666}{Real\+Scalar}}
+\item 
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a1a28df70ed45e327cac1bd03226d8607}{Coeff\+Return\+Type}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}} $>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_ab04153b430d9acdd41728afcdc0dd384}{Nested}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a4c11d2154aaa27c8deff74966ae254a1}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a4c11d2154aaa27c8deff74966ae254a1}{Storage\+Kind}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$ \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}} $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a39ec4df37d2ca827a7cc11133eb9b007}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a39ec4df37d2ca827a7cc11133eb9b007}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a8680990e9016343ae59bcee7dae7b8e1}{Tensor\+Striding\+Op}} (const Xpr\+Type \&expr, const Strides \&dims)
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Strides \& \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a3f8661e81ab04cc9f68361e8a3781197}{strides}} () const
+\item 
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$ typename Xpr\+Type\+::\+Nested $>$\+::type \& \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a1c07edcd117ebb165e180a50934afdca}{expression}} () const
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}} \& \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_acc8d8f3210fb1aec8bb7b560489db228}{operator=}} (const \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}} \&other)
+\item 
+{\footnotesize template$<$typename Other\+Derived $>$ }\\E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}} \& \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a15ecf899a28df80d1bd432e78ea4ba5b}{operator=}} (const Other\+Derived \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a51767c9978bca654d680e5d77c01992d}{m\+\_\+xpr}}
+\item 
+const Strides \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a8cc0f8ec1affbee6105dbaae09201fe1}{m\+\_\+dims}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_a1a28df70ed45e327cac1bd03226d8607}\label{class_eigen_1_1_tensor_striding_op_a1a28df70ed45e327cac1bd03226d8607}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!CoeffReturnType@{CoeffReturnType}}
+\index{CoeffReturnType@{CoeffReturnType}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{CoeffReturnType}{CoeffReturnType}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef Xpr\+Type\+::\+Coeff\+Return\+Type \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a1a28df70ed45e327cac1bd03226d8607}{Coeff\+Return\+Type}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_a39ec4df37d2ca827a7cc11133eb9b007}\label{class_eigen_1_1_tensor_striding_op_a39ec4df37d2ca827a7cc11133eb9b007}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a39ec4df37d2ca827a7cc11133eb9b007}{Index}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a39ec4df37d2ca827a7cc11133eb9b007}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_ab04153b430d9acdd41728afcdc0dd384}\label{class_eigen_1_1_tensor_striding_op_ab04153b430d9acdd41728afcdc0dd384}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!Nested@{Nested}}
+\index{Nested@{Nested}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Nested}{Nested}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1nested}{Eigen\+::internal\+::nested}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}}$>$\+::type \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_ab04153b430d9acdd41728afcdc0dd384}{Nested}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_af1cfc253058507847f617fc701e04666}\label{class_eigen_1_1_tensor_striding_op_af1cfc253058507847f617fc701e04666}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!RealScalar@{RealScalar}}
+\index{RealScalar@{RealScalar}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{RealScalar}{RealScalar}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_num_traits}{Eigen\+::\+Num\+Traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a7597b239cf2e9d030ee205806c545edb}{Scalar}}$>$\+::Real \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_af1cfc253058507847f617fc701e04666}{Real\+Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_a7597b239cf2e9d030ee205806c545edb}\label{class_eigen_1_1_tensor_striding_op_a7597b239cf2e9d030ee205806c545edb}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a7597b239cf2e9d030ee205806c545edb}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a7597b239cf2e9d030ee205806c545edb}{Scalar}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_a4c11d2154aaa27c8deff74966ae254a1}\label{class_eigen_1_1_tensor_striding_op_a4c11d2154aaa27c8deff74966ae254a1}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!StorageKind@{StorageKind}}
+\index{StorageKind@{StorageKind}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{StorageKind}{StorageKind}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1traits}{Eigen\+::internal\+::traits}}$<$\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}}$>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a4c11d2154aaa27c8deff74966ae254a1}{Storage\+Kind}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op_a4c11d2154aaa27c8deff74966ae254a1}{Storage\+Kind}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_a8680990e9016343ae59bcee7dae7b8e1}\label{class_eigen_1_1_tensor_striding_op_a8680990e9016343ae59bcee7dae7b8e1}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!TensorStridingOp@{TensorStridingOp}}
+\index{TensorStridingOp@{TensorStridingOp}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{TensorStridingOp()}{TensorStridingOp()}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}} (\begin{DoxyParamCaption}\item[{const Xpr\+Type \&}]{expr,  }\item[{const Strides \&}]{dims }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_a1c07edcd117ebb165e180a50934afdca}\label{class_eigen_1_1_tensor_striding_op_a1c07edcd117ebb165e180a50934afdca}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!expression@{expression}}
+\index{expression@{expression}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{expression()}{expression()}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_eigen_1_1internal_1_1remove__all}{internal\+::remove\+\_\+all}}$<$typename Xpr\+Type\+::\+Nested$>$\+::type\& \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_a15ecf899a28df80d1bd432e78ea4ba5b}\label{class_eigen_1_1_tensor_striding_op_a15ecf899a28df80d1bd432e78ea4ba5b}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+template$<$typename Other\+Derived $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}}\& \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const Other\+Derived \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_acc8d8f3210fb1aec8bb7b560489db228}\label{class_eigen_1_1_tensor_striding_op_acc8d8f3210fb1aec8bb7b560489db228}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}}\& \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_a3f8661e81ab04cc9f68361e8a3781197}\label{class_eigen_1_1_tensor_striding_op_a3f8661e81ab04cc9f68361e8a3781197}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!strides@{strides}}
+\index{strides@{strides}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{strides()}{strides()}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC Strides\& \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::strides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_a8cc0f8ec1affbee6105dbaae09201fe1}\label{class_eigen_1_1_tensor_striding_op_a8cc0f8ec1affbee6105dbaae09201fe1}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!m\_dims@{m\_dims}}
+\index{m\_dims@{m\_dims}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_dims}{m\_dims}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+const Strides \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::m\+\_\+dims\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_tensor_striding_op_a51767c9978bca654d680e5d77c01992d}\label{class_eigen_1_1_tensor_striding_op_a51767c9978bca654d680e5d77c01992d}} 
+\index{Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}!m\_xpr@{m\_xpr}}
+\index{m\_xpr@{m\_xpr}!Eigen::TensorStridingOp$<$ Strides, XprType $>$@{Eigen::TensorStridingOp$<$ Strides, XprType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_xpr}{m\_xpr}}
+{\footnotesize\ttfamily template$<$typename Strides , typename Xpr\+Type $>$ \\
+Xpr\+Type\+::\+Nested \mbox{\hyperlink{class_eigen_1_1_tensor_striding_op}{Eigen\+::\+Tensor\+Striding\+Op}}$<$ Strides, Xpr\+Type $>$\+::m\+\_\+xpr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_forward_declarations_8h}{Tensor\+Forward\+Declarations.\+h}}\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_striding_8h}{Tensor\+Striding.\+h}}\end{DoxyCompactItemize}

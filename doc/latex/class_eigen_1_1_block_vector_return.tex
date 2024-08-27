@@ -1,0 +1,131 @@
+\hypertarget{class_eigen_1_1_block_vector_return}{}\doxysection{Eigen\+::Block\+Vector\+Return$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_block_vector_return}\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}
+
+
+{\ttfamily \#include $<$Block\+Sparse\+Matrix.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110a7f20da0b0ff3c13ec5681d8ba6d56ab2}{Cols\+At\+Compile\+Time}} = Vector\+Type\+::Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110ab92aeb245b772c79ab2e3fae9a9e40ad}{Rows\+At\+Compile\+Time}} = Vector\+Type\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110a07d79c3b00ee3b1f807e2f9bc0ea82aa}{Flags}} = Vector\+Type\+::Flags
+ \}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_ref}{Ref}}$<$ \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$ typename Vector\+Type\+::\+Scalar, \mbox{\hyperlink{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110ab92aeb245b772c79ab2e3fae9a9e40ad}{Rows\+At\+Compile\+Time}}, \mbox{\hyperlink{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110a7f20da0b0ff3c13ec5681d8ba6d56ab2}{Cols\+At\+Compile\+Time}} $>$ $>$ \mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4ae10516cca3a3ebb3dc05a5bb425f65}{Scalar}}
+\item 
+typedef Block\+Sparse\+Matrix\+T\+::\+Index \mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a659b3ca2d668a47e38c28df08fed57ec}{Block\+Vector\+Return}} (const Block\+Sparse\+MatrixT \&spblockmat, Vector\+Type \&vec)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}{Index}} \mbox{\hyperlink{class_eigen_1_1_block_vector_return_aeb50e8420baab72348e94318891746b1}{size}} () const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4ae10516cca3a3ebb3dc05a5bb425f65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4be7014cf6f62103bd98f867ca23cad4}{coeff\+Ref}} (\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}{Index}} bi)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4ae10516cca3a3ebb3dc05a5bb425f65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_block_vector_return_aec21974621e4d468742175e3cd0467cd}{coeff\+Ref}} (\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}{Index}} bi, \mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}{Index}} j)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Block\+Sparse\+MatrixT \& \mbox{\hyperlink{class_eigen_1_1_block_vector_return_a7bb39e7a88bcf9016e8fabd054646bd7}{m\+\_\+spblockmat}}
+\item 
+Vector\+Type \& \mbox{\hyperlink{class_eigen_1_1_block_vector_return_acf7545c76543bb4f5793f392e380015f}{m\+\_\+vec}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}\label{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}} 
+\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+typedef Block\+Sparse\+Matrix\+T\+::\+Index \mbox{\hyperlink{class_eigen_1_1_block_vector_return}{Eigen\+::\+Block\+Vector\+Return}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_a4ae10516cca3a3ebb3dc05a5bb425f65}\label{class_eigen_1_1_block_vector_return_a4ae10516cca3a3ebb3dc05a5bb425f65}} 
+\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_ref}{Ref}}$<$\mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$typename Vector\+Type\+::\+Scalar, \mbox{\hyperlink{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110ab92aeb245b772c79ab2e3fae9a9e40ad}{Rows\+At\+Compile\+Time}}, \mbox{\hyperlink{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110a7f20da0b0ff3c13ec5681d8ba6d56ab2}{Cols\+At\+Compile\+Time}}$>$ $>$ \mbox{\hyperlink{class_eigen_1_1_block_vector_return}{Eigen\+::\+Block\+Vector\+Return}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4ae10516cca3a3ebb3dc05a5bb425f65}{Scalar}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110}\label{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110a7f20da0b0ff3c13ec5681d8ba6d56ab2}\label{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110a7f20da0b0ff3c13ec5681d8ba6d56ab2}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110ab92aeb245b772c79ab2e3fae9a9e40ad}\label{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110ab92aeb245b772c79ab2e3fae9a9e40ad}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!Flags@{Flags}}}\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110a07d79c3b00ee3b1f807e2f9bc0ea82aa}\label{class_eigen_1_1_block_vector_return_a7577105c5f926025a810c5f833d5d110a07d79c3b00ee3b1f807e2f9bc0ea82aa}} 
+Flags&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_a659b3ca2d668a47e38c28df08fed57ec}\label{class_eigen_1_1_block_vector_return_a659b3ca2d668a47e38c28df08fed57ec}} 
+\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!BlockVectorReturn@{BlockVectorReturn}}
+\index{BlockVectorReturn@{BlockVectorReturn}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{BlockVectorReturn()}{BlockVectorReturn()}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_block_vector_return}{Eigen\+::\+Block\+Vector\+Return}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_block_vector_return}{Block\+Vector\+Return}} (\begin{DoxyParamCaption}\item[{const Block\+Sparse\+MatrixT \&}]{spblockmat,  }\item[{Vector\+Type \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_a4be7014cf6f62103bd98f867ca23cad4}\label{class_eigen_1_1_block_vector_return_a4be7014cf6f62103bd98f867ca23cad4}} 
+\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!coeffRef@{coeffRef}}
+\index{coeffRef@{coeffRef}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{coeffRef()}{coeffRef()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4ae10516cca3a3ebb3dc05a5bb425f65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_block_vector_return}{Eigen\+::\+Block\+Vector\+Return}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::coeff\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}{Index}}}]{bi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_aec21974621e4d468742175e3cd0467cd}\label{class_eigen_1_1_block_vector_return_aec21974621e4d468742175e3cd0467cd}} 
+\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!coeffRef@{coeffRef}}
+\index{coeffRef@{coeffRef}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{coeffRef()}{coeffRef()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4ae10516cca3a3ebb3dc05a5bb425f65}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_block_vector_return}{Eigen\+::\+Block\+Vector\+Return}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::coeff\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}{Index}}}]{bi,  }\item[{\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}{Index}}}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_aeb50e8420baab72348e94318891746b1}\label{class_eigen_1_1_block_vector_return_aeb50e8420baab72348e94318891746b1}} 
+\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!size@{size}}
+\index{size@{size}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_block_vector_return_a4d6e7f86756b11e2d65f1cd83d786723}{Index}} \mbox{\hyperlink{class_eigen_1_1_block_vector_return}{Eigen\+::\+Block\+Vector\+Return}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_a7bb39e7a88bcf9016e8fabd054646bd7}\label{class_eigen_1_1_block_vector_return_a7bb39e7a88bcf9016e8fabd054646bd7}} 
+\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!m\_spblockmat@{m\_spblockmat}}
+\index{m\_spblockmat@{m\_spblockmat}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_spblockmat}{m\_spblockmat}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+const Block\+Sparse\+MatrixT\& \mbox{\hyperlink{class_eigen_1_1_block_vector_return}{Eigen\+::\+Block\+Vector\+Return}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::m\+\_\+spblockmat\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_return_acf7545c76543bb4f5793f392e380015f}\label{class_eigen_1_1_block_vector_return_acf7545c76543bb4f5793f392e380015f}} 
+\index{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}!m\_vec@{m\_vec}}
+\index{m\_vec@{m\_vec}!Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorReturn$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_vec}{m\_vec}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+Vector\+Type\& \mbox{\hyperlink{class_eigen_1_1_block_vector_return}{Eigen\+::\+Block\+Vector\+Return}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::m\+\_\+vec\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/src/\+Sparse\+Extra/\mbox{\hyperlink{_block_sparse_matrix_8h}{Block\+Sparse\+Matrix.\+h}}\end{DoxyCompactItemize}

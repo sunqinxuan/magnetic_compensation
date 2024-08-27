@@ -1,0 +1,83 @@
+\hypertarget{class_eigen_1_1internal_1_1_gaussian_generator}{}\doxysection{Eigen\+::internal\+::Gaussian\+Generator$<$ T, Index, Num\+Dims $>$ Class Template Reference}
+\label{class_eigen_1_1internal_1_1_gaussian_generator}\index{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Functors.\+h$>$}
+
+
+
+Collaboration diagram for Eigen\+::internal\+::Gaussian\+Generator$<$ T, Index, Num\+Dims $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_eigen_1_1internal_1_1_gaussian_generator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator_a54fa35a51a93200db4469b4b2b288ea4}{Gaussian\+Generator}} (const \mbox{\hyperlink{class_eigen_1_1array}{array}}$<$ T, Num\+Dims $>$ \&means, const \mbox{\hyperlink{class_eigen_1_1array}{array}}$<$ T, Num\+Dims $>$ \&std\+\_\+devs)
+\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC T \mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator_a8d19ca5434d3049cade619afd3c2ac8d}{operator()}} (const \mbox{\hyperlink{class_eigen_1_1array}{array}}$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Num\+Dims $>$ \&coordinates) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator_adfd474e7dab4c9251f1326a0a4746dd3}{Packet\+Access}} = \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1array}{array}}$<$ T, Num\+Dims $>$ \mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator_acf42446cd583d55deaa1d708857669de}{m\+\_\+means}}
+\item 
+\mbox{\hyperlink{class_eigen_1_1array}{array}}$<$ T, Num\+Dims $>$ \mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator_ad36335a492d18f90be11baee36466a35}{m\+\_\+two\+\_\+sigmas}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_gaussian_generator_a54fa35a51a93200db4469b4b2b288ea4}\label{class_eigen_1_1internal_1_1_gaussian_generator_a54fa35a51a93200db4469b4b2b288ea4}} 
+\index{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}!GaussianGenerator@{GaussianGenerator}}
+\index{GaussianGenerator@{GaussianGenerator}!Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}}
+\doxysubsubsection{\texorpdfstring{GaussianGenerator()}{GaussianGenerator()}}
+{\footnotesize\ttfamily template$<$typename T , typename Index , size\+\_\+t Num\+Dims$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator}{Eigen\+::internal\+::\+Gaussian\+Generator}}$<$ T, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Num\+Dims $>$\+::\mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator}{Gaussian\+Generator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1array}{array}}$<$ T, Num\+Dims $>$ \&}]{means,  }\item[{const \mbox{\hyperlink{class_eigen_1_1array}{array}}$<$ T, Num\+Dims $>$ \&}]{std\+\_\+devs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_gaussian_generator_a8d19ca5434d3049cade619afd3c2ac8d}\label{class_eigen_1_1internal_1_1_gaussian_generator_a8d19ca5434d3049cade619afd3c2ac8d}} 
+\index{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename T , typename Index , size\+\_\+t Num\+Dims$>$ \\
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC T \mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator}{Eigen\+::internal\+::\+Gaussian\+Generator}}$<$ T, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Num\+Dims $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_eigen_1_1array}{array}}$<$ \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Num\+Dims $>$ \&}]{coordinates }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_gaussian_generator_acf42446cd583d55deaa1d708857669de}\label{class_eigen_1_1internal_1_1_gaussian_generator_acf42446cd583d55deaa1d708857669de}} 
+\index{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}!m\_means@{m\_means}}
+\index{m\_means@{m\_means}!Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}}
+\doxysubsubsection{\texorpdfstring{m\_means}{m\_means}}
+{\footnotesize\ttfamily template$<$typename T , typename Index , size\+\_\+t Num\+Dims$>$ \\
+\mbox{\hyperlink{class_eigen_1_1array}{array}}$<$T, Num\+Dims$>$ \mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator}{Eigen\+::internal\+::\+Gaussian\+Generator}}$<$ T, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Num\+Dims $>$\+::m\+\_\+means\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_gaussian_generator_ad36335a492d18f90be11baee36466a35}\label{class_eigen_1_1internal_1_1_gaussian_generator_ad36335a492d18f90be11baee36466a35}} 
+\index{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}!m\_two\_sigmas@{m\_two\_sigmas}}
+\index{m\_two\_sigmas@{m\_two\_sigmas}!Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}}
+\doxysubsubsection{\texorpdfstring{m\_two\_sigmas}{m\_two\_sigmas}}
+{\footnotesize\ttfamily template$<$typename T , typename Index , size\+\_\+t Num\+Dims$>$ \\
+\mbox{\hyperlink{class_eigen_1_1array}{array}}$<$T, Num\+Dims$>$ \mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator}{Eigen\+::internal\+::\+Gaussian\+Generator}}$<$ T, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Num\+Dims $>$\+::m\+\_\+two\+\_\+sigmas\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_eigen_1_1internal_1_1_gaussian_generator_adfd474e7dab4c9251f1326a0a4746dd3}\label{class_eigen_1_1internal_1_1_gaussian_generator_adfd474e7dab4c9251f1326a0a4746dd3}} 
+\index{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}!PacketAccess@{PacketAccess}}
+\index{PacketAccess@{PacketAccess}!Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$@{Eigen::internal::GaussianGenerator$<$ T, Index, NumDims $>$}}
+\doxysubsubsection{\texorpdfstring{PacketAccess}{PacketAccess}}
+{\footnotesize\ttfamily template$<$typename T , typename Index , size\+\_\+t Num\+Dims$>$ \\
+const bool \mbox{\hyperlink{class_eigen_1_1internal_1_1_gaussian_generator}{Eigen\+::internal\+::\+Gaussian\+Generator}}$<$ T, \mbox{\hyperlink{namespace_eigen_a62e77e0933482dafde8fe197d9a2cfde}{Index}}, Num\+Dims $>$\+::Packet\+Access = \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_functors_8h}{Tensor\+Functors.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\hypertarget{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b}{}\doxysection{Eigen\+::Tensor\+Sycl\+::internal\+::Functor\+Extractor$<$ Tensor\+Evaluator$<$ const Tensor\+Reduction\+Op$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ $>$ Struct Template Reference}
+\label{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b}\index{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}}
+
+
+{\ttfamily \#include $<$Tensor\+Sycl\+Extract\+Functors.\+h$>$}
+
+
+
+Inheritance diagram for Eigen\+::Tensor\+Sycl\+::internal\+::Functor\+Extractor$<$ Tensor\+Evaluator$<$ const Tensor\+Reduction\+Op$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_055f91fa307f5790041929b9c0c9d98eb}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eigen\+::Tensor\+Sycl\+::internal\+::Functor\+Extractor$<$ Tensor\+Evaluator$<$ const Tensor\+Reduction\+Op$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_04a56afa3137aac449f9ae3a2bf7bf4a0}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a4352ac10628e16701f9a565d1fcc5abf}{Evaluator}}
+\item 
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{Eigen\+::internal\+::conditional}}$<$ Evaluator\+::\+Num\+Output\+Dims==0, \mbox{\hyperlink{struct_eigen_1_1_d_sizes}{D\+Sizes}}$<$ typename \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_reduction_op_3_01_op_00_01_dims_00_01_arg_4fdf2ec1445de4704eb590bc98040dc6_a8dc913ab789335372866123fa483251a}{Evaluator\+::\+Index}}, 1 $>$, typename \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_reduction_op_3_01_op_00_01_dims_00_01_arg_4fdf2ec1445de4704eb590bc98040dc6_a4a0727f8548b735e37321dcf90f5cd14}{Evaluator\+::\+Dimensions}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a1da9bb47b00ab77dfb87b68d5e8efd0c}{Dimensions}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a1da9bb47b00ab77dfb87b68d5e8efd0c}{Dimensions}} \& \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a9d83206f398b0fcf12ccb7cb93afd3c5}{dimensions}} () const
+\item 
+\mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_ae4c383022925802c89854a152e06c166}{Functor\+Extractor}} (const \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ \&expr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a1da9bb47b00ab77dfb87b68d5e8efd0c}{Dimensions}} \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_af45d751ba2a845d695661bc0d9116210}{m\+\_\+dimensions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a1da9bb47b00ab77dfb87b68d5e8efd0c}\label{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a1da9bb47b00ab77dfb87b68d5e8efd0c}} 
+\index{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}!Dimensions@{Dimensions}}
+\index{Dimensions@{Dimensions}!Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Dimensions}{Dimensions}}
+{\footnotesize\ttfamily template$<$typename Op , typename Dims , typename Arg\+Type , template$<$ class $>$ class Make\+Pointer\+\_\+, typename Device $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1internal_1_1conditional}{Eigen\+::internal\+::conditional}}$<$Evaluator\+::\+Num\+Output\+Dims==0, \mbox{\hyperlink{struct_eigen_1_1_d_sizes}{D\+Sizes}}$<$typename \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_reduction_op_3_01_op_00_01_dims_00_01_arg_4fdf2ec1445de4704eb590bc98040dc6_a8dc913ab789335372866123fa483251a}{Evaluator\+::\+Index}}, 1$>$, typename \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator_3_01const_01_tensor_reduction_op_3_01_op_00_01_dims_00_01_arg_4fdf2ec1445de4704eb590bc98040dc6_a4a0727f8548b735e37321dcf90f5cd14}{Evaluator\+::\+Dimensions}} $>$\+::type \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor}{Eigen\+::\+Tensor\+Sycl\+::internal\+::\+Functor\+Extractor}}$<$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a1da9bb47b00ab77dfb87b68d5e8efd0c}{Dimensions}}}
+
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a4352ac10628e16701f9a565d1fcc5abf}\label{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a4352ac10628e16701f9a565d1fcc5abf}} 
+\index{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}!Evaluator@{Evaluator}}
+\index{Evaluator@{Evaluator}!Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluator}{Evaluator}}
+{\footnotesize\ttfamily template$<$typename Op , typename Dims , typename Arg\+Type , template$<$ class $>$ class Make\+Pointer\+\_\+, typename Device $>$ \\
+typedef \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$Op, Dims, Arg\+Type, Make\+Pointer\+\_\+$>$, Device$>$ \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor}{Eigen\+::\+Tensor\+Sycl\+::internal\+::\+Functor\+Extractor}}$<$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a4352ac10628e16701f9a565d1fcc5abf}{Evaluator}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_ae4c383022925802c89854a152e06c166}\label{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_ae4c383022925802c89854a152e06c166}} 
+\index{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}!FunctorExtractor@{FunctorExtractor}}
+\index{FunctorExtractor@{FunctorExtractor}!Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{FunctorExtractor()}{FunctorExtractor()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Dims , typename Arg\+Type , template$<$ class $>$ class Make\+Pointer\+\_\+, typename Device $>$ \\
+\mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor}{Eigen\+::\+Tensor\+Sycl\+::internal\+::\+Functor\+Extractor}}$<$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ $>$\+::\mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor}{Functor\+Extractor}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ \&}]{expr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a9d83206f398b0fcf12ccb7cb93afd3c5}\label{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a9d83206f398b0fcf12ccb7cb93afd3c5}} 
+\index{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{dimensions()}{dimensions()}}
+{\footnotesize\ttfamily template$<$typename Op , typename Dims , typename Arg\+Type , template$<$ class $>$ class Make\+Pointer\+\_\+, typename Device $>$ \\
+const \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a1da9bb47b00ab77dfb87b68d5e8efd0c}{Dimensions}}\& \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor}{Eigen\+::\+Tensor\+Sycl\+::internal\+::\+Functor\+Extractor}}$<$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ $>$\+::dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_af45d751ba2a845d695661bc0d9116210}\label{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_af45d751ba2a845d695661bc0d9116210}} 
+\index{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}!m\_dimensions@{m\_dimensions}}
+\index{m\_dimensions@{m\_dimensions}!Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$@{Eigen::TensorSycl::internal::FunctorExtractor$<$ TensorEvaluator$<$ const TensorReductionOp$<$ Op, Dims, ArgType, MakePointer\_ $>$, Device $>$ $>$}}
+\doxysubsubsection{\texorpdfstring{m\_dimensions}{m\_dimensions}}
+{\footnotesize\ttfamily template$<$typename Op , typename Dims , typename Arg\+Type , template$<$ class $>$ class Make\+Pointer\+\_\+, typename Device $>$ \\
+const \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08e46bb7792b8f07bb791a4ece83b9c3b_a1da9bb47b00ab77dfb87b68d5e8efd0c}{Dimensions}} \mbox{\hyperlink{struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor}{Eigen\+::\+Tensor\+Sycl\+::internal\+::\+Functor\+Extractor}}$<$ \mbox{\hyperlink{struct_eigen_1_1_tensor_evaluator}{Tensor\+Evaluator}}$<$ const \mbox{\hyperlink{class_eigen_1_1_tensor_reduction_op}{Tensor\+Reduction\+Op}}$<$ Op, Dims, Arg\+Type, Make\+Pointer\+\_\+ $>$, Device $>$ $>$\+::m\+\_\+dimensions}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/\+C\+X\+X11/src/\+Tensor/\mbox{\hyperlink{_tensor_sycl_extract_functors_8h}{Tensor\+Sycl\+Extract\+Functors.\+h}}\end{DoxyCompactItemize}

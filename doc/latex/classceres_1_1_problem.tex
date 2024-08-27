@@ -1,0 +1,395 @@
+\hypertarget{classceres_1_1_problem}{}\doxysection{ceres\+::Problem Class Reference}
+\label{classceres_1_1_problem}\index{ceres::Problem@{ceres::Problem}}
+
+
+{\ttfamily \#include $<$problem.\+h$>$}
+
+
+
+Collaboration diagram for ceres\+::Problem\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classceres_1_1_problem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structceres_1_1_problem_1_1_evaluate_options}{Evaluate\+Options}}
+\item 
+struct \mbox{\hyperlink{structceres_1_1_problem_1_1_options}{Options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_problem_ad2dc3c8db13dc25b6963aa98918641b9}{Problem}} ()
+\item 
+\mbox{\hyperlink{classceres_1_1_problem_a65a5d379d1d4ff90fc4293d7e41c71b5}{Problem}} (const \mbox{\hyperlink{structceres_1_1_problem_1_1_options}{Options}} \&options)
+\item 
+\mbox{\hyperlink{classceres_1_1_problem_a6ce9c94fc07c1ac061e21c3cc9398cf2}{$\sim$\+Problem}} ()
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_af23090da258f1467471ff28b441bcdf4}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, const std\+::vector$<$ double $\ast$ $>$ \&parameter\+\_\+blocks)
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_a8a905eca0b800d657420090c55df94d4}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, double $\ast$x0)
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_a0084810886f0b18371632035088ecf21}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, double $\ast$x0, double $\ast$x1)
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_a3e27a8917fea72bbb90aaa199f61509a}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, double $\ast$x0, double $\ast$x1, double $\ast$x2)
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_a78caa55855dd34f8435b587aad286834}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, double $\ast$x0, double $\ast$x1, double $\ast$x2, double $\ast$x3)
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_af266e64b523f7203ee2e309acdd48126}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, double $\ast$x0, double $\ast$x1, double $\ast$x2, double $\ast$x3, double $\ast$x4)
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_a662106fa05201452ca7bffcfca9ff7e3}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, double $\ast$x0, double $\ast$x1, double $\ast$x2, double $\ast$x3, double $\ast$x4, double $\ast$x5)
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_a4ae80ea071e1cf0f7a12e8f3edebc3f5}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, double $\ast$x0, double $\ast$x1, double $\ast$x2, double $\ast$x3, double $\ast$x4, double $\ast$x5, double $\ast$x6)
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_aec45d7221292aee2dc0694f4aaaf4404}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, double $\ast$x0, double $\ast$x1, double $\ast$x2, double $\ast$x3, double $\ast$x4, double $\ast$x5, double $\ast$x6, double $\ast$x7)
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_ae3d917ef9be59a37e6aa66582db103f1}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, double $\ast$x0, double $\ast$x1, double $\ast$x2, double $\ast$x3, double $\ast$x4, double $\ast$x5, double $\ast$x6, double $\ast$x7, double $\ast$x8)
+\item 
+\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} \mbox{\hyperlink{classceres_1_1_problem_a6c34a877fb0ac15e99db76a0df844ae0}{Add\+Residual\+Block}} (\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$cost\+\_\+function, \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$loss\+\_\+function, double $\ast$x0, double $\ast$x1, double $\ast$x2, double $\ast$x3, double $\ast$x4, double $\ast$x5, double $\ast$x6, double $\ast$x7, double $\ast$x8, double $\ast$x9)
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_acf764c516d602cb46514cb9dae2cae39}{Add\+Parameter\+Block}} (double $\ast$values, int size)
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_a3abb80be3c408c3d7eb690e93b913db0}{Add\+Parameter\+Block}} (double $\ast$values, int size, \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+parameterization)
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_a0626d0f00f13670933b25d68ce5e99b1}{Remove\+Parameter\+Block}} (double $\ast$values)
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_ac44151d61a93f492122ebaf362a90298}{Remove\+Residual\+Block}} (\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} residual\+\_\+block)
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_a6246bef16c96a4d00810d1f1d6e985f0}{Set\+Parameter\+Block\+Constant}} (double $\ast$values)
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_a900b76b8cdece1aa14027dfb235736fc}{Set\+Parameter\+Block\+Variable}} (double $\ast$values)
+\item 
+bool \mbox{\hyperlink{classceres_1_1_problem_a79e26a61573b92527a1488dece869a6b}{Is\+Parameter\+Block\+Constant}} (double $\ast$values) const
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_afabcc9f25d93fd99d90d9fb8a577748c}{Set\+Parameterization}} (double $\ast$values, \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$local\+\_\+parameterization)
+\item 
+const \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$ \mbox{\hyperlink{classceres_1_1_problem_a0623ab7500666ae8a64f8b1f3069f865}{Get\+Parameterization}} (double $\ast$values) const
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_a936470bae99b084fd440252aa149590e}{Set\+Parameter\+Lower\+Bound}} (double $\ast$values, int index, double lower\+\_\+bound)
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_a3cf80bd4e6ade53d17d3f8fa813ad32c}{Set\+Parameter\+Upper\+Bound}} (double $\ast$values, int index, double upper\+\_\+bound)
+\item 
+int \mbox{\hyperlink{classceres_1_1_problem_ad472dafa9d9104e0d25313d8b2b27d4f}{Num\+Parameter\+Blocks}} () const
+\item 
+int \mbox{\hyperlink{classceres_1_1_problem_af786c31d2755e95d49a818e74d554d8d}{Num\+Parameters}} () const
+\item 
+int \mbox{\hyperlink{classceres_1_1_problem_a9d39c70c4947bf1107977fd8800646fe}{Num\+Residual\+Blocks}} () const
+\item 
+int \mbox{\hyperlink{classceres_1_1_problem_af692a42f4de1988728c58eaa33c77e46}{Num\+Residuals}} () const
+\item 
+int \mbox{\hyperlink{classceres_1_1_problem_ac037e15f9e37ca2058fa9f47d5bdeb52}{Parameter\+Block\+Size}} (const double $\ast$values) const
+\item 
+int \mbox{\hyperlink{classceres_1_1_problem_ac30f97a169d885e239a416b82a675b9b}{Parameter\+Block\+Local\+Size}} (const double $\ast$values) const
+\item 
+bool \mbox{\hyperlink{classceres_1_1_problem_abb7009c4a78407d2847c146b6c6d20af}{Has\+Parameter\+Block}} (const double $\ast$values) const
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_a77cebf7f5b3c80fcdd2f0794ee95b44e}{Get\+Parameter\+Blocks}} (std\+::vector$<$ double $\ast$ $>$ $\ast$parameter\+\_\+blocks) const
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_a3376a51361b0837ff57ab3a5e23369a0}{Get\+Residual\+Blocks}} (std\+::vector$<$ \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} $>$ $\ast$residual\+\_\+blocks) const
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_ae19f16fc4c3e8f515511c5e8b27670bd}{Get\+Parameter\+Blocks\+For\+Residual\+Block}} (const \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} residual\+\_\+block, std\+::vector$<$ double $\ast$ $>$ $\ast$parameter\+\_\+blocks) const
+\item 
+const \mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$ \mbox{\hyperlink{classceres_1_1_problem_a6a5122ad2bd94c956d03b9c648f58bff}{Get\+Cost\+Function\+For\+Residual\+Block}} (const \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} residual\+\_\+block) const
+\item 
+const \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$ \mbox{\hyperlink{classceres_1_1_problem_ae8ffa7315d1a64329055a6d086e910d2}{Get\+Loss\+Function\+For\+Residual\+Block}} (const \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} residual\+\_\+block) const
+\item 
+void \mbox{\hyperlink{classceres_1_1_problem_a81c4e5c25f9df1c5e22da786a46713f5}{Get\+Residual\+Blocks\+For\+Parameter\+Block}} (const double $\ast$values, std\+::vector$<$ \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} $>$ $\ast$residual\+\_\+blocks) const
+\item 
+bool \mbox{\hyperlink{classceres_1_1_problem_a9ef1393c1e19036418414476ff6eb845}{Evaluate}} (const \mbox{\hyperlink{structceres_1_1_problem_1_1_evaluate_options}{Evaluate\+Options}} \&options, double $\ast$cost, std\+::vector$<$ double $>$ $\ast$residuals, std\+::vector$<$ double $>$ $\ast$gradient, \mbox{\hyperlink{structceres_1_1_c_r_s_matrix}{C\+R\+S\+Matrix}} $\ast$jacobian)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_problem_a1f1d214b67a7a93a43a38806c90b6243}{C\+E\+R\+E\+S\+\_\+\+D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+P\+Y\+\_\+\+A\+N\+D\+\_\+\+A\+S\+S\+I\+GN}} (\mbox{\hyperlink{classceres_1_1_problem}{Problem}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr}{internal\+::scoped\+\_\+ptr}}$<$ internal\+::\+Problem\+Impl $>$ \mbox{\hyperlink{classceres_1_1_problem_aa2eb1c7f52140912654ebf8fb162e9ee}{problem\+\_\+impl\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classceres_1_1_problem_a16432758b314f3cedad3fba81c895417}{Solver}}
+\item 
+class \mbox{\hyperlink{classceres_1_1_problem_ade4a2ec40c4efff1d2e3ba837bf40511}{Covariance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classceres_1_1_problem_ad2dc3c8db13dc25b6963aa98918641b9}\label{classceres_1_1_problem_ad2dc3c8db13dc25b6963aa98918641b9}} 
+\index{ceres::Problem@{ceres::Problem}!Problem@{Problem}}
+\index{Problem@{Problem}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{Problem()}{Problem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ceres\+::\+Problem\+::\+Problem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a65a5d379d1d4ff90fc4293d7e41c71b5}\label{classceres_1_1_problem_a65a5d379d1d4ff90fc4293d7e41c71b5}} 
+\index{ceres::Problem@{ceres::Problem}!Problem@{Problem}}
+\index{Problem@{Problem}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{Problem()}{Problem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ceres\+::\+Problem\+::\+Problem (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structceres_1_1_problem_1_1_options}{Options}} \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a6ce9c94fc07c1ac061e21c3cc9398cf2}\label{classceres_1_1_problem_a6ce9c94fc07c1ac061e21c3cc9398cf2}} 
+\index{ceres::Problem@{ceres::Problem}!````~Problem@{$\sim$Problem}}
+\index{````~Problem@{$\sim$Problem}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{$\sim$Problem()}{~Problem()}}
+{\footnotesize\ttfamily ceres\+::\+Problem\+::$\sim$\+Problem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_problem_acf764c516d602cb46514cb9dae2cae39}\label{classceres_1_1_problem_acf764c516d602cb46514cb9dae2cae39}} 
+\index{ceres::Problem@{ceres::Problem}!AddParameterBlock@{AddParameterBlock}}
+\index{AddParameterBlock@{AddParameterBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddParameterBlock()}{AddParameterBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Add\+Parameter\+Block (\begin{DoxyParamCaption}\item[{double $\ast$}]{values,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a3abb80be3c408c3d7eb690e93b913db0}\label{classceres_1_1_problem_a3abb80be3c408c3d7eb690e93b913db0}} 
+\index{ceres::Problem@{ceres::Problem}!AddParameterBlock@{AddParameterBlock}}
+\index{AddParameterBlock@{AddParameterBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddParameterBlock()}{AddParameterBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Add\+Parameter\+Block (\begin{DoxyParamCaption}\item[{double $\ast$}]{values,  }\item[{int}]{size,  }\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+parameterization }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_af23090da258f1467471ff28b441bcdf4}\label{classceres_1_1_problem_af23090da258f1467471ff28b441bcdf4}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{const std\+::vector$<$ double $\ast$ $>$ \&}]{parameter\+\_\+blocks }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a8a905eca0b800d657420090c55df94d4}\label{classceres_1_1_problem_a8a905eca0b800d657420090c55df94d4}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{double $\ast$}]{x0 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a0084810886f0b18371632035088ecf21}\label{classceres_1_1_problem_a0084810886f0b18371632035088ecf21}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [3/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{double $\ast$}]{x0,  }\item[{double $\ast$}]{x1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a3e27a8917fea72bbb90aaa199f61509a}\label{classceres_1_1_problem_a3e27a8917fea72bbb90aaa199f61509a}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [4/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{double $\ast$}]{x0,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a78caa55855dd34f8435b587aad286834}\label{classceres_1_1_problem_a78caa55855dd34f8435b587aad286834}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [5/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{double $\ast$}]{x0,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2,  }\item[{double $\ast$}]{x3 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_af266e64b523f7203ee2e309acdd48126}\label{classceres_1_1_problem_af266e64b523f7203ee2e309acdd48126}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [6/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{double $\ast$}]{x0,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2,  }\item[{double $\ast$}]{x3,  }\item[{double $\ast$}]{x4 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a662106fa05201452ca7bffcfca9ff7e3}\label{classceres_1_1_problem_a662106fa05201452ca7bffcfca9ff7e3}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [7/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{double $\ast$}]{x0,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2,  }\item[{double $\ast$}]{x3,  }\item[{double $\ast$}]{x4,  }\item[{double $\ast$}]{x5 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a4ae80ea071e1cf0f7a12e8f3edebc3f5}\label{classceres_1_1_problem_a4ae80ea071e1cf0f7a12e8f3edebc3f5}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [8/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{double $\ast$}]{x0,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2,  }\item[{double $\ast$}]{x3,  }\item[{double $\ast$}]{x4,  }\item[{double $\ast$}]{x5,  }\item[{double $\ast$}]{x6 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_aec45d7221292aee2dc0694f4aaaf4404}\label{classceres_1_1_problem_aec45d7221292aee2dc0694f4aaaf4404}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [9/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{double $\ast$}]{x0,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2,  }\item[{double $\ast$}]{x3,  }\item[{double $\ast$}]{x4,  }\item[{double $\ast$}]{x5,  }\item[{double $\ast$}]{x6,  }\item[{double $\ast$}]{x7 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_ae3d917ef9be59a37e6aa66582db103f1}\label{classceres_1_1_problem_ae3d917ef9be59a37e6aa66582db103f1}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [10/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{double $\ast$}]{x0,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2,  }\item[{double $\ast$}]{x3,  }\item[{double $\ast$}]{x4,  }\item[{double $\ast$}]{x5,  }\item[{double $\ast$}]{x6,  }\item[{double $\ast$}]{x7,  }\item[{double $\ast$}]{x8 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a6c34a877fb0ac15e99db76a0df844ae0}\label{classceres_1_1_problem_a6c34a877fb0ac15e99db76a0df844ae0}} 
+\index{ceres::Problem@{ceres::Problem}!AddResidualBlock@{AddResidualBlock}}
+\index{AddResidualBlock@{AddResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{AddResidualBlock()}{AddResidualBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [11/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} ceres\+::\+Problem\+::\+Add\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}} $\ast$}]{cost\+\_\+function,  }\item[{\mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}} $\ast$}]{loss\+\_\+function,  }\item[{double $\ast$}]{x0,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2,  }\item[{double $\ast$}]{x3,  }\item[{double $\ast$}]{x4,  }\item[{double $\ast$}]{x5,  }\item[{double $\ast$}]{x6,  }\item[{double $\ast$}]{x7,  }\item[{double $\ast$}]{x8,  }\item[{double $\ast$}]{x9 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a1f1d214b67a7a93a43a38806c90b6243}\label{classceres_1_1_problem_a1f1d214b67a7a93a43a38806c90b6243}} 
+\index{ceres::Problem@{ceres::Problem}!CERES\_DISALLOW\_COPY\_AND\_ASSIGN@{CERES\_DISALLOW\_COPY\_AND\_ASSIGN}}
+\index{CERES\_DISALLOW\_COPY\_AND\_ASSIGN@{CERES\_DISALLOW\_COPY\_AND\_ASSIGN}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{CERES\_DISALLOW\_COPY\_AND\_ASSIGN()}{CERES\_DISALLOW\_COPY\_AND\_ASSIGN()}}
+{\footnotesize\ttfamily ceres\+::\+Problem\+::\+C\+E\+R\+E\+S\+\_\+\+D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+P\+Y\+\_\+\+A\+N\+D\+\_\+\+A\+S\+S\+I\+GN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classceres_1_1_problem}{Problem}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a9ef1393c1e19036418414476ff6eb845}\label{classceres_1_1_problem_a9ef1393c1e19036418414476ff6eb845}} 
+\index{ceres::Problem@{ceres::Problem}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily bool ceres\+::\+Problem\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structceres_1_1_problem_1_1_evaluate_options}{Evaluate\+Options}} \&}]{options,  }\item[{double $\ast$}]{cost,  }\item[{std\+::vector$<$ double $>$ $\ast$}]{residuals,  }\item[{std\+::vector$<$ double $>$ $\ast$}]{gradient,  }\item[{\mbox{\hyperlink{structceres_1_1_c_r_s_matrix}{C\+R\+S\+Matrix}} $\ast$}]{jacobian }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a6a5122ad2bd94c956d03b9c648f58bff}\label{classceres_1_1_problem_a6a5122ad2bd94c956d03b9c648f58bff}} 
+\index{ceres::Problem@{ceres::Problem}!GetCostFunctionForResidualBlock@{GetCostFunctionForResidualBlock}}
+\index{GetCostFunctionForResidualBlock@{GetCostFunctionForResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{GetCostFunctionForResidualBlock()}{GetCostFunctionForResidualBlock()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classceres_1_1_cost_function}{Cost\+Function}}$\ast$ ceres\+::\+Problem\+::\+Get\+Cost\+Function\+For\+Residual\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}}}]{residual\+\_\+block }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_ae8ffa7315d1a64329055a6d086e910d2}\label{classceres_1_1_problem_ae8ffa7315d1a64329055a6d086e910d2}} 
+\index{ceres::Problem@{ceres::Problem}!GetLossFunctionForResidualBlock@{GetLossFunctionForResidualBlock}}
+\index{GetLossFunctionForResidualBlock@{GetLossFunctionForResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{GetLossFunctionForResidualBlock()}{GetLossFunctionForResidualBlock()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classceres_1_1_loss_function}{Loss\+Function}}$\ast$ ceres\+::\+Problem\+::\+Get\+Loss\+Function\+For\+Residual\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}}}]{residual\+\_\+block }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a77cebf7f5b3c80fcdd2f0794ee95b44e}\label{classceres_1_1_problem_a77cebf7f5b3c80fcdd2f0794ee95b44e}} 
+\index{ceres::Problem@{ceres::Problem}!GetParameterBlocks@{GetParameterBlocks}}
+\index{GetParameterBlocks@{GetParameterBlocks}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{GetParameterBlocks()}{GetParameterBlocks()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Get\+Parameter\+Blocks (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $\ast$ $>$ $\ast$}]{parameter\+\_\+blocks }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_ae19f16fc4c3e8f515511c5e8b27670bd}\label{classceres_1_1_problem_ae19f16fc4c3e8f515511c5e8b27670bd}} 
+\index{ceres::Problem@{ceres::Problem}!GetParameterBlocksForResidualBlock@{GetParameterBlocksForResidualBlock}}
+\index{GetParameterBlocksForResidualBlock@{GetParameterBlocksForResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{GetParameterBlocksForResidualBlock()}{GetParameterBlocksForResidualBlock()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Get\+Parameter\+Blocks\+For\+Residual\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}}}]{residual\+\_\+block,  }\item[{std\+::vector$<$ double $\ast$ $>$ $\ast$}]{parameter\+\_\+blocks }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a0623ab7500666ae8a64f8b1f3069f865}\label{classceres_1_1_problem_a0623ab7500666ae8a64f8b1f3069f865}} 
+\index{ceres::Problem@{ceres::Problem}!GetParameterization@{GetParameterization}}
+\index{GetParameterization@{GetParameterization}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{GetParameterization()}{GetParameterization()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}}$\ast$ ceres\+::\+Problem\+::\+Get\+Parameterization (\begin{DoxyParamCaption}\item[{double $\ast$}]{values }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a3376a51361b0837ff57ab3a5e23369a0}\label{classceres_1_1_problem_a3376a51361b0837ff57ab3a5e23369a0}} 
+\index{ceres::Problem@{ceres::Problem}!GetResidualBlocks@{GetResidualBlocks}}
+\index{GetResidualBlocks@{GetResidualBlocks}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{GetResidualBlocks()}{GetResidualBlocks()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Get\+Residual\+Blocks (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} $>$ $\ast$}]{residual\+\_\+blocks }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a81c4e5c25f9df1c5e22da786a46713f5}\label{classceres_1_1_problem_a81c4e5c25f9df1c5e22da786a46713f5}} 
+\index{ceres::Problem@{ceres::Problem}!GetResidualBlocksForParameterBlock@{GetResidualBlocksForParameterBlock}}
+\index{GetResidualBlocksForParameterBlock@{GetResidualBlocksForParameterBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{GetResidualBlocksForParameterBlock()}{GetResidualBlocksForParameterBlock()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Get\+Residual\+Blocks\+For\+Parameter\+Block (\begin{DoxyParamCaption}\item[{const double $\ast$}]{values,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}} $>$ $\ast$}]{residual\+\_\+blocks }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_abb7009c4a78407d2847c146b6c6d20af}\label{classceres_1_1_problem_abb7009c4a78407d2847c146b6c6d20af}} 
+\index{ceres::Problem@{ceres::Problem}!HasParameterBlock@{HasParameterBlock}}
+\index{HasParameterBlock@{HasParameterBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{HasParameterBlock()}{HasParameterBlock()}}
+{\footnotesize\ttfamily bool ceres\+::\+Problem\+::\+Has\+Parameter\+Block (\begin{DoxyParamCaption}\item[{const double $\ast$}]{values }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a79e26a61573b92527a1488dece869a6b}\label{classceres_1_1_problem_a79e26a61573b92527a1488dece869a6b}} 
+\index{ceres::Problem@{ceres::Problem}!IsParameterBlockConstant@{IsParameterBlockConstant}}
+\index{IsParameterBlockConstant@{IsParameterBlockConstant}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{IsParameterBlockConstant()}{IsParameterBlockConstant()}}
+{\footnotesize\ttfamily bool ceres\+::\+Problem\+::\+Is\+Parameter\+Block\+Constant (\begin{DoxyParamCaption}\item[{double $\ast$}]{values }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_ad472dafa9d9104e0d25313d8b2b27d4f}\label{classceres_1_1_problem_ad472dafa9d9104e0d25313d8b2b27d4f}} 
+\index{ceres::Problem@{ceres::Problem}!NumParameterBlocks@{NumParameterBlocks}}
+\index{NumParameterBlocks@{NumParameterBlocks}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{NumParameterBlocks()}{NumParameterBlocks()}}
+{\footnotesize\ttfamily int ceres\+::\+Problem\+::\+Num\+Parameter\+Blocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_af786c31d2755e95d49a818e74d554d8d}\label{classceres_1_1_problem_af786c31d2755e95d49a818e74d554d8d}} 
+\index{ceres::Problem@{ceres::Problem}!NumParameters@{NumParameters}}
+\index{NumParameters@{NumParameters}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{NumParameters()}{NumParameters()}}
+{\footnotesize\ttfamily int ceres\+::\+Problem\+::\+Num\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a9d39c70c4947bf1107977fd8800646fe}\label{classceres_1_1_problem_a9d39c70c4947bf1107977fd8800646fe}} 
+\index{ceres::Problem@{ceres::Problem}!NumResidualBlocks@{NumResidualBlocks}}
+\index{NumResidualBlocks@{NumResidualBlocks}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{NumResidualBlocks()}{NumResidualBlocks()}}
+{\footnotesize\ttfamily int ceres\+::\+Problem\+::\+Num\+Residual\+Blocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_af692a42f4de1988728c58eaa33c77e46}\label{classceres_1_1_problem_af692a42f4de1988728c58eaa33c77e46}} 
+\index{ceres::Problem@{ceres::Problem}!NumResiduals@{NumResiduals}}
+\index{NumResiduals@{NumResiduals}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{NumResiduals()}{NumResiduals()}}
+{\footnotesize\ttfamily int ceres\+::\+Problem\+::\+Num\+Residuals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_ac30f97a169d885e239a416b82a675b9b}\label{classceres_1_1_problem_ac30f97a169d885e239a416b82a675b9b}} 
+\index{ceres::Problem@{ceres::Problem}!ParameterBlockLocalSize@{ParameterBlockLocalSize}}
+\index{ParameterBlockLocalSize@{ParameterBlockLocalSize}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{ParameterBlockLocalSize()}{ParameterBlockLocalSize()}}
+{\footnotesize\ttfamily int ceres\+::\+Problem\+::\+Parameter\+Block\+Local\+Size (\begin{DoxyParamCaption}\item[{const double $\ast$}]{values }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_ac037e15f9e37ca2058fa9f47d5bdeb52}\label{classceres_1_1_problem_ac037e15f9e37ca2058fa9f47d5bdeb52}} 
+\index{ceres::Problem@{ceres::Problem}!ParameterBlockSize@{ParameterBlockSize}}
+\index{ParameterBlockSize@{ParameterBlockSize}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{ParameterBlockSize()}{ParameterBlockSize()}}
+{\footnotesize\ttfamily int ceres\+::\+Problem\+::\+Parameter\+Block\+Size (\begin{DoxyParamCaption}\item[{const double $\ast$}]{values }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a0626d0f00f13670933b25d68ce5e99b1}\label{classceres_1_1_problem_a0626d0f00f13670933b25d68ce5e99b1}} 
+\index{ceres::Problem@{ceres::Problem}!RemoveParameterBlock@{RemoveParameterBlock}}
+\index{RemoveParameterBlock@{RemoveParameterBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{RemoveParameterBlock()}{RemoveParameterBlock()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Remove\+Parameter\+Block (\begin{DoxyParamCaption}\item[{double $\ast$}]{values }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_ac44151d61a93f492122ebaf362a90298}\label{classceres_1_1_problem_ac44151d61a93f492122ebaf362a90298}} 
+\index{ceres::Problem@{ceres::Problem}!RemoveResidualBlock@{RemoveResidualBlock}}
+\index{RemoveResidualBlock@{RemoveResidualBlock}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{RemoveResidualBlock()}{RemoveResidualBlock()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Remove\+Residual\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceceres_a01ab5ebe740b20114a582c8a4e657f31}{Residual\+Block\+Id}}}]{residual\+\_\+block }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a6246bef16c96a4d00810d1f1d6e985f0}\label{classceres_1_1_problem_a6246bef16c96a4d00810d1f1d6e985f0}} 
+\index{ceres::Problem@{ceres::Problem}!SetParameterBlockConstant@{SetParameterBlockConstant}}
+\index{SetParameterBlockConstant@{SetParameterBlockConstant}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{SetParameterBlockConstant()}{SetParameterBlockConstant()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Set\+Parameter\+Block\+Constant (\begin{DoxyParamCaption}\item[{double $\ast$}]{values }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a900b76b8cdece1aa14027dfb235736fc}\label{classceres_1_1_problem_a900b76b8cdece1aa14027dfb235736fc}} 
+\index{ceres::Problem@{ceres::Problem}!SetParameterBlockVariable@{SetParameterBlockVariable}}
+\index{SetParameterBlockVariable@{SetParameterBlockVariable}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{SetParameterBlockVariable()}{SetParameterBlockVariable()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Set\+Parameter\+Block\+Variable (\begin{DoxyParamCaption}\item[{double $\ast$}]{values }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_afabcc9f25d93fd99d90d9fb8a577748c}\label{classceres_1_1_problem_afabcc9f25d93fd99d90d9fb8a577748c}} 
+\index{ceres::Problem@{ceres::Problem}!SetParameterization@{SetParameterization}}
+\index{SetParameterization@{SetParameterization}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{SetParameterization()}{SetParameterization()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Set\+Parameterization (\begin{DoxyParamCaption}\item[{double $\ast$}]{values,  }\item[{\mbox{\hyperlink{classceres_1_1_local_parameterization}{Local\+Parameterization}} $\ast$}]{local\+\_\+parameterization }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a936470bae99b084fd440252aa149590e}\label{classceres_1_1_problem_a936470bae99b084fd440252aa149590e}} 
+\index{ceres::Problem@{ceres::Problem}!SetParameterLowerBound@{SetParameterLowerBound}}
+\index{SetParameterLowerBound@{SetParameterLowerBound}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{SetParameterLowerBound()}{SetParameterLowerBound()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Set\+Parameter\+Lower\+Bound (\begin{DoxyParamCaption}\item[{double $\ast$}]{values,  }\item[{int}]{index,  }\item[{double}]{lower\+\_\+bound }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a3cf80bd4e6ade53d17d3f8fa813ad32c}\label{classceres_1_1_problem_a3cf80bd4e6ade53d17d3f8fa813ad32c}} 
+\index{ceres::Problem@{ceres::Problem}!SetParameterUpperBound@{SetParameterUpperBound}}
+\index{SetParameterUpperBound@{SetParameterUpperBound}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{SetParameterUpperBound()}{SetParameterUpperBound()}}
+{\footnotesize\ttfamily void ceres\+::\+Problem\+::\+Set\+Parameter\+Upper\+Bound (\begin{DoxyParamCaption}\item[{double $\ast$}]{values,  }\item[{int}]{index,  }\item[{double}]{upper\+\_\+bound }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_problem_ade4a2ec40c4efff1d2e3ba837bf40511}\label{classceres_1_1_problem_ade4a2ec40c4efff1d2e3ba837bf40511}} 
+\index{ceres::Problem@{ceres::Problem}!Covariance@{Covariance}}
+\index{Covariance@{Covariance}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{Covariance}{Covariance}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classceres_1_1_covariance}{Covariance}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classceres_1_1_problem_a16432758b314f3cedad3fba81c895417}\label{classceres_1_1_problem_a16432758b314f3cedad3fba81c895417}} 
+\index{ceres::Problem@{ceres::Problem}!Solver@{Solver}}
+\index{Solver@{Solver}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{Solver}{Solver}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classceres_1_1_solver}{Solver}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classceres_1_1_problem_aa2eb1c7f52140912654ebf8fb162e9ee}\label{classceres_1_1_problem_aa2eb1c7f52140912654ebf8fb162e9ee}} 
+\index{ceres::Problem@{ceres::Problem}!problem\_impl\_@{problem\_impl\_}}
+\index{problem\_impl\_@{problem\_impl\_}!ceres::Problem@{ceres::Problem}}
+\doxysubsubsection{\texorpdfstring{problem\_impl\_}{problem\_impl\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classceres_1_1internal_1_1scoped__ptr}{internal\+::scoped\+\_\+ptr}}$<$internal\+::\+Problem\+Impl$>$ ceres\+::\+Problem\+::problem\+\_\+impl\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{problem_8h}{problem.\+h}}\end{DoxyCompactItemize}

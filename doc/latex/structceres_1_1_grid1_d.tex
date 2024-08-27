@@ -1,0 +1,100 @@
+\hypertarget{structceres_1_1_grid1_d}{}\doxysection{ceres\+::Grid1D$<$ T, k\+Data\+Dimension, k\+Interleaved $>$ Struct Template Reference}
+\label{structceres_1_1_grid1_d}\index{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}}
+
+
+{\ttfamily \#include $<$cubic\+\_\+interpolation.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{structceres_1_1_grid1_d_a57305a4ac4ac48ad74dcc9274ddea7f4a9e7e9da33e412cb0630d85f4125a0132}{D\+A\+T\+A\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON}} = k\+Data\+Dimension
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structceres_1_1_grid1_d_ad3a0ccd64c96d0c13c2341867cf446cc}{Grid1D}} (const T $\ast$data, const int begin, const int end)
+\item 
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{structceres_1_1_grid1_d_ae6fee6fa7cd12b8739609c0cd40a0a3b}{Get\+Value}} (const int n, double $\ast$f) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const T $\ast$ \mbox{\hyperlink{structceres_1_1_grid1_d_a22e7a9eb0bf85cc3ecfa21b78af9c5a6}{data\+\_\+}}
+\item 
+const int \mbox{\hyperlink{structceres_1_1_grid1_d_a262a6e38552de93fd2c996ad887b15e4}{begin\+\_\+}}
+\item 
+const int \mbox{\hyperlink{structceres_1_1_grid1_d_ae5d1b92d182901d3eea39e3573863439}{end\+\_\+}}
+\item 
+const int \mbox{\hyperlink{structceres_1_1_grid1_d_a2f8bc5f5d2c373ded4b358adb5fdf53e}{num\+\_\+values\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structceres_1_1_grid1_d_a57305a4ac4ac48ad74dcc9274ddea7f4}\label{structceres_1_1_grid1_d_a57305a4ac4ac48ad74dcc9274ddea7f4}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Interleaved = true$>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DATA\_DIMENSION@{DATA\_DIMENSION}!ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}}\index{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}!DATA\_DIMENSION@{DATA\_DIMENSION}}}\mbox{\Hypertarget{structceres_1_1_grid1_d_a57305a4ac4ac48ad74dcc9274ddea7f4a9e7e9da33e412cb0630d85f4125a0132}\label{structceres_1_1_grid1_d_a57305a4ac4ac48ad74dcc9274ddea7f4a9e7e9da33e412cb0630d85f4125a0132}} 
+D\+A\+T\+A\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structceres_1_1_grid1_d_ad3a0ccd64c96d0c13c2341867cf446cc}\label{structceres_1_1_grid1_d_ad3a0ccd64c96d0c13c2341867cf446cc}} 
+\index{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}!Grid1D@{Grid1D}}
+\index{Grid1D@{Grid1D}!ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{Grid1D()}{Grid1D()}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Interleaved = true$>$ \\
+\mbox{\hyperlink{structceres_1_1_grid1_d}{ceres\+::\+Grid1D}}$<$ T, k\+Data\+Dimension, k\+Interleaved $>$\+::\mbox{\hyperlink{structceres_1_1_grid1_d}{Grid1D}} (\begin{DoxyParamCaption}\item[{const T $\ast$}]{data,  }\item[{const int}]{begin,  }\item[{const int}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structceres_1_1_grid1_d_ae6fee6fa7cd12b8739609c0cd40a0a3b}\label{structceres_1_1_grid1_d_ae6fee6fa7cd12b8739609c0cd40a0a3b}} 
+\index{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Interleaved = true$>$ \\
+\mbox{\hyperlink{eigen-3_83_89_2_eigen_2src_2_core_2util_2macros_8h_af2b60117c00a6e75812de43bfe7db3b1}{E\+I\+G\+E\+N\+\_\+\+S\+T\+R\+O\+N\+G\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{structceres_1_1_grid1_d}{ceres\+::\+Grid1D}}$<$ T, k\+Data\+Dimension, k\+Interleaved $>$\+::Get\+Value (\begin{DoxyParamCaption}\item[{const int}]{n,  }\item[{double $\ast$}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structceres_1_1_grid1_d_a262a6e38552de93fd2c996ad887b15e4}\label{structceres_1_1_grid1_d_a262a6e38552de93fd2c996ad887b15e4}} 
+\index{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}!begin\_@{begin\_}}
+\index{begin\_@{begin\_}!ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{begin\_}{begin\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Interleaved = true$>$ \\
+const int \mbox{\hyperlink{structceres_1_1_grid1_d}{ceres\+::\+Grid1D}}$<$ T, k\+Data\+Dimension, k\+Interleaved $>$\+::begin\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structceres_1_1_grid1_d_a22e7a9eb0bf85cc3ecfa21b78af9c5a6}\label{structceres_1_1_grid1_d_a22e7a9eb0bf85cc3ecfa21b78af9c5a6}} 
+\index{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}!data\_@{data\_}}
+\index{data\_@{data\_}!ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Interleaved = true$>$ \\
+const T$\ast$ \mbox{\hyperlink{structceres_1_1_grid1_d}{ceres\+::\+Grid1D}}$<$ T, k\+Data\+Dimension, k\+Interleaved $>$\+::data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structceres_1_1_grid1_d_ae5d1b92d182901d3eea39e3573863439}\label{structceres_1_1_grid1_d_ae5d1b92d182901d3eea39e3573863439}} 
+\index{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}!end\_@{end\_}}
+\index{end\_@{end\_}!ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{end\_}{end\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Interleaved = true$>$ \\
+const int \mbox{\hyperlink{structceres_1_1_grid1_d}{ceres\+::\+Grid1D}}$<$ T, k\+Data\+Dimension, k\+Interleaved $>$\+::end\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structceres_1_1_grid1_d_a2f8bc5f5d2c373ded4b358adb5fdf53e}\label{structceres_1_1_grid1_d_a2f8bc5f5d2c373ded4b358adb5fdf53e}} 
+\index{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}!num\_values\_@{num\_values\_}}
+\index{num\_values\_@{num\_values\_}!ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$@{ceres::Grid1D$<$ T, kDataDimension, kInterleaved $>$}}
+\doxysubsubsection{\texorpdfstring{num\_values\_}{num\_values\_}}
+{\footnotesize\ttfamily template$<$typename T , int k\+Data\+Dimension = 1, bool k\+Interleaved = true$>$ \\
+const int \mbox{\hyperlink{structceres_1_1_grid1_d}{ceres\+::\+Grid1D}}$<$ T, k\+Data\+Dimension, k\+Interleaved $>$\+::num\+\_\+values\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{cubic__interpolation_8h}{cubic\+\_\+interpolation.\+h}}\end{DoxyCompactItemize}

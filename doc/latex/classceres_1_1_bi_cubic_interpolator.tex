@@ -1,0 +1,72 @@
+\hypertarget{classceres_1_1_bi_cubic_interpolator}{}\doxysection{ceres\+::Bi\+Cubic\+Interpolator$<$ Grid $>$ Class Template Reference}
+\label{classceres_1_1_bi_cubic_interpolator}\index{ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}}
+
+
+{\ttfamily \#include $<$cubic\+\_\+interpolation.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator_aae050db31533ac350cdb2b7680352679}{Bi\+Cubic\+Interpolator}} (const Grid \&grid)
+\item 
+void \mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator_ab5cfda39bfab0784c373a01cbd3b1375}{Evaluate}} (double r, double c, double $\ast$f, double $\ast$dfdr, double $\ast$dfdc) const
+\item 
+void \mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator_a4d8e994d2142ac8dd3c675f29eb6f173}{Evaluate}} (const double \&r, const double \&c, double $\ast$f) const
+\item 
+{\footnotesize template$<$typename JetT $>$ }\\void \mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator_aa4dccb6ef0b2687af1a0ea8c50e2a533}{Evaluate}} (const JetT \&r, const JetT \&c, JetT $\ast$f) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Grid \& \mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator_a3bd615f7169b009c1a2b0df1afdc7d87}{grid\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classceres_1_1_bi_cubic_interpolator_aae050db31533ac350cdb2b7680352679}\label{classceres_1_1_bi_cubic_interpolator_aae050db31533ac350cdb2b7680352679}} 
+\index{ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}!BiCubicInterpolator@{BiCubicInterpolator}}
+\index{BiCubicInterpolator@{BiCubicInterpolator}!ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}}
+\doxysubsubsection{\texorpdfstring{BiCubicInterpolator()}{BiCubicInterpolator()}}
+{\footnotesize\ttfamily template$<$typename Grid $>$ \\
+\mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator}{ceres\+::\+Bi\+Cubic\+Interpolator}}$<$ Grid $>$\+::\mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator}{Bi\+Cubic\+Interpolator}} (\begin{DoxyParamCaption}\item[{const Grid \&}]{grid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classceres_1_1_bi_cubic_interpolator_a4d8e994d2142ac8dd3c675f29eb6f173}\label{classceres_1_1_bi_cubic_interpolator_a4d8e994d2142ac8dd3c675f29eb6f173}} 
+\index{ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Grid $>$ \\
+void \mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator}{ceres\+::\+Bi\+Cubic\+Interpolator}}$<$ Grid $>$\+::Evaluate (\begin{DoxyParamCaption}\item[{const double \&}]{r,  }\item[{const double \&}]{c,  }\item[{double $\ast$}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_bi_cubic_interpolator_aa4dccb6ef0b2687af1a0ea8c50e2a533}\label{classceres_1_1_bi_cubic_interpolator_aa4dccb6ef0b2687af1a0ea8c50e2a533}} 
+\index{ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Grid $>$ \\
+template$<$typename JetT $>$ \\
+void \mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator}{ceres\+::\+Bi\+Cubic\+Interpolator}}$<$ Grid $>$\+::Evaluate (\begin{DoxyParamCaption}\item[{const JetT \&}]{r,  }\item[{const JetT \&}]{c,  }\item[{JetT $\ast$}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classceres_1_1_bi_cubic_interpolator_ab5cfda39bfab0784c373a01cbd3b1375}\label{classceres_1_1_bi_cubic_interpolator_ab5cfda39bfab0784c373a01cbd3b1375}} 
+\index{ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Grid $>$ \\
+void \mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator}{ceres\+::\+Bi\+Cubic\+Interpolator}}$<$ Grid $>$\+::Evaluate (\begin{DoxyParamCaption}\item[{double}]{r,  }\item[{double}]{c,  }\item[{double $\ast$}]{f,  }\item[{double $\ast$}]{dfdr,  }\item[{double $\ast$}]{dfdc }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classceres_1_1_bi_cubic_interpolator_a3bd615f7169b009c1a2b0df1afdc7d87}\label{classceres_1_1_bi_cubic_interpolator_a3bd615f7169b009c1a2b0df1afdc7d87}} 
+\index{ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}!grid\_@{grid\_}}
+\index{grid\_@{grid\_}!ceres::BiCubicInterpolator$<$ Grid $>$@{ceres::BiCubicInterpolator$<$ Grid $>$}}
+\doxysubsubsection{\texorpdfstring{grid\_}{grid\_}}
+{\footnotesize\ttfamily template$<$typename Grid $>$ \\
+const Grid\& \mbox{\hyperlink{classceres_1_1_bi_cubic_interpolator}{ceres\+::\+Bi\+Cubic\+Interpolator}}$<$ Grid $>$\+::grid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/ceres-\/1.\+12.\+0/include/ceres/\mbox{\hyperlink{cubic__interpolation_8h}{cubic\+\_\+interpolation.\+h}}\end{DoxyCompactItemize}

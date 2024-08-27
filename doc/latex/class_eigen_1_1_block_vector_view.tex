@@ -1,0 +1,145 @@
+\hypertarget{class_eigen_1_1_block_vector_view}{}\doxysection{Eigen\+::Block\+Vector\+View$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$ Class Template Reference}
+\label{class_eigen_1_1_block_vector_view}\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}
+
+
+{\ttfamily \#include $<$Block\+Sparse\+Matrix.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba69bae1fc77b6b47bead223cc0f30afda}{Block\+Size}} = Block\+Sparse\+MatrixT\+::Block\+Size, 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba4847a673bebf75af14792abc9a0cfe08}{Cols\+At\+Compile\+Time}} = Vector\+Type\+::Cols\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba9aff490f5b4f3d670a4cdcd99db2138d}{Rows\+At\+Compile\+Time}} = Vector\+Type\+::Rows\+At\+Compile\+Time, 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba25470aa2ef45f41c007125498690f449}{Flags}} = Vector\+Type\+::Flags
+ \}
+\item 
+typedef \mbox{\hyperlink{class_eigen_1_1_ref}{Ref}}$<$ const \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$ typename Block\+Sparse\+Matrix\+T\+::\+Scalar,(\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba9aff490f5b4f3d670a4cdcd99db2138d}{Rows\+At\+Compile\+Time}}==1)? 1 \+:\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba69bae1fc77b6b47bead223cc0f30afda}{Block\+Size}},(\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba4847a673bebf75af14792abc9a0cfe08}{Cols\+At\+Compile\+Time}}==1)? 1 \+:\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba69bae1fc77b6b47bead223cc0f30afda}{Block\+Size}} $>$ $>$ \mbox{\hyperlink{class_eigen_1_1_block_vector_view_a25a7cfe0ac968241fd19f09d0a4eb67c}{Scalar}}
+\item 
+typedef Block\+Sparse\+Matrix\+T\+::\+Index \mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a0049a3f79ea4a2759a923bcf970fe7c0}{Block\+Vector\+View}} (const Block\+Sparse\+MatrixT \&spblockmat, const Vector\+Type \&vec)
+\item 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}} \mbox{\hyperlink{class_eigen_1_1_block_vector_view_a5ae5e8e8d65b063c276615de194d9454}{cols}} () const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}} \mbox{\hyperlink{class_eigen_1_1_block_vector_view_a061acd7f57cbeacbd6406ee3820b12cd}{size}} () const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a25a7cfe0ac968241fd19f09d0a4eb67c}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_block_vector_view_ad26a9609460326dde868cd1afa95adc8}{coeff}} (\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}} bi) const
+\item 
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a25a7cfe0ac968241fd19f09d0a4eb67c}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_block_vector_view_af15f27ea3733e13e09f2344ff62150ed}{coeff}} (\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}} bi, \mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}} j) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Block\+Sparse\+MatrixT \& \mbox{\hyperlink{class_eigen_1_1_block_vector_view_a980e47172be2a25fc99e914cbaaa6091}{m\+\_\+spblockmat}}
+\item 
+const Vector\+Type \& \mbox{\hyperlink{class_eigen_1_1_block_vector_view_ae8d1c15f1abe6497362d29c05de3cba1}{m\+\_\+vec}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}\label{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}} 
+\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!Index@{Index}}
+\index{Index@{Index}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+typedef Block\+Sparse\+Matrix\+T\+::\+Index \mbox{\hyperlink{class_eigen_1_1_block_vector_view}{Eigen\+::\+Block\+Vector\+View}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}}}
+
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a25a7cfe0ac968241fd19f09d0a4eb67c}\label{class_eigen_1_1_block_vector_view_a25a7cfe0ac968241fd19f09d0a4eb67c}} 
+\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!Scalar@{Scalar}}
+\index{Scalar@{Scalar}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{Scalar}{Scalar}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+typedef \mbox{\hyperlink{class_eigen_1_1_ref}{Ref}}$<$const \mbox{\hyperlink{class_eigen_1_1_matrix}{Matrix}}$<$typename Block\+Sparse\+Matrix\+T\+::\+Scalar, (\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba9aff490f5b4f3d670a4cdcd99db2138d}{Rows\+At\+Compile\+Time}}==1)? 1 \+: \mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba69bae1fc77b6b47bead223cc0f30afda}{Block\+Size}}, (\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba4847a673bebf75af14792abc9a0cfe08}{Cols\+At\+Compile\+Time}}==1)? 1 \+: \mbox{\hyperlink{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba69bae1fc77b6b47bead223cc0f30afda}{Block\+Size}}$>$ $>$ \mbox{\hyperlink{class_eigen_1_1_block_vector_view}{Eigen\+::\+Block\+Vector\+View}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a25a7cfe0ac968241fd19f09d0a4eb67c}{Scalar}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11b}\label{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BlockSize@{BlockSize}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!BlockSize@{BlockSize}}}\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba69bae1fc77b6b47bead223cc0f30afda}\label{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba69bae1fc77b6b47bead223cc0f30afda}} 
+Block\+Size&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColsAtCompileTime@{ColsAtCompileTime}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!ColsAtCompileTime@{ColsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba4847a673bebf75af14792abc9a0cfe08}\label{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba4847a673bebf75af14792abc9a0cfe08}} 
+Cols\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RowsAtCompileTime@{RowsAtCompileTime}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!RowsAtCompileTime@{RowsAtCompileTime}}}\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba9aff490f5b4f3d670a4cdcd99db2138d}\label{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba9aff490f5b4f3d670a4cdcd99db2138d}} 
+Rows\+At\+Compile\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flags@{Flags}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!Flags@{Flags}}}\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba25470aa2ef45f41c007125498690f449}\label{class_eigen_1_1_block_vector_view_a3de2b0f06a8263ece52d74d3d398a11ba25470aa2ef45f41c007125498690f449}} 
+Flags&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a0049a3f79ea4a2759a923bcf970fe7c0}\label{class_eigen_1_1_block_vector_view_a0049a3f79ea4a2759a923bcf970fe7c0}} 
+\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!BlockVectorView@{BlockVectorView}}
+\index{BlockVectorView@{BlockVectorView}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{BlockVectorView()}{BlockVectorView()}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view}{Eigen\+::\+Block\+Vector\+View}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::\mbox{\hyperlink{class_eigen_1_1_block_vector_view}{Block\+Vector\+View}} (\begin{DoxyParamCaption}\item[{const Block\+Sparse\+MatrixT \&}]{spblockmat,  }\item[{const Vector\+Type \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_ad26a9609460326dde868cd1afa95adc8}\label{class_eigen_1_1_block_vector_view_ad26a9609460326dde868cd1afa95adc8}} 
+\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a25a7cfe0ac968241fd19f09d0a4eb67c}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_block_vector_view}{Eigen\+::\+Block\+Vector\+View}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}}}]{bi }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_af15f27ea3733e13e09f2344ff62150ed}\label{class_eigen_1_1_block_vector_view_af15f27ea3733e13e09f2344ff62150ed}} 
+\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{coeff()}{coeff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a25a7cfe0ac968241fd19f09d0a4eb67c}{Scalar}} \mbox{\hyperlink{class_eigen_1_1_block_vector_view}{Eigen\+::\+Block\+Vector\+View}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::coeff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}}}]{bi,  }\item[{\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}}}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a5ae5e8e8d65b063c276615de194d9454}\label{class_eigen_1_1_block_vector_view_a5ae5e8e8d65b063c276615de194d9454}} 
+\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!cols@{cols}}
+\index{cols@{cols}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}} \mbox{\hyperlink{class_eigen_1_1_block_vector_view}{Eigen\+::\+Block\+Vector\+View}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a061acd7f57cbeacbd6406ee3820b12cd}\label{class_eigen_1_1_block_vector_view_a061acd7f57cbeacbd6406ee3820b12cd}} 
+\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!size@{size}}
+\index{size@{size}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+\mbox{\hyperlink{class_eigen_1_1_block_vector_view_a2bd6af16b910d137e1c608ff3e441786}{Index}} \mbox{\hyperlink{class_eigen_1_1_block_vector_view}{Eigen\+::\+Block\+Vector\+View}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_a980e47172be2a25fc99e914cbaaa6091}\label{class_eigen_1_1_block_vector_view_a980e47172be2a25fc99e914cbaaa6091}} 
+\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!m\_spblockmat@{m\_spblockmat}}
+\index{m\_spblockmat@{m\_spblockmat}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_spblockmat}{m\_spblockmat}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+const Block\+Sparse\+MatrixT\& \mbox{\hyperlink{class_eigen_1_1_block_vector_view}{Eigen\+::\+Block\+Vector\+View}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::m\+\_\+spblockmat\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_eigen_1_1_block_vector_view_ae8d1c15f1abe6497362d29c05de3cba1}\label{class_eigen_1_1_block_vector_view_ae8d1c15f1abe6497362d29c05de3cba1}} 
+\index{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}!m\_vec@{m\_vec}}
+\index{m\_vec@{m\_vec}!Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$@{Eigen::BlockVectorView$<$ BlockSparseMatrixT, VectorType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_vec}{m\_vec}}
+{\footnotesize\ttfamily template$<$typename Block\+Sparse\+MatrixT , typename Vector\+Type $>$ \\
+const Vector\+Type\& \mbox{\hyperlink{class_eigen_1_1_block_vector_view}{Eigen\+::\+Block\+Vector\+View}}$<$ Block\+Sparse\+MatrixT, Vector\+Type $>$\+::m\+\_\+vec\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/eigen-\/3.\+3.\+9/unsupported/\+Eigen/src/\+Sparse\+Extra/\mbox{\hyperlink{_block_sparse_matrix_8h}{Block\+Sparse\+Matrix.\+h}}\end{DoxyCompactItemize}

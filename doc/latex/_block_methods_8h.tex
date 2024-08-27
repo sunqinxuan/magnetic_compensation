@@ -1,0 +1,1249 @@
+\hypertarget{_block_methods_8h}{}\doxysection{3rd\+\_\+party/eigen-\/3.3.9/\+Eigen/src/plugins/\+Block\+Methods.h File Reference}
+\label{_block_methods_8h}\index{3rd\_party/eigen-\/3.3.9/Eigen/src/plugins/BlockMethods.h@{3rd\_party/eigen-\/3.3.9/Eigen/src/plugins/BlockMethods.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_block_methods_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_n_cols_block_xpr}{N\+Cols\+Block\+Xpr$<$ N $>$}}
+\item 
+struct \mbox{\hyperlink{struct_const_n_cols_block_xpr}{Const\+N\+Cols\+Block\+Xpr$<$ N $>$}}
+\item 
+struct \mbox{\hyperlink{struct_n_rows_block_xpr}{N\+Rows\+Block\+Xpr$<$ N $>$}}
+\item 
+struct \mbox{\hyperlink{struct_const_n_rows_block_xpr}{Const\+N\+Rows\+Block\+Xpr$<$ N $>$}}
+\item 
+struct \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr$<$ Rows, Cols $>$}}
+\item 
+struct \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr$<$ Rows, Cols $>$}}
+\item 
+struct \mbox{\hyperlink{struct_fixed_segment_return_type}{Fixed\+Segment\+Return\+Type$<$ Size $>$}}
+\item 
+struct \mbox{\hyperlink{struct_const_fixed_segment_return_type}{Const\+Fixed\+Segment\+Return\+Type$<$ Size $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Block$<$ Derived, internal\+::traits$<$ Derived $>$\+::Rows\+At\+Compile\+Time, 1, !Is\+Row\+Major $>$ \mbox{\hyperlink{_block_methods_8h_af733e69da4faa9367f9b6d8254f879dc}{Col\+Xpr}}
+\item 
+typedef Block$<$ Derived, 1, internal\+::traits$<$ Derived $>$\+::Cols\+At\+Compile\+Time, Is\+Row\+Major $>$ \mbox{\hyperlink{_block_methods_8h_a9c5598ad52bbb71a080722cb97942f1a}{Row\+Xpr}}
+\item 
+typedef Block$<$ Derived, internal\+::traits$<$ Derived $>$\+::Rows\+At\+Compile\+Time, Dynamic, !Is\+Row\+Major $>$ \mbox{\hyperlink{_block_methods_8h_a66e23fabff72fc1fcdd447922733a083}{Cols\+Block\+Xpr}}
+\item 
+typedef Block$<$ Derived, Dynamic, internal\+::traits$<$ Derived $>$\+::Cols\+At\+Compile\+Time, Is\+Row\+Major $>$ \mbox{\hyperlink{_block_methods_8h_a5996acffecedf9059b88c5c45c4ee152}{Rows\+Block\+Xpr}}
+\item 
+typedef Block$<$ Derived $>$ \mbox{\hyperlink{_block_methods_8h_a8f8a0b7649fdefe5f4a72b6ce2ddea6c}{Block\+Xpr}}
+\item 
+typedef Vector\+Block$<$ Derived $>$ \mbox{\hyperlink{_block_methods_8h_aa34201718d13b0e688d5b449772b74b7}{Segment\+Return\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a8f8a0b7649fdefe5f4a72b6ce2ddea6c}{Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block}} (Index start\+Row, Index start\+Col, Index block\+Rows, Index block\+Cols) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}. $\ast$/. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a8f8a0b7649fdefe5f4a72b6ce2ddea6c}{Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_a7664bf349f070a5dba96e4cb444fc8b7}{top\+Right\+Corner}} (Index c\+Rows, Index c\+Cols) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a7664bf349f070a5dba96e4cb444fc8b7}{top\+Right\+Corner(\+Index, Index)}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$int C\+Rows, int C\+Cols$>$ }\\\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr}}$<$ C\+Rows, C\+Cols $>$\+::Type \mbox{\hyperlink{_block_methods_8h_a46c6ef46c2272c1980b0afd6c3a2de18}{top\+Right\+Corner}} ()
+\item 
+{\footnotesize template$<$int C\+Rows, int C\+Cols$>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr}}$<$ C\+Rows, C\+Cols $>$\+::Type \mbox{\hyperlink{_block_methods_8h_a326c88fd461bb2161c8efc555858f6bd}{top\+Right\+Corner}} () const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a7664bf349f070a5dba96e4cb444fc8b7}{top\+Right\+Corner$<$int, int$>$()}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a8f8a0b7649fdefe5f4a72b6ce2ddea6c}{Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_a3c924555eb97deba66bed5cb5ca31289}{top\+Left\+Corner}} (Index c\+Rows, Index c\+Cols) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a3c924555eb97deba66bed5cb5ca31289}{top\+Left\+Corner(\+Index, Index)}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$int C\+Rows, int C\+Cols$>$ }\\\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr}}$<$ C\+Rows, C\+Cols $>$\+::Type \mbox{\hyperlink{_block_methods_8h_a1e83c809921ec54851ff7e92b4bbc336}{top\+Left\+Corner}} ()
+\item 
+{\footnotesize template$<$int C\+Rows, int C\+Cols$>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr}}$<$ C\+Rows, C\+Cols $>$\+::Type \mbox{\hyperlink{_block_methods_8h_a43ab27d8e9a13b9418f8b7534184bc6b}{top\+Left\+Corner}} () const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a3c924555eb97deba66bed5cb5ca31289}{top\+Left\+Corner$<$int, int$>$()}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a8f8a0b7649fdefe5f4a72b6ce2ddea6c}{Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_a9ddb09c2fc2f04a994d75eb01e23ab50}{bottom\+Right\+Corner}} (Index c\+Rows, Index c\+Cols) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a9ddb09c2fc2f04a994d75eb01e23ab50}{bottom\+Right\+Corner(\+Index, Index)}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$int C\+Rows, int C\+Cols$>$ }\\\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr}}$<$ C\+Rows, C\+Cols $>$\+::Type \mbox{\hyperlink{_block_methods_8h_a3ac42129e02df5b38e60067d0b290d4f}{bottom\+Right\+Corner}} ()
+\item 
+{\footnotesize template$<$int C\+Rows, int C\+Cols$>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr}}$<$ C\+Rows, C\+Cols $>$\+::Type \mbox{\hyperlink{_block_methods_8h_a233ff88a3c044e668736e10d9f85f457}{bottom\+Right\+Corner}} () const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a9ddb09c2fc2f04a994d75eb01e23ab50}{bottom\+Right\+Corner$<$int, int$>$()}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a8f8a0b7649fdefe5f4a72b6ce2ddea6c}{Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_ad7996a4f531642071aea495bb5e36887}{bottom\+Left\+Corner}} (Index c\+Rows, Index c\+Cols) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_ad7996a4f531642071aea495bb5e36887}{bottom\+Left\+Corner(\+Index, Index)}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$int C\+Rows, int C\+Cols$>$ }\\\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr}}$<$ C\+Rows, C\+Cols $>$\+::Type \mbox{\hyperlink{_block_methods_8h_a7f7240c8770bdaef5307d681f8ac35f4}{bottom\+Left\+Corner}} ()
+\item 
+{\footnotesize template$<$int C\+Rows, int C\+Cols$>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr}}$<$ C\+Rows, C\+Cols $>$\+::Type \mbox{\hyperlink{_block_methods_8h_a87e6b50e26ef6ebe3ee902162fb7dd78}{bottom\+Left\+Corner}} () const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_ad7996a4f531642071aea495bb5e36887}{bottom\+Left\+Corner$<$int, int$>$()}}. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a5996acffecedf9059b88c5c45c4ee152}{Rows\+Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_af9cde899d5b63f65a3f125f76bc1295b}{top\+Rows}} (Index n) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_af9cde899d5b63f65a3f125f76bc1295b}{top\+Rows(\+Index)}}. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a5996acffecedf9059b88c5c45c4ee152}{Rows\+Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_ad2b68f08a5a1b8004b00baa4244c22c2}{bottom\+Rows}} (Index n) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_ad2b68f08a5a1b8004b00baa4244c22c2}{bottom\+Rows(\+Index)}}. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a5996acffecedf9059b88c5c45c4ee152}{Rows\+Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_aaf22622670d61ade936e9c4cd4f5e7d0}{middle\+Rows}} (Index start\+Row, Index n) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_aaf22622670d61ade936e9c4cd4f5e7d0}{middle\+Rows(\+Index,\+Index)}}. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a66e23fabff72fc1fcdd447922733a083}{Cols\+Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_a7de059ca182a0ea76a1372c1d61aeeee}{left\+Cols}} (Index n) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a7de059ca182a0ea76a1372c1d61aeeee}{left\+Cols(\+Index)}}. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a66e23fabff72fc1fcdd447922733a083}{Cols\+Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_a06249b209ddd80ae8cbadd16dfdc660c}{right\+Cols}} (Index n) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a06249b209ddd80ae8cbadd16dfdc660c}{right\+Cols(\+Index)}}. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a66e23fabff72fc1fcdd447922733a083}{Cols\+Block\+Xpr}} \mbox{\hyperlink{_block_methods_8h_a2a36daa724341685dc860c8c178f3be9}{middle\+Cols}} (Index start\+Col, Index num\+Cols) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a2a36daa724341685dc860c8c178f3be9}{middle\+Cols(\+Index,\+Index)}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$int N\+Rows, int N\+Cols$>$ }\\\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr}}$<$ N\+Rows, N\+Cols $>$\+::Type \mbox{\hyperlink{_block_methods_8h_a81a7c5699b7ea04a7d53738e3ceb4881}{block}} (Index start\+Row, Index start\+Col)
+\item 
+{\footnotesize template$<$int N\+Rows, int N\+Cols$>$ }\\const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr}}$<$ N\+Rows, N\+Cols $>$\+::Type \mbox{\hyperlink{_block_methods_8h_a2114f1e6a6ab6bc3627946d0d60f431d}{block}} (Index start\+Row, Index start\+Col) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a81a7c5699b7ea04a7d53738e3ceb4881}{block$<$$>$(\+Index, Index)}}. $\ast$/. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_af733e69da4faa9367f9b6d8254f879dc}{Col\+Xpr}} \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col}} (Index i) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col()}}. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a9c5598ad52bbb71a080722cb97942f1a}{Row\+Xpr}} \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row}} (Index i) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row()}}. $\ast$/. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_aa34201718d13b0e688d5b449772b74b7}{Segment\+Return\+Type}} \mbox{\hyperlink{_block_methods_8h_a3c8d2bfe6f857a2a270b78759487e3a8}{segment}} (Index start, Index n) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a3c8d2bfe6f857a2a270b78759487e3a8}{segment(\+Index,\+Index)}}. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_aa34201718d13b0e688d5b449772b74b7}{Segment\+Return\+Type}} \mbox{\hyperlink{_block_methods_8h_a66cee6936cfa159827535f010684d973}{head}} (Index n) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a66cee6936cfa159827535f010684d973}{head(\+Index)}}. \end{DoxyCompactList}\item 
+E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_aa34201718d13b0e688d5b449772b74b7}{Segment\+Return\+Type}} \mbox{\hyperlink{_block_methods_8h_a4c0b2c42fe7ffe307dc6bc88f24f001d}{tail}} (Index n) const
+\begin{DoxyCompactList}\small\item\em This is the const version of \mbox{\hyperlink{_block_methods_8h_a4c0b2c42fe7ffe307dc6bc88f24f001d}{tail(\+Index)}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const typedef Block$<$ const Derived, internal\+::traits$<$ Derived $>$\+::Rows\+At\+Compile\+Time, 1, !Is\+Row\+Major $>$ \mbox{\hyperlink{_block_methods_8h_a592d92d98410aec163e6c0ec352afb5d}{Const\+Col\+Xpr}}
+\item 
+const typedef Block$<$ const Derived, 1, internal\+::traits$<$ Derived $>$\+::Cols\+At\+Compile\+Time, Is\+Row\+Major $>$ \mbox{\hyperlink{_block_methods_8h_ad16c8862ab226d96148a7934b7504162}{Const\+Row\+Xpr}}
+\item 
+const typedef Block$<$ const Derived, internal\+::traits$<$ Derived $>$\+::Rows\+At\+Compile\+Time, Dynamic, !Is\+Row\+Major $>$ \mbox{\hyperlink{_block_methods_8h_a60031e3975f812b9d86133ac694ee703}{Const\+Cols\+Block\+Xpr}}
+\item 
+const typedef Block$<$ const Derived, Dynamic, internal\+::traits$<$ Derived $>$\+::Cols\+At\+Compile\+Time, Is\+Row\+Major $>$ \mbox{\hyperlink{_block_methods_8h_a1edfbb783d56045e2607cafdead6630d}{Const\+Rows\+Block\+Xpr}}
+\item 
+const typedef Block$<$ const Derived $>$ \mbox{\hyperlink{_block_methods_8h_a9c3dca385b173b0ce360b495c8fdc714}{Const\+Block\+Xpr}}
+\item 
+const typedef Vector\+Block$<$ const Derived $>$ \mbox{\hyperlink{_block_methods_8h_a210c6b721aff6166cf9e929b1e193fc2}{Const\+Segment\+Return\+Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_block_methods_8h_a8f8a0b7649fdefe5f4a72b6ce2ddea6c}\label{_block_methods_8h_a8f8a0b7649fdefe5f4a72b6ce2ddea6c}} 
+\index{BlockMethods.h@{BlockMethods.h}!BlockXpr@{BlockXpr}}
+\index{BlockXpr@{BlockXpr}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{BlockXpr}{BlockXpr}}
+{\footnotesize\ttfamily typedef Block$<$Derived$>$ \mbox{\hyperlink{_block_methods_8h_a8f8a0b7649fdefe5f4a72b6ce2ddea6c}{Block\+Xpr}}}
+
+\mbox{\Hypertarget{_block_methods_8h_a66e23fabff72fc1fcdd447922733a083}\label{_block_methods_8h_a66e23fabff72fc1fcdd447922733a083}} 
+\index{BlockMethods.h@{BlockMethods.h}!ColsBlockXpr@{ColsBlockXpr}}
+\index{ColsBlockXpr@{ColsBlockXpr}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{ColsBlockXpr}{ColsBlockXpr}}
+{\footnotesize\ttfamily typedef Block$<$Derived, internal\+::traits$<$Derived$>$\+::Rows\+At\+Compile\+Time, Dynamic, !Is\+Row\+Major$>$ \mbox{\hyperlink{_block_methods_8h_a66e23fabff72fc1fcdd447922733a083}{Cols\+Block\+Xpr}}}
+
+\mbox{\Hypertarget{_block_methods_8h_af733e69da4faa9367f9b6d8254f879dc}\label{_block_methods_8h_af733e69da4faa9367f9b6d8254f879dc}} 
+\index{BlockMethods.h@{BlockMethods.h}!ColXpr@{ColXpr}}
+\index{ColXpr@{ColXpr}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{ColXpr}{ColXpr}}
+{\footnotesize\ttfamily typedef Block$<$Derived, internal\+::traits$<$Derived$>$\+::Rows\+At\+Compile\+Time, 1, !Is\+Row\+Major$>$ \mbox{\hyperlink{_block_methods_8h_af733e69da4faa9367f9b6d8254f879dc}{Col\+Xpr}}}
+
+\mbox{\Hypertarget{_block_methods_8h_a5996acffecedf9059b88c5c45c4ee152}\label{_block_methods_8h_a5996acffecedf9059b88c5c45c4ee152}} 
+\index{BlockMethods.h@{BlockMethods.h}!RowsBlockXpr@{RowsBlockXpr}}
+\index{RowsBlockXpr@{RowsBlockXpr}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{RowsBlockXpr}{RowsBlockXpr}}
+{\footnotesize\ttfamily typedef Block$<$Derived, Dynamic, internal\+::traits$<$Derived$>$\+::Cols\+At\+Compile\+Time, Is\+Row\+Major$>$ \mbox{\hyperlink{_block_methods_8h_a5996acffecedf9059b88c5c45c4ee152}{Rows\+Block\+Xpr}}}
+
+\mbox{\Hypertarget{_block_methods_8h_a9c5598ad52bbb71a080722cb97942f1a}\label{_block_methods_8h_a9c5598ad52bbb71a080722cb97942f1a}} 
+\index{BlockMethods.h@{BlockMethods.h}!RowXpr@{RowXpr}}
+\index{RowXpr@{RowXpr}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{RowXpr}{RowXpr}}
+{\footnotesize\ttfamily typedef Block$<$Derived, 1, internal\+::traits$<$Derived$>$\+::Cols\+At\+Compile\+Time, Is\+Row\+Major$>$ \mbox{\hyperlink{_block_methods_8h_a9c5598ad52bbb71a080722cb97942f1a}{Row\+Xpr}}}
+
+\mbox{\Hypertarget{_block_methods_8h_aa34201718d13b0e688d5b449772b74b7}\label{_block_methods_8h_aa34201718d13b0e688d5b449772b74b7}} 
+\index{BlockMethods.h@{BlockMethods.h}!SegmentReturnType@{SegmentReturnType}}
+\index{SegmentReturnType@{SegmentReturnType}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{SegmentReturnType}{SegmentReturnType}}
+{\footnotesize\ttfamily typedef Vector\+Block$<$Derived$>$ \mbox{\hyperlink{_block_methods_8h_aa34201718d13b0e688d5b449772b74b7}{Segment\+Return\+Type}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_block_methods_8h_a81a7c5699b7ea04a7d53738e3ceb4881}\label{_block_methods_8h_a81a7c5699b7ea04a7d53738e3ceb4881}} 
+\index{BlockMethods.h@{BlockMethods.h}!block@{block}}
+\index{block@{block}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{block()}{block()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$int N\+Rows, int N\+Cols$>$ \\
+\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr}}$<$N\+Rows,N\+Cols$>$\+::Type block (\begin{DoxyParamCaption}\item[{Index}]{start\+Row,  }\item[{Index}]{start\+Col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a fixed-\/size expression of a block in $\ast$this.
+\end{DoxyReturn}
+The template parameters {\itshape N\+Rows} and {\itshape N\+Cols} are the number of rows and columns in the block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Row} & the first row in the block \\
+\hline
+{\em start\+Col} & the first column in the block\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxyNote}{Note}
+since block is a templated member, the keyword template has to be used if the matrix type is also a template parameter\+:
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m.template block<3,3>(1,1); }
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a2114f1e6a6ab6bc3627946d0d60f431d}\label{_block_methods_8h_a2114f1e6a6ab6bc3627946d0d60f431d}} 
+\index{BlockMethods.h@{BlockMethods.h}!block@{block}}
+\index{block@{block}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{block()}{block()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$int N\+Rows, int N\+Cols$>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr}}$<$N\+Rows,N\+Cols$>$\+::Type block (\begin{DoxyParamCaption}\item[{Index}]{start\+Row,  }\item[{Index}]{start\+Col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a81a7c5699b7ea04a7d53738e3ceb4881}{block$<$$>$(\+Index, Index)}}. $\ast$/. 
+
+\mbox{\Hypertarget{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}\label{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}} 
+\index{BlockMethods.h@{BlockMethods.h}!block@{block}}
+\index{block@{block}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{block()}{block()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a9c3dca385b173b0ce360b495c8fdc714}{Const\+Block\+Xpr}} block (\begin{DoxyParamCaption}\item[{Index}]{start\+Row,  }\item[{Index}]{start\+Col,  }\item[{Index}]{block\+Rows,  }\item[{Index}]{block\+Cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}. $\ast$/. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block$<$$>$(\+Index, Index, Index, Index)}}.
+
+\begin{DoxyReturn}{Returns}
+a dynamic-\/size expression of a block in $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Row} & the first row in the block \\
+\hline
+{\em start\+Col} & the first column in the block \\
+\hline
+{\em block\+Rows} & the number of rows in the block \\
+\hline
+{\em block\+Cols} & the number of columns in the block\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxyNote}{Note}
+Even though the returned expression has dynamic size, in the case when it is applied to a fixed-\/size matrix, it inherits a fixed maximal size, which means that evaluating it does not cause a dynamic memory allocation. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_a81a7c5699b7ea04a7d53738e3ceb4881}{block(\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of a block in $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em N\+Rows} & number of rows in block as specified at compile-\/time \\
+\hline
+{\em N\+Cols} & number of columns in block as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Row} & the first row in the block \\
+\hline
+{\em start\+Col} & the first column in the block \\
+\hline
+{\em block\+Rows} & number of rows in block as specified at run-\/time \\
+\hline
+{\em block\+Cols} & number of columns in block as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+This function is mainly useful for blocks where the number of rows is specified at compile-\/time and the number of columns is specified at run-\/time, or vice versa. The compile-\/time and run-\/time information should not contradict. In other words, {\itshape block\+Rows} should equal {\itshape N\+Rows} unless {\itshape N\+Rows} is {\itshape Dynamic}, and the same for the number of columns.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a7f7240c8770bdaef5307d681f8ac35f4}\label{_block_methods_8h_a7f7240c8770bdaef5307d681f8ac35f4}} 
+\index{BlockMethods.h@{BlockMethods.h}!bottomLeftCorner@{bottomLeftCorner}}
+\index{bottomLeftCorner@{bottomLeftCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{bottomLeftCorner()}{bottomLeftCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$int C\+Rows, int C\+Cols$>$ \\
+\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr}}$<$C\+Rows,C\+Cols$>$\+::Type bottom\+Left\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of a fixed-\/size bottom-\/left corner of $\ast$this.
+\end{DoxyReturn}
+The template parameters C\+Rows and C\+Cols are the number of rows and columns in the corner.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a87e6b50e26ef6ebe3ee902162fb7dd78}\label{_block_methods_8h_a87e6b50e26ef6ebe3ee902162fb7dd78}} 
+\index{BlockMethods.h@{BlockMethods.h}!bottomLeftCorner@{bottomLeftCorner}}
+\index{bottomLeftCorner@{bottomLeftCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{bottomLeftCorner()}{bottomLeftCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$int C\+Rows, int C\+Cols$>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr}}$<$C\+Rows,C\+Cols$>$\+::Type bottom\+Left\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_ad7996a4f531642071aea495bb5e36887}{bottom\+Left\+Corner$<$int, int$>$()}}. 
+
+\mbox{\Hypertarget{_block_methods_8h_ad7996a4f531642071aea495bb5e36887}\label{_block_methods_8h_ad7996a4f531642071aea495bb5e36887}} 
+\index{BlockMethods.h@{BlockMethods.h}!bottomLeftCorner@{bottomLeftCorner}}
+\index{bottomLeftCorner@{bottomLeftCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{bottomLeftCorner()}{bottomLeftCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a9c3dca385b173b0ce360b495c8fdc714}{Const\+Block\+Xpr}} bottom\+Left\+Corner (\begin{DoxyParamCaption}\item[{Index}]{c\+Rows,  }\item[{Index}]{c\+Cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_ad7996a4f531642071aea495bb5e36887}{bottom\+Left\+Corner(\+Index, Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_ad7996a4f531642071aea495bb5e36887}{bottom\+Left\+Corner$<$int, int$>$(\+Index, Index)}}.
+
+\begin{DoxyReturn}{Returns}
+a dynamic-\/size expression of a bottom-\/left corner of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Rows} & the number of rows in the corner \\
+\hline
+{\em c\+Cols} & the number of columns in the corner\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of a bottom-\/left corner of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em C\+Rows} & number of rows in corner as specified at compile-\/time \\
+\hline
+{\em C\+Cols} & number of columns in corner as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Rows} & number of rows in corner as specified at run-\/time \\
+\hline
+{\em c\+Cols} & number of columns in corner as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+This function is mainly useful for corners where the number of rows is specified at compile-\/time and the number of columns is specified at run-\/time, or vice versa. The compile-\/time and run-\/time information should not contradict. In other words, {\itshape c\+Rows} should equal {\itshape C\+Rows} unless {\itshape C\+Rows} is {\itshape Dynamic}, and the same for the number of columns.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a3ac42129e02df5b38e60067d0b290d4f}\label{_block_methods_8h_a3ac42129e02df5b38e60067d0b290d4f}} 
+\index{BlockMethods.h@{BlockMethods.h}!bottomRightCorner@{bottomRightCorner}}
+\index{bottomRightCorner@{bottomRightCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{bottomRightCorner()}{bottomRightCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$int C\+Rows, int C\+Cols$>$ \\
+\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr}}$<$C\+Rows,C\+Cols$>$\+::Type bottom\+Right\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of a fixed-\/size bottom-\/right corner of $\ast$this.
+\end{DoxyReturn}
+The template parameters C\+Rows and C\+Cols are the number of rows and columns in the corner.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a233ff88a3c044e668736e10d9f85f457}\label{_block_methods_8h_a233ff88a3c044e668736e10d9f85f457}} 
+\index{BlockMethods.h@{BlockMethods.h}!bottomRightCorner@{bottomRightCorner}}
+\index{bottomRightCorner@{bottomRightCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{bottomRightCorner()}{bottomRightCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$int C\+Rows, int C\+Cols$>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr}}$<$C\+Rows,C\+Cols$>$\+::Type bottom\+Right\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a9ddb09c2fc2f04a994d75eb01e23ab50}{bottom\+Right\+Corner$<$int, int$>$()}}. 
+
+\mbox{\Hypertarget{_block_methods_8h_a9ddb09c2fc2f04a994d75eb01e23ab50}\label{_block_methods_8h_a9ddb09c2fc2f04a994d75eb01e23ab50}} 
+\index{BlockMethods.h@{BlockMethods.h}!bottomRightCorner@{bottomRightCorner}}
+\index{bottomRightCorner@{bottomRightCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{bottomRightCorner()}{bottomRightCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a9c3dca385b173b0ce360b495c8fdc714}{Const\+Block\+Xpr}} bottom\+Right\+Corner (\begin{DoxyParamCaption}\item[{Index}]{c\+Rows,  }\item[{Index}]{c\+Cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a9ddb09c2fc2f04a994d75eb01e23ab50}{bottom\+Right\+Corner(\+Index, Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a9ddb09c2fc2f04a994d75eb01e23ab50}{bottom\+Right\+Corner$<$int, int$>$(\+Index, Index)}}.
+
+\begin{DoxyReturn}{Returns}
+a dynamic-\/size expression of a bottom-\/right corner of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Rows} & the number of rows in the corner \\
+\hline
+{\em c\+Cols} & the number of columns in the corner\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of a bottom-\/right corner of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em C\+Rows} & number of rows in corner as specified at compile-\/time \\
+\hline
+{\em C\+Cols} & number of columns in corner as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Rows} & number of rows in corner as specified at run-\/time \\
+\hline
+{\em c\+Cols} & number of columns in corner as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+This function is mainly useful for corners where the number of rows is specified at compile-\/time and the number of columns is specified at run-\/time, or vice versa. The compile-\/time and run-\/time information should not contradict. In other words, {\itshape c\+Rows} should equal {\itshape C\+Rows} unless {\itshape C\+Rows} is {\itshape Dynamic}, and the same for the number of columns.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_ad2b68f08a5a1b8004b00baa4244c22c2}\label{_block_methods_8h_ad2b68f08a5a1b8004b00baa4244c22c2}} 
+\index{BlockMethods.h@{BlockMethods.h}!bottomRows@{bottomRows}}
+\index{bottomRows@{bottomRows}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{bottomRows()}{bottomRows()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a1edfbb783d56045e2607cafdead6630d}{Const\+Rows\+Block\+Xpr}} bottom\+Rows (\begin{DoxyParamCaption}\item[{Index}]{n = {\ttfamily N} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_ad2b68f08a5a1b8004b00baa4244c22c2}{bottom\+Rows(\+Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_ad2b68f08a5a1b8004b00baa4244c22c2}{bottom\+Rows$<$int$>$()}}.
+
+\begin{DoxyReturn}{Returns}
+a block consisting of the bottom rows of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of rows in the block\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a block consisting of the bottom rows of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em N} & the number of rows in the block as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of rows in the block as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+The compile-\/time and run-\/time information should not contradict. In other words, {\itshape n} should equal {\itshape N} unless {\itshape N} is {\itshape Dynamic}.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_ac820575ee62de615224f350c02085469}\label{_block_methods_8h_ac820575ee62de615224f350c02085469}} 
+\index{BlockMethods.h@{BlockMethods.h}!col@{col}}
+\index{col@{col}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{col()}{col()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a592d92d98410aec163e6c0ec352afb5d}{Const\+Col\+Xpr}} col (\begin{DoxyParamCaption}\item[{Index}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col()}}. 
+
+\begin{DoxyReturn}{Returns}
+an expression of the {\itshape i-\/th} column of $\ast$this. Note that the numbering starts at 0.
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row()}}, class Block 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a66cee6936cfa159827535f010684d973}\label{_block_methods_8h_a66cee6936cfa159827535f010684d973}} 
+\index{BlockMethods.h@{BlockMethods.h}!head@{head}}
+\index{head@{head}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{head()}{head()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a210c6b721aff6166cf9e929b1e193fc2}{Const\+Segment\+Return\+Type}} head (\begin{DoxyParamCaption}\item[{Index}]{n = {\ttfamily N} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a66cee6936cfa159827535f010684d973}{head(\+Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a66cee6936cfa159827535f010684d973}{head$<$int$>$()}}.
+
+\begin{DoxyReturn}{Returns}
+a dynamic-\/size expression of the first coefficients of $\ast$this.
+\end{DoxyReturn}
+\textbackslash{}only\+\_\+for\+\_\+vectors
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of coefficients in the segment\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxyNote}{Note}
+Even though the returned expression has dynamic size, in the case when it is applied to a fixed-\/size vector, it inherits a fixed maximal size, which means that evaluating it does not cause a dynamic memory allocation.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_a81a7c5699b7ea04a7d53738e3ceb4881}{block(\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a fixed-\/size expression of the first coefficients of $\ast$this.
+\end{DoxyReturn}
+\textbackslash{}only\+\_\+for\+\_\+vectors
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em N} & the number of coefficients in the segment as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of coefficients in the segment as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+The compile-\/time and run-\/time information should not contradict. In other words, {\itshape n} should equal {\itshape N} unless {\itshape N} is {\itshape Dynamic}.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+class Block 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a7de059ca182a0ea76a1372c1d61aeeee}\label{_block_methods_8h_a7de059ca182a0ea76a1372c1d61aeeee}} 
+\index{BlockMethods.h@{BlockMethods.h}!leftCols@{leftCols}}
+\index{leftCols@{leftCols}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{leftCols()}{leftCols()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a60031e3975f812b9d86133ac694ee703}{Const\+Cols\+Block\+Xpr}} left\+Cols (\begin{DoxyParamCaption}\item[{Index}]{n = {\ttfamily N} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a7de059ca182a0ea76a1372c1d61aeeee}{left\+Cols(\+Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a7de059ca182a0ea76a1372c1d61aeeee}{left\+Cols$<$int$>$()}}.
+
+\begin{DoxyReturn}{Returns}
+a block consisting of the left columns of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of columns in the block\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a block consisting of the left columns of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em N} & the number of columns in the block as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of columns in the block as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+The compile-\/time and run-\/time information should not contradict. In other words, {\itshape n} should equal {\itshape N} unless {\itshape N} is {\itshape Dynamic}.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a2a36daa724341685dc860c8c178f3be9}\label{_block_methods_8h_a2a36daa724341685dc860c8c178f3be9}} 
+\index{BlockMethods.h@{BlockMethods.h}!middleCols@{middleCols}}
+\index{middleCols@{middleCols}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{middleCols()}{middleCols()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a60031e3975f812b9d86133ac694ee703}{Const\+Cols\+Block\+Xpr}} middle\+Cols (\begin{DoxyParamCaption}\item[{Index}]{start\+Col,  }\item[{Index}]{n = {\ttfamily N} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a2a36daa724341685dc860c8c178f3be9}{middle\+Cols(\+Index,\+Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a2a36daa724341685dc860c8c178f3be9}{middle\+Cols$<$int$>$()}}.
+
+\begin{DoxyReturn}{Returns}
+a block consisting of a range of columns of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Col} & the index of the first column in the block \\
+\hline
+{\em num\+Cols} & the number of columns in the block\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a block consisting of a range of columns of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em N} & the number of columns in the block as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Col} & the index of the first column in the block \\
+\hline
+{\em n} & the number of columns in the block as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+The compile-\/time and run-\/time information should not contradict. In other words, {\itshape n} should equal {\itshape N} unless {\itshape N} is {\itshape Dynamic}.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_aaf22622670d61ade936e9c4cd4f5e7d0}\label{_block_methods_8h_aaf22622670d61ade936e9c4cd4f5e7d0}} 
+\index{BlockMethods.h@{BlockMethods.h}!middleRows@{middleRows}}
+\index{middleRows@{middleRows}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{middleRows()}{middleRows()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a1edfbb783d56045e2607cafdead6630d}{Const\+Rows\+Block\+Xpr}} middle\+Rows (\begin{DoxyParamCaption}\item[{Index}]{start\+Row,  }\item[{Index}]{n = {\ttfamily N} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_aaf22622670d61ade936e9c4cd4f5e7d0}{middle\+Rows(\+Index,\+Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_aaf22622670d61ade936e9c4cd4f5e7d0}{middle\+Rows$<$int$>$()}}.
+
+\begin{DoxyReturn}{Returns}
+a block consisting of a range of rows of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Row} & the index of the first row in the block \\
+\hline
+{\em n} & the number of rows in the block\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a block consisting of a range of rows of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em N} & the number of rows in the block as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Row} & the index of the first row in the block \\
+\hline
+{\em n} & the number of rows in the block as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+The compile-\/time and run-\/time information should not contradict. In other words, {\itshape n} should equal {\itshape N} unless {\itshape N} is {\itshape Dynamic}.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a06249b209ddd80ae8cbadd16dfdc660c}\label{_block_methods_8h_a06249b209ddd80ae8cbadd16dfdc660c}} 
+\index{BlockMethods.h@{BlockMethods.h}!rightCols@{rightCols}}
+\index{rightCols@{rightCols}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{rightCols()}{rightCols()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a60031e3975f812b9d86133ac694ee703}{Const\+Cols\+Block\+Xpr}} right\+Cols (\begin{DoxyParamCaption}\item[{Index}]{n = {\ttfamily N} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a06249b209ddd80ae8cbadd16dfdc660c}{right\+Cols(\+Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a06249b209ddd80ae8cbadd16dfdc660c}{right\+Cols$<$int$>$()}}.
+
+\begin{DoxyReturn}{Returns}
+a block consisting of the right columns of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of columns in the block\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a block consisting of the right columns of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em N} & the number of columns in the block as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of columns in the block as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+The compile-\/time and run-\/time information should not contradict. In other words, {\itshape n} should equal {\itshape N} unless {\itshape N} is {\itshape Dynamic}.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}\label{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}} 
+\index{BlockMethods.h@{BlockMethods.h}!row@{row}}
+\index{row@{row}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_ad16c8862ab226d96148a7934b7504162}{Const\+Row\+Xpr}} row (\begin{DoxyParamCaption}\item[{Index}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a8dd30d04b6ce8a78abb064008deb8a9c}{row()}}. $\ast$/. 
+
+\begin{DoxyReturn}{Returns}
+an expression of the {\itshape i-\/th} row of $\ast$this. Note that the numbering starts at 0.
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_block_methods_8h_ac820575ee62de615224f350c02085469}{col()}}, class Block 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a3c8d2bfe6f857a2a270b78759487e3a8}\label{_block_methods_8h_a3c8d2bfe6f857a2a270b78759487e3a8}} 
+\index{BlockMethods.h@{BlockMethods.h}!segment@{segment}}
+\index{segment@{segment}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{segment()}{segment()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a210c6b721aff6166cf9e929b1e193fc2}{Const\+Segment\+Return\+Type}} segment (\begin{DoxyParamCaption}\item[{Index}]{start,  }\item[{Index}]{n = {\ttfamily N} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a3c8d2bfe6f857a2a270b78759487e3a8}{segment(\+Index,\+Index)}}. 
+
+This is the const version of segment$<$int$>$(\+Index).
+
+\begin{DoxyReturn}{Returns}
+a dynamic-\/size expression of a segment (i.\+e. a vector block) in $\ast$this.
+\end{DoxyReturn}
+\textbackslash{}only\+\_\+for\+\_\+vectors
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & the first coefficient in the segment \\
+\hline
+{\em n} & the number of coefficients in the segment\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxyNote}{Note}
+Even though the returned expression has dynamic size, in the case when it is applied to a fixed-\/size vector, it inherits a fixed maximal size, which means that evaluating it does not cause a dynamic memory allocation.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+class Block, segment(\+Index)
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a fixed-\/size expression of a segment (i.\+e. a vector block) in {\ttfamily $\ast$this} 
+\end{DoxyReturn}
+\textbackslash{}only\+\_\+for\+\_\+vectors
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em N} & the number of coefficients in the segment as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start} & the index of the first element in the segment \\
+\hline
+{\em n} & the number of coefficients in the segment as specified at compile-\/time\\
+\hline
+\end{DoxyParams}
+The compile-\/time and run-\/time information should not contradict. In other words, {\itshape n} should equal {\itshape N} unless {\itshape N} is {\itshape Dynamic}.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+class Block 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a4c0b2c42fe7ffe307dc6bc88f24f001d}\label{_block_methods_8h_a4c0b2c42fe7ffe307dc6bc88f24f001d}} 
+\index{BlockMethods.h@{BlockMethods.h}!tail@{tail}}
+\index{tail@{tail}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{tail()}{tail()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a210c6b721aff6166cf9e929b1e193fc2}{Const\+Segment\+Return\+Type}} tail (\begin{DoxyParamCaption}\item[{Index}]{n = {\ttfamily N} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a4c0b2c42fe7ffe307dc6bc88f24f001d}{tail(\+Index)}}. 
+
+This is the const version of tail$<$int$>$.
+
+\begin{DoxyReturn}{Returns}
+a dynamic-\/size expression of the last coefficients of $\ast$this.
+\end{DoxyReturn}
+\textbackslash{}only\+\_\+for\+\_\+vectors
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of coefficients in the segment\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxyNote}{Note}
+Even though the returned expression has dynamic size, in the case when it is applied to a fixed-\/size vector, it inherits a fixed maximal size, which means that evaluating it does not cause a dynamic memory allocation.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_a81a7c5699b7ea04a7d53738e3ceb4881}{block(\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a fixed-\/size expression of the last coefficients of $\ast$this.
+\end{DoxyReturn}
+\textbackslash{}only\+\_\+for\+\_\+vectors
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em N} & the number of coefficients in the segment as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of coefficients in the segment as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+The compile-\/time and run-\/time information should not contradict. In other words, {\itshape n} should equal {\itshape N} unless {\itshape N} is {\itshape Dynamic}.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\begin{DoxySeeAlso}{See also}
+class Block 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a1e83c809921ec54851ff7e92b4bbc336}\label{_block_methods_8h_a1e83c809921ec54851ff7e92b4bbc336}} 
+\index{BlockMethods.h@{BlockMethods.h}!topLeftCorner@{topLeftCorner}}
+\index{topLeftCorner@{topLeftCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{topLeftCorner()}{topLeftCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$int C\+Rows, int C\+Cols$>$ \\
+\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr}}$<$C\+Rows,C\+Cols$>$\+::Type top\+Left\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of a fixed-\/size top-\/left corner of $\ast$this.
+\end{DoxyReturn}
+The template parameters C\+Rows and C\+Cols are the number of rows and columns in the corner.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a43ab27d8e9a13b9418f8b7534184bc6b}\label{_block_methods_8h_a43ab27d8e9a13b9418f8b7534184bc6b}} 
+\index{BlockMethods.h@{BlockMethods.h}!topLeftCorner@{topLeftCorner}}
+\index{topLeftCorner@{topLeftCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{topLeftCorner()}{topLeftCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$int C\+Rows, int C\+Cols$>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr}}$<$C\+Rows,C\+Cols$>$\+::Type top\+Left\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a3c924555eb97deba66bed5cb5ca31289}{top\+Left\+Corner$<$int, int$>$()}}. 
+
+\mbox{\Hypertarget{_block_methods_8h_a3c924555eb97deba66bed5cb5ca31289}\label{_block_methods_8h_a3c924555eb97deba66bed5cb5ca31289}} 
+\index{BlockMethods.h@{BlockMethods.h}!topLeftCorner@{topLeftCorner}}
+\index{topLeftCorner@{topLeftCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{topLeftCorner()}{topLeftCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a9c3dca385b173b0ce360b495c8fdc714}{Const\+Block\+Xpr}} top\+Left\+Corner (\begin{DoxyParamCaption}\item[{Index}]{c\+Rows,  }\item[{Index}]{c\+Cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a3c924555eb97deba66bed5cb5ca31289}{top\+Left\+Corner(\+Index, Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a3c924555eb97deba66bed5cb5ca31289}{top\+Left\+Corner$<$int, int$>$(\+Index, Index)}}.
+
+\begin{DoxyReturn}{Returns}
+a dynamic-\/size expression of a top-\/left corner of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Rows} & the number of rows in the corner \\
+\hline
+{\em c\+Cols} & the number of columns in the corner\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of a top-\/left corner of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em C\+Rows} & number of rows in corner as specified at compile-\/time \\
+\hline
+{\em C\+Cols} & number of columns in corner as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Rows} & number of rows in corner as specified at run-\/time \\
+\hline
+{\em c\+Cols} & number of columns in corner as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+This function is mainly useful for corners where the number of rows is specified at compile-\/time and the number of columns is specified at run-\/time, or vice versa. The compile-\/time and run-\/time information should not contradict. In other words, {\itshape c\+Rows} should equal {\itshape C\+Rows} unless {\itshape C\+Rows} is {\itshape Dynamic}, and the same for the number of columns.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a46c6ef46c2272c1980b0afd6c3a2de18}\label{_block_methods_8h_a46c6ef46c2272c1980b0afd6c3a2de18}} 
+\index{BlockMethods.h@{BlockMethods.h}!topRightCorner@{topRightCorner}}
+\index{topRightCorner@{topRightCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{topRightCorner()}{topRightCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$int C\+Rows, int C\+Cols$>$ \\
+\mbox{\hyperlink{_sparse_matrix_base_8h_ad7f74cf0d006b06b945187535404355e}{E\+I\+G\+E\+N\+\_\+\+D\+O\+C\+\_\+\+B\+L\+O\+C\+K\+\_\+\+A\+D\+D\+O\+N\+S\+\_\+\+N\+O\+T\+\_\+\+I\+N\+N\+E\+R\+\_\+\+P\+A\+N\+EL}} E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_fixed_block_xpr}{Fixed\+Block\+Xpr}}$<$C\+Rows,C\+Cols$>$\+::Type top\+Right\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an expression of a fixed-\/size top-\/right corner of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em C\+Rows} & the number of rows in the corner \\
+\hline
+{\em C\+Cols} & the number of columns in the corner\\
+\hline
+\end{DoxyTemplParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_a81a7c5699b7ea04a7d53738e3ceb4881}{block$<$int,int$>$(\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_a326c88fd461bb2161c8efc555858f6bd}\label{_block_methods_8h_a326c88fd461bb2161c8efc555858f6bd}} 
+\index{BlockMethods.h@{BlockMethods.h}!topRightCorner@{topRightCorner}}
+\index{topRightCorner@{topRightCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{topRightCorner()}{topRightCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$int C\+Rows, int C\+Cols$>$ \\
+const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{struct_const_fixed_block_xpr}{Const\+Fixed\+Block\+Xpr}}$<$C\+Rows,C\+Cols$>$\+::Type top\+Right\+Corner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a7664bf349f070a5dba96e4cb444fc8b7}{top\+Right\+Corner$<$int, int$>$()}}. 
+
+\mbox{\Hypertarget{_block_methods_8h_a7664bf349f070a5dba96e4cb444fc8b7}\label{_block_methods_8h_a7664bf349f070a5dba96e4cb444fc8b7}} 
+\index{BlockMethods.h@{BlockMethods.h}!topRightCorner@{topRightCorner}}
+\index{topRightCorner@{topRightCorner}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{topRightCorner()}{topRightCorner()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a9c3dca385b173b0ce360b495c8fdc714}{Const\+Block\+Xpr}} top\+Right\+Corner (\begin{DoxyParamCaption}\item[{Index}]{c\+Rows,  }\item[{Index}]{c\+Cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a7664bf349f070a5dba96e4cb444fc8b7}{top\+Right\+Corner(\+Index, Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_a7664bf349f070a5dba96e4cb444fc8b7}{top\+Right\+Corner$<$int, int$>$(\+Index, Index)}}.
+
+\begin{DoxyReturn}{Returns}
+a dynamic-\/size expression of a top-\/right corner of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Rows} & the number of rows in the corner \\
+\hline
+{\em c\+Cols} & the number of columns in the corner\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+an expression of a top-\/right corner of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em C\+Rows} & number of rows in corner as specified at compile-\/time \\
+\hline
+{\em C\+Cols} & number of columns in corner as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Rows} & number of rows in corner as specified at run-\/time \\
+\hline
+{\em c\+Cols} & number of columns in corner as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+This function is mainly useful for corners where the number of rows is specified at compile-\/time and the number of columns is specified at run-\/time, or vice versa. The compile-\/time and run-\/time information should not contradict. In other words, {\itshape c\+Rows} should equal {\itshape C\+Rows} unless {\itshape C\+Rows} is {\itshape Dynamic}, and the same for the number of columns.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_block_methods_8h_af9cde899d5b63f65a3f125f76bc1295b}\label{_block_methods_8h_af9cde899d5b63f65a3f125f76bc1295b}} 
+\index{BlockMethods.h@{BlockMethods.h}!topRows@{topRows}}
+\index{topRows@{topRows}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{topRows()}{topRows()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+F\+U\+NC \mbox{\hyperlink{_block_methods_8h_a1edfbb783d56045e2607cafdead6630d}{Const\+Rows\+Block\+Xpr}} top\+Rows (\begin{DoxyParamCaption}\item[{Index}]{n = {\ttfamily N} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_af9cde899d5b63f65a3f125f76bc1295b}{top\+Rows(\+Index)}}. 
+
+This is the const version of \mbox{\hyperlink{_block_methods_8h_af9cde899d5b63f65a3f125f76bc1295b}{top\+Rows$<$int$>$()}}.
+
+\begin{DoxyReturn}{Returns}
+a block consisting of the top rows of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of rows in the block\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+a block consisting of the top rows of $\ast$this.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em N} & the number of rows in the block as specified at compile-\/time \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of rows in the block as specified at run-\/time\\
+\hline
+\end{DoxyParams}
+The compile-\/time and run-\/time information should not contradict. In other words, {\itshape n} should equal {\itshape N} unless {\itshape N} is {\itshape Dynamic}.
+
+Example\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ Output\+: 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ \begin{DoxySeeAlso}{See also}
+class Block, \mbox{\hyperlink{_block_methods_8h_af36f6abf022721678a127cd3e23c53a4}{block(\+Index,\+Index,\+Index,\+Index)}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_block_methods_8h_a9c3dca385b173b0ce360b495c8fdc714}\label{_block_methods_8h_a9c3dca385b173b0ce360b495c8fdc714}} 
+\index{BlockMethods.h@{BlockMethods.h}!ConstBlockXpr@{ConstBlockXpr}}
+\index{ConstBlockXpr@{ConstBlockXpr}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{ConstBlockXpr}{ConstBlockXpr}}
+{\footnotesize\ttfamily const typedef Block$<$const Derived$>$ Const\+Block\+Xpr}
+
+\mbox{\Hypertarget{_block_methods_8h_a60031e3975f812b9d86133ac694ee703}\label{_block_methods_8h_a60031e3975f812b9d86133ac694ee703}} 
+\index{BlockMethods.h@{BlockMethods.h}!ConstColsBlockXpr@{ConstColsBlockXpr}}
+\index{ConstColsBlockXpr@{ConstColsBlockXpr}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{ConstColsBlockXpr}{ConstColsBlockXpr}}
+{\footnotesize\ttfamily const typedef Block$<$const Derived, internal\+::traits$<$Derived$>$\+::Rows\+At\+Compile\+Time, Dynamic, !Is\+Row\+Major$>$ Const\+Cols\+Block\+Xpr}
+
+\mbox{\Hypertarget{_block_methods_8h_a592d92d98410aec163e6c0ec352afb5d}\label{_block_methods_8h_a592d92d98410aec163e6c0ec352afb5d}} 
+\index{BlockMethods.h@{BlockMethods.h}!ConstColXpr@{ConstColXpr}}
+\index{ConstColXpr@{ConstColXpr}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{ConstColXpr}{ConstColXpr}}
+{\footnotesize\ttfamily const typedef Block$<$const Derived, internal\+::traits$<$Derived$>$\+::Rows\+At\+Compile\+Time, 1, !Is\+Row\+Major$>$ Const\+Col\+Xpr}
+
+\mbox{\Hypertarget{_block_methods_8h_a1edfbb783d56045e2607cafdead6630d}\label{_block_methods_8h_a1edfbb783d56045e2607cafdead6630d}} 
+\index{BlockMethods.h@{BlockMethods.h}!ConstRowsBlockXpr@{ConstRowsBlockXpr}}
+\index{ConstRowsBlockXpr@{ConstRowsBlockXpr}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{ConstRowsBlockXpr}{ConstRowsBlockXpr}}
+{\footnotesize\ttfamily const typedef Block$<$const Derived, Dynamic, internal\+::traits$<$Derived$>$\+::Cols\+At\+Compile\+Time, Is\+Row\+Major$>$ Const\+Rows\+Block\+Xpr}
+
+\mbox{\Hypertarget{_block_methods_8h_ad16c8862ab226d96148a7934b7504162}\label{_block_methods_8h_ad16c8862ab226d96148a7934b7504162}} 
+\index{BlockMethods.h@{BlockMethods.h}!ConstRowXpr@{ConstRowXpr}}
+\index{ConstRowXpr@{ConstRowXpr}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{ConstRowXpr}{ConstRowXpr}}
+{\footnotesize\ttfamily const typedef Block$<$const Derived, 1, internal\+::traits$<$Derived$>$\+::Cols\+At\+Compile\+Time, Is\+Row\+Major$>$ Const\+Row\+Xpr}
+
+\mbox{\Hypertarget{_block_methods_8h_a210c6b721aff6166cf9e929b1e193fc2}\label{_block_methods_8h_a210c6b721aff6166cf9e929b1e193fc2}} 
+\index{BlockMethods.h@{BlockMethods.h}!ConstSegmentReturnType@{ConstSegmentReturnType}}
+\index{ConstSegmentReturnType@{ConstSegmentReturnType}!BlockMethods.h@{BlockMethods.h}}
+\doxysubsubsection{\texorpdfstring{ConstSegmentReturnType}{ConstSegmentReturnType}}
+{\footnotesize\ttfamily const typedef Vector\+Block$<$const Derived$>$ Const\+Segment\+Return\+Type}
+
