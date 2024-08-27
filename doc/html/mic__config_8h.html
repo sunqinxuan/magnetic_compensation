@@ -154,16 +154,16 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:abf3a67dd8e637aa67933b30581027ada"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__config_8h.html#abf3a67dd8e637aa67933b30581027ada">MIC_CONFIG_GET</a>(type,  key)&#160;&#160;&#160;<a class="el" href="class_mic_config.html#a07658f7a58ae10c20a78831ab745ee93">mic_config_t::get_instance</a>().get&lt;type&gt;(key)</td></tr>
+<tr class="memitem:abf3a67dd8e637aa67933b30581027ada"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__config_8h.html#abf3a67dd8e637aa67933b30581027ada">MIC_CONFIG_GET</a>(type,  key)&#160;&#160;&#160;mic_config_t::get_instance().get&lt;type&gt;(key)</td></tr>
 <tr class="separator:abf3a67dd8e637aa67933b30581027ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad556365896cf5546b92720bd9108fdbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__config_8h.html#ad556365896cf5546b92720bd9108fdbf">MIC_CONFIG_SET</a>(type,  key,  value)&#160;&#160;&#160;<a class="el" href="class_mic_config.html#a07658f7a58ae10c20a78831ab745ee93">mic_config_t::get_instance</a>().set&lt;type&gt;(key, value)</td></tr>
+<tr class="memitem:ad556365896cf5546b92720bd9108fdbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__config_8h.html#ad556365896cf5546b92720bd9108fdbf">MIC_CONFIG_SET</a>(type,  key,  value)&#160;&#160;&#160;mic_config_t::get_instance().<a class="el" href="_c_make_lists_8txt.html#a57b502ce7f442d5ece67af03fb4278d7">set</a>&lt;type&gt;(key, value)</td></tr>
 <tr class="separator:ad556365896cf5546b92720bd9108fdbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a844d9e4cdcb3fc412413c7729496087f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__config_8h.html#a844d9e4cdcb3fc412413c7729496087f">REGISTER_PARAM</a>(key,  type)</td></tr>
 <tr class="separator:a844d9e4cdcb3fc412413c7729496087f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a9e2e01c3aab62722b47165f78f3ae566"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__config_8h.html#a9e2e01c3aab62722b47165f78f3ae566">mic_config_unique_ptr</a> = std::unique_ptr&lt; <a class="el" href="mic__prerequisite_8h.html#a0b4609f1c6c770e66e1a5f230551e719">mic_config_t</a> &gt;</td></tr>
+<tr class="memitem:a9e2e01c3aab62722b47165f78f3ae566"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__config_8h.html#a9e2e01c3aab62722b47165f78f3ae566">mic_config_unique_ptr</a> = std::unique_ptr&lt; mic_config_t &gt;</td></tr>
 <tr class="separator:a9e2e01c3aab62722b47165f78f3ae566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03fa94366a92d90156f402bb6c6e3c31"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a03fa94366a92d90156f402bb6c6e3c31"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mic__config_8h.html#a03fa94366a92d90156f402bb6c6e3c31">mic_param_type_t</a> = <a class="el" href="struct_mic_param_type.html">MicParamType</a>&lt; T &gt;</td></tr>
@@ -201,7 +201,7 @@ Enumerations</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="class_mic_config.html#a07658f7a58ae10c20a78831ab745ee93">mic_config_t::get_instance</a>().get&lt;type&gt;(key)</td>
+          <td></td><td>&#160;&#160;&#160;mic_config_t::get_instance().get&lt;type&gt;(key)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -235,7 +235,7 @@ Enumerations</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="class_mic_config.html#a07658f7a58ae10c20a78831ab745ee93">mic_config_t::get_instance</a>().set&lt;type&gt;(key, value)</td>
+          <td></td><td>&#160;&#160;&#160;mic_config_t::get_instance().<a class="el" href="_c_make_lists_8txt.html#a57b502ce7f442d5ece67af03fb4278d7">set</a>&lt;type&gt;(key, value)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -296,7 +296,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="mic__config_8h.html#a9e2e01c3aab62722b47165f78f3ae566">mic_config_unique_ptr</a> =  std::unique_ptr&lt;<a class="el" href="mic__prerequisite_8h.html#a0b4609f1c6c770e66e1a5f230551e719">mic_config_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="mic__config_8h.html#a9e2e01c3aab62722b47165f78f3ae566">mic_config_unique_ptr</a> =  std::unique_ptr&lt;mic_config_t&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,5 +1,0 @@
-var dir_8a003289c0e925172c4e0ce1eef76de4 =
-[
-    [ "ceres", "dir_8e5d4d0c166c6a86356629d839d2c68b.html", "dir_8e5d4d0c166c6a86356629d839d2c68b" ],
-    [ "gflags", "dir_31487e5511c7569d38a71a1194950558.html", "dir_31487e5511c7569d38a71a1194950558" ]
-];

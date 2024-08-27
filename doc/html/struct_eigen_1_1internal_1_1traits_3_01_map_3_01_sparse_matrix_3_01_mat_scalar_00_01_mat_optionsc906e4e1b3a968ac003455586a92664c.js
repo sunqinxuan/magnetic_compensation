@@ -1,6 +1,0 @@
-var struct_eigen_1_1internal_1_1traits_3_01_map_3_01_sparse_matrix_3_01_mat_scalar_00_01_mat_optionsc906e4e1b3a968ac003455586a92664c =
-[
-    [ "PlainObjectType", "struct_eigen_1_1internal_1_1traits_3_01_map_3_01_sparse_matrix_3_01_mat_scalar_00_01_mat_optionsc906e4e1b3a968ac003455586a92664c.html#a7ea1289147e8e15383731b2ca4ef5dee", null ],
-    [ "TraitsBase", "struct_eigen_1_1internal_1_1traits_3_01_map_3_01_sparse_matrix_3_01_mat_scalar_00_01_mat_optionsc906e4e1b3a968ac003455586a92664c.html#a515426d8fed72750e4815acd12da5aa0", null ],
-    [ "Flags", "struct_eigen_1_1internal_1_1traits_3_01_map_3_01_sparse_matrix_3_01_mat_scalar_00_01_mat_optionsc906e4e1b3a968ac003455586a92664c.html#adf7a5efed56a5680108d973d8f4f0831a57f9815e07239ed31972ecaf59c758c5", null ]
-];

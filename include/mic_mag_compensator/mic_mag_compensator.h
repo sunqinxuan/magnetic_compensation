@@ -19,15 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-/**
- * @file mic_mag_compensator.h
- * @brief basic class for magnetic compensation
- * @details
- * @author Qinxuan Sun
- * @version 0.1
- * @date 2024-08-26
- * @copyright Copyright (C) 2024 Qinxuan Sun. All rights reserved.
- */
+
 #ifndef MIC_MAG_COMPENSATOR
 #define MIC_MAG_COMPENSATOR
 
@@ -52,9 +44,49 @@ enum class MicMagCompensatorState : uint8_t
 };
 using mic_state_t = MicMagCompensatorState;
 
-/**
- * @brief basic class for magnetic compensator
- */
+ /** \brief @b MicMagCompensator provides a base implementation of the Iterative
+  * Closest Point algorithm. The transformation is estimated based on Singular Value
+  * Decomposition (SVD).
+  *
+  * The algorithm has several termination criteria:
+  *
+  * <ol>
+  * <li>Number of iterations has reached the maximum user imposed number of iterations
+  * (via \ref setMaximumIterations)</li> <li>The epsilon (difference) between the
+  * previous transformation and the current estimated transformation is smaller than an
+  * user imposed value (via \ref setTransformationEpsilon)</li> <li>The sum of Euclidean
+  * squared errors is smaller than a user defined threshold (via \ref
+  * setEuclideanFitnessEpsilon)</li>
+  * </ol>
+  *
+  *
+  * Usage example:
+  * \code
+  * IterativeClosestPoint<PointXYZ, PointXYZ> icp;
+  * // Set the input source and target
+  * icp.setInputSource (cloud_source);
+  * icp.setInputTarget (cloud_target);
+  *
+  * // Set the max correspondence distance to 5cm (e.g., correspondences with higher
+  * // distances will be ignored)
+  * icp.setMaxCorrespondenceDistance (0.05);
+  * // Set the maximum number of iterations (criterion 1)
+  * icp.setMaximumIterations (50);
+  * // Set the transformation epsilon (criterion 2)
+  * icp.setTransformationEpsilon (1e-8);
+  * // Set the euclidean distance difference epsilon (criterion 3)
+  * icp.setEuclideanFitnessEpsilon (1);
+  *
+  * // Perform the alignment
+  * icp.align (cloud_source_registered);
+  *
+  * // Obtain the transformation that aligned cloud_source to cloud_source_registered
+  * Eigen::Matrix4f transformation = icp.getFinalTransformation ();
+  * \endcode
+  *
+  * \author Radu B. Rusu, Michael Dixon
+  * \ingroup registration
+  */
 class MicMagCompensator : public MicObservable<MicMagCompensator>
 {
 public:

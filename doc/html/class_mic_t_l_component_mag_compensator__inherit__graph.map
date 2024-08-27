@@ -1,6 +1,6 @@
 <map id="MicTLComponentMagCompensator" name="MicTLComponentMagCompensator">
-<area shape="rect" id="node1" title=" " alt="" coords="23,229,274,256"/>
-<area shape="rect" id="node2" href="$class_mic_t_l_mag_compensator.html" title=" " alt="" coords="61,155,236,181"/>
-<area shape="rect" id="node3" href="$class_mic_mag_compensator.html" title="basic class for magnetic compensator" alt="" coords="69,80,229,107"/>
-<area shape="rect" id="node4" href="$class_mic_observable.html" title=" " alt="" coords="5,5,292,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,792,292,913"/>
+<area shape="rect" id="node2" href="$class_mic_t_l_mag_compensator.html" title=" " alt="" coords="43,579,254,744"/>
+<area shape="rect" id="node3" href="$class_mic_mag_compensator.html" title="basic class for magnetic compensator" alt="" coords="51,204,247,531"/>
+<area shape="rect" id="node4" href="$class_mic_observable.html" title=" " alt="" coords="5,5,292,156"/>
 </map>

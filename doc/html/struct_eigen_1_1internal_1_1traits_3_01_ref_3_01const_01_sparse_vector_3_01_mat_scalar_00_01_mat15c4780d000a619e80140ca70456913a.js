@@ -1,4 +1,0 @@
-var struct_eigen_1_1internal_1_1traits_3_01_ref_3_01const_01_sparse_vector_3_01_mat_scalar_00_01_mat15c4780d000a619e80140ca70456913a =
-[
-    [ "Flags", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01const_01_sparse_vector_3_01_mat_scalar_00_01_mat15c4780d000a619e80140ca70456913a.html#ac1018b6b47101ed28460858939faec61a1577cd17274e8098885d601e440bb843", null ]
-];

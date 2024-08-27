@@ -1,8 +1,0 @@
-<map id="Eigen::internal::evaluator&lt; Diagonal&lt; ArgType, DiagIndex &gt; &gt;" name="Eigen::internal::evaluator&lt; Diagonal&lt; ArgType, DiagIndex &gt; &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="588,93,855,134"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1internal_1_1evaluator__base.html" title=" " alt="" coords="261,5,465,61"/>
-<area shape="rect" id="node3" href="$class_eigen_1_1internal_1_1noncopyable.html" title=" " alt="" coords="5,20,212,47"/>
-<area shape="rect" id="node4" href="$class_eigen_1_1internal_1_1variable__if__dynamicindex.html" title=" " alt="" coords="267,85,459,141"/>
-<area shape="rect" id="node5" href="$struct_eigen_1_1internal_1_1evaluator.html" title=" " alt="" coords="270,166,457,207"/>
-<area shape="rect" id="node6" href="$struct_eigen_1_1internal_1_1unary__evaluator.html" title=" " alt="" coords="22,166,195,207"/>
-</map>

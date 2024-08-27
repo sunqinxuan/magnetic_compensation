@@ -1,5 +1,0 @@
-var struct_eigen_1_1internal_1_1reducer__traits_3_01_arg_min_tuple_reducer_3_01_t_01_4_00_01_device_01_4 =
-[
-    [ "Cost", "struct_eigen_1_1internal_1_1reducer__traits_3_01_arg_min_tuple_reducer_3_01_t_01_4_00_01_device_01_4.html#a2793a5d5a17bdbf6eed520cb2cbd5cfbaf2cf9fba2c4aab01fba41def7287db4f", null ],
-    [ "PacketAccess", "struct_eigen_1_1internal_1_1reducer__traits_3_01_arg_min_tuple_reducer_3_01_t_01_4_00_01_device_01_4.html#a2793a5d5a17bdbf6eed520cb2cbd5cfba83deee018295968eb6c375cecdf2a453", null ]
-];

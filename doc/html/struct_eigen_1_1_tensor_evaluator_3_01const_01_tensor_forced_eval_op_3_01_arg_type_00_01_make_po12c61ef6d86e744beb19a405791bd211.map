@@ -1,8 +1,0 @@
-<map id="Eigen::TensorEvaluator&lt; const TensorForcedEvalOp&lt; ArgType, MakePointer_ &gt;, Device &gt;" name="Eigen::TensorEvaluator&lt; const TensorForcedEvalOp&lt; ArgType, MakePointer_ &gt;, Device &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="29,304,235,375"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1_make_pointer.html" title=" " alt="" coords="5,200,165,241"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1_tensor_evaluator.html" title=" " alt="" coords="189,200,360,241"/>
-<area shape="rect" id="node4" href="$struct_eigen_1_1_sizes.html" title=" " alt="" coords="65,103,241,130"/>
-<area shape="rect" id="node5" title=" " alt="" coords="54,5,253,47"/>
-<area shape="rect" id="node6" href="$struct_eigen_1_1internal_1_1traits.html" title=" " alt="" coords="266,96,425,137"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="Eigen::internal::BandMatrix&lt; _Scalar, Rows, Cols, Supers, Subs, Options &gt;" name="Eigen::internal::BandMatrix&lt; _Scalar, Rows, Cols, Supers, Subs, Options &gt;">
-<area shape="rect" id="node1" title="Represents a rectangular matrix with a banded storage." alt="" coords="613,158,832,214"/>
-<area shape="rect" id="node2" href="$class_eigen_1_1internal_1_1_band_matrix_base.html" title=" " alt="" coords="283,5,493,76"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1_eigen_base.html" title=" " alt="" coords="5,13,229,69"/>
-<area shape="rect" id="node4" href="$class_eigen_1_1internal_1_1variable__if__dynamic.html" title=" " alt="" coords="285,100,491,141"/>
-<area shape="rect" id="node5" href="$struct_eigen_1_1internal_1_1traits.html" title=" " alt="" coords="309,165,467,207"/>
-<area shape="rect" id="node6" href="$class_eigen_1_1internal_1_1variable__if__dynamic.html" title=" " alt="" coords="279,231,497,272"/>
-<area shape="rect" id="node7" href="$class_eigen_1_1internal_1_1variable__if__dynamic.html" title=" " alt="" coords="283,296,493,337"/>
-</map>

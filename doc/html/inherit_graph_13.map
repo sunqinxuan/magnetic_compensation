@@ -1,8 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_mic_observable.html" title=" " alt="" coords="5,56,292,83"/>
-<area shape="rect" id="node2" href="$class_mic_mag_compensator.html" title="basic class for magnetic compensator" alt="" coords="340,56,500,83"/>
-<area shape="rect" id="node3" href="$class_mic_cabin_mag_compensator.html" title=" " alt="" coords="557,5,754,32"/>
-<area shape="rect" id="node4" href="$class_mic_ellipsoid_mag_compensator.html" title=" " alt="" coords="548,56,763,83"/>
-<area shape="rect" id="node5" href="$class_mic_t_l_mag_compensator.html" title=" " alt="" coords="568,107,743,133"/>
-<area shape="rect" id="node6" href="$class_mic_t_l_component_mag_compensator.html" title=" " alt="" coords="811,107,1061,133"/>
+<area shape="rect" id="node1" href="$class_mic_logger.html" title=" " alt="" coords="5,56,95,83"/>
+<area shape="rect" id="node2" href="$class_mic_bash_file_logger.html" title=" " alt="" coords="143,5,285,32"/>
+<area shape="rect" id="node3" href="$class_mic_bash_printer.html" title=" " alt="" coords="154,56,274,83"/>
+<area shape="rect" id="node4" href="$class_mic_file_writer.html" title=" " alt="" coords="161,107,267,133"/>
 </map>

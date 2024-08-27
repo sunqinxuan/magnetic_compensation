@@ -1,5 +1,0 @@
-var struct_eigen_1_1internal_1_1functor__traits_3_01scalar__sum__op_3_01_lhs_scalar_00_01_rhs_scalar_01_4_01_4 =
-[
-    [ "Cost", "struct_eigen_1_1internal_1_1functor__traits_3_01scalar__sum__op_3_01_lhs_scalar_00_01_rhs_scalar_01_4_01_4.html#ad2ca98a79bc6f03d2d749406eddef5c1ae9723ad8ec7dbf7ebdb98bf1c63dfef1", null ],
-    [ "PacketAccess", "struct_eigen_1_1internal_1_1functor__traits_3_01scalar__sum__op_3_01_lhs_scalar_00_01_rhs_scalar_01_4_01_4.html#ad2ca98a79bc6f03d2d749406eddef5c1a9d6cb1fc12eb23516d70e1f2cf7e7181", null ]
-];

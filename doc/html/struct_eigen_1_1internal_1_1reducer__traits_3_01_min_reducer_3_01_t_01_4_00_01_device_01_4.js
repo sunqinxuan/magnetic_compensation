@@ -1,5 +1,0 @@
-var struct_eigen_1_1internal_1_1reducer__traits_3_01_min_reducer_3_01_t_01_4_00_01_device_01_4 =
-[
-    [ "Cost", "struct_eigen_1_1internal_1_1reducer__traits_3_01_min_reducer_3_01_t_01_4_00_01_device_01_4.html#a971414d6235969d131f076bb004cf25da95b81102862cf28c80f834d221f064a6", null ],
-    [ "PacketAccess", "struct_eigen_1_1internal_1_1reducer__traits_3_01_min_reducer_3_01_t_01_4_00_01_device_01_4.html#a971414d6235969d131f076bb004cf25daaf196638a86b74bf457e156d34f0218f", null ]
-];

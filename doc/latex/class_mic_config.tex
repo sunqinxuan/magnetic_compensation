@@ -10,7 +10,16 @@ Inheritance diagram for Mic\+Config\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=166pt]{class_mic_config__inherit__graph}
+\includegraphics[width=193pt]{class_mic_config__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mic\+Config\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_mic_config__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -27,7 +36,7 @@ Inheritance diagram for Mic\+Config\+:\nopagebreak
 \item 
 static void \mbox{\hyperlink{class_mic_config_a01cf78607991383a433747266724d912}{initialize}} (const \mbox{\hyperlink{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1}{mic\+\_\+config\+\_\+type\+\_\+t}} type, const std\+::string filename=\char`\"{}../etc/default\+\_\+config.\+json\char`\"{})
 \item 
-static \mbox{\hyperlink{mic__prerequisite_8h_a0b4609f1c6c770e66e1a5f230551e719}{mic\+\_\+config\+\_\+t}} \& \mbox{\hyperlink{class_mic_config_a07658f7a58ae10c20a78831ab745ee93}{get\+\_\+instance}} ()
+static mic\+\_\+config\+\_\+t \& \mbox{\hyperlink{class_mic_config_a07658f7a58ae10c20a78831ab745ee93}{get\+\_\+instance}} ()
 \item 
 static const std\+::string \mbox{\hyperlink{class_mic_config_a59c271006ff2626fa873e0694e9509ad}{to\+\_\+str}} ()
 \item 
@@ -38,14 +47,14 @@ static ret\+\_\+t \mbox{\hyperlink{class_mic_config_a69bab30658e64bdfad23dcab6a5
 \item 
 \mbox{\hyperlink{class_mic_config_abf6954ef4c3d4264cba4debc95fd82ba}{Mic\+Config}} ()
 \item 
-void \mbox{\hyperlink{class_mic_config_a76beab43bec08114cca2cc1e41216b9d}{from\+\_\+json\+\_\+node}} (\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&node)
+void \mbox{\hyperlink{class_mic_config_a76beab43bec08114cca2cc1e41216b9d}{from\+\_\+json\+\_\+node}} (json\+\_\+t \&node)
 \item 
 {\footnotesize template$<$typename T $>$ }\\bool\+\_\+t \mbox{\hyperlink{class_mic_config_a4a48e5dbcf528df16e3ae385b8bc0578}{check\+\_\+key}} (const std\+::string \&key)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \mbox{\hyperlink{class_mic_config_a2dba82b7bb009b059e42d142b916fcc4}{\+\_\+json}}
+json\+\_\+t \mbox{\hyperlink{class_mic_config_a2dba82b7bb009b059e42d142b916fcc4}{\+\_\+json}}
 \item 
 std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{class_mic_config_a4ac8798fcdbddca9273d5b2ab8b79fda}{\+\_\+param\+\_\+registry}}
 \end{DoxyCompactItemize}
@@ -83,7 +92,7 @@ bool\+\_\+t Mic\+Config\+::check\+\_\+key (\begin{DoxyParamCaption}\item[{const 
 \index{MicConfig@{MicConfig}!from\_json\_node@{from\_json\_node}}
 \index{from\_json\_node@{from\_json\_node}!MicConfig@{MicConfig}}
 \doxysubsubsection{\texorpdfstring{from\_json\_node()}{from\_json\_node()}}
-{\footnotesize\ttfamily void Mic\+Config\+::from\+\_\+json\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily void Mic\+Config\+::from\+\_\+json\+\_\+node (\begin{DoxyParamCaption}\item[{json\+\_\+t \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{class_mic_config_a69bab30658e64bdfad23dcab6a55ebc8}\label{class_mic_config_a69bab30658e64bdfad23dcab6a55ebc8}} 
 \index{MicConfig@{MicConfig}!from\_str@{from\_str}}
@@ -102,7 +111,7 @@ T Mic\+Config\+::get (\begin{DoxyParamCaption}\item[{const std\+::string}]{key }
 \index{MicConfig@{MicConfig}!get\_instance@{get\_instance}}
 \index{get\_instance@{get\_instance}!MicConfig@{MicConfig}}
 \doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{mic__prerequisite_8h_a0b4609f1c6c770e66e1a5f230551e719}{mic\+\_\+config\+\_\+t}} \& Mic\+Config\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily mic\+\_\+config\+\_\+t \& Mic\+Config\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{class_mic_config_a01cf78607991383a433747266724d912}\label{class_mic_config_a01cf78607991383a433747266724d912}} 
 \index{MicConfig@{MicConfig}!initialize@{initialize}}
@@ -136,7 +145,7 @@ void Mic\+Config\+::set (\begin{DoxyParamCaption}\item[{const std\+::string}]{ke
 \index{MicConfig@{MicConfig}!\_json@{\_json}}
 \index{\_json@{\_json}!MicConfig@{MicConfig}}
 \doxysubsubsection{\texorpdfstring{\_json}{\_json}}
-{\footnotesize\ttfamily \mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} Mic\+Config\+::\+\_\+json\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily json\+\_\+t Mic\+Config\+::\+\_\+json\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{class_mic_config_a4ac8798fcdbddca9273d5b2ab8b79fda}\label{class_mic_config_a4ac8798fcdbddca9273d5b2ab8b79fda}} 
 \index{MicConfig@{MicConfig}!\_param\_registry@{\_param\_registry}}

@@ -1,7 +1,0 @@
-<map id="Eigen::internal::unary_evaluator&lt; TriangularView&lt; ArgType, Mode &gt;, IteratorBased &gt;" name="Eigen::internal::unary_evaluator&lt; TriangularView&lt; ArgType, Mode &gt;, IteratorBased &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="627,43,885,99"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1internal_1_1evaluator__base.html" title=" " alt="" coords="261,5,504,61"/>
-<area shape="rect" id="node3" href="$class_eigen_1_1internal_1_1noncopyable.html" title=" " alt="" coords="5,20,212,47"/>
-<area shape="rect" id="node4" href="$struct_eigen_1_1internal_1_1evaluator.html" title=" " alt="" coords="289,86,476,127"/>
-<area shape="rect" id="node5" href="$struct_eigen_1_1internal_1_1unary__evaluator.html" title=" " alt="" coords="22,86,195,127"/>
-</map>

@@ -1,5 +1,0 @@
-var struct_eigen_1_1internal_1_1reducer__traits_3_01_max_reducer_3_01_t_01_4_00_01_device_01_4 =
-[
-    [ "Cost", "struct_eigen_1_1internal_1_1reducer__traits_3_01_max_reducer_3_01_t_01_4_00_01_device_01_4.html#ab98cfdb28c10028b71ad26e74dbdeac1a12d97607f8e7e1cd2d2e89cfd48ebb6d", null ],
-    [ "PacketAccess", "struct_eigen_1_1internal_1_1reducer__traits_3_01_max_reducer_3_01_t_01_4_00_01_device_01_4.html#ab98cfdb28c10028b71ad26e74dbdeac1a2408768627cfd78fec456389340f2902", null ]
-];

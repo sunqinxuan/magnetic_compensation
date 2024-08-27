@@ -1,5 +1,0 @@
-var struct_eigen_1_1internal_1_1result__of_3_01_func_07_arg_type0_00_01_arg_type1_00_01_arg_type2_08_4 =
-[
-    [ "type", "struct_eigen_1_1internal_1_1result__of_3_01_func_07_arg_type0_00_01_arg_type1_00_01_arg_type2_08_4.html#acb34a93dd86b197d202b904fc55d8e35", null ],
-    [ "FunctorType", "struct_eigen_1_1internal_1_1result__of_3_01_func_07_arg_type0_00_01_arg_type1_00_01_arg_type2_08_4.html#a2e6591abb4aa892cf52d3345c6afb516ad8da9a8bb3a4cb3fccfcfac46a3bc78d", null ]
-];

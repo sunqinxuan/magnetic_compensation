@@ -1,6 +1,0 @@
-<map id="Eigen::DiagonalMatrix&lt; _Scalar, SizeAtCompileTime, MaxSizeAtCompileTime &gt;" name="Eigen::DiagonalMatrix&lt; _Scalar, SizeAtCompileTime, MaxSizeAtCompileTime &gt;">
-<area shape="rect" id="node1" title="Represents a diagonal matrix with its storage." alt="" coords="715,75,937,131"/>
-<area shape="rect" id="node2" href="$class_eigen_1_1_diagonal_base.html" title=" " alt="" coords="301,5,585,76"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1_eigen_base.html" title=" " alt="" coords="5,13,252,69"/>
-<area shape="rect" id="node4" href="$struct_eigen_1_1internal_1_1traits.html" title=" " alt="" coords="364,100,523,141"/>
-</map>

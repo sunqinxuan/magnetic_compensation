@@ -1,8 +1,0 @@
-<map id="Eigen::TensorEvaluator&lt; const TensorCwiseNullaryOp&lt; NullaryOp, ArgType &gt;, Device &gt;" name="Eigen::TensorEvaluator&lt; const TensorCwiseNullaryOp&lt; NullaryOp, ArgType &gt;, Device &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="869,41,1115,97"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1internal_1_1nullary__wrapper.html" title=" " alt="" coords="535,5,744,61"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1_tensor_evaluator.html" title=" " alt="" coords="554,86,725,127"/>
-<area shape="rect" id="node4" href="$struct_eigen_1_1_sizes.html" title=" " alt="" coords="253,57,429,84"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,50,204,91"/>
-<area shape="rect" id="node6" href="$struct_eigen_1_1internal_1_1traits.html" title=" " alt="" coords="262,109,421,150"/>
-</map>

@@ -1,4 +1,0 @@
-var struct_eigen_1_1internal_1_1traits_3_01_full_piv_householder_q_r_3_01___matrix_type_01_4_01_4 =
-[
-    [ "Flags", "struct_eigen_1_1internal_1_1traits_3_01_full_piv_householder_q_r_3_01___matrix_type_01_4_01_4.html#a23273774b7f5e6cd5460606dc0abf062a56c83eb391e3472e08222af9f3fda2e1", null ]
-];

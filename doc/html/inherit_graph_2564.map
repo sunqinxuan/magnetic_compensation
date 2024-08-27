@@ -1,4 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_leaf_count_3_01const_01_tensor_forced_eval_op_3_01_expr_01_4_01_4.html" title="specialisation of the LeafCount struct when the node type is const TensorForcedEvalOp" alt="" coords="5,5,212,76"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_leaf_count_3_01_tensor_forced_eval_op_3_01_expr_01_4_01_4.html" title="specialisation of the LeafCount struct when the node type is TensorForcedEvalOp" alt="" coords="260,5,428,76"/>
-</map>

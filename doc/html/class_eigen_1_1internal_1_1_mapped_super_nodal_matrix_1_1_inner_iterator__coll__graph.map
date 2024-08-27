@@ -1,4 +1,0 @@
-<map id="Eigen::internal::MappedSuperNodalMatrix&lt; _Scalar, _StorageIndex &gt;::InnerIterator" name="Eigen::internal::MappedSuperNodalMatrix&lt; _Scalar, _StorageIndex &gt;::InnerIterator">
-<area shape="rect" id="node1" title="InnerIterator class to iterate over nonzero values of the current column in the supernodal matrix L." alt="" coords="13,109,278,165"/>
-<area shape="rect" id="node2" href="$class_eigen_1_1internal_1_1_mapped_super_nodal_matrix.html" title="a class to manipulate the L supernodal factor from the SparseLU factorization" alt="" coords="5,5,285,47"/>
-</map>

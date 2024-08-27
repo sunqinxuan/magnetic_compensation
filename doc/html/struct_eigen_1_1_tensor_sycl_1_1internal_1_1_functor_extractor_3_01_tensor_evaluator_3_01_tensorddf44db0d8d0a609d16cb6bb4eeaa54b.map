@@ -1,7 +1,0 @@
-<map id="Eigen::TensorSycl::internal::FunctorExtractor&lt; TensorEvaluator&lt; TensorSelectOp&lt; IfExpr, ThenExpr, ElseExpr &gt;, Dev &gt; &gt;" name="Eigen::TensorSycl::internal::FunctorExtractor&lt; TensorEvaluator&lt; TensorSelectOp&lt; IfExpr, ThenExpr, ElseExpr &gt;, Dev &gt; &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="583,93,821,178"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor_3_01_tensor_evaluator_3_01const_08443a240f6166215dcd0107fd174ad7c.html" title=" " alt="" coords="303,93,533,178"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor.html" title=" " alt="" coords="5,5,192,76"/>
-<area shape="rect" id="node4" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor.html" title=" " alt="" coords="5,100,192,171"/>
-<area shape="rect" id="node5" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_functor_extractor.html" title=" " alt="" coords="5,195,192,265"/>
-</map>

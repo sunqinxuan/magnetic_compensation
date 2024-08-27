@@ -1,4 +1,0 @@
-var struct_eigen_1_1internal_1_1simplicial__cholesky__grab__input_3_01_matrix_type_00_01_matrix_type_01_4 =
-[
-    [ "ConstMatrixPtr", "struct_eigen_1_1internal_1_1simplicial__cholesky__grab__input_3_01_matrix_type_00_01_matrix_type_01_4.html#af24c0cdc4b29e1c18cb5cac4c8c66723", null ]
-];

@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_eigen_1_1_dense_coeffs_base.html" title=" " alt="" coords="5,20,224,76"/>
-<area shape="rect" id="node2" href="$class_eigen_1_1_dense_base.html" title="Base class for all dense matrices, vectors, and arrays." alt="" coords="272,35,492,61"/>
-<area shape="rect" id="node3" href="$class_eigen_1_1_array_base.html" title="Base class for all 1D and 2D array, and related expressions." alt="" coords="540,5,755,32"/>
-<area shape="rect" id="node4" href="$class_eigen_1_1_matrix_base.html" title="Base class for all dense matrices, vectors, and expressions." alt="" coords="572,57,723,98"/>
-</map>

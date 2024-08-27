@@ -1,7 +1,0 @@
-<map id="Eigen::KroneckerProductSparse&lt; Lhs, Rhs &gt;" name="Eigen::KroneckerProductSparse&lt; Lhs, Rhs &gt;">
-<area shape="rect" id="node1" title="Kronecker tensor product helper class for sparse matrices." alt="" coords="765,60,989,101"/>
-<area shape="rect" id="node2" href="$class_eigen_1_1_kronecker_product_base.html" title=" " alt="" coords="505,53,717,109"/>
-<area shape="rect" id="node3" href="$class_eigen_1_1_return_by_value.html" title=" " alt="" coords="263,53,457,109"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,5,215,76"/>
-<area shape="rect" id="node5" href="$class_eigen_1_1internal_1_1no__assignment__operator.html" title=" " alt="" coords="27,100,193,141"/>
-</map>

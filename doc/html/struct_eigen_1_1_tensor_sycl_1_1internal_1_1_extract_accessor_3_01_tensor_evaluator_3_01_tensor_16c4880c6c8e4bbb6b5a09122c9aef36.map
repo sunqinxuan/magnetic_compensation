@@ -1,4 +1,0 @@
-<map id="Eigen::TensorSycl::internal::ExtractAccessor&lt; TensorEvaluator&lt; TensorEvalToOp&lt; Expr &gt;, Dev &gt; &gt;" name="Eigen::TensorSycl::internal::ExtractAccessor&lt; TensorEvaluator&lt; TensorEvalToOp&lt; Expr &gt;, Dev &gt; &gt;">
-<area shape="rect" id="node1" title="specialisation of the ExtractAccessor struct when the node type is TensorEvalToOp" alt="" coords="244,13,484,83"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01const_0198790cf5cfaea7333b9e857f682a074d.html" title="specialisation of the ExtractAccessor struct when the node type is const TensorEvalToOp" alt="" coords="5,5,196,91"/>
-</map>

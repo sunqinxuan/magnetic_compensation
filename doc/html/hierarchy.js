@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "CabinCostFunctionCreator", "class_cabin_cost_function_creator.html", null ],
     [ "CostFunctionCreator", "class_cost_function_creator.html", null ],
+    [ "tl::TollesLawson::HashTLterm", "structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html", null ],
     [ "MicConfig", "class_mic_config.html", [
       [ "MicJsonConfig", "class_mic_json_config.html", null ]
     ] ],
@@ -22,6 +23,7 @@ var hierarchy =
       [ "MicKFINSEstimator", "class_mic_k_f_i_n_s_estimator.html", null ]
     ] ],
     [ "MicObservable< T >", "class_mic_observable.html", null ],
+    [ "mic::MicObservable< T >", "classmic_1_1_mic_observable.html", null ],
     [ "MicObservable< MicMagCompensator >", "class_mic_observable.html", [
       [ "MicMagCompensator", "class_mic_mag_compensator.html", [
         [ "MicCabinMagCompensator", "class_mic_cabin_mag_compensator.html", null ],
@@ -32,11 +34,13 @@ var hierarchy =
       ] ]
     ] ],
     [ "MicObserver< T >", "class_mic_observer.html", null ],
+    [ "mic::MicObserver< T >", "classmic_1_1_mic_observer.html", null ],
     [ "MicObserver< MicMagCompensator >", "class_mic_observer.html", [
       [ "MicStateLogger", "class_mic_state_logger.html", null ]
     ] ],
     [ "MicParamType< T >", "struct_mic_param_type.html", null ],
     [ "MicUtils", "class_mic_utils.html", null ],
+    [ "tl::TollesLawson", "classtl_1_1_tolles_lawson.html", null ],
     [ "tuple_index< T, Tuple >", "structtuple__index.html", null ],
     [ "tuple_index< T, std::tuple< T, Types... > >", "structtuple__index_3_01_t_00_01std_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ],
     [ "tuple_index< T, std::tuple< U, Types... > >", "structtuple__index_3_01_t_00_01std_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4.html", null ]

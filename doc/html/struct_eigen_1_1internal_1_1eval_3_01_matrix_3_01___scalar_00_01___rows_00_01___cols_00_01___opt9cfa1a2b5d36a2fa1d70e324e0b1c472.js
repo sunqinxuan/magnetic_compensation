@@ -1,4 +1,0 @@
-var struct_eigen_1_1internal_1_1eval_3_01_matrix_3_01___scalar_00_01___rows_00_01___cols_00_01___opt9cfa1a2b5d36a2fa1d70e324e0b1c472 =
-[
-    [ "type", "struct_eigen_1_1internal_1_1eval_3_01_matrix_3_01___scalar_00_01___rows_00_01___cols_00_01___opt9cfa1a2b5d36a2fa1d70e324e0b1c472.html#ad4a34a015949f20af0e226430ecfeafe", null ]
-];

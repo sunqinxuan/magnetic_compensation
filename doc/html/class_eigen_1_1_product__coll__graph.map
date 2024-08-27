@@ -1,6 +1,0 @@
-<map id="Eigen::Product&lt; _Lhs, _Rhs, Option &gt;" name="Eigen::Product&lt; _Lhs, _Rhs, Option &gt;">
-<area shape="rect" id="node1" title="Expression of the product of two arbitrary matrices or vectors." alt="" coords="369,159,532,200"/>
-<area shape="rect" id="node2" href="$class_eigen_1_1_product_impl.html" title=" " alt="" coords="5,5,276,135"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1internal_1_1ref__selector.html" title=" " alt="" coords="69,159,212,200"/>
-<area shape="rect" id="node4" href="$struct_eigen_1_1internal_1_1ref__selector.html" title=" " alt="" coords="69,224,212,265"/>
-</map>

@@ -1,4 +1,0 @@
-var struct_eigen_1_1internal_1_1nested_3_01_tensor_map_3_01_plain_object_type_00_01_options_00_01_make_pointer_01_4_01_4 =
-[
-    [ "type", "struct_eigen_1_1internal_1_1nested_3_01_tensor_map_3_01_plain_object_type_00_01_options_00_01_make_pointer_01_4_01_4.html#ade5985bf7fc3da1c28317b35e9a901b1", null ]
-];

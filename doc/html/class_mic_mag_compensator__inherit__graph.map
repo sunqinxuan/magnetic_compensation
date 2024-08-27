@@ -1,8 +1,8 @@
 <map id="MicMagCompensator" name="MicMagCompensator">
-<area shape="rect" id="node1" title="basic class for magnetic compensator" alt="" coords="255,80,415,107"/>
-<area shape="rect" id="node3" href="$class_mic_cabin_mag_compensator.html" title=" " alt="" coords="5,155,203,181"/>
-<area shape="rect" id="node4" href="$class_mic_ellipsoid_mag_compensator.html" title=" " alt="" coords="227,155,442,181"/>
-<area shape="rect" id="node5" href="$class_mic_t_l_mag_compensator.html" title=" " alt="" coords="466,155,641,181"/>
-<area shape="rect" id="node2" href="$class_mic_observable.html" title=" " alt="" coords="191,5,478,32"/>
-<area shape="rect" id="node6" href="$class_mic_t_l_component_mag_compensator.html" title=" " alt="" coords="428,229,679,256"/>
+<area shape="rect" id="node1" title="basic class for magnetic compensator" alt="" coords="291,204,487,531"/>
+<area shape="rect" id="node3" href="$class_mic_cabin_mag_compensator.html" title=" " alt="" coords="5,608,239,817"/>
+<area shape="rect" id="node4" href="$class_mic_ellipsoid_mag_compensator.html" title=" " alt="" coords="263,579,514,847"/>
+<area shape="rect" id="node5" href="$class_mic_t_l_mag_compensator.html" title=" " alt="" coords="538,630,749,795"/>
+<area shape="rect" id="node2" href="$class_mic_observable.html" title=" " alt="" coords="245,5,532,156"/>
+<area shape="rect" id="node6" href="$class_mic_t_l_component_mag_compensator.html" title=" " alt="" coords="500,895,787,1016"/>
 </map>

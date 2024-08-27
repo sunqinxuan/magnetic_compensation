@@ -82,7 +82,8 @@ $(document).ready(function(){initNavTree('mic__kf__ins__estimator_8cc.html','');
 
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">mic_kf_ins_estimator.cc File Reference</div>  </div>
 </div><!--header-->
@@ -123,6 +124,15 @@ Typedefs</h2></td></tr>
 <tr class="separator:a2758825b30fd92bdd0fdde6a3241cb02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5867b2d207251e3b85a5a7eb6656cc1d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__kf__ins__estimator_8cc.html#a5867b2d207251e3b85a5a7eb6656cc1d">imu_t</a> = IMU</td></tr>
 <tr class="separator:a5867b2d207251e3b85a5a7eb6656cc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a2c61608293761ffab15f4350b5198189"><td class="memItemLeft" align="right" valign="top">static mic_nav_state_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__kf__ins__estimator_8cc.html#a2c61608293761ffab15f4350b5198189">pva_to_mic_nav_state</a> (const <a class="el" href="mic__kf__ins__estimator_8cc.html#a2758825b30fd92bdd0fdde6a3241cb02">pva_t</a> &amp;pva)</td></tr>
+<tr class="separator:a2c61608293761ffab15f4350b5198189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3d496c709566a13015ce0b89c0cd82"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="mic__kf__ins__estimator_8cc.html#a2758825b30fd92bdd0fdde6a3241cb02">pva_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__kf__ins__estimator_8cc.html#a7e3d496c709566a13015ce0b89c0cd82">mic_nav_state_to_pva</a> (const mic_nav_state_t &amp;pose)</td></tr>
+<tr class="separator:a7e3d496c709566a13015ce0b89c0cd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adebd7b4aa5c84c27f8c58da2907242a9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="mic__kf__ins__estimator_8cc.html#a5867b2d207251e3b85a5a7eb6656cc1d">imu_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mic__kf__ins__estimator_8cc.html#adebd7b4aa5c84c27f8c58da2907242a9">mic_imu_to_imu</a> (const mic_imu_t &amp;ins_data)</td></tr>
+<tr class="separator:adebd7b4aa5c84c27f8c58da2907242a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a5867b2d207251e3b85a5a7eb6656cc1d"></a>
@@ -149,6 +159,85 @@ Typedefs</h2></td></tr>
           <td class="memname">using <a class="el" href="mic__kf__ins__estimator_8cc.html#a2758825b30fd92bdd0fdde6a3241cb02">pva_t</a> =  PVA</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="adebd7b4aa5c84c27f8c58da2907242a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adebd7b4aa5c84c27f8c58da2907242a9">&#9670;&nbsp;</a></span>mic_imu_to_imu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="mic__kf__ins__estimator_8cc.html#a5867b2d207251e3b85a5a7eb6656cc1d">imu_t</a> mic_imu_to_imu </td>
+          <td>(</td>
+          <td class="paramtype">const mic_imu_t &amp;&#160;</td>
+          <td class="paramname"><em>ins_data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e3d496c709566a13015ce0b89c0cd82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e3d496c709566a13015ce0b89c0cd82">&#9670;&nbsp;</a></span>mic_nav_state_to_pva()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="mic__kf__ins__estimator_8cc.html#a2758825b30fd92bdd0fdde6a3241cb02">pva_t</a> mic_nav_state_to_pva </td>
+          <td>(</td>
+          <td class="paramtype">const mic_nav_state_t &amp;&#160;</td>
+          <td class="paramname"><em>pose</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c61608293761ffab15f4350b5198189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c61608293761ffab15f4350b5198189">&#9670;&nbsp;</a></span>pva_to_mic_nav_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static mic_nav_state_t pva_to_mic_nav_state </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="mic__kf__ins__estimator_8cc.html#a2758825b30fd92bdd0fdde6a3241cb02">pva_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>pva</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

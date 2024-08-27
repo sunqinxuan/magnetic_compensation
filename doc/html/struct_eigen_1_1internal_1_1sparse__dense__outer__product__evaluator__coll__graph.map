@@ -1,6 +1,0 @@
-<map id="Eigen::internal::sparse_dense_outer_product_evaluator&lt; LhsT, RhsT, NeedToTranspose &gt;" name="Eigen::internal::sparse_dense_outer_product_evaluator&lt; LhsT, RhsT, NeedToTranspose &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="615,41,859,97"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1internal_1_1evaluator.html" title=" " alt="" coords="255,13,471,54"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1internal_1_1unary__evaluator.html" title=" " alt="" coords="5,5,205,61"/>
-<area shape="rect" id="node4" href="$struct_eigen_1_1internal_1_1true__type.html" title=" " alt="" coords="269,79,456,105"/>
-</map>

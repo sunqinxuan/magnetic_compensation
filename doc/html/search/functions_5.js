@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['get_377',['get',['../class_mic_config.html#a86d3108cdca3f5239a0a819eaa866db4',1,'MicConfig']]],
-  ['get_5fcurr_5ftime_378',['get_curr_time',['../class_mic_mag_compensator.html#a9858707edd7130ff8f27f204b39b3d33',1,'MicMagCompensator']]],
-  ['get_5fdata_379',['get_data',['../class_mic_data_storer.html#a1afbd4b73401839c5bdf46dc17b7523e',1,'MicDataStorer']]],
-  ['get_5fdata_5fimpl_380',['get_data_impl',['../class_mic_data_storer.html#a10c77132fde184b602eb580f5bd7a6cf',1,'MicDataStorer::get_data_impl(const float64_t ts, T &amp;data, Rest &amp;... rest)'],['../class_mic_data_storer.html#a9f96a582373de5963e9edae613a35ae3',1,'MicDataStorer::get_data_impl(const float64_t ts)']]],
-  ['get_5fdata_5frange_381',['get_data_range',['../class_mic_data_storer.html#a67a60e6e25f183ce0d265d2ed5d0ce76',1,'MicDataStorer']]],
-  ['get_5fdata_5fsize_382',['get_data_size',['../class_mic_data_storer.html#afbd350bbbdff3d6902b088e6294fd555',1,'MicDataStorer']]],
-  ['get_5fdata_5fstorer_383',['get_data_storer',['../class_mic_mag_compensator.html#a9b013f5c2f2a7bbf2c13fb47e9ca85cb',1,'MicMagCompensator']]],
-  ['get_5finstance_384',['get_instance',['../class_mic_config.html#a07658f7a58ae10c20a78831ab745ee93',1,'MicConfig']]],
-  ['get_5fline_5fdata_385',['get_line_data',['../fileio_8h.html#ae86c11d94ac89234fbfb4394888a2bee',1,'fileio.h']]],
-  ['get_5fnav_5fstate_386',['get_nav_state',['../class_mic_nav_state_estimator.html#a0e9fcf2879c40e130e309dda2b94933f',1,'MicNavStateEstimator']]]
+  ['fdm_451',['fdm',['../classtl_1_1_tolles_lawson.html#aabbb06c4750503ba0df54b512bda3f88',1,'tl::TollesLawson']]],
+  ['file_452',['file',['../_c_make_lists_8txt.html#afbbe76c98bd0d8b6ca5a03175563eb71',1,'CMakeLists.txt']]],
+  ['filter_453',['filter',['../butterworth_8cpp.html#a5343ca32f4eb71e4b214da3a74de7d3d',1,'filter(vector&lt; double &gt; x, vector&lt; double &gt; coeff_b, vector&lt; double &gt; coeff_a):&#160;butterworth.cpp'],['../butterworth_8hpp.html#a5343ca32f4eb71e4b214da3a74de7d3d',1,'filter(vector&lt; double &gt; x, vector&lt; double &gt; coeff_b, vector&lt; double &gt; coeff_a):&#160;butterworth.cpp'],['../filter_8cpp.html#af546a3c76f917cf9c45be69d84c3738f',1,'filter(vectord B, vectord A, const vectord &amp;X, vectord &amp;Y, vectord &amp;Zi):&#160;filter.cpp'],['../filter_8hpp.html#af546a3c76f917cf9c45be69d84c3738f',1,'filter(vectord B, vectord A, const vectord &amp;X, vectord &amp;Y, vectord &amp;Zi):&#160;filter.cpp']]],
+  ['filtfilt_454',['filtfilt',['../filter_8cpp.html#ab0fb64ddeac8ad75aeadc90ed6423d1d',1,'filtfilt(vectord B, vectord A, const vectord &amp;X, vectord &amp;Y):&#160;filter.cpp'],['../filter_8hpp.html#ab0fb64ddeac8ad75aeadc90ed6423d1d',1,'filtfilt(vectord B, vectord A, const vectord &amp;X, vectord &amp;Y):&#160;filter.cpp']]],
+  ['fit_5fellipsoid_5fmodel_455',['fit_ellipsoid_model',['../class_mic_ellipsoid_mag_compensator.html#a272c924ef21d6bd2b1129d5c7fe92fde',1,'MicEllipsoidMagCompensator']]],
+  ['fit_5fls_5frotation_456',['fit_ls_rotation',['../class_mic_ellipsoid_mag_compensator.html#aa3a072cdc4c406a639075ee6bb2b8f7d',1,'MicEllipsoidMagCompensator']]],
+  ['from_5fjson_5fnode_457',['from_json_node',['../class_mic_config.html#a76beab43bec08114cca2cc1e41216b9d',1,'MicConfig']]],
+  ['from_5fstr_458',['from_str',['../class_mic_config.html#a69bab30658e64bdfad23dcab6a55ebc8',1,'MicConfig']]]
 ];

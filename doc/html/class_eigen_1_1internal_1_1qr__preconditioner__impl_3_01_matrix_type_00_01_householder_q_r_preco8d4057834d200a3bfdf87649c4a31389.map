@@ -1,7 +1,0 @@
-<map id="Eigen::internal::qr_preconditioner_impl&lt; MatrixType, HouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true &gt;" name="Eigen::internal::qr_preconditioner_impl&lt; MatrixType, HouseholderQRPreconditioner, PreconditionIfMoreRowsThanCols, true &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="652,65,968,136"/>
-<area shape="rect" id="node2" href="$class_eigen_1_1_householder_q_r.html" title=" " alt="" coords="333,37,499,79"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1internal_1_1plain__row__type.html" title=" " alt="" coords="7,5,198,47"/>
-<area shape="rect" id="node4" href="$struct_eigen_1_1internal_1_1plain__diag__type.html" title=" " alt="" coords="5,71,200,112"/>
-<area shape="rect" id="node5" href="$struct_eigen_1_1internal_1_1plain__col__type.html" title=" " alt="" coords="323,103,509,144"/>
-</map>

@@ -1,4 +1,0 @@
-var struct_eigen_1_1internal_1_1traits_3_01_complete_orthogonal_decomposition_3_01___matrix_type_01_4_01_4 =
-[
-    [ "Flags", "struct_eigen_1_1internal_1_1traits_3_01_complete_orthogonal_decomposition_3_01___matrix_type_01_4_01_4.html#a481be46ede05ea140e72aa3ef26a37aaadcf6c8e66d926798768c10b567897697", null ]
-];

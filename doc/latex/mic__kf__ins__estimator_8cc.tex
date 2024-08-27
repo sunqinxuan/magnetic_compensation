@@ -1,8 +1,7 @@
 \hypertarget{mic__kf__ins__estimator_8cc}{}\doxysection{src/mic\+\_\+nav\+\_\+state\+\_\+estimator/impl/mic\+\_\+kf\+\_\+ins\+\_\+estimator.cc File Reference}
 \label{mic__kf__ins__estimator_8cc}\index{src/mic\_nav\_state\_estimator/impl/mic\_kf\_ins\_estimator.cc@{src/mic\_nav\_state\_estimator/impl/mic\_kf\_ins\_estimator.cc}}
 {\ttfamily \#include \char`\"{}mic\+\_\+nav\+\_\+state\+\_\+estimator/impl/mic\+\_\+kf\+\_\+ins\+\_\+estimator.\+h\char`\"{}}\newline
-Include dependency graph for mic\+\_\+kf\+\_\+ins\+\_\+estimator.\+cc\+:
-\nopagebreak
+Include dependency graph for mic\+\_\+kf\+\_\+ins\+\_\+estimator.\+cc\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,6 +14,15 @@ Include dependency graph for mic\+\_\+kf\+\_\+ins\+\_\+estimator.\+cc\+:
 using \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a2758825b30fd92bdd0fdde6a3241cb02}{pva\+\_\+t}} = P\+VA
 \item 
 using \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a5867b2d207251e3b85a5a7eb6656cc1d}{imu\+\_\+t}} = I\+MU
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static mic\+\_\+nav\+\_\+state\+\_\+t \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a2c61608293761ffab15f4350b5198189}{pva\+\_\+to\+\_\+mic\+\_\+nav\+\_\+state}} (const \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a2758825b30fd92bdd0fdde6a3241cb02}{pva\+\_\+t}} \&pva)
+\item 
+static \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a2758825b30fd92bdd0fdde6a3241cb02}{pva\+\_\+t}} \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a7e3d496c709566a13015ce0b89c0cd82}{mic\+\_\+nav\+\_\+state\+\_\+to\+\_\+pva}} (const mic\+\_\+nav\+\_\+state\+\_\+t \&pose)
+\item 
+static \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a5867b2d207251e3b85a5a7eb6656cc1d}{imu\+\_\+t}} \mbox{\hyperlink{mic__kf__ins__estimator_8cc_adebd7b4aa5c84c27f8c58da2907242a9}{mic\+\_\+imu\+\_\+to\+\_\+imu}} (const mic\+\_\+imu\+\_\+t \&ins\+\_\+data)
 \end{DoxyCompactItemize}
 
 
@@ -30,4 +38,25 @@ using \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a5867b2d207251e3b85a5a7eb6656
 \index{pva\_t@{pva\_t}!mic\_kf\_ins\_estimator.cc@{mic\_kf\_ins\_estimator.cc}}
 \doxysubsubsection{\texorpdfstring{pva\_t}{pva\_t}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a2758825b30fd92bdd0fdde6a3241cb02}{pva\+\_\+t}} =  P\+VA}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mic__kf__ins__estimator_8cc_adebd7b4aa5c84c27f8c58da2907242a9}\label{mic__kf__ins__estimator_8cc_adebd7b4aa5c84c27f8c58da2907242a9}} 
+\index{mic\_kf\_ins\_estimator.cc@{mic\_kf\_ins\_estimator.cc}!mic\_imu\_to\_imu@{mic\_imu\_to\_imu}}
+\index{mic\_imu\_to\_imu@{mic\_imu\_to\_imu}!mic\_kf\_ins\_estimator.cc@{mic\_kf\_ins\_estimator.cc}}
+\doxysubsubsection{\texorpdfstring{mic\_imu\_to\_imu()}{mic\_imu\_to\_imu()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a5867b2d207251e3b85a5a7eb6656cc1d}{imu\+\_\+t}} mic\+\_\+imu\+\_\+to\+\_\+imu (\begin{DoxyParamCaption}\item[{const mic\+\_\+imu\+\_\+t \&}]{ins\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{mic__kf__ins__estimator_8cc_a7e3d496c709566a13015ce0b89c0cd82}\label{mic__kf__ins__estimator_8cc_a7e3d496c709566a13015ce0b89c0cd82}} 
+\index{mic\_kf\_ins\_estimator.cc@{mic\_kf\_ins\_estimator.cc}!mic\_nav\_state\_to\_pva@{mic\_nav\_state\_to\_pva}}
+\index{mic\_nav\_state\_to\_pva@{mic\_nav\_state\_to\_pva}!mic\_kf\_ins\_estimator.cc@{mic\_kf\_ins\_estimator.cc}}
+\doxysubsubsection{\texorpdfstring{mic\_nav\_state\_to\_pva()}{mic\_nav\_state\_to\_pva()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a2758825b30fd92bdd0fdde6a3241cb02}{pva\+\_\+t}} mic\+\_\+nav\+\_\+state\+\_\+to\+\_\+pva (\begin{DoxyParamCaption}\item[{const mic\+\_\+nav\+\_\+state\+\_\+t \&}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{mic__kf__ins__estimator_8cc_a2c61608293761ffab15f4350b5198189}\label{mic__kf__ins__estimator_8cc_a2c61608293761ffab15f4350b5198189}} 
+\index{mic\_kf\_ins\_estimator.cc@{mic\_kf\_ins\_estimator.cc}!pva\_to\_mic\_nav\_state@{pva\_to\_mic\_nav\_state}}
+\index{pva\_to\_mic\_nav\_state@{pva\_to\_mic\_nav\_state}!mic\_kf\_ins\_estimator.cc@{mic\_kf\_ins\_estimator.cc}}
+\doxysubsubsection{\texorpdfstring{pva\_to\_mic\_nav\_state()}{pva\_to\_mic\_nav\_state()}}
+{\footnotesize\ttfamily static mic\+\_\+nav\+\_\+state\+\_\+t pva\+\_\+to\+\_\+mic\+\_\+nav\+\_\+state (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{mic__kf__ins__estimator_8cc_a2758825b30fd92bdd0fdde6a3241cb02}{pva\+\_\+t}} \&}]{pva }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 

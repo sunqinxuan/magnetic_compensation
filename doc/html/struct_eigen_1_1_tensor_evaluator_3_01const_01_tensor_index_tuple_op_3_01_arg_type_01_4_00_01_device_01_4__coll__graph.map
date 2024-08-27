@@ -1,7 +1,0 @@
-<map id="Eigen::TensorEvaluator&lt; const TensorIndexTupleOp&lt; ArgType &gt;, Device &gt;" name="Eigen::TensorEvaluator&lt; const TensorIndexTupleOp&lt; ArgType &gt;, Device &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="97,304,304,360"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_evaluator.html" title=" " alt="" coords="115,200,286,241"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1_sizes.html" title=" " alt="" coords="17,103,193,130"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,5,204,47"/>
-<area shape="rect" id="node5" href="$struct_eigen_1_1internal_1_1traits.html" title=" " alt="" coords="217,96,376,137"/>
-</map>

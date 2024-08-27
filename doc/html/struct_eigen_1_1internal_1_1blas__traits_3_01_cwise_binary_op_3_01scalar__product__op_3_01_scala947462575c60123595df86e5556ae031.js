@@ -1,6 +1,0 @@
-var struct_eigen_1_1internal_1_1blas__traits_3_01_cwise_binary_op_3_01scalar__product__op_3_01_scala947462575c60123595df86e5556ae031 =
-[
-    [ "Base", "struct_eigen_1_1internal_1_1blas__traits_3_01_cwise_binary_op_3_01scalar__product__op_3_01_scala947462575c60123595df86e5556ae031.html#a16e86b3c9b5ee9fc5beafb3794d0d34d", null ],
-    [ "ExtractType", "struct_eigen_1_1internal_1_1blas__traits_3_01_cwise_binary_op_3_01scalar__product__op_3_01_scala947462575c60123595df86e5556ae031.html#adde209e66b16d58511517be27431a0cb", null ],
-    [ "XprType", "struct_eigen_1_1internal_1_1blas__traits_3_01_cwise_binary_op_3_01scalar__product__op_3_01_scala947462575c60123595df86e5556ae031.html#a94129887dcddc89db38c8c83fcf1123c", null ]
-];

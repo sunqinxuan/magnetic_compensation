@@ -1,4 +1,0 @@
-var struct_eigen_1_1internal_1_1group__theory_1_1strip__identities_3_01_equality_00_01id_00_01type__f08cc45c8ea5d12fcc4f4eb6bf8771ff =
-[
-    [ "type", "struct_eigen_1_1internal_1_1group__theory_1_1strip__identities_3_01_equality_00_01id_00_01type__f08cc45c8ea5d12fcc4f4eb6bf8771ff.html#af3a12f6baa1c633160d5fb31ca180303", null ]
-];

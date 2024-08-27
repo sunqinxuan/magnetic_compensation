@@ -1,5 +1,0 @@
-var struct_eigen_1_1internal_1_1redux__impl_3_01_func_00_01_derived_00_01_linear_vectorized_traversal_00_01_no_unrolling_01_4 =
-[
-    [ "PacketScalar", "struct_eigen_1_1internal_1_1redux__impl_3_01_func_00_01_derived_00_01_linear_vectorized_traversal_00_01_no_unrolling_01_4.html#a23870bd1c8fb4a12f46f4e32480a2251", null ],
-    [ "Scalar", "struct_eigen_1_1internal_1_1redux__impl_3_01_func_00_01_derived_00_01_linear_vectorized_traversal_00_01_no_unrolling_01_4.html#a534ce85756f72b2d52b59a59bbd939a0", null ]
-];

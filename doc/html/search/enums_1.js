@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['callbackreturntype_26839',['CallbackReturnType',['../namespaceceres.html#a0fc600b642646032e642b7cc24d43236',1,'ceres']]],
-  ['cbor_5ftag_5fhandler_5ft_26840',['cbor_tag_handler_t',['../namespacedetail.html#a7c070b2bf3d61e3d8b8013f6fb18d592',1,'detail']]],
-  ['cholmodmode_26841',['CholmodMode',['../namespace_eigen.html#a8cf3958430069971186dfd7afe6864b3',1,'Eigen']]],
-  ['comparisonname_26842',['ComparisonName',['../namespace_eigen_1_1internal.html#a11df3bc16c766c83507d4d59b6ef56e2',1,'Eigen::internal']]],
-  ['computationinfo_26843',['ComputationInfo',['../group__enums.html#ga85fad7b87587764e5cf6b513a9e0ee5e',1,'Eigen']]],
-  ['cornertype_26844',['CornerType',['../class_eigen_1_1_aligned_box.html#ae4aa935b36004fffc49c7a3a85e2d378',1,'Eigen::AlignedBox::CornerType()'],['../group__enums.html#gaafc7e22c8efbfefd5997e2cd9ec223e0',1,'Eigen::CornerType()']]],
-  ['covariancealgorithmtype_26845',['CovarianceAlgorithmType',['../namespaceceres.html#a854257a2c071b6b69011fecb112e4e68',1,'ceres']]]
+  ['micbool_649',['MicBool',['../namespacemic.html#ae3c47b761a59e46c54fe210b3a5a25e9',1,'mic']]],
+  ['micconfigtype_650',['MicConfigType',['../mic__config_8h.html#a20308fa23f4b3ee4baa42351f66008c1',1,'mic_config.h']]],
+  ['micloggertype_651',['MicLoggerType',['../mic__logger_8h.html#a8aff944252c0c178a5901c7898a555d1',1,'mic_logger.h']]],
+  ['miclogkind_652',['MicLogKind',['../mic__logger_8h.html#a2b69f4d9ec0514b1e8cb29255418e8fd',1,'mic_logger.h']]],
+  ['micloglevel_653',['MicLogLevel',['../mic__logger_8h.html#a2e0d4a63e955e6b3728d041f60706eef',1,'mic_logger.h']]],
+  ['micmagcompensatorstate_654',['MicMagCompensatorState',['../mic__mag__compensator_8h.html#ae215f354c141d02e5a50eae6ef55974e',1,'mic_mag_compensator.h']]],
+  ['micret_655',['MicRet',['../namespacemic.html#a2a6b01e078fa09a5b851cfc841a25863',1,'mic']]]
 ];

@@ -1,6 +1,0 @@
-var struct_eigen_1_1internal_1_1traits_3_01_ref_3_01_sparse_matrix_3_01_mat_scalar_00_01_mat_optionsc6ef0ce4e339306d76a1e27f17721ded =
-[
-    [ "type", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01_sparse_matrix_3_01_mat_scalar_00_01_mat_optionsc6ef0ce4e339306d76a1e27f17721ded.html#a56a976fd13a3fadcc937fb3030f492f0", null ],
-    [ "StorageOrderMatch", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01_sparse_matrix_3_01_mat_scalar_00_01_mat_optionsc6ef0ce4e339306d76a1e27f17721ded.html#af6e666bc507cda90d15a836e2129f6d6afb73e51c4415f4723d920ac0a80eca7e", null ],
-    [ "MatchAtCompileTime", "struct_eigen_1_1internal_1_1traits_3_01_ref_3_01_sparse_matrix_3_01_mat_scalar_00_01_mat_optionsc6ef0ce4e339306d76a1e27f17721ded.html#af6e666bc507cda90d15a836e2129f6d6a0800a83279a4ce15f233a84fdd70eb30", null ]
-];

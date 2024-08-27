@@ -12,6 +12,10 @@ struct \mbox{\hyperlink{structmic_1_1_mic_i_m_u_error}{Mic\+I\+M\+U\+Error}}
 struct \mbox{\hyperlink{structmic_1_1_mic_mag}{Mic\+Mag}}
 \item 
 struct \mbox{\hyperlink{structmic_1_1_mic_nav_state}{Mic\+Nav\+State}}
+\item 
+class \mbox{\hyperlink{classmic_1_1_mic_observable}{Mic\+Observable}}
+\item 
+class \mbox{\hyperlink{classmic_1_1_mic_observer}{Mic\+Observer}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -47,6 +51,20 @@ using \mbox{\hyperlink{namespacemic_abe200918ad9019eba5c3596afec877d7}{mic\+\_\+
 using \mbox{\hyperlink{namespacemic_a856314995815ed60694bae2f1184e62a}{mic\+\_\+gnss\+\_\+t}} = \mbox{\hyperlink{structmic_1_1_mic_g_n_s_s}{Mic\+G\+N\+SS}}
 \item 
 using \mbox{\hyperlink{namespacemic_acfe40fd3b45fa08a3118ed800dd45927}{mic\+\_\+nav\+\_\+state\+\_\+t}} = \mbox{\hyperlink{structmic_1_1_mic_nav_state}{Mic\+Nav\+State}}
+\item 
+using \mbox{\hyperlink{namespacemic_ad6d0ea7f692df1efce1d5e3bb43340ec}{thread\+\_\+t}} = std\+::thread
+\item 
+using \mbox{\hyperlink{namespacemic_a5644b56c1d0f02b5b93478b7eb193c5a}{json\+\_\+t}} = nlohmann\+::json
+\item 
+using \mbox{\hyperlink{namespacemic_a2e2650276d4f2922b964c551b1814f53}{mic\+\_\+logger\+\_\+t}} = \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}}
+\item 
+using \mbox{\hyperlink{namespacemic_abd78b3decf88955c00e3be7f61c4b453}{mic\+\_\+config\+\_\+t}} = \mbox{\hyperlink{class_mic_config}{Mic\+Config}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacemic_aaaa4b1452e756e0f24b51cbfbba10030}{mic\+\_\+observer\+\_\+t}} = \mbox{\hyperlink{classmic_1_1_mic_observer}{Mic\+Observer}}$<$ T $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacemic_a70ebf34822441623e2e89120fbc1ea5c}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacemic_aaaa4b1452e756e0f24b51cbfbba10030}{mic\+\_\+observer\+\_\+t}}$<$ T $>$ $>$
+\item 
+using \mbox{\hyperlink{namespacemic_a59de32875b0d5ad3e6ed77d5f80dc745}{mic\+\_\+utils}} = \mbox{\hyperlink{class_mic_utils}{Mic\+Utils}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -67,6 +85,13 @@ enum \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{Mic\+Ret}}
 \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{ret\+\_\+t}} \mbox{\hyperlink{namespacemic_a3f9e47bc3d963d7b8d966a29b098dcc0}{mic\+\_\+add\+\_\+data}} (const double timestamp, const \mbox{\hyperlink{namespacemic_ad96d9b6c530f27255442a332ca56d490}{mic\+\_\+mag\+\_\+t}} \&mag)
 \item 
 \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{ret\+\_\+t}} \mbox{\hyperlink{namespacemic_ac4d985565f2918d3401886ebd5c3bd5e}{mic\+\_\+compensate}} (const double timestamp, \mbox{\hyperlink{namespacemic_ad96d9b6c530f27255442a332ca56d490}{mic\+\_\+mag\+\_\+t}} \&out)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{mic__mag__compensator_8h_adf559014919b63e147862635173c91bc}{mic\+\_\+mag\+\_\+compensator\+\_\+shared\+\_\+ptr}} \mbox{\hyperlink{namespacemic_a86c9f9d02aa2ce26c9c12c4cb3660069}{\+\_\+mic\+\_\+compensator}} = nullptr
+\item 
+static \mbox{\hyperlink{namespacemic_a70ebf34822441623e2e89120fbc1ea5c}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}}$<$ \mbox{\hyperlink{mic__mag__compensator_8h_a7031348e68d8896be94bcb71a86d4f4c}{mic\+\_\+mag\+\_\+compensator\+\_\+t}} $>$ \mbox{\hyperlink{namespacemic_acd0c042ae5ddfbe75adbdfe2d6f3cab8}{\+\_\+mic\+\_\+logger}} = nullptr
 \end{DoxyCompactItemize}
 
 
@@ -95,6 +120,12 @@ enum \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{Mic\+Ret}}
 \doxysubsubsection{\texorpdfstring{float64\_t}{float64\_t}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{namespacemic_a69568bba90cd9d9877f97729df9f2354}{mic\+::float64\+\_\+t}} = typedef double}
 
+\mbox{\Hypertarget{namespacemic_a5644b56c1d0f02b5b93478b7eb193c5a}\label{namespacemic_a5644b56c1d0f02b5b93478b7eb193c5a}} 
+\index{mic@{mic}!json\_t@{json\_t}}
+\index{json\_t@{json\_t}!mic@{mic}}
+\doxysubsubsection{\texorpdfstring{json\_t}{json\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacemic_a5644b56c1d0f02b5b93478b7eb193c5a}{mic\+::json\+\_\+t}} = typedef nlohmann\+::json}
+
 \mbox{\Hypertarget{namespacemic_a3605762b34bea7fe04ec003f45815956}\label{namespacemic_a3605762b34bea7fe04ec003f45815956}} 
 \index{mic@{mic}!matrix\_3\_18f\_t@{matrix\_3\_18f\_t}}
 \index{matrix\_3\_18f\_t@{matrix\_3\_18f\_t}!mic@{mic}}
@@ -112,6 +143,12 @@ enum \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{Mic\+Ret}}
 \index{matrix\_xf\_t@{matrix\_xf\_t}!mic@{mic}}
 \doxysubsubsection{\texorpdfstring{matrix\_xf\_t}{matrix\_xf\_t}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{namespacemic_a8646bb88af061308e151becb8fd1ce73}{mic\+::matrix\+\_\+xf\+\_\+t}} = typedef Eigen\+::\+Matrix\+Xd}
+
+\mbox{\Hypertarget{namespacemic_abd78b3decf88955c00e3be7f61c4b453}\label{namespacemic_abd78b3decf88955c00e3be7f61c4b453}} 
+\index{mic@{mic}!mic\_config\_t@{mic\_config\_t}}
+\index{mic\_config\_t@{mic\_config\_t}!mic@{mic}}
+\doxysubsubsection{\texorpdfstring{mic\_config\_t}{mic\_config\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacemic_abd78b3decf88955c00e3be7f61c4b453}{mic\+::mic\+\_\+config\+\_\+t}} = typedef \mbox{\hyperlink{class_mic_config}{Mic\+Config}}}
 
 \mbox{\Hypertarget{namespacemic_a856314995815ed60694bae2f1184e62a}\label{namespacemic_a856314995815ed60694bae2f1184e62a}} 
 \index{mic@{mic}!mic\_gnss\_t@{mic\_gnss\_t}}
@@ -131,6 +168,12 @@ enum \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{Mic\+Ret}}
 \doxysubsubsection{\texorpdfstring{mic\_imu\_t}{mic\_imu\_t}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{namespacemic_a61f28ac713e0c75474c43122ac094545}{mic\+::mic\+\_\+imu\+\_\+t}} = typedef \mbox{\hyperlink{structmic_1_1_mic_i_m_u}{Mic\+I\+MU}}}
 
+\mbox{\Hypertarget{namespacemic_a2e2650276d4f2922b964c551b1814f53}\label{namespacemic_a2e2650276d4f2922b964c551b1814f53}} 
+\index{mic@{mic}!mic\_logger\_t@{mic\_logger\_t}}
+\index{mic\_logger\_t@{mic\_logger\_t}!mic@{mic}}
+\doxysubsubsection{\texorpdfstring{mic\_logger\_t}{mic\_logger\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacemic_a2e2650276d4f2922b964c551b1814f53}{mic\+::mic\+\_\+logger\+\_\+t}} = typedef \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}}}
+
 \mbox{\Hypertarget{namespacemic_ad96d9b6c530f27255442a332ca56d490}\label{namespacemic_ad96d9b6c530f27255442a332ca56d490}} 
 \index{mic@{mic}!mic\_mag\_t@{mic\_mag\_t}}
 \index{mic\_mag\_t@{mic\_mag\_t}!mic@{mic}}
@@ -143,6 +186,26 @@ enum \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{Mic\+Ret}}
 \doxysubsubsection{\texorpdfstring{mic\_nav\_state\_t}{mic\_nav\_state\_t}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{namespacemic_acfe40fd3b45fa08a3118ed800dd45927}{mic\+::mic\+\_\+nav\+\_\+state\+\_\+t}} = typedef \mbox{\hyperlink{structmic_1_1_mic_nav_state}{Mic\+Nav\+State}}}
 
+\mbox{\Hypertarget{namespacemic_a70ebf34822441623e2e89120fbc1ea5c}\label{namespacemic_a70ebf34822441623e2e89120fbc1ea5c}} 
+\index{mic@{mic}!mic\_observer\_shared\_ptr@{mic\_observer\_shared\_ptr}}
+\index{mic\_observer\_shared\_ptr@{mic\_observer\_shared\_ptr}!mic@{mic}}
+\doxysubsubsection{\texorpdfstring{mic\_observer\_shared\_ptr}{mic\_observer\_shared\_ptr}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{namespacemic_a70ebf34822441623e2e89120fbc1ea5c}{mic\+::mic\+\_\+observer\+\_\+shared\+\_\+ptr}} = typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacemic_aaaa4b1452e756e0f24b51cbfbba10030}{mic\+\_\+observer\+\_\+t}}$<$T$>$ $>$}
+
+\mbox{\Hypertarget{namespacemic_aaaa4b1452e756e0f24b51cbfbba10030}\label{namespacemic_aaaa4b1452e756e0f24b51cbfbba10030}} 
+\index{mic@{mic}!mic\_observer\_t@{mic\_observer\_t}}
+\index{mic\_observer\_t@{mic\_observer\_t}!mic@{mic}}
+\doxysubsubsection{\texorpdfstring{mic\_observer\_t}{mic\_observer\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{namespacemic_aaaa4b1452e756e0f24b51cbfbba10030}{mic\+::mic\+\_\+observer\+\_\+t}} = typedef \mbox{\hyperlink{classmic_1_1_mic_observer}{Mic\+Observer}}$<$T$>$}
+
+\mbox{\Hypertarget{namespacemic_a59de32875b0d5ad3e6ed77d5f80dc745}\label{namespacemic_a59de32875b0d5ad3e6ed77d5f80dc745}} 
+\index{mic@{mic}!mic\_utils@{mic\_utils}}
+\index{mic\_utils@{mic\_utils}!mic@{mic}}
+\doxysubsubsection{\texorpdfstring{mic\_utils}{mic\_utils}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacemic_a59de32875b0d5ad3e6ed77d5f80dc745}{mic\+::mic\+\_\+utils}} = typedef \mbox{\hyperlink{class_mic_utils}{Mic\+Utils}}}
+
 \mbox{\Hypertarget{namespacemic_a05e842658b48e5eebf9e954351b7c8b4}\label{namespacemic_a05e842658b48e5eebf9e954351b7c8b4}} 
 \index{mic@{mic}!quaternionf\_t@{quaternionf\_t}}
 \index{quaternionf\_t@{quaternionf\_t}!mic@{mic}}
@@ -154,6 +217,12 @@ enum \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{Mic\+Ret}}
 \index{ret\_t@{ret\_t}!mic@{mic}}
 \doxysubsubsection{\texorpdfstring{ret\_t}{ret\_t}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{mic\+::ret\+\_\+t}} = typedef \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{Mic\+Ret}}}
+
+\mbox{\Hypertarget{namespacemic_ad6d0ea7f692df1efce1d5e3bb43340ec}\label{namespacemic_ad6d0ea7f692df1efce1d5e3bb43340ec}} 
+\index{mic@{mic}!thread\_t@{thread\_t}}
+\index{thread\_t@{thread\_t}!mic@{mic}}
+\doxysubsubsection{\texorpdfstring{thread\_t}{thread\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacemic_ad6d0ea7f692df1efce1d5e3bb43340ec}{mic\+::thread\+\_\+t}} = typedef std\+::thread}
 
 \mbox{\Hypertarget{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}\label{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}} 
 \index{mic@{mic}!vector\_3f\_t@{vector\_3f\_t}}
@@ -222,4 +291,19 @@ M\+I\+C\+\_\+\+R\+E\+T\+\_\+\+S\+U\+C\+C\+E\+S\+S\+ED&\\
 \index{mic\_init\_worker@{mic\_init\_worker}!mic@{mic}}
 \doxysubsubsection{\texorpdfstring{mic\_init\_worker()}{mic\_init\_worker()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{ret\+\_\+t}} mic\+::mic\+\_\+init\+\_\+worker (\begin{DoxyParamCaption}\item[{const std\+::string}]{model,  }\item[{const std\+::string}]{model\+\_\+file,  }\item[{const std\+::string}]{log\+\_\+file,  }\item[{const std\+::string}]{config\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacemic_a86c9f9d02aa2ce26c9c12c4cb3660069}\label{namespacemic_a86c9f9d02aa2ce26c9c12c4cb3660069}} 
+\index{mic@{mic}!\_mic\_compensator@{\_mic\_compensator}}
+\index{\_mic\_compensator@{\_mic\_compensator}!mic@{mic}}
+\doxysubsubsection{\texorpdfstring{\_mic\_compensator}{\_mic\_compensator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__mag__compensator_8h_adf559014919b63e147862635173c91bc}{mic\+\_\+mag\+\_\+compensator\+\_\+shared\+\_\+ptr}} mic\+::\+\_\+mic\+\_\+compensator = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacemic_acd0c042ae5ddfbe75adbdfe2d6f3cab8}\label{namespacemic_acd0c042ae5ddfbe75adbdfe2d6f3cab8}} 
+\index{mic@{mic}!\_mic\_logger@{\_mic\_logger}}
+\index{\_mic\_logger@{\_mic\_logger}!mic@{mic}}
+\doxysubsubsection{\texorpdfstring{\_mic\_logger}{\_mic\_logger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemic_a70ebf34822441623e2e89120fbc1ea5c}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}}$<$\mbox{\hyperlink{mic__mag__compensator_8h_a7031348e68d8896be94bcb71a86d4f4c}{mic\+\_\+mag\+\_\+compensator\+\_\+t}}$>$ mic\+::\+\_\+mic\+\_\+logger = nullptr\hspace{0.3cm}{\ttfamily [static]}}
 

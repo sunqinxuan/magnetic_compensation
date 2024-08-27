@@ -1,7 +1,0 @@
-<map id="Eigen::CwiseBinaryOp&lt; BinaryOp, LhsType, RhsType &gt;" name="Eigen::CwiseBinaryOp&lt; BinaryOp, LhsType, RhsType &gt;">
-<area shape="rect" id="node1" title="Generic expression where a coefficient&#45;wise binary operator is applied to two expressions." alt="" coords="416,155,581,211"/>
-<area shape="rect" id="node2" href="$class_eigen_1_1_cwise_binary_op_impl.html" title=" " alt="" coords="5,5,323,105"/>
-<area shape="rect" id="node3" href="$class_eigen_1_1internal_1_1no__assignment__operator.html" title=" " alt="" coords="81,129,247,171"/>
-<area shape="rect" id="node4" href="$struct_eigen_1_1internal_1_1ref__selector.html" title=" " alt="" coords="83,195,245,236"/>
-<area shape="rect" id="node5" href="$struct_eigen_1_1internal_1_1ref__selector.html" title=" " alt="" coords="81,260,247,301"/>
-</map>

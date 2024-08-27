@@ -1,8 +1,0 @@
-var struct_eigen_1_1internal_1_1transform__right__product__impl_3_01_transform_type_00_01_matrix_type_00_011_00_01_rhs_cols_01_4 =
-[
-    [ "ResultType", "struct_eigen_1_1internal_1_1transform__right__product__impl_3_01_transform_type_00_01_matrix_type_00_011_00_01_rhs_cols_01_4.html#a2a1ca35510e3f48eff5f8c57d5bfd3e6", null ],
-    [ "Dim", "struct_eigen_1_1internal_1_1transform__right__product__impl_3_01_transform_type_00_01_matrix_type_00_011_00_01_rhs_cols_01_4.html#a65a9ddbdbc7be99559859b4f149f9169a31dfec690d2bd74580d545fc3064324b", null ],
-    [ "HDim", "struct_eigen_1_1internal_1_1transform__right__product__impl_3_01_transform_type_00_01_matrix_type_00_011_00_01_rhs_cols_01_4.html#a65a9ddbdbc7be99559859b4f149f9169ab53b482f907192a11699f5979f67325c", null ],
-    [ "OtherRows", "struct_eigen_1_1internal_1_1transform__right__product__impl_3_01_transform_type_00_01_matrix_type_00_011_00_01_rhs_cols_01_4.html#a65a9ddbdbc7be99559859b4f149f9169ac5dc2d82aa9befc67dbbe0440ce29b1d", null ],
-    [ "OtherCols", "struct_eigen_1_1internal_1_1transform__right__product__impl_3_01_transform_type_00_01_matrix_type_00_011_00_01_rhs_cols_01_4.html#a65a9ddbdbc7be99559859b4f149f9169a3537e5619b06765aeffe5d2ba5b7859e", null ]
-];

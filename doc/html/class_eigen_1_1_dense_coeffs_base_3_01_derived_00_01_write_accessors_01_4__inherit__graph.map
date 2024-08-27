@@ -1,6 +1,0 @@
-<map id="Eigen::DenseCoeffsBase&lt; Derived, WriteAccessors &gt;" name="Eigen::DenseCoeffsBase&lt; Derived, WriteAccessors &gt;">
-<area shape="rect" id="node1" title="Base class providing read/write coefficient access to matrices and arrays." alt="" coords="25,169,236,211"/>
-<area shape="rect" id="node4" href="$class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_direct_write_accessors_01_4.html" title="Base class providing direct read/write coefficient access to matrices and arrays." alt="" coords="5,259,256,300"/>
-<area shape="rect" id="node2" href="$class_eigen_1_1_dense_coeffs_base_3_01_derived_00_01_read_only_accessors_01_4.html" title="Base class providing read&#45;only coefficient access to matrices and arrays." alt="" coords="11,80,250,121"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1_eigen_base.html" title=" " alt="" coords="23,5,238,32"/>
-</map>

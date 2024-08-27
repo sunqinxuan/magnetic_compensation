@@ -85,7 +85,8 @@ $(document).ready(function(){initNavTree('namespacemic.html',''); initResizable(
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">mic Namespace Reference</div>  </div>
 </div><!--header-->
@@ -102,6 +103,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmic_1_1_mic_mag.html">MicMag</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmic_1_1_mic_nav_state.html">MicNavState</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmic_1_1_mic_observable.html">MicObservable</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmic_1_1_mic_observer.html">MicObserver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -138,6 +143,22 @@ Typedefs</h2></td></tr>
 <tr class="separator:a856314995815ed60694bae2f1184e62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfe40fd3b45fa08a3118ed800dd45927"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemic.html#acfe40fd3b45fa08a3118ed800dd45927">mic_nav_state_t</a> = <a class="el" href="structmic_1_1_mic_nav_state.html">MicNavState</a></td></tr>
 <tr class="separator:acfe40fd3b45fa08a3118ed800dd45927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d0ea7f692df1efce1d5e3bb43340ec"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemic.html#ad6d0ea7f692df1efce1d5e3bb43340ec">thread_t</a> = std::thread</td></tr>
+<tr class="separator:ad6d0ea7f692df1efce1d5e3bb43340ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5644b56c1d0f02b5b93478b7eb193c5a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemic.html#a5644b56c1d0f02b5b93478b7eb193c5a">json_t</a> = nlohmann::json</td></tr>
+<tr class="separator:a5644b56c1d0f02b5b93478b7eb193c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e2650276d4f2922b964c551b1814f53"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemic.html#a2e2650276d4f2922b964c551b1814f53">mic_logger_t</a> = <a class="el" href="class_mic_logger.html">MicLogger</a></td></tr>
+<tr class="separator:a2e2650276d4f2922b964c551b1814f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd78b3decf88955c00e3be7f61c4b453"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemic.html#abd78b3decf88955c00e3be7f61c4b453">mic_config_t</a> = <a class="el" href="class_mic_config.html">MicConfig</a></td></tr>
+<tr class="separator:abd78b3decf88955c00e3be7f61c4b453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa4b1452e756e0f24b51cbfbba10030"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aaaa4b1452e756e0f24b51cbfbba10030"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemic.html#aaaa4b1452e756e0f24b51cbfbba10030">mic_observer_t</a> = <a class="el" href="classmic_1_1_mic_observer.html">MicObserver</a>&lt; T &gt;</td></tr>
+<tr class="separator:aaaa4b1452e756e0f24b51cbfbba10030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70ebf34822441623e2e89120fbc1ea5c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a70ebf34822441623e2e89120fbc1ea5c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemic.html#a70ebf34822441623e2e89120fbc1ea5c">mic_observer_shared_ptr</a> = std::shared_ptr&lt; <a class="el" href="namespacemic.html#aaaa4b1452e756e0f24b51cbfbba10030">mic_observer_t</a>&lt; T &gt; &gt;</td></tr>
+<tr class="separator:a70ebf34822441623e2e89120fbc1ea5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59de32875b0d5ad3e6ed77d5f80dc745"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemic.html#a59de32875b0d5ad3e6ed77d5f80dc745">mic_utils</a> = <a class="el" href="class_mic_utils.html">MicUtils</a></td></tr>
+<tr class="separator:a59de32875b0d5ad3e6ed77d5f80dc745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -158,6 +179,13 @@ Functions</h2></td></tr>
 <tr class="separator:a3f9e47bc3d963d7b8d966a29b098dcc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4d985565f2918d3401886ebd5c3bd5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemic.html#a2a6b01e078fa09a5b851cfc841a25863">ret_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemic.html#ac4d985565f2918d3401886ebd5c3bd5e">mic_compensate</a> (const double timestamp, <a class="el" href="namespacemic.html#ad96d9b6c530f27255442a332ca56d490">mic_mag_t</a> &amp;out)</td></tr>
 <tr class="separator:ac4d985565f2918d3401886ebd5c3bd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a86c9f9d02aa2ce26c9c12c4cb3660069"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="mic__mag__compensator_8h.html#adf559014919b63e147862635173c91bc">mic_mag_compensator_shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemic.html#a86c9f9d02aa2ce26c9c12c4cb3660069">_mic_compensator</a> = nullptr</td></tr>
+<tr class="separator:a86c9f9d02aa2ce26c9c12c4cb3660069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0c042ae5ddfbe75adbdfe2d6f3cab8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacemic.html#a70ebf34822441623e2e89120fbc1ea5c">mic_observer_shared_ptr</a>&lt; <a class="el" href="mic__mag__compensator_8h.html#a7031348e68d8896be94bcb71a86d4f4c">mic_mag_compensator_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemic.html#acd0c042ae5ddfbe75adbdfe2d6f3cab8">_mic_logger</a> = nullptr</td></tr>
+<tr class="separator:acd0c042ae5ddfbe75adbdfe2d6f3cab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a1d751203a4d66b7a1cfb81de6af86652"></a>
@@ -216,6 +244,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5644b56c1d0f02b5b93478b7eb193c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5644b56c1d0f02b5b93478b7eb193c5a">&#9670;&nbsp;</a></span>json_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemic.html#a5644b56c1d0f02b5b93478b7eb193c5a">mic::json_t</a> = typedef nlohmann::json</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3605762b34bea7fe04ec003f45815956"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3605762b34bea7fe04ec003f45815956">&#9670;&nbsp;</a></span>matrix_3_18f_t</h2>
 
@@ -252,6 +294,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="namespacemic.html#a8646bb88af061308e151becb8fd1ce73">mic::matrix_xf_t</a> = typedef Eigen::MatrixXd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd78b3decf88955c00e3be7f61c4b453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd78b3decf88955c00e3be7f61c4b453">&#9670;&nbsp;</a></span>mic_config_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemic.html#abd78b3decf88955c00e3be7f61c4b453">mic::mic_config_t</a> = typedef <a class="el" href="class_mic_config.html">MicConfig</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -300,6 +356,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a2e2650276d4f2922b964c551b1814f53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e2650276d4f2922b964c551b1814f53">&#9670;&nbsp;</a></span>mic_logger_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemic.html#a2e2650276d4f2922b964c551b1814f53">mic::mic_logger_t</a> = typedef <a class="el" href="class_mic_logger.html">MicLogger</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad96d9b6c530f27255442a332ca56d490"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad96d9b6c530f27255442a332ca56d490">&#9670;&nbsp;</a></span>mic_mag_t</h2>
 
@@ -328,6 +398,52 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a70ebf34822441623e2e89120fbc1ea5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70ebf34822441623e2e89120fbc1ea5c">&#9670;&nbsp;</a></span>mic_observer_shared_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemic.html#a70ebf34822441623e2e89120fbc1ea5c">mic::mic_observer_shared_ptr</a> = typedef std::shared_ptr&lt;<a class="el" href="namespacemic.html#aaaa4b1452e756e0f24b51cbfbba10030">mic_observer_t</a>&lt;T&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaaa4b1452e756e0f24b51cbfbba10030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa4b1452e756e0f24b51cbfbba10030">&#9670;&nbsp;</a></span>mic_observer_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemic.html#aaaa4b1452e756e0f24b51cbfbba10030">mic::mic_observer_t</a> = typedef <a class="el" href="classmic_1_1_mic_observer.html">MicObserver</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59de32875b0d5ad3e6ed77d5f80dc745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59de32875b0d5ad3e6ed77d5f80dc745">&#9670;&nbsp;</a></span>mic_utils</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemic.html#a59de32875b0d5ad3e6ed77d5f80dc745">mic::mic_utils</a> = typedef <a class="el" href="class_mic_utils.html">MicUtils</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a05e842658b48e5eebf9e954351b7c8b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05e842658b48e5eebf9e954351b7c8b4">&#9670;&nbsp;</a></span>quaternionf_t</h2>
 
@@ -350,6 +466,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="namespacemic.html#a2a6b01e078fa09a5b851cfc841a25863">mic::ret_t</a> = typedef <a class="el" href="namespacemic.html#a2a6b01e078fa09a5b851cfc841a25863">MicRet</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6d0ea7f692df1efce1d5e3bb43340ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6d0ea7f692df1efce1d5e3bb43340ec">&#9670;&nbsp;</a></span>thread_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemic.html#ad6d0ea7f692df1efce1d5e3bb43340ec">mic::thread_t</a> = typedef std::thread</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -522,6 +652,51 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a86c9f9d02aa2ce26c9c12c4cb3660069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c9f9d02aa2ce26c9c12c4cb3660069">&#9670;&nbsp;</a></span>_mic_compensator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mic__mag__compensator_8h.html#adf559014919b63e147862635173c91bc">mic_mag_compensator_shared_ptr</a> mic::_mic_compensator = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd0c042ae5ddfbe75adbdfe2d6f3cab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0c042ae5ddfbe75adbdfe2d6f3cab8">&#9670;&nbsp;</a></span>_mic_logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemic.html#a70ebf34822441623e2e89120fbc1ea5c">mic_observer_shared_ptr</a>&lt;<a class="el" href="mic__mag__compensator_8h.html#a7031348e68d8896be94bcb71a86d4f4c">mic_mag_compensator_t</a>&gt; mic::_mic_logger = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

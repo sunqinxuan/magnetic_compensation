@@ -1,5 +1,0 @@
-<map id="Eigen::PacketConverter&lt; TensorEvaluator, SrcPacket, TgtPacket, 2, 1 &gt;" name="Eigen::PacketConverter&lt; TensorEvaluator, SrcPacket, TgtPacket, 2, 1 &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,213,221,269"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_evaluator.html" title="A cost model used to limit the number of threads used for evaluating tensor expression." alt="" coords="28,109,199,151"/>
-<area shape="rect" id="node3" href="$struct_eigen_1_1internal_1_1traits.html" title=" " alt="" coords="34,5,193,47"/>
-</map>

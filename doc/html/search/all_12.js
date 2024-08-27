@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['thread_5ft_261',['thread_t',['../mic__prerequisite_8h.html#a91e83021e528728619733a8a63faf8f7',1,'mic_prerequisite.h']]],
-  ['time_5fstamp_262',['time_stamp',['../structmic_1_1_mic_mag.html#a2f9a1da65955ddec26d0b1162f81b74d',1,'mic::MicMag::time_stamp()'],['../structmic_1_1_mic_i_m_u.html#aec7a3c5fdf62c71a5435092c8c41c6b8',1,'mic::MicIMU::time_stamp()'],['../structmic_1_1_mic_g_n_s_s.html#add9410b2997b0af484259d86cbb2a71f',1,'mic::MicGNSS::time_stamp()'],['../structmic_1_1_mic_nav_state.html#ad7162dd89ac5ae273209804c75720498',1,'mic::MicNavState::time_stamp()']]],
-  ['to_5fstr_263',['to_str',['../class_mic_config.html#a59c271006ff2626fa873e0694e9509ad',1,'MicConfig']]],
-  ['true_264',['true',['../mic__base_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7',1,'mic_base.h']]],
-  ['tuple_5findex_265',['tuple_index',['../structtuple__index.html',1,'']]],
-  ['tuple_5findex_3c_20t_2c_20std_3a_3atuple_3c_20t_2c_20types_2e_2e_2e_20_3e_20_3e_266',['tuple_index&lt; T, std::tuple&lt; T, Types... &gt; &gt;',['../structtuple__index_3_01_t_00_01std_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html',1,'']]],
-  ['tuple_5findex_3c_20t_2c_20std_3a_3atuple_3c_20u_2c_20types_2e_2e_2e_20_3e_20_3e_267',['tuple_index&lt; T, std::tuple&lt; U, Types... &gt; &gt;',['../structtuple__index_3_01_t_00_01std_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4.html',1,'']]]
+  ['save_5fmodel_299',['save_model',['../class_mic_mag_compensator.html#a30d49ec93282805eaf2bee54d979e976',1,'MicMagCompensator']]],
+  ['serialize_300',['serialize',['../class_mic_cabin_mag_compensator.html#a14cbcf63ad9dd556cb6a92dad9aec73c',1,'MicCabinMagCompensator::serialize()'],['../class_mic_ellipsoid_mag_compensator.html#aec965e1adc14bdc537c2fdf31064d64a',1,'MicEllipsoidMagCompensator::serialize()'],['../class_mic_t_l_mag_compensator.html#a91ddd88e16d7348b00eca41be0cbed3d',1,'MicTLMagCompensator::serialize()'],['../class_mic_mag_compensator.html#a5cd2f4fc5c9d7f159792374ef3bea48d',1,'MicMagCompensator::serialize()']]],
+  ['set_301',['set',['../class_mic_config.html#ad032d98671b45b1491530b1af0221c05',1,'MicConfig::set()'],['../_c_make_lists_8txt.html#a57b502ce7f442d5ece67af03fb4278d7',1,'set():&#160;CMakeLists.txt']]],
+  ['set_5flog_5flevel_302',['set_log_level',['../class_mic_logger.html#ae3548f6ef332c81cc1d0fffaef2ddb9c',1,'MicLogger']]],
+  ['set_5fnav_5fstate_303',['set_nav_state',['../class_mic_nav_state_estimator.html#a93c734fea9c62652c2b528e33d2c6b30',1,'MicNavStateEstimator']]],
+  ['stack_5fvector_304',['stack_vector',['../classtl_1_1_tolles_lawson.html#a53c3401136e8b54bbdbe17525afb7a4d',1,'tl::TollesLawson']]],
+  ['subscrible_305',['subscrible',['../class_mic_observable.html#a927f212e0a6b7fbb371368e9e2d235e0',1,'MicObservable']]],
+  ['subvector_5freverse_306',['subvector_reverse',['../filter_8cpp.html#ac541fb874726cff28c1b179968a7a027',1,'subvector_reverse(const vectord &amp;vec, int idx_end, int idx_start):&#160;filter.cpp'],['../filter_8hpp.html#ac541fb874726cff28c1b179968a7a027',1,'subvector_reverse(const vectord &amp;vec, int idx_end, int idx_start):&#160;filter.cpp']]]
 ];

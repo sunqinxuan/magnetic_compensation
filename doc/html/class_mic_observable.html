@@ -90,7 +90,15 @@ $(document).ready(function(){initNavTree('class_mic_observable.html',''); initRe
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="mic__prerequisite_8h_source.html">mic_prerequisite.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mic__utils_8h_source.html">mic_utils.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for MicObservable&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_mic_observable__coll__graph.png" border="0" usemap="#_mic_observable_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="_mic_observable_3_01_t_01_4_coll__map" id="_mic_observable_3_01_t_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,163,156"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -100,14 +108,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aca6da0e303ce34148bff3e134d196cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95b280dd794893f3f13d1804742d4af4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_observable.html#a95b280dd794893f3f13d1804742d4af4">notify</a> (T &amp;source)</td></tr>
 <tr class="separator:a95b280dd794893f3f13d1804742d4af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a927f212e0a6b7fbb371368e9e2d235e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_observable.html#a927f212e0a6b7fbb371368e9e2d235e0">subscrible</a> (<a class="el" href="mic__prerequisite_8h.html#ac48fbe04ebca487b34b52c507ffae399">mic_observer_shared_ptr</a>&lt; T &gt; obs)</td></tr>
+<tr class="memitem:a927f212e0a6b7fbb371368e9e2d235e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_observable.html#a927f212e0a6b7fbb371368e9e2d235e0">subscrible</a> (mic_observer_shared_ptr&lt; T &gt; obs)</td></tr>
 <tr class="separator:a927f212e0a6b7fbb371368e9e2d235e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d85e60156309747b65979e388b1d57f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_observable.html#a8d85e60156309747b65979e388b1d57f">unsubscrible</a> (<a class="el" href="mic__prerequisite_8h.html#ac48fbe04ebca487b34b52c507ffae399">mic_observer_shared_ptr</a>&lt; T &gt; obs)</td></tr>
+<tr class="memitem:a8d85e60156309747b65979e388b1d57f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_observable.html#a8d85e60156309747b65979e388b1d57f">unsubscrible</a> (mic_observer_shared_ptr&lt; T &gt; obs)</td></tr>
 <tr class="separator:a8d85e60156309747b65979e388b1d57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aa53993abaa1ff5d4f5f0afb228be488e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="mic__prerequisite_8h.html#ac48fbe04ebca487b34b52c507ffae399">mic_observer_shared_ptr</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_observable.html#aa53993abaa1ff5d4f5f0afb228be488e">observers</a></td></tr>
+<tr class="memitem:aa53993abaa1ff5d4f5f0afb228be488e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; mic_observer_shared_ptr&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_observable.html#aa53993abaa1ff5d4f5f0afb228be488e">observers</a></td></tr>
 <tr class="separator:aa53993abaa1ff5d4f5f0afb228be488e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3546447a1a15f08a5bfdbaaa0997fe45"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_observable.html#a3546447a1a15f08a5bfdbaaa0997fe45">mtx</a></td></tr>
 <tr class="separator:a3546447a1a15f08a5bfdbaaa0997fe45"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,7 +218,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_mic_observable.html">MicObservable</a>&lt; T &gt;::subscrible </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="mic__prerequisite_8h.html#ac48fbe04ebca487b34b52c507ffae399">mic_observer_shared_ptr</a>&lt; T &gt;&#160;</td>
+          <td class="paramtype">mic_observer_shared_ptr&lt; T &gt;&#160;</td>
           <td class="paramname"><em>obs</em></td><td>)</td>
           <td></td>
         </tr>
@@ -238,7 +246,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_mic_observable.html">MicObservable</a>&lt; T &gt;::unsubscrible </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="mic__prerequisite_8h.html#ac48fbe04ebca487b34b52c507ffae399">mic_observer_shared_ptr</a>&lt; T &gt;&#160;</td>
+          <td class="paramtype">mic_observer_shared_ptr&lt; T &gt;&#160;</td>
           <td class="paramname"><em>obs</em></td><td>)</td>
           <td></td>
         </tr>
@@ -289,7 +297,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="mic__prerequisite_8h.html#ac48fbe04ebca487b34b52c507ffae399">mic_observer_shared_ptr</a>&lt;T&gt; &gt; <a class="el" href="class_mic_observable.html">MicObservable</a>&lt; T &gt;::observers</td>
+          <td class="memname">std::vector&lt;mic_observer_shared_ptr&lt;T&gt; &gt; <a class="el" href="class_mic_observable.html">MicObservable</a>&lt; T &gt;::observers</td>
         </tr>
       </table>
   </td>
@@ -301,8 +309,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/common/<a class="el" href="mic__prerequisite_8h_source.html">mic_prerequisite.h</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/common/<a class="el" href="mic__utils_8h_source.html">mic_utils.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -1,6 +1,7 @@
 var class_cost_function_creator =
 [
     [ "CostFunctionCreator", "class_cost_function_creator.html#a5e06475bf5fb8794d43535d0fc825f3c", null ],
+    [ "Create", "class_cost_function_creator.html#a0020f4e515932a3e49e91b4a0d7356e3", null ],
     [ "operator()", "class_cost_function_creator.html#ab4b06595f0e0137e30469ec720894a86", null ],
     [ "coeff_D_tilde_inv_", "class_cost_function_creator.html#a3c453607565f6379be6dc2f785d8c8b8", null ],
     [ "coeff_o_hat_", "class_cost_function_creator.html#ace00adfeae7e464644139e10658e871f", null ],

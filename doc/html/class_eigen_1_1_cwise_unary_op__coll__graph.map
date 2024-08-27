@@ -1,6 +1,0 @@
-<map id="Eigen::CwiseUnaryOp&lt; UnaryOp, XprType &gt;" name="Eigen::CwiseUnaryOp&lt; UnaryOp, XprType &gt;">
-<area shape="rect" id="node1" title="Generic expression where a coefficient&#45;wise unary operator is applied to an expression." alt="" coords="347,86,516,127"/>
-<area shape="rect" id="node2" href="$class_eigen_1_1_cwise_unary_op_impl.html" title=" " alt="" coords="5,5,253,61"/>
-<area shape="rect" id="node3" href="$class_eigen_1_1internal_1_1no__assignment__operator.html" title=" " alt="" coords="46,86,213,127"/>
-<area shape="rect" id="node4" href="$struct_eigen_1_1internal_1_1ref__selector.html" title=" " alt="" coords="48,151,211,193"/>
-</map>

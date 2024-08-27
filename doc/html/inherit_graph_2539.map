@@ -1,4 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01const_01b2d1164787704459976e801609bbec58.html" title="specialisation of the ExtractAccessor struct when the node type is const TensorCwiseBinaryOp" alt="" coords="5,5,232,91"/>
-<area shape="rect" id="node2" href="$struct_eigen_1_1_tensor_sycl_1_1internal_1_1_extract_accessor_3_01_tensor_evaluator_3_01_binary_6539dfdd8ebae0bc4a33defdc23ba0ac.html" title="specialisation of the ExtractAccessor struct when the node type is TensorCwiseBinaryOp" alt="" coords="280,13,540,83"/>
-</map>

@@ -1,6 +1,7 @@
 var class_cabin_cost_function_creator =
 [
     [ "CabinCostFunctionCreator", "class_cabin_cost_function_creator.html#a958a58e0d6bb0eb459c4096902237109", null ],
+    [ "Create", "class_cabin_cost_function_creator.html#afc9917a2f831967e888573d320ed3596", null ],
     [ "operator()", "class_cabin_cost_function_creator.html#ae2e4d51922f6a37ac27671cb5117d8da", null ],
     [ "coeff_D_tilde_inv_", "class_cabin_cost_function_creator.html#ac0feeeacee6762f441094452374fcc0f", null ],
     [ "coeff_o_hat_", "class_cabin_cost_function_creator.html#a586c6810aaacac7382cfb825807e2511", null ],

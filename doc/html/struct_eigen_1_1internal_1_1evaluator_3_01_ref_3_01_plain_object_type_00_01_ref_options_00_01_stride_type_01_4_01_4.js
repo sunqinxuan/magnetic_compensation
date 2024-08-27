@@ -1,7 +1,0 @@
-var struct_eigen_1_1internal_1_1evaluator_3_01_ref_3_01_plain_object_type_00_01_ref_options_00_01_stride_type_01_4_01_4 =
-[
-    [ "XprType", "struct_eigen_1_1internal_1_1evaluator_3_01_ref_3_01_plain_object_type_00_01_ref_options_00_01_stride_type_01_4_01_4.html#a49f98301ac153b880b54008edd822e9e", null ],
-    [ "Flags", "struct_eigen_1_1internal_1_1evaluator_3_01_ref_3_01_plain_object_type_00_01_ref_options_00_01_stride_type_01_4_01_4.html#a6fd3ac312ba9f146fabc6624353d8a13a2521a406ca64c56b95850a3287022e0d", null ],
-    [ "Alignment", "struct_eigen_1_1internal_1_1evaluator_3_01_ref_3_01_plain_object_type_00_01_ref_options_00_01_stride_type_01_4_01_4.html#a6fd3ac312ba9f146fabc6624353d8a13acd9b441f18ebfd089284fa151e3335b9", null ],
-    [ "evaluator", "struct_eigen_1_1internal_1_1evaluator_3_01_ref_3_01_plain_object_type_00_01_ref_options_00_01_stride_type_01_4_01_4.html#aa40eaa3e61a3df553e893fcf4bc0c837", null ]
-];
