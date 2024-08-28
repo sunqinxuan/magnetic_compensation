@@ -80,50 +80,45 @@ private:
     vector_3f_t mag_r_, mag_c_;
 };
 
+/** \brief MicCabinMagCompensator is a magnetic compensation algorithm
+ * specifically designed for applying the magnetic measured at the tail stinger
+ * as the baseline during calibration.
+ *
+ * The corresponding compensation algorithm is originally proposed by Qinxuan Sun
+ * in https://sunqinxuan.github.io/projects/2024-07-09-compensation.
+ *
+ * \author Qinxuan Sun, Yansong Gong
+ * \ingroup compensation
+ */
 class MicCabinMagCompensator : public MicMagCompensator
 {
 public:
-    MicCabinMagCompensator(); // : MicMagCompensator() {}
+    /** \brief Empty constructor. */
+    MicCabinMagCompensator();
+
+    /** \brief destructor. */
     virtual ~MicCabinMagCompensator() = default;
 
 protected:
+    /** \brief Implementation of the calibration algorithm of the compensation model
+     * based on the ellipsoid fitting and the orientaion estimation. */
     virtual ret_t do_calibrate() override;
+
+    /** \brief Compensate using the ellipsoid-based model
+     * (only if the working state is set to \a MIC_MAG_COMPENSATE_CALIBRATED).
+     * \param[in] ts the timestamp at which the compensation result is required
+     * \param[out] out output the compensated result at time \a ts
+     */
     virtual ret_t do_compenste(const float64_t ts, mic_mag_t &out) override;
 
     virtual ret_t serialize(json_t &node) override;
     virtual ret_t deserialize(json_t &node) override;
 
-    /* Ellipsoid fitting algorithm
-     *
-     * Inputs:
-     *   x = nx1 column vector of x coordinates of input data.
-     *   y = nx1 column vector of y coordinates of input data.
-     *   z = nx1 column vector of y coordinates of input data.
-     *
-     * Output:
-     *   u = [a,b,c,f,g,h,p,q,r,d], a vector corresponding to coefficients of
-     *       the general quadric surface given by equation,
-     *       ax2 + by2 + cz2 + 2fyz + 2gxz + 2hxy + 2px + 2qy + 2rz + d = 0.
-     *
-     * Source:
-     *   [1] Li - Least Square Ellipsoid Fitting (2004)
-     * */
-    // ret_t ellipsoid_fit(
-    //     const std::vector<vector_3f_t> &mag,
-    //     std::vector<float64_t> &coeffs);
-
-    // computation of the compensation model coefficients;
-    // ret_t compute_model_coeffs(
-    //     const std::vector<float64_t> &ellipsoid_coeffs,
-    //     const float64_t mag_earth_intensity,
-    //     matrix_3f_t &D_tilde_inv,
-    //     vector_3f_t &o_hat);
-
-    /* ceres optimization of orthogonal matrix R=V*R^{mb};
-     * mag - magnetic measurements (from flux);
-     * R_nb - rotations from body frame to navigation frame (from ins);
-     * D_tilde_inv, o_hat - model coefficients;
-     * quat - the orthogonal matrix to be optimized R=V*R^{mb};
+    /** \brief Optimize the model parameters R=V*R^{mm'} using Ceres library.
+     * \param[in] mag magnetic measurements obtained in cabin
+     * \param[in] mag_1 magnetic measurements obtained on tail stinger
+     * \param[in] D_tilde_inv, o_hat model coefficients
+     * \param[out] quat the output quaternion corresponding to the orthogonal matrix R=V*R^{mb}
      */
     ret_t ceres_optimize(
         const std::vector<vector_3f_t> &mag,
@@ -132,19 +127,17 @@ protected:
         const vector_3f_t &o_hat,
         quaternionf_t &quat);
 
-    // // estimate initial value of orthogonal matrix R=V*R^{mb};
-    // ret_t init_value_estimate(
-    //     const std::vector<vector_3f_t> &mag_m,
-    //     const std::vector<vector_3f_t> &mag_n,
-    //     const matrix_3f_t &D_tilde_inv,
-    //     const vector_3f_t &o_hat,
-    //     matrix_3f_t &R_hat);
-
 protected:
+    /** \brief The pointer to the \a MicEllipsoidMagCompensator object. */
     mic_ellipsoid_mag_compensator_shared_ptr _mag_ellipsoid_ptr;
 
+    /** \brief The compensation model coefficients. */
     matrix_3f_t _D_tilde_inv;
+
+    /** \brief The compensation model coefficients. */
     vector_3f_t _o_hat;
+
+    /** \brief The compensation model coefficients. */
     matrix_3f_t _R_opt;
 };
 

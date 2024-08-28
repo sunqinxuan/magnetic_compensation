@@ -18,12 +18,12 @@ var annotated_dup =
     [ "MicNavStateEstimator", "class_mic_nav_state_estimator.html", "class_mic_nav_state_estimator" ],
     [ "MicObservable", "class_mic_observable.html", "class_mic_observable" ],
     [ "MicObserver", "class_mic_observer.html", "class_mic_observer" ],
-    [ "MicParamType", "struct_mic_param_type.html", "struct_mic_param_type" ],
+    [ "MicParamType", "struct_mic_param_type.html", null ],
     [ "MicStateLogger", "class_mic_state_logger.html", "class_mic_state_logger" ],
     [ "MicTLComponentMagCompensator", "class_mic_t_l_component_mag_compensator.html", "class_mic_t_l_component_mag_compensator" ],
     [ "MicTLMagCompensator", "class_mic_t_l_mag_compensator.html", "class_mic_t_l_mag_compensator" ],
-    [ "MicUtils", "class_mic_utils.html", "class_mic_utils" ],
+    [ "MicUtils", "class_mic_utils.html", null ],
     [ "tuple_index", "structtuple__index.html", null ],
-    [ "tuple_index< T, std::tuple< T, Types... > >", "structtuple__index_3_01_t_00_01std_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", "structtuple__index_3_01_t_00_01std_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4" ],
-    [ "tuple_index< T, std::tuple< U, Types... > >", "structtuple__index_3_01_t_00_01std_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4.html", "structtuple__index_3_01_t_00_01std_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4" ]
+    [ "tuple_index< T, std::tuple< T, Types... > >", "structtuple__index_3_01_t_00_01std_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ],
+    [ "tuple_index< T, std::tuple< U, Types... > >", "structtuple__index_3_01_t_00_01std_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4.html", null ]
 ];

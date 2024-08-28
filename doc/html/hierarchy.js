@@ -23,7 +23,6 @@ var hierarchy =
       [ "MicKFINSEstimator", "class_mic_k_f_i_n_s_estimator.html", null ]
     ] ],
     [ "MicObservable< T >", "class_mic_observable.html", null ],
-    [ "mic::MicObservable< T >", "classmic_1_1_mic_observable.html", null ],
     [ "MicObservable< MicMagCompensator >", "class_mic_observable.html", [
       [ "MicMagCompensator", "class_mic_mag_compensator.html", [
         [ "MicCabinMagCompensator", "class_mic_cabin_mag_compensator.html", null ],
@@ -34,7 +33,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "MicObserver< T >", "class_mic_observer.html", null ],
-    [ "mic::MicObserver< T >", "classmic_1_1_mic_observer.html", null ],
     [ "MicObserver< MicMagCompensator >", "class_mic_observer.html", [
       [ "MicStateLogger", "class_mic_state_logger.html", null ]
     ] ],

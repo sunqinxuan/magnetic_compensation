@@ -2,20 +2,27 @@
 \label{class_mic_cabin_mag_compensator}\index{MicCabinMagCompensator@{MicCabinMagCompensator}}
 
 
+\mbox{\hyperlink{class_mic_cabin_mag_compensator}{Mic\+Cabin\+Mag\+Compensator}} is a magnetic compensation algorithm specifically designed for applying the magnetic measured at the tail stinger as the baseline during calibration.  
+
+
+
+
 {\ttfamily \#include $<$mic\+\_\+cabin\+\_\+mag\+\_\+compensator.\+h$>$}
 
 
 
-Inheritance diagram for Mic\+Cabin\+Mag\+Compensator\+:\nopagebreak
+Inheritance diagram for Mic\+Cabin\+Mag\+Compensator\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{class_mic_cabin_mag_compensator__inherit__graph}
+\includegraphics[width=295pt]{class_mic_cabin_mag_compensator__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Mic\+Cabin\+Mag\+Compensator\+:\nopagebreak
+Collaboration diagram for Mic\+Cabin\+Mag\+Compensator\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,33 +33,43 @@ Collaboration diagram for Mic\+Cabin\+Mag\+Compensator\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_mic_cabin_mag_compensator_abbaf3e5af16f2f93e1c5783971b8a8fc}{Mic\+Cabin\+Mag\+Compensator}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_mic_cabin_mag_compensator_aca449b88c35bcddb68f14a91aba6b2c3}{$\sim$\+Mic\+Cabin\+Mag\+Compensator}} ()=default
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 virtual ret\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_a2131cf7284cf4d74e5cccb4df126b331}{do\+\_\+calibrate}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Implementation of the calibration algorithm of the compensation model based on the ellipsoid fitting and the orientaion estimation. \end{DoxyCompactList}\item 
 virtual ret\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_a8c1fcbfc84a4929c7b0d58cb035c6604}{do\+\_\+compenste}} (const float64\+\_\+t ts, mic\+\_\+mag\+\_\+t \&out) override
+\begin{DoxyCompactList}\small\item\em Compensate using the ellipsoid-\/based model (only if the working state is set to {\itshape M\+I\+C\+\_\+\+M\+A\+G\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+ED}). \end{DoxyCompactList}\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_a14cbcf63ad9dd556cb6a92dad9aec73c}{serialize}} (\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&node) override
 \item 
-virtual ret\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_a14cbcf63ad9dd556cb6a92dad9aec73c}{serialize}} (json\+\_\+t \&node) override
-\item 
-virtual ret\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_a0d120146e5d20620a6e6fae63b52ba13}{deserialize}} (json\+\_\+t \&node) override
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_a0d120146e5d20620a6e6fae63b52ba13}{deserialize}} (\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&node) override
 \item 
 ret\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_a26e434d21b76b2e2b004d2f137b9c8c3}{ceres\+\_\+optimize}} (const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&mag, const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&mag\+\_\+1, const matrix\+\_\+3f\+\_\+t \&D\+\_\+tilde\+\_\+inv, const vector\+\_\+3f\+\_\+t \&o\+\_\+hat, quaternionf\+\_\+t \&quat)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Optimize the model parameters R=V$\ast$\+R$^\wedge$\{mm\textquotesingle{}\} using Ceres library. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{mic__ellipsoid__mag__compensator_8h_a8ff6fd2d69788af8d01b47c2aa1e79e1}{mic\+\_\+ellipsoid\+\_\+mag\+\_\+compensator\+\_\+shared\+\_\+ptr}} \mbox{\hyperlink{class_mic_cabin_mag_compensator_ae7ad8cd5c36f477e2bdbc9bf3603a5dc}{\+\_\+mag\+\_\+ellipsoid\+\_\+ptr}}
-\item 
+\begin{DoxyCompactList}\small\item\em The pointer to the {\itshape \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator}{Mic\+Ellipsoid\+Mag\+Compensator}}} object. \end{DoxyCompactList}\item 
 matrix\+\_\+3f\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_adeca3d2705fc42e100583938281b7ac1}{\+\_\+\+D\+\_\+tilde\+\_\+inv}}
-\item 
+\begin{DoxyCompactList}\small\item\em The compensation model coefficients. \end{DoxyCompactList}\item 
 vector\+\_\+3f\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_a40f4a1fa36dd15f05032fdbc2861361d}{\+\_\+o\+\_\+hat}}
-\item 
+\begin{DoxyCompactList}\small\item\em The compensation model coefficients. \end{DoxyCompactList}\item 
 matrix\+\_\+3f\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_ac4bd7d16497e9ebb41b0644423265e04}{\+\_\+\+R\+\_\+opt}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The compensation model coefficients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_mic_cabin_mag_compensator}{Mic\+Cabin\+Mag\+Compensator}} is a magnetic compensation algorithm specifically designed for applying the magnetic measured at the tail stinger as the baseline during calibration. 
+
+The corresponding compensation algorithm is originally proposed by Qinxuan Sun in \href{https://sunqinxuan.github.io/projects/2024-07-09-compensation}{\texttt{ https\+://sunqinxuan.\+github.\+io/projects/2024-\/07-\/09-\/compensation}}.
+
+\begin{DoxyAuthor}{Author}
+Qinxuan Sun, Yansong Gong 
+\end{DoxyAuthor}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -62,11 +79,19 @@ matrix\+\_\+3f\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_ac4bd7d16
 \doxysubsubsection{\texorpdfstring{MicCabinMagCompensator()}{MicCabinMagCompensator()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{mic__prerequisite_8h_ac3afdc1b2ec865ffb74d6eb75764462e}{M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+S\+T\+A\+RT}} Mic\+Cabin\+Mag\+Compensator\+::\+Mic\+Cabin\+Mag\+Compensator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Empty constructor. 
+
 \mbox{\Hypertarget{class_mic_cabin_mag_compensator_aca449b88c35bcddb68f14a91aba6b2c3}\label{class_mic_cabin_mag_compensator_aca449b88c35bcddb68f14a91aba6b2c3}} 
 \index{MicCabinMagCompensator@{MicCabinMagCompensator}!````~MicCabinMagCompensator@{$\sim$MicCabinMagCompensator}}
 \index{````~MicCabinMagCompensator@{$\sim$MicCabinMagCompensator}!MicCabinMagCompensator@{MicCabinMagCompensator}}
 \doxysubsubsection{\texorpdfstring{$\sim$MicCabinMagCompensator()}{~MicCabinMagCompensator()}}
 {\footnotesize\ttfamily virtual Mic\+Cabin\+Mag\+Compensator\+::$\sim$\+Mic\+Cabin\+Mag\+Compensator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+destructor. 
 
 
 
@@ -77,11 +102,26 @@ matrix\+\_\+3f\+\_\+t \mbox{\hyperlink{class_mic_cabin_mag_compensator_ac4bd7d16
 \doxysubsubsection{\texorpdfstring{ceres\_optimize()}{ceres\_optimize()}}
 {\footnotesize\ttfamily ret\+\_\+t Mic\+Cabin\+Mag\+Compensator\+::ceres\+\_\+optimize (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&}]{mag,  }\item[{const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&}]{mag\+\_\+1,  }\item[{const matrix\+\_\+3f\+\_\+t \&}]{D\+\_\+tilde\+\_\+inv,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{o\+\_\+hat,  }\item[{quaternionf\+\_\+t \&}]{quat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+Optimize the model parameters R=V$\ast$\+R$^\wedge$\{mm\textquotesingle{}\} using Ceres library. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mag} & magnetic measurements obtained in cabin \\
+\hline
+\mbox{\texttt{ in}}  & {\em mag\+\_\+1} & magnetic measurements obtained on tail stinger \\
+\hline
+\mbox{\texttt{ in}}  & {\em D\+\_\+tilde\+\_\+inv,o\+\_\+hat} & model coefficients \\
+\hline
+\mbox{\texttt{ out}}  & {\em quat} & the output quaternion corresponding to the orthogonal matrix R=V$\ast$\+R$^\wedge$\{mb\} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_mic_cabin_mag_compensator_a0d120146e5d20620a6e6fae63b52ba13}\label{class_mic_cabin_mag_compensator_a0d120146e5d20620a6e6fae63b52ba13}} 
 \index{MicCabinMagCompensator@{MicCabinMagCompensator}!deserialize@{deserialize}}
 \index{deserialize@{deserialize}!MicCabinMagCompensator@{MicCabinMagCompensator}}
 \doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
-{\footnotesize\ttfamily ret\+\_\+t Mic\+Cabin\+Mag\+Compensator\+::deserialize (\begin{DoxyParamCaption}\item[{json\+\_\+t \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Cabin\+Mag\+Compensator\+::deserialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
 
@@ -95,6 +135,10 @@ Reimplemented from \mbox{\hyperlink{class_mic_mag_compensator_a4a090fdaf9ef1b5ca
 
 
 
+Implementation of the calibration algorithm of the compensation model based on the ellipsoid fitting and the orientaion estimation. 
+
+
+
 Implements \mbox{\hyperlink{class_mic_mag_compensator_a5a411ece565ad33e614fa9f4deb49245}{Mic\+Mag\+Compensator}}.
 
 \mbox{\Hypertarget{class_mic_cabin_mag_compensator_a8c1fcbfc84a4929c7b0d58cb035c6604}\label{class_mic_cabin_mag_compensator_a8c1fcbfc84a4929c7b0d58cb035c6604}} 
@@ -105,13 +149,24 @@ Implements \mbox{\hyperlink{class_mic_mag_compensator_a5a411ece565ad33e614fa9f4d
 
 
 
+Compensate using the ellipsoid-\/based model (only if the working state is set to {\itshape M\+I\+C\+\_\+\+M\+A\+G\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+ED}). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ts} & the timestamp at which the compensation result is required \\
+\hline
+\mbox{\texttt{ out}}  & {\em out} & output the compensated result at time {\itshape ts} \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{class_mic_mag_compensator_ac23bd6a837144a977a30de1c2ac5295a}{Mic\+Mag\+Compensator}}.
 
 \mbox{\Hypertarget{class_mic_cabin_mag_compensator_a14cbcf63ad9dd556cb6a92dad9aec73c}\label{class_mic_cabin_mag_compensator_a14cbcf63ad9dd556cb6a92dad9aec73c}} 
 \index{MicCabinMagCompensator@{MicCabinMagCompensator}!serialize@{serialize}}
 \index{serialize@{serialize}!MicCabinMagCompensator@{MicCabinMagCompensator}}
 \doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
-{\footnotesize\ttfamily ret\+\_\+t Mic\+Cabin\+Mag\+Compensator\+::serialize (\begin{DoxyParamCaption}\item[{json\+\_\+t \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Cabin\+Mag\+Compensator\+::serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
 
@@ -126,11 +181,19 @@ Reimplemented from \mbox{\hyperlink{class_mic_mag_compensator_a5cd2f4fc5c9d7f159
 \doxysubsubsection{\texorpdfstring{\_D\_tilde\_inv}{\_D\_tilde\_inv}}
 {\footnotesize\ttfamily matrix\+\_\+3f\+\_\+t Mic\+Cabin\+Mag\+Compensator\+::\+\_\+\+D\+\_\+tilde\+\_\+inv\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+The compensation model coefficients. 
+
 \mbox{\Hypertarget{class_mic_cabin_mag_compensator_ae7ad8cd5c36f477e2bdbc9bf3603a5dc}\label{class_mic_cabin_mag_compensator_ae7ad8cd5c36f477e2bdbc9bf3603a5dc}} 
 \index{MicCabinMagCompensator@{MicCabinMagCompensator}!\_mag\_ellipsoid\_ptr@{\_mag\_ellipsoid\_ptr}}
 \index{\_mag\_ellipsoid\_ptr@{\_mag\_ellipsoid\_ptr}!MicCabinMagCompensator@{MicCabinMagCompensator}}
 \doxysubsubsection{\texorpdfstring{\_mag\_ellipsoid\_ptr}{\_mag\_ellipsoid\_ptr}}
 {\footnotesize\ttfamily \mbox{\hyperlink{mic__ellipsoid__mag__compensator_8h_a8ff6fd2d69788af8d01b47c2aa1e79e1}{mic\+\_\+ellipsoid\+\_\+mag\+\_\+compensator\+\_\+shared\+\_\+ptr}} Mic\+Cabin\+Mag\+Compensator\+::\+\_\+mag\+\_\+ellipsoid\+\_\+ptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The pointer to the {\itshape \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator}{Mic\+Ellipsoid\+Mag\+Compensator}}} object. 
 
 \mbox{\Hypertarget{class_mic_cabin_mag_compensator_a40f4a1fa36dd15f05032fdbc2861361d}\label{class_mic_cabin_mag_compensator_a40f4a1fa36dd15f05032fdbc2861361d}} 
 \index{MicCabinMagCompensator@{MicCabinMagCompensator}!\_o\_hat@{\_o\_hat}}
@@ -138,11 +201,19 @@ Reimplemented from \mbox{\hyperlink{class_mic_mag_compensator_a5cd2f4fc5c9d7f159
 \doxysubsubsection{\texorpdfstring{\_o\_hat}{\_o\_hat}}
 {\footnotesize\ttfamily vector\+\_\+3f\+\_\+t Mic\+Cabin\+Mag\+Compensator\+::\+\_\+o\+\_\+hat\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+The compensation model coefficients. 
+
 \mbox{\Hypertarget{class_mic_cabin_mag_compensator_ac4bd7d16497e9ebb41b0644423265e04}\label{class_mic_cabin_mag_compensator_ac4bd7d16497e9ebb41b0644423265e04}} 
 \index{MicCabinMagCompensator@{MicCabinMagCompensator}!\_R\_opt@{\_R\_opt}}
 \index{\_R\_opt@{\_R\_opt}!MicCabinMagCompensator@{MicCabinMagCompensator}}
 \doxysubsubsection{\texorpdfstring{\_R\_opt}{\_R\_opt}}
 {\footnotesize\ttfamily matrix\+\_\+3f\+\_\+t Mic\+Cabin\+Mag\+Compensator\+::\+\_\+\+R\+\_\+opt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The compensation model coefficients. 
 
 
 

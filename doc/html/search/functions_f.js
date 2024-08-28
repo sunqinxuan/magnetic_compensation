@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['to_5fstr_522',['to_str',['../class_mic_config.html#a59c271006ff2626fa873e0694e9509ad',1,'MicConfig']]],
-  ['tolleslawson_523',['TollesLawson',['../classtl_1_1_tolles_lawson.html#a89b32ef1dcc2dc9762e3eecd174931e9',1,'tl::TollesLawson']]],
-  ['trinomialmultiply_524',['TrinomialMultiply',['../butterworth_8cpp.html#a14dc7899a67787b935d32db52d4a779b',1,'TrinomialMultiply(int FilterOrder, vector&lt; double &gt; b, vector&lt; double &gt; c):&#160;butterworth.cpp'],['../butterworth_8hpp.html#a14dc7899a67787b935d32db52d4a779b',1,'TrinomialMultiply(int FilterOrder, vector&lt; double &gt; b, vector&lt; double &gt; c):&#160;butterworth.cpp']]]
+  ['unsubscrible_517',['unsubscrible',['../class_mic_observable.html#a8d85e60156309747b65979e388b1d57f',1,'MicObservable']]],
+  ['update_518',['update',['../class_mic_observer.html#ade9c8deb83e860eb46cf5ef4aa6d0c7c',1,'MicObserver::update()'],['../class_mic_state_logger.html#afaa8f9d59566f441bd936c9391c000f1',1,'MicStateLogger::update()'],['../class_mic_k_f_i_n_s_estimator.html#afdbbfc30dd2d2a7ea573d0f450fb966a',1,'MicKFINSEstimator::update()'],['../class_mic_nav_state_estimator.html#af0e971fa53cac0bee077dd1a7024086a',1,'MicNavStateEstimator::update()']]]
 ];

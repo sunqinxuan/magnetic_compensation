@@ -44,81 +44,73 @@ enum class MicMagCompensatorState : uint8_t
 };
 using mic_state_t = MicMagCompensatorState;
 
- /** \brief @b MicMagCompensator provides a base implementation of the Iterative
-  * Closest Point algorithm. The transformation is estimated based on Singular Value
-  * Decomposition (SVD).
-  *
-  * The algorithm has several termination criteria:
-  *
-  * <ol>
-  * <li>Number of iterations has reached the maximum user imposed number of iterations
-  * (via \ref setMaximumIterations)</li> <li>The epsilon (difference) between the
-  * previous transformation and the current estimated transformation is smaller than an
-  * user imposed value (via \ref setTransformationEpsilon)</li> <li>The sum of Euclidean
-  * squared errors is smaller than a user defined threshold (via \ref
-  * setEuclideanFitnessEpsilon)</li>
-  * </ol>
-  *
-  *
-  * Usage example:
-  * \code
-  * IterativeClosestPoint<PointXYZ, PointXYZ> icp;
-  * // Set the input source and target
-  * icp.setInputSource (cloud_source);
-  * icp.setInputTarget (cloud_target);
-  *
-  * // Set the max correspondence distance to 5cm (e.g., correspondences with higher
-  * // distances will be ignored)
-  * icp.setMaxCorrespondenceDistance (0.05);
-  * // Set the maximum number of iterations (criterion 1)
-  * icp.setMaximumIterations (50);
-  * // Set the transformation epsilon (criterion 2)
-  * icp.setTransformationEpsilon (1e-8);
-  * // Set the euclidean distance difference epsilon (criterion 3)
-  * icp.setEuclideanFitnessEpsilon (1);
-  *
-  * // Perform the alignment
-  * icp.align (cloud_source_registered);
-  *
-  * // Obtain the transformation that aligned cloud_source to cloud_source_registered
-  * Eigen::Matrix4f transformation = icp.getFinalTransformation ();
-  * \endcode
-  *
-  * \author Radu B. Rusu, Michael Dixon
-  * \ingroup registration
-  */
+/** \brief @b MicMagCompensator provides a base interface of the magnetic interference
+ * compensation algorithm.
+ *
+ * The compensation model is calibrated first using measured data captured in a calibration
+ * flight. Then the real-time compensation is implemented via the saved model.
+ *
+ * \author Qinxuan Sun, Yansong Gong
+ * \ingroup compensation
+ */
 class MicMagCompensator : public MicObservable<MicMagCompensator>
 {
 public:
+    /** \brief Empty constructor. */
     MicMagCompensator();
+    /** \brief destructor. */
     ~MicMagCompensator();
 
+    /** \brief Get a pointer to the data storer used to store the magnetic
+     * and the navigation state data. */
     mic_mag_storer_t &get_data_storer();
-    // mic_nav_state_estimator_t &get_nav_state_estimator();
+
+    /** \brief Get the current timestamp. */
     float64_t get_curr_time() { return _curr_time_stamp; }
 
-    /**
-     * @brief add data (magnetic measurements and navigation states of the aircraft) to the compensator
-     * @param ts timestamp
-     * @param mag_data magnetic measurement at time ts
-     * @param nav_state (optional) navigation state at time ts
-     * @return ret_t
-     * @retval if the data is successfully added
+    /** \brief Add data (magnetic measurements and navigation states of
+     * the aircraft) to the compensator.
+     * \param[in] ts the timestamp of the added data
+     * \param[in] mag_data the magnetic measurements
+     * (three-component representation of the magnetic vector
+     * and the magnetic intensity value)
+     * \param[in] nav_state (optional) the navigation state provided
+     * by either the avionics or INS
      */
     ret_t add_data(
         const float64_t ts,
         const mic_mag_t &mag_data,
         const mic_nav_state_t &nav_state = mic_nav_state_t());
 
+    /** \brief Add the baseline data for model calibration.
+     * \param[in] ts the timestamp of the added data
+     * \param[in] mag_data the magnetic measurements provided either
+     * by the earth magnetic model or the sensors outside the cabin
+     * \param[in] nav_state (optional) the navigation state is provided
+     * if the mag_data is captured via sensors outside the cabin
+     */
     ret_t add_data_truth(
         const float64_t ts,
         const mic_mag_t &mag_data,
         const mic_nav_state_t &nav_state = mic_nav_state_t());
 
+    /** \brief Call the calibration algorithm which calibrates the compensation model. */
     ret_t calibrate();
+
+    /** \brief Call the compensation algorithm to compensate the input magnetic data.
+     * \param[in] ts the timestamp at which the compensation result is required
+     * \param[out] out output the compensated result at time \a ts
+     */
     ret_t compenste(const float64_t ts, mic_mag_t &out);
 
+    /** \brief Load the saved model to the compensator.
+     * \param[in] filename the file (.mdl) which saves the compensation model coefficients
+     */
     ret_t load_model(const std::string filename);
+
+    /** \brief Save the compensation model to file.
+     * \param[in] filename the file (.mdl) to write the compensation model coefficients
+     */
     ret_t save_model(const std::string filename);
 
 protected:
@@ -129,17 +121,18 @@ protected:
     virtual ret_t serialize(json_t &node);
     virtual ret_t deserialize(json_t &node);
 
-    // void init_nav_state_estimator();
-
+    /** \brief The current timestamp of the compensator. */
     float64_t _curr_time_stamp;
 
-    /* data storer*/
+    /** \brief The data storer for the measurement data. */
     mic_mag_storer_t _mag_measure_storer;
-    mic_mag_storer_t _mag_truth_storer;
-    // mic_mag_nav_state_storer_t _nav_state_storer;
 
-    /* working state */
+    /** \brief The data storer for the baseline data. */
+    mic_mag_storer_t _mag_truth_storer;
+
+    /** \brief The working state of the compensator. */
     mic_state_t _state;
+    
     std::string _version;
 };
 

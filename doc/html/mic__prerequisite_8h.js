@@ -1,7 +1,7 @@
 var mic__prerequisite_8h =
 [
-    [ "MicObserver", "classmic_1_1_mic_observer.html", null ],
-    [ "MicObservable", "classmic_1_1_mic_observable.html", null ],
+    [ "MicObserver", "class_mic_observer.html", "class_mic_observer" ],
+    [ "MicObservable", "class_mic_observable.html", "class_mic_observable" ],
     [ "MIC_DOUBLE_PI", "mic__prerequisite_8h.html#a9a2d9c4912f84f91b95023f3556013e2", null ],
     [ "MIC_EPSILON", "mic__prerequisite_8h.html#ac82e9b9d9a615b3a63071a657c8606ee", null ],
     [ "MIC_HALF_PI", "mic__prerequisite_8h.html#abc592cf7bc5b24dea06ae97360cf95fa", null ],
@@ -27,11 +27,11 @@ var mic__prerequisite_8h =
     [ "MIC_TIMER_START", "mic__prerequisite_8h.html#a267e4227374a5d60c568f074635fdac2", null ],
     [ "MIC_TIMER_STOP", "mic__prerequisite_8h.html#a8559bf9e1d8ecd43415b7da603ce70dd", null ],
     [ "USING_NAMESPACE_MIC", "mic__prerequisite_8h.html#a197514eaf0ab0f58529636bb766542cd", null ],
-    [ "json_t", "mic__prerequisite_8h.html#a5644b56c1d0f02b5b93478b7eb193c5a", null ],
-    [ "mic_config_t", "mic__prerequisite_8h.html#abd78b3decf88955c00e3be7f61c4b453", null ],
-    [ "mic_logger_t", "mic__prerequisite_8h.html#a2e2650276d4f2922b964c551b1814f53", null ],
-    [ "mic_observer_shared_ptr", "mic__prerequisite_8h.html#a70ebf34822441623e2e89120fbc1ea5c", null ],
-    [ "mic_observer_t", "mic__prerequisite_8h.html#aaaa4b1452e756e0f24b51cbfbba10030", null ],
-    [ "mic_utils", "mic__prerequisite_8h.html#a59de32875b0d5ad3e6ed77d5f80dc745", null ],
-    [ "thread_t", "mic__prerequisite_8h.html#ad6d0ea7f692df1efce1d5e3bb43340ec", null ]
+    [ "json_t", "mic__prerequisite_8h.html#a8c10f98f38a89244f09101c73f133b8c", null ],
+    [ "mic_config_t", "mic__prerequisite_8h.html#a0b4609f1c6c770e66e1a5f230551e719", null ],
+    [ "mic_logger_t", "mic__prerequisite_8h.html#a13492812757299bd04ac5a942f32b8d0", null ],
+    [ "mic_observer_shared_ptr", "mic__prerequisite_8h.html#ac48fbe04ebca487b34b52c507ffae399", null ],
+    [ "mic_observer_t", "mic__prerequisite_8h.html#a3302592b8f2df7414b91c186faec2df2", null ],
+    [ "mic_utils", "mic__prerequisite_8h.html#a3818ae2d6ee9835996fee3d3f47c7fb2", null ],
+    [ "thread_t", "mic__prerequisite_8h.html#a91e83021e528728619733a8a63faf8f7", null ]
 ];

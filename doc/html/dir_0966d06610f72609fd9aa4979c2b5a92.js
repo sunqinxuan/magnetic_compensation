@@ -6,6 +6,6 @@ var dir_0966d06610f72609fd9aa4979c2b5a92 =
     [ "mic_utils.h", "mic__utils_8h.html", [
       [ "MicObserver", "class_mic_observer.html", "class_mic_observer" ],
       [ "MicObservable", "class_mic_observable.html", "class_mic_observable" ],
-      [ "MicUtils", "class_mic_utils.html", "class_mic_utils" ]
+      [ "MicUtils", "class_mic_utils.html", null ]
     ] ]
 ];

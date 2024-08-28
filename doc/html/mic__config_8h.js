@@ -1,6 +1,6 @@
 var mic__config_8h =
 [
-    [ "MicParamType", "struct_mic_param_type.html", "struct_mic_param_type" ],
+    [ "MicParamType", "struct_mic_param_type.html", null ],
     [ "MicConfig", "class_mic_config.html", "class_mic_config" ],
     [ "MicJsonConfig", "class_mic_json_config.html", "class_mic_json_config" ],
     [ "MIC_CONFIG_GET", "mic__config_8h.html#abf3a67dd8e637aa67933b30581027ada", null ],

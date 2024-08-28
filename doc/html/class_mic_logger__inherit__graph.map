@@ -1,6 +1,6 @@
 <map id="MicLogger" name="MicLogger">
-<area shape="rect" id="node1" title=" " alt="" coords="221,5,355,273"/>
-<area shape="rect" id="node2" href="$class_mic_bash_file_logger.html" title=" " alt="" coords="5,321,184,531"/>
-<area shape="rect" id="node3" href="$class_mic_bash_printer.html" title=" " alt="" coords="209,329,367,523"/>
-<area shape="rect" id="node4" href="$class_mic_file_writer.html" title=" " alt="" coords="391,321,550,531"/>
+<area shape="rect" id="node1" title=" " alt="" coords="188,5,277,32"/>
+<area shape="rect" id="node2" href="$class_mic_bash_file_logger.html" title=" " alt="" coords="5,80,148,107"/>
+<area shape="rect" id="node3" href="$class_mic_bash_printer.html" title=" " alt="" coords="173,80,293,107"/>
+<area shape="rect" id="node4" href="$class_mic_file_writer.html" title=" " alt="" coords="317,80,423,107"/>
 </map>

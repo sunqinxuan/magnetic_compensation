@@ -16,14 +16,12 @@ var searchData=
   ['_5fmag_5fellipsoid_5fptr_13',['_mag_ellipsoid_ptr',['../class_mic_cabin_mag_compensator.html#ae7ad8cd5c36f477e2bdbc9bf3603a5dc',1,'MicCabinMagCompensator']]],
   ['_5fmag_5fmeasure_5fstorer_14',['_mag_measure_storer',['../class_mic_mag_compensator.html#acc5d802ed9d19101033a441a2d08d44f',1,'MicMagCompensator']]],
   ['_5fmag_5ftruth_5fstorer_15',['_mag_truth_storer',['../class_mic_mag_compensator.html#ab3a2cfbab0653dd219b07fc4ba5b8096',1,'MicMagCompensator']]],
-  ['_5fmic_5fcompensator_16',['_mic_compensator',['../namespacemic.html#a86c9f9d02aa2ce26c9c12c4cb3660069',1,'mic']]],
-  ['_5fmic_5flogger_17',['_mic_logger',['../namespacemic.html#acd0c042ae5ddfbe75adbdfe2d6f3cab8',1,'mic']]],
-  ['_5fo_5fhat_18',['_o_hat',['../class_mic_cabin_mag_compensator.html#a40f4a1fa36dd15f05032fdbc2861361d',1,'MicCabinMagCompensator::_o_hat()'],['../class_mic_ellipsoid_mag_compensator.html#ab9f00782bbc847552b3fc2019aebc5d8',1,'MicEllipsoidMagCompensator::_o_hat()']]],
-  ['_5fparam_5fregistry_19',['_param_registry',['../class_mic_config.html#a4ac8798fcdbddca9273d5b2ab8b79fda',1,'MicConfig']]],
-  ['_5fr_5fopt_20',['_R_opt',['../class_mic_cabin_mag_compensator.html#ac4bd7d16497e9ebb41b0644423265e04',1,'MicCabinMagCompensator::_R_opt()'],['../class_mic_ellipsoid_mag_compensator.html#a068405abe37c97afed2b331cf2b88395',1,'MicEllipsoidMagCompensator::_R_opt()']]],
-  ['_5fstate_21',['_state',['../class_mic_mag_compensator.html#acc0daf5ca875caf1fcffda53cb0f0821',1,'MicMagCompensator']]],
-  ['_5ftime_5fsync_5ftolerance_22',['_time_sync_tolerance',['../class_mic_data_storer.html#a9883f3da738e12cfec2983087eeda74a',1,'MicDataStorer']]],
-  ['_5ftl_5fcoeffs_23',['_tl_coeffs',['../class_mic_t_l_mag_compensator.html#afe8e82e9ce1310a603b058f557f95794',1,'MicTLMagCompensator']]],
-  ['_5ftl_5fmodel_24',['_tl_model',['../class_mic_t_l_mag_compensator.html#a1e8377c58bb51872654b7a98262c4d9a',1,'MicTLMagCompensator']]],
-  ['_5fversion_25',['_version',['../class_mic_mag_compensator.html#a475bfd7e81350fa0a767637e14c9247d',1,'MicMagCompensator']]]
+  ['_5fo_5fhat_16',['_o_hat',['../class_mic_cabin_mag_compensator.html#a40f4a1fa36dd15f05032fdbc2861361d',1,'MicCabinMagCompensator::_o_hat()'],['../class_mic_ellipsoid_mag_compensator.html#ab9f00782bbc847552b3fc2019aebc5d8',1,'MicEllipsoidMagCompensator::_o_hat()']]],
+  ['_5fparam_5fregistry_17',['_param_registry',['../class_mic_config.html#a4ac8798fcdbddca9273d5b2ab8b79fda',1,'MicConfig']]],
+  ['_5fr_5fopt_18',['_R_opt',['../class_mic_cabin_mag_compensator.html#ac4bd7d16497e9ebb41b0644423265e04',1,'MicCabinMagCompensator::_R_opt()'],['../class_mic_ellipsoid_mag_compensator.html#a068405abe37c97afed2b331cf2b88395',1,'MicEllipsoidMagCompensator::_R_opt()']]],
+  ['_5fstate_19',['_state',['../class_mic_mag_compensator.html#acc0daf5ca875caf1fcffda53cb0f0821',1,'MicMagCompensator']]],
+  ['_5ftime_5fsync_5ftolerance_20',['_time_sync_tolerance',['../class_mic_data_storer.html#a9883f3da738e12cfec2983087eeda74a',1,'MicDataStorer']]],
+  ['_5ftl_5fcoeffs_21',['_tl_coeffs',['../class_mic_t_l_mag_compensator.html#afe8e82e9ce1310a603b058f557f95794',1,'MicTLMagCompensator']]],
+  ['_5ftl_5fmodel_22',['_tl_model',['../class_mic_t_l_mag_compensator.html#a1e8377c58bb51872654b7a98262c4d9a',1,'MicTLMagCompensator']]],
+  ['_5fversion_23',['_version',['../class_mic_mag_compensator.html#a475bfd7e81350fa0a767637e14c9247d',1,'MicMagCompensator']]]
 ];
