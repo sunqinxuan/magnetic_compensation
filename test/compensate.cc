@@ -18,7 +18,8 @@ USING_NAMESPACE_MIC;
 using namespace std;
 
 DEFINE_string(model, "ellipsoid", "ellipsoid, tl, tlc or cabin");
-DEFINE_string(file, "Flt1002_1002.2.txt", "file to load data");
+DEFINE_string(modelfile, "mic_model_ellipsoid_1002_02.mdl", "model file");
+DEFINE_string(datafile, "Flt1002_1002.2.txt", "file to load data");
 DEFINE_string(output, "output.txt", "file to output compensation results");
 
 int main(int argc, char *argv[])
@@ -26,14 +27,16 @@ int main(int argc, char *argv[])
     google::ParseCommandLineFlags(&argc, &argv, true);
 
     // initialize the compensator;
-    mic_init_worker(FLAGS_model, "./mic_model_" + FLAGS_model + ".mdl");
+    // mic_init_worker(FLAGS_model, "./mic_model_" + FLAGS_model + ".mdl");mic_init_worker(FLAGS_model, "./mic_model_" + FLAGS_model + ".mdl");
+    mic_init_worker(FLAGS_model, FLAGS_modelfile);
 
     google::CommandLineFlagInfo info;
     GetCommandLineFlagInfo("output", &info);
     std::string output_file_name;
     if (info.is_default)
     {
-        output_file_name = "output_" + FLAGS_model + ".txt";
+        // output_file_name = "output_" + FLAGS_model + ".txt";
+        output_file_name = "output_" + FLAGS_datafile;
     }
     else
     {
@@ -61,10 +64,10 @@ int main(int argc, char *argv[])
     }
 
     // load data from file;
-    std::ifstream infile(FLAGS_file);
+    std::ifstream infile(FLAGS_datafile);
     if (!infile.is_open())
     {
-        MIC_LOG_ERR("Error: Could not open file %s", FLAGS_file.c_str());
+        MIC_LOG_ERR("Error: Could not open file %s", FLAGS_datafile.c_str());
         return -1;
     }
     std::cout << std::endl;

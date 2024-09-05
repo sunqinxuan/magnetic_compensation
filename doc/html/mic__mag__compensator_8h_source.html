@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>magnetic_compensation: include/mic_mag_compensator/mic_mag_compensator.h Source File</title>
+<title>Magnetic Interference Compensation (MIC): include/mic_mag_compensator/mic_mag_compensator.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">magnetic_compensation
+   <div id="projectname">Magnetic Interference Compensation (MIC)
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -186,13 +187,13 @@ $(document).ready(function(){initNavTree('mic__mag__compensator_8h_source.html',
 <div class="ttc" id="amic__mag__compensator_8h_html_adf559014919b63e147862635173c91bc"><div class="ttname"><a href="mic__mag__compensator_8h.html#adf559014919b63e147862635173c91bc">mic_mag_compensator_shared_ptr</a></div><div class="ttdeci">std::shared_ptr&lt; MicMagCompensator &gt; mic_mag_compensator_shared_ptr</div><div class="ttdef"><b>Definition:</b> mic_mag_compensator.h:38</div></div>
 <div class="ttc" id="aclass_mic_mag_compensator_html_a475bfd7e81350fa0a767637e14c9247d"><div class="ttname"><a href="class_mic_mag_compensator.html#a475bfd7e81350fa0a767637e14c9247d">MicMagCompensator::_version</a></div><div class="ttdeci">std::string _version</div><div class="ttdef"><b>Definition:</b> mic_mag_compensator.h:136</div></div>
 <div class="ttc" id="aclass_mic_mag_compensator_html_a50c330fd46fec13bd51a2feb005bdf6d"><div class="ttname"><a href="class_mic_mag_compensator.html#a50c330fd46fec13bd51a2feb005bdf6d">MicMagCompensator::add_data</a></div><div class="ttdeci">ret_t add_data(const float64_t ts, const mic_mag_t &amp;mag_data, const mic_nav_state_t &amp;nav_state=mic_nav_state_t())</div><div class="ttdoc">Add data (magnetic measurements and navigation states of the aircraft) to the compensator.</div><div class="ttdef"><b>Definition:</b> mic_mag_compensator.cc:56</div></div>
-<div class="ttc" id="anamespacemic_html_acfe40fd3b45fa08a3118ed800dd45927"><div class="ttname"><a href="namespacemic.html#acfe40fd3b45fa08a3118ed800dd45927">mic::mic_nav_state_t</a></div><div class="ttdeci">MicNavState mic_nav_state_t</div><div class="ttdef"><b>Definition:</b> mic_base.h:109</div></div>
+<div class="ttc" id="anamespacemic_html_acfe40fd3b45fa08a3118ed800dd45927"><div class="ttname"><a href="namespacemic.html#acfe40fd3b45fa08a3118ed800dd45927">mic::mic_nav_state_t</a></div><div class="ttdeci">MicNavState mic_nav_state_t</div><div class="ttdef"><b>Definition:</b> mic_base.h:126</div></div>
 <div class="ttc" id="aclass_mic_mag_compensator_html_acc5d802ed9d19101033a441a2d08d44f"><div class="ttname"><a href="class_mic_mag_compensator.html#acc5d802ed9d19101033a441a2d08d44f">MicMagCompensator::_mag_measure_storer</a></div><div class="ttdeci">mic_mag_storer_t _mag_measure_storer</div><div class="ttdoc">The data storer for the measurement data.</div><div class="ttdef"><b>Definition:</b> mic_mag_compensator.h:128</div></div>
 <div class="ttc" id="amic__prerequisite_8h_html_a8f7c728e15f77fcbba94cb2dcdbd0aa0"><div class="ttname"><a href="mic__prerequisite_8h.html#a8f7c728e15f77fcbba94cb2dcdbd0aa0">MIC_NAMESPACE_END</a></div><div class="ttdeci">#define MIC_NAMESPACE_END</div><div class="ttdef"><b>Definition:</b> mic_prerequisite.h:33</div></div>
 <div class="ttc" id="aclass_mic_mag_compensator_html_a77aea7fa9c29438ee67a0b1ff62dee99"><div class="ttname"><a href="class_mic_mag_compensator.html#a77aea7fa9c29438ee67a0b1ff62dee99">MicMagCompensator::add_data_truth</a></div><div class="ttdeci">ret_t add_data_truth(const float64_t ts, const mic_mag_t &amp;mag_data, const mic_nav_state_t &amp;nav_state=mic_nav_state_t())</div><div class="ttdoc">Add the baseline data for model calibration.</div><div class="ttdef"><b>Definition:</b> mic_mag_compensator.cc:68</div></div>
 <div class="ttc" id="aclass_mic_mag_compensator_html_acc0daf5ca875caf1fcffda53cb0f0821"><div class="ttname"><a href="class_mic_mag_compensator.html#acc0daf5ca875caf1fcffda53cb0f0821">MicMagCompensator::_state</a></div><div class="ttdeci">mic_state_t _state</div><div class="ttdoc">The working state of the compensator.</div><div class="ttdef"><b>Definition:</b> mic_mag_compensator.h:134</div></div>
 <div class="ttc" id="anamespacemic_html_a69568bba90cd9d9877f97729df9f2354"><div class="ttname"><a href="namespacemic.html#a69568bba90cd9d9877f97729df9f2354">mic::float64_t</a></div><div class="ttdeci">double float64_t</div><div class="ttdef"><b>Definition:</b> mic_base.h:31</div></div>
-<div class="ttc" id="anamespacemic_html_ad96d9b6c530f27255442a332ca56d490"><div class="ttname"><a href="namespacemic.html#ad96d9b6c530f27255442a332ca56d490">mic::mic_mag_t</a></div><div class="ttdeci">MicMag mic_mag_t</div><div class="ttdef"><b>Definition:</b> mic_base.h:66</div></div>
+<div class="ttc" id="anamespacemic_html_ad96d9b6c530f27255442a332ca56d490"><div class="ttname"><a href="namespacemic.html#ad96d9b6c530f27255442a332ca56d490">mic::mic_mag_t</a></div><div class="ttdeci">MicMag mic_mag_t</div><div class="ttdef"><b>Definition:</b> mic_base.h:70</div></div>
 <div class="ttc" id="amic__prerequisite_8h_html_ac3afdc1b2ec865ffb74d6eb75764462e"><div class="ttname"><a href="mic__prerequisite_8h.html#ac3afdc1b2ec865ffb74d6eb75764462e">MIC_NAMESPACE_START</a></div><div class="ttdeci">#define MIC_NAMESPACE_START</div><div class="ttdef"><b>Definition:</b> mic_prerequisite.h:32</div></div>
 <div class="ttc" id="amic__mag__compensator_8h_html_ae215f354c141d02e5a50eae6ef55974eaf30170d74fb7ba9bafe4f95f5a148a31"><div class="ttname"><a href="mic__mag__compensator_8h.html#ae215f354c141d02e5a50eae6ef55974eaf30170d74fb7ba9bafe4f95f5a148a31">MicMagCompensatorState::MIC_MAG_COMPENSATE_UNCALIBRATED</a></div><div class="ttdeci">@ MIC_MAG_COMPENSATE_UNCALIBRATED</div></div>
 <div class="ttc" id="aclass_mic_mag_compensator_html_a1f87b105c0c6574b5b09f6b5920323c8"><div class="ttname"><a href="class_mic_mag_compensator.html#a1f87b105c0c6574b5b09f6b5920323c8">MicMagCompensator::calibrate</a></div><div class="ttdeci">ret_t calibrate()</div><div class="ttdoc">Call the calibration algorithm which calibrates the compensation model.</div><div class="ttdef"><b>Definition:</b> mic_mag_compensator.cc:79</div></div>

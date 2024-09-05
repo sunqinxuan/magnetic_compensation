@@ -227,8 +227,7 @@ namespace tl
                                    const std::vector<double> &By,
                                    const std::vector<double> &Bz,
                                    std::vector<double> &Bt,
-                                   const std::unordered_set<TLterm, HashTLterm> &terms,
-                                   const double Bt_scale)
+                                   const std::unordered_set<TLterm, HashTLterm> &terms)
   {
     if (!(Bx.size() == By.size() && Bx.size() == Bz.size()))
     {
@@ -358,7 +357,7 @@ namespace tl
       const std::vector<double> &Be, std::vector<double> &Bt,
       const std::unordered_set<TLterm, HashTLterm> &terms,
       const double lambda, const double pass1, const double pass2,
-      const double fs, const int pole, const int trim, const double Bt_scale)
+      const double fs, const int pole, const int trim)
   {
     if (!(Bx.size() == By.size() && Bx.size() == Bz.size()))
     {
@@ -406,7 +405,7 @@ namespace tl
     }
 
     std::vector<std::vector<double>> TL_A_;
-    if (!createMatrixA(TL_A_, Bx, By, Bz, Bt, terms, Bt_scale))
+    if (!createMatrixA(TL_A_, Bx, By, Bz, Bt, terms))
     {
       return false;
     }

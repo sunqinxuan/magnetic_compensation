@@ -56,53 +56,70 @@ namespace mic
     };
     using ret_t = MicRet;
 
+    /** \brief MicMag represents the base class in MIC storing
+     * the magnetic field data at a time step.*/
     struct MicMag
     {
+        /** \brief The timestamp of this magnetic field data. */
         float64_t time_stamp; // TODO
+        /** \brief The triaxial components of the magnetic field vector. */
         vector_3f_t vector;
+        /** \brief The value of the magnetic field intensity. */
         float64_t value;
-        // float32_t confidence;
     };
     using mic_mag_t = MicMag;
 
+    /** \brief MicIMU represents the IMU measurement data at a time step.*/
     struct MicIMU
     {
+        /** \brief The timestamp of this IMU data. */
         float64_t time_stamp; // TODO
+        /** \brief The time interval between two measurements. */
         float64_t dt;
-        vector_3f_t gyr; // incremental angle (rad)
-        vector_3f_t acc; // incremental velocity (m/s)
+        /** \brief The incremental angle (rad). */
+        vector_3f_t gyr;
+        /** \brief The incremental velocity (m/s). */
+        vector_3f_t acc;
     };
     using mic_imu_t = MicIMU;
 
-    struct MicIMUError
-    {
-        vector_3f_t gyr_bias;
-        vector_3f_t acc_bias;
-        vector_3f_t gyr_scale;
-        vector_3f_t acc_scale;
-    };
-    using mic_imu_error_t = MicIMUError;
+    // struct MicIMUError
+    // {
+    //     vector_3f_t gyr_bias;
+    //     vector_3f_t acc_bias;
+    //     vector_3f_t gyr_scale;
+    //     vector_3f_t acc_scale;
+    // };
+    // using mic_imu_error_t = MicIMUError;
 
+    /** \brief MicGNSS represents the GNSS measurement data at a time step.*/
     struct MicGNSS
     {
+        /** \brief The timestamp of this GNSS data. */
         float64_t time_stamp;
-        vector_3f_t lat_lon_alt; // (rad,rad,m)
-        vector_3f_t pos_std;     // north-east-down (m)
+        /** \brief latitude, longitude and altitude (rad,rad,m). */
+        vector_3f_t lat_lon_alt;
+        /** \brief position std. presented in the north-east-down coordinates (m). */
+        vector_3f_t pos_std;
     };
     using mic_gnss_t = MicGNSS;
 
+    /** \brief MicNavState represents the navigation state of
+     * a aircraft or vehicle at a time step.*/
     struct MicNavState
     {
         MicNavState()
         {
             time_stamp = -1;
         }
-        float64_t time_stamp; // TODO
+        /** \brief The timestamp of this navigation state. */
+        float64_t time_stamp; 
+         /** \brief position presented in the north-east-down coordinates (m). */
         vector_3f_t position;
-        /* attitude
-         * of the body frame [nose, right wing, down]
-         * w.r.t. the navigation frame [north, east, down] */
+        /** \brief attitude of the body frame [nose, right wing, down]
+         * w.r.t. the navigation frame [north, east, down]. */
         quaternionf_t attitude;
+        /** \brief velocity presented in the north-east-down coordinates (m). */
         vector_3f_t velocity;
         // mic_imu_error_t imu_error;
     };

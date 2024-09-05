@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>magnetic_compensation: MicNavStateEstimator Class Reference</title>
+<title>Magnetic Interference Compensation (MIC): MicNavStateEstimator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">magnetic_compensation
+   <div id="projectname">Magnetic Interference Compensation (MIC)
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -91,14 +92,17 @@ $(document).ready(function(){initNavTree('class_mic_nav_state_estimator.html',''
 </div><!--header-->
 <div class="contents">
 
+<p><b><a class="el" href="class_mic_nav_state_estimator.html" title="MicNavStateEstimator provides a base interface of the state estimation algorithm.">MicNavStateEstimator</a></b> provides a base interface of the state estimation algorithm.  
+ <a href="class_mic_nav_state_estimator.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="mic__nav__state__estimator_8h_source.html">mic_nav_state_estimator.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MicNavStateEstimator:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_mic_nav_state_estimator__inherit__graph.png" border="0" usemap="#_mic_nav_state_estimator_inherit__map" alt="Inheritance graph"/></div>
 <map name="_mic_nav_state_estimator_inherit__map" id="_mic_nav_state_estimator_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,5,173,32"/>
-<area shape="rect" href="class_mic_k_f_i_n_s_estimator.html" title=" " alt="" coords="16,80,163,107"/>
+<area shape="rect" title="MicNavStateEstimator provides a base interface of the state estimation algorithm." alt="" coords="5,5,173,32"/>
+<area shape="rect" href="class_mic_k_f_i_n_s_estimator.html" title="MicKFINSEstimator provides a Kalman filter&#45;based implementation of the state estimation algorithm." alt="" coords="16,80,163,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -106,7 +110,7 @@ Collaboration diagram for MicNavStateEstimator:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_mic_nav_state_estimator__coll__graph.png" border="0" usemap="#_mic_nav_state_estimator_coll__map" alt="Collaboration graph"/></div>
 <map name="_mic_nav_state_estimator_coll__map" id="_mic_nav_state_estimator_coll__map">
-<area shape="rect" title=" " alt="" coords="6,124,174,151"/>
+<area shape="rect" title="MicNavStateEstimator provides a base interface of the state estimation algorithm." alt="" coords="6,124,174,151"/>
 <area shape="rect" href="class_mic_data_storer.html" title=" " alt="" coords="5,5,175,61"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -114,33 +118,46 @@ Collaboration diagram for MicNavStateEstimator:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a587c9149f8ee55d8ce670baf8b497a57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_nav_state_estimator.html#a587c9149f8ee55d8ce670baf8b497a57">MicNavStateEstimator</a> ()=default</td></tr>
+<tr class="memdesc:a587c9149f8ee55d8ce670baf8b497a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor.  <a href="class_mic_nav_state_estimator.html#a587c9149f8ee55d8ce670baf8b497a57">More...</a><br /></td></tr>
 <tr class="separator:a587c9149f8ee55d8ce670baf8b497a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a341ce05a438d373b7b0e43f93067c3e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_nav_state_estimator.html#a341ce05a438d373b7b0e43f93067c3e4">~MicNavStateEstimator</a> ()=default</td></tr>
+<tr class="memdesc:a341ce05a438d373b7b0e43f93067c3e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor.  <a href="class_mic_nav_state_estimator.html#a341ce05a438d373b7b0e43f93067c3e4">More...</a><br /></td></tr>
 <tr class="separator:a341ce05a438d373b7b0e43f93067c3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca506da6f6afd6dc0de5aa5f58242bbf"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_nav_state_estimator.html#aca506da6f6afd6dc0de5aa5f58242bbf">add_imu_data</a> (const float64_t ts, const mic_imu_t &amp;imu_data)</td></tr>
+<tr class="memdesc:aca506da6f6afd6dc0de5aa5f58242bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add IMU data to the storer and update the current state. If the state is successfully updated, set the current timestamp to ts and return <em>ret_t::MIC_RET_SUCCESSED</em>.  <a href="class_mic_nav_state_estimator.html#aca506da6f6afd6dc0de5aa5f58242bbf">More...</a><br /></td></tr>
 <tr class="separator:aca506da6f6afd6dc0de5aa5f58242bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae756aeb7871ebf2be0bc34fd373260b3"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_nav_state_estimator.html#ae756aeb7871ebf2be0bc34fd373260b3">add_gnss_data</a> (const float64_t ts, const mic_gnss_t &amp;gnss_data)</td></tr>
+<tr class="memdesc:ae756aeb7871ebf2be0bc34fd373260b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add GNSS data to the storer.  <a href="class_mic_nav_state_estimator.html#ae756aeb7871ebf2be0bc34fd373260b3">More...</a><br /></td></tr>
 <tr class="separator:ae756aeb7871ebf2be0bc34fd373260b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93c734fea9c62652c2b528e33d2c6b30"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_nav_state_estimator.html#a93c734fea9c62652c2b528e33d2c6b30">set_nav_state</a> (const float64_t ts, const mic_nav_state_t &amp;nav_state)</td></tr>
+<tr class="memdesc:a93c734fea9c62652c2b528e33d2c6b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current state of the estimator.  <a href="class_mic_nav_state_estimator.html#a93c734fea9c62652c2b528e33d2c6b30">More...</a><br /></td></tr>
 <tr class="separator:a93c734fea9c62652c2b528e33d2c6b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e9fcf2879c40e130e309dda2b94933f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_nav_state_estimator.html#a0e9fcf2879c40e130e309dda2b94933f">get_nav_state</a> (const float64_t ts, mic_nav_state_t &amp;nav_state)</td></tr>
+<tr class="memdesc:a0e9fcf2879c40e130e309dda2b94933f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current state of the estimator.  <a href="class_mic_nav_state_estimator.html#a0e9fcf2879c40e130e309dda2b94933f">More...</a><br /></td></tr>
 <tr class="separator:a0e9fcf2879c40e130e309dda2b94933f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:af0e971fa53cac0bee077dd1a7024086a"><td class="memItemLeft" align="right" valign="top">virtual ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_nav_state_estimator.html#af0e971fa53cac0bee077dd1a7024086a">update</a> (const float64_t ts, const mic_imu_t &amp;imu_data, mic_nav_state_t &amp;nav_state)=0</td></tr>
+<tr class="memdesc:af0e971fa53cac0bee077dd1a7024086a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to update the state of the estimator, propagating from <em>_curr_time_stamp</em> to <em>ts</em>.  <a href="class_mic_nav_state_estimator.html#af0e971fa53cac0bee077dd1a7024086a">More...</a><br /></td></tr>
 <tr class="separator:af0e971fa53cac0bee077dd1a7024086a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a347b075b666bff342dcfcaaa873db03a"><td class="memItemLeft" align="right" valign="top">float64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_nav_state_estimator.html#a347b075b666bff342dcfcaaa873db03a">_curr_time_stamp</a></td></tr>
+<tr class="memdesc:a347b075b666bff342dcfcaaa873db03a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The timestamp of the current time step.  <a href="class_mic_nav_state_estimator.html#a347b075b666bff342dcfcaaa873db03a">More...</a><br /></td></tr>
 <tr class="separator:a347b075b666bff342dcfcaaa873db03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5da8211d90bf616352b2c88b56682ad4"><td class="memItemLeft" align="right" valign="top">float64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_nav_state_estimator.html#a5da8211d90bf616352b2c88b56682ad4">_last_time_stamp</a></td></tr>
+<tr class="memdesc:a5da8211d90bf616352b2c88b56682ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The timestamp of the last time step.  <a href="class_mic_nav_state_estimator.html#a5da8211d90bf616352b2c88b56682ad4">More...</a><br /></td></tr>
 <tr class="separator:a5da8211d90bf616352b2c88b56682ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eb49d87f34a4a4e9ab55158cce9be81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mic__nav__state__estimator_8h.html#a809788810db9e8b8cb4e39bca08b1f4c">mic_nav_state_storer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mic_nav_state_estimator.html#a4eb49d87f34a4a4e9ab55158cce9be81">_data_storer</a></td></tr>
+<tr class="memdesc:a4eb49d87f34a4a4e9ab55158cce9be81"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data storer including the navigation state, IMU and GNSS data.  <a href="class_mic_nav_state_estimator.html#a4eb49d87f34a4a4e9ab55158cce9be81">More...</a><br /></td></tr>
 <tr class="separator:a4eb49d87f34a4a4e9ab55158cce9be81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b><a class="el" href="class_mic_nav_state_estimator.html" title="MicNavStateEstimator provides a base interface of the state estimation algorithm.">MicNavStateEstimator</a></b> provides a base interface of the state estimation algorithm. </p>
+<dl class="section author"><dt>Author</dt><dd>Qinxuan Sun, Yansong Gong </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a587c9149f8ee55d8ce670baf8b497a57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a587c9149f8ee55d8ce670baf8b497a57">&#9670;&nbsp;</a></span>MicNavStateEstimator()</h2>
 
@@ -163,6 +180,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Empty constructor. </p>
 
 </div>
 </div>
@@ -188,6 +207,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>destructor. </p>
 
 </div>
 </div>
@@ -218,6 +239,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Add GNSS data to the storer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ts</td><td>the timestamp of the added data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gnss_data</td><td>the added GNSS data </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aca506da6f6afd6dc0de5aa5f58242bbf"></a>
@@ -245,6 +275,15 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Add IMU data to the storer and update the current state. If the state is successfully updated, set the current timestamp to ts and return <em>ret_t::MIC_RET_SUCCESSED</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ts</td><td>the timestamp of the added data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imu_data</td><td>the added IMU data </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -274,6 +313,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the current state of the estimator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ts</td><td>the timestamp of the state to get </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">nav_state</td><td>output the current state of the estimator </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a93c734fea9c62652c2b528e33d2c6b30"></a>
@@ -301,6 +349,15 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the current state of the estimator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ts</td><td>the timestamp of the updated state </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nav_state</td><td>the navigation state used to update the estimator </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -344,6 +401,16 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Interface to update the state of the estimator, propagating from <em>_curr_time_stamp</em> to <em>ts</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ts</td><td>the timestamp of the added data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imu_data</td><td>the IMU data used to update the state </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">nav_state</td><td>output the updated navigation state </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="class_mic_k_f_i_n_s_estimator.html#afdbbfc30dd2d2a7ea573d0f450fb966a">MicKFINSEstimator</a>.</p>
 
 </div>
@@ -369,6 +436,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The timestamp of the current time step. </p>
+
 </div>
 </div>
 <a id="a4eb49d87f34a4a4e9ab55158cce9be81"></a>
@@ -391,6 +460,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The data storer including the navigation state, IMU and GNSS data. </p>
+
 </div>
 </div>
 <a id="a5da8211d90bf616352b2c88b56682ad4"></a>
@@ -412,6 +483,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The timestamp of the last time step. </p>
 
 </div>
 </div>

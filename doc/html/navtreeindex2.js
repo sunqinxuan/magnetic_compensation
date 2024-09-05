@@ -1,14 +1,8 @@
 var NAVTREEINDEX2 =
 {
-"structmic_1_1_mic_mag.html#a21f7c356cd82195aeff65bce4e46267c":[1,0,0,3,1],
-"structmic_1_1_mic_mag.html#a2f9a1da65955ddec26d0b1162f81b74d":[1,0,0,3,0],
-"structmic_1_1_mic_mag.html#a6c4e4a1ada8737a65af30930ab8d1a25":[1,0,0,3,2],
-"structmic_1_1_mic_nav_state.html":[1,0,0,4],
-"structmic_1_1_mic_nav_state.html#a3dc1d811d41ed504bca0e7acbd0a99b4":[1,0,0,4,0],
-"structmic_1_1_mic_nav_state.html#a4278dc114811f673a4e199599b7bfbc0":[1,0,0,4,1],
-"structmic_1_1_mic_nav_state.html#a767aeb7494f4a3e86c8f1be67d959bfa":[1,0,0,4,2],
-"structmic_1_1_mic_nav_state.html#ad55c8acd30e1be0905d104f7f1864178":[1,0,0,4,4],
-"structmic_1_1_mic_nav_state.html#ad7162dd89ac5ae273209804c75720498":[1,0,0,4,3],
+"structmic_1_1_mic_nav_state.html#a767aeb7494f4a3e86c8f1be67d959bfa":[1,0,0,3,2],
+"structmic_1_1_mic_nav_state.html#ad55c8acd30e1be0905d104f7f1864178":[1,0,0,3,4],
+"structmic_1_1_mic_nav_state.html#ad7162dd89ac5ae273209804c75720498":[1,0,0,3,3],
 "structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html":[1,0,1,0,0],
 "structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html#a017f3d593c7f6720d6094c2057a9f3c2":[1,0,1,0,0,0],
 "structtuple__index.html":[1,0,23],

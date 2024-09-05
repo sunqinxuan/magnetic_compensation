@@ -22,7 +22,7 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "magnetic_compensation", "index.html", [
+  [ "Magnetic Interference Compensation (MIC)", "index.html", [
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -62,7 +62,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "filter_8cpp.html",
-"structmic_1_1_mic_mag.html#a21f7c356cd82195aeff65bce4e46267c"
+"structmic_1_1_mic_nav_state.html#a767aeb7494f4a3e86c8f1be67d959bfa"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

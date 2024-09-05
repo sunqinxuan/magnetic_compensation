@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>magnetic_compensation: tl::TollesLawson Class Reference</title>
+<title>Magnetic Interference Compensation (MIC): tl::TollesLawson Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">magnetic_compensation
+   <div id="projectname">Magnetic Interference Compensation (MIC)
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -92,11 +93,16 @@ $(document).ready(function(){initNavTree('classtl_1_1_tolles_lawson.html',''); i
 </div><!--header-->
 <div class="contents">
 
+<p><b><a class="el" href="classtl_1_1_tolles_lawson.html" title="TollesLawson provide the implementation of the Tolles-Lawson Algorithm.">TollesLawson</a></b> provide the implementation of the Tolles-Lawson Algorithm.  
+ <a href="classtl_1_1_tolles_lawson.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="tolles__lawson_8hpp_source.html">tolles_lawson.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html">HashTLterm</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Hash values for the key of unordered map <br  />
+  <a href="structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -126,32 +132,48 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a89b32ef1dcc2dc9762e3eecd174931e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#a89b32ef1dcc2dc9762e3eecd174931e9">TollesLawson</a> ()</td></tr>
+<tr class="memdesc:a89b32ef1dcc2dc9762e3eecd174931e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor.  <a href="classtl_1_1_tolles_lawson.html#a89b32ef1dcc2dc9762e3eecd174931e9">More...</a><br /></td></tr>
 <tr class="separator:a89b32ef1dcc2dc9762e3eecd174931e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9810b4a08cf09238d7a266499f5eeeed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#a9810b4a08cf09238d7a266499f5eeeed">createMatrixA</a> (std::vector&lt; std::vector&lt; double &gt;&gt; &amp;TL_A_, const std::vector&lt; double &gt; &amp;Bx, const std::vector&lt; double &gt; &amp;By, const std::vector&lt; double &gt; &amp;Bz, std::vector&lt; double &gt; &amp;Bt, const std::unordered_set&lt; <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021">TLterm</a>, <a class="el" href="structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html">HashTLterm</a> &gt; &amp;terms={<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb">PERMANENT</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3">INDUCED</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439">EDDY</a>}, const double Bt_scale=50000.0)</td></tr>
-<tr class="separator:a9810b4a08cf09238d7a266499f5eeeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0f3109be50ef5aa4b9b14d0882533f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#a6e0f3109be50ef5aa4b9b14d0882533f">createMatrixA</a> (std::vector&lt; std::vector&lt; double &gt;&gt; &amp;TL_A_, const std::vector&lt; double &gt; &amp;Bx, const std::vector&lt; double &gt; &amp;By, const std::vector&lt; double &gt; &amp;Bz, std::vector&lt; double &gt; &amp;Bt, const std::unordered_set&lt; <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021">TLterm</a>, <a class="el" href="structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html">HashTLterm</a> &gt; &amp;terms={<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb">PERMANENT</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3">INDUCED</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439">EDDY</a>})</td></tr>
+<tr class="memdesc:a6e0f3109be50ef5aa4b9b14d0882533f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Tolles-Lawson <code>A</code> matrix using vector magnetometer measurements.  <a href="classtl_1_1_tolles_lawson.html#a6e0f3109be50ef5aa4b9b14d0882533f">More...</a><br /></td></tr>
+<tr class="separator:a6e0f3109be50ef5aa4b9b14d0882533f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b7bfb08f2761c66a30be8286382b797"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#a2b7bfb08f2761c66a30be8286382b797">createMatrixA_component</a> (std::vector&lt; std::vector&lt; double &gt;&gt; &amp;TL_A_, const std::vector&lt; double &gt; &amp;Bx, const std::vector&lt; double &gt; &amp;By, const std::vector&lt; double &gt; &amp;Bz, const std::unordered_set&lt; <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021">TLterm</a>, <a class="el" href="structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html">HashTLterm</a> &gt; &amp;terms={<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb">PERMANENT</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3">INDUCED</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439">EDDY</a>})</td></tr>
+<tr class="memdesc:a2b7bfb08f2761c66a30be8286382b797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create component-based Tolles-Lawson <code>A</code> matrix using vector magnetometer measurements.  <a href="classtl_1_1_tolles_lawson.html#a2b7bfb08f2761c66a30be8286382b797">More...</a><br /></td></tr>
 <tr class="separator:a2b7bfb08f2761c66a30be8286382b797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a404908081d42c7ccad7208dda1d1ce7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#a404908081d42c7ccad7208dda1d1ce7b">createCoeff</a> (std::vector&lt; double &gt; &amp;TL_beta_, const std::vector&lt; double &gt; &amp;Bx, const std::vector&lt; double &gt; &amp;By, const std::vector&lt; double &gt; &amp;Bz, const std::vector&lt; double &gt; &amp;Be, std::vector&lt; double &gt; &amp;Bt, const std::unordered_set&lt; <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021">TLterm</a>, <a class="el" href="structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html">HashTLterm</a> &gt; &amp;terms={<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb">PERMANENT</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3">INDUCED</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439">EDDY</a>}, const double lambda=0.0, const double pass1=0.1, const double pass2=0.9, const double fs=10.0, const int pole=4, const int trim=20, const double Bt_scale=50000.0)</td></tr>
-<tr class="separator:a404908081d42c7ccad7208dda1d1ce7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370a974f2d883471a9c3183f2e0d48cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#a370a974f2d883471a9c3183f2e0d48cf">createCoeff</a> (std::vector&lt; double &gt; &amp;TL_beta_, const std::vector&lt; double &gt; &amp;Bx, const std::vector&lt; double &gt; &amp;By, const std::vector&lt; double &gt; &amp;Bz, const std::vector&lt; double &gt; &amp;Be, std::vector&lt; double &gt; &amp;Bt, const std::unordered_set&lt; <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021">TLterm</a>, <a class="el" href="structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html">HashTLterm</a> &gt; &amp;terms={<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb">PERMANENT</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3">INDUCED</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439">EDDY</a>}, const double lambda=0.0, const double pass1=0.1, const double pass2=0.9, const double fs=10.0, const int pole=4, const int trim=20)</td></tr>
+<tr class="memdesc:a370a974f2d883471a9c3183f2e0d48cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Tolles-Lawson coefficients using vector and scalar magnetometer measurements with or without a bandpass filter.  <a href="classtl_1_1_tolles_lawson.html#a370a974f2d883471a9c3183f2e0d48cf">More...</a><br /></td></tr>
+<tr class="separator:a370a974f2d883471a9c3183f2e0d48cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a353d979123fad3405645b92708013147"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#a353d979123fad3405645b92708013147">createCoeff_component</a> (std::vector&lt; double &gt; &amp;TL_beta_, const std::vector&lt; double &gt; &amp;Bx, const std::vector&lt; double &gt; &amp;By, const std::vector&lt; double &gt; &amp;Bz, const std::vector&lt; double &gt; &amp;Bex, const std::vector&lt; double &gt; &amp;Bey, const std::vector&lt; double &gt; &amp;Bez, const std::unordered_set&lt; <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021">TLterm</a>, <a class="el" href="structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html">HashTLterm</a> &gt; &amp;terms={<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb">PERMANENT</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3">INDUCED</a>, <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439">EDDY</a>})</td></tr>
+<tr class="memdesc:a353d979123fad3405645b92708013147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create component-based Tolles-Lawson coefficients using vector and scalar magnetometer measurements.  <a href="classtl_1_1_tolles_lawson.html#a353d979123fad3405645b92708013147">More...</a><br /></td></tr>
 <tr class="separator:a353d979123fad3405645b92708013147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aabbb06c4750503ba0df54b512bda3f88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#aabbb06c4750503ba0df54b512bda3f88">fdm</a> (std::vector&lt; double &gt; &amp;dif, const std::vector&lt; double &gt; &amp;x, const <a class="el" href="classtl_1_1_tolles_lawson.html#a30d1ab3befa3d15b36ac6e65cf7eec15">TollesLawson::FDMscheme</a> scheme=<a class="el" href="classtl_1_1_tolles_lawson.html#a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8">CENTRAL</a>)</td></tr>
+<tr class="memdesc:aabbb06c4750503ba0df54b512bda3f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finite difference method (FDM) on vector of input data.  <a href="classtl_1_1_tolles_lawson.html#aabbb06c4750503ba0df54b512bda3f88">More...</a><br /></td></tr>
 <tr class="separator:aabbb06c4750503ba0df54b512bda3f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa46298f732ee2b6224ab14159a5fa1ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#aa46298f732ee2b6224ab14159a5fa1ff">bwbp_filter</a> (std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;x, const double pass1, const double pass2, const int pole, const int trim)</td></tr>
+<tr class="memdesc:aa46298f732ee2b6224ab14159a5fa1ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter the input data using Butterworth bandpass filter.  <a href="classtl_1_1_tolles_lawson.html#aa46298f732ee2b6224ab14159a5fa1ff">More...</a><br /></td></tr>
 <tr class="separator:aa46298f732ee2b6224ab14159a5fa1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c0be95a1b03bc8f62cf1ef3b1daa25f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#a8c0be95a1b03bc8f62cf1ef3b1daa25f">linear_regression</a> (std::vector&lt; double &gt; &amp;coeff, std::vector&lt; double &gt; &amp;residual, const std::vector&lt; double &gt; &amp;bb, const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;AA, const double lambda)</td></tr>
+<tr class="memdesc:a8c0be95a1b03bc8f62cf1ef3b1daa25f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear regression to solve the least-square problem <code>Ax=b</code>.  <a href="classtl_1_1_tolles_lawson.html#a8c0be95a1b03bc8f62cf1ef3b1daa25f">More...</a><br /></td></tr>
 <tr class="separator:a8c0be95a1b03bc8f62cf1ef3b1daa25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53c3401136e8b54bbdbe17525afb7a4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#a53c3401136e8b54bbdbe17525afb7a4d">stack_vector</a> (std::vector&lt; double &gt; &amp;result, const std::vector&lt; double &gt; &amp;x, const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;z)</td></tr>
+<tr class="memdesc:a53c3401136e8b54bbdbe17525afb7a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine the components into vectors and concatenate them.  <a href="classtl_1_1_tolles_lawson.html#a53c3401136e8b54bbdbe17525afb7a4d">More...</a><br /></td></tr>
 <tr class="separator:a53c3401136e8b54bbdbe17525afb7a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa8bca7f18728bd5f3a1031ee22f9ac"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#acaa8bca7f18728bd5f3a1031ee22f9ac">rmse</a> (const std::vector&lt; double &gt; &amp;residual)</td></tr>
+<tr class="memdesc:acaa8bca7f18728bd5f3a1031ee22f9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the root mean square error given a residual sequence.  <a href="classtl_1_1_tolles_lawson.html#acaa8bca7f18728bd5f3a1031ee22f9ac">More...</a><br /></td></tr>
 <tr class="separator:acaa8bca7f18728bd5f3a1031ee22f9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14a66249bdce85111bf57819b180ada3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtl_1_1_tolles_lawson.html#a14a66249bdce85111bf57819b180ada3">degeneration</a> (const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;TL_A)</td></tr>
+<tr class="memdesc:a14a66249bdce85111bf57819b180ada3"><td class="mdescLeft">&#160;</td><td class="mdescRight">output degeneration problem to terminal for debugging.  <a href="classtl_1_1_tolles_lawson.html#a14a66249bdce85111bf57819b180ada3">More...</a><br /></td></tr>
 <tr class="separator:a14a66249bdce85111bf57819b180ada3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b><a class="el" href="classtl_1_1_tolles_lawson.html" title="TollesLawson provide the implementation of the Tolles-Lawson Algorithm.">TollesLawson</a></b> provide the implementation of the Tolles-Lawson Algorithm. </p>
+<p>The estimation of the model coefficients including the total constraint-based method (which is the traditional one) and the component constraint-based method (which is originally designed by Q. Sun).</p>
+<p>Refer to <a href="https://sunqinxuan.github.io/projects/2024-05-06-mag-compensation">https://sunqinxuan.github.io/projects/2024-05-06-mag-compensation</a> for more details.</p>
+<dl class="section author"><dt>Author</dt><dd>Qinxuan Sun, Yansong Gong </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a30d1ab3befa3d15b36ac6e65cf7eec15"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30d1ab3befa3d15b36ac6e65cf7eec15">&#9670;&nbsp;</a></span>FDMscheme</h2>
 
@@ -163,13 +185,20 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Enum for the FDM scheme used to calculate the derivatives in TL-model. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15aab655f1573e6347dbbe18815b721ac36"></a>BACKWARD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15a73b5713fa203e10b7276664ec56f6c99"></a>FORWARD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8"></a>CENTRAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15a57332f41561ba30a906a0b73364c7826"></a>BACKWARD2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15a1d7c067fef6231094b42039502fc4822"></a>FORWARD2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15a44fa0f27eb258ba5862b6c1df0d1bdf2"></a>FOURTH&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15aab655f1573e6347dbbe18815b721ac36"></a>BACKWARD&#160;</td><td class="fielddoc"><p>1st derivative 1st-order backward difference. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15a73b5713fa203e10b7276664ec56f6c99"></a>FORWARD&#160;</td><td class="fielddoc"><p>1st derivative 1st-order forward difference. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8"></a>CENTRAL&#160;</td><td class="fielddoc"><p>1st derivative 2nd-order central difference. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15a57332f41561ba30a906a0b73364c7826"></a>BACKWARD2&#160;</td><td class="fielddoc"><p>1st derivative 2nd-order backward difference. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15a1d7c067fef6231094b42039502fc4822"></a>FORWARD2&#160;</td><td class="fielddoc"><p>1st derivative 2nd-order forward difference. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a30d1ab3befa3d15b36ac6e65cf7eec15a44fa0f27eb258ba5862b6c1df0d1bdf2"></a>FOURTH&#160;</td><td class="fielddoc"><p>4th derivative central difference. </p>
+</td></tr>
 </table>
 
 </div>
@@ -185,12 +214,18 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Enum for the terms used for the TL model coefficients. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb"></a>PERMANENT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3"></a>INDUCED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439"></a>EDDY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9ce150cd2411c2947d5fd3005d7f3021a1f59ebf4e2fbbe6ed4beed0fe5e3dbb9"></a>FDM&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9ce150cd2411c2947d5fd3005d7f3021ab48ca68ff0a09fc73a1d1c02113ffefd"></a>BIAS&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb"></a>PERMANENT&#160;</td><td class="fielddoc"><p>The permanent magnetic moment term. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3"></a>INDUCED&#160;</td><td class="fielddoc"><p>The induced magnetic moment term. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439"></a>EDDY&#160;</td><td class="fielddoc"><p>The eddy current magnetic moment term. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ce150cd2411c2947d5fd3005d7f3021a1f59ebf4e2fbbe6ed4beed0fe5e3dbb9"></a>FDM&#160;</td><td class="fielddoc"><p>The FDM magnetic moment term. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ce150cd2411c2947d5fd3005d7f3021ab48ca68ff0a09fc73a1d1c02113ffefd"></a>BIAS&#160;</td><td class="fielddoc"><p>The bias magnetic moment term. </p>
+</td></tr>
 </table>
 
 </div>
@@ -218,6 +253,8 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Empty constructor. </p>
 
 </div>
 </div>
@@ -280,10 +317,23 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Filter the input data using Butterworth bandpass filter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>output results </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>input data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pass1</td><td>(optional) first passband frequency [Hz] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pass2</td><td>(optional) second passband frequency [Hz] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pole</td><td>(optional) number of poles for Butterworth filter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trim</td><td>(optional) number of elements to trim after filtering </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a404908081d42c7ccad7208dda1d1ce7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a404908081d42c7ccad7208dda1d1ce7b">&#9670;&nbsp;</a></span>createCoeff()</h2>
+<a id="a370a974f2d883471a9c3183f2e0d48cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370a974f2d883471a9c3183f2e0d48cf">&#9670;&nbsp;</a></span>createCoeff()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,13 +414,7 @@ Private Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>trim</em> = <code>20</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>Bt_scale</em> = <code>50000.0</code>&#160;</td>
+          <td class="paramname"><em>trim</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -379,6 +423,20 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Create Tolles-Lawson coefficients using vector and scalar magnetometer measurements with or without a bandpass filter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">TL_beta_</td><td>output Tolles-Lawson coefficients </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Bx,By,Bz</td><td>sequences of the triaxial compoenents of the magnetic measurements </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Be</td><td>(provided or empty) the baseline earth magnetic field; the band-pass filter is applied if empty </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Bt</td><td>(provided or empty) the magnetic intensities measured by optically pumped magnetometers </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">terms</td><td>(optional) the terms used in TL model coefficients (default: {PERMANENT,INDUCED, EDDY}) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lambda</td><td>\lambda*Identity is added to ATA matrix in the linear regression algorithm </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pass1,pass2,fs,pole,trim</td><td>parameters for the band-pass filter </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -444,10 +502,21 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create component-based Tolles-Lawson coefficients using vector and scalar magnetometer measurements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">TL_beta_</td><td>output Tolles-Lawson coefficients </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Bx,By,Bz</td><td>sequences of the triaxial compoenents of the magnetic measurements </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Bex,Bey,Bez</td><td>the baseline earth magnetic field, represented as triaxial components </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">terms</td><td>(optional) the terms used in TL model coefficients (default: {PERMANENT,INDUCED, EDDY}) </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a9810b4a08cf09238d7a266499f5eeeed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9810b4a08cf09238d7a266499f5eeeed">&#9670;&nbsp;</a></span>createMatrixA()</h2>
+<a id="a6e0f3109be50ef5aa4b9b14d0882533f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e0f3109be50ef5aa4b9b14d0882533f">&#9670;&nbsp;</a></span>createMatrixA()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -486,13 +555,7 @@ Private Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021">TLterm</a>, <a class="el" href="structtl_1_1_tolles_lawson_1_1_hash_t_lterm.html">HashTLterm</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>terms</em> = <code>{<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb">PERMANENT</a>,&#160;<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3">INDUCED</a>,&#160;<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439">EDDY</a>}</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>Bt_scale</em> = <code>50000.0</code>&#160;</td>
+          <td class="paramname"><em>terms</em> = <code>{<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb">PERMANENT</a>,&#160;<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3">INDUCED</a>,&#160;<a class="el" href="classtl_1_1_tolles_lawson.html#a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439">EDDY</a>}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -501,6 +564,17 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Create Tolles-Lawson <code>A</code> matrix using vector magnetometer measurements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">TL_A_</td><td>output Tolles-Lawson <code>A</code> matrix (N*18) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Bx,By,Bz</td><td>sequences of the triaxial compoenents of the magnetic measurements </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Bt</td><td>(provided or empty) the magnetic intensities measured by optically pumped magnetometers </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">terms</td><td>(optional) the terms used in TL model coefficients (default: {PERMANENT,INDUCED, EDDY}) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -548,6 +622,16 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create component-based Tolles-Lawson <code>A</code> matrix using vector magnetometer measurements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">TL_A_</td><td>output Tolles-Lawson <code>A</code> matrix (3N*18) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Bx,By,Bz</td><td>sequences of the triaxial compoenents of the magnetic measurements </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">terms</td><td>(optional) the terms used in TL model coefficients (default: {PERMANENT,INDUCED, EDDY}) </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a14a66249bdce85111bf57819b180ada3"></a>
@@ -573,6 +657,14 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>output degeneration problem to terminal for debugging. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">TL_A</td><td>input TL <code>A</code> matrix </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -615,6 +707,16 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Finite difference method (FDM) on vector of input data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">dif</td><td>output results </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>input data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scheme</td><td>enum paramter to assign a FDM scheme </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -670,6 +772,18 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Linear regression to solve the least-square problem <code>Ax=b</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">coeff</td><td>output model coefficients </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">residual</td><td>output fitting residuals </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bb</td><td>length-<code>N</code> observed data vector </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">AA</td><td><code>N*Nf</code> input data matrix (<code>Nf</code> is number of features) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lambda</td><td>ridge parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="acaa8bca7f18728bd5f3a1031ee22f9ac"></a>
@@ -695,6 +809,14 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Compute the root mean square error given a residual sequence. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">residual</td><td>input residuals </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -743,6 +865,15 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Combine the components into vectors and concatenate them. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>output concatenated vector </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x,y,z</td><td>sequences of triaxial components </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

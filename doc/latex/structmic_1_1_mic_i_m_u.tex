@@ -2,20 +2,28 @@
 \label{structmic_1_1_mic_i_m_u}\index{mic::MicIMU@{mic::MicIMU}}
 
 
+\mbox{\hyperlink{structmic_1_1_mic_i_m_u}{Mic\+I\+MU}} represents the I\+MU measurement data at a time step.  
+
+
+
+
 {\ttfamily \#include $<$mic\+\_\+base.\+h$>$}
 
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{namespacemic_a69568bba90cd9d9877f97729df9f2354}{float64\+\_\+t}} \mbox{\hyperlink{structmic_1_1_mic_i_m_u_aec7a3c5fdf62c71a5435092c8c41c6b8}{time\+\_\+stamp}}
-\item 
+\begin{DoxyCompactList}\small\item\em The timestamp of this I\+MU data. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacemic_a69568bba90cd9d9877f97729df9f2354}{float64\+\_\+t}} \mbox{\hyperlink{structmic_1_1_mic_i_m_u_a80e26b1dee4b8d9a2328390d233ec928}{dt}}
-\item 
+\begin{DoxyCompactList}\small\item\em The time interval between two measurements. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}{vector\+\_\+3f\+\_\+t}} \mbox{\hyperlink{structmic_1_1_mic_i_m_u_a44a24c0d9899f7b3e06a71600cbfee0e}{gyr}}
-\item 
+\begin{DoxyCompactList}\small\item\em The incremental angle (rad). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}{vector\+\_\+3f\+\_\+t}} \mbox{\hyperlink{structmic_1_1_mic_i_m_u_a54dcbde96e1c6ffc18f92c4c4a9ce368}{acc}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The incremental velocity (m/s). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{structmic_1_1_mic_i_m_u}{Mic\+I\+MU}} represents the I\+MU measurement data at a time step. 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{structmic_1_1_mic_i_m_u_a54dcbde96e1c6ffc18f92c4c4a9ce368}\label{structmic_1_1_mic_i_m_u_a54dcbde96e1c6ffc18f92c4c4a9ce368}} 
@@ -24,11 +32,19 @@
 \doxysubsubsection{\texorpdfstring{acc}{acc}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}{vector\+\_\+3f\+\_\+t}} mic\+::\+Mic\+I\+M\+U\+::acc}
 
+
+
+The incremental velocity (m/s). 
+
 \mbox{\Hypertarget{structmic_1_1_mic_i_m_u_a80e26b1dee4b8d9a2328390d233ec928}\label{structmic_1_1_mic_i_m_u_a80e26b1dee4b8d9a2328390d233ec928}} 
 \index{mic::MicIMU@{mic::MicIMU}!dt@{dt}}
 \index{dt@{dt}!mic::MicIMU@{mic::MicIMU}}
 \doxysubsubsection{\texorpdfstring{dt}{dt}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacemic_a69568bba90cd9d9877f97729df9f2354}{float64\+\_\+t}} mic\+::\+Mic\+I\+M\+U\+::dt}
+
+
+
+The time interval between two measurements. 
 
 \mbox{\Hypertarget{structmic_1_1_mic_i_m_u_a44a24c0d9899f7b3e06a71600cbfee0e}\label{structmic_1_1_mic_i_m_u_a44a24c0d9899f7b3e06a71600cbfee0e}} 
 \index{mic::MicIMU@{mic::MicIMU}!gyr@{gyr}}
@@ -36,11 +52,19 @@
 \doxysubsubsection{\texorpdfstring{gyr}{gyr}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}{vector\+\_\+3f\+\_\+t}} mic\+::\+Mic\+I\+M\+U\+::gyr}
 
+
+
+The incremental angle (rad). 
+
 \mbox{\Hypertarget{structmic_1_1_mic_i_m_u_aec7a3c5fdf62c71a5435092c8c41c6b8}\label{structmic_1_1_mic_i_m_u_aec7a3c5fdf62c71a5435092c8c41c6b8}} 
 \index{mic::MicIMU@{mic::MicIMU}!time\_stamp@{time\_stamp}}
 \index{time\_stamp@{time\_stamp}!mic::MicIMU@{mic::MicIMU}}
 \doxysubsubsection{\texorpdfstring{time\_stamp}{time\_stamp}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacemic_a69568bba90cd9d9877f97729df9f2354}{float64\+\_\+t}} mic\+::\+Mic\+I\+M\+U\+::time\+\_\+stamp}
+
+
+
+The timestamp of this I\+MU data. 
 
 
 

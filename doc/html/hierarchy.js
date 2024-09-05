@@ -11,7 +11,6 @@ var hierarchy =
     [ "MicDataStorer< mic_nav_state_t, mic_imu_t, mic_gnss_t >", "class_mic_data_storer.html", null ],
     [ "mic::MicGNSS", "structmic_1_1_mic_g_n_s_s.html", null ],
     [ "mic::MicIMU", "structmic_1_1_mic_i_m_u.html", null ],
-    [ "mic::MicIMUError", "structmic_1_1_mic_i_m_u_error.html", null ],
     [ "MicLogger", "class_mic_logger.html", [
       [ "MicBashFileLogger", "class_mic_bash_file_logger.html", null ],
       [ "MicBashPrinter", "class_mic_bash_printer.html", null ],

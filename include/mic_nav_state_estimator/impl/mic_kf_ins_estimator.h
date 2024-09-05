@@ -31,13 +31,26 @@ MIC_NAMESPACE_START
 class MicKFINSEstimator;
 using mic_kf_ins_estimator_t = MicKFINSEstimator;
 
+/** \brief @b MicKFINSEstimator provides a Kalman filter-based implementation
+ *  of the state estimation algorithm.
+ *
+ * \author Qinxuan Sun, Yansong Gong
+ * \ingroup compensation
+ */
 class MicKFINSEstimator : public MicNavStateEstimator
 {
 public:
+    /** \brief Empty constructor. */
     MicKFINSEstimator() = default;
+    /** \brief destructor. */
     virtual ~MicKFINSEstimator() = default;
 
 protected:
+    /** \brief (TODO) Implementing the Kalman filter-based navigation state estimation algorithm.
+     * \param[in] ts the timestamp of the added data
+     * \param[in] imu_data the IMU data used to update the state
+     * \param[out] nav_state output the updated navigation state
+     */
     virtual ret_t update(
         const float64_t ts,
         const mic_imu_t &imu_data,

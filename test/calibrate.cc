@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <fstream>
 #include <ctime>
 #include <gflags/gflags.h>
@@ -28,12 +29,24 @@ int main(int argc, char *argv[])
     mic_logger_t::set_log_level(
         static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
 
+    istringstream iss(FLAGS_file);
+    string token, token2;
+    getline(iss, token, '_');
+    // cout << token << endl;
+    getline(iss, token, '.');
+    // cout << token << endl;
+    getline(iss, token2, '.');
+    // cout << token2 << endl;
+    // string name = "./mic_model_" + FLAGS_model + "_" + token + "_" + token2 + ".mdl";
+    // cout << name << endl;
+    // return 0;
+
     mic_mag_compensator_shared_ptr mag_compensator_ptr;
     if ("tl" == FLAGS_model)
     {
         mag_compensator_ptr = std::make_shared<mic_tl_mag_compensator_t>();
     }
-    else if("tlc"==FLAGS_model)
+    else if ("tlc" == FLAGS_model)
     {
         mag_compensator_ptr = std::make_shared<mic_tl_component_mag_compensator_t>();
     }
@@ -54,14 +67,16 @@ int main(int argc, char *argv[])
     auto comp_logger = std::make_shared<mic_state_logger_t>();
     mag_compensator_ptr->subscrible(comp_logger);
 
-    if(load_data(FLAGS_file,mag_compensator_ptr)==ret_t::MIC_RET_FAILED)
+    if (load_data(FLAGS_file, mag_compensator_ptr) == ret_t::MIC_RET_FAILED)
     {
         MIC_LOG_ERR("failed to load data file %s", FLAGS_file);
         return -1;
     }
 
     mag_compensator_ptr->calibrate();
-    mag_compensator_ptr->save_model("./mic_model_" + FLAGS_model + ".mdl");
+
+    string name = "./mic_model_" + FLAGS_model + "_" + token + "_" + token2 + ".mdl";
+    mag_compensator_ptr->save_model(name);
 
     google::ShutDownCommandLineFlags();
     return 0;

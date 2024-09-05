@@ -2,7 +2,6 @@ var mic__base_8h =
 [
     [ "MicMag", "structmic_1_1_mic_mag.html", "structmic_1_1_mic_mag" ],
     [ "MicIMU", "structmic_1_1_mic_i_m_u.html", "structmic_1_1_mic_i_m_u" ],
-    [ "MicIMUError", "structmic_1_1_mic_i_m_u_error.html", "structmic_1_1_mic_i_m_u_error" ],
     [ "MicGNSS", "structmic_1_1_mic_g_n_s_s.html", "structmic_1_1_mic_g_n_s_s" ],
     [ "MicNavState", "structmic_1_1_mic_nav_state.html", "structmic_1_1_mic_nav_state" ],
     [ "false", "mic__base_8h.html#a65e9886d74aaee76545e83dd09011727", null ],
@@ -15,7 +14,6 @@ var mic__base_8h =
     [ "matrix_3f_t", "mic__base_8h.html#a178d689da0f2e3ad98519189669a5081", null ],
     [ "matrix_xf_t", "mic__base_8h.html#a8646bb88af061308e151becb8fd1ce73", null ],
     [ "mic_gnss_t", "mic__base_8h.html#a856314995815ed60694bae2f1184e62a", null ],
-    [ "mic_imu_error_t", "mic__base_8h.html#abe200918ad9019eba5c3596afec877d7", null ],
     [ "mic_imu_t", "mic__base_8h.html#a61f28ac713e0c75474c43122ac094545", null ],
     [ "mic_mag_t", "mic__base_8h.html#ad96d9b6c530f27255442a332ca56d490", null ],
     [ "mic_nav_state_t", "mic__base_8h.html#acfe40fd3b45fa08a3118ed800dd45927", null ],
