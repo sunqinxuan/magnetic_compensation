@@ -29,7 +29,7 @@ MicMagCompensator::MicMagCompensator()
 {
     // init_nav_state_estimator();
     _state = mic_state_t::MIC_MAG_COMPENSATE_UNCALIBRATED;
-    _version = "0.0.1";
+    _version = "0.1.0";
 }
 
 MicMagCompensator::~MicMagCompensator()

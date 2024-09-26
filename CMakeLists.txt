@@ -103,9 +103,15 @@ target_link_libraries(mic_compensate
     magnetic_compensation ${DEPEND_LIBS} -pthread
 )
 
+add_executable(mic_test test/test.cc)
+target_compile_options(mic_test PRIVATE -std=c++11)
+target_link_libraries(mic_test
+    magnetic_compensation ${DEPEND_LIBS} -pthread
+)
+
 install(
     TARGETS
-    mic_calibrate mic_compensate
+    mic_calibrate mic_compensate mic_test
     DESTINATION
     ${INSTALL_BIN}
 )
@@ -127,6 +133,8 @@ install(
 
 install(
     TARGETS
+    tolles-lawson
+    kf-gins
     magnetic_compensation
     DESTINATION
     ${INSTALL_LIB}

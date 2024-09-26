@@ -124,9 +124,34 @@ public:
         return dcm;
     }
 
+    // navigation frame: east-north-up
+    // body frame: left-back-up
+    static matrix_3f_t euler2dcm2(float32_t roll, float32_t pitch, float32_t yaw)
+    {
+        float32_t cr = cos(roll);
+        float32_t sr = sin(roll);
+        float32_t cp = cos(pitch);
+        float32_t sp = sin(pitch);
+        float32_t cy = cos(yaw);
+        float32_t sy = sin(yaw);
+
+        matrix_3f_t dcm = matrix_3f_t::Zero();
+        dcm(0, 0) = cy * cr - sy * sp * sr;
+        dcm(0, 1) = -cp * sy;
+        dcm(0, 2) = cy * sr + cr * sy * sp;
+        dcm(1, 0) = cr * sy + cy * sp * sr;
+        dcm(1, 1) = cy * cp;
+        dcm(1, 2) = sy * sr - cy * cr * sp;
+        dcm(2, 0) = -cp * sr;
+        dcm(2, 1) = sp;
+        dcm(2, 2) = cp * cr;
+
+        return dcm;
+    }
+
     static float32_t deg2rad(float32_t deg)
     {
-        return deg*MIC_PI/180.0;
+        return deg * MIC_PI / 180.0;
     }
 };
 

@@ -109,11 +109,15 @@ ret_t load_data(std::string file_name, mic_mag_compensator_shared_ptr mag_compen
         mic_mag_t mag, mag_truth;
         mic_nav_state_t nav_state;
         nav_state.time_stamp = ts;
-        nav_state.attitude = quaternionf_t(
-            MicUtils::euler2dcm(
-                MicUtils::deg2rad(ins_roll),
-                MicUtils::deg2rad(ins_pitch),
-                MicUtils::deg2rad(ins_yaw)));
+        matrix_3f_t R_NE;
+        R_NE << 0, 1, 0,
+            1, 0, 0,
+            0, 0, -1;
+        nav_state.attitude = quaternionf_t(R_NE *
+                                           MicUtils::euler2dcm2(
+                                               MicUtils::deg2rad(ins_roll),
+                                               MicUtils::deg2rad(ins_pitch),
+                                               MicUtils::deg2rad(ins_yaw)));
         mag.time_stamp = ts;
         mag.vector << flux_x, flux_y, flux_z;
         mag.value = op_value;

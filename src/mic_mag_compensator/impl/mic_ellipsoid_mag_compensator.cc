@@ -92,8 +92,22 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
         MIC_LOG_DEBUG_INFO("%f", ellipsoid_coeffs[i]);
     }
 
+    // ofstream fp("debug.txt");
+    // for (auto it = mag_n_value.begin(); it != mag_n_value.end(); ++it)
+    // {
+    //     fp << *it << endl;
+    // }
+    // fp.close();
+
     // double mag_earth_intensity = 54093.9956380105; // nT
-    double mag_earth_intensity = std::accumulate(mag_n_value.begin(), mag_n_value.end(), 0);
+    // double mag_earth_intensity = std::accumulate(mag_n_value.begin(), mag_n_value.end(), 0);
+    double mag_earth_intensity = 0;
+    for (auto it = mag_n_value.begin(); it != mag_n_value.end(); ++it)
+    {
+        mag_earth_intensity += *it;
+    }
+    // cout << "std::accumulate = " << mag_earth_intensity << endl;
+    // cout << "mag_n_value.size() = " << mag_n_value.size() << endl;
     mag_earth_intensity /= mag_n_value.size();
     // = MIC_CONFIG_GET(float64_t, "mag_earth_intensity");
     MIC_LOG_DEBUG_INFO("mag_earth_intensity = %f", mag_earth_intensity);
@@ -138,6 +152,7 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     if (R_hat.determinant() > 0)
     {
         quat = quaternionf_t(R_hat);
+        // quat = quaternionf_t(matrix_3f_t::Identity());
         if (ceres_optimize(mag_vec, R_nb, _D_tilde_inv, _o_hat, quat) == ret_t::MIC_RET_FAILED)
         {
             MIC_LOG_ERR("failed to get R_opt by ceres optimization!");
@@ -171,6 +186,7 @@ ret_t MicEllipsoidMagCompensator::do_compenste(const float64_t ts, mic_mag_t &ou
     _mag_measure_storer.get_data<mic_mag_t>(ts, in);
 
     out.vector = matrix * (in.vector - offset);
+    out.value = out.vector.norm();
     notify(*this);
     return ret_t::MIC_RET_SUCCESSED;
 }
