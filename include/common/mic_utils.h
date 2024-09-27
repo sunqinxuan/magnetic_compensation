@@ -101,7 +101,7 @@ public:
     **Returns:**
     - `dcm`: `3` x `3` direction cosine matrix [-]
     */
-    static matrix_3f_t euler2dcm(float32_t roll, float32_t pitch, float32_t yaw)
+    static matrix_3f_t euler2dcm(float32_t roll, float32_t pitch, float32_t yaw, std::string type = "ZYX")
     {
         float32_t cr = cos(roll);
         float32_t sr = sin(roll);
@@ -111,15 +111,36 @@ public:
         float32_t sy = sin(yaw);
 
         matrix_3f_t dcm = matrix_3f_t::Zero();
-        dcm(0, 0) = cp * cy;
-        dcm(0, 1) = -cr * sy + sr * sp * cy;
-        dcm(0, 2) = sr * sy + cr * sp * cy;
-        dcm(1, 0) = cp * sy;
-        dcm(1, 1) = cr * cy + sr * sp * sy;
-        dcm(1, 2) = -sr * cy + cr * sp * sy;
-        dcm(2, 0) = -sp;
-        dcm(2, 1) = sr * cp;
-        dcm(2, 2) = cr * cp;
+        if (type == "ZYX")
+        {
+            dcm(0, 0) = cp * cy;
+            dcm(0, 1) = -cr * sy + sr * sp * cy;
+            dcm(0, 2) = sr * sy + cr * sp * cy;
+            dcm(1, 0) = cp * sy;
+            dcm(1, 1) = cr * cy + sr * sp * sy;
+            dcm(1, 2) = -sr * cy + cr * sp * sy;
+            dcm(2, 0) = -sp;
+            dcm(2, 1) = sr * cp;
+            dcm(2, 2) = cr * cp;
+            printf("ZYX");
+        }
+        else if (type == "ZXY")
+        {
+            dcm(0, 0) = cy * cr - sy * sp * sr;
+            dcm(0, 1) = -cp * sy;
+            dcm(0, 2) = cy * sr + cr * sy * sp;
+            dcm(1, 0) = cr * sy + cy * sp * sr;
+            dcm(1, 1) = cy * cp;
+            dcm(1, 2) = sy * sr - cy * cr * sp;
+            dcm(2, 0) = -cp * sr;
+            dcm(2, 1) = sp;
+            dcm(2, 2) = cp * cr;
+            printf("ZXY");
+        }
+        else
+        {
+            printf("function euler2dcm gets wrong type input!");
+        }
 
         return dcm;
     }

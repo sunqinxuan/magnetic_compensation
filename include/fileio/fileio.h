@@ -80,6 +80,9 @@ ret_t load_data(std::string file_name, mic_mag_compensator_shared_ptr mag_compen
         return ret_t::MIC_RET_FAILED;
     }
 
+    std::string nav_frame = MIC_CONFIG_GET(std::string, "navigation_frame");
+    std::string euler_seq = MIC_CONFIG_GET(std::string, "euler_angle_sequence");
+
     while (true)
     {
         // float64_t ts, op_value, flux_x, flux_y, flux_z,
@@ -109,15 +112,18 @@ ret_t load_data(std::string file_name, mic_mag_compensator_shared_ptr mag_compen
         mic_mag_t mag, mag_truth;
         mic_nav_state_t nav_state;
         nav_state.time_stamp = ts;
-        matrix_3f_t R_NE;
-        R_NE << 0, 1, 0,
-            1, 0, 0,
-            0, 0, -1;
-        nav_state.attitude = quaternionf_t(R_NE *
-                                           MicUtils::euler2dcm2(
+        matrix_3f_t rotation2NED = matrix_3f_t::Identity();
+        if (nav_frame == "ENU")
+        {
+            rotation2NED << 0, 1, 0,
+                1, 0, 0,
+                0, 0, -1;
+        }
+        nav_state.attitude = quaternionf_t(rotation2NED *
+                                           MicUtils::euler2dcm(
                                                MicUtils::deg2rad(ins_roll),
                                                MicUtils::deg2rad(ins_pitch),
-                                               MicUtils::deg2rad(ins_yaw)));
+                                               MicUtils::deg2rad(ins_yaw), euler_seq));
         mag.time_stamp = ts;
         mag.vector << flux_x, flux_y, flux_z;
         mag.value = op_value;

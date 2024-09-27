@@ -1,5 +1,7 @@
 {
     "log_level": 2, // 0: no log; 1: basic; 2: debug
     "time_sync_tolerance": 0.05, //second
-    "data_remain_time": 1000000.0 //second
+    "data_remain_time": 1000000.0, //second
+    "navigation_frame": "ENU", // NED, ENU
+    "euler_angle_sequence": "ZXY" // ZYX, ZXY
 }
