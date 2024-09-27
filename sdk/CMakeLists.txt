@@ -23,6 +23,7 @@ set(INSTALL_DIR "${CMAKE_HOME_DIRECTORY}/install")
 set(INSTALL_BIN "${INSTALL_DIR}/bin")
 set(INSTALL_ETC "${INSTALL_DIR}/etc")
 set(INSTALL_LIB "${INSTALL_DIR}/lib")
+set(INSTALL_MDL "${INSTALL_DIR}/models")
 
 set(CMAKE_INSTALL_PREFIX ${INSTALL_DIR})
 #####################################################################################
@@ -70,4 +71,13 @@ install(
     ${SDK_LIBS}
     DESTINATION
     ${INSTALL_LIB}
+)
+
+file(GLOB MIC_MODELS ${CMAKE_HOME_DIRECTORY}/models/*.mdl)
+
+install(
+    FILES
+    ${MIC_MODELS}
+    DESTINATION
+    ${INSTALL_MDL}
 )

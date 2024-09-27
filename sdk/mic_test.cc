@@ -1,21 +1,20 @@
 #include <iostream>
-#include <fstream>
-#include <ctime>
-#include <gflags/gflags.h>
+#include <string>
 #include "api/mic_compensation_api.h"
 
 using namespace mic;
 using namespace std;
 
-DEFINE_string(modelfile, "mic_model.mdl", "model file");
-
 int main(int argc, char *argv[])
 {
-    google::ParseCommandLineFlags(&argc, &argv, true);
-
+    std::string model_file = "./models/mic_model.mdl";
+    if (argc >= 2)
+    {
+        model_file = argv[1];
+    }
     // 初始化补偿器，输入补偿模型文件
-    mic_init_worker("ellipsoid", FLAGS_modelfile);
-    cout << "model: " << FLAGS_modelfile << endl;
+    mic_init_worker("ellipsoid", model_file);
+    cout << "model: " << model_file << endl;
 
     // ts: 时间戳，单位s
     float64_t ts = 24000.000000;
@@ -40,6 +39,5 @@ int main(int argc, char *argv[])
     std::cout << " - real-time compensation: " << std::fixed
               << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
 
-    google::ShutDownCommandLineFlags();
     return 0;
 }
