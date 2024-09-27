@@ -36,7 +36,7 @@ fi
 ln -vsf $curr_dir/install/lib $curr_dir/sdk/lib
 
 cd $curr_dir
-tar -czvhf $curr_dir/mic_sdk.tar.gz $curr_dir/sdk/
+tar -czvhf $curr_dir/mic_sdk.tar.gz sdk/
 
 echo "TEST SDK COMPILING!"
 
