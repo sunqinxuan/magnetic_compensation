@@ -113,6 +113,8 @@ public:
      */
     ret_t save_model(const std::string filename);
 
+    void setFlag(){flag=true;}
+
 protected:
     virtual ret_t do_calibrate() = 0;
     virtual ret_t do_compenste(
@@ -134,6 +136,8 @@ protected:
     mic_state_t _state;
     
     std::string _version;
+
+    bool_t flag;
 };
 
 MIC_NAMESPACE_END

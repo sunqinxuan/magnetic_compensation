@@ -122,7 +122,7 @@ public:
             dcm(2, 0) = -sp;
             dcm(2, 1) = sr * cp;
             dcm(2, 2) = cr * cp;
-            printf("ZYX");
+            // printf("ZYX");
         }
         else if (type == "ZXY")
         {
@@ -135,7 +135,7 @@ public:
             dcm(2, 0) = -cp * sr;
             dcm(2, 1) = sp;
             dcm(2, 2) = cp * cr;
-            printf("ZXY");
+            // printf("ZXY");
         }
         else
         {

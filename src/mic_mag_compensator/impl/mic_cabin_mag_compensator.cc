@@ -103,13 +103,14 @@ ret_t MicCabinMagCompensator::do_calibrate()
     ofstream fp_R("R_hat.txt");
     fp_R << fixed << R_hat;
     fp_R.close();
-    cout << "R_hat = " << endl
-         << R_hat << endl;
+    // cout << "R_hat = " << endl
+    //      << R_hat << endl;
 
     quaternionf_t quat;
     if (R_hat.determinant() > 0)
     {
-        quat = quaternionf_t(R_hat);
+        // quat = quaternionf_t(R_hat);
+        quat = quaternionf_t(matrix_3f_t::Identity());
         if (ceres_optimize(mag_vec, mag_n_vec, _D_tilde_inv, _o_hat, quat) == ret_t::MIC_RET_FAILED)
         {
             MIC_LOG_ERR("failed to get R_opt by ceres optimization!");
@@ -118,8 +119,8 @@ ret_t MicCabinMagCompensator::do_calibrate()
 
         // debug
         _R_opt = quat.toRotationMatrix();
-        cout << "R_opt = " << endl
-             << _R_opt << endl;
+        // cout << "R_opt = " << endl
+        //      << _R_opt << endl;
         ofstream fp_R("R_opt.txt");
         fp_R << fixed << _R_opt;
         fp_R.close();
@@ -213,6 +214,15 @@ ret_t MicCabinMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
 
 ret_t MicCabinMagCompensator::serialize(json_t &node)
 {
+    cout << fixed << std::setprecision(2);
+    cout << "calibrated model coefficients:\n\n"
+         << "coeff_D: \n"
+         << _D_tilde_inv.inverse() << endl
+         << endl;
+    cout << "coeff_o: \n"
+         << _o_hat.transpose() << endl
+         << endl;
+
     std::vector<double> D(9), R(9), o(3);
     for (int i = 0; i < 3; i++)
     {
@@ -330,13 +340,13 @@ ret_t MicCabinMagCompensator::ceres_optimize(
 
     ceres::Solver::Summary summary;
     ceres::Solver::Options options;
-    options.max_num_iterations = 10;
+    options.max_num_iterations = 50;
     options.linear_solver_type = ceres::SPARSE_NORMAL_CHOLESKY;
     options.trust_region_strategy_type = ceres::LEVENBERG_MARQUARDT;
     options.minimizer_progress_to_stdout = true;
 
     ceres::Solve(options, &problem, &summary);
-    std::cout << summary.FullReport() << std::endl;
+    std::cout << summary.BriefReport() << std::endl;
 
     if (summary.IsSolutionUsable())
         return ret_t::MIC_RET_SUCCESSED;

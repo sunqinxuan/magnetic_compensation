@@ -25,6 +25,7 @@
 #include <Eigen/Eigenvalues>
 #include <Eigen/Dense>
 #include <ceres/ceres.h>
+#include <iomanip>
 #include "mic_mag_compensator/mic_mag_compensator.h"
 
 MIC_NAMESPACE_START
@@ -84,10 +85,10 @@ private:
     vector_3f_t mag_r_, mag_c_;
 };
 
-/** \brief MicEllipsoidMagCompensator is a magnetic compensation algorithm based on 
+/** \brief MicEllipsoidMagCompensator is a magnetic compensation algorithm based on
  * the ellipsoid fitting and orientation estimation.
- * 
- * The corresponding compensation algorithm is originally proposed by Qinxuan Sun 
+ *
+ * The corresponding compensation algorithm is originally proposed by Qinxuan Sun
  * in https://sunqinxuan.github.io/projects/2024-07-09-compensation.
  *
  * \code
@@ -105,7 +106,7 @@ class MicEllipsoidMagCompensator : public MicMagCompensator
 {
 public:
     /** \brief Empty constructor. */
-    MicEllipsoidMagCompensator() : MicMagCompensator() {}
+    MicEllipsoidMagCompensator() : MicMagCompensator() {flag=false;}
 
     /** \brief destructor. */
     virtual ~MicEllipsoidMagCompensator() = default;
@@ -173,7 +174,7 @@ protected:
         vector_3f_t &o_hat);
 
     /** \brief Optimize the model parameters R=V*R^{mb} using Ceres library.
-     * \param[in] mag magnetic measurements 
+     * \param[in] mag magnetic measurements
      * \param[in] R_nb rotations from body frame to navigation frame (from ins)
      * \param[in] D_tilde_inv, o_hat model coefficients
      * \param[out] quat the output quaternion corresponding to the orthogonal matrix R=V*R^{mb}
