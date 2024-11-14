@@ -145,14 +145,14 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     ofstream fp_R("R_hat.txt");
     fp_R << fixed << R_hat;
     fp_R.close();
-    // cout << "R_hat = " << endl
-    //      << R_hat << endl;
+    cout << "R_hat = " << endl
+         << R_hat << endl;
 
     quaternionf_t quat;
     if (R_hat.determinant() > 0)
     {
-        // quat = quaternionf_t(R_hat);
-        quat = quaternionf_t(matrix_3f_t::Identity());
+        quat = quaternionf_t(R_hat);
+        // quat = quaternionf_t(matrix_3f_t::Identity());
         if (ceres_optimize(mag_vec, R_nb, _D_tilde_inv, _o_hat, quat) == ret_t::MIC_RET_FAILED)
         {
             MIC_LOG_ERR("failed to get R_opt by ceres optimization!");
@@ -161,8 +161,8 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
 
         // debug
         _R_opt = quat.toRotationMatrix();
-        // cout << "R_opt = " << endl
-        //      << _R_opt << endl;
+        cout << "R_opt = " << endl
+             << _R_opt << endl;
         ofstream fp_R("R_opt.txt");
         fp_R << fixed << _R_opt;
         fp_R.close();
@@ -194,19 +194,20 @@ ret_t MicEllipsoidMagCompensator::do_compenste(const float64_t ts, mic_mag_t &ou
 ret_t MicEllipsoidMagCompensator::serialize(json_t &node)
 {
     matrix_3f_t coeff_D;
-    if(flag)
+    if (flag)
     {
-        coeff_D<<-0.21, -0.23, 0.79, 0.66, 0.61, 0.28, -0.60, 0.65, 0.00;
+        coeff_D << -0.21, -0.23, 0.79, 0.66, 0.61, 0.28, -0.60, 0.65, 0.00;
     }
     else
     {
-        coeff_D=_D_tilde_inv.inverse();
+        coeff_D = _D_tilde_inv.inverse();
     }
-    
+
     cout << fixed << std::setprecision(2);
     cout << "calibrated model coefficients:\n\n"
-         << "coeff_D: \n"<<coeff_D<<endl
-        //  << _D_tilde_inv.inverse() << endl
+         << "coeff_D: \n"
+         << coeff_D << endl
+         //  << _D_tilde_inv.inverse() << endl
          << endl;
     cout << "coeff_o: \n"
          << _o_hat.transpose() << endl
@@ -406,11 +407,25 @@ ret_t MicEllipsoidMagCompensator::ceres_optimize(
     ceres::LocalParameterization *quat_param =
         new ceres::EigenQuaternionParameterization;
 
-    for (size_t k = 0; k < mag.size() - 1; ++k)
+    // for (size_t k = 0; k < mag.size() - 1; ++k)
+    // {
+    //     vector_3f_t mag_r = mag[k + 1];
+    //     vector_3f_t mag_c = mag[k];
+    //     matrix_3f_t rot_rc = R_nb[k + 1].transpose() * R_nb[k];
+
+    //     ceres::CostFunction *cost_function = CostFunctionCreator::Create(
+    //         D_tilde_inv, o_hat, rot_rc, mag_r, mag_c);
+
+    //     problem.AddResidualBlock(cost_function, loss_function, quat.coeffs().data());
+    //     problem.SetParameterization(quat.coeffs().data(), quat_param);
+    // }
+
+    int offset = 1000;
+    for (size_t k = 0; k < mag.size() - offset; ++k)
     {
-        vector_3f_t mag_r = mag[k + 1];
+        vector_3f_t mag_r = mag[k + offset];
         vector_3f_t mag_c = mag[k];
-        matrix_3f_t rot_rc = R_nb[k + 1].transpose() * R_nb[k];
+        matrix_3f_t rot_rc = R_nb[k + offset].transpose() * R_nb[k];
 
         ceres::CostFunction *cost_function = CostFunctionCreator::Create(
             D_tilde_inv, o_hat, rot_rc, mag_r, mag_c);
@@ -438,7 +453,8 @@ ret_t MicEllipsoidMagCompensator::ceres_optimize(
     options.minimizer_progress_to_stdout = true;
 
     ceres::Solve(options, &problem, &summary);
-    std::cout << summary.BriefReport() << std::endl;
+    // std::cout << summary.BriefReport() << std::endl;
+    std::cout << summary.FullReport() << std::endl;
 
     if (summary.IsSolutionUsable())
         return ret_t::MIC_RET_SUCCESSED;

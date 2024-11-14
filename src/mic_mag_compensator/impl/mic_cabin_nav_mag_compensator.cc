@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#include "mic_mag_compensator/impl/mic_cabin_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_cabin_nav_mag_compensator.h"
 
 // debug
 #include <iostream>
@@ -28,12 +28,12 @@ using namespace std;
 
 MIC_NAMESPACE_START
 
-MicCabinMagCompensator::MicCabinMagCompensator() : MicMagCompensator()
+MicCabinNavMagCompensator::MicCabinNavMagCompensator() : MicMagCompensator()
 {
     _mag_ellipsoid_ptr = std::make_shared<mic_ellipsoid_mag_compensator_t>();
 }
 
-ret_t MicCabinMagCompensator::do_calibrate()
+ret_t MicCabinNavMagCompensator::do_calibrate()
 {
     auto data_range = _mag_measure_storer.get_data_range<mic_mag_t>(0.0, _curr_time_stamp + 1);
     auto it_start = data_range.first;
@@ -41,33 +41,39 @@ ret_t MicCabinMagCompensator::do_calibrate()
 
     std::vector<vector_3f_t> mag_vec, mag_n_vec;
     std::vector<float64_t> mag_n_value;
+    std::vector<matrix_3f_t> R_nb;
     for (auto it = it_start; it != it_end; ++it)
     {
         float64_t ts = it->first;
         mic_mag_t mag = it->second;
         mic_nav_state_t nav_state;
         mic_mag_t mag_truth;
-        // if (_mag_measure_storer.get_data<mic_nav_state_t>(ts, nav_state) &&
-        if (_mag_truth_storer.get_data<mic_mag_t>(ts, mag_truth))
+        if (_mag_measure_storer.get_data<mic_nav_state_t>(ts, nav_state) && _mag_truth_storer.get_data<mic_mag_t>(ts, mag_truth))
         {
             mag_vec.push_back(mag.vector);
             // mag_n_vec.push_back(nav_state.attitude.matrix().transpose() * mag_truth.vector);
             mag_n_vec.push_back(mag_truth.vector);
             mag_n_value.push_back(mag_truth.value);
+            R_nb.push_back(nav_state.attitude.matrix());
         }
     }
     if (mag_vec.size() < 20)
         return ret_t::MIC_RET_FAILED;
 
     // double mag_earth_intensity = MIC_CONFIG_GET(float64_t, "mag_earth_intensity");
-    double mag_earth_intensity = std::accumulate(mag_n_value.begin(), mag_n_value.end(), 0);
-    mag_earth_intensity /= mag_n_value.size();
-    double mag_sum = 0;
-    for (size_t i = 0; i < mag_n_vec.size(); ++i)
+    // double mag_earth_intensity = std::accumulate(mag_n_value.begin(), mag_n_value.end(), 0);
+    double mag_earth_intensity = 0;
+    for (auto it = mag_n_value.begin(); it != mag_n_value.end(); ++it)
     {
-        mag_sum += mag_n_vec[i].norm();
+        mag_earth_intensity += *it;
     }
-    mag_earth_intensity = mag_sum / mag_n_vec.size();
+    mag_earth_intensity /= mag_n_value.size();
+    // double mag_sum = 0;
+    // for (size_t i = 0; i < mag_n_vec.size(); ++i)
+    // {
+    //     mag_sum += mag_n_vec[i].norm();
+    // }
+    // mag_earth_intensity = mag_sum / mag_n_vec.size();
     MIC_LOG_DEBUG_INFO("mag_earth_intensity = %f", mag_earth_intensity);
 
     // std::vector<float64_t> ellipsoid_coeffs;
@@ -90,7 +96,7 @@ ret_t MicCabinMagCompensator::do_calibrate()
     for (size_t i = 0; i < N; ++i)
     {
         p_left[i] = _D_tilde_inv * (mag_vec[i] - _o_hat);
-        p_right[i] = mag_n_vec[i];
+        p_right[i] = R_nb[i].transpose() * mag_n_vec[i];
     }
     // if (init_value_estimate(mag_vec, mag_n_vec, R_nb, _D_tilde_inv, _o_hat, R_hat) == ret_t::MIC_RET_FAILED)
     if (_mag_ellipsoid_ptr->fit_ls_rotation(p_left, p_right, R_hat) == ret_t::MIC_RET_FAILED)
@@ -111,7 +117,7 @@ ret_t MicCabinMagCompensator::do_calibrate()
     {
         // quat = quaternionf_t(R_hat);
         quat = quaternionf_t(matrix_3f_t::Identity());
-        if (ceres_optimize(mag_vec, mag_n_vec, _D_tilde_inv, _o_hat, quat) == ret_t::MIC_RET_FAILED)
+        if (ceres_optimize(mag_vec, mag_n_vec, R_nb, _D_tilde_inv, _o_hat, quat) == ret_t::MIC_RET_FAILED)
         {
             MIC_LOG_ERR("failed to get R_opt by ceres optimization!");
             return ret_t::MIC_RET_FAILED;
@@ -135,7 +141,7 @@ ret_t MicCabinMagCompensator::do_calibrate()
     return ret_t::MIC_RET_SUCCESSED;
 }
 
-ret_t MicCabinMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
+ret_t MicCabinNavMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
 {
     matrix_3f_t matrix = _R_opt.transpose() * _D_tilde_inv;
     vector_3f_t offset = _o_hat;
@@ -148,7 +154,7 @@ ret_t MicCabinMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
     return ret_t::MIC_RET_SUCCESSED;
 }
 
-// ret_t MicCabinMagCompensator::ellipsoid_fit(
+// ret_t MicCabinNavMagCompensator::ellipsoid_fit(
 //     const std::vector<vector_3f_t> &mag,
 //     std::vector<float64_t> &coeffs)
 // {
@@ -212,7 +218,7 @@ ret_t MicCabinMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
 //     return ret_t::MIC_RET_SUCCESSED;
 // }
 
-ret_t MicCabinMagCompensator::serialize(json_t &node)
+ret_t MicCabinNavMagCompensator::serialize(json_t &node)
 {
     cout << fixed << std::setprecision(2);
     cout << "calibrated model coefficients:\n\n"
@@ -239,7 +245,7 @@ ret_t MicCabinMagCompensator::serialize(json_t &node)
     return MicMagCompensator::serialize(node);
 }
 
-ret_t MicCabinMagCompensator::deserialize(json_t &node)
+ret_t MicCabinNavMagCompensator::deserialize(json_t &node)
 {
     std::vector<double> D = node["ellipsoid_model"]["coeff_D_inv"];
     std::vector<double> R = node["ellipsoid_model"]["coeff_R"];
@@ -258,7 +264,7 @@ ret_t MicCabinMagCompensator::deserialize(json_t &node)
     return MicMagCompensator::deserialize(node);
 }
 
-// ret_t MicCabinMagCompensator::compute_model_coeffs(
+// ret_t MicCabinNavMagCompensator::compute_model_coeffs(
 //     const std::vector<float64_t> &ellipsoid_coeffs,
 //     const float64_t mag_earth_intensity,
 //     matrix_3f_t &D_tilde_inv,
@@ -311,9 +317,10 @@ ret_t MicCabinMagCompensator::deserialize(json_t &node)
 //     return ret_t::MIC_RET_SUCCESSED;
 // }
 
-ret_t MicCabinMagCompensator::ceres_optimize(
+ret_t MicCabinNavMagCompensator::ceres_optimize(
     const std::vector<vector_3f_t> &mag,
     const std::vector<vector_3f_t> &mag_1,
+    const std::vector<matrix_3f_t> &R_nb,
     const matrix_3f_t &D_tilde_inv,
     const vector_3f_t &o_hat,
     quaternionf_t &quat)
@@ -331,8 +338,8 @@ ret_t MicCabinMagCompensator::ceres_optimize(
         vector_3f_t mag_r = mag[k];
         vector_3f_t mag_c = mag_1[k];
 
-        ceres::CostFunction *cost_function = CabinCostFunctionCreator::Create(
-            D_tilde_inv, o_hat, mag_r, mag_c);
+        ceres::CostFunction *cost_function = CabinNavCostFunctionCreator::Create(
+            D_tilde_inv, o_hat, R_nb[k].transpose(), mag_r, mag_c);
 
         problem.AddResidualBlock(cost_function, loss_function, quat.coeffs().data());
         problem.SetParameterization(quat.coeffs().data(), quat_param);
@@ -346,8 +353,8 @@ ret_t MicCabinMagCompensator::ceres_optimize(
     options.minimizer_progress_to_stdout = true;
 
     ceres::Solve(options, &problem, &summary);
-    // std::cout << summary.BriefReport() << std::endl;
-    std::cout << summary.FullReport() << std::endl;
+    std::cout << summary.BriefReport() << std::endl;
+    // std::cout << summary.FullReport() << std::endl;
 
     if (summary.IsSolutionUsable())
         return ret_t::MIC_RET_SUCCESSED;
@@ -355,7 +362,7 @@ ret_t MicCabinMagCompensator::ceres_optimize(
         return ret_t::MIC_RET_FAILED;
 }
 
-// ret_t MicCabinMagCompensator::init_value_estimate(
+// ret_t MicCabinNavMagCompensator::init_value_estimate(
 //     const std::vector<vector_3f_t> &mag_m,
 //     const std::vector<vector_3f_t> &mag_n,
 //     const matrix_3f_t &D_tilde_inv,

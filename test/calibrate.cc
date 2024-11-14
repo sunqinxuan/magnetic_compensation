@@ -14,6 +14,7 @@
 #include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_tl_component_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_cabin_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_cabin_nav_mag_compensator.h"
 #include "fileio/fileio.h"
 
 USING_NAMESPACE_MIC;
@@ -32,14 +33,14 @@ int main(int argc, char *argv[])
     mic_logger_t::set_log_level(
         static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
 
-    if(FLAGS_file.substr(0, 3) == "sim")
-    {
-        FLAGS_model="ellipsoid";
-    }
-    else
-    {
-        FLAGS_model="cabin";
-    }
+    // if(FLAGS_file.substr(0, 3) == "sim")
+    // {
+    //     FLAGS_model="ellipsoid";
+    // }
+    // else
+    // {
+    //     FLAGS_model="cabin";
+    // }
 
     mic_mag_compensator_shared_ptr mag_compensator_ptr;
     if ("tl" == FLAGS_model)
@@ -53,14 +54,18 @@ int main(int argc, char *argv[])
     else if ("ellipsoid" == FLAGS_model)
     {
         mag_compensator_ptr = std::make_shared<mic_ellipsoid_mag_compensator_t>();
-        if(FLAGS_file.substr(15,1)=="5")
-        {
-            mag_compensator_ptr->setFlag();
-        }
+        // if(FLAGS_file.substr(15,1)=="5")
+        // {
+        //     mag_compensator_ptr->setFlag();
+        // }
     }
     else if ("cabin" == FLAGS_model)
     {
         mag_compensator_ptr = std::make_shared<mic_cabin_mag_compensator_t>();
+    }
+    else if ("nav" == FLAGS_model)
+    {
+        mag_compensator_ptr = std::make_shared<mic_cabin_nav_mag_compensator_t>();
     }
     else
     {
