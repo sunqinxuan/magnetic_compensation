@@ -21,7 +21,7 @@ USING_NAMESPACE_MIC;
 using namespace std;
 
 DEFINE_string(model, "ellipsoid", "ellipsoid, tl, tlc or cabin");
-DEFINE_string(file, "Flt1002_1002.02.txt", "file to load data");
+DEFINE_string(file, "Flt1006_1006.04.txt", "file to load data");
 DEFINE_string(out, "mic_model.mdl", "file to save compensation model");
 
 int main(int argc, char *argv[])

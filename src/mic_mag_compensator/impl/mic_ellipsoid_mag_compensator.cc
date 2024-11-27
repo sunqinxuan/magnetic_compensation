@@ -420,7 +420,7 @@ ret_t MicEllipsoidMagCompensator::ceres_optimize(
     //     problem.SetParameterization(quat.coeffs().data(), quat_param);
     // }
 
-    int offset = 1000;
+    int offset = 5;
     for (size_t k = 0; k < mag.size() - offset; ++k)
     {
         vector_3f_t mag_r = mag[k + offset];
@@ -453,8 +453,8 @@ ret_t MicEllipsoidMagCompensator::ceres_optimize(
     options.minimizer_progress_to_stdout = true;
 
     ceres::Solve(options, &problem, &summary);
-    // std::cout << summary.BriefReport() << std::endl;
-    std::cout << summary.FullReport() << std::endl;
+    std::cout << summary.BriefReport() << std::endl;
+    // std::cout << summary.FullReport() << std::endl;
 
     if (summary.IsSolutionUsable())
         return ret_t::MIC_RET_SUCCESSED;
