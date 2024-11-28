@@ -141,76 +141,19 @@ ret_t MicCabinMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
     vector_3f_t offset = _o_hat;
 
     mic_mag_t in;
-    _mag_measure_storer.get_data<mic_mag_t>(ts, in);
-
-    out.vector = matrix * (in.vector - offset);
-    notify(*this);
-    return ret_t::MIC_RET_SUCCESSED;
+    if (_mag_measure_storer.get_data<mic_mag_t>(ts, in))
+    {
+        out.vector = matrix * (in.vector - offset);
+        out.value = out.vector.norm();
+        notify(*this);
+        return ret_t::MIC_RET_SUCCESSED;
+    }
+    else
+    {
+        notify(*this);
+        return ret_t::MIC_RET_FAILED;
+    }
 }
-
-// ret_t MicCabinMagCompensator::ellipsoid_fit(
-//     const std::vector<vector_3f_t> &mag,
-//     std::vector<float64_t> &coeffs)
-// {
-//     const int N = mag.size();
-//     if (N < 20)
-//         return ret_t::MIC_RET_FAILED;
-
-//     Eigen::MatrixXd design_matrix(10, N);
-//     for (int i = 0; i < N; i++)
-//     {
-//         design_matrix(0, i) = mag[i](0) * mag[i](0);
-//         design_matrix(1, i) = mag[i](1) * mag[i](1);
-//         design_matrix(2, i) = mag[i](2) * mag[i](2);
-//         design_matrix(3, i) = 2 * mag[i](1) * mag[i](2);
-//         design_matrix(4, i) = 2 * mag[i](0) * mag[i](2);
-//         design_matrix(5, i) = 2 * mag[i](0) * mag[i](1);
-//         design_matrix(6, i) = 2 * mag[i](0);
-//         design_matrix(7, i) = 2 * mag[i](1);
-//         design_matrix(8, i) = 2 * mag[i](2);
-//         design_matrix(9, i) = 1.0;
-//     }
-
-//     const int k = 4;
-
-//     // Eqn(7)
-//     Eigen::Matrix<double, 6, 6> C1;
-//     C1 << -1, 0.5 * k - 1, 0.5 * k - 1, 0, 0, 0, 0.5 * k - 1, -1, 0.5 * k - 1, 0,
-//         0, 0, 0.5 * k - 1, 0.5 * k - 1, -1, 0, 0, 0, 0, 0, 0, -k, 0, 0, 0, 0, 0,
-//         0, -k, 0, 0, 0, 0, 0, 0, -k;
-
-//     // Eqn(11)
-//     Eigen::MatrixXd S = design_matrix * design_matrix.transpose();
-//     Eigen::MatrixXd S11 = S.block(0, 0, 6, 6); // 6X6
-//     Eigen::MatrixXd S12 = S.block(0, 6, 6, 4); // 6X4
-//     Eigen::MatrixXd S21 = S.block(6, 0, 4, 6); // 4X6
-//     Eigen::MatrixXd S22 = S.block(6, 6, 4, 4); // 4X4
-
-//     // Eqn(14) and Eqn(15)
-//     Eigen::MatrixXd M = C1.inverse() * (S11 - S12 * (S22.inverse() * S21));
-//     Eigen::EigenSolver<Eigen::MatrixXd> es_m(M);
-//     Eigen::MatrixXd evec = es_m.eigenvectors().real();
-//     Eigen::VectorXd eval = es_m.eigenvalues().real();
-
-//     // Find the column index of the maximum eigenvalue
-//     int max_column_index;
-//     eval.maxCoeff(&max_column_index);
-
-//     // Get the corresponding eigenvector
-//     Eigen::VectorXd u1 = evec.col(max_column_index);
-//     Eigen::VectorXd u2 = -(S22.inverse() * S21) * u1;
-
-//     // Concatenate u1 and u2 into a single vector u
-//     Eigen::VectorXd u(u1.size() + u2.size());
-//     u << u1, u2;
-
-//     coeffs.resize(u.rows());
-//     for (size_t i = 0; i < u.rows(); ++i)
-//     {
-//         coeffs[i] = u(i);
-//     }
-//     return ret_t::MIC_RET_SUCCESSED;
-// }
 
 ret_t MicCabinMagCompensator::serialize(json_t &node)
 {
@@ -258,59 +201,6 @@ ret_t MicCabinMagCompensator::deserialize(json_t &node)
     return MicMagCompensator::deserialize(node);
 }
 
-// ret_t MicCabinMagCompensator::compute_model_coeffs(
-//     const std::vector<float64_t> &ellipsoid_coeffs,
-//     const float64_t mag_earth_intensity,
-//     matrix_3f_t &D_tilde_inv,
-//     vector_3f_t &o_hat)
-// {
-//     if (ellipsoid_coeffs.size() != 10)
-//         return ret_t::MIC_RET_FAILED;
-
-//     double a = ellipsoid_coeffs[0];
-//     double b = ellipsoid_coeffs[1];
-//     double c = ellipsoid_coeffs[2];
-//     double f = ellipsoid_coeffs[3];
-//     double g = ellipsoid_coeffs[4];
-//     double h = ellipsoid_coeffs[5];
-//     double p = ellipsoid_coeffs[6];
-//     double q = ellipsoid_coeffs[7];
-//     double r = ellipsoid_coeffs[8];
-//     double d = ellipsoid_coeffs[9];
-
-//     matrix_3f_t As_hat;
-//     As_hat << a, h, g, h, b, f, g, f, c;
-//     vector_3f_t bs_hat;
-//     bs_hat << p, q, r;
-//     double cs_hat = d;
-//     // std::cout << "As_hat = " << std::endl
-//     //           << As_hat << std::endl;
-//     // std::cout << "As_hat.inverse() = " << std::endl
-//     //           << As_hat.inverse() << std::endl;
-//     // std::cout << "bs_hat = " << bs_hat.transpose() << std::endl;
-//     // std::cout << "cs_hat = " << cs_hat << std::endl;
-
-//     double den = bs_hat.dot(As_hat.inverse() * bs_hat) - cs_hat;
-//     double alpha = mag_earth_intensity * mag_earth_intensity / den;
-//     // std::cout << "alpha = " << alpha << std::endl;
-
-//     o_hat = -As_hat.inverse() * bs_hat;
-//     // std::cout << "o_hat = " << o_hat.transpose() << std::endl;
-
-//     Eigen::SelfAdjointEigenSolver<matrix_3f_t> es(As_hat);
-//     matrix_3f_t As_evec = es.eigenvectors();
-//     vector_3f_t As_eval = es.eigenvalues(); // increasing order;
-
-//     matrix_3f_t sqrt_As_eval;
-//     sqrt_As_eval << sqrt(fabs(As_eval[0])), 0, 0, 0, sqrt(fabs(As_eval[1])), 0, 0,
-//         0, sqrt(fabs(As_eval[2]));
-
-//     D_tilde_inv = sqrt(fabs(alpha)) * sqrt_As_eval * As_evec.transpose();
-//     // std::cout << "D_tilde_inv = " << std::endl
-//     //           << D_tilde_inv << std::endl;
-//     return ret_t::MIC_RET_SUCCESSED;
-// }
-
 ret_t MicCabinMagCompensator::ceres_optimize(
     const std::vector<vector_3f_t> &mag,
     const std::vector<vector_3f_t> &mag_1,
@@ -354,70 +244,5 @@ ret_t MicCabinMagCompensator::ceres_optimize(
     else
         return ret_t::MIC_RET_FAILED;
 }
-
-// ret_t MicCabinMagCompensator::init_value_estimate(
-//     const std::vector<vector_3f_t> &mag_m,
-//     const std::vector<vector_3f_t> &mag_n,
-//     const matrix_3f_t &D_tilde_inv,
-//     const vector_3f_t &o_hat,
-//     matrix_3f_t &R_hat)
-// {
-//     if (mag_m.size() != mag_n.size() )
-//         return ret_t::MIC_RET_FAILED;
-
-//     const size_t N = mag_m.size();
-//     std::vector<vector_3f_t> p_left(N), p_right(N);
-//     for (size_t i = 0; i < N; ++i)
-//     {
-//         p_left[i] = D_tilde_inv * (mag_m[i] - o_hat);
-//         p_right[i] = mag_n[i];
-//     }
-
-//     vector_3f_t p_left_mean = vector_3f_t::Zero();
-//     vector_3f_t p_right_mean = vector_3f_t::Zero();
-//     for (const auto &vec : p_left)
-//         p_left_mean += vec;
-//     for (const auto &vec : p_right)
-//         p_right_mean += vec;
-//     p_left_mean /= N;
-//     p_right_mean /= N;
-
-//     matrix_3f_t H;
-//     for (size_t i = 0; i < N; ++i)
-//     {
-//         p_left[i] -= p_left_mean;
-//         p_right[i] -= p_right_mean;
-//         H += p_left[i] * p_right[i].transpose();
-//     }
-
-//     Eigen::JacobiSVD<matrix_3f_t> svd(H, Eigen::ComputeFullU | Eigen::ComputeFullV);
-//     matrix_3f_t U = svd.matrixU();
-//     matrix_3f_t S = svd.singularValues().asDiagonal();
-//     matrix_3f_t V = svd.matrixV();
-
-//     R_hat = V * U.transpose();
-
-//     if (R_hat.determinant() < 0)
-//     {
-//         MIC_LOG_DEBUG_INFO("det(R_hat) = %f", R_hat.determinant());
-//         V.block<3, 1>(0, 2) *= -1;
-//         R_hat = V * U.transpose();
-//     }
-
-//     // debug
-//     cout << "Matrix H:\n"
-//          << H << endl;
-//     cout << "\nU Matrix:\n"
-//          << U << endl;
-//     cout << "\nSingular Values (as a diagonal matrix):\n"
-//          << S << endl;
-//     cout << "\nV Matrix:\n"
-//          << V << endl;
-//     matrix_3f_t H_reconstructed = U * S * V.transpose();
-//     cout << "\nReconstructed Matrix (U * S * V^T):\n"
-//          << H_reconstructed << endl;
-
-//     return ret_t::MIC_RET_SUCCESSED;
-// }
 
 MIC_NAMESPACE_END

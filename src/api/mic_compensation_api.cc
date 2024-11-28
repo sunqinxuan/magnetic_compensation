@@ -29,12 +29,14 @@
 #include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_tl_component_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_cabin_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_cabin_nav_mag_compensator.h"
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
 
 namespace mic
 {
 
-    static mic_mag_compensator_shared_ptr _mic_compensator = nullptr;
+    // static mic_mag_compensator_shared_ptr _mic_compensator = nullptr;
+    static std::shared_ptr<mic_cabin_nav_mag_compensator_t> _mic_compensator = nullptr;
 
     static mic_observer_shared_ptr<mic_mag_compensator_t> _mic_logger = nullptr;
 
@@ -53,6 +55,7 @@ namespace mic
 
         // auto comp_method = MIC_CONFIG_GET(std::string, "compensation_method");
 
+        /*
         if ("tl" == model)
         {
             _mic_compensator = std::make_shared<mic_tl_mag_compensator_t>();
@@ -69,11 +72,17 @@ namespace mic
         {
             _mic_compensator = std::make_shared<mic_cabin_mag_compensator_t>();
         }
+        else if ("cabin_nav" == model)
+        {
+            _mic_compensator = std::make_shared<mic_cabin_nav_mag_compensator_t>();
+        }
         else
         {
             MIC_LOG_ERR("[MIC] MIC compensation model is not supported!");
             return ret_t::MIC_RET_FAILED;
         }
+        */
+        _mic_compensator = std::make_shared<mic_cabin_nav_mag_compensator_t>();
 
         auto comp_logger = std::make_shared<mic_state_logger_t>();
         _mic_compensator->subscrible(comp_logger);
@@ -85,9 +94,11 @@ namespace mic
 
     ret_t mic_add_data(
         const double timestamp,
-        const mic_mag_t &mag)
+        const mic_mag_t &mag,
+        const mic_mag_t &mag_truth)
     {
         _mic_compensator->add_data(timestamp, mag);
+        _mic_compensator->add_data_truth(timestamp, mag_truth);
         return ret_t::MIC_RET_SUCCESSED;
     }
 
@@ -100,5 +111,7 @@ namespace mic
         }
         return _mic_compensator->compenste(timestamp, out);
     }
+
+    vector_xf_t mic_get_cov() { return _mic_compensator->get_kf_cov(); }
 
 }

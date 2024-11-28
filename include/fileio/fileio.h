@@ -34,7 +34,7 @@ MIC_NAMESPACE_START
 // data field:
 // time, mag_op, flux_xyz, mag_op_truth, flux_truth_xyz(igrf_ned), ins_pry
 
-ret_t get_line_data(const std::vector<float64_t> &data_line, mic_mag_t &mag)
+ret_t get_line_data(const std::vector<float64_t> &data_line, mic_mag_t &mag, mic_mag_t &mag_truth)
 {
     if (data_line.size() < 5)
     {
@@ -46,10 +46,18 @@ ret_t get_line_data(const std::vector<float64_t> &data_line, mic_mag_t &mag)
     float64_t flux_x = data_line[2];
     float64_t flux_y = data_line[3];
     float64_t flux_z = data_line[4];
+    float64_t op_truth = data_line[5];
+    float64_t flux_x_truth = data_line[6];
+    float64_t flux_y_truth = data_line[7];
+    float64_t flux_z_truth = data_line[8];
 
     mag.time_stamp = ts;
     mag.vector << flux_x, flux_y, flux_z;
     mag.value = op_value;
+
+    mag_truth.time_stamp = ts;
+    mag_truth.vector << flux_x_truth, flux_y_truth, flux_z_truth;
+    mag_truth.value = op_truth;
 
     return ret_t::MIC_RET_SUCCESSED;
 }

@@ -3,5 +3,38 @@
     "time_sync_tolerance": 0.05, //second
     "data_remain_time": 1.0, //second
     "navigation_frame": "ENU", // NED, ENU
-    "euler_angle_sequence": "ZXY" // ZYX, ZXY
+    "euler_angle_sequence": "ZXY", // ZYX, ZXY
+    "KF_init_cov": [
+        10,
+        10,
+        10,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+    ],
+    "KF_state_noise": [
+        0.1,
+        0.1,
+        0.1,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001,
+        0.0001
+    ],
+    "KF_measure_noise": [
+        10,
+        10,
+        10
+    ]
 }

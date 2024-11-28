@@ -35,11 +35,14 @@ namespace mic
 
     ret_t mic_add_data(
         const float64_t timestamp,
-        const mic_mag_t &mag);
+        const mic_mag_t &mag,
+        const mic_mag_t &mag_truth);
 
     ret_t mic_compensate(
         const float64_t timestamp,
         mic_mag_t &out);
+
+    vector_xf_t mic_get_cov();
 
 }
 

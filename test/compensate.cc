@@ -22,8 +22,8 @@ using namespace std;
 
 // DEFINE_string(model, "ellipsoid", "ellipsoid, tl, tlc or cabin");
 // DEFINE_string(modelfile, "mic_model_ellipsoid_1002_02.mdl", "model file");
-DEFINE_string(model, "mic_model_ellipsoid_1002_02.mdl", "model file");
-DEFINE_string(file, "Flt1002_1002.2.txt", "file to load data");
+DEFINE_string(model, "a.mdl", "model file");
+DEFINE_string(file, "Flight8_0909_cabin.txt", "file to load data");
 DEFINE_string(out, "output.txt", "file to output compensation results");
 
 int main(int argc, char *argv[])
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     // initialize the compensator;
     // mic_init_worker(FLAGS_model, "./mic_model_" + FLAGS_model + ".mdl");mic_init_worker(FLAGS_model, "./mic_model_" + FLAGS_model + ".mdl");
     // mic_init_worker(FLAGS_model, "./out/"+FLAGS_modelfile);
-    mic_init_worker("ellipsoid", "./out/" + FLAGS_model);
+    mic_init_worker("cabin_nav", "./out/" + FLAGS_model);
 
     google::CommandLineFlagInfo info;
     GetCommandLineFlagInfo("output", &info);
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     // }
     // else
     // {
-        output_file_name = "./out/" + FLAGS_out;
+    output_file_name = "./out/" + FLAGS_out;
     // }
     MIC_LOG_BASIC_INFO("output file name: %s", output_file_name.c_str());
 
@@ -118,6 +118,8 @@ int main(int argc, char *argv[])
         return -1;
     }
     std::cout << std::endl;
+    int cnt = 0;
+    std::ofstream fp_cov("kf_cov.txt"), fp_error("kf_error.txt");
     while (true)
     {
         // 当前时间
@@ -134,35 +136,47 @@ int main(int argc, char *argv[])
         if (read_line(infile, data_line) == ret_t::MIC_RET_FAILED)
             break;
 
-        mic_mag_t mag;
-        if (get_line_data(data_line, mag) == ret_t::MIC_RET_SUCCESSED)
+        mic_mag_t mag, mag_truth;
+        if (get_line_data(data_line, mag, mag_truth) == ret_t::MIC_RET_SUCCESSED)
         {
             float64_t ts = mag.time_stamp;
-            mic_add_data(ts, mag);
+            mic_add_data(ts, mag, mag_truth);
 
             // do compensation and save results to file;
             mic_mag_t mag_out;
             mic_compensate(ts, mag_out);
             outfile << std::fixed << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
+
+            // std::cout << "\r" << "\033[K";
             // cout << "Real-time compensation: " << std::setw(3) << std::fixed
-            //      << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << "\r" << std::flush;
+            //      << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << yellowText
+            //      << "| Frequency: " << std::fixed << std::setprecision(2)
+            //      << frequency << " Hz" << resetText;
+            // cout.flush();
+            // std::this_thread::sleep_for(milliseconds(1));
 
-            std::cout << "\r" << "\033[K";
-            cout << "Real-time compensation: " << std::setw(3) << std::fixed
-                 << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << yellowText
-                 << "| Frequency: " << std::fixed << std::setprecision(2)
-                 << frequency << " Hz" << resetText;
-            cout.flush();
+            fp_error << fabs(mag_truth.value - mag_out.value) << "\t"
+                     << fabs(mag_truth.vector(0) - mag_out.vector(0)) << "\t"
+                     << fabs(mag_truth.vector(1) - mag_out.vector(1)) << "\t"
+                     << fabs(mag_truth.vector(2) - mag_out.vector(2)) << "\t"
+                     << endl;
 
-            // cout << "Real-time compensation: " << std::setw(3) << std::fixed
-            //      << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << "\033[K" << std::endl;
-            // cout << "Refresh Frequency: " << std::fixed << std::setprecision(2)
-            //      << frequency << " Hz\033[K" << std::flush;
-            // std::cout << "\033[2A"; // 移动光标到两行上方
+            fp_cov << mic_get_cov().transpose() << endl;
 
-            // 每秒刷新一次
-            std::this_thread::sleep_for(milliseconds(1));
+            cnt++;
+            if (cnt % 100 == 0)
+            {
+                cout <<"kf cov\t"<<mic_get_cov().transpose()<<endl;
+                cout << "compensation error\t"
+                     << fabs(mag_truth.value - mag_out.value) << "\t"
+                     << fabs(mag_truth.vector(0) - mag_out.vector(0)) << "\t"
+                     << fabs(mag_truth.vector(1) - mag_out.vector(1)) << "\t"
+                     << fabs(mag_truth.vector(2) - mag_out.vector(2)) << "\t"
+                     << endl
+                     << endl;
+            }
         }
+        // return 0;
     }
     std::cout << std::endl
               << std::endl
@@ -170,6 +184,8 @@ int main(int argc, char *argv[])
               << endl;
     infile.close();
     outfile.close();
+    fp_cov.close();
+    fp_error.close();
 
     cout << "Compensation results saved: " << output_file_name << endl
          << endl;
