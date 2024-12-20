@@ -174,6 +174,18 @@ public:
     {
         return deg * MIC_PI / 180.0;
     }
+
+    static float64_t rmse(const std::vector<float64_t> &error)
+    {
+        int N = error.size();
+        float64_t value = 0;
+        for (int i = 0; i < N; i++)
+        {
+            value += error[i] * error[i];
+        }
+        value = sqrt(value / N);
+        return value;
+    }
 };
 
 MIC_NAMESPACE_END

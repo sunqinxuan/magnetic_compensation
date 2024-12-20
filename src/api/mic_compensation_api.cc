@@ -112,6 +112,6 @@ namespace mic
         return _mic_compensator->compenste(timestamp, out);
     }
 
-    vector_xf_t mic_get_cov() { return _mic_compensator->get_kf_cov(); }
+    matrix_xf_t mic_get_cov() { return _mic_compensator->get_kf_cov(); }
 
 }

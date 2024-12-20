@@ -42,7 +42,7 @@ namespace mic
         const float64_t timestamp,
         mic_mag_t &out);
 
-    vector_xf_t mic_get_cov();
+    matrix_xf_t mic_get_cov();
 
 }
 

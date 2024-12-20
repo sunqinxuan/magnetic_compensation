@@ -91,25 +91,37 @@ ret_t MicCabinNavMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out
     mic_mag_t in;
     if (_mag_measure_storer.get_data<mic_mag_t>(ts, in))
     {
-        KF_update(ts);
-        // cout<<"KF covariance:\t"<<_theta_cov.diagonal().transpose()<<endl;
+        if (out.value == 0)
+        {
+            KF_update(ts);
+            // cout<<"KF covariance:\t"<<_theta_cov.diagonal().transpose()<<endl;
 
-        matrix_3f_t matrix;
-        matrix << _theta(3), _theta(6), _theta(9),
-            _theta(4), _theta(7), _theta(10),
-            _theta(5), _theta(8), _theta(11);
-        vector_3f_t offset = _theta.head(3);
+            matrix_3f_t matrix;
+            matrix << _theta(3), _theta(6), _theta(9),
+                _theta(4), _theta(7), _theta(10),
+                _theta(5), _theta(8), _theta(11);
+            vector_3f_t offset = _theta.head(3);
 
-        // cout << endl
-        //      << "matrix: " << endl
-        //      << matrix << endl;
-        // cout << "offset: " << offset.transpose() << endl
-        //      << endl;
+            // cout << endl
+            //      << "matrix: " << endl
+            //      << matrix << endl;
+            // cout << "offset: " << offset.transpose() << endl
+            //      << endl;
 
-        out.vector = matrix.inverse() * (in.vector - offset);
-        out.value = out.vector.norm();
-        notify(*this);
-        return ret_t::MIC_RET_SUCCESSED;
+            out.vector = matrix.inverse() * (in.vector - offset);
+            out.value = out.vector.norm();
+            notify(*this);
+            return ret_t::MIC_RET_SUCCESSED;
+        }
+        else
+        {
+            matrix_3f_t matrix = _R_opt.transpose() * _D_tilde_inv;
+            vector_3f_t offset = _o_hat;
+            out.vector = matrix * (in.vector - offset);
+            out.value = out.vector.norm();
+            notify(*this);
+            return ret_t::MIC_RET_SUCCESSED;
+        }
     }
     else
     {
@@ -123,8 +135,11 @@ ret_t MicCabinNavMagCompensator::KF_update(const float64_t ts)
     mic_mag_t mag, mag_truth;
     if (_mag_measure_storer.get_data<mic_mag_t>(ts, mag) && _mag_truth_storer.get_data<mic_mag_t>(ts, mag_truth))
     {
-        vector_3f_t m_k = mag_truth.value * mag_truth.vector.normalized();
-        vector_3f_t y_k = mag.value * mag.vector.normalized();
+        vector_3f_t m_k = mag_truth.vector; // mag_truth.value * mag_truth.vector.normalized();
+        vector_3f_t y_k = mag.vector;       // mag.value * mag.vector.normalized();
+
+        // cout<<endl<<"m_k\t"<<m_k.transpose()<<endl;
+        // cout<<endl<<"y_k\t"<<y_k.transpose()<<endl;
 
         matrix_xf_t H_m_k = matrix_xf_t::Identity(3, 12);
         H_m_k.block<3, 3>(0, 3) = matrix_3f_t::Identity() * m_k(0);
@@ -133,23 +148,36 @@ ret_t MicCabinNavMagCompensator::KF_update(const float64_t ts)
         // cout<<"H_m_k = "<<endl<<H_m_k<<endl;
 
         /* theta_k_bar=theta_{k-1} */
-        vector_xf_t theta_k_bar=_theta;
+        vector_xf_t theta_k_bar = _theta;
         /* Sigma_k_bar=Sigma_{k-1}+R_k */
-        matrix_xf_t theta_cov_k_bar=_theta_cov+_state_noise_cov;
+        matrix_xf_t theta_cov_k_bar = _theta_cov + _state_noise_cov;
+
+        // cout<<endl<<"kf theta\t"<<_theta.transpose()<<endl;
+        // cout<<endl<<"kf cov\t"<<_theta_cov.diagonal().transpose()<<endl;
 
         /* K_k=Sigma_k_bar*h(m)^T*[h(m)*Sigma_k_bar*h(m)^T+Q_k]^{-1} */
-        matrix_xf_t tmp=H_m_k*theta_cov_k_bar*H_m_k.transpose()+_measure_noise_cov;
-        matrix_xf_t kalman_gain=theta_cov_k_bar*H_m_k.transpose()*tmp.inverse();
+        matrix_xf_t tmp = H_m_k * theta_cov_k_bar * H_m_k.transpose() + _measure_noise_cov;
+        matrix_xf_t kalman_gain = theta_cov_k_bar * H_m_k.transpose() * tmp.inverse();
+        // cout<<endl<<"kalman gain"<<endl<<kalman_gain<<endl;
+        // cout<<endl<<"tmp"<<endl<<tmp<<endl;
 
         /* theta_k=theta_k_bar+K_k[y_k-h(m)*theta_k_bar] */
-        vector_xf_t theta_k=theta_k_bar+kalman_gain*(y_k-H_m_k*theta_k_bar);
+        vector_xf_t theta_k = theta_k_bar + kalman_gain * (y_k - H_m_k * theta_k_bar);
+
+        // vector_xf_t info=y_k-H_m_k*theta_k_bar;
+        // cout<<endl<<"y-H*theta\t"<<info.transpose()<<endl;
 
         /* Sigma_k=[I-K_k*h(m)]*Sigma_k_bar */
-        matrix_xf_t theta_cov_k=(matrix_xf_t::Identity(12,12)-kalman_gain*H_m_k)*theta_cov_k_bar;
+        matrix_xf_t theta_cov_k = (matrix_xf_t::Identity(12, 12) - kalman_gain * H_m_k) * theta_cov_k_bar;
+
+        // matrix_xf_t gain=matrix_xf_t::Identity(12,12)-kalman_gain*H_m_k;
+        // cout<<endl<<"I-KH"<<endl<<gain<<endl;
 
         // update model;
-        _theta=theta_k;
-        _theta_cov=theta_cov_k;
+        _theta = theta_k;
+        _theta_cov = theta_cov_k;
+        // cout<<endl<<"kf theta\t"<<_theta.transpose()<<endl;
+        // cout<<endl<<"kf cov\t"<<_theta_cov.diagonal().transpose()<<endl;
 
         return ret_t::MIC_RET_SUCCESSED;
     }

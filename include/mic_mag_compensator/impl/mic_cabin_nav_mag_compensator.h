@@ -51,7 +51,7 @@ public:
     /** \brief destructor. */
     virtual ~MicCabinNavMagCompensator() = default;
 
-    vector_xf_t get_kf_cov(){return _theta_cov.diagonal();}
+    matrix_xf_t get_kf_cov(){return _theta_cov;}
 
 protected:
     /** \brief Compensate using the ellipsoid-based model 

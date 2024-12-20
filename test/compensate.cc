@@ -68,7 +68,6 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    //
     cout << endl
          << "Loaded compensation model file: " << FLAGS_model << endl;
 
@@ -80,32 +79,30 @@ int main(int argc, char *argv[])
     std::cout << endl
               << "Loading file: " << FLAGS_file << "\n";
 
-    for (int step = 0; step <= totalSteps; ++step)
-    {
-        std::cout << "\r" << greenText << "[";
-        int progress = step * 100 / totalSteps;
-        for (int i = 0; i < totalSteps; ++i)
-        {
-            if (i < step)
-                std::cout << "#";
-            else
-                std::cout << " ";
-        }
-        std::cout << "] " << progress << "%" << resetText;
-        std::cout.flush();
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
-    }
+    // for (int step = 0; step <= totalSteps; ++step)
+    // {
+    //     std::cout << "\r" << greenText << "[";
+    //     int progress = step * 100 / totalSteps;
+    //     for (int i = 0; i < totalSteps; ++i)
+    //     {
+    //         if (i < step)
+    //             std::cout << "#";
+    //         else
+    //             std::cout << " ";
+    //     }
+    //     std::cout << "] " << progress << "%" << resetText;
+    //     std::cout.flush();
+    //     std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    // }
 
-    std::cout << "\nFile loaded successfully!" << std::endl
-              << endl;
+    // std::cout << "\nFile loaded successfully!" << std::endl
+    //           << endl;
 
-    //
     cout << "Real-time compensation output format:  " << endl
          << "timestamp\tmagnetic intensity\tx-axis component\ty-axis component\tz-axis component" << std::endl;
 
     using namespace std::chrono;
 
-    // 初始化计时器
     auto start_time = high_resolution_clock::now();
     int refresh_count = 0;
     double frequency = 0.0;
@@ -119,14 +116,18 @@ int main(int argc, char *argv[])
     }
     std::cout << std::endl;
     int cnt = 0;
+
     std::ofstream fp_cov("kf_cov.txt"), fp_error("kf_error.txt");
+    std::vector<float64_t> error_mag, error_x, error_y, error_z;
+    std::vector<float64_t> error_kf_mag, error_kf_x, error_kf_y, error_kf_z;
+
+    std::cout << std::fixed << std::setprecision(2);
+
     while (true)
     {
-        // 当前时间
         auto now = high_resolution_clock::now();
         duration<double> elapsed_seconds = now - start_time;
 
-        // 计算刷新频率
         refresh_count++;
         frequency = refresh_count / elapsed_seconds.count();
         // if (frequency > 500)
@@ -144,8 +145,49 @@ int main(int argc, char *argv[])
 
             // do compensation and save results to file;
             mic_mag_t mag_out;
+            mag_out.value=0;
             mic_compensate(ts, mag_out);
             outfile << std::fixed << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
+            // cout << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
+            error_kf_mag.push_back(fabs(mag_truth.vector.norm()-mag_out.vector.norm()));
+            error_kf_x.push_back(fabs(mag_truth.vector(0)-mag_out.vector(0)));
+            error_kf_y.push_back(fabs(mag_truth.vector(1)-mag_out.vector(1)));
+            error_kf_z.push_back(fabs(mag_truth.vector(2)-mag_out.vector(2)));
+
+            fp_error << fabs(mag_truth.value - mag_out.value) << "\t"
+                     << fabs(mag_truth.vector(0) - mag_out.vector(0)) << "\t"
+                     << fabs(mag_truth.vector(1) - mag_out.vector(1)) << "\t"
+                     << fabs(mag_truth.vector(2) - mag_out.vector(2)) << "\t"
+                     << endl;
+            fp_cov << mic_get_cov().determinant() << "\t" << mic_get_cov().diagonal().transpose() << endl;
+
+            // offline model results;
+            mag_out.value=-1;
+            mic_compensate(ts,mag_out);
+            // cout << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl<<endl;
+            error_mag.push_back(fabs(mag_truth.vector.norm()-mag_out.vector.norm()));
+            error_x.push_back(fabs(mag_truth.vector(0)-mag_out.vector(0)));
+            error_y.push_back(fabs(mag_truth.vector(1)-mag_out.vector(1)));
+            error_z.push_back(fabs(mag_truth.vector(2)-mag_out.vector(2)));
+
+            cnt++;
+            if (cnt % 100 == 0)
+            {
+                cout<<"rmse(x,y,z,t)\t"
+                <<MicUtils::rmse(error_kf_x)<<"nT ("<<MicUtils::rmse(error_x)<<"nT)\t"
+                <<MicUtils::rmse(error_kf_y)<<"nT ("<<MicUtils::rmse(error_y)<<"nT)\t"
+                <<MicUtils::rmse(error_kf_z)<<"nT ("<<MicUtils::rmse(error_z)<<"nT)\t"
+                <<MicUtils::rmse(error_kf_mag)<<"nT ("<<MicUtils::rmse(error_mag)<<"nT)\t"<<endl;
+                // cout << "kf cov\t" << mic_get_cov().diagonal().transpose() << endl;
+                // cout << "compensation error\t"
+                //      << fabs(mag_truth.value - mag_out.value) << "\t"
+                //      << fabs(mag_truth.vector(0) - mag_out.vector(0)) << "\t"
+                //      << fabs(mag_truth.vector(1) - mag_out.vector(1)) << "\t"
+                //      << fabs(mag_truth.vector(2) - mag_out.vector(2)) << "\t"
+                //      << endl
+                //      << endl;
+                // std::cin.get();
+            }
 
             // std::cout << "\r" << "\033[K";
             // cout << "Real-time compensation: " << std::setw(3) << std::fixed
@@ -154,27 +196,6 @@ int main(int argc, char *argv[])
             //      << frequency << " Hz" << resetText;
             // cout.flush();
             // std::this_thread::sleep_for(milliseconds(1));
-
-            fp_error << fabs(mag_truth.value - mag_out.value) << "\t"
-                     << fabs(mag_truth.vector(0) - mag_out.vector(0)) << "\t"
-                     << fabs(mag_truth.vector(1) - mag_out.vector(1)) << "\t"
-                     << fabs(mag_truth.vector(2) - mag_out.vector(2)) << "\t"
-                     << endl;
-
-            fp_cov << mic_get_cov().transpose() << endl;
-
-            cnt++;
-            if (cnt % 100 == 0)
-            {
-                cout <<"kf cov\t"<<mic_get_cov().transpose()<<endl;
-                cout << "compensation error\t"
-                     << fabs(mag_truth.value - mag_out.value) << "\t"
-                     << fabs(mag_truth.vector(0) - mag_out.vector(0)) << "\t"
-                     << fabs(mag_truth.vector(1) - mag_out.vector(1)) << "\t"
-                     << fabs(mag_truth.vector(2) - mag_out.vector(2)) << "\t"
-                     << endl
-                     << endl;
-            }
         }
         // return 0;
     }
