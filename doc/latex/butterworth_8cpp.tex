@@ -1,0 +1,64 @@
+\hypertarget{butterworth_8cpp}{}\doxysection{3rd\+\_\+party/tolles-\/lawson/filter/butterworth.cpp File Reference}
+\label{butterworth_8cpp}\index{3rd\_party/tolles-\/lawson/filter/butterworth.cpp@{3rd\_party/tolles-\/lawson/filter/butterworth.cpp}}
+{\ttfamily \#include \char`\"{}filter/butterworth.\+hpp\char`\"{}}\newline
+Include dependency graph for butterworth.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{butterworth_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{butterworth_8cpp_a7f9eadcde4c07bd4be15cbe4e3928229}{Compute\+Den\+Coeffs}} (int Filter\+Order, double Lcutoff, double Ucutoff)
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{butterworth_8cpp_a14dc7899a67787b935d32db52d4a779b}{Trinomial\+Multiply}} (int Filter\+Order, vector$<$ double $>$ b, vector$<$ double $>$ c)
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{butterworth_8cpp_a94b2a14e301137bff4869c61283f3567}{Compute\+Num\+Coeffs}} (int Filter\+Order, double Lcutoff, double Ucutoff, vector$<$ double $>$ DenC)
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{butterworth_8cpp_a367b6df28f4786b4da14904131390f15}{Compute\+LP}} (int Filter\+Order)
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{butterworth_8cpp_aa388d91d71b24b2bb59eed996097dcf1}{Compute\+HP}} (int Filter\+Order)
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{butterworth_8cpp_a5343ca32f4eb71e4b214da3a74de7d3d}{filter}} (vector$<$ double $>$ x, vector$<$ double $>$ coeff\+\_\+b, vector$<$ double $>$ coeff\+\_\+a)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{butterworth_8cpp_a7f9eadcde4c07bd4be15cbe4e3928229}\label{butterworth_8cpp_a7f9eadcde4c07bd4be15cbe4e3928229}} 
+\index{butterworth.cpp@{butterworth.cpp}!ComputeDenCoeffs@{ComputeDenCoeffs}}
+\index{ComputeDenCoeffs@{ComputeDenCoeffs}!butterworth.cpp@{butterworth.cpp}}
+\doxysubsubsection{\texorpdfstring{ComputeDenCoeffs()}{ComputeDenCoeffs()}}
+{\footnotesize\ttfamily vector$<$double$>$ Compute\+Den\+Coeffs (\begin{DoxyParamCaption}\item[{int}]{Filter\+Order,  }\item[{double}]{Lcutoff,  }\item[{double}]{Ucutoff }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{butterworth_8cpp_aa388d91d71b24b2bb59eed996097dcf1}\label{butterworth_8cpp_aa388d91d71b24b2bb59eed996097dcf1}} 
+\index{butterworth.cpp@{butterworth.cpp}!ComputeHP@{ComputeHP}}
+\index{ComputeHP@{ComputeHP}!butterworth.cpp@{butterworth.cpp}}
+\doxysubsubsection{\texorpdfstring{ComputeHP()}{ComputeHP()}}
+{\footnotesize\ttfamily vector$<$double$>$ Compute\+HP (\begin{DoxyParamCaption}\item[{int}]{Filter\+Order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{butterworth_8cpp_a367b6df28f4786b4da14904131390f15}\label{butterworth_8cpp_a367b6df28f4786b4da14904131390f15}} 
+\index{butterworth.cpp@{butterworth.cpp}!ComputeLP@{ComputeLP}}
+\index{ComputeLP@{ComputeLP}!butterworth.cpp@{butterworth.cpp}}
+\doxysubsubsection{\texorpdfstring{ComputeLP()}{ComputeLP()}}
+{\footnotesize\ttfamily vector$<$double$>$ Compute\+LP (\begin{DoxyParamCaption}\item[{int}]{Filter\+Order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{butterworth_8cpp_a94b2a14e301137bff4869c61283f3567}\label{butterworth_8cpp_a94b2a14e301137bff4869c61283f3567}} 
+\index{butterworth.cpp@{butterworth.cpp}!ComputeNumCoeffs@{ComputeNumCoeffs}}
+\index{ComputeNumCoeffs@{ComputeNumCoeffs}!butterworth.cpp@{butterworth.cpp}}
+\doxysubsubsection{\texorpdfstring{ComputeNumCoeffs()}{ComputeNumCoeffs()}}
+{\footnotesize\ttfamily vector$<$double$>$ Compute\+Num\+Coeffs (\begin{DoxyParamCaption}\item[{int}]{Filter\+Order,  }\item[{double}]{Lcutoff,  }\item[{double}]{Ucutoff,  }\item[{vector$<$ double $>$}]{DenC }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{butterworth_8cpp_a5343ca32f4eb71e4b214da3a74de7d3d}\label{butterworth_8cpp_a5343ca32f4eb71e4b214da3a74de7d3d}} 
+\index{butterworth.cpp@{butterworth.cpp}!filter@{filter}}
+\index{filter@{filter}!butterworth.cpp@{butterworth.cpp}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily vector$<$double$>$ filter (\begin{DoxyParamCaption}\item[{vector$<$ double $>$}]{x,  }\item[{vector$<$ double $>$}]{coeff\+\_\+b,  }\item[{vector$<$ double $>$}]{coeff\+\_\+a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{butterworth_8cpp_a14dc7899a67787b935d32db52d4a779b}\label{butterworth_8cpp_a14dc7899a67787b935d32db52d4a779b}} 
+\index{butterworth.cpp@{butterworth.cpp}!TrinomialMultiply@{TrinomialMultiply}}
+\index{TrinomialMultiply@{TrinomialMultiply}!butterworth.cpp@{butterworth.cpp}}
+\doxysubsubsection{\texorpdfstring{TrinomialMultiply()}{TrinomialMultiply()}}
+{\footnotesize\ttfamily vector$<$double$>$ Trinomial\+Multiply (\begin{DoxyParamCaption}\item[{int}]{Filter\+Order,  }\item[{vector$<$ double $>$}]{b,  }\item[{vector$<$ double $>$}]{c }\end{DoxyParamCaption})}
+

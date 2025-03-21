@@ -19,19 +19,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
+
 #ifndef MIC_MAG_COMPENSATOR
 #define MIC_MAG_COMPENSATOR
 
 #include "common/mic_prerequisite.h"
 #include "common/mic_utils.h"
 #include "data_storer/mic_data_storer.h"
-// #include "mic_nav_state_estimator/mic_nav_state_estimator.h"
 
 MIC_NAMESPACE_START
 
 using mic_mag_storer_t =
-    mic_data_storer_t<mic_mag_flux_t, mic_mag_op_t>;
-using mic_mag_nav_state_storer_t=mic_data_storer_t<mic_nav_state_t>;
+    mic_data_storer_t<mic_mag_t, mic_nav_state_t>;
+// using mic_mag_nav_state_storer_t=mic_data_storer_t<mic_nav_state_t>;
 
 class MicMagCompensator;
 using mic_mag_compensator_t = MicMagCompensator;
@@ -39,62 +39,105 @@ using mic_mag_compensator_shared_ptr = std::shared_ptr<MicMagCompensator>;
 
 enum class MicMagCompensatorState : uint8_t
 {
-    MIC_MAG_COMPENSATE_CALIBRATION = 0,
-    MIC_MAG_COMPENSATE_NORMAL = 1,
-    MIC_MAG_COMPENSATE_ABNORMAL = 2,
-    MIC_MAG_COMPENSATE_ERROR = 3
+    MIC_MAG_COMPENSATE_UNCALIBRATED = 0,
+    MIC_MAG_COMPENSATE_CALIBRATED = 1,
 };
-using mic_mag_compensator_state_t = MicMagCompensatorState;
+using mic_state_t = MicMagCompensatorState;
 
+/** \brief @b MicMagCompensator provides a base interface of the magnetic interference
+ * compensation algorithm.
+ *
+ * The compensation model is calibrated first using measured data captured in a calibration
+ * flight. Then the real-time compensation is implemented via the saved model.
+ *
+ * \author Qinxuan Sun, Yansong Gong
+ * \ingroup compensation
+ */
 class MicMagCompensator : public MicObservable<MicMagCompensator>
 {
 public:
+    /** \brief Empty constructor. */
     MicMagCompensator();
+    /** \brief destructor. */
     ~MicMagCompensator();
 
+    /** \brief Get a pointer to the data storer used to store the magnetic
+     * and the navigation state data. */
     mic_mag_storer_t &get_data_storer();
-    // mic_nav_state_estimator_t &get_nav_state_estimator();
+
+    /** \brief Get the current timestamp. */
     float64_t get_curr_time() { return _curr_time_stamp; }
 
-    ret_t add_mag_flux(
+    /** \brief Add data (magnetic measurements and navigation states of
+     * the aircraft) to the compensator.
+     * \param[in] ts the timestamp of the added data
+     * \param[in] mag_data the magnetic measurements
+     * (three-component representation of the magnetic vector
+     * and the magnetic intensity value)
+     * \param[in] nav_state (optional) the navigation state provided
+     * by either the avionics or INS
+     */
+    ret_t add_data(
         const float64_t ts,
-        const mic_mag_flux_t &mag_flux_data);
+        const mic_mag_t &mag_data,
+        const mic_nav_state_t &nav_state = mic_nav_state_t());
 
-    ret_t add_mag_op(
+    /** \brief Add the baseline data for model calibration.
+     * \param[in] ts the timestamp of the added data
+     * \param[in] mag_data the magnetic measurements provided either
+     * by the earth magnetic model or the sensors outside the cabin
+     * \param[in] nav_state (optional) the navigation state is provided
+     * if the mag_data is captured via sensors outside the cabin
+     */
+    ret_t add_data_truth(
         const float64_t ts,
-        const mic_mag_op_t &mag_op_data);
+        const mic_mag_t &mag_data,
+        const mic_nav_state_t &nav_state = mic_nav_state_t());
 
-    ret_t add_mag_flux_truth(
-        const float64_t ts,
-        const mic_mag_flux_t &mag_flux_data);
+    /** \brief Call the calibration algorithm which calibrates the compensation model. */
+    ret_t calibrate();
 
-    ret_t add_mag_op_truth(
-        const float64_t ts,
-        const mic_mag_op_t &mag_op_data);
+    /** \brief Call the compensation algorithm to compensate the input magnetic data.
+     * \param[in] ts the timestamp at which the compensation result is required
+     * \param[out] out output the compensated result at time \a ts
+     */
+    ret_t compenste(const float64_t ts, mic_mag_t &out);
 
-    ret_t add_nav_state(
-        const float64_t ts, 
-        const mic_nav_state_t &nav_state);
+    /** \brief Load the saved model to the compensator.
+     * \param[in] filename the file (.mdl) which saves the compensation model coefficients
+     */
+    ret_t load_model(const std::string filename);
 
-    virtual ret_t calibrate() = 0;
-    virtual ret_t compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out) = 0;
+    /** \brief Save the compensation model to file.
+     * \param[in] filename the file (.mdl) to write the compensation model coefficients
+     */
+    ret_t save_model(const std::string filename);
 
-    ret_t serialize(json_t &node);
-    ret_t deserialize(json_t &node);
+    void setFlag(){flag=true;}
 
 protected:
-    // void init_nav_state_estimator();
+    virtual ret_t do_calibrate() = 0;
+    virtual ret_t do_compenste(
+        const float64_t ts, mic_mag_t &out) = 0;
 
+    virtual ret_t serialize(json_t &node);
+    virtual ret_t deserialize(json_t &node);
+
+    /** \brief The current timestamp of the compensator. */
     float64_t _curr_time_stamp;
 
-    /* data storer*/
+    /** \brief The data storer for the measurement data. */
     mic_mag_storer_t _mag_measure_storer;
+
+    /** \brief The data storer for the baseline data. */
     mic_mag_storer_t _mag_truth_storer;
-    mic_mag_nav_state_storer_t _nav_state_storer;
-    /* working state */
-    mic_mag_compensator_state_t _state;
-    /* navigation state estimator */
-    // mic_nav_state_estimator_unique_ptr _nav_state_estimator;
+
+    /** \brief The working state of the compensator. */
+    mic_state_t _state;
+    
+    std::string _version;
+
+    bool_t flag;
 };
 
 MIC_NAMESPACE_END

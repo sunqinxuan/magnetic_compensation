@@ -30,9 +30,14 @@ MicConfig::MicConfig()
     REGISTER_PARAM("log_level", int32_t);
     REGISTER_PARAM("time_sync_tolerance", float64_t);
     REGISTER_PARAM("data_remain_time", float64_t);
-    REGISTER_PARAM("mag_earth_intensity", float64_t);
-    REGISTER_PARAM("load_file_name", std::string);
-    REGISTER_PARAM("compensation_method",std::string);
+    REGISTER_PARAM("navigation_frame", std::string);
+    REGISTER_PARAM("euler_angle_sequence", std::string);
+    // REGISTER_PARAM("mag_earth_intensity", float64_t);
+    // REGISTER_PARAM("load_file_name", std::string);
+    // REGISTER_PARAM("compensation_method",std::string);
+    REGISTER_PARAM("KF_init_cov", std::vector<float64_t>);
+    REGISTER_PARAM("KF_state_noise", std::vector<float64_t>);
+    REGISTER_PARAM("KF_measure_noise", std::vector<float64_t>);
 }
 
 void MicConfig::initialize(

@@ -1,0 +1,6 @@
+<map id="MicCabinMagCompensator" name="MicCabinMagCompensator">
+<area shape="rect" id="node1" title="MicCabinMagCompensator is a magnetic compensation algorithm specifically designed for applying the ma..." alt="" coords="183,200,381,227"/>
+<area shape="rect" id="node2" href="$class_mic_mag_compensator.html" title="MicMagCompensator provides a base interface of the magnetic interference compensation algorithm." alt="" coords="202,124,362,151"/>
+<area shape="rect" id="node3" href="$class_mic_observable.html" title=" " alt="" coords="5,13,292,39"/>
+<area shape="rect" id="node4" href="$class_mic_data_storer.html" title=" " alt="" coords="317,5,517,47"/>
+</map>

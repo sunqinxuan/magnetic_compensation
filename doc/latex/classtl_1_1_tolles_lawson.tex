@@ -1,0 +1,366 @@
+\hypertarget{classtl_1_1_tolles_lawson}{}\doxysection{tl\+::Tolles\+Lawson Class Reference}
+\label{classtl_1_1_tolles_lawson}\index{tl::TollesLawson@{tl::TollesLawson}}
+
+
+{\bfseries{\mbox{\hyperlink{classtl_1_1_tolles_lawson}{Tolles\+Lawson}}}} provide the implementation of the Tolles-\/\+Lawson Algorithm.  
+
+
+
+
+{\ttfamily \#include $<$tolles\+\_\+lawson.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}}
+\begin{DoxyCompactList}\small\item\em Create Hash values for the key of unordered map ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}{F\+D\+Mscheme}} \{ \newline
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15aab655f1573e6347dbbe18815b721ac36}{B\+A\+C\+K\+W\+A\+RD}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a73b5713fa203e10b7276664ec56f6c99}{F\+O\+R\+W\+A\+RD}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8}{C\+E\+N\+T\+R\+AL}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a57332f41561ba30a906a0b73364c7826}{B\+A\+C\+K\+W\+A\+R\+D2}}, 
+\newline
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a1d7c067fef6231094b42039502fc4822}{F\+O\+R\+W\+A\+R\+D2}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a44fa0f27eb258ba5862b6c1df0d1bdf2}{F\+O\+U\+R\+TH}}
+ \}
+\item 
+enum \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}} \{ \newline
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}, 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a1f59ebf4e2fbbe6ed4beed0fe5e3dbb9}{F\+DM}}, 
+\newline
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021ab48ca68ff0a09fc73a1d1c02113ffefd}{B\+I\+AS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtl_1_1_tolles_lawson_a89b32ef1dcc2dc9762e3eecd174931e9}{Tolles\+Lawson}} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_a6e0f3109be50ef5aa4b9b14d0882533f}{create\+MatrixA}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&T\+L\+\_\+\+A\+\_\+, const std\+::vector$<$ double $>$ \&Bx, const std\+::vector$<$ double $>$ \&By, const std\+::vector$<$ double $>$ \&Bz, std\+::vector$<$ double $>$ \&Bt, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&terms=\{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\})
+\begin{DoxyCompactList}\small\item\em Create Tolles-\/\+Lawson {\ttfamily A} matrix using vector magnetometer measurements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_a2b7bfb08f2761c66a30be8286382b797}{create\+Matrix\+A\+\_\+component}} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&T\+L\+\_\+\+A\+\_\+, const std\+::vector$<$ double $>$ \&Bx, const std\+::vector$<$ double $>$ \&By, const std\+::vector$<$ double $>$ \&Bz, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&terms=\{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\})
+\begin{DoxyCompactList}\small\item\em Create component-\/based Tolles-\/\+Lawson {\ttfamily A} matrix using vector magnetometer measurements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_a370a974f2d883471a9c3183f2e0d48cf}{create\+Coeff}} (std\+::vector$<$ double $>$ \&T\+L\+\_\+beta\+\_\+, const std\+::vector$<$ double $>$ \&Bx, const std\+::vector$<$ double $>$ \&By, const std\+::vector$<$ double $>$ \&Bz, const std\+::vector$<$ double $>$ \&Be, std\+::vector$<$ double $>$ \&Bt, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&terms=\{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}, const double lambda=0.\+0, const double pass1=0.\+1, const double pass2=0.\+9, const double fs=10.\+0, const int pole=4, const int trim=20)
+\begin{DoxyCompactList}\small\item\em Create Tolles-\/\+Lawson coefficients using vector and scalar magnetometer measurements with or without a bandpass filter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_a353d979123fad3405645b92708013147}{create\+Coeff\+\_\+component}} (std\+::vector$<$ double $>$ \&T\+L\+\_\+beta\+\_\+, const std\+::vector$<$ double $>$ \&Bx, const std\+::vector$<$ double $>$ \&By, const std\+::vector$<$ double $>$ \&Bz, const std\+::vector$<$ double $>$ \&Bex, const std\+::vector$<$ double $>$ \&Bey, const std\+::vector$<$ double $>$ \&Bez, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&terms=\{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}}, \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\})
+\begin{DoxyCompactList}\small\item\em Create component-\/based Tolles-\/\+Lawson coefficients using vector and scalar magnetometer measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_aabbb06c4750503ba0df54b512bda3f88}{fdm}} (std\+::vector$<$ double $>$ \&dif, const std\+::vector$<$ double $>$ \&x, const \mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}{Tolles\+Lawson\+::\+F\+D\+Mscheme}} scheme=\mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8}{C\+E\+N\+T\+R\+AL}})
+\begin{DoxyCompactList}\small\item\em Finite difference method (F\+DM) on vector of input data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtl_1_1_tolles_lawson_aa46298f732ee2b6224ab14159a5fa1ff}{bwbp\+\_\+filter}} (std\+::vector$<$ double $>$ \&y, const std\+::vector$<$ double $>$ \&x, const double pass1, const double pass2, const int pole, const int trim)
+\begin{DoxyCompactList}\small\item\em Filter the input data using Butterworth bandpass filter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtl_1_1_tolles_lawson_a8c0be95a1b03bc8f62cf1ef3b1daa25f}{linear\+\_\+regression}} (std\+::vector$<$ double $>$ \&coeff, std\+::vector$<$ double $>$ \&residual, const std\+::vector$<$ double $>$ \&bb, const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&AA, const double lambda)
+\begin{DoxyCompactList}\small\item\em Linear regression to solve the least-\/square problem {\ttfamily Ax=b}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtl_1_1_tolles_lawson_a53c3401136e8b54bbdbe17525afb7a4d}{stack\+\_\+vector}} (std\+::vector$<$ double $>$ \&result, const std\+::vector$<$ double $>$ \&x, const std\+::vector$<$ double $>$ \&y, const std\+::vector$<$ double $>$ \&z)
+\begin{DoxyCompactList}\small\item\em Combine the components into vectors and concatenate them. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtl_1_1_tolles_lawson_acaa8bca7f18728bd5f3a1031ee22f9ac}{rmse}} (const std\+::vector$<$ double $>$ \&residual)
+\begin{DoxyCompactList}\small\item\em Compute the root mean square error given a residual sequence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtl_1_1_tolles_lawson_a14a66249bdce85111bf57819b180ada3}{degeneration}} (const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&T\+L\+\_\+A)
+\begin{DoxyCompactList}\small\item\em output degeneration problem to terminal for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+{\bfseries{\mbox{\hyperlink{classtl_1_1_tolles_lawson}{Tolles\+Lawson}}}} provide the implementation of the Tolles-\/\+Lawson Algorithm. 
+
+The estimation of the model coefficients including the total constraint-\/based method (which is the traditional one) and the component constraint-\/based method (which is originally designed by Q. Sun).
+
+Refer to \href{https://sunqinxuan.github.io/projects/2024-05-06-mag-compensation}{\texttt{ https\+://sunqinxuan.\+github.\+io/projects/2024-\/05-\/06-\/mag-\/compensation}} for more details.
+
+\begin{DoxyAuthor}{Author}
+Qinxuan Sun, Yansong Gong 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!FDMscheme@{FDMscheme}}
+\index{FDMscheme@{FDMscheme}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{FDMscheme}{FDMscheme}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}{tl\+::\+Tolles\+Lawson\+::\+F\+D\+Mscheme}}}
+
+Enum for the F\+DM scheme used to calculate the derivatives in T\+L-\/model. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BACKWARD@{BACKWARD}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!BACKWARD@{BACKWARD}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15aab655f1573e6347dbbe18815b721ac36}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15aab655f1573e6347dbbe18815b721ac36}} 
+B\+A\+C\+K\+W\+A\+RD&1st derivative 1st-\/order backward difference. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORWARD@{FORWARD}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!FORWARD@{FORWARD}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a73b5713fa203e10b7276664ec56f6c99}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a73b5713fa203e10b7276664ec56f6c99}} 
+F\+O\+R\+W\+A\+RD&1st derivative 1st-\/order forward difference. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CENTRAL@{CENTRAL}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!CENTRAL@{CENTRAL}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8}} 
+C\+E\+N\+T\+R\+AL&1st derivative 2nd-\/order central difference. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BACKWARD2@{BACKWARD2}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!BACKWARD2@{BACKWARD2}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a57332f41561ba30a906a0b73364c7826}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a57332f41561ba30a906a0b73364c7826}} 
+B\+A\+C\+K\+W\+A\+R\+D2&1st derivative 2nd-\/order backward difference. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORWARD2@{FORWARD2}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!FORWARD2@{FORWARD2}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a1d7c067fef6231094b42039502fc4822}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a1d7c067fef6231094b42039502fc4822}} 
+F\+O\+R\+W\+A\+R\+D2&1st derivative 2nd-\/order forward difference. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FOURTH@{FOURTH}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!FOURTH@{FOURTH}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a44fa0f27eb258ba5862b6c1df0d1bdf2}\label{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a44fa0f27eb258ba5862b6c1df0d1bdf2}} 
+F\+O\+U\+R\+TH&4th derivative central difference. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!TLterm@{TLterm}}
+\index{TLterm@{TLterm}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{TLterm}{TLterm}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{tl\+::\+Tolles\+Lawson\+::\+T\+Lterm}}}
+
+Enum for the terms used for the TL model coefficients. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PERMANENT@{PERMANENT}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!PERMANENT@{PERMANENT}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}} 
+P\+E\+R\+M\+A\+N\+E\+NT&The permanent magnetic moment term. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INDUCED@{INDUCED}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!INDUCED@{INDUCED}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}} 
+I\+N\+D\+U\+C\+ED&The induced magnetic moment term. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EDDY@{EDDY}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!EDDY@{EDDY}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}} 
+E\+D\+DY&The eddy current magnetic moment term. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FDM@{FDM}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!FDM@{FDM}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a1f59ebf4e2fbbe6ed4beed0fe5e3dbb9}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a1f59ebf4e2fbbe6ed4beed0fe5e3dbb9}} 
+F\+DM&The F\+DM magnetic moment term. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BIAS@{BIAS}!tl::TollesLawson@{tl::TollesLawson}}\index{tl::TollesLawson@{tl::TollesLawson}!BIAS@{BIAS}}}\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021ab48ca68ff0a09fc73a1d1c02113ffefd}\label{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021ab48ca68ff0a09fc73a1d1c02113ffefd}} 
+B\+I\+AS&The bias magnetic moment term. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a89b32ef1dcc2dc9762e3eecd174931e9}\label{classtl_1_1_tolles_lawson_a89b32ef1dcc2dc9762e3eecd174931e9}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!TollesLawson@{TollesLawson}}
+\index{TollesLawson@{TollesLawson}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{TollesLawson()}{TollesLawson()}}
+{\footnotesize\ttfamily tl\+::\+Tolles\+Lawson\+::\+Tolles\+Lawson (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Empty constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_aa46298f732ee2b6224ab14159a5fa1ff}\label{classtl_1_1_tolles_lawson_aa46298f732ee2b6224ab14159a5fa1ff}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!bwbp\_filter@{bwbp\_filter}}
+\index{bwbp\_filter@{bwbp\_filter}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{bwbp\_filter()}{bwbp\_filter()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::bwbp\+\_\+filter (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{y,  }\item[{const std\+::vector$<$ double $>$ \&}]{x,  }\item[{const double}]{pass1,  }\item[{const double}]{pass2,  }\item[{const int}]{pole,  }\item[{const int}]{trim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Filter the input data using Butterworth bandpass filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em y} & output results \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & input data \\
+\hline
+\mbox{\texttt{ in}}  & {\em pass1} & (optional) first passband frequency \mbox{[}Hz\mbox{]} \\
+\hline
+\mbox{\texttt{ in}}  & {\em pass2} & (optional) second passband frequency \mbox{[}Hz\mbox{]} \\
+\hline
+\mbox{\texttt{ in}}  & {\em pole} & (optional) number of poles for Butterworth filter \\
+\hline
+\mbox{\texttt{ in}}  & {\em trim} & (optional) number of elements to trim after filtering \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a370a974f2d883471a9c3183f2e0d48cf}\label{classtl_1_1_tolles_lawson_a370a974f2d883471a9c3183f2e0d48cf}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!createCoeff@{createCoeff}}
+\index{createCoeff@{createCoeff}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{createCoeff()}{createCoeff()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::create\+Coeff (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{T\+L\+\_\+beta\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bx,  }\item[{const std\+::vector$<$ double $>$ \&}]{By,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bz,  }\item[{const std\+::vector$<$ double $>$ \&}]{Be,  }\item[{std\+::vector$<$ double $>$ \&}]{Bt,  }\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&}]{terms = {\ttfamily \{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}},  }\item[{const double}]{lambda = {\ttfamily 0.0},  }\item[{const double}]{pass1 = {\ttfamily 0.1},  }\item[{const double}]{pass2 = {\ttfamily 0.9},  }\item[{const double}]{fs = {\ttfamily 10.0},  }\item[{const int}]{pole = {\ttfamily 4},  }\item[{const int}]{trim = {\ttfamily 20} }\end{DoxyParamCaption})}
+
+
+
+Create Tolles-\/\+Lawson coefficients using vector and scalar magnetometer measurements with or without a bandpass filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em T\+L\+\_\+beta\+\_\+} & output Tolles-\/\+Lawson coefficients \\
+\hline
+\mbox{\texttt{ in}}  & {\em Bx,By,Bz} & sequences of the triaxial compoenents of the magnetic measurements \\
+\hline
+\mbox{\texttt{ in}}  & {\em Be} & (provided or empty) the baseline earth magnetic field; the band-\/pass filter is applied if empty \\
+\hline
+\mbox{\texttt{ in}}  & {\em Bt} & (provided or empty) the magnetic intensities measured by optically pumped magnetometers \\
+\hline
+\mbox{\texttt{ in}}  & {\em terms} & (optional) the terms used in TL model coefficients (default\+: \{P\+E\+R\+M\+A\+N\+E\+NT,I\+N\+D\+U\+C\+ED, E\+D\+DY\}) \\
+\hline
+\mbox{\texttt{ in}}  & {\em lambda} & \textbackslash{}lambda$\ast$\+Identity is added to A\+TA matrix in the linear regression algorithm \\
+\hline
+\mbox{\texttt{ in}}  & {\em pass1,pass2,fs,pole,trim} & parameters for the band-\/pass filter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a353d979123fad3405645b92708013147}\label{classtl_1_1_tolles_lawson_a353d979123fad3405645b92708013147}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!createCoeff\_component@{createCoeff\_component}}
+\index{createCoeff\_component@{createCoeff\_component}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{createCoeff\_component()}{createCoeff\_component()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::create\+Coeff\+\_\+component (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{T\+L\+\_\+beta\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bx,  }\item[{const std\+::vector$<$ double $>$ \&}]{By,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bz,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bex,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bey,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bez,  }\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&}]{terms = {\ttfamily \{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}} }\end{DoxyParamCaption})}
+
+
+
+Create component-\/based Tolles-\/\+Lawson coefficients using vector and scalar magnetometer measurements. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em T\+L\+\_\+beta\+\_\+} & output Tolles-\/\+Lawson coefficients \\
+\hline
+\mbox{\texttt{ in}}  & {\em Bx,By,Bz} & sequences of the triaxial compoenents of the magnetic measurements \\
+\hline
+\mbox{\texttt{ in}}  & {\em Bex,Bey,Bez} & the baseline earth magnetic field, represented as triaxial components \\
+\hline
+\mbox{\texttt{ in}}  & {\em terms} & (optional) the terms used in TL model coefficients (default\+: \{P\+E\+R\+M\+A\+N\+E\+NT,I\+N\+D\+U\+C\+ED, E\+D\+DY\}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a6e0f3109be50ef5aa4b9b14d0882533f}\label{classtl_1_1_tolles_lawson_a6e0f3109be50ef5aa4b9b14d0882533f}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!createMatrixA@{createMatrixA}}
+\index{createMatrixA@{createMatrixA}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{createMatrixA()}{createMatrixA()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::create\+MatrixA (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{T\+L\+\_\+\+A\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bx,  }\item[{const std\+::vector$<$ double $>$ \&}]{By,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bz,  }\item[{std\+::vector$<$ double $>$ \&}]{Bt,  }\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&}]{terms = {\ttfamily \{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}} }\end{DoxyParamCaption})}
+
+
+
+Create Tolles-\/\+Lawson {\ttfamily A} matrix using vector magnetometer measurements. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em T\+L\+\_\+\+A\+\_\+} & output Tolles-\/\+Lawson {\ttfamily A} matrix (N$\ast$18) \\
+\hline
+\mbox{\texttt{ in}}  & {\em Bx,By,Bz} & sequences of the triaxial compoenents of the magnetic measurements \\
+\hline
+\mbox{\texttt{ in}}  & {\em Bt} & (provided or empty) the magnetic intensities measured by optically pumped magnetometers \\
+\hline
+\mbox{\texttt{ in}}  & {\em terms} & (optional) the terms used in TL model coefficients (default\+: \{P\+E\+R\+M\+A\+N\+E\+NT,I\+N\+D\+U\+C\+ED, E\+D\+DY\}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a2b7bfb08f2761c66a30be8286382b797}\label{classtl_1_1_tolles_lawson_a2b7bfb08f2761c66a30be8286382b797}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!createMatrixA\_component@{createMatrixA\_component}}
+\index{createMatrixA\_component@{createMatrixA\_component}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{createMatrixA\_component()}{createMatrixA\_component()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::create\+Matrix\+A\+\_\+component (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{T\+L\+\_\+\+A\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bx,  }\item[{const std\+::vector$<$ double $>$ \&}]{By,  }\item[{const std\+::vector$<$ double $>$ \&}]{Bz,  }\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021}{T\+Lterm}}, \mbox{\hyperlink{structtl_1_1_tolles_lawson_1_1_hash_t_lterm}{Hash\+T\+Lterm}} $>$ \&}]{terms = {\ttfamily \{\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a8ba93daa4856084e590b5bc38b5971eb}{P\+E\+R\+M\+A\+N\+E\+NT}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a15e98de360d91d5f6660e6298a112bc3}{I\+N\+D\+U\+C\+ED}},~\mbox{\hyperlink{classtl_1_1_tolles_lawson_a9ce150cd2411c2947d5fd3005d7f3021a45b050e356bd20a9927a644f9d736439}{E\+D\+DY}}\}} }\end{DoxyParamCaption})}
+
+
+
+Create component-\/based Tolles-\/\+Lawson {\ttfamily A} matrix using vector magnetometer measurements. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em T\+L\+\_\+\+A\+\_\+} & output Tolles-\/\+Lawson {\ttfamily A} matrix (3N$\ast$18) \\
+\hline
+\mbox{\texttt{ in}}  & {\em Bx,By,Bz} & sequences of the triaxial compoenents of the magnetic measurements \\
+\hline
+\mbox{\texttt{ in}}  & {\em terms} & (optional) the terms used in TL model coefficients (default\+: \{P\+E\+R\+M\+A\+N\+E\+NT,I\+N\+D\+U\+C\+ED, E\+D\+DY\}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a14a66249bdce85111bf57819b180ada3}\label{classtl_1_1_tolles_lawson_a14a66249bdce85111bf57819b180ada3}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!degeneration@{degeneration}}
+\index{degeneration@{degeneration}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{degeneration()}{degeneration()}}
+{\footnotesize\ttfamily void tl\+::\+Tolles\+Lawson\+::degeneration (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{T\+L\+\_\+A }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+output degeneration problem to terminal for debugging. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em T\+L\+\_\+A} & input TL {\ttfamily A} matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_aabbb06c4750503ba0df54b512bda3f88}\label{classtl_1_1_tolles_lawson_aabbb06c4750503ba0df54b512bda3f88}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!fdm@{fdm}}
+\index{fdm@{fdm}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{fdm()}{fdm()}}
+{\footnotesize\ttfamily bool tl\+::\+Tolles\+Lawson\+::fdm (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{dif,  }\item[{const std\+::vector$<$ double $>$ \&}]{x,  }\item[{const \mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15}{Tolles\+Lawson\+::\+F\+D\+Mscheme}}}]{scheme = {\ttfamily \mbox{\hyperlink{classtl_1_1_tolles_lawson_a30d1ab3befa3d15b36ac6e65cf7eec15a42ce8156343762160f67e3ffa5e9b8a8}{C\+E\+N\+T\+R\+AL}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Finite difference method (F\+DM) on vector of input data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em dif} & output results \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & input data \\
+\hline
+\mbox{\texttt{ in}}  & {\em scheme} & enum paramter to assign a F\+DM scheme \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a8c0be95a1b03bc8f62cf1ef3b1daa25f}\label{classtl_1_1_tolles_lawson_a8c0be95a1b03bc8f62cf1ef3b1daa25f}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!linear\_regression@{linear\_regression}}
+\index{linear\_regression@{linear\_regression}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{linear\_regression()}{linear\_regression()}}
+{\footnotesize\ttfamily void tl\+::\+Tolles\+Lawson\+::linear\+\_\+regression (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{coeff,  }\item[{std\+::vector$<$ double $>$ \&}]{residual,  }\item[{const std\+::vector$<$ double $>$ \&}]{bb,  }\item[{const std\+::vector$<$ std\+::vector$<$ double $>$$>$ \&}]{AA,  }\item[{const double}]{lambda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Linear regression to solve the least-\/square problem {\ttfamily Ax=b}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em coeff} & output model coefficients \\
+\hline
+\mbox{\texttt{ out}}  & {\em residual} & output fitting residuals \\
+\hline
+\mbox{\texttt{ in}}  & {\em bb} & length-\/{\ttfamily N} observed data vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em AA} & {\ttfamily N$\ast$\+Nf} input data matrix ({\ttfamily Nf} is number of features) \\
+\hline
+\mbox{\texttt{ in}}  & {\em lambda} & ridge parameter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_acaa8bca7f18728bd5f3a1031ee22f9ac}\label{classtl_1_1_tolles_lawson_acaa8bca7f18728bd5f3a1031ee22f9ac}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!rmse@{rmse}}
+\index{rmse@{rmse}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{rmse()}{rmse()}}
+{\footnotesize\ttfamily double tl\+::\+Tolles\+Lawson\+::rmse (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{residual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the root mean square error given a residual sequence. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em residual} & input residuals \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtl_1_1_tolles_lawson_a53c3401136e8b54bbdbe17525afb7a4d}\label{classtl_1_1_tolles_lawson_a53c3401136e8b54bbdbe17525afb7a4d}} 
+\index{tl::TollesLawson@{tl::TollesLawson}!stack\_vector@{stack\_vector}}
+\index{stack\_vector@{stack\_vector}!tl::TollesLawson@{tl::TollesLawson}}
+\doxysubsubsection{\texorpdfstring{stack\_vector()}{stack\_vector()}}
+{\footnotesize\ttfamily void tl\+::\+Tolles\+Lawson\+::stack\+\_\+vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{result,  }\item[{const std\+::vector$<$ double $>$ \&}]{x,  }\item[{const std\+::vector$<$ double $>$ \&}]{y,  }\item[{const std\+::vector$<$ double $>$ \&}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Combine the components into vectors and concatenate them. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em result} & output concatenated vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em x,y,z} & sequences of triaxial components \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+3rd\+\_\+party/tolles-\/lawson/tl/\mbox{\hyperlink{tolles__lawson_8hpp}{tolles\+\_\+lawson.\+hpp}}\item 
+3rd\+\_\+party/tolles-\/lawson/tl/\mbox{\hyperlink{tolles__lawson_8cpp}{tolles\+\_\+lawson.\+cpp}}\end{DoxyCompactItemize}

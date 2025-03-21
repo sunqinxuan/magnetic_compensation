@@ -1,3 +1,14 @@
 .vscode/
 build/
 install/
+sdk/install
+sdk/build
+sdk/scripts/
+sdk/etc
+sdk/lib
+sdk/include
+sdk/models
+sdk/LICENSE
+sdk/README.md
+*.tar.gz
+

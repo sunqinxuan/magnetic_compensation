@@ -1,0 +1,8 @@
+<map id="MicMagCompensator" name="MicMagCompensator">
+<area shape="rect" id="node1" title="MicMagCompensator provides a base interface of the magnetic interference compensation algorithm." alt="" coords="255,80,415,107"/>
+<area shape="rect" id="node3" href="$class_mic_cabin_mag_compensator.html" title="MicCabinMagCompensator is a magnetic compensation algorithm specifically designed for applying the ma..." alt="" coords="5,155,203,181"/>
+<area shape="rect" id="node4" href="$class_mic_ellipsoid_mag_compensator.html" title="MicEllipsoidMagCompensator is a magnetic compensation algorithm based on the ellipsoid fitting and or..." alt="" coords="227,155,442,181"/>
+<area shape="rect" id="node5" href="$class_mic_t_l_mag_compensator.html" title="MicTLMagCompensator is a magnetic compensation algorithm based on the traditional Tolles&#45;Lawson compe..." alt="" coords="466,155,641,181"/>
+<area shape="rect" id="node2" href="$class_mic_observable.html" title=" " alt="" coords="191,5,478,32"/>
+<area shape="rect" id="node6" href="$class_mic_t_l_component_mag_compensator.html" title="MicTLComponentMagCompensator is a magnetic compensation algorithm based on a modified Tolles&#45;Lawson m..." alt="" coords="428,229,679,256"/>
+</map>

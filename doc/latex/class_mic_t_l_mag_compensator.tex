@@ -1,0 +1,180 @@
+\hypertarget{class_mic_t_l_mag_compensator}{}\doxysection{Mic\+T\+L\+Mag\+Compensator Class Reference}
+\label{class_mic_t_l_mag_compensator}\index{MicTLMagCompensator@{MicTLMagCompensator}}
+
+
+\mbox{\hyperlink{class_mic_t_l_mag_compensator}{Mic\+T\+L\+Mag\+Compensator}} is a magnetic compensation algorithm based on the traditional Tolles-\/\+Lawson compensation model.  
+
+
+
+
+{\ttfamily \#include $<$mic\+\_\+tl\+\_\+mag\+\_\+compensator.\+h$>$}
+
+
+
+Inheritance diagram for Mic\+T\+L\+Mag\+Compensator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{class_mic_t_l_mag_compensator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mic\+T\+L\+Mag\+Compensator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mic_t_l_mag_compensator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mic_t_l_mag_compensator_acf41fc5f0d4ec8e047560ff3c9adef7c}{Mic\+T\+L\+Mag\+Compensator}} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_mic_t_l_mag_compensator_a679138329c3a76e17c0d3f045130b7bd}{$\sim$\+Mic\+T\+L\+Mag\+Compensator}} ()=default
+\begin{DoxyCompactList}\small\item\em destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_t_l_mag_compensator_a720be7c8627cc32f24a22793a39dfd42}{do\+\_\+calibrate}} () override
+\begin{DoxyCompactList}\small\item\em Implementation of the TL model-\/based calibration algorithm. \end{DoxyCompactList}\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_t_l_mag_compensator_abba1d69dd80ef398e162bacc59f0a430}{do\+\_\+compenste}} (const float64\+\_\+t ts, mic\+\_\+mag\+\_\+t \&out) override
+\begin{DoxyCompactList}\small\item\em Compensate using the TL model-\/based model (only if the working state is set to {\itshape M\+I\+C\+\_\+\+M\+A\+G\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+ED}). \end{DoxyCompactList}\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_t_l_mag_compensator_a91ddd88e16d7348b00eca41be0cbed3d}{serialize}} (\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&node) override
+\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_t_l_mag_compensator_add7099ce41d4d36dc20a842ee11132c0}{deserialize}} (\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&node) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mic__tl__component__mag__compensator_8h_a051fa78edc2b6eec9e306eae5023e987}{mic\+\_\+tolles\+\_\+lawson\+\_\+shared\+\_\+ptr}} \mbox{\hyperlink{class_mic_t_l_mag_compensator_a1e8377c58bb51872654b7a98262c4d9a}{\+\_\+tl\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em Pointer to a {\itshape \mbox{\hyperlink{classtl_1_1_tolles_lawson}{tl\+::\+Tolles\+Lawson}}} object. \end{DoxyCompactList}\item 
+vector\+\_\+xf\+\_\+t \mbox{\hyperlink{class_mic_t_l_mag_compensator_afe8e82e9ce1310a603b058f557f95794}{\+\_\+tl\+\_\+coeffs}}
+\begin{DoxyCompactList}\small\item\em TL model coefficients \textbackslash{}beta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_mic_t_l_mag_compensator}{Mic\+T\+L\+Mag\+Compensator}} is a magnetic compensation algorithm based on the traditional Tolles-\/\+Lawson compensation model. 
+
+\begin{DoxyAuthor}{Author}
+Qinxuan Sun, Yansong Gong 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mic_t_l_mag_compensator_acf41fc5f0d4ec8e047560ff3c9adef7c}\label{class_mic_t_l_mag_compensator_acf41fc5f0d4ec8e047560ff3c9adef7c}} 
+\index{MicTLMagCompensator@{MicTLMagCompensator}!MicTLMagCompensator@{MicTLMagCompensator}}
+\index{MicTLMagCompensator@{MicTLMagCompensator}!MicTLMagCompensator@{MicTLMagCompensator}}
+\doxysubsubsection{\texorpdfstring{MicTLMagCompensator()}{MicTLMagCompensator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__prerequisite_8h_ac3afdc1b2ec865ffb74d6eb75764462e}{M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+S\+T\+A\+RT}} Mic\+T\+L\+Mag\+Compensator\+::\+Mic\+T\+L\+Mag\+Compensator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Empty constructor. 
+
+\mbox{\Hypertarget{class_mic_t_l_mag_compensator_a679138329c3a76e17c0d3f045130b7bd}\label{class_mic_t_l_mag_compensator_a679138329c3a76e17c0d3f045130b7bd}} 
+\index{MicTLMagCompensator@{MicTLMagCompensator}!````~MicTLMagCompensator@{$\sim$MicTLMagCompensator}}
+\index{````~MicTLMagCompensator@{$\sim$MicTLMagCompensator}!MicTLMagCompensator@{MicTLMagCompensator}}
+\doxysubsubsection{\texorpdfstring{$\sim$MicTLMagCompensator()}{~MicTLMagCompensator()}}
+{\footnotesize\ttfamily virtual Mic\+T\+L\+Mag\+Compensator\+::$\sim$\+Mic\+T\+L\+Mag\+Compensator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mic_t_l_mag_compensator_add7099ce41d4d36dc20a842ee11132c0}\label{class_mic_t_l_mag_compensator_add7099ce41d4d36dc20a842ee11132c0}} 
+\index{MicTLMagCompensator@{MicTLMagCompensator}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!MicTLMagCompensator@{MicTLMagCompensator}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+T\+L\+Mag\+Compensator\+::deserialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mic_mag_compensator_a4a090fdaf9ef1b5cafdb13d8ba30d819}{Mic\+Mag\+Compensator}}.
+
+\mbox{\Hypertarget{class_mic_t_l_mag_compensator_a720be7c8627cc32f24a22793a39dfd42}\label{class_mic_t_l_mag_compensator_a720be7c8627cc32f24a22793a39dfd42}} 
+\index{MicTLMagCompensator@{MicTLMagCompensator}!do\_calibrate@{do\_calibrate}}
+\index{do\_calibrate@{do\_calibrate}!MicTLMagCompensator@{MicTLMagCompensator}}
+\doxysubsubsection{\texorpdfstring{do\_calibrate()}{do\_calibrate()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+T\+L\+Mag\+Compensator\+::do\+\_\+calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of the TL model-\/based calibration algorithm. 
+
+
+
+Implements \mbox{\hyperlink{class_mic_mag_compensator_a5a411ece565ad33e614fa9f4deb49245}{Mic\+Mag\+Compensator}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mic_t_l_component_mag_compensator_afec2d2ced69749df12b716e022a23c01}{Mic\+T\+L\+Component\+Mag\+Compensator}}.
+
+\mbox{\Hypertarget{class_mic_t_l_mag_compensator_abba1d69dd80ef398e162bacc59f0a430}\label{class_mic_t_l_mag_compensator_abba1d69dd80ef398e162bacc59f0a430}} 
+\index{MicTLMagCompensator@{MicTLMagCompensator}!do\_compenste@{do\_compenste}}
+\index{do\_compenste@{do\_compenste}!MicTLMagCompensator@{MicTLMagCompensator}}
+\doxysubsubsection{\texorpdfstring{do\_compenste()}{do\_compenste()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+T\+L\+Mag\+Compensator\+::do\+\_\+compenste (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{mic\+\_\+mag\+\_\+t \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compensate using the TL model-\/based model (only if the working state is set to {\itshape M\+I\+C\+\_\+\+M\+A\+G\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+ED}). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ts} & the timestamp at which the compensation result is required \\
+\hline
+\mbox{\texttt{ out}}  & {\em out} & output the compensated result at time {\itshape ts} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_mic_mag_compensator_ac23bd6a837144a977a30de1c2ac5295a}{Mic\+Mag\+Compensator}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mic_t_l_component_mag_compensator_a2d53434944aeaf2d1945e99268b1a4d7}{Mic\+T\+L\+Component\+Mag\+Compensator}}.
+
+\mbox{\Hypertarget{class_mic_t_l_mag_compensator_a91ddd88e16d7348b00eca41be0cbed3d}\label{class_mic_t_l_mag_compensator_a91ddd88e16d7348b00eca41be0cbed3d}} 
+\index{MicTLMagCompensator@{MicTLMagCompensator}!serialize@{serialize}}
+\index{serialize@{serialize}!MicTLMagCompensator@{MicTLMagCompensator}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+T\+L\+Mag\+Compensator\+::serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mic_mag_compensator_a5cd2f4fc5c9d7f159792374ef3bea48d}{Mic\+Mag\+Compensator}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mic_t_l_mag_compensator_afe8e82e9ce1310a603b058f557f95794}\label{class_mic_t_l_mag_compensator_afe8e82e9ce1310a603b058f557f95794}} 
+\index{MicTLMagCompensator@{MicTLMagCompensator}!\_tl\_coeffs@{\_tl\_coeffs}}
+\index{\_tl\_coeffs@{\_tl\_coeffs}!MicTLMagCompensator@{MicTLMagCompensator}}
+\doxysubsubsection{\texorpdfstring{\_tl\_coeffs}{\_tl\_coeffs}}
+{\footnotesize\ttfamily vector\+\_\+xf\+\_\+t Mic\+T\+L\+Mag\+Compensator\+::\+\_\+tl\+\_\+coeffs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+TL model coefficients \textbackslash{}beta. 
+
+\mbox{\Hypertarget{class_mic_t_l_mag_compensator_a1e8377c58bb51872654b7a98262c4d9a}\label{class_mic_t_l_mag_compensator_a1e8377c58bb51872654b7a98262c4d9a}} 
+\index{MicTLMagCompensator@{MicTLMagCompensator}!\_tl\_model@{\_tl\_model}}
+\index{\_tl\_model@{\_tl\_model}!MicTLMagCompensator@{MicTLMagCompensator}}
+\doxysubsubsection{\texorpdfstring{\_tl\_model}{\_tl\_model}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__tl__component__mag__compensator_8h_a051fa78edc2b6eec9e306eae5023e987}{mic\+\_\+tolles\+\_\+lawson\+\_\+shared\+\_\+ptr}} Mic\+T\+L\+Mag\+Compensator\+::\+\_\+tl\+\_\+model\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pointer to a {\itshape \mbox{\hyperlink{classtl_1_1_tolles_lawson}{tl\+::\+Tolles\+Lawson}}} object. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/mic\+\_\+mag\+\_\+compensator/impl/\mbox{\hyperlink{mic__tl__mag__compensator_8h}{mic\+\_\+tl\+\_\+mag\+\_\+compensator.\+h}}\item 
+src/mic\+\_\+mag\+\_\+compensator/impl/\mbox{\hyperlink{mic__tl__mag__compensator_8cc}{mic\+\_\+tl\+\_\+mag\+\_\+compensator.\+cc}}\end{DoxyCompactItemize}

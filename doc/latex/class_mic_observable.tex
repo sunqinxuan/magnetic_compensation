@@ -1,0 +1,90 @@
+\hypertarget{class_mic_observable}{}\doxysection{Mic\+Observable$<$ T $>$ Class Template Reference}
+\label{class_mic_observable}\index{MicObservable$<$ T $>$@{MicObservable$<$ T $>$}}
+
+
+{\ttfamily \#include $<$mic\+\_\+prerequisite.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mic_observable_aa4efc46745b13bffb752864a39943619}{Mic\+Observable}} ()
+\item 
+virtual \mbox{\hyperlink{class_mic_observable_aca6da0e303ce34148bff3e134d196cf0}{$\sim$\+Mic\+Observable}} ()
+\item 
+void \mbox{\hyperlink{class_mic_observable_a95b280dd794893f3f13d1804742d4af4}{notify}} (T \&source)
+\item 
+void \mbox{\hyperlink{class_mic_observable_a927f212e0a6b7fbb371368e9e2d235e0}{subscrible}} (\mbox{\hyperlink{mic__prerequisite_8h_ac48fbe04ebca487b34b52c507ffae399}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}}$<$ T $>$ obs)
+\item 
+void \mbox{\hyperlink{class_mic_observable_a8d85e60156309747b65979e388b1d57f}{unsubscrible}} (\mbox{\hyperlink{mic__prerequisite_8h_ac48fbe04ebca487b34b52c507ffae399}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}}$<$ T $>$ obs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{mic__prerequisite_8h_ac48fbe04ebca487b34b52c507ffae399}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}}$<$ T $>$ $>$ \mbox{\hyperlink{class_mic_observable_aa53993abaa1ff5d4f5f0afb228be488e}{observers}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_mic_observable_a3546447a1a15f08a5bfdbaaa0997fe45}{mtx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mic_observable_aa4efc46745b13bffb752864a39943619}\label{class_mic_observable_aa4efc46745b13bffb752864a39943619}} 
+\index{MicObservable$<$ T $>$@{MicObservable$<$ T $>$}!MicObservable@{MicObservable}}
+\index{MicObservable@{MicObservable}!MicObservable$<$ T $>$@{MicObservable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MicObservable()}{MicObservable()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_mic_observable}{Mic\+Observable}}$<$ T $>$\+::\mbox{\hyperlink{class_mic_observable}{Mic\+Observable}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mic_observable_aca6da0e303ce34148bff3e134d196cf0}\label{class_mic_observable_aca6da0e303ce34148bff3e134d196cf0}} 
+\index{MicObservable$<$ T $>$@{MicObservable$<$ T $>$}!````~MicObservable@{$\sim$MicObservable}}
+\index{````~MicObservable@{$\sim$MicObservable}!MicObservable$<$ T $>$@{MicObservable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$MicObservable()}{~MicObservable()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{class_mic_observable}{Mic\+Observable}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_mic_observable}{Mic\+Observable}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mic_observable_a95b280dd794893f3f13d1804742d4af4}\label{class_mic_observable_a95b280dd794893f3f13d1804742d4af4}} 
+\index{MicObservable$<$ T $>$@{MicObservable$<$ T $>$}!notify@{notify}}
+\index{notify@{notify}!MicObservable$<$ T $>$@{MicObservable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_mic_observable}{Mic\+Observable}}$<$ T $>$\+::notify (\begin{DoxyParamCaption}\item[{T \&}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mic_observable_a927f212e0a6b7fbb371368e9e2d235e0}\label{class_mic_observable_a927f212e0a6b7fbb371368e9e2d235e0}} 
+\index{MicObservable$<$ T $>$@{MicObservable$<$ T $>$}!subscrible@{subscrible}}
+\index{subscrible@{subscrible}!MicObservable$<$ T $>$@{MicObservable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{subscrible()}{subscrible()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_mic_observable}{Mic\+Observable}}$<$ T $>$\+::subscrible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_ac48fbe04ebca487b34b52c507ffae399}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}}$<$ T $>$}]{obs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mic_observable_a8d85e60156309747b65979e388b1d57f}\label{class_mic_observable_a8d85e60156309747b65979e388b1d57f}} 
+\index{MicObservable$<$ T $>$@{MicObservable$<$ T $>$}!unsubscrible@{unsubscrible}}
+\index{unsubscrible@{unsubscrible}!MicObservable$<$ T $>$@{MicObservable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{unsubscrible()}{unsubscrible()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_mic_observable}{Mic\+Observable}}$<$ T $>$\+::unsubscrible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_ac48fbe04ebca487b34b52c507ffae399}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}}$<$ T $>$}]{obs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mic_observable_a3546447a1a15f08a5bfdbaaa0997fe45}\label{class_mic_observable_a3546447a1a15f08a5bfdbaaa0997fe45}} 
+\index{MicObservable$<$ T $>$@{MicObservable$<$ T $>$}!mtx@{mtx}}
+\index{mtx@{mtx}!MicObservable$<$ T $>$@{MicObservable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mtx}{mtx}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::mutex \mbox{\hyperlink{class_mic_observable}{Mic\+Observable}}$<$ T $>$\+::mtx\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mic_observable_aa53993abaa1ff5d4f5f0afb228be488e}\label{class_mic_observable_aa53993abaa1ff5d4f5f0afb228be488e}} 
+\index{MicObservable$<$ T $>$@{MicObservable$<$ T $>$}!observers@{observers}}
+\index{observers@{observers}!MicObservable$<$ T $>$@{MicObservable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{observers}{observers}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$\mbox{\hyperlink{mic__prerequisite_8h_ac48fbe04ebca487b34b52c507ffae399}{mic\+\_\+observer\+\_\+shared\+\_\+ptr}}$<$T$>$ $>$ \mbox{\hyperlink{class_mic_observable}{Mic\+Observable}}$<$ T $>$\+::observers\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/common/\mbox{\hyperlink{mic__prerequisite_8h}{mic\+\_\+prerequisite.\+h}}\item 
+include/common/\mbox{\hyperlink{mic__utils_8h}{mic\+\_\+utils.\+h}}\end{DoxyCompactItemize}

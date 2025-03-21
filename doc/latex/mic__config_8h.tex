@@ -1,0 +1,127 @@
+\hypertarget{mic__config_8h}{}\doxysection{include/common/mic\+\_\+config.h File Reference}
+\label{mic__config_8h}\index{include/common/mic\_config.h@{include/common/mic\_config.h}}
+{\ttfamily \#include \char`\"{}common/mic\+\_\+prerequisite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/mic\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$typeinfo$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+Include dependency graph for mic\+\_\+config.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mic__config_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mic__config_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_mic_param_type}{Mic\+Param\+Type$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{class_mic_config}{Mic\+Config}}
+\item 
+class \mbox{\hyperlink{class_mic_json_config}{Mic\+Json\+Config}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mic__config_8h_abf3a67dd8e637aa67933b30581027ada}{M\+I\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+ET}}(type,  key)~\mbox{\hyperlink{class_mic_config_a07658f7a58ae10c20a78831ab745ee93}{mic\+\_\+config\+\_\+t\+::get\+\_\+instance}}().get$<$type$>$(key)
+\item 
+\#define \mbox{\hyperlink{mic__config_8h_ad556365896cf5546b92720bd9108fdbf}{M\+I\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+ET}}(type,  key,  value)~\mbox{\hyperlink{class_mic_config_a07658f7a58ae10c20a78831ab745ee93}{mic\+\_\+config\+\_\+t\+::get\+\_\+instance}}().\mbox{\hyperlink{_c_make_lists_8txt_a57b502ce7f442d5ece67af03fb4278d7}{set}}$<$type$>$(key, value)
+\item 
+\#define \mbox{\hyperlink{mic__config_8h_a844d9e4cdcb3fc412413c7729496087f}{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+A\+R\+AM}}(key,  type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{mic__config_8h_a9e2e01c3aab62722b47165f78f3ae566}{mic\+\_\+config\+\_\+unique\+\_\+ptr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{mic__prerequisite_8h_a0b4609f1c6c770e66e1a5f230551e719}{mic\+\_\+config\+\_\+t}} $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{mic__config_8h_a03fa94366a92d90156f402bb6c6e3c31}{mic\+\_\+param\+\_\+type\+\_\+t}} = \mbox{\hyperlink{struct_mic_param_type}{Mic\+Param\+Type}}$<$ T $>$
+\item 
+using \mbox{\hyperlink{mic__config_8h_af5848b72eb4be107aeba77d91f7ea24e}{mic\+\_\+config\+\_\+type\+\_\+t}} = \mbox{\hyperlink{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1}{Mic\+Config\+Type}}
+\item 
+using \mbox{\hyperlink{mic__config_8h_a0943b01c522bd21c213f3f8c0ded34b9}{mic\+\_\+json\+\_\+config\+\_\+t}} = \mbox{\hyperlink{class_mic_json_config}{Mic\+Json\+Config}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1}{Mic\+Config\+Type}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1a0b49de0609136815e4f8a4c1475269af}{Mic\+Config\+Type\+::\+M\+I\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+J\+S\+ON}} = 0
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mic__config_8h_abf3a67dd8e637aa67933b30581027ada}\label{mic__config_8h_abf3a67dd8e637aa67933b30581027ada}} 
+\index{mic\_config.h@{mic\_config.h}!MIC\_CONFIG\_GET@{MIC\_CONFIG\_GET}}
+\index{MIC\_CONFIG\_GET@{MIC\_CONFIG\_GET}!mic\_config.h@{mic\_config.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_CONFIG\_GET}{MIC\_CONFIG\_GET}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+G\+ET(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{key }\end{DoxyParamCaption})~\mbox{\hyperlink{class_mic_config_a07658f7a58ae10c20a78831ab745ee93}{mic\+\_\+config\+\_\+t\+::get\+\_\+instance}}().get$<$type$>$(key)}
+
+\mbox{\Hypertarget{mic__config_8h_ad556365896cf5546b92720bd9108fdbf}\label{mic__config_8h_ad556365896cf5546b92720bd9108fdbf}} 
+\index{mic\_config.h@{mic\_config.h}!MIC\_CONFIG\_SET@{MIC\_CONFIG\_SET}}
+\index{MIC\_CONFIG\_SET@{MIC\_CONFIG\_SET}!mic\_config.h@{mic\_config.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_CONFIG\_SET}{MIC\_CONFIG\_SET}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{key,  }\item[{}]{value }\end{DoxyParamCaption})~\mbox{\hyperlink{class_mic_config_a07658f7a58ae10c20a78831ab745ee93}{mic\+\_\+config\+\_\+t\+::get\+\_\+instance}}().\mbox{\hyperlink{_c_make_lists_8txt_a57b502ce7f442d5ece67af03fb4278d7}{set}}$<$type$>$(key, value)}
+
+\mbox{\Hypertarget{mic__config_8h_a844d9e4cdcb3fc412413c7729496087f}\label{mic__config_8h_a844d9e4cdcb3fc412413c7729496087f}} 
+\index{mic\_config.h@{mic\_config.h}!REGISTER\_PARAM@{REGISTER\_PARAM}}
+\index{REGISTER\_PARAM@{REGISTER\_PARAM}!mic\_config.h@{mic\_config.h}}
+\doxysubsubsection{\texorpdfstring{REGISTER\_PARAM}{REGISTER\_PARAM}}
+{\footnotesize\ttfamily \#define R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+A\+R\+AM(\begin{DoxyParamCaption}\item[{}]{key,  }\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
+\DoxyCodeLine{            \_param\_registry[key] = \mbox{\hyperlink{struct_mic_param_type_a4c8137439b03b5929681879c7c594648}{mic\_param\_type\_t<type>::info}}(); \(\backslash\)}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{mic__config_8h_af5848b72eb4be107aeba77d91f7ea24e}\label{mic__config_8h_af5848b72eb4be107aeba77d91f7ea24e}} 
+\index{mic\_config.h@{mic\_config.h}!mic\_config\_type\_t@{mic\_config\_type\_t}}
+\index{mic\_config\_type\_t@{mic\_config\_type\_t}!mic\_config.h@{mic\_config.h}}
+\doxysubsubsection{\texorpdfstring{mic\_config\_type\_t}{mic\_config\_type\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1}{mic\+\_\+config\+\_\+type\+\_\+t}} =  \mbox{\hyperlink{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1}{Mic\+Config\+Type}}}
+
+\mbox{\Hypertarget{mic__config_8h_a9e2e01c3aab62722b47165f78f3ae566}\label{mic__config_8h_a9e2e01c3aab62722b47165f78f3ae566}} 
+\index{mic\_config.h@{mic\_config.h}!mic\_config\_unique\_ptr@{mic\_config\_unique\_ptr}}
+\index{mic\_config\_unique\_ptr@{mic\_config\_unique\_ptr}!mic\_config.h@{mic\_config.h}}
+\doxysubsubsection{\texorpdfstring{mic\_config\_unique\_ptr}{mic\_config\_unique\_ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__config_8h_a9e2e01c3aab62722b47165f78f3ae566}{mic\+\_\+config\+\_\+unique\+\_\+ptr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{mic__prerequisite_8h_a0b4609f1c6c770e66e1a5f230551e719}{mic\+\_\+config\+\_\+t}}$>$}
+
+\mbox{\Hypertarget{mic__config_8h_a0943b01c522bd21c213f3f8c0ded34b9}\label{mic__config_8h_a0943b01c522bd21c213f3f8c0ded34b9}} 
+\index{mic\_config.h@{mic\_config.h}!mic\_json\_config\_t@{mic\_json\_config\_t}}
+\index{mic\_json\_config\_t@{mic\_json\_config\_t}!mic\_config.h@{mic\_config.h}}
+\doxysubsubsection{\texorpdfstring{mic\_json\_config\_t}{mic\_json\_config\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__config_8h_a0943b01c522bd21c213f3f8c0ded34b9}{mic\+\_\+json\+\_\+config\+\_\+t}} =  \mbox{\hyperlink{class_mic_json_config}{Mic\+Json\+Config}}}
+
+\mbox{\Hypertarget{mic__config_8h_a03fa94366a92d90156f402bb6c6e3c31}\label{mic__config_8h_a03fa94366a92d90156f402bb6c6e3c31}} 
+\index{mic\_config.h@{mic\_config.h}!mic\_param\_type\_t@{mic\_param\_type\_t}}
+\index{mic\_param\_type\_t@{mic\_param\_type\_t}!mic\_config.h@{mic\_config.h}}
+\doxysubsubsection{\texorpdfstring{mic\_param\_type\_t}{mic\_param\_type\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{mic__config_8h_a03fa94366a92d90156f402bb6c6e3c31}{mic\+\_\+param\+\_\+type\+\_\+t}} =  \mbox{\hyperlink{struct_mic_param_type}{Mic\+Param\+Type}}$<$T$>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1}\label{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1}} 
+\index{mic\_config.h@{mic\_config.h}!MicConfigType@{MicConfigType}}
+\index{MicConfigType@{MicConfigType}!mic\_config.h@{mic\_config.h}}
+\doxysubsubsection{\texorpdfstring{MicConfigType}{MicConfigType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1}{Mic\+Config\+Type}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIC\_CONFIG\_JSON@{MIC\_CONFIG\_JSON}!mic\_config.h@{mic\_config.h}}\index{mic\_config.h@{mic\_config.h}!MIC\_CONFIG\_JSON@{MIC\_CONFIG\_JSON}}}\mbox{\Hypertarget{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1a0b49de0609136815e4f8a4c1475269af}\label{mic__config_8h_a20308fa23f4b3ee4baa42351f66008c1a0b49de0609136815e4f8a4c1475269af}} 
+M\+I\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+J\+S\+ON&\\
+\hline
+
+\end{DoxyEnumFields}

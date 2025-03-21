@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_mic_nav_state_estimator.html" title="MicNavStateEstimator provides a base interface of the state estimation algorithm." alt="" coords="5,5,173,32"/>
+<area shape="rect" id="node2" href="$class_mic_k_f_i_n_s_estimator.html" title="MicKFINSEstimator provides a Kalman filter&#45;based implementation of the state estimation algorithm." alt="" coords="221,5,368,32"/>
+</map>

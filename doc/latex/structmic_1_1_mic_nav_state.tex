@@ -1,0 +1,87 @@
+\hypertarget{structmic_1_1_mic_nav_state}{}\doxysection{mic\+::Mic\+Nav\+State Struct Reference}
+\label{structmic_1_1_mic_nav_state}\index{mic::MicNavState@{mic::MicNavState}}
+
+
+\mbox{\hyperlink{structmic_1_1_mic_nav_state}{Mic\+Nav\+State}} represents the navigation state of a aircraft or vehicle at a time step.  
+
+
+
+
+{\ttfamily \#include $<$mic\+\_\+base.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmic_1_1_mic_nav_state_a3dc1d811d41ed504bca0e7acbd0a99b4}{Mic\+Nav\+State}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemic_a69568bba90cd9d9877f97729df9f2354}{float64\+\_\+t}} \mbox{\hyperlink{structmic_1_1_mic_nav_state_ad7162dd89ac5ae273209804c75720498}{time\+\_\+stamp}}
+\begin{DoxyCompactList}\small\item\em The timestamp of this navigation state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}{vector\+\_\+3f\+\_\+t}} \mbox{\hyperlink{structmic_1_1_mic_nav_state_a767aeb7494f4a3e86c8f1be67d959bfa}{position}}
+\begin{DoxyCompactList}\small\item\em position presented in the north-\/east-\/down coordinates (m). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemic_a05e842658b48e5eebf9e954351b7c8b4}{quaternionf\+\_\+t}} \mbox{\hyperlink{structmic_1_1_mic_nav_state_a4278dc114811f673a4e199599b7bfbc0}{attitude}}
+\begin{DoxyCompactList}\small\item\em attitude of the body frame \mbox{[}nose, right wing, down\mbox{]} w.\+r.\+t. the navigation frame \mbox{[}north, east, down\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}{vector\+\_\+3f\+\_\+t}} \mbox{\hyperlink{structmic_1_1_mic_nav_state_ad55c8acd30e1be0905d104f7f1864178}{velocity}}
+\begin{DoxyCompactList}\small\item\em velocity presented in the north-\/east-\/down coordinates (m). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{structmic_1_1_mic_nav_state}{Mic\+Nav\+State}} represents the navigation state of a aircraft or vehicle at a time step. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmic_1_1_mic_nav_state_a3dc1d811d41ed504bca0e7acbd0a99b4}\label{structmic_1_1_mic_nav_state_a3dc1d811d41ed504bca0e7acbd0a99b4}} 
+\index{mic::MicNavState@{mic::MicNavState}!MicNavState@{MicNavState}}
+\index{MicNavState@{MicNavState}!mic::MicNavState@{mic::MicNavState}}
+\doxysubsubsection{\texorpdfstring{MicNavState()}{MicNavState()}}
+{\footnotesize\ttfamily mic\+::\+Mic\+Nav\+State\+::\+Mic\+Nav\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmic_1_1_mic_nav_state_a4278dc114811f673a4e199599b7bfbc0}\label{structmic_1_1_mic_nav_state_a4278dc114811f673a4e199599b7bfbc0}} 
+\index{mic::MicNavState@{mic::MicNavState}!attitude@{attitude}}
+\index{attitude@{attitude}!mic::MicNavState@{mic::MicNavState}}
+\doxysubsubsection{\texorpdfstring{attitude}{attitude}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemic_a05e842658b48e5eebf9e954351b7c8b4}{quaternionf\+\_\+t}} mic\+::\+Mic\+Nav\+State\+::attitude}
+
+
+
+attitude of the body frame \mbox{[}nose, right wing, down\mbox{]} w.\+r.\+t. the navigation frame \mbox{[}north, east, down\mbox{]}. 
+
+\mbox{\Hypertarget{structmic_1_1_mic_nav_state_a767aeb7494f4a3e86c8f1be67d959bfa}\label{structmic_1_1_mic_nav_state_a767aeb7494f4a3e86c8f1be67d959bfa}} 
+\index{mic::MicNavState@{mic::MicNavState}!position@{position}}
+\index{position@{position}!mic::MicNavState@{mic::MicNavState}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}{vector\+\_\+3f\+\_\+t}} mic\+::\+Mic\+Nav\+State\+::position}
+
+
+
+position presented in the north-\/east-\/down coordinates (m). 
+
+\mbox{\Hypertarget{structmic_1_1_mic_nav_state_ad7162dd89ac5ae273209804c75720498}\label{structmic_1_1_mic_nav_state_ad7162dd89ac5ae273209804c75720498}} 
+\index{mic::MicNavState@{mic::MicNavState}!time\_stamp@{time\_stamp}}
+\index{time\_stamp@{time\_stamp}!mic::MicNavState@{mic::MicNavState}}
+\doxysubsubsection{\texorpdfstring{time\_stamp}{time\_stamp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemic_a69568bba90cd9d9877f97729df9f2354}{float64\+\_\+t}} mic\+::\+Mic\+Nav\+State\+::time\+\_\+stamp}
+
+
+
+The timestamp of this navigation state. 
+
+\mbox{\Hypertarget{structmic_1_1_mic_nav_state_ad55c8acd30e1be0905d104f7f1864178}\label{structmic_1_1_mic_nav_state_ad55c8acd30e1be0905d104f7f1864178}} 
+\index{mic::MicNavState@{mic::MicNavState}!velocity@{velocity}}
+\index{velocity@{velocity}!mic::MicNavState@{mic::MicNavState}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}{vector\+\_\+3f\+\_\+t}} mic\+::\+Mic\+Nav\+State\+::velocity}
+
+
+
+velocity presented in the north-\/east-\/down coordinates (m). 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/api/\mbox{\hyperlink{mic__base_8h}{mic\+\_\+base.\+h}}\end{DoxyCompactItemize}

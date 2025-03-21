@@ -1,0 +1,105 @@
+\hypertarget{class_mic_k_f_i_n_s_estimator}{}\doxysection{Mic\+K\+F\+I\+N\+S\+Estimator Class Reference}
+\label{class_mic_k_f_i_n_s_estimator}\index{MicKFINSEstimator@{MicKFINSEstimator}}
+
+
+{\bfseries{\mbox{\hyperlink{class_mic_k_f_i_n_s_estimator}{Mic\+K\+F\+I\+N\+S\+Estimator}}}} provides a Kalman filter-\/based implementation of the state estimation algorithm.  
+
+
+
+
+{\ttfamily \#include $<$mic\+\_\+kf\+\_\+ins\+\_\+estimator.\+h$>$}
+
+
+
+Inheritance diagram for Mic\+K\+F\+I\+N\+S\+Estimator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_mic_k_f_i_n_s_estimator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mic\+K\+F\+I\+N\+S\+Estimator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_mic_k_f_i_n_s_estimator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mic_k_f_i_n_s_estimator_a8d7f6ff003ba0c250cdc53c122cbbc6a}{Mic\+K\+F\+I\+N\+S\+Estimator}} ()=default
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_mic_k_f_i_n_s_estimator_a3108af2ceb046210ff65965e49ef33b3}{$\sim$\+Mic\+K\+F\+I\+N\+S\+Estimator}} ()=default
+\begin{DoxyCompactList}\small\item\em destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_k_f_i_n_s_estimator_afdbbfc30dd2d2a7ea573d0f450fb966a}{update}} (const float64\+\_\+t ts, const mic\+\_\+imu\+\_\+t \&imu\+\_\+data, mic\+\_\+nav\+\_\+state\+\_\+t \&nav\+\_\+state) override
+\begin{DoxyCompactList}\small\item\em (T\+O\+DO) Implementing the Kalman filter-\/based navigation state estimation algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+{\bfseries{\mbox{\hyperlink{class_mic_k_f_i_n_s_estimator}{Mic\+K\+F\+I\+N\+S\+Estimator}}}} provides a Kalman filter-\/based implementation of the state estimation algorithm. 
+
+\begin{DoxyAuthor}{Author}
+Qinxuan Sun, Yansong Gong 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mic_k_f_i_n_s_estimator_a8d7f6ff003ba0c250cdc53c122cbbc6a}\label{class_mic_k_f_i_n_s_estimator_a8d7f6ff003ba0c250cdc53c122cbbc6a}} 
+\index{MicKFINSEstimator@{MicKFINSEstimator}!MicKFINSEstimator@{MicKFINSEstimator}}
+\index{MicKFINSEstimator@{MicKFINSEstimator}!MicKFINSEstimator@{MicKFINSEstimator}}
+\doxysubsubsection{\texorpdfstring{MicKFINSEstimator()}{MicKFINSEstimator()}}
+{\footnotesize\ttfamily Mic\+K\+F\+I\+N\+S\+Estimator\+::\+Mic\+K\+F\+I\+N\+S\+Estimator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Empty constructor. 
+
+\mbox{\Hypertarget{class_mic_k_f_i_n_s_estimator_a3108af2ceb046210ff65965e49ef33b3}\label{class_mic_k_f_i_n_s_estimator_a3108af2ceb046210ff65965e49ef33b3}} 
+\index{MicKFINSEstimator@{MicKFINSEstimator}!````~MicKFINSEstimator@{$\sim$MicKFINSEstimator}}
+\index{````~MicKFINSEstimator@{$\sim$MicKFINSEstimator}!MicKFINSEstimator@{MicKFINSEstimator}}
+\doxysubsubsection{\texorpdfstring{$\sim$MicKFINSEstimator()}{~MicKFINSEstimator()}}
+{\footnotesize\ttfamily virtual Mic\+K\+F\+I\+N\+S\+Estimator\+::$\sim$\+Mic\+K\+F\+I\+N\+S\+Estimator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mic_k_f_i_n_s_estimator_afdbbfc30dd2d2a7ea573d0f450fb966a}\label{class_mic_k_f_i_n_s_estimator_afdbbfc30dd2d2a7ea573d0f450fb966a}} 
+\index{MicKFINSEstimator@{MicKFINSEstimator}!update@{update}}
+\index{update@{update}!MicKFINSEstimator@{MicKFINSEstimator}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+K\+F\+I\+N\+S\+Estimator\+::update (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{const mic\+\_\+imu\+\_\+t \&}]{imu\+\_\+data,  }\item[{mic\+\_\+nav\+\_\+state\+\_\+t \&}]{nav\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+(T\+O\+DO) Implementing the Kalman filter-\/based navigation state estimation algorithm. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ts} & the timestamp of the added data \\
+\hline
+\mbox{\texttt{ in}}  & {\em imu\+\_\+data} & the I\+MU data used to update the state \\
+\hline
+\mbox{\texttt{ out}}  & {\em nav\+\_\+state} & output the updated navigation state \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_mic_nav_state_estimator_af0e971fa53cac0bee077dd1a7024086a}{Mic\+Nav\+State\+Estimator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/mic\+\_\+nav\+\_\+state\+\_\+estimator/impl/\mbox{\hyperlink{mic__kf__ins__estimator_8h}{mic\+\_\+kf\+\_\+ins\+\_\+estimator.\+h}}\item 
+src/mic\+\_\+nav\+\_\+state\+\_\+estimator/impl/\mbox{\hyperlink{mic__kf__ins__estimator_8cc}{mic\+\_\+kf\+\_\+ins\+\_\+estimator.\+cc}}\end{DoxyCompactItemize}

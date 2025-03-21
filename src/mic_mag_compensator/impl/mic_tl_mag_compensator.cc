@@ -32,38 +32,42 @@ MicTLMagCompensator::MicTLMagCompensator() : MicMagCompensator()
     _tl_model = std::make_shared<mic_tolles_lawson_t>();
 }
 
-ret_t MicTLMagCompensator::calibrate()
+ret_t MicTLMagCompensator::do_calibrate()
 {
-    ret_t ret = ret_t::MIC_RET_FAILED;
-
-    auto data_range = _mag_measure_storer.get_data_range<mic_mag_flux_t>(0.0, _curr_time_stamp + 1);
+    auto data_range = _mag_measure_storer.get_data_range<mic_mag_t>(0.0, _curr_time_stamp + 1);
     auto it_start = data_range.first;
     auto it_end = data_range.second;
 
-    // TODO: mag_x.resize(_data_storer.size())
     std::vector<float64_t> mag_x, mag_y, mag_z;
-    std::vector<float64_t> mag_earth_x, mag_earth_y, mag_earth_z;
+    std::vector<float64_t> mag_op, mag_op_truth;
+    // std::vector<float64_t> mag_earth_x, mag_earth_y, mag_earth_z;
     for (auto it = it_start; it != it_end; ++it)
     {
         float64_t ts = it->first;
-        mic_mag_flux_t mag_flux = it->second;
-        mic_nav_state_t nav_state;
-        mic_mag_flux_t mag_flux_truth;
-        _mag_truth_storer.get_data<mic_mag_flux_t>(ts, mag_flux_truth);
-        mag_x.push_back(mag_flux.vector(0));
-        mag_y.push_back(mag_flux.vector(1));
-        mag_z.push_back(mag_flux.vector(2));
-        mag_earth_x.push_back(mag_flux_truth.vector(0));
-        mag_earth_y.push_back(mag_flux_truth.vector(1));
-        mag_earth_z.push_back(mag_flux_truth.vector(2));
+        mic_mag_t mag = it->second;
+        mic_mag_t mag_truth;
+        _mag_truth_storer.get_data<mic_mag_t>(ts, mag_truth);
+        mag_x.push_back(mag.vector(0));
+        mag_y.push_back(mag.vector(1));
+        mag_z.push_back(mag.vector(2));
+        mag_op.push_back(mag.value);
+        mag_op_truth.push_back(mag_truth.value);
+        // mag_earth_x.push_back(mag_truth.vector(0));
+        // mag_earth_y.push_back(mag_truth.vector(1));
+        // mag_earth_z.push_back(mag_truth.vector(2));
     }
 
     std::vector<float64_t> tl_beta;
-    _tl_model->createCoeff_Vector(tl_beta, mag_x, mag_y, mag_z,
-                                  mag_earth_x, mag_earth_y, mag_earth_z);
-    if (tl_beta.size() != 18)
-        return ret;
-    for (size_t i = 0; i < 18; ++i)
+    // mag_op_truth.clear(); /////
+    if (!_tl_model->createCoeff(tl_beta, mag_x, mag_y, mag_z, mag_op_truth, mag_op))
+    {
+        MIC_LOG_ERR("failed to calibrate TL model");
+        return ret_t::MIC_RET_FAILED;
+    }
+    // if (tl_beta.size() != 18)
+    //     return ret_t::MIC_RET_FAILED;
+    _tl_coeffs = vector_xf_t::Zero(tl_beta.size());
+    for (size_t i = 0; i < tl_beta.size(); ++i)
     {
         _tl_coeffs(i) = tl_beta[i];
     }
@@ -74,37 +78,83 @@ ret_t MicTLMagCompensator::calibrate()
     fp_tl.close();
 
     notify(*this);
-    return ret;
+    return ret_t::MIC_RET_SUCCESSED;
 }
 
-ret_t MicTLMagCompensator::compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out)
+ret_t MicTLMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
 {
-    ret_t ret = ret_t::MIC_RET_FAILED;
-
-    matrix_3_18f_t A_matrix;
+    matrix_xf_t A_matrix;
     std::vector<std::vector<double>> TL_A;
-    std::vector<double> mag_x(1, in.vector(0)), mag_y(1, in.vector(1)), mag_z(1, in.vector(2));
 
-    // if only one measure is provided, 
-    // the derivative terms in matrix A will be zero;
-    // that is to say, no eddy current interference is considered;
-    _tl_model->createMatrixA_Vector(TL_A,mag_x,mag_y,mag_z);
-
-    for(size_t i=0;i<TL_A.size();++i)
+    std::vector<double> mag_x, mag_y, mag_z, mag_op;
+    auto data_range = _mag_measure_storer.get_data_range<mic_mag_t>(0.0, ts + 1);
+    auto it_start = data_range.first;
+    auto it_end = data_range.second;
+    for (auto it = it_start; it != it_end; ++it)
     {
-        for(size_t j=0;j<TL_A[i].size();++j)
-        {
-            A_matrix(j,i)=TL_A[i][j];
-            // cout<<TL_A[i][j]<<"\t";
-        }
-        // cout<<endl;
+        mic_mag_t mag = it->second;
+        mag_x.push_back(mag.vector(0));
+        mag_y.push_back(mag.vector(1));
+        mag_z.push_back(mag.vector(2));
+        mag_op.push_back(mag.value);
     }
 
-    out.vector=A_matrix*_tl_coeffs;
+    // if only one measure is provided,
+    // the derivative terms in matrix A will be zero;
+    // that is to say, no eddy current interference is considered;
+    if (!_tl_model->createMatrixA(TL_A, mag_x, mag_y, mag_z, mag_op))
+    {
+        MIC_LOG_ERR("failed to construct TL matrix A!");
+        return ret_t::MIC_RET_FAILED;
+    }
+
+    A_matrix = matrix_xf_t::Identity(mag_x.size(), TL_A.size());
+    for (size_t i = 0; i < TL_A.size(); ++i)
+    {
+        for (size_t j = 0; j < TL_A[i].size(); ++j)
+        {
+            A_matrix(j, i) = TL_A[i][j];
+        }
+    }
+
+    // vector_xf_t mag_op_vector=vector_xf_t::Zero(mag_op.size());
+    vector_xf_t A_matrix_deltaN = A_matrix.bottomRows(1).transpose();
+    out.value = mag_op.back() - _tl_coeffs.dot(A_matrix_deltaN);
+
+    // vector_xf_t out_vector = vector_xf_t::Zero(A_matrix.rows());
+    // out_vector = A_matrix * _tl_coeffs;
+    // out.value = out_vector(out_vector.rows() - 1);
+    // cout << "out_vector = " << endl
+    //      << out_vector.transpose() << endl;
+    // cout << "out.value = " << out.value << endl;
 
     // for observer updating
     notify(*this);
-    return ret;
+    return ret_t::MIC_RET_SUCCESSED;
+}
+
+ret_t MicTLMagCompensator::serialize(json_t &node)
+{
+    std::vector<double> beta(_tl_coeffs.rows());
+    for (int i = 0; i < 18; i++)
+    {
+        beta[i] = _tl_coeffs(i);
+    }
+    node["tl_model"]["coeff_beta"] = beta;
+    return MicMagCompensator::serialize(node);
+}
+
+ret_t MicTLMagCompensator::deserialize(json_t &node)
+{
+    std::vector<double> beta = node["tl_model"]["coeff_beta"];
+    // if (beta.size() != 18)
+    //     return ret_t::MIC_RET_FAILED;
+    _tl_coeffs = vector_xf_t::Zero(beta.size());
+    for (int i = 0; i < beta.size(); i++)
+    {
+        _tl_coeffs(i) = beta[i];
+    }
+    return MicMagCompensator::deserialize(node);
 }
 
 MIC_NAMESPACE_END

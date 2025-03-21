@@ -1,0 +1,80 @@
+\hypertarget{filter_8cpp}{}\doxysection{3rd\+\_\+party/tolles-\/lawson/filter/filter.cpp File Reference}
+\label{filter_8cpp}\index{3rd\_party/tolles-\/lawson/filter/filter.cpp@{3rd\_party/tolles-\/lawson/filter/filter.cpp}}
+{\ttfamily \#include \char`\"{}filter/filter.\+hpp\char`\"{}}\newline
+Include dependency graph for filter.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{filter_8cpp_a761c40867ddeffaf8b6929909f09b6b4}{add\+\_\+index\+\_\+range}} (\mbox{\hyperlink{filter_8hpp_a44529587d60e73bf0e689a82e5e70a55}{vectori}} \&indices, int beg, int end, int inc)
+\item 
+void \mbox{\hyperlink{filter_8cpp_a8a7912f97220144ff4907daca6025097}{add\+\_\+index\+\_\+const}} (\mbox{\hyperlink{filter_8hpp_a44529587d60e73bf0e689a82e5e70a55}{vectori}} \&indices, int value, size\+\_\+t numel)
+\item 
+void \mbox{\hyperlink{filter_8cpp_af02fd236674e19727c3d2751f805df92}{append\+\_\+vector}} (\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&vec, const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&tail)
+\item 
+\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \mbox{\hyperlink{filter_8cpp_ac541fb874726cff28c1b179968a7a027}{subvector\+\_\+reverse}} (const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&vec, int idx\+\_\+end, int idx\+\_\+start)
+\item 
+int \mbox{\hyperlink{filter_8cpp_a71433efc1784b0ab0af0bd94ad52c080}{max\+\_\+val}} (const \mbox{\hyperlink{filter_8hpp_a44529587d60e73bf0e689a82e5e70a55}{vectori}} \&vec)
+\item 
+void \mbox{\hyperlink{filter_8cpp_ab0fb64ddeac8ad75aeadc90ed6423d1d}{filtfilt}} (\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} B, \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} A, const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&X, \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&Y)
+\item 
+void \mbox{\hyperlink{filter_8cpp_af546a3c76f917cf9c45be69d84c3738f}{filter}} (\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} B, \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} A, const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&X, \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&Y, \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&Zi)
+\item 
+bool \mbox{\hyperlink{filter_8cpp_a04bd4e16254b2de08466432ebb3f90ff}{compare}} (const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&original, const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&expected, double tolerance)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{filter_8cpp_a8a7912f97220144ff4907daca6025097}\label{filter_8cpp_a8a7912f97220144ff4907daca6025097}} 
+\index{filter.cpp@{filter.cpp}!add\_index\_const@{add\_index\_const}}
+\index{add\_index\_const@{add\_index\_const}!filter.cpp@{filter.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_index\_const()}{add\_index\_const()}}
+{\footnotesize\ttfamily void add\+\_\+index\+\_\+const (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filter_8hpp_a44529587d60e73bf0e689a82e5e70a55}{vectori}} \&}]{indices,  }\item[{int}]{value,  }\item[{size\+\_\+t}]{numel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{filter_8cpp_a761c40867ddeffaf8b6929909f09b6b4}\label{filter_8cpp_a761c40867ddeffaf8b6929909f09b6b4}} 
+\index{filter.cpp@{filter.cpp}!add\_index\_range@{add\_index\_range}}
+\index{add\_index\_range@{add\_index\_range}!filter.cpp@{filter.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_index\_range()}{add\_index\_range()}}
+{\footnotesize\ttfamily void add\+\_\+index\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filter_8hpp_a44529587d60e73bf0e689a82e5e70a55}{vectori}} \&}]{indices,  }\item[{int}]{beg,  }\item[{int}]{end,  }\item[{int}]{inc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{filter_8cpp_af02fd236674e19727c3d2751f805df92}\label{filter_8cpp_af02fd236674e19727c3d2751f805df92}} 
+\index{filter.cpp@{filter.cpp}!append\_vector@{append\_vector}}
+\index{append\_vector@{append\_vector}!filter.cpp@{filter.cpp}}
+\doxysubsubsection{\texorpdfstring{append\_vector()}{append\_vector()}}
+{\footnotesize\ttfamily void append\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&}]{vec,  }\item[{const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&}]{tail }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{filter_8cpp_a04bd4e16254b2de08466432ebb3f90ff}\label{filter_8cpp_a04bd4e16254b2de08466432ebb3f90ff}} 
+\index{filter.cpp@{filter.cpp}!compare@{compare}}
+\index{compare@{compare}!filter.cpp@{filter.cpp}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily bool compare (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&}]{original,  }\item[{const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&}]{expected,  }\item[{double}]{tolerance }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{filter_8cpp_af546a3c76f917cf9c45be69d84c3738f}\label{filter_8cpp_af546a3c76f917cf9c45be69d84c3738f}} 
+\index{filter.cpp@{filter.cpp}!filter@{filter}}
+\index{filter@{filter}!filter.cpp@{filter.cpp}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily void filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}}}]{B,  }\item[{\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}}}]{A,  }\item[{const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&}]{X,  }\item[{\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&}]{Y,  }\item[{\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&}]{Zi }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{filter_8cpp_ab0fb64ddeac8ad75aeadc90ed6423d1d}\label{filter_8cpp_ab0fb64ddeac8ad75aeadc90ed6423d1d}} 
+\index{filter.cpp@{filter.cpp}!filtfilt@{filtfilt}}
+\index{filtfilt@{filtfilt}!filter.cpp@{filter.cpp}}
+\doxysubsubsection{\texorpdfstring{filtfilt()}{filtfilt()}}
+{\footnotesize\ttfamily void filtfilt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}}}]{B,  }\item[{\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}}}]{A,  }\item[{const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&}]{X,  }\item[{\mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&}]{Y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{filter_8cpp_a71433efc1784b0ab0af0bd94ad52c080}\label{filter_8cpp_a71433efc1784b0ab0af0bd94ad52c080}} 
+\index{filter.cpp@{filter.cpp}!max\_val@{max\_val}}
+\index{max\_val@{max\_val}!filter.cpp@{filter.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_val()}{max\_val()}}
+{\footnotesize\ttfamily int max\+\_\+val (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{filter_8hpp_a44529587d60e73bf0e689a82e5e70a55}{vectori}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{filter_8cpp_ac541fb874726cff28c1b179968a7a027}\label{filter_8cpp_ac541fb874726cff28c1b179968a7a027}} 
+\index{filter.cpp@{filter.cpp}!subvector\_reverse@{subvector\_reverse}}
+\index{subvector\_reverse@{subvector\_reverse}!filter.cpp@{filter.cpp}}
+\doxysubsubsection{\texorpdfstring{subvector\_reverse()}{subvector\_reverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} subvector\+\_\+reverse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{filter_8hpp_aed839a0813d2d1ae97bfc8ad27fec316}{vectord}} \&}]{vec,  }\item[{int}]{idx\+\_\+end,  }\item[{int}]{idx\+\_\+start }\end{DoxyParamCaption})}
+

@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <ctime>
+#include <gflags/gflags.h>
 #include "common/mic_prerequisite.h"
 #include "common/mic_logger.h"
 #include "common/mic_config.h"
@@ -8,141 +10,53 @@
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
 #include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
-#include "ceres/ceres.h"
+#include "mic_mag_compensator/impl/mic_tl_component_mag_compensator.h"
+#include "api/mic_compensation_api.h"
+#include "fileio/fileio.h"
 
 USING_NAMESPACE_MIC;
+using namespace std;
+
+DEFINE_string(modelfile, "mic_model.mdl", "model file");
 
 int main(int argc, char *argv[])
 {
-    mic_logger_t::initialize(mic_logger_type_t::MIC_BASH_FILE_LOGGER, "./mic.log");
-    mic_config_t::initialize(mic_config_type_t::MIC_CONFIG_JSON,
-                             "./etc/default_config.json");
-    mic_logger_t::set_log_level(
-        static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
+    google::ParseCommandLineFlags(&argc, &argv, true);
 
-    // ceres::Solver::Options options;
-    // ceres::Solver::Summary summary;
-    // ceres::Problem problem;
-    // ceres::Solve(options, &problem, &summary);
-    // MIC_LOG_BASIC_INFO("final_cost: %lf!\n", summary.final_cost);
+    // 初始化补偿器，输入补偿模型文件
+    mic_init_worker("ellipsoid", FLAGS_modelfile);
 
-    std::string filename = MIC_CONFIG_GET(std::string, "load_file_name");
-    std::ifstream infile(filename);
-    if (!infile.is_open())
+    // timestamp: 时间戳，单位s
+    float64_t timestamp = 24000.000000;
+    // mag_op: 舱内光泵磁强计测量值，单位nT
+    float64_t mag_op = 55484.875000;
+    // mag_x,mag_y,mag_z: 舱内磁通门磁强计三轴测量值，单位nT
+    float64_t mag_x = -24032.530000;
+    float64_t mag_y = -47619.720000;
+    float64_t mag_z = -15278.270000;
+
+    std::vector<float64_t> data_line;
+    data_line.push_back(timestamp);
+    data_line.push_back(mag_op);
+    data_line.push_back(mag_x);
+    data_line.push_back(mag_y);
+    data_line.push_back(mag_z);
+
+    mic_mag_t mag, mag_truth;
+    if (get_line_data(data_line, mag, mag_truth) == ret_t::MIC_RET_SUCCESSED)
     {
-        std::cerr << "Error: Could not open file " << filename << std::endl;
-        return -1;
+        float64_t ts = mag.time_stamp;
+        mic_mag_t mag_out;
+
+        // 将一组数据输入补偿器
+        mic_add_data(ts, mag, mag_truth);
+
+        // 实时磁补偿并输出补偿结果
+        mic_compensate(ts, mag_out);
+        std::cout << " - real-time compensation: " << std::fixed
+                  << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
     }
 
-    float64_t ts, flux_x, flux_y, flux_z,
-        ins_pitch, ins_roll, ins_yaw,
-        igrf_north, igrf_east, igrf_down;
-    mic_mag_flux_t mag_flux, mag_flux_truth;
-    mic_nav_state_t nav_state;
-    // std::ofstream fp("debug.txt");
-    // mic_ellipsoid_mag_compensator_t mag_compensator;
-
-    mic_mag_compensator_shared_ptr mag_compensator_ptr;
-    if (MIC_CONFIG_GET(std::string, "compensation_method") == "tl")
-    {
-        mag_compensator_ptr = std::make_shared<mic_tl_mag_compensator_t>();
-    }
-    else // "ellipsoid"
-    {
-        mag_compensator_ptr = std::make_shared<mic_ellipsoid_mag_compensator_t>();
-    }
-
-    auto comp_logger = std::make_shared<mic_state_logger_t>();
-    // mag_compensator.subscrible(comp_logger);
-    mag_compensator_ptr->subscrible(comp_logger);
-
-    while (true)
-    {
-        infile >> ts >> flux_x >> flux_y >> flux_z >> ins_pitch >> ins_roll >> ins_yaw >> igrf_north >> igrf_east >> igrf_down;
-        if (infile.eof())
-            break;
-        // if (line < 1002.10)
-        {
-            nav_state.time_stamp = ts;
-            nav_state.attitude = quaternionf_t(
-                MicUtils::euler2dcm(
-                    MicUtils::deg2rad(ins_roll),
-                    MicUtils::deg2rad(ins_pitch),
-                    MicUtils::deg2rad(ins_yaw)));
-            mag_flux.time_stamp = ts;
-            mag_flux.vector << flux_x, flux_y, flux_z;
-            mag_flux_truth.time_stamp = ts;
-            mag_flux_truth.vector << igrf_north, igrf_east, igrf_down;
-
-            // mag_compensator.add_mag_flux(ts, mag_flux);
-            // mag_compensator.add_mag_flux_truth(ts, mag_flux_truth);
-            // mag_compensator.get_nav_state_estimator().set_nav_state(ts, nav_state);
-
-            mag_compensator_ptr->add_mag_flux(ts, mag_flux);
-            mag_compensator_ptr->add_mag_flux_truth(ts, mag_flux_truth);
-            mag_compensator_ptr->add_nav_state(ts,nav_state);
-            // mag_compensator_ptr->get_nav_state_estimator().set_nav_state(ts, nav_state);
-        }
-
-        // fp << std::fixed << line << "\t" << ts << "\t"
-        //    << flux_x << "\t" << flux_y << "\t"
-        //    << flux_z << "\t" << ins_pitch << "\t"
-        //    << ins_roll << "\t" << ins_yaw << "\t"
-        //    << std::endl;
-    }
-    infile.close();
-    // fp.close();
-
-    // mag_compensator.calibrate();
-    mag_compensator_ptr->calibrate();
-
-    mic_mag_flux_t mag_flux_comp;
-    mag_compensator_ptr->compenste(mag_flux, mag_flux_comp);
-
-    return 0;
-}
-
-int main1()
-{
-    mic_logger_t::initialize(mic_logger_type_t::MIC_BASH_FILE_LOGGER, "./mic.log");
-    mic_config_t::initialize(mic_config_type_t::MIC_CONFIG_JSON,
-                             "../etc/default_config.json");
-    mic_logger_t::set_log_level(
-        static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
-
-    MicDataStorer<float64_t, int32_t, std::string> storer;
-    storer.add_data<float64_t>(1.0, 2.0);
-    storer.add_data<int32_t>(1.01, 2);
-    storer.add_data<std::string>(0.999, "test");
-
-    float64_t f = 0.0;
-    int32_t i = 0;
-    std::string str = "";
-    auto res = storer.get_data(1.0, f, i, str);
-    std::cout << "res: " << res << std::endl;
-    std::cout << "f: " << f << " i: " << i << " str: " << str << std::endl;
-
-    MicDataStorer<std::string, int32_t, float64_t> storer2;
-    storer2.add_data<float64_t>(1.0, 3214312.0);
-    storer2.add_data<int32_t>(1.019, 5);
-    storer2.add_data<std::string>(0.999, "test2");
-
-    int32_t data = 0;
-    storer2.get_data<int32_t>(1.019, data);
-    std::cout << "result: " << data << std::endl;
-
-    res = storer2.get_data(1.0, str, i, f);
-    std::cout << "res: " << res << std::endl;
-    std::cout << "f: " << f << " i: " << i << " str: " << str << std::endl;
-
-    // mic_mag_compensator_t comp;
-    // auto comp_logger = std::make_shared<mic_state_logger_t>();
-    // comp.subscrible(comp_logger);
-
-    for (size_t i = 0; i < 100; i++)
-    {
-        // comp.compenste();
-    }
-
+    google::ShutDownCommandLineFlags();
     return 0;
 }

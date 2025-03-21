@@ -1,0 +1,326 @@
+\hypertarget{class_mic_ellipsoid_mag_compensator}{}\doxysection{Mic\+Ellipsoid\+Mag\+Compensator Class Reference}
+\label{class_mic_ellipsoid_mag_compensator}\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+
+
+\mbox{\hyperlink{class_mic_ellipsoid_mag_compensator}{Mic\+Ellipsoid\+Mag\+Compensator}} is a magnetic compensation algorithm based on the ellipsoid fitting and orientation estimation.  
+
+
+
+
+{\ttfamily \#include $<$mic\+\_\+ellipsoid\+\_\+mag\+\_\+compensator.\+h$>$}
+
+
+
+Inheritance diagram for Mic\+Ellipsoid\+Mag\+Compensator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{class_mic_ellipsoid_mag_compensator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mic\+Ellipsoid\+Mag\+Compensator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mic_ellipsoid_mag_compensator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_a372de4efc3cecfaa82e53c6390eb7355}{Mic\+Ellipsoid\+Mag\+Compensator}} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_ad04b975f37c962b528f20ce20c66c315}{$\sim$\+Mic\+Ellipsoid\+Mag\+Compensator}} ()=default
+\begin{DoxyCompactList}\small\item\em destructor. \end{DoxyCompactList}\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_a272c924ef21d6bd2b1129d5c7fe92fde}{fit\+\_\+ellipsoid\+\_\+model}} (const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&mag, const float64\+\_\+t mag\+\_\+earth\+\_\+intensity, matrix\+\_\+3f\+\_\+t \&D\+\_\+tilde\+\_\+inv, vector\+\_\+3f\+\_\+t \&o\+\_\+hat)
+\begin{DoxyCompactList}\small\item\em Call the ellipsoid fitting algirithm to compute the compensation model coefficients {\itshape D\+\_\+tilde\+\_\+inv} and {\itshape o\+\_\+hat} using the input magnetic data. \end{DoxyCompactList}\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_aa3a072cdc4c406a639075ee6bb2b8f7d}{fit\+\_\+ls\+\_\+rotation}} (const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&p\+\_\+left, const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&p\+\_\+right, matrix\+\_\+3f\+\_\+t \&R\+\_\+hat)
+\begin{DoxyCompactList}\small\item\em Call the least-\/sqares fitting algirithm to compute the relative rotation between two point sets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_adc7307de6e8f7cf14c5e7f1a0c98475c}{do\+\_\+calibrate}} () override
+\begin{DoxyCompactList}\small\item\em Implementation of the calibration algorithm of the compensation model based on the ellipsoid fitting and the orientaion estimation. \end{DoxyCompactList}\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_a77ba4069020cecf092927947e58593fe}{do\+\_\+compenste}} (const float64\+\_\+t ts, mic\+\_\+mag\+\_\+t \&out) override
+\begin{DoxyCompactList}\small\item\em Compensate using the ellipsoid-\/based model (only if the working state is set to {\itshape M\+I\+C\+\_\+\+M\+A\+G\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+ED}). \end{DoxyCompactList}\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_aec965e1adc14bdc537c2fdf31064d64a}{serialize}} (\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&node) override
+\item 
+virtual ret\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_a14151d53dcc9f2c2180c767e29360154}{deserialize}} (\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&node) override
+\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_a979000bec8c3494f90514a0b9a44d2b3}{ellipsoid\+\_\+fit}} (const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&mag, std\+::vector$<$ float64\+\_\+t $>$ \&coeffs)
+\begin{DoxyCompactList}\small\item\em Fit an ellipsoid using the measured magnetic data. The algirithm is presented in \href{https://ieeexplore.ieee.org/document/1290055}{\texttt{ https\+://ieeexplore.\+ieee.\+org/document/1290055}}. \end{DoxyCompactList}\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_a061154333720822e2739739143ec2fd6}{compute\+\_\+model\+\_\+coeffs}} (const std\+::vector$<$ float64\+\_\+t $>$ \&ellipsoid\+\_\+coeffs, const float64\+\_\+t mag\+\_\+earth\+\_\+intensity, matrix\+\_\+3f\+\_\+t \&D\+\_\+tilde\+\_\+inv, vector\+\_\+3f\+\_\+t \&o\+\_\+hat)
+\begin{DoxyCompactList}\small\item\em Compute the model parameters using the fitted ellipsoid coefficients. \end{DoxyCompactList}\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_ab6692ce20d0f9188af1ebf26c53841eb}{ceres\+\_\+optimize}} (const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&mag, const std\+::vector$<$ matrix\+\_\+3f\+\_\+t $>$ \&R\+\_\+nb, const matrix\+\_\+3f\+\_\+t \&D\+\_\+tilde\+\_\+inv, const vector\+\_\+3f\+\_\+t \&o\+\_\+hat, quaternionf\+\_\+t \&quat)
+\begin{DoxyCompactList}\small\item\em Optimize the model parameters R=V$\ast$\+R$^\wedge$\{mb\} using Ceres library. \end{DoxyCompactList}\item 
+ret\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_acdc3748a1a6d7c2c259896d5fa43c888}{ls\+\_\+fitting}} (const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&p\+\_\+left, const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&p\+\_\+right, matrix\+\_\+3f\+\_\+t \&R\+\_\+hat)
+\begin{DoxyCompactList}\small\item\em Implement the least-\/sqares fitting algirithm to compute the relative rotation between two point sets, as described in \href{https://ieeexplore.ieee.org/document/4767965}{\texttt{ https\+://ieeexplore.\+ieee.\+org/document/4767965}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+matrix\+\_\+3f\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_aadba60285668b596b16a834ea434a4f3}{\+\_\+\+D\+\_\+tilde\+\_\+inv}}
+\begin{DoxyCompactList}\small\item\em The compensation model coefficients. \end{DoxyCompactList}\item 
+vector\+\_\+3f\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_ab9f00782bbc847552b3fc2019aebc5d8}{\+\_\+o\+\_\+hat}}
+\begin{DoxyCompactList}\small\item\em The compensation model coefficients. \end{DoxyCompactList}\item 
+matrix\+\_\+3f\+\_\+t \mbox{\hyperlink{class_mic_ellipsoid_mag_compensator_a068405abe37c97afed2b331cf2b88395}{\+\_\+\+R\+\_\+opt}}
+\begin{DoxyCompactList}\small\item\em The compensation model coefficients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_mic_ellipsoid_mag_compensator}{Mic\+Ellipsoid\+Mag\+Compensator}} is a magnetic compensation algorithm based on the ellipsoid fitting and orientation estimation. 
+
+The corresponding compensation algorithm is originally proposed by Qinxuan Sun in \href{https://sunqinxuan.github.io/projects/2024-07-09-compensation}{\texttt{ https\+://sunqinxuan.\+github.\+io/projects/2024-\/07-\/09-\/compensation}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{mic__mag__compensator_8h_adf559014919b63e147862635173c91bc}{mic\_mag\_compensator\_shared\_ptr}} compensator = std::make\_shared<mic\_ellipsoid\_mag\_compensator\_t>();}
+\DoxyCodeLine{compensator-\/>load\_model(\textcolor{stringliteral}{"model\_ellipsoid.mdl"});}
+\DoxyCodeLine{compensator-\/>add\_data(ts, mag);}
+\DoxyCodeLine{compensator-\/>compenste(ts, out);}
+\DoxyCodeLine{std::cout << out.vector << std::endl;}
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Qinxuan Sun, Yansong Gong 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_a372de4efc3cecfaa82e53c6390eb7355}\label{class_mic_ellipsoid_mag_compensator_a372de4efc3cecfaa82e53c6390eb7355}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{MicEllipsoidMagCompensator()}{MicEllipsoidMagCompensator()}}
+{\footnotesize\ttfamily Mic\+Ellipsoid\+Mag\+Compensator\+::\+Mic\+Ellipsoid\+Mag\+Compensator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Empty constructor. 
+
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_ad04b975f37c962b528f20ce20c66c315}\label{class_mic_ellipsoid_mag_compensator_ad04b975f37c962b528f20ce20c66c315}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!````~MicEllipsoidMagCompensator@{$\sim$MicEllipsoidMagCompensator}}
+\index{````~MicEllipsoidMagCompensator@{$\sim$MicEllipsoidMagCompensator}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{$\sim$MicEllipsoidMagCompensator()}{~MicEllipsoidMagCompensator()}}
+{\footnotesize\ttfamily virtual Mic\+Ellipsoid\+Mag\+Compensator\+::$\sim$\+Mic\+Ellipsoid\+Mag\+Compensator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_ab6692ce20d0f9188af1ebf26c53841eb}\label{class_mic_ellipsoid_mag_compensator_ab6692ce20d0f9188af1ebf26c53841eb}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!ceres\_optimize@{ceres\_optimize}}
+\index{ceres\_optimize@{ceres\_optimize}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{ceres\_optimize()}{ceres\_optimize()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::ceres\+\_\+optimize (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&}]{mag,  }\item[{const std\+::vector$<$ matrix\+\_\+3f\+\_\+t $>$ \&}]{R\+\_\+nb,  }\item[{const matrix\+\_\+3f\+\_\+t \&}]{D\+\_\+tilde\+\_\+inv,  }\item[{const vector\+\_\+3f\+\_\+t \&}]{o\+\_\+hat,  }\item[{quaternionf\+\_\+t \&}]{quat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Optimize the model parameters R=V$\ast$\+R$^\wedge$\{mb\} using Ceres library. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mag} & magnetic measurements \\
+\hline
+\mbox{\texttt{ in}}  & {\em R\+\_\+nb} & rotations from body frame to navigation frame (from ins) \\
+\hline
+\mbox{\texttt{ in}}  & {\em D\+\_\+tilde\+\_\+inv,o\+\_\+hat} & model coefficients \\
+\hline
+\mbox{\texttt{ out}}  & {\em quat} & the output quaternion corresponding to the orthogonal matrix R=V$\ast$\+R$^\wedge$\{mb\} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_a061154333720822e2739739143ec2fd6}\label{class_mic_ellipsoid_mag_compensator_a061154333720822e2739739143ec2fd6}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!compute\_model\_coeffs@{compute\_model\_coeffs}}
+\index{compute\_model\_coeffs@{compute\_model\_coeffs}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{compute\_model\_coeffs()}{compute\_model\_coeffs()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::compute\+\_\+model\+\_\+coeffs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float64\+\_\+t $>$ \&}]{ellipsoid\+\_\+coeffs,  }\item[{const float64\+\_\+t}]{mag\+\_\+earth\+\_\+intensity,  }\item[{matrix\+\_\+3f\+\_\+t \&}]{D\+\_\+tilde\+\_\+inv,  }\item[{vector\+\_\+3f\+\_\+t \&}]{o\+\_\+hat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute the model parameters using the fitted ellipsoid coefficients. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ellipsoid\+\_\+coeffs} & sequence of the measured magnetic vectors \\
+\hline
+\mbox{\texttt{ in}}  & {\em mag\+\_\+earth\+\_\+intensity} & the earth magnetic intensity in the calibration region \\
+\hline
+\mbox{\texttt{ out}}  & {\em D\+\_\+tilde\+\_\+inv} & output model coefficients \\
+\hline
+\mbox{\texttt{ out}}  & {\em o\+\_\+hat} & output model coefficients \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_a14151d53dcc9f2c2180c767e29360154}\label{class_mic_ellipsoid_mag_compensator_a14151d53dcc9f2c2180c767e29360154}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::deserialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mic_mag_compensator_a4a090fdaf9ef1b5cafdb13d8ba30d819}{Mic\+Mag\+Compensator}}.
+
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_adc7307de6e8f7cf14c5e7f1a0c98475c}\label{class_mic_ellipsoid_mag_compensator_adc7307de6e8f7cf14c5e7f1a0c98475c}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!do\_calibrate@{do\_calibrate}}
+\index{do\_calibrate@{do\_calibrate}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{do\_calibrate()}{do\_calibrate()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::do\+\_\+calibrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implementation of the calibration algorithm of the compensation model based on the ellipsoid fitting and the orientaion estimation. 
+
+
+
+Implements \mbox{\hyperlink{class_mic_mag_compensator_a5a411ece565ad33e614fa9f4deb49245}{Mic\+Mag\+Compensator}}.
+
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_a77ba4069020cecf092927947e58593fe}\label{class_mic_ellipsoid_mag_compensator_a77ba4069020cecf092927947e58593fe}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!do\_compenste@{do\_compenste}}
+\index{do\_compenste@{do\_compenste}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{do\_compenste()}{do\_compenste()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::do\+\_\+compenste (\begin{DoxyParamCaption}\item[{const float64\+\_\+t}]{ts,  }\item[{mic\+\_\+mag\+\_\+t \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compensate using the ellipsoid-\/based model (only if the working state is set to {\itshape M\+I\+C\+\_\+\+M\+A\+G\+\_\+\+C\+O\+M\+P\+E\+N\+S\+A\+T\+E\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+ED}). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ts} & the timestamp at which the compensation result is required \\
+\hline
+\mbox{\texttt{ out}}  & {\em out} & output the compensated result at time {\itshape ts} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_mic_mag_compensator_ac23bd6a837144a977a30de1c2ac5295a}{Mic\+Mag\+Compensator}}.
+
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_a979000bec8c3494f90514a0b9a44d2b3}\label{class_mic_ellipsoid_mag_compensator_a979000bec8c3494f90514a0b9a44d2b3}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!ellipsoid\_fit@{ellipsoid\_fit}}
+\index{ellipsoid\_fit@{ellipsoid\_fit}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{ellipsoid\_fit()}{ellipsoid\_fit()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::ellipsoid\+\_\+fit (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&}]{mag,  }\item[{std\+::vector$<$ float64\+\_\+t $>$ \&}]{coeffs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Fit an ellipsoid using the measured magnetic data. The algirithm is presented in \href{https://ieeexplore.ieee.org/document/1290055}{\texttt{ https\+://ieeexplore.\+ieee.\+org/document/1290055}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mag} & sequence of the magnetic measurements \\
+\hline
+\mbox{\texttt{ out}}  & {\em coeffs} & a vector u = \mbox{[}a,b,c,f,g,h,p,q,r,d\mbox{]} corresponding to coefficients of the general quadric surface given by equation, ax2 + by2 + cz2 + 2fyz + 2gxz + 2hxy + 2px + 2qy + 2rz + d = 0. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_a272c924ef21d6bd2b1129d5c7fe92fde}\label{class_mic_ellipsoid_mag_compensator_a272c924ef21d6bd2b1129d5c7fe92fde}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!fit\_ellipsoid\_model@{fit\_ellipsoid\_model}}
+\index{fit\_ellipsoid\_model@{fit\_ellipsoid\_model}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{fit\_ellipsoid\_model()}{fit\_ellipsoid\_model()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__prerequisite_8h_ac3afdc1b2ec865ffb74d6eb75764462e}{M\+I\+C\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+S\+T\+A\+RT}} ret\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::fit\+\_\+ellipsoid\+\_\+model (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&}]{mag,  }\item[{const float64\+\_\+t}]{mag\+\_\+earth\+\_\+intensity,  }\item[{matrix\+\_\+3f\+\_\+t \&}]{D\+\_\+tilde\+\_\+inv,  }\item[{vector\+\_\+3f\+\_\+t \&}]{o\+\_\+hat }\end{DoxyParamCaption})}
+
+
+
+Call the ellipsoid fitting algirithm to compute the compensation model coefficients {\itshape D\+\_\+tilde\+\_\+inv} and {\itshape o\+\_\+hat} using the input magnetic data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mag} & sequence of the measured magnetic vectors \\
+\hline
+\mbox{\texttt{ in}}  & {\em mag\+\_\+earth\+\_\+intensity} & the earth magnetic intensity in the calibration region \\
+\hline
+\mbox{\texttt{ out}}  & {\em D\+\_\+tilde\+\_\+inv} & output model coefficients \\
+\hline
+\mbox{\texttt{ out}}  & {\em o\+\_\+hat} & output model coefficients \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_aa3a072cdc4c406a639075ee6bb2b8f7d}\label{class_mic_ellipsoid_mag_compensator_aa3a072cdc4c406a639075ee6bb2b8f7d}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!fit\_ls\_rotation@{fit\_ls\_rotation}}
+\index{fit\_ls\_rotation@{fit\_ls\_rotation}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{fit\_ls\_rotation()}{fit\_ls\_rotation()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::fit\+\_\+ls\+\_\+rotation (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&}]{p\+\_\+left,  }\item[{const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&}]{p\+\_\+right,  }\item[{matrix\+\_\+3f\+\_\+t \&}]{R\+\_\+hat }\end{DoxyParamCaption})}
+
+
+
+Call the least-\/sqares fitting algirithm to compute the relative rotation between two point sets. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+left} & the point set in reference frame \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+\_\+right} & the point set to be transformed \\
+\hline
+\mbox{\texttt{ out}}  & {\em R\+\_\+hat} & the resultant rotation matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_acdc3748a1a6d7c2c259896d5fa43c888}\label{class_mic_ellipsoid_mag_compensator_acdc3748a1a6d7c2c259896d5fa43c888}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!ls\_fitting@{ls\_fitting}}
+\index{ls\_fitting@{ls\_fitting}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{ls\_fitting()}{ls\_fitting()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::ls\+\_\+fitting (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&}]{p\+\_\+left,  }\item[{const std\+::vector$<$ vector\+\_\+3f\+\_\+t $>$ \&}]{p\+\_\+right,  }\item[{matrix\+\_\+3f\+\_\+t \&}]{R\+\_\+hat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Implement the least-\/sqares fitting algirithm to compute the relative rotation between two point sets, as described in \href{https://ieeexplore.ieee.org/document/4767965}{\texttt{ https\+://ieeexplore.\+ieee.\+org/document/4767965}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+left} & the point set in reference frame \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+\_\+right} & the point set to be transformed \\
+\hline
+\mbox{\texttt{ out}}  & {\em R\+\_\+hat} & the resultant rotation matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_aec965e1adc14bdc537c2fdf31064d64a}\label{class_mic_ellipsoid_mag_compensator_aec965e1adc14bdc537c2fdf31064d64a}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!serialize@{serialize}}
+\index{serialize@{serialize}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily ret\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__prerequisite_8h_a8c10f98f38a89244f09101c73f133b8c}{json\+\_\+t}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mic_mag_compensator_a5cd2f4fc5c9d7f159792374ef3bea48d}{Mic\+Mag\+Compensator}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_aadba60285668b596b16a834ea434a4f3}\label{class_mic_ellipsoid_mag_compensator_aadba60285668b596b16a834ea434a4f3}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!\_D\_tilde\_inv@{\_D\_tilde\_inv}}
+\index{\_D\_tilde\_inv@{\_D\_tilde\_inv}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{\_D\_tilde\_inv}{\_D\_tilde\_inv}}
+{\footnotesize\ttfamily matrix\+\_\+3f\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::\+\_\+\+D\+\_\+tilde\+\_\+inv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The compensation model coefficients. 
+
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_ab9f00782bbc847552b3fc2019aebc5d8}\label{class_mic_ellipsoid_mag_compensator_ab9f00782bbc847552b3fc2019aebc5d8}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!\_o\_hat@{\_o\_hat}}
+\index{\_o\_hat@{\_o\_hat}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{\_o\_hat}{\_o\_hat}}
+{\footnotesize\ttfamily vector\+\_\+3f\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::\+\_\+o\+\_\+hat\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The compensation model coefficients. 
+
+\mbox{\Hypertarget{class_mic_ellipsoid_mag_compensator_a068405abe37c97afed2b331cf2b88395}\label{class_mic_ellipsoid_mag_compensator_a068405abe37c97afed2b331cf2b88395}} 
+\index{MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}!\_R\_opt@{\_R\_opt}}
+\index{\_R\_opt@{\_R\_opt}!MicEllipsoidMagCompensator@{MicEllipsoidMagCompensator}}
+\doxysubsubsection{\texorpdfstring{\_R\_opt}{\_R\_opt}}
+{\footnotesize\ttfamily matrix\+\_\+3f\+\_\+t Mic\+Ellipsoid\+Mag\+Compensator\+::\+\_\+\+R\+\_\+opt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The compensation model coefficients. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/mic\+\_\+mag\+\_\+compensator/impl/\mbox{\hyperlink{mic__ellipsoid__mag__compensator_8h}{mic\+\_\+ellipsoid\+\_\+mag\+\_\+compensator.\+h}}\item 
+src/mic\+\_\+mag\+\_\+compensator/impl/\mbox{\hyperlink{mic__ellipsoid__mag__compensator_8cc}{mic\+\_\+ellipsoid\+\_\+mag\+\_\+compensator.\+cc}}\end{DoxyCompactItemize}

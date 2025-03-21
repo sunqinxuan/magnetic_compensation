@@ -1,0 +1,100 @@
+\hypertarget{mic__base_8h}{}\doxysection{include/api/mic\+\_\+base.h File Reference}
+\label{mic__base_8h}\index{include/api/mic\_base.h@{include/api/mic\_base.h}}
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+Include dependency graph for mic\+\_\+base.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{mic__base_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mic__base_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmic_1_1_mic_mag}{mic\+::\+Mic\+Mag}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmic_1_1_mic_mag}{Mic\+Mag}} represents the base class in M\+IC storing the magnetic field data at a time step. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmic_1_1_mic_i_m_u}{mic\+::\+Mic\+I\+MU}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmic_1_1_mic_i_m_u}{Mic\+I\+MU}} represents the I\+MU measurement data at a time step. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmic_1_1_mic_g_n_s_s}{mic\+::\+Mic\+G\+N\+SS}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmic_1_1_mic_g_n_s_s}{Mic\+G\+N\+SS}} represents the G\+N\+SS measurement data at a time step. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmic_1_1_mic_nav_state}{mic\+::\+Mic\+Nav\+State}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmic_1_1_mic_nav_state}{Mic\+Nav\+State}} represents the navigation state of a aircraft or vehicle at a time step. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemic}{mic}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}~(\mbox{\hyperlink{namespacemic_ae3c47b761a59e46c54fe210b3a5a25e9a88cd9dbff4ae269dabaef93b80fbd473}{mic\+::\+M\+I\+C\+\_\+\+T\+R\+UE}})
+\item 
+\#define \mbox{\hyperlink{mic__base_8h_a65e9886d74aaee76545e83dd09011727}{false}}~(\mbox{\hyperlink{namespacemic_ae3c47b761a59e46c54fe210b3a5a25e9a542056a6ef767aeb33366561d842afef}{mic\+::\+M\+I\+C\+\_\+\+F\+A\+L\+SE}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacemic_a69568bba90cd9d9877f97729df9f2354}{mic\+::float64\+\_\+t}} = double
+\item 
+using \mbox{\hyperlink{namespacemic_ae6748b74fc9b90cd8d46420e572dfe7c}{mic\+::float32\+\_\+t}} = float
+\item 
+using \mbox{\hyperlink{namespacemic_a8f2def718af23873e60a86990008108e}{mic\+::char\+\_\+t}} = char
+\item 
+using \mbox{\hyperlink{namespacemic_a19f2d0bcc56d9f04d1e34a4c5b88bf33}{mic\+::vector\+\_\+3f\+\_\+t}} = Eigen\+::\+Vector3d
+\item 
+using \mbox{\hyperlink{namespacemic_a05e842658b48e5eebf9e954351b7c8b4}{mic\+::quaternionf\+\_\+t}} = Eigen\+::\+Quaterniond
+\item 
+using \mbox{\hyperlink{namespacemic_a178d689da0f2e3ad98519189669a5081}{mic\+::matrix\+\_\+3f\+\_\+t}} = Eigen\+::\+Matrix3d
+\item 
+using \mbox{\hyperlink{namespacemic_a3605762b34bea7fe04ec003f45815956}{mic\+::matrix\+\_\+3\+\_\+18f\+\_\+t}} = Eigen\+::\+Matrix$<$ double, 3, 18 $>$
+\item 
+using \mbox{\hyperlink{namespacemic_a4d5a253091ad96a4486f2cd49aeea320}{mic\+::vector\+\_\+xf\+\_\+t}} = Eigen\+::\+Vector\+Xd
+\item 
+using \mbox{\hyperlink{namespacemic_a8646bb88af061308e151becb8fd1ce73}{mic\+::matrix\+\_\+xf\+\_\+t}} = Eigen\+::\+Matrix\+Xd
+\item 
+using \mbox{\hyperlink{namespacemic_a1d751203a4d66b7a1cfb81de6af86652}{mic\+::bool\+\_\+t}} = Mic\+Bool
+\item 
+using \mbox{\hyperlink{namespacemic_aa1b44fc1b3a46df59606a82b48fde752}{mic\+::ret\+\_\+t}} = Mic\+Ret
+\item 
+using \mbox{\hyperlink{namespacemic_ad96d9b6c530f27255442a332ca56d490}{mic\+::mic\+\_\+mag\+\_\+t}} = Mic\+Mag
+\item 
+using \mbox{\hyperlink{namespacemic_a61f28ac713e0c75474c43122ac094545}{mic\+::mic\+\_\+imu\+\_\+t}} = Mic\+I\+MU
+\item 
+using \mbox{\hyperlink{namespacemic_a856314995815ed60694bae2f1184e62a}{mic\+::mic\+\_\+gnss\+\_\+t}} = Mic\+G\+N\+SS
+\item 
+using \mbox{\hyperlink{namespacemic_acfe40fd3b45fa08a3118ed800dd45927}{mic\+::mic\+\_\+nav\+\_\+state\+\_\+t}} = Mic\+Nav\+State
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacemic_ae3c47b761a59e46c54fe210b3a5a25e9}{mic\+::\+Mic\+Bool}} \{ \mbox{\hyperlink{namespacemic_ae3c47b761a59e46c54fe210b3a5a25e9a542056a6ef767aeb33366561d842afef}{mic\+::\+M\+I\+C\+\_\+\+F\+A\+L\+SE}} = 0, 
+\mbox{\hyperlink{namespacemic_ae3c47b761a59e46c54fe210b3a5a25e9a88cd9dbff4ae269dabaef93b80fbd473}{mic\+::\+M\+I\+C\+\_\+\+T\+R\+UE}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863}{mic\+::\+Mic\+Ret}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863a1fa979f5c6fe3833e534947054254c5c}{mic\+::\+Mic\+Ret\+::\+M\+I\+C\+\_\+\+R\+E\+T\+\_\+\+F\+A\+I\+L\+ED}} = 0, 
+\mbox{\hyperlink{namespacemic_a2a6b01e078fa09a5b851cfc841a25863aedf2be63728565673413f393ec68fd2e}{mic\+::\+Mic\+Ret\+::\+M\+I\+C\+\_\+\+R\+E\+T\+\_\+\+S\+U\+C\+C\+E\+S\+S\+ED}} = 1
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mic__base_8h_a65e9886d74aaee76545e83dd09011727}\label{mic__base_8h_a65e9886d74aaee76545e83dd09011727}} 
+\index{mic\_base.h@{mic\_base.h}!false@{false}}
+\index{false@{false}!mic\_base.h@{mic\_base.h}}
+\doxysubsubsection{\texorpdfstring{false}{false}}
+{\footnotesize\ttfamily \#define false~(\mbox{\hyperlink{namespacemic_ae3c47b761a59e46c54fe210b3a5a25e9a542056a6ef767aeb33366561d842afef}{mic\+::\+M\+I\+C\+\_\+\+F\+A\+L\+SE}})}
+
+\mbox{\Hypertarget{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}\label{mic__base_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}} 
+\index{mic\_base.h@{mic\_base.h}!true@{true}}
+\index{true@{true}!mic\_base.h@{mic\_base.h}}
+\doxysubsubsection{\texorpdfstring{true}{true}}
+{\footnotesize\ttfamily \#define true~(\mbox{\hyperlink{namespacemic_ae3c47b761a59e46c54fe210b3a5a25e9a88cd9dbff4ae269dabaef93b80fbd473}{mic\+::\+M\+I\+C\+\_\+\+T\+R\+UE}})}
+

@@ -31,20 +31,42 @@ class MicTLMagCompensator;
 using mic_tl_mag_compensator_t = MicTLMagCompensator;
 
 using mic_tolles_lawson_t = tl::TollesLawson;
-using mic_tolles_lawson_shared_ptr = std::shared_ptr<tl::TollesLawson>;
+using mic_tolles_lawson_shared_ptr = std::shared_ptr<mic_tolles_lawson_t>;
 
+/** \brief MicTLMagCompensator is a magnetic compensation algorithm based on
+ * the traditional Tolles-Lawson compensation model.
+ *
+ * \author Qinxuan Sun, Yansong Gong
+ * \ingroup compensation
+ */
 class MicTLMagCompensator : public MicMagCompensator
 {
 public:
+    /** \brief Empty constructor. */
     MicTLMagCompensator();
+
+    /** \brief destructor. */
     virtual ~MicTLMagCompensator() = default;
 
-    virtual ret_t calibrate() override;
-    virtual ret_t compenste(const mic_mag_flux_t &in, mic_mag_flux_t &out) override;
-
 protected:
+    /** \brief Implementation of the TL model-based calibration algorithm. */
+    virtual ret_t do_calibrate() override;
+
+    /** \brief Compensate using the TL model-based model
+     * (only if the working state is set to \a MIC_MAG_COMPENSATE_CALIBRATED).
+     * \param[in] ts the timestamp at which the compensation result is required
+     * \param[out] out output the compensated result at time \a ts
+     */
+    virtual ret_t do_compenste(const float64_t ts, mic_mag_t &out) override;
+
+    virtual ret_t serialize(json_t &node) override;
+    virtual ret_t deserialize(json_t &node) override;
+
+    /** \brief Pointer to a \a tl::TollesLawson object. */
     mic_tolles_lawson_shared_ptr _tl_model;
-    vector_18f_t _tl_coeffs;
+
+    /** \brief TL model coefficients \beta. */
+    vector_xf_t _tl_coeffs;
 };
 
 MIC_NAMESPACE_END

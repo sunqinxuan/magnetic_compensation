@@ -1,0 +1,247 @@
+\hypertarget{mic__logger_8h}{}\doxysection{include/common/mic\+\_\+logger.h File Reference}
+\label{mic__logger_8h}\index{include/common/mic\_logger.h@{include/common/mic\_logger.h}}
+{\ttfamily \#include \char`\"{}common/mic\+\_\+prerequisite.\+h\char`\"{}}\newline
+Include dependency graph for mic\+\_\+logger.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mic__logger_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mic__logger_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}}
+\item 
+class \mbox{\hyperlink{class_mic_bash_printer}{Mic\+Bash\+Printer}}
+\item 
+class \mbox{\hyperlink{class_mic_file_writer}{Mic\+File\+Writer}}
+\item 
+class \mbox{\hyperlink{class_mic_bash_file_logger}{Mic\+Bash\+File\+Logger}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mic__logger_8h_a008166bc4aae77c61c8d7107eaae16ea}{M\+I\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+O\+G\+\_\+\+T\+I\+T\+LE}}~(\char`\"{}\mbox{[}M\+IC\mbox{]} R\+: \char`\"{})
+\item 
+\#define \mbox{\hyperlink{mic__logger_8h_a50bfd45903f67a3b29c72a97a58dca5f}{M\+I\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+L\+O\+G\+\_\+\+B\+E\+G\+IN}}~(\char`\"{}\mbox{[}M\+IC\mbox{]} C\+:\char`\"{})
+\item 
+\#define \mbox{\hyperlink{mic__logger_8h_ae7f678019089e051a60d3d512b30b9d8}{M\+I\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+L\+O\+G\+\_\+\+E\+ND}}~(\char`\"{}\+:C\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{mic__logger_8h_a13492812757299bd04ac5a942f32b8d0}{mic\+\_\+logger\+\_\+t}} = \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}}
+\item 
+using \mbox{\hyperlink{mic__logger_8h_a8a7b6d08f43884486f31046c63b32021}{mic\+\_\+bash\+\_\+printer\+\_\+t}} = \mbox{\hyperlink{class_mic_bash_printer}{Mic\+Bash\+Printer}}
+\item 
+using \mbox{\hyperlink{mic__logger_8h_ae4a67179103fa4f1d0b4facec356f6c2}{mic\+\_\+file\+\_\+writer\+\_\+t}} = \mbox{\hyperlink{class_mic_file_writer}{Mic\+File\+Writer}}
+\item 
+using \mbox{\hyperlink{mic__logger_8h_acfd47513958bde81ae12609e746e53d6}{mic\+\_\+file\+\_\+ptr}} = F\+I\+LE $\ast$
+\item 
+using \mbox{\hyperlink{mic__logger_8h_a9de1612dd38ea094ace488dfc5ea0d8d}{mic\+\_\+bash\+\_\+file\+\_\+logger\+\_\+t}} = \mbox{\hyperlink{class_mic_bash_file_logger}{Mic\+Bash\+File\+Logger}}
+\item 
+using \mbox{\hyperlink{mic__logger_8h_a69f46e3be2180f7eb4a17ff38331a13e}{mic\+\_\+logger\+\_\+type\+\_\+t}} = \mbox{\hyperlink{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1}{Mic\+Logger\+Type}}
+\item 
+using \mbox{\hyperlink{mic__logger_8h_a01e2ba99304da684952df4b5e164d2f5}{mic\+\_\+log\+\_\+level\+\_\+t}} = \mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{Mic\+Log\+Level}}
+\item 
+using \mbox{\hyperlink{mic__logger_8h_adab1c3c18bf4dd31259fa04b7a9a5f4b}{mic\+\_\+log\+\_\+kind\+\_\+t}} = \mbox{\hyperlink{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fd}{Mic\+Log\+Kind}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1}{Mic\+Logger\+Type}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1af1f72755b222e9b8da6ed35ad1304aa7}{Mic\+Logger\+Type\+::\+M\+I\+C\+\_\+\+B\+A\+S\+H\+\_\+\+P\+R\+I\+N\+T\+ER}} = 0, 
+\mbox{\hyperlink{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1a7c3aa5ab03d3f35d739106a367fe8099}{Mic\+Logger\+Type\+::\+M\+I\+C\+\_\+\+F\+I\+L\+E\+\_\+\+W\+R\+I\+T\+ER}} = 1, 
+\mbox{\hyperlink{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1a6dd181c80ee1b7b3db3db4698a8527a6}{Mic\+Logger\+Type\+::\+M\+I\+C\+\_\+\+B\+A\+S\+H\+\_\+\+F\+I\+L\+E\+\_\+\+L\+O\+G\+G\+ER}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{Mic\+Log\+Level}} \{ \mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eefadd0acb13251661c3f36f249b530a61dd}{Mic\+Log\+Level\+::\+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+NO}} = 0, 
+\mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eefaa25977836ed477590fb1628c895314c1}{Mic\+Log\+Level\+::\+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+B\+A\+S\+IC}} = 1, 
+\mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eefa041075108ff8a45a2f01c9fc3cb24783}{Mic\+Log\+Level\+::\+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+D\+E\+B\+UG}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fd}{Mic\+Log\+Kind}} \{ \mbox{\hyperlink{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fda9c575122289ddd3118d35f2e439c1316}{Mic\+Log\+Kind\+::\+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+E\+RR}} = 0, 
+\mbox{\hyperlink{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fdaa822bd899b6ed14d228fcbb7653fa8ff}{Mic\+Log\+Kind\+::\+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+W\+A\+RN}} = 1, 
+\mbox{\hyperlink{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fda153edffb6e0dc9efb9b1927682b3a54e}{Mic\+Log\+Kind\+::\+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mic__logger_8h_af842a15c1c392736f36e1fea4951e066}{M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+W\+A\+RN}} (const char\+\_\+t $\ast$info,...)
+\item 
+void \mbox{\hyperlink{mic__logger_8h_a36e26db5aae95becfd07465a2645783c}{M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+E\+RR}} (const char\+\_\+t $\ast$info,...)
+\item 
+void \mbox{\hyperlink{mic__logger_8h_a710ace882a37f2f85cf3f34282f45996}{M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+I\+N\+FO}} (const char\+\_\+t $\ast$info,...)
+\item 
+void \mbox{\hyperlink{mic__logger_8h_abebacce48933a5dfc92652d451fcf8da}{M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+B\+A\+S\+I\+C\+\_\+\+I\+N\+FO}} (const char\+\_\+t $\ast$info,...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mic__logger_8h_a50bfd45903f67a3b29c72a97a58dca5f}\label{mic__logger_8h_a50bfd45903f67a3b29c72a97a58dca5f}} 
+\index{mic\_logger.h@{mic\_logger.h}!MIC\_CONFIG\_LOG\_BEGIN@{MIC\_CONFIG\_LOG\_BEGIN}}
+\index{MIC\_CONFIG\_LOG\_BEGIN@{MIC\_CONFIG\_LOG\_BEGIN}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_CONFIG\_LOG\_BEGIN}{MIC\_CONFIG\_LOG\_BEGIN}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+L\+O\+G\+\_\+\+B\+E\+G\+IN~(\char`\"{}\mbox{[}M\+IC\mbox{]} C\+:\char`\"{})}
+
+\mbox{\Hypertarget{mic__logger_8h_ae7f678019089e051a60d3d512b30b9d8}\label{mic__logger_8h_ae7f678019089e051a60d3d512b30b9d8}} 
+\index{mic\_logger.h@{mic\_logger.h}!MIC\_CONFIG\_LOG\_END@{MIC\_CONFIG\_LOG\_END}}
+\index{MIC\_CONFIG\_LOG\_END@{MIC\_CONFIG\_LOG\_END}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_CONFIG\_LOG\_END}{MIC\_CONFIG\_LOG\_END}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+L\+O\+G\+\_\+\+E\+ND~(\char`\"{}\+:C\char`\"{})}
+
+\mbox{\Hypertarget{mic__logger_8h_a008166bc4aae77c61c8d7107eaae16ea}\label{mic__logger_8h_a008166bc4aae77c61c8d7107eaae16ea}} 
+\index{mic\_logger.h@{mic\_logger.h}!MIC\_STATE\_LOG\_TITLE@{MIC\_STATE\_LOG\_TITLE}}
+\index{MIC\_STATE\_LOG\_TITLE@{MIC\_STATE\_LOG\_TITLE}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_STATE\_LOG\_TITLE}{MIC\_STATE\_LOG\_TITLE}}
+{\footnotesize\ttfamily \#define M\+I\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+O\+G\+\_\+\+T\+I\+T\+LE~(\char`\"{}\mbox{[}M\+IC\mbox{]} R\+: \char`\"{})}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{mic__logger_8h_a9de1612dd38ea094ace488dfc5ea0d8d}\label{mic__logger_8h_a9de1612dd38ea094ace488dfc5ea0d8d}} 
+\index{mic\_logger.h@{mic\_logger.h}!mic\_bash\_file\_logger\_t@{mic\_bash\_file\_logger\_t}}
+\index{mic\_bash\_file\_logger\_t@{mic\_bash\_file\_logger\_t}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{mic\_bash\_file\_logger\_t}{mic\_bash\_file\_logger\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__logger_8h_a9de1612dd38ea094ace488dfc5ea0d8d}{mic\+\_\+bash\+\_\+file\+\_\+logger\+\_\+t}} =  \mbox{\hyperlink{class_mic_bash_file_logger}{Mic\+Bash\+File\+Logger}}}
+
+\mbox{\Hypertarget{mic__logger_8h_a8a7b6d08f43884486f31046c63b32021}\label{mic__logger_8h_a8a7b6d08f43884486f31046c63b32021}} 
+\index{mic\_logger.h@{mic\_logger.h}!mic\_bash\_printer\_t@{mic\_bash\_printer\_t}}
+\index{mic\_bash\_printer\_t@{mic\_bash\_printer\_t}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{mic\_bash\_printer\_t}{mic\_bash\_printer\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__logger_8h_a8a7b6d08f43884486f31046c63b32021}{mic\+\_\+bash\+\_\+printer\+\_\+t}} =  \mbox{\hyperlink{class_mic_bash_printer}{Mic\+Bash\+Printer}}}
+
+\mbox{\Hypertarget{mic__logger_8h_acfd47513958bde81ae12609e746e53d6}\label{mic__logger_8h_acfd47513958bde81ae12609e746e53d6}} 
+\index{mic\_logger.h@{mic\_logger.h}!mic\_file\_ptr@{mic\_file\_ptr}}
+\index{mic\_file\_ptr@{mic\_file\_ptr}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{mic\_file\_ptr}{mic\_file\_ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__logger_8h_acfd47513958bde81ae12609e746e53d6}{mic\+\_\+file\+\_\+ptr}} =  F\+I\+LE$\ast$}
+
+\mbox{\Hypertarget{mic__logger_8h_ae4a67179103fa4f1d0b4facec356f6c2}\label{mic__logger_8h_ae4a67179103fa4f1d0b4facec356f6c2}} 
+\index{mic\_logger.h@{mic\_logger.h}!mic\_file\_writer\_t@{mic\_file\_writer\_t}}
+\index{mic\_file\_writer\_t@{mic\_file\_writer\_t}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{mic\_file\_writer\_t}{mic\_file\_writer\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__logger_8h_ae4a67179103fa4f1d0b4facec356f6c2}{mic\+\_\+file\+\_\+writer\+\_\+t}} =  \mbox{\hyperlink{class_mic_file_writer}{Mic\+File\+Writer}}}
+
+\mbox{\Hypertarget{mic__logger_8h_adab1c3c18bf4dd31259fa04b7a9a5f4b}\label{mic__logger_8h_adab1c3c18bf4dd31259fa04b7a9a5f4b}} 
+\index{mic\_logger.h@{mic\_logger.h}!mic\_log\_kind\_t@{mic\_log\_kind\_t}}
+\index{mic\_log\_kind\_t@{mic\_log\_kind\_t}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{mic\_log\_kind\_t}{mic\_log\_kind\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fd}{mic\+\_\+log\+\_\+kind\+\_\+t}} =  \mbox{\hyperlink{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fd}{Mic\+Log\+Kind}}}
+
+\mbox{\Hypertarget{mic__logger_8h_a01e2ba99304da684952df4b5e164d2f5}\label{mic__logger_8h_a01e2ba99304da684952df4b5e164d2f5}} 
+\index{mic\_logger.h@{mic\_logger.h}!mic\_log\_level\_t@{mic\_log\_level\_t}}
+\index{mic\_log\_level\_t@{mic\_log\_level\_t}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{mic\_log\_level\_t}{mic\_log\_level\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{mic\+\_\+log\+\_\+level\+\_\+t}} =  \mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{Mic\+Log\+Level}}}
+
+\mbox{\Hypertarget{mic__logger_8h_a13492812757299bd04ac5a942f32b8d0}\label{mic__logger_8h_a13492812757299bd04ac5a942f32b8d0}} 
+\index{mic\_logger.h@{mic\_logger.h}!mic\_logger\_t@{mic\_logger\_t}}
+\index{mic\_logger\_t@{mic\_logger\_t}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{mic\_logger\_t}{mic\_logger\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__logger_8h_a13492812757299bd04ac5a942f32b8d0}{mic\+\_\+logger\+\_\+t}} =  \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}}}
+
+\mbox{\Hypertarget{mic__logger_8h_a69f46e3be2180f7eb4a17ff38331a13e}\label{mic__logger_8h_a69f46e3be2180f7eb4a17ff38331a13e}} 
+\index{mic\_logger.h@{mic\_logger.h}!mic\_logger\_type\_t@{mic\_logger\_type\_t}}
+\index{mic\_logger\_type\_t@{mic\_logger\_type\_t}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{mic\_logger\_type\_t}{mic\_logger\_type\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1}{mic\+\_\+logger\+\_\+type\+\_\+t}} =  \mbox{\hyperlink{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1}{Mic\+Logger\+Type}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1}\label{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1}} 
+\index{mic\_logger.h@{mic\_logger.h}!MicLoggerType@{MicLoggerType}}
+\index{MicLoggerType@{MicLoggerType}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{MicLoggerType}{MicLoggerType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1}{Mic\+Logger\+Type}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIC\_BASH\_PRINTER@{MIC\_BASH\_PRINTER}!mic\_logger.h@{mic\_logger.h}}\index{mic\_logger.h@{mic\_logger.h}!MIC\_BASH\_PRINTER@{MIC\_BASH\_PRINTER}}}\mbox{\Hypertarget{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1af1f72755b222e9b8da6ed35ad1304aa7}\label{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1af1f72755b222e9b8da6ed35ad1304aa7}} 
+M\+I\+C\+\_\+\+B\+A\+S\+H\+\_\+\+P\+R\+I\+N\+T\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIC\_FILE\_WRITER@{MIC\_FILE\_WRITER}!mic\_logger.h@{mic\_logger.h}}\index{mic\_logger.h@{mic\_logger.h}!MIC\_FILE\_WRITER@{MIC\_FILE\_WRITER}}}\mbox{\Hypertarget{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1a7c3aa5ab03d3f35d739106a367fe8099}\label{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1a7c3aa5ab03d3f35d739106a367fe8099}} 
+M\+I\+C\+\_\+\+F\+I\+L\+E\+\_\+\+W\+R\+I\+T\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIC\_BASH\_FILE\_LOGGER@{MIC\_BASH\_FILE\_LOGGER}!mic\_logger.h@{mic\_logger.h}}\index{mic\_logger.h@{mic\_logger.h}!MIC\_BASH\_FILE\_LOGGER@{MIC\_BASH\_FILE\_LOGGER}}}\mbox{\Hypertarget{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1a6dd181c80ee1b7b3db3db4698a8527a6}\label{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1a6dd181c80ee1b7b3db3db4698a8527a6}} 
+M\+I\+C\+\_\+\+B\+A\+S\+H\+\_\+\+F\+I\+L\+E\+\_\+\+L\+O\+G\+G\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fd}\label{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fd}} 
+\index{mic\_logger.h@{mic\_logger.h}!MicLogKind@{MicLogKind}}
+\index{MicLogKind@{MicLogKind}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{MicLogKind}{MicLogKind}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fd}{Mic\+Log\+Kind}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIC\_LOG\_ERR@{MIC\_LOG\_ERR}!mic\_logger.h@{mic\_logger.h}}\index{mic\_logger.h@{mic\_logger.h}!MIC\_LOG\_ERR@{MIC\_LOG\_ERR}}}\mbox{\Hypertarget{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fda9c575122289ddd3118d35f2e439c1316}\label{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fda9c575122289ddd3118d35f2e439c1316}} 
+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+E\+RR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIC\_LOG\_WARN@{MIC\_LOG\_WARN}!mic\_logger.h@{mic\_logger.h}}\index{mic\_logger.h@{mic\_logger.h}!MIC\_LOG\_WARN@{MIC\_LOG\_WARN}}}\mbox{\Hypertarget{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fdaa822bd899b6ed14d228fcbb7653fa8ff}\label{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fdaa822bd899b6ed14d228fcbb7653fa8ff}} 
+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+W\+A\+RN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIC\_LOG\_INFO@{MIC\_LOG\_INFO}!mic\_logger.h@{mic\_logger.h}}\index{mic\_logger.h@{mic\_logger.h}!MIC\_LOG\_INFO@{MIC\_LOG\_INFO}}}\mbox{\Hypertarget{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fda153edffb6e0dc9efb9b1927682b3a54e}\label{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fda153edffb6e0dc9efb9b1927682b3a54e}} 
+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}\label{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}} 
+\index{mic\_logger.h@{mic\_logger.h}!MicLogLevel@{MicLogLevel}}
+\index{MicLogLevel@{MicLogLevel}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{MicLogLevel}{MicLogLevel}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{Mic\+Log\+Level}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIC\_LOG\_NO@{MIC\_LOG\_NO}!mic\_logger.h@{mic\_logger.h}}\index{mic\_logger.h@{mic\_logger.h}!MIC\_LOG\_NO@{MIC\_LOG\_NO}}}\mbox{\Hypertarget{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eefadd0acb13251661c3f36f249b530a61dd}\label{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eefadd0acb13251661c3f36f249b530a61dd}} 
+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+NO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIC\_LOG\_BASIC@{MIC\_LOG\_BASIC}!mic\_logger.h@{mic\_logger.h}}\index{mic\_logger.h@{mic\_logger.h}!MIC\_LOG\_BASIC@{MIC\_LOG\_BASIC}}}\mbox{\Hypertarget{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eefaa25977836ed477590fb1628c895314c1}\label{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eefaa25977836ed477590fb1628c895314c1}} 
+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+B\+A\+S\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIC\_LOG\_DEBUG@{MIC\_LOG\_DEBUG}!mic\_logger.h@{mic\_logger.h}}\index{mic\_logger.h@{mic\_logger.h}!MIC\_LOG\_DEBUG@{MIC\_LOG\_DEBUG}}}\mbox{\Hypertarget{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eefa041075108ff8a45a2f01c9fc3cb24783}\label{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eefa041075108ff8a45a2f01c9fc3cb24783}} 
+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+D\+E\+B\+UG&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mic__logger_8h_abebacce48933a5dfc92652d451fcf8da}\label{mic__logger_8h_abebacce48933a5dfc92652d451fcf8da}} 
+\index{mic\_logger.h@{mic\_logger.h}!MIC\_LOG\_BASIC\_INFO@{MIC\_LOG\_BASIC\_INFO}}
+\index{MIC\_LOG\_BASIC\_INFO@{MIC\_LOG\_BASIC\_INFO}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_LOG\_BASIC\_INFO()}{MIC\_LOG\_BASIC\_INFO()}}
+{\footnotesize\ttfamily void M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+B\+A\+S\+I\+C\+\_\+\+I\+N\+FO (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mic__logger_8h_a710ace882a37f2f85cf3f34282f45996}\label{mic__logger_8h_a710ace882a37f2f85cf3f34282f45996}} 
+\index{mic\_logger.h@{mic\_logger.h}!MIC\_LOG\_DEBUG\_INFO@{MIC\_LOG\_DEBUG\_INFO}}
+\index{MIC\_LOG\_DEBUG\_INFO@{MIC\_LOG\_DEBUG\_INFO}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_LOG\_DEBUG\_INFO()}{MIC\_LOG\_DEBUG\_INFO()}}
+{\footnotesize\ttfamily void M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+I\+N\+FO (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mic__logger_8h_a36e26db5aae95becfd07465a2645783c}\label{mic__logger_8h_a36e26db5aae95becfd07465a2645783c}} 
+\index{mic\_logger.h@{mic\_logger.h}!MIC\_LOG\_ERR@{MIC\_LOG\_ERR}}
+\index{MIC\_LOG\_ERR@{MIC\_LOG\_ERR}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_LOG\_ERR()}{MIC\_LOG\_ERR()}}
+{\footnotesize\ttfamily void M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+E\+RR (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mic__logger_8h_af842a15c1c392736f36e1fea4951e066}\label{mic__logger_8h_af842a15c1c392736f36e1fea4951e066}} 
+\index{mic\_logger.h@{mic\_logger.h}!MIC\_LOG\_WARN@{MIC\_LOG\_WARN}}
+\index{MIC\_LOG\_WARN@{MIC\_LOG\_WARN}!mic\_logger.h@{mic\_logger.h}}
+\doxysubsubsection{\texorpdfstring{MIC\_LOG\_WARN()}{MIC\_LOG\_WARN()}}
+{\footnotesize\ttfamily void M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+W\+A\+RN (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info,  }\item[{}]{... }\end{DoxyParamCaption})}
+

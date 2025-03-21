@@ -1,0 +1,174 @@
+\hypertarget{class_mic_logger}{}\doxysection{Mic\+Logger Class Reference}
+\label{class_mic_logger}\index{MicLogger@{MicLogger}}
+
+
+{\ttfamily \#include $<$mic\+\_\+logger.\+h$>$}
+
+
+
+Inheritance diagram for Mic\+Logger\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_mic_logger__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_mic_logger_a9d142281882c47a9034175ff0417fa14}{$\sim$\+Mic\+Logger}} ()
+\item 
+\mbox{\hyperlink{class_mic_logger_a5963d6cc1c93d0640d4b208d00b739f4}{Mic\+Logger}} (const \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}} \&)=delete
+\item 
+\mbox{\hyperlink{class_mic_logger_a63b5e2335b27ef29ff331fb36bbd4d1f}{Mic\+Logger}} (\mbox{\hyperlink{class_mic_logger}{Mic\+Logger}} \&\&)=delete
+\item 
+\mbox{\hyperlink{class_mic_logger}{Mic\+Logger}} \& \mbox{\hyperlink{class_mic_logger_a76e8bca03ddae908a7df0aa564950b25}{operator=}} (const \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}} \&)=delete
+\item 
+\mbox{\hyperlink{class_mic_logger}{Mic\+Logger}} \& \mbox{\hyperlink{class_mic_logger_ac03037bdd442cb1a3ebacc2004a358bf}{operator=}} (\mbox{\hyperlink{class_mic_logger}{Mic\+Logger}} \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_mic_logger_a7f13f9e61bd6253f02199ffd122f95c2}{initialize}} (\mbox{\hyperlink{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1}{mic\+\_\+logger\+\_\+type\+\_\+t}} type, std\+::string filename=\char`\"{}\char`\"{}, \mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{mic\+\_\+log\+\_\+level\+\_\+t}} log\+\_\+level=mic\+\_\+log\+\_\+level\+\_\+t\+::\+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+B\+A\+S\+IC)
+\item 
+static void \mbox{\hyperlink{class_mic_logger_ae3548f6ef332c81cc1d0fffaef2ddb9c}{set\+\_\+log\+\_\+level}} (\mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{mic\+\_\+log\+\_\+level\+\_\+t}} log\+\_\+level)
+\item 
+static void \mbox{\hyperlink{class_mic_logger_a49b0869f3eb1fec9099c652734451cfe}{log}} (\mbox{\hyperlink{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fd}{mic\+\_\+log\+\_\+kind\+\_\+t}} log\+\_\+type, \mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{mic\+\_\+log\+\_\+level\+\_\+t}} log\+\_\+level, const char\+\_\+t $\ast$info, va\+\_\+list args)
+\item 
+static void \mbox{\hyperlink{class_mic_logger_aed83a324ca698960ca239c2b6bb5571d}{log\+\_\+config}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mic_logger_aa6cf083614ea5680e3079c6a9268692f}{Mic\+Logger}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_mic_logger_a8931ed474365e9538539c8a00b6aeb14}{log\+\_\+info}} (const char\+\_\+t $\ast$info)=0
+\item 
+virtual void \mbox{\hyperlink{class_mic_logger_a7370ad451e3190e2aaacf667f8c4b1bb}{log\+\_\+warn}} (const char\+\_\+t $\ast$info)=0
+\item 
+virtual void \mbox{\hyperlink{class_mic_logger_a8de8a35e89b1f96565c6a42130f9592a}{log\+\_\+err}} (const char\+\_\+t $\ast$info)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{mic__logger_8h_a13492812757299bd04ac5a942f32b8d0}{mic\+\_\+logger\+\_\+t}} $>$ \mbox{\hyperlink{class_mic_logger_a72039992040bb957d09638445ec5e55c}{\+\_\+logger}} = nullptr
+\item 
+static \mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{mic\+\_\+log\+\_\+level\+\_\+t}} \mbox{\hyperlink{class_mic_logger_aa882878557f86540003e4f7f85d6a131}{\+\_\+log\+\_\+level}} = mic\+\_\+log\+\_\+level\+\_\+t\+::\+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+B\+A\+S\+IC
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mic_logger_a9d142281882c47a9034175ff0417fa14}\label{class_mic_logger_a9d142281882c47a9034175ff0417fa14}} 
+\index{MicLogger@{MicLogger}!````~MicLogger@{$\sim$MicLogger}}
+\index{````~MicLogger@{$\sim$MicLogger}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{$\sim$MicLogger()}{~MicLogger()}}
+{\footnotesize\ttfamily virtual Mic\+Logger\+::$\sim$\+Mic\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mic_logger_a5963d6cc1c93d0640d4b208d00b739f4}\label{class_mic_logger_a5963d6cc1c93d0640d4b208d00b739f4}} 
+\index{MicLogger@{MicLogger}!MicLogger@{MicLogger}}
+\index{MicLogger@{MicLogger}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{MicLogger()}{MicLogger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Mic\+Logger\+::\+Mic\+Logger (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_mic_logger_a63b5e2335b27ef29ff331fb36bbd4d1f}\label{class_mic_logger_a63b5e2335b27ef29ff331fb36bbd4d1f}} 
+\index{MicLogger@{MicLogger}!MicLogger@{MicLogger}}
+\index{MicLogger@{MicLogger}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{MicLogger()}{MicLogger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Mic\+Logger\+::\+Mic\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mic_logger}{Mic\+Logger}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_mic_logger_aa6cf083614ea5680e3079c6a9268692f}\label{class_mic_logger_aa6cf083614ea5680e3079c6a9268692f}} 
+\index{MicLogger@{MicLogger}!MicLogger@{MicLogger}}
+\index{MicLogger@{MicLogger}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{MicLogger()}{MicLogger()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Mic\+Logger\+::\+Mic\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mic_logger_a7f13f9e61bd6253f02199ffd122f95c2}\label{class_mic_logger_a7f13f9e61bd6253f02199ffd122f95c2}} 
+\index{MicLogger@{MicLogger}!initialize@{initialize}}
+\index{initialize@{initialize}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Mic\+Logger\+::initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__logger_8h_a8aff944252c0c178a5901c7898a555d1}{mic\+\_\+logger\+\_\+type\+\_\+t}}}]{type,  }\item[{std\+::string}]{filename = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{mic\+\_\+log\+\_\+level\+\_\+t}}}]{log\+\_\+level = {\ttfamily mic\+\_\+log\+\_\+level\+\_\+t\+:\+:MIC\+\_\+LOG\+\_\+BASIC} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_mic_logger_a49b0869f3eb1fec9099c652734451cfe}\label{class_mic_logger_a49b0869f3eb1fec9099c652734451cfe}} 
+\index{MicLogger@{MicLogger}!log@{log}}
+\index{log@{log}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Mic\+Logger\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__logger_8h_a2b69f4d9ec0514b1e8cb29255418e8fd}{mic\+\_\+log\+\_\+kind\+\_\+t}}}]{log\+\_\+type,  }\item[{\mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{mic\+\_\+log\+\_\+level\+\_\+t}}}]{log\+\_\+level,  }\item[{const char\+\_\+t $\ast$}]{info,  }\item[{va\+\_\+list}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_mic_logger_aed83a324ca698960ca239c2b6bb5571d}\label{class_mic_logger_aed83a324ca698960ca239c2b6bb5571d}} 
+\index{MicLogger@{MicLogger}!log\_config@{log\_config}}
+\index{log\_config@{log\_config}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{log\_config()}{log\_config()}}
+{\footnotesize\ttfamily void Mic\+Logger\+::log\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_mic_logger_a8de8a35e89b1f96565c6a42130f9592a}\label{class_mic_logger_a8de8a35e89b1f96565c6a42130f9592a}} 
+\index{MicLogger@{MicLogger}!log\_err@{log\_err}}
+\index{log\_err@{log\_err}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{log\_err()}{log\_err()}}
+{\footnotesize\ttfamily virtual void Mic\+Logger\+::log\+\_\+err (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_mic_bash_file_logger_a362255476064248bd9f6db147dae9ebc}{Mic\+Bash\+File\+Logger}}, \mbox{\hyperlink{class_mic_file_writer_a813842c4d8d778f29173f5a693d22c5f}{Mic\+File\+Writer}}, and \mbox{\hyperlink{class_mic_bash_printer_a9701a21964a34f701cf30d9a8bbdad8b}{Mic\+Bash\+Printer}}.
+
+\mbox{\Hypertarget{class_mic_logger_a8931ed474365e9538539c8a00b6aeb14}\label{class_mic_logger_a8931ed474365e9538539c8a00b6aeb14}} 
+\index{MicLogger@{MicLogger}!log\_info@{log\_info}}
+\index{log\_info@{log\_info}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{log\_info()}{log\_info()}}
+{\footnotesize\ttfamily virtual void Mic\+Logger\+::log\+\_\+info (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_mic_bash_file_logger_adceac0d61b51a5a776961dc0fb137294}{Mic\+Bash\+File\+Logger}}, \mbox{\hyperlink{class_mic_file_writer_a8dd598a6c927b8a18f96ebcee34db6a2}{Mic\+File\+Writer}}, and \mbox{\hyperlink{class_mic_bash_printer_a65016c3f8760f12e1bcb28e60b5bf2ec}{Mic\+Bash\+Printer}}.
+
+\mbox{\Hypertarget{class_mic_logger_a7370ad451e3190e2aaacf667f8c4b1bb}\label{class_mic_logger_a7370ad451e3190e2aaacf667f8c4b1bb}} 
+\index{MicLogger@{MicLogger}!log\_warn@{log\_warn}}
+\index{log\_warn@{log\_warn}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{log\_warn()}{log\_warn()}}
+{\footnotesize\ttfamily virtual void Mic\+Logger\+::log\+\_\+warn (\begin{DoxyParamCaption}\item[{const char\+\_\+t $\ast$}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_mic_bash_file_logger_a084b27a348f2e5f4c661eaf5837458e4}{Mic\+Bash\+File\+Logger}}, \mbox{\hyperlink{class_mic_file_writer_a01d906da6f27816c54d540750806c5c1}{Mic\+File\+Writer}}, and \mbox{\hyperlink{class_mic_bash_printer_a6f9c9e0ffdbf1f140bc174705adb0e0c}{Mic\+Bash\+Printer}}.
+
+\mbox{\Hypertarget{class_mic_logger_a76e8bca03ddae908a7df0aa564950b25}\label{class_mic_logger_a76e8bca03ddae908a7df0aa564950b25}} 
+\index{MicLogger@{MicLogger}!operator=@{operator=}}
+\index{operator=@{operator=}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}}\& Mic\+Logger\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_mic_logger_ac03037bdd442cb1a3ebacc2004a358bf}\label{class_mic_logger_ac03037bdd442cb1a3ebacc2004a358bf}} 
+\index{MicLogger@{MicLogger}!operator=@{operator=}}
+\index{operator=@{operator=}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mic_logger}{Mic\+Logger}}\& Mic\+Logger\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mic_logger}{Mic\+Logger}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_mic_logger_ae3548f6ef332c81cc1d0fffaef2ddb9c}\label{class_mic_logger_ae3548f6ef332c81cc1d0fffaef2ddb9c}} 
+\index{MicLogger@{MicLogger}!set\_log\_level@{set\_log\_level}}
+\index{set\_log\_level@{set\_log\_level}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{set\_log\_level()}{set\_log\_level()}}
+{\footnotesize\ttfamily void Mic\+Logger\+::set\+\_\+log\+\_\+level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{mic\+\_\+log\+\_\+level\+\_\+t}}}]{log\+\_\+level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mic_logger_aa882878557f86540003e4f7f85d6a131}\label{class_mic_logger_aa882878557f86540003e4f7f85d6a131}} 
+\index{MicLogger@{MicLogger}!\_log\_level@{\_log\_level}}
+\index{\_log\_level@{\_log\_level}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{\_log\_level}{\_log\_level}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mic__logger_8h_a2e0d4a63e955e6b3728d041f60706eef}{mic\+\_\+log\+\_\+level\+\_\+t}} Mic\+Logger\+::\+\_\+log\+\_\+level = mic\+\_\+log\+\_\+level\+\_\+t\+::\+M\+I\+C\+\_\+\+L\+O\+G\+\_\+\+B\+A\+S\+IC\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mic_logger_a72039992040bb957d09638445ec5e55c}\label{class_mic_logger_a72039992040bb957d09638445ec5e55c}} 
+\index{MicLogger@{MicLogger}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!MicLogger@{MicLogger}}
+\doxysubsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{mic__logger_8h_a13492812757299bd04ac5a942f32b8d0}{mic\+\_\+logger\+\_\+t}} $>$ Mic\+Logger\+::\+\_\+logger = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/common/\mbox{\hyperlink{mic__logger_8h}{mic\+\_\+logger.\+h}}\item 
+src/common/\mbox{\hyperlink{mic__logger_8cc}{mic\+\_\+logger.\+cc}}\end{DoxyCompactItemize}

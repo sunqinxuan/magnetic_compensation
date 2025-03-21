@@ -10,11 +10,20 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-sign-compare \
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 
+set(ARM 0)
+
+set(LIB_DIR lib)
+if (ARM)
+    message("DEFINED ARM, USE LIB IN LIB-ARM!")
+    set(LIB_DIR lib-arm)
+endif()
+
 #####################################################################################
 set(INSTALL_DIR "${CMAKE_HOME_DIRECTORY}/install")
 set(INSTALL_BIN "${INSTALL_DIR}/bin")
 set(INSTALL_ETC "${INSTALL_DIR}/etc")
 set(INSTALL_LIB "${INSTALL_DIR}/lib")
+set(INSTALL_MDL "${INSTALL_DIR}/models")
 
 set(CMAKE_INSTALL_PREFIX ${INSTALL_DIR})
 #####################################################################################
@@ -30,20 +39,20 @@ include_directories(${CMAKE_HOME_DIRECTORY}/3rd_party/nlohmann/include)
 ## ceres
 set(CERES_DIR "${CMAKE_HOME_DIRECTORY}/3rd_party/ceres-1.12.0")
 include_directories(${CERES_DIR}/include/)
-link_directories(${CERES_DIR}/lib/)
-install(DIRECTORY ${CERES_DIR}/lib/ DESTINATION ${INSTALL_LIB})
+link_directories(${CERES_DIR}/${LIB_DIR}/)
+install(DIRECTORY ${CERES_DIR}/${LIB_DIR}/ DESTINATION ${INSTALL_LIB})
 
 ## glog
 set(GLOG_DIR "${CMAKE_HOME_DIRECTORY}/3rd_party/glog-0.4.0")
 include_directories(${GLOG_DIR}/include/)
-link_directories(${GLOG_DIR}/lib/)
-install(DIRECTORY ${GLOG_DIR}/lib/ DESTINATION ${INSTALL_LIB})
+link_directories(${GLOG_DIR}/${LIB_DIR}/)
+install(DIRECTORY ${GLOG_DIR}/${LIB_DIR}/ DESTINATION ${INSTALL_LIB})
 
 ## gflag
 set(GFLAGS_DIR "${CMAKE_HOME_DIRECTORY}/3rd_party/gflag-2.1.2")
 include_directories(${GFLAGS_DIR}/include/)
-link_directories(${GFLAGS_DIR}/lib/)
-install(DIRECTORY ${GFLAGS_DIR}/lib/ DESTINATION ${INSTALL_LIB})
+link_directories(${GFLAGS_DIR}/${LIB_DIR}/)
+install(DIRECTORY ${GFLAGS_DIR}/${LIB_DIR}/ DESTINATION ${INSTALL_LIB})
 
 ## kf-gins
 include_directories(${CMAKE_HOME_DIRECTORY}/3rd_party/kf-gins/)
@@ -63,6 +72,10 @@ set(SRC_FILES
     ./src/mic_mag_compensator/observer/mic_state_logger.cc
     ./src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc
     ./src/mic_mag_compensator/impl/mic_tl_mag_compensator.cc
+    ./src/mic_mag_compensator/impl/mic_tl_component_mag_compensator.cc
+    ./src/mic_mag_compensator/impl/mic_cabin_mag_compensator.cc
+    ./src/mic_mag_compensator/impl/mic_cabin_nav_mag_compensator.cc
+    ./src/api/mic_compensation_api.cc
 )
 
 SET(DEPEND_LIBS tolles-lawson kf-gins ceres gomp lapack
@@ -74,6 +87,24 @@ add_library(magnetic_compensation SHARED
 )
 target_compile_options(magnetic_compensation PRIVATE -std=c++11)
 
+#add_executable(mic_test test/test.cc)
+#target_compile_options(mic_test PRIVATE -std=c++11)
+#target_link_libraries(mic_test
+#    magnetic_compensation ${DEPEND_LIBS} -pthread
+#)
+
+add_executable(mic_calibrate test/calibrate.cc)
+target_compile_options(mic_calibrate PRIVATE -std=c++11)
+target_link_libraries(mic_calibrate
+    magnetic_compensation ${DEPEND_LIBS} -pthread
+)
+
+add_executable(mic_compensate test/compensate.cc)
+target_compile_options(mic_compensate PRIVATE -std=c++11)
+target_link_libraries(mic_compensate
+    magnetic_compensation ${DEPEND_LIBS} -pthread
+)
+
 add_executable(mic_test test/test.cc)
 target_compile_options(mic_test PRIVATE -std=c++11)
 target_link_libraries(mic_test
@@ -82,14 +113,15 @@ target_link_libraries(mic_test
 
 install(
     TARGETS
-    mic_test
+    mic_calibrate mic_compensate mic_test
     DESTINATION
     ${INSTALL_BIN}
 )
 
 install(
     FILES
-    ${CMAKE_HOME_DIRECTORY}/etc/default_config.json
+    ${CMAKE_HOME_DIRECTORY}/etc/config_calibration.json
+    ${CMAKE_HOME_DIRECTORY}/etc/config_compensation.json
     DESTINATION
     ${INSTALL_ETC}
 )
@@ -103,7 +135,18 @@ install(
 
 install(
     TARGETS
+    tolles-lawson
+    kf-gins
     magnetic_compensation
     DESTINATION
     ${INSTALL_LIB}
+)
+
+file(GLOB MIC_MODELS ${CMAKE_HOME_DIRECTORY}/models/*.mdl)
+
+install(
+    FILES
+    ${MIC_MODELS}
+    DESTINATION
+    ${INSTALL_MDL}
 )
