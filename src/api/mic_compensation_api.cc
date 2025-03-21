@@ -31,6 +31,7 @@
 #include "mic_mag_compensator/impl/mic_cabin_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_cabin_nav_mag_compensator.h"
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
+#include "mic_mag_compensator/obeserver/mic_state_evaluator.h"
 
 namespace mic
 {
@@ -38,7 +39,8 @@ namespace mic
     // static mic_mag_compensator_shared_ptr _mic_compensator = nullptr;
     static std::shared_ptr<mic_cabin_nav_mag_compensator_t> _mic_compensator = nullptr;
 
-    static mic_observer_shared_ptr<mic_mag_compensator_t> _mic_logger = nullptr;
+    static shared_ptr<mic_state_logger_t> _mic_logger = nullptr;
+    static shared_ptr<mic_state_evaluator_t> _mic_evaluator = nullptr;
 
     ret_t mic_init_worker(
         const std::string model,
@@ -84,8 +86,10 @@ namespace mic
         */
         _mic_compensator = std::make_shared<mic_cabin_nav_mag_compensator_t>();
 
-        auto comp_logger = std::make_shared<mic_state_logger_t>();
-        _mic_compensator->subscrible(comp_logger);
+        _mic_logger = std::make_shared<mic_state_logger_t>();
+        _mic_compensator->subscrible(_mic_logger);
+        _mic_evaluator = std::make_shared<mic_state_evaluator_t>();
+        _mic_compensator->subscrible(_mic_evaluator);
 
         _mic_compensator->load_model(model_file);
 
@@ -99,6 +103,7 @@ namespace mic
     {
         _mic_compensator->add_data(timestamp, mag);
         _mic_compensator->add_data_truth(timestamp, mag_truth);
+        _mic_evaluator->add_ground_truth(timestamp, mag_truth);
         return ret_t::MIC_RET_SUCCESSED;
     }
 
