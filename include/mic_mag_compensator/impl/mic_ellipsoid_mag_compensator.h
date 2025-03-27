@@ -106,10 +106,15 @@ class MicEllipsoidMagCompensator : public MicMagCompensator
 {
 public:
     /** \brief Empty constructor. */
-    MicEllipsoidMagCompensator() : MicMagCompensator() { flag = false; }
+    MicEllipsoidMagCompensator() : MicMagCompensator() {}
 
     /** \brief destructor. */
     virtual ~MicEllipsoidMagCompensator() = default;
+
+    matrix_3f_t get_D_tilde_inv() { return _D_tilde_inv; }
+    vector_3f_t get_o_hat() { return _o_hat; }
+    matrix_3f_t get_R_opt() { return _R_opt; }
+    std::string get_ceres_report() { return _ceres_report; }
 
     /** \brief Call the ellipsoid fitting algirithm to compute the compensation model
      * coefficients \a D_tilde_inv and \a o_hat using the input magnetic data.
@@ -220,6 +225,9 @@ protected:
 
     /** \brief The compensation model coefficients. */
     matrix_3f_t _R_opt;
+
+    /** \brief The debug report given by ceres optimizer. */
+    std::string _ceres_report;
 };
 
 MIC_NAMESPACE_END

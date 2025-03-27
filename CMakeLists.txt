@@ -72,6 +72,7 @@ set(SRC_FILES
     ./src/mic_mag_compensator/observer/mic_state_logger.cc
     ./src/mic_mag_compensator/observer/mic_state_evaluator.cc
     ./src/mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.cc
+    ./src/mic_mag_compensator/impl/mic_ellipsoid_nav_mag_compensator.cc
     ./src/mic_mag_compensator/impl/mic_tl_mag_compensator.cc
     ./src/mic_mag_compensator/impl/mic_tl_component_mag_compensator.cc
     ./src/mic_mag_compensator/impl/mic_cabin_mag_compensator.cc

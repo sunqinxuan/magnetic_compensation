@@ -19,37 +19,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#ifndef MIC_CABIN_NAV_MAG_COMPENSATOR
-#define MIC_CABIN_NAV_MAG_COMPENSATOR
+#ifndef MIC_ELLIPSOID_NAV_MAG_COMPENSATOR
+#define MIC_ELLIPSOID_NAV_MAG_COMPENSATOR
 
 #include <Eigen/Eigenvalues>
 #include <Eigen/Dense>
 #include <ceres/ceres.h>
-#include "mic_mag_compensator/impl/mic_cabin_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
 
 MIC_NAMESPACE_START
 
-class MicCabinNavMagCompensator;
-using mic_cabin_nav_mag_compensator_t = MicCabinNavMagCompensator;
+class MicEllipsoidNavMagCompensator;
+using mic_ellipsoid_nav_mag_compensator_t = MicEllipsoidNavMagCompensator;
 
-/** \brief MicCabinNavMagCompensator is a magnetic compensation algorithm
- * specifically designed for applying the magnetic measured at the tail stinger
- * as the baseline during calibration.
- *
- * The corresponding compensation algorithm is originally proposed by Qinxuan Sun
- * in https://sunqinxuan.github.io/projects/2024-07-09-compensation.
+/** \brief MicEllipsoidNavMagCompensator .
  *
  * \author Qinxuan Sun, Yansong Gong
  * \ingroup compensation
  */
-class MicCabinNavMagCompensator : public MicCabinMagCompensator
+class MicEllipsoidNavMagCompensator : public MicEllipsoidMagCompensator
 {
 public:
     /** \brief Empty constructor. */
-    MicCabinNavMagCompensator();
+    MicEllipsoidNavMagCompensator();
 
     /** \brief destructor. */
-    virtual ~MicCabinNavMagCompensator() = default;
+    virtual ~MicEllipsoidNavMagCompensator() = default;
 
     matrix_xf_t get_kf_cov() { return _theta_cov; }
 

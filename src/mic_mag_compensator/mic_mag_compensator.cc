@@ -29,7 +29,7 @@ MicMagCompensator::MicMagCompensator()
 {
     // init_nav_state_estimator();
     _state = mic_state_t::MIC_MAG_COMPENSATE_UNCALIBRATED;
-    _version = "0.1.0";
+    _version = "1.1.0";
 }
 
 MicMagCompensator::~MicMagCompensator()
@@ -41,9 +41,19 @@ MicMagCompensator::~MicMagCompensator()
 //     _nav_state_estimator = std::make_unique<mic_kf_ins_estimator_t>();
 // }
 
-mic_mag_storer_t &MicMagCompensator::get_data_storer()
+mic_mag_storer_t &MicMagCompensator::get_data_storer_measure()
 {
     return _mag_measure_storer;
+}
+
+mic_mag_storer_t &MicMagCompensator::get_data_storer_truth()
+{
+    return _mag_truth_storer;
+}
+
+mic_mag_storer_t &MicMagCompensator::get_data_storer_comp()
+{
+    return _mag_comp_storer;
 }
 
 // mic_nav_state_estimator_t &MicMagCompensator::get_nav_state_estimator()
@@ -83,18 +93,37 @@ ret_t MicMagCompensator::calibrate()
     {
         _state = mic_state_t::MIC_MAG_COMPENSATE_CALIBRATED;
     }
+    notify(*this);
     return ret;
 }
 
 ret_t MicMagCompensator::compenste(
-    const float64_t ts, mic_mag_t &out)
+    const float64_t ts, mic_mag_t &out,
+    const mic_mag_t &mag,
+    const mic_mag_t &mag_truth,
+    const mic_nav_state_t &nav_state)
 {
+    auto ret = ret_t::MIC_RET_FAILED;
     if (_state == mic_state_t::MIC_MAG_COMPENSATE_UNCALIBRATED)
     {
         MIC_LOG_ERR("[MIC] mic compensator is not calirated!");
-        return ret_t::MIC_RET_FAILED;
+        return ret;
     }
-    return do_compenste(ts, out);
+    if (_state == mic_state_t::MIC_MAG_COMPENSATE_CALIBRATED)
+    {
+        _state = mic_state_t::MIC_MAG_COMPENSATE_COMPENSATING;
+        add_data(ts,mag,nav_state);
+        add_data_truth(ts,mag_truth);
+        ret = do_compenste(ts, out);
+        _mag_comp_storer.add_data<mic_mag_t>(ts,out);
+        notify(*this);
+        _state = mic_state_t::MIC_MAG_COMPENSATE_CALIBRATED;
+        return ret;
+    }
+    else // mic_state_t::MIC_MAG_COMPENSATE_COMPENSATING
+    {
+        return ret;
+    }
 }
 
 ret_t MicMagCompensator::load_model(const std::string filename)
@@ -115,12 +144,13 @@ ret_t MicMagCompensator::load_model(const std::string filename)
     if (is_load_map)
     {
         ret = deserialize(map_json);
-        MIC_LOG_BASIC_INFO("[MIC] load mic model:\n%s", map_json.dump(4).c_str());
+        MIC_LOG_DEBUG_INFO("[MIC] load mic model:\n%s", map_json.dump(4).c_str());
     }
     if (is_load_map && ret == ret_t::MIC_RET_SUCCESSED)
     {
         _state = mic_state_t::MIC_MAG_COMPENSATE_CALIBRATED;
         ret = ret_t::MIC_RET_SUCCESSED;
+        notify(*this);
     }
     return ret;
 }
@@ -137,7 +167,7 @@ ret_t MicMagCompensator::save_model(const std::string filename)
     ret_t ret = serialize(map_json);
     if (ret == ret_t::MIC_RET_SUCCESSED)
     {
-        MIC_LOG_BASIC_INFO("[MIC] save mic model:\n%s", map_json.dump(4).c_str());
+        MIC_LOG_DEBUG_INFO("[MIC] save mic model:\n%s", map_json.dump(4).c_str());
         auto cbor = json_t::to_cbor(map_json);
         map_file.write((char *)cbor.data(), cbor.size() * sizeof(uint8_t));
     }

@@ -148,8 +148,8 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
 
         // debug
         _R_opt = quat.toRotationMatrix();
-        cout << "R_opt = " << endl
-             << _R_opt << endl;
+        // cout << "R_opt = " << endl
+        //      << _R_opt << endl;
     }
     else
     {
@@ -180,7 +180,7 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     fp_mdl << fixed << _R_opt << endl;
     fp_mdl.close();
 
-    notify(*this);
+    // notify(*this);
     return ret_t::MIC_RET_SUCCESSED;
 }
 
@@ -201,24 +201,24 @@ ret_t MicEllipsoidMagCompensator::do_compenste(const float64_t ts, mic_mag_t &ou
 ret_t MicEllipsoidMagCompensator::serialize(json_t &node)
 {
     matrix_3f_t coeff_D;
-    if (flag)
-    {
-        coeff_D << -0.21, -0.23, 0.79, 0.66, 0.61, 0.28, -0.60, 0.65, 0.00;
-    }
-    else
-    {
+    // if (flag)
+    // {
+    //     coeff_D << -0.21, -0.23, 0.79, 0.66, 0.61, 0.28, -0.60, 0.65, 0.00;
+    // }
+    // else
+    // {
         coeff_D = _D_tilde_inv.inverse();
-    }
+    // }
 
-    cout << fixed << std::setprecision(2);
-    cout << "calibrated model coefficients:\n\n"
-         << "coeff_D: \n"
-         << coeff_D << endl
-         //  << _D_tilde_inv.inverse() << endl
-         << endl;
-    cout << "coeff_o: \n"
-         << _o_hat.transpose() << endl
-         << endl;
+    // cout << fixed << std::setprecision(2);
+    // cout << "calibrated model coefficients:\n\n"
+    //      << "coeff_D: \n"
+    //      << coeff_D << endl
+    //      //  << _D_tilde_inv.inverse() << endl
+    //      << endl;
+    // cout << "coeff_o: \n"
+    //      << _o_hat.transpose() << endl
+    //      << endl;
 
     std::vector<double> D(9), R(9), o(3);
     for (int i = 0; i < 3; i++)
@@ -384,11 +384,11 @@ ret_t MicEllipsoidMagCompensator::compute_model_coeffs(
     // }
 
     // debug
-    cout << "\nMatrix As_evec:\n"
-         << As_evec << endl;
-    cout << "As_evec.det() = " << As_evec.determinant() << endl;
-    cout << "\nAs_eval:\n"
-         << As_eval.transpose() << endl;
+    // cout << "\nMatrix As_evec:\n"
+    //      << As_evec << endl;
+    // cout << "As_evec.det() = " << As_evec.determinant() << endl;
+    // cout << "\nAs_eval:\n"
+    //      << As_eval.transpose() << endl;
 
     matrix_3f_t sqrt_As_eval;
     sqrt_As_eval << sqrt(fabs(As_eval[0])), 0, 0, 0, sqrt(fabs(As_eval[1])), 0, 0,
@@ -531,10 +531,12 @@ ret_t MicEllipsoidMagCompensator::ceres_optimize(
     options.max_num_iterations = 50;
     options.linear_solver_type = ceres::SPARSE_NORMAL_CHOLESKY;
     options.trust_region_strategy_type = ceres::LEVENBERG_MARQUARDT;
-    options.minimizer_progress_to_stdout = true;
+    options.minimizer_progress_to_stdout = false;
 
     ceres::Solve(options, &problem, &summary);
-    std::cout << summary.BriefReport() << std::endl;
+    // _ceres_report=summary.BriefReport();
+    _ceres_report=summary.FullReport();
+    // std::cout << summary.BriefReport() << std::endl;
     // std::cout << summary.FullReport() << std::endl;
 
     if (summary.IsSolutionUsable())

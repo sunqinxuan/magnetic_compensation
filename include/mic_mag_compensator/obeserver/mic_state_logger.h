@@ -25,6 +25,8 @@
 #include "common/mic_utils.h"
 
 #include "mic_mag_compensator/mic_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_ellipsoid_nav_mag_compensator.h"
 
 MIC_NAMESPACE_START
 
@@ -37,8 +39,12 @@ public:
     MicStateLogger() = default;
     ~MicStateLogger() = default;
 
-    virtual void update(mic_mag_compensator_t& comp) override;
+    virtual void update(mic_mag_compensator_t &comp) override;
 
+protected:
+    void print_model_coeffs(const matrix_3f_t &coeff_D,
+                            const vector_3f_t &coeff_o,
+                            const matrix_3f_t &coeff_R);
 };
 
 MIC_NAMESPACE_END

@@ -41,6 +41,7 @@ enum class MicMagCompensatorState : uint8_t
 {
     MIC_MAG_COMPENSATE_UNCALIBRATED = 0,
     MIC_MAG_COMPENSATE_CALIBRATED = 1,
+    MIC_MAG_COMPENSATE_COMPENSATING = 2,
 };
 using mic_state_t = MicMagCompensatorState;
 
@@ -61,12 +62,21 @@ public:
     /** \brief destructor. */
     ~MicMagCompensator();
 
-    /** \brief Get a pointer to the data storer used to store the magnetic
+    /** \brief Get a reference to the data storer used to store the magnetic
      * and the navigation state data. */
-    mic_mag_storer_t &get_data_storer();
+    mic_mag_storer_t &get_data_storer_measure();
+
+    /** \brief Get a reference to the data storer used to store the groundtruth data. */
+    mic_mag_storer_t &get_data_storer_truth();
+
+    /** \brief Get a reference to the data storer used to store the compensated magnetic data. */
+    mic_mag_storer_t &get_data_storer_comp();
 
     /** \brief Get the current timestamp. */
     float64_t get_curr_time() { return _curr_time_stamp; }
+
+    /** \brief Get the working state. */
+    mic_state_t get_working_state() { return _state; }
 
     /** \brief Add data (magnetic measurements and navigation states of
      * the aircraft) to the compensator.
@@ -101,7 +111,10 @@ public:
      * \param[in] ts the timestamp at which the compensation result is required
      * \param[out] out output the compensated result at time \a ts
      */
-    ret_t compenste(const float64_t ts, mic_mag_t &out);
+    ret_t compenste(const float64_t ts, mic_mag_t &out,
+                    const mic_mag_t &mag,
+                    const mic_mag_t &mag_truth,
+                    const mic_nav_state_t &nav_state);
 
     /** \brief Load the saved model to the compensator.
      * \param[in] filename the file (.mdl) which saves the compensation model coefficients
@@ -112,8 +125,6 @@ public:
      * \param[in] filename the file (.mdl) to write the compensation model coefficients
      */
     ret_t save_model(const std::string filename);
-
-    void setFlag(){flag=true;}
 
 protected:
     virtual ret_t do_calibrate() = 0;
@@ -132,12 +143,13 @@ protected:
     /** \brief The data storer for the baseline data. */
     mic_mag_storer_t _mag_truth_storer;
 
+    /** \brief The data storer for the compensated mag data. */
+    mic_mag_storer_t _mag_comp_storer;
+
     /** \brief The working state of the compensator. */
     mic_state_t _state;
-    
-    std::string _version;
 
-    bool_t flag;
+    std::string _version;
 };
 
 MIC_NAMESPACE_END

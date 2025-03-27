@@ -25,11 +25,12 @@
 #include "common/mic_config.h"
 #include "common/mic_logger.h"
 #include "mic_mag_compensator/mic_mag_compensator.h"
-#include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
-#include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
-#include "mic_mag_compensator/impl/mic_tl_component_mag_compensator.h"
-#include "mic_mag_compensator/impl/mic_cabin_mag_compensator.h"
-#include "mic_mag_compensator/impl/mic_cabin_nav_mag_compensator.h"
+// #include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_ellipsoid_nav_mag_compensator.h"
+// #include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
+// #include "mic_mag_compensator/impl/mic_tl_component_mag_compensator.h"
+// #include "mic_mag_compensator/impl/mic_cabin_mag_compensator.h"
+// #include "mic_mag_compensator/impl/mic_cabin_nav_mag_compensator.h"
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
 #include "mic_mag_compensator/obeserver/mic_state_evaluator.h"
 
@@ -37,13 +38,12 @@ namespace mic
 {
 
     // static mic_mag_compensator_shared_ptr _mic_compensator = nullptr;
-    static std::shared_ptr<mic_cabin_nav_mag_compensator_t> _mic_compensator = nullptr;
+    static std::shared_ptr<mic_ellipsoid_nav_mag_compensator_t> _mic_compensator = nullptr;
 
-    static shared_ptr<mic_state_logger_t> _mic_logger = nullptr;
-    static shared_ptr<mic_state_evaluator_t> _mic_evaluator = nullptr;
+    static std::shared_ptr<mic_state_logger_t> _mic_logger = nullptr;
+    static std::shared_ptr<mic_state_evaluator_t> _mic_evaluator = nullptr;
 
     ret_t mic_init_worker(
-        const std::string model,
         const std::string model_file,
         const std::string log_file,
         const std::string config_file)
@@ -84,7 +84,7 @@ namespace mic
             return ret_t::MIC_RET_FAILED;
         }
         */
-        _mic_compensator = std::make_shared<mic_cabin_nav_mag_compensator_t>();
+        _mic_compensator = std::make_shared<mic_ellipsoid_nav_mag_compensator_t>();
 
         _mic_logger = std::make_shared<mic_state_logger_t>();
         _mic_compensator->subscrible(_mic_logger);
@@ -96,25 +96,29 @@ namespace mic
         return ret_t::MIC_RET_SUCCESSED;
     }
 
-    ret_t mic_add_data(
-        const double timestamp,
-        const mic_mag_t &mag,
-        const mic_mag_t &mag_truth)
-    {
-        _mic_compensator->add_data(timestamp, mag);
-        _mic_compensator->add_data_truth(timestamp, mag_truth);
-        _mic_evaluator->add_ground_truth(timestamp, mag_truth);
-        return ret_t::MIC_RET_SUCCESSED;
-    }
+    // ret_t mic_add_data(
+    //     const double timestamp,
+    //     const mic_mag_t &mag,
+    //     const mic_mag_t &mag_truth,
+    //     const mic_nav_state_t &nav_state)
+    // {
+    //     _mic_compensator->add_data(timestamp, mag, nav_state);
+    //     _mic_compensator->add_data_truth(timestamp, mag_truth);
+    //     // _mic_evaluator->add_ground_truth(timestamp, mag_truth);
+    //     return ret_t::MIC_RET_SUCCESSED;
+    // }
 
-    ret_t mic_compensate(const double timestamp, mic_mag_t &out)
+    ret_t mic_compensate(const double timestamp, mic_mag_t &out,
+                         const mic_mag_t &mag,
+                         const mic_mag_t &mag_truth,
+                         const mic_nav_state_t &nav_state)
     {
         if (_mic_compensator == nullptr)
         {
             MIC_LOG_ERR("[MIC] MIC worker is not initialized!");
             return ret_t::MIC_RET_FAILED;
         }
-        return _mic_compensator->compenste(timestamp, out);
+        return _mic_compensator->compenste(timestamp, out, mag, mag_truth, nav_state);
     }
 
     matrix_xf_t mic_get_cov() { return _mic_compensator->get_kf_cov(); }

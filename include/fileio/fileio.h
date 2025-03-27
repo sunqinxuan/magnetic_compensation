@@ -32,9 +32,9 @@
 MIC_NAMESPACE_START
 
 // data field:
-// time, mag_op, flux_xyz, mag_op_truth, flux_truth_xyz(igrf_ned), ins_pry
+// time, mag_op, flux_xyz, mag_op_truth, flux_truth_xyz(igrf_ned), ins_pry, lat, lon, alt
 
-ret_t get_line_data(const std::vector<float64_t> &data_line, mic_mag_t &mag, mic_mag_t &mag_truth)
+ret_t get_line_data(const std::vector<float64_t> &data_line, mic_mag_t &mag, mic_mag_t &mag_truth, mic_nav_state_t &nav_state)
 {
     if (data_line.size() < 5)
     {
@@ -50,6 +50,25 @@ ret_t get_line_data(const std::vector<float64_t> &data_line, mic_mag_t &mag, mic
     float64_t flux_x_truth = data_line[6];
     float64_t flux_y_truth = data_line[7];
     float64_t flux_z_truth = data_line[8];
+    float64_t ins_pitch = data_line[9];
+    float64_t ins_roll = data_line[10];
+    float64_t ins_yaw = data_line[11];
+
+    nav_state.time_stamp = ts;
+    matrix_3f_t rotation2NED = matrix_3f_t::Identity();
+    std::string nav_frame = MIC_CONFIG_GET(std::string, "navigation_frame");
+    std::string euler_seq = MIC_CONFIG_GET(std::string, "euler_angle_sequence");
+    if (nav_frame == "ENU")
+    {
+        rotation2NED << 0, 1, 0,
+            1, 0, 0,
+            0, 0, -1;
+    }
+    nav_state.attitude = quaternionf_t(rotation2NED *
+                                       MicUtils::euler2dcm(
+                                           MicUtils::deg2rad(ins_roll),
+                                           MicUtils::deg2rad(ins_pitch),
+                                           MicUtils::deg2rad(ins_yaw), euler_seq));
 
     mag.time_stamp = ts;
     mag.vector << flux_x, flux_y, flux_z;
@@ -132,6 +151,7 @@ ret_t load_data(std::string file_name, mic_mag_compensator_shared_ptr mag_compen
                                                MicUtils::deg2rad(ins_roll),
                                                MicUtils::deg2rad(ins_pitch),
                                                MicUtils::deg2rad(ins_yaw), euler_seq));
+
         mag.time_stamp = ts;
         mag.vector << flux_x, flux_y, flux_z;
         mag.value = op_value;

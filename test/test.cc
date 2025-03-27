@@ -42,20 +42,20 @@ int main(int argc, char *argv[])
     data_line.push_back(mag_y);
     data_line.push_back(mag_z);
 
-    mic_mag_t mag, mag_truth;
-    if (get_line_data(data_line, mag, mag_truth) == ret_t::MIC_RET_SUCCESSED)
-    {
-        float64_t ts = mag.time_stamp;
-        mic_mag_t mag_out;
+    // mic_mag_t mag, mag_truth;
+    // if (get_line_data(data_line, mag, mag_truth) == ret_t::MIC_RET_SUCCESSED)
+    // {
+    //     float64_t ts = mag.time_stamp;
+    //     mic_mag_t mag_out;
 
-        // 将一组数据输入补偿器
-        mic_add_data(ts, mag, mag_truth);
+    //     // 将一组数据输入补偿器
+    //     mic_add_data(ts, mag, mag_truth);
 
-        // 实时磁补偿并输出补偿结果
-        mic_compensate(ts, mag_out);
-        std::cout << " - real-time compensation: " << std::fixed
-                  << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
-    }
+    //     // 实时磁补偿并输出补偿结果
+    //     mic_compensate(ts, mag_out);
+    //     std::cout << " - real-time compensation: " << std::fixed
+    //               << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
+    // }
 
     google::ShutDownCommandLineFlags();
     return 0;
