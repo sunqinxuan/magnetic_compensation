@@ -78,6 +78,12 @@ public:
     /** \brief Get the working state. */
     mic_state_t get_working_state() { return _state; }
 
+    /** \brief Update _rmse_sq using current compensation result. */
+    ret_t update_rmse_sq();
+    
+    /** \brief Get the currently updated square of RMSE. */
+    vector_4f_t get_rmse_sq() {return _rmse_sq;}
+
     /** \brief Add data (magnetic measurements and navigation states of
      * the aircraft) to the compensator.
      * \param[in] ts the timestamp of the added data
@@ -145,6 +151,11 @@ protected:
 
     /** \brief The data storer for the compensated mag data. */
     mic_mag_storer_t _mag_comp_storer;
+
+    /** \brief The square of RMSE computed on compensated data till _curr_time_stamp.
+     * _rmse_sq = [rmse_t, rmse_x, rmse_y, rmse_z].
+     */
+    vector_4f_t _rmse_sq;
 
     /** \brief The working state of the compensator. */
     mic_state_t _state;

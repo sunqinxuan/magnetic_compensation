@@ -38,6 +38,7 @@ namespace mic
     // using vector_18f_t = Eigen::Matrix<double, 18, 1>;
     using vector_xf_t = Eigen::VectorXd;
     using matrix_xf_t = Eigen::MatrixXd;
+    using vector_4f_t = Eigen::Matrix<double, 4, 1>;
 
     enum MicBool
     {
@@ -113,8 +114,8 @@ namespace mic
             time_stamp = -1;
         }
         /** \brief The timestamp of this navigation state. */
-        float64_t time_stamp; 
-         /** \brief position presented in the north-east-down coordinates (m). */
+        float64_t time_stamp;
+        /** \brief position presented in the north-east-down coordinates (m). */
         vector_3f_t position;
         /** \brief attitude of the body frame [nose, right wing, down]
          * w.r.t. the navigation frame [north, east, down]. */

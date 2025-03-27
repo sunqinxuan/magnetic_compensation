@@ -96,6 +96,14 @@ void MicStateEvaluator::update(mic_mag_compensator_t &comp)
             {
                 matrix_3f_t R_nb = nav_state.attitude.matrix();
             }
+
+            vector_4f_t rmse_sq= comp_ellipsoid->get_rmse_sq();
+            MIC_LOG_BASIC_INFO("");
+            MIC_LOG_BASIC_INFO("RMSE (total-field, x, y, z): \t%.2f nT, %.2f nT, %.2f nT, %.2f nT", 
+                sqrt(rmse_sq(0)),sqrt(rmse_sq(1)),sqrt(rmse_sq(2)),sqrt(rmse_sq(3)));
+            // MIC_LOG_BASIC_INFO("RMSE (x_component): \t%.2f nT", sqrt(rmse_sq(1)));
+            // MIC_LOG_BASIC_INFO("RMSE (y_component): \t%.2f nT", sqrt(rmse_sq(2)));
+            // MIC_LOG_BASIC_INFO("RMSE (z_component): \t%.2f nT", sqrt(rmse_sq(3)));
         }
     }
     else
