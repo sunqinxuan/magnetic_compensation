@@ -72,7 +72,7 @@ ret_t MicMagCompensator::update_rmse_sq()
             _mag_measure_storer.get_data<mic_nav_state_t>(_curr_time_stamp, nav_state))
         {
             matrix_3f_t R_nb = nav_state.attitude.matrix();
-            vector_3f_t mag_b = R_nb.transpose() * mag_truth.vector;
+            vector_3f_t mag_b = R_nb.transpose() * mag_truth.vector.normalized() * mag_truth.value;
             _rmse_sq(0) = (mag_truth.value - mag_comp.value) * (mag_truth.value - mag_comp.value);
             _rmse_sq(1) = (mag_b(0) - mag_comp.vector(0)) * (mag_b(0) - mag_comp.vector(0));
             _rmse_sq(2) = (mag_b(1) - mag_comp.vector(1)) * (mag_b(1) - mag_comp.vector(1));
@@ -94,7 +94,7 @@ ret_t MicMagCompensator::update_rmse_sq()
         {
             int N = _mag_comp_storer.get_data_size<mic_mag_t>();
             matrix_3f_t R_nb = nav_state.attitude.matrix();
-            vector_3f_t mag_b = R_nb.transpose() * mag_truth.vector;
+            vector_3f_t mag_b = R_nb.transpose() * mag_truth.vector.normalized() * mag_truth.value;
             float64_t delta_t = (mag_truth.value - mag_comp.value) * (mag_truth.value - mag_comp.value);
             float64_t delta_x = (mag_b(0) - mag_comp.vector(0)) * (mag_b(0) - mag_comp.vector(0));
             float64_t delta_y = (mag_b(1) - mag_comp.vector(1)) * (mag_b(1) - mag_comp.vector(1));

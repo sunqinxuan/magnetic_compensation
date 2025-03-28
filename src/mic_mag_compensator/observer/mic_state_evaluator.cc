@@ -88,6 +88,7 @@ void MicStateEvaluator::update(mic_mag_compensator_t &comp)
             auto &ds_measure = comp_ellipsoid->get_data_storer_measure();
             auto &ds_truth = comp_ellipsoid->get_data_storer_truth();
             auto &ds_comp = comp_ellipsoid->get_data_storer_comp();
+
             mic_mag_t mag_truth, mag_comp;
             mic_nav_state_t nav_state;
             if (ds_measure.get_data<mic_nav_state_t>(ts, nav_state) &&
@@ -97,74 +98,13 @@ void MicStateEvaluator::update(mic_mag_compensator_t &comp)
                 matrix_3f_t R_nb = nav_state.attitude.matrix();
             }
 
-            vector_4f_t rmse_sq= comp_ellipsoid->get_rmse_sq();
+            vector_4f_t rmse_sq = comp_ellipsoid->get_rmse_sq();
             MIC_LOG_BASIC_INFO("");
-            MIC_LOG_BASIC_INFO("RMSE (total-field, x, y, z): \t%.2f nT, %.2f nT, %.2f nT, %.2f nT", 
-                sqrt(rmse_sq(0)),sqrt(rmse_sq(1)),sqrt(rmse_sq(2)),sqrt(rmse_sq(3)));
-            // MIC_LOG_BASIC_INFO("RMSE (x_component): \t%.2f nT", sqrt(rmse_sq(1)));
-            // MIC_LOG_BASIC_INFO("RMSE (y_component): \t%.2f nT", sqrt(rmse_sq(2)));
-            // MIC_LOG_BASIC_INFO("RMSE (z_component): \t%.2f nT", sqrt(rmse_sq(3)));
+            MIC_LOG_BASIC_INFO("RMSE (total-field, x, y, z):");
+            MIC_LOG_BASIC_INFO("\t%.2f nT, %.2f nT, %.2f nT, %.2f nT",
+                               sqrt(rmse_sq(0)), sqrt(rmse_sq(1)), sqrt(rmse_sq(2)), sqrt(rmse_sq(3)));
         }
     }
-    else
-    {
-        return;
-    }
-    // float64_t ts = comp.get_curr_time();
-    // mic_mag_t mag;
-    // ret_t find_gt = find_gt_state_by_ts(ts, mag, 0.01);
-    // if (find_gt == ret_t::MIC_RET_SUCCESSED)
-    // {
-    //     // compare current state with gt state
-    //     auto& data_storer = comp.get_data_storer_measure();
-    //     printf("compare\n!");
-    // }
-    // else
-    // {
-    //     printf("no compare\n!");
-    //     // output some log or just skip
-    // }
 }
-
-// ret_t MicStateEvaluator::find_gt_state_by_ts(
-//     const float64_t ts,
-//     mic_mag_t &mag,
-//     const float64_t tolerant_time)
-// {
-//     auto precise_iter = _gts.find(ts);
-//     if (precise_iter != _gts.end())
-//     {
-//         mag = precise_iter->second;
-//         return ret_t::MIC_RET_SUCCESSED;
-//     }
-//     ret_t find_gt = ret_t::MIC_RET_FAILED;
-//     auto rough_iter_1 = _gts.lower_bound(ts);
-//     auto rough_iter_2 = rough_iter_1;
-//     if (rough_iter_2 != _gts.begin())
-//     {
-//         rough_iter_2--;
-//     }
-//     if (rough_iter_1 != _gts.end()
-//         && fabs(ts - rough_iter_1->first) < tolerant_time)
-//     {
-//         mag = rough_iter_1->second;
-//         find_gt = ret_t::MIC_RET_SUCCESSED;
-//     }
-//     else if (rough_iter_2 != _gts.end()
-//         && fabs(ts - rough_iter_2->first) < tolerant_time)
-//     {
-//         mag = rough_iter_2->second;
-//         find_gt = ret_t::MIC_RET_SUCCESSED;
-//     }
-//     return find_gt;
-// }
-
-// void MicStateEvaluator::add_ground_truth(const float64_t ts, const mic_mag_t &mag)
-// {
-//     if (ts > 0.)
-//     {
-//         _gts.emplace(ts, mag);
-//     }
-// }
 
 MIC_NAMESPACE_END

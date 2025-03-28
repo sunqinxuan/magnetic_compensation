@@ -40,17 +40,7 @@ public:
 
     virtual void update(mic_mag_compensator_t& comp) override;
 
-    // void add_ground_truth(const float64_t ts, const mic_mag_t& mag);
-
 protected:
-
-    // ret_t find_gt_state_by_ts(
-    //     const float64_t ts,
-    //     mic_mag_t& mag,
-    //     const float64_t tolerant_time
-    // );
-
-    // std::map<float64_t, mic_mag_t> _gts;
 
 };
 

@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 
     google::CommandLineFlagInfo info;
     GetCommandLineFlagInfo("output", &info);
-    std::string output_file_name;
+    // std::string output_file_name;
     // if (info.is_default)
     // {
     //     // output_file_name = "output_" + FLAGS_model + ".txt";
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
     // std::ofstream outfile("./output_" + tm_str.str() + ".txt");
 
     MIC_LOG_BASIC_INFO("Loaded model file: %s", FLAGS_model.c_str());
-    MIC_LOG_BASIC_INFO("Output file name: %s", FLAGS_out.c_str());
+    // MIC_LOG_BASIC_INFO("Output file name: %s", FLAGS_out.c_str());
     std::ofstream outfile(FLAGS_out);
     if (!outfile.is_open())
     {
@@ -147,7 +147,7 @@ int main(int argc, char *argv[])
 
             // do compensation and save results to file;
             mic_mag_t mag_out;
-            mag_out.value = 0;
+            // mag_out.value = 0;
             mic_compensate(ts, mag_out, mag, mag_truth, nav_state);
             outfile << std::fixed << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
             // cout << ts << "\t" << mag_out.value << "\t" << mag_out.vector.transpose() << std::endl;
@@ -210,7 +210,7 @@ int main(int argc, char *argv[])
     // fp_cov.close();
     // fp_error.close();
 
-    cout << "Compensation results saved: " << output_file_name << endl
+    cout << "Compensation results saved: " << FLAGS_out << endl
          << endl;
 
     google::ShutDownCommandLineFlags();
