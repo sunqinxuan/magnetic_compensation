@@ -16,6 +16,7 @@
 #include "mic_mag_compensator/impl/mic_tl_component_mag_compensator.h"
 #include "api/mic_compensation_api.h"
 #include "fileio/fileio.h"
+#include "GeoMag/Core.hpp"
 
 USING_NAMESPACE_MIC;
 using namespace std;
@@ -123,6 +124,20 @@ int main(int argc, char *argv[])
     // std::vector<float64_t> error_kf_mag, error_kf_x, error_kf_y, error_kf_z;
 
     std::cout << std::fixed << std::setprecision(2);
+
+    using namespace geomag;
+
+    DateTime date("2024-12-31T00:00:00.000");
+    double lat = 135, lon = 35, alt = 3000;
+    auto gmag = GeoMagFlux{MagFluxUnit::NanoTesla};
+    auto position = Wgs84{date, Degree{lon}, Degree{lat}, alt};
+    auto bf = gmag(position);
+    auto b = MagFluxComponent{bf};
+    std::cout << "Position: " << position << "\n";
+    std::cout << "Mag flux: " << b.north << " " << b.east << " " << b.down << " " << b.total << " " << b.horizontal << " " << b.inclination << " "
+              << b.declination << std::endl;
+
+    return 0;
 
     while (true)
     {

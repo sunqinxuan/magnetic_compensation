@@ -62,6 +62,9 @@ add_subdirectory(3rd_party/kf-gins)
 include_directories(${CMAKE_HOME_DIRECTORY}/3rd_party/tolles-lawson/)
 add_subdirectory(3rd_party/tolles-lawson)
 
+# GeoMag
+include_directories(${CMAKE_HOME_DIRECTORY}/3rd_party/geo_mag_cpp)
+
 
 set(SRC_FILES
     ./src/common/mic_logger.cc
