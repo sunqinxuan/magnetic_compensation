@@ -116,6 +116,10 @@ target_link_libraries(mic_test
     magnetic_compensation ${DEPEND_LIBS} -pthread
 )
 
+add_executable(process_data test/process_data.cc)
+target_compile_options(process_data PRIVATE -std=c++11)
+target_link_libraries(mic_test -pthread)
+
 install(
     TARGETS
     mic_calibrate mic_compensate mic_test
