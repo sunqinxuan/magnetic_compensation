@@ -10,6 +10,7 @@
 #include "data_storer/mic_data_storer.h"
 #include "mic_mag_compensator/mic_mag_compensator.h"
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
+#include "mic_mag_compensator/obeserver/mic_state_evaluator.h"
 #include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_tl_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_tl_component_mag_compensator.h"
@@ -33,15 +34,6 @@ int main(int argc, char *argv[])
     mic_logger_t::set_log_level(
         static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
 
-    // if(FLAGS_file.substr(0, 3) == "sim")
-    // {
-    //     FLAGS_model="ellipsoid";
-    // }
-    // else
-    // {
-    //     FLAGS_model="cabin";
-    // }
-
     mic_mag_compensator_shared_ptr mag_compensator_ptr;
     if ("tl" == FLAGS_model)
     {
@@ -54,10 +46,6 @@ int main(int argc, char *argv[])
     else if ("ellipsoid" == FLAGS_model)
     {
         mag_compensator_ptr = std::make_shared<mic_ellipsoid_mag_compensator_t>();
-        // if(FLAGS_file.substr(15,1)=="5")
-        // {
-        //     mag_compensator_ptr->setFlag();
-        // }
     }
     else if ("cabin" == FLAGS_model)
     {
@@ -73,17 +61,17 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    auto comp_logger = std::make_shared<mic_state_logger_t>();
-    mag_compensator_ptr->subscrible(comp_logger);
+    auto mic_logger = std::make_shared<mic_state_logger_t>();
+    mag_compensator_ptr->subscrible(mic_logger);
+    auto mic_evaluator = std::make_shared<mic_state_evaluator_t>();
+    mag_compensator_ptr->subscrible(mic_evaluator);
 
-    //
+    // loading progress bar ...
     const int totalSteps = 50;
     const std::string greenText = "\033[32m"; // 深绿色
     const std::string resetText = "\033[0m";  // 重置颜色
-
     std::cout << endl
               << "Loading file: " << FLAGS_file << "\n";
-
     for (int step = 0; step <= totalSteps; ++step)
     {
         std::cout << "\r" << greenText << "[";
@@ -99,10 +87,8 @@ int main(int argc, char *argv[])
         std::cout.flush();
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
-
     std::cout << "\nFile loaded successfully!" << std::endl
               << endl;
-
     //
 
     if (load_data(FLAGS_file, mag_compensator_ptr) == ret_t::MIC_RET_FAILED)
@@ -121,10 +107,9 @@ int main(int argc, char *argv[])
     std::cout << "Total runtime: " << duration.count() << " ms" << std::endl
               << endl;
 
-
-    string name = "./out/" + FLAGS_out;
-    mag_compensator_ptr->save_model(name);
-    cout << "Compensation model saved: " << name << endl
+    // string name = "./out/" + FLAGS_out;
+    mag_compensator_ptr->save_model(FLAGS_out);
+    cout << "Compensation model saved: " << FLAGS_out << endl
          << endl;
 
     google::ShutDownCommandLineFlags();

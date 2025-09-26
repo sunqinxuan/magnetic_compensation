@@ -106,10 +106,15 @@ class MicEllipsoidMagCompensator : public MicMagCompensator
 {
 public:
     /** \brief Empty constructor. */
-    MicEllipsoidMagCompensator() : MicMagCompensator() {flag=false;}
+    MicEllipsoidMagCompensator() : MicMagCompensator() {}
 
     /** \brief destructor. */
     virtual ~MicEllipsoidMagCompensator() = default;
+
+    matrix_3f_t get_D_tilde_inv() { return _D_tilde_inv; }
+    vector_3f_t get_o_hat() { return _o_hat; }
+    matrix_3f_t get_R_opt() { return _R_opt; }
+    std::string get_ceres_report() { return _ceres_report; }
 
     /** \brief Call the ellipsoid fitting algirithm to compute the compensation model
      * coefficients \a D_tilde_inv and \a o_hat using the input magnetic data.
@@ -197,6 +202,20 @@ protected:
         const std::vector<vector_3f_t> &p_right,
         matrix_3f_t &R_hat);
 
+    /** \brief Implement the SVD-based solution of the Wahba's problem.
+     * For more details, please refer to :
+     * Markley, F. Landis.
+     * "Attitude determination using vector observations and the singular value decomposition."
+     * Journal of the Astronautical Sciences36.3 (1988): 245-258.
+     * \param[in] y the point set in reference frame
+     * \param[in] x the point set to be transformed
+     * \param[out] R_hat the resultant rotation matrix
+     */
+    ret_t wahba_svd(
+        const std::vector<vector_3f_t> &y,
+        const std::vector<vector_3f_t> &x,
+        matrix_3f_t &R);
+
 protected:
     /** \brief The compensation model coefficients. */
     matrix_3f_t _D_tilde_inv;
@@ -206,6 +225,9 @@ protected:
 
     /** \brief The compensation model coefficients. */
     matrix_3f_t _R_opt;
+
+    /** \brief The debug report given by ceres optimizer. */
+    std::string _ceres_report;
 };
 
 MIC_NAMESPACE_END

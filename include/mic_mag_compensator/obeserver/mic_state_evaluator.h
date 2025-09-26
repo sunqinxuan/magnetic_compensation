@@ -19,32 +19,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#ifndef MIC_STATE_LOGGER
-#define MIC_STATE_LOGGER
+#ifndef MIC_STATE_EVALUATOR
+#define MIC_STATE_EVALUATOR
 
 #include "common/mic_utils.h"
 
 #include "mic_mag_compensator/mic_mag_compensator.h"
 #include "mic_mag_compensator/impl/mic_ellipsoid_mag_compensator.h"
-#include "mic_mag_compensator/impl/mic_ellipsoid_nav_mag_compensator.h"
 
 MIC_NAMESPACE_START
 
-class MicStateLogger;
-using mic_state_logger_t = class MicStateLogger;
+class MicStateEvaluator;
+using mic_state_evaluator_t = class MicStateEvaluator;
 
-class MicStateLogger : public MicObserver<MicMagCompensator>
+class MicStateEvaluator : public MicObserver<MicMagCompensator>
 {
 public:
-    MicStateLogger() = default;
-    ~MicStateLogger() = default;
+    MicStateEvaluator() = default;
+    ~MicStateEvaluator() = default;
 
-    virtual void update(mic_mag_compensator_t &comp) override;
+    virtual void update(mic_mag_compensator_t& comp) override;
 
 protected:
-    void print_model_coeffs(const matrix_3f_t &coeff_D,
-                            const vector_3f_t &coeff_o,
-                            const matrix_3f_t &coeff_R);
+
 };
 
 MIC_NAMESPACE_END

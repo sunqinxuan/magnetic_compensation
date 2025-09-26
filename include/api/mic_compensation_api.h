@@ -28,19 +28,22 @@
 namespace mic
 {
     ret_t mic_init_worker(
-        const std::string model,
         const std::string model_file,
         const std::string log_file = "./data/mic.log",
         const std::string config_file = "./etc/config_compensation.json");
 
-    ret_t mic_add_data(
-        const float64_t timestamp,
-        const mic_mag_t &mag,
-        const mic_mag_t &mag_truth);
+    // ret_t mic_add_data(
+    //     const float64_t timestamp,
+    //     const mic_mag_t &mag,
+    //     const mic_mag_t &mag_truth,
+    //     const mic_nav_state_t &nav_state);
 
     ret_t mic_compensate(
         const float64_t timestamp,
-        mic_mag_t &out);
+        mic_mag_t &out,
+        const mic_mag_t &mag,
+        const mic_mag_t &mag_truth,
+        const mic_nav_state_t &nav_state);
 
     matrix_xf_t mic_get_cov();
 

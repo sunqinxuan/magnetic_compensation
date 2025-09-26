@@ -26,6 +26,8 @@
 #include <mutex>
 #include <vector>
 #include <string>
+#include <cmath>
+#include <stdexcept>
 
 MIC_NAMESPACE_START
 
@@ -185,6 +187,31 @@ public:
         }
         value = sqrt(value / N);
         return value;
+    }
+
+    static float64_t rmse(const std::vector<float64_t> &y_true,
+                          const std::vector<float64_t> &y_pred)
+    {
+        if (y_true.size() != y_pred.size())
+        {
+            throw std::invalid_argument("Input vectors must have the same size");
+        }
+        if (y_true.empty())
+        {
+            throw std::invalid_argument("Input vectors cannot be empty");
+        }
+
+        double sum_squared_errors = 0.0;
+        size_t n = y_true.size();
+
+        for (size_t i = 0; i < n; ++i)
+        {
+            double error = y_true[i] - y_pred[i];
+            sum_squared_errors += error * error;
+        }
+
+        double mse = sum_squared_errors / n;
+        return std::sqrt(mse);
     }
 };
 

@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-#include "mic_mag_compensator/impl/mic_cabin_nav_mag_compensator.h"
+#include "mic_mag_compensator/impl/mic_ellipsoid_nav_mag_compensator.h"
 
 // debug
 #include <iostream>
@@ -28,24 +28,24 @@ using namespace std;
 
 MIC_NAMESPACE_START
 
-MicCabinNavMagCompensator::MicCabinNavMagCompensator() : MicCabinMagCompensator()
+MicEllipsoidNavMagCompensator::MicEllipsoidNavMagCompensator() : MicEllipsoidMagCompensator()
 {
     std::vector<float64_t> R_k = MIC_CONFIG_GET(std::vector<float64_t>, "KF_state_noise");
     vector_xf_t R_k_eigen = vector_xf_t::Map(R_k.data(), R_k.size());
     _state_noise_cov = matrix_xf_t::Identity(12, 12);
     _state_noise_cov.diagonal() = R_k_eigen;
-    cout << "_state_noise_cov: " << endl
-         << _state_noise_cov << endl;
+    // cout << "_state_noise_cov: " << endl
+    //      << _state_noise_cov << endl;
 
     std::vector<float64_t> Q_k = MIC_CONFIG_GET(std::vector<float64_t>, "KF_measure_noise");
     vector_xf_t Q_k_eigen = vector_xf_t::Map(Q_k.data(), Q_k.size());
     _measure_noise_cov = matrix_xf_t::Identity(3, 3);
     _measure_noise_cov.diagonal() = Q_k_eigen;
-    cout << "_measure_noise_cov: " << endl
-         << _measure_noise_cov << endl;
+    // cout << "_measure_noise_cov: " << endl
+    //      << _measure_noise_cov << endl;
 }
 
-ret_t MicCabinNavMagCompensator::deserialize(json_t &node)
+ret_t MicEllipsoidNavMagCompensator::deserialize(json_t &node)
 {
     // std::vector<double> D = node["ellipsoid_model"]["coeff_D_inv"];
     // std::vector<double> R = node["ellipsoid_model"]["coeff_R"];
@@ -63,16 +63,16 @@ ret_t MicCabinNavMagCompensator::deserialize(json_t &node)
     // }
     // return MicMagCompensator::deserialize(node);
 
-    ret_t ret = MicCabinMagCompensator::deserialize(node);
+    ret_t ret = MicEllipsoidMagCompensator::deserialize(node);
 
     matrix_3f_t C = _D_tilde_inv.inverse() * _R_opt;
-    cout << "C: " << endl
-         << C << endl;
-    cout << "o: " << _o_hat.transpose() << endl;
+    // cout << "C: " << endl
+    //      << C << endl;
+    // cout << "o: " << _o_hat.transpose() << endl;
     vector_xf_t C_cols = Eigen::Map<vector_xf_t>(C.data(), C.size());
     _theta = vector_xf_t::Zero(12);
     _theta << _o_hat, C_cols;
-    cout << "theta: " << _theta.transpose() << endl;
+    // cout << "theta: " << _theta.transpose() << endl;
 
     std::vector<float64_t> init_cov = MIC_CONFIG_GET(std::vector<float64_t>, "KF_init_cov");
     // Eigen::Map<vector_xf_t> init_cov_eigen(init_cov.data(), init_cov.size());
@@ -80,13 +80,13 @@ ret_t MicCabinNavMagCompensator::deserialize(json_t &node)
     // cout<<"init_cov_eigen: "<<init_cov_eigen.transpose()<<endl;
     _theta_cov = matrix_xf_t::Identity(12, 12);
     _theta_cov.diagonal() = init_cov_eigen;
-    cout << "_theta_cov: " << endl
-         << _theta_cov << endl;
+    // cout << "_theta_cov: " << endl
+    //      << _theta_cov << endl;
 
     return ret;
 }
 
-ret_t MicCabinNavMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
+ret_t MicEllipsoidNavMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out)
 {
     mic_mag_t in;
     if (_mag_measure_storer.get_data<mic_mag_t>(ts, in))
@@ -130,13 +130,16 @@ ret_t MicCabinNavMagCompensator::do_compenste(const float64_t ts, mic_mag_t &out
     // }
 }
 
-ret_t MicCabinNavMagCompensator::KF_update(const float64_t ts)
+ret_t MicEllipsoidNavMagCompensator::KF_update(const float64_t ts)
 {
     mic_mag_t mag, mag_truth;
-    if (_mag_measure_storer.get_data<mic_mag_t>(ts, mag) && _mag_truth_storer.get_data<mic_mag_t>(ts, mag_truth))
+    mic_nav_state_t nav_state;
+    if (_mag_measure_storer.get_data<mic_mag_t>(ts, mag) &&
+        _mag_measure_storer.get_data<mic_nav_state_t>(ts, nav_state) &&
+        _mag_truth_storer.get_data<mic_mag_t>(ts, mag_truth))
     {
-        vector_3f_t m_k = mag_truth.vector; // mag_truth.value * mag_truth.vector.normalized();
-        vector_3f_t y_k = mag.vector;       // mag.value * mag.vector.normalized();
+        vector_3f_t m_k = nav_state.attitude.matrix().transpose() * mag_truth.vector.normalized() * mag_truth.value;
+        vector_3f_t y_k = mag.vector; // mag.value * mag.vector.normalized();
 
         // cout<<endl<<"m_k\t"<<m_k.transpose()<<endl;
         // cout<<endl<<"y_k\t"<<y_k.transpose()<<endl;
