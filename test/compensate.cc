@@ -128,16 +128,16 @@ int main(int argc, char *argv[])
     using namespace geomag;
 
     DateTime date("2024-12-31T00:00:00.000");
-    double lat = 135, lon = 35, alt = 3000;
+    double lat = 0.708120, lon = 2.131613, alt = 3030.047352;
     auto gmag = GeoMagFlux{MagFluxUnit::NanoTesla};
-    auto position = Wgs84{date, Degree{lon}, Degree{lat}, alt};
+    auto position = Wgs84{date, Radian{lon}, Radian{lat}, alt};
     auto bf = gmag(position);
     auto b = MagFluxComponent{bf};
     std::cout << "Position: " << position << "\n";
     std::cout << "Mag flux: " << b.north << " " << b.east << " " << b.down << " " << b.total << " " << b.horizontal << " " << b.inclination << " "
               << b.declination << std::endl;
 
-    return 0;
+    // return 0;
 
     while (true)
     {

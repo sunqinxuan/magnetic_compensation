@@ -138,8 +138,8 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     quaternionf_t quat;
     if (R_hat.determinant() > 0)
     {
-        quat = quaternionf_t(R_hat);
-        // quat = quaternionf_t(matrix_3f_t::Identity());
+        // quat = quaternionf_t(R_hat);
+        quat = quaternionf_t(matrix_3f_t::Identity());
         if (ceres_optimize(mag_vec, R_nb, _D_tilde_inv, _o_hat, quat) == ret_t::MIC_RET_FAILED)
         {
             MIC_LOG_ERR("failed to get R_opt by ceres optimization!");
@@ -194,7 +194,7 @@ ret_t MicEllipsoidMagCompensator::do_compenste(const float64_t ts, mic_mag_t &ou
 
     out.vector = matrix * (in.vector - offset);
     out.value = out.vector.norm();
-    notify(*this);
+    // notify(*this);
     return ret_t::MIC_RET_SUCCESSED;
 }
 

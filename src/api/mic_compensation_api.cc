@@ -38,7 +38,7 @@ namespace mic
 {
 
     // static mic_mag_compensator_shared_ptr _mic_compensator = nullptr;
-    static std::shared_ptr<mic_ellipsoid_nav_mag_compensator_t> _mic_compensator = nullptr;
+    static std::shared_ptr<mic_ellipsoid_mag_compensator_t> _mic_compensator = nullptr;
 
     static std::shared_ptr<mic_state_logger_t> _mic_logger = nullptr;
     static std::shared_ptr<mic_state_evaluator_t> _mic_evaluator = nullptr;
@@ -84,7 +84,7 @@ namespace mic
             return ret_t::MIC_RET_FAILED;
         }
         */
-        _mic_compensator = std::make_shared<mic_ellipsoid_nav_mag_compensator_t>();
+        _mic_compensator = std::make_shared<mic_ellipsoid_mag_compensator_t>();
 
         _mic_logger = std::make_shared<mic_state_logger_t>();
         _mic_compensator->subscrible(_mic_logger);
@@ -121,6 +121,25 @@ namespace mic
         return _mic_compensator->compenste(timestamp, out, mag, mag_truth, nav_state);
     }
 
-    matrix_xf_t mic_get_cov() { return _mic_compensator->get_kf_cov(); }
+    // matrix_xf_t mic_get_cov() { return _mic_compensator->get_kf_cov(); }
+
+    ret_t mic_pry2navstate(MicNavState nav_state, float64_t pitch, float64_t roll, float64_t yaw)
+    {
+        matrix_3f_t rotation2NED = matrix_3f_t::Identity();
+        std::string nav_frame = MIC_CONFIG_GET(std::string, "navigation_frame");
+        std::string euler_seq = MIC_CONFIG_GET(std::string, "euler_angle_sequence");
+        if (nav_frame == "ENU")
+        {
+            rotation2NED << 0, 1, 0,
+                1, 0, 0,
+                0, 0, -1;
+        }
+        nav_state.attitude = quaternionf_t(rotation2NED *
+                                           MicUtils::euler2dcm(
+                                               MicUtils::deg2rad(roll),
+                                               MicUtils::deg2rad(pitch),
+                                               MicUtils::deg2rad(yaw), euler_seq));
+        return ret_t::MIC_RET_SUCCESSED;
+    }
 
 }

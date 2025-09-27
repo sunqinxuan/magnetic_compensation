@@ -24,6 +24,7 @@ using namespace std;
 DEFINE_string(model, "cabin", "ellipsoid, tl, tlc or cabin");
 DEFINE_string(file, "Flight8_0909_cabin.txt", "file to load data");
 DEFINE_string(out, "a.mdl", "file to save compensation model");
+DEFINE_int32(outcabin, 0, "if 1, process the outcabin data");
 
 int main(int argc, char *argv[])
 {
@@ -35,31 +36,32 @@ int main(int argc, char *argv[])
         static_cast<mic_log_level_t>(MIC_CONFIG_GET(int32_t, "log_level")));
 
     mic_mag_compensator_shared_ptr mag_compensator_ptr;
-    if ("tl" == FLAGS_model)
-    {
-        mag_compensator_ptr = std::make_shared<mic_tl_mag_compensator_t>();
-    }
-    else if ("tlc" == FLAGS_model)
-    {
-        mag_compensator_ptr = std::make_shared<mic_tl_component_mag_compensator_t>();
-    }
-    else if ("ellipsoid" == FLAGS_model)
-    {
-        mag_compensator_ptr = std::make_shared<mic_ellipsoid_mag_compensator_t>();
-    }
-    else if ("cabin" == FLAGS_model)
-    {
-        mag_compensator_ptr = std::make_shared<mic_cabin_mag_compensator_t>();
-    }
-    else if ("nav" == FLAGS_model)
-    {
-        mag_compensator_ptr = std::make_shared<mic_cabin_nav_mag_compensator_t>();
-    }
-    else
-    {
-        MIC_LOG_ERR("[MIC] MIC compensation method is not supported!");
-        return -1;
-    }
+    mag_compensator_ptr = std::make_shared<mic_ellipsoid_mag_compensator_t>();
+    // if ("tl" == FLAGS_model)
+    // {
+    //     mag_compensator_ptr = std::make_shared<mic_tl_mag_compensator_t>();
+    // }
+    // else if ("tlc" == FLAGS_model)
+    // {
+    //     mag_compensator_ptr = std::make_shared<mic_tl_component_mag_compensator_t>();
+    // }
+    // else if ("ellipsoid" == FLAGS_model)
+    // {
+    //     mag_compensator_ptr = std::make_shared<mic_ellipsoid_mag_compensator_t>();
+    // }
+    // else if ("cabin" == FLAGS_model)
+    // {
+    //     mag_compensator_ptr = std::make_shared<mic_cabin_mag_compensator_t>();
+    // }
+    // else if ("nav" == FLAGS_model)
+    // {
+    //     mag_compensator_ptr = std::make_shared<mic_cabin_nav_mag_compensator_t>();
+    // }
+    // else
+    // {
+    //     MIC_LOG_ERR("[MIC] MIC compensation method is not supported!");
+    //     return -1;
+    // }
 
     auto mic_logger = std::make_shared<mic_state_logger_t>();
     mag_compensator_ptr->subscrible(mic_logger);
@@ -91,7 +93,7 @@ int main(int argc, char *argv[])
               << endl;
     //
 
-    if (load_data(FLAGS_file, mag_compensator_ptr) == ret_t::MIC_RET_FAILED)
+    if (load_data(FLAGS_file, mag_compensator_ptr, FLAGS_outcabin) == ret_t::MIC_RET_FAILED)
     {
         MIC_LOG_ERR("failed to load data file %s", FLAGS_file);
         return -1;

@@ -172,8 +172,8 @@ ret_t MicMagCompensator::compenste(
         add_data_truth(ts, mag_truth);
         ret = do_compenste(ts, out);
         _mag_comp_storer.add_data<mic_mag_t>(ts, out);
-        update_rmse_sq();
-        notify(*this);
+        // update_rmse_sq();
+        // notify(*this);
         _state = mic_state_t::MIC_MAG_COMPENSATE_CALIBRATED;
         return ret;
     }
