@@ -5,6 +5,7 @@
 #include <math.h>
 #include <map>
 #include <time.h>
+#include <iomanip>
 
 using float64_t = double;
 
@@ -157,6 +158,7 @@ int main(int argc, char **argv)
     {
         std::string filename = std::string(argv[i + 1]) + "_new.txt";
         output_files[i].open(filename);
+        output_files[i] << std::fixed << std::setprecision(6);
     }
     for (auto& it : first_data)
     {
