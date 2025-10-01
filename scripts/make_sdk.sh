@@ -11,7 +11,7 @@ rm -r $curr_dir/sdk/include
 rm -r $curr_dir/sdk/scripts
 rm -r $curr_dir/sdk/lib
 rm -r $curr_dir/sdk/etc
-rm -r $curr_dir/sdk/model
+rm -r $curr_dir/sdk/models
 rm $curr_dir/sdk/LICENSE
 rm $curr_dir/sdk/README.md
 
