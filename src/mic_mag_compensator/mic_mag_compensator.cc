@@ -110,6 +110,7 @@ ret_t MicMagCompensator::update_rmse_sq()
             return ret_t::MIC_RET_FAILED;
         }
     }
+    return ret_t::MIC_RET_FAILED;
 }
 
 // mic_nav_state_estimator_t &MicMagCompensator::get_nav_state_estimator()

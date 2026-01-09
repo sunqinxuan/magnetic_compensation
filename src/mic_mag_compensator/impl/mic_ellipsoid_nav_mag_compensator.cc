@@ -110,6 +110,7 @@ ret_t MicEllipsoidNavMagCompensator::do_compenste(const float64_t ts, mic_mag_t 
 
         out.vector = matrix.inverse() * (in.vector - offset);
         out.value = out.vector.norm();
+        // std::cout<<"ellipsoid nav: "<<out.vector.transpose()<<std::endl;
         // notify(*this);
         return ret_t::MIC_RET_SUCCESSED;
         // }
@@ -141,6 +142,10 @@ ret_t MicEllipsoidNavMagCompensator::KF_update(const float64_t ts)
         vector_3f_t m_k = nav_state.attitude.matrix().transpose() * mag_truth.vector.normalized() * mag_truth.value;
         vector_3f_t y_k = mag.vector; // mag.value * mag.vector.normalized();
 
+        // cout<<endl<<"R_nb:"<<endl<<nav_state.attitude.matrix()<<endl;
+        // cout<<endl<<"mag_n = "<<mag_truth.value<<endl;
+        // cout<<endl<<"vmag_n = "<<mag_truth.vector.transpose()<<endl;
+
         // cout<<endl<<"m_k\t"<<m_k.transpose()<<endl;
         // cout<<endl<<"y_k\t"<<y_k.transpose()<<endl;
 
@@ -167,13 +172,13 @@ ret_t MicEllipsoidNavMagCompensator::KF_update(const float64_t ts)
         /* theta_k=theta_k_bar+K_k[y_k-h(m)*theta_k_bar] */
         vector_xf_t theta_k = theta_k_bar + kalman_gain * (y_k - H_m_k * theta_k_bar);
 
-        // vector_xf_t info=y_k-H_m_k*theta_k_bar;
+        vector_xf_t info=y_k-H_m_k*theta_k_bar;
         // cout<<endl<<"y-H*theta\t"<<info.transpose()<<endl;
 
         /* Sigma_k=[I-K_k*h(m)]*Sigma_k_bar */
         matrix_xf_t theta_cov_k = (matrix_xf_t::Identity(12, 12) - kalman_gain * H_m_k) * theta_cov_k_bar;
 
-        // matrix_xf_t gain=matrix_xf_t::Identity(12,12)-kalman_gain*H_m_k;
+        matrix_xf_t gain=matrix_xf_t::Identity(12,12)-kalman_gain*H_m_k;
         // cout<<endl<<"I-KH"<<endl<<gain<<endl;
 
         // update model;

@@ -34,6 +34,25 @@ class MicEllipsoidMagCompensator;
 using mic_ellipsoid_mag_compensator_t = MicEllipsoidMagCompensator;
 using mic_ellipsoid_mag_compensator_shared_ptr = std::shared_ptr<MicEllipsoidMagCompensator>;
 
+struct OptimizationStats
+{
+    int iterations = 0;
+    int num_residuals = 0;
+    int num_parameters = 0;
+    double total_time_ms = 0.0;
+    double linear_solver_time_ms = 0.0;
+    double residual_evaluation_time_ms = 0.0;
+    double jacobian_evaluation_time_ms = 0.0;
+    double initial_cost = 0.0;
+    double final_cost = 0.0;
+    bool converged = false;
+    std::string termination_type;
+    std::vector<double> cost_history;
+    std::vector<double> gradient_norm_history;
+    std::vector<double> step_norm_history;
+    std::vector<double> iteration_time_history;
+};
+
 class CostFunctionCreator
 {
 public:
@@ -189,7 +208,10 @@ protected:
         const std::vector<matrix_3f_t> &R_nb,
         const matrix_3f_t &D_tilde_inv,
         const vector_3f_t &o_hat,
-        quaternionf_t &quat);
+        quaternionf_t &quat,
+        OptimizationStats *stats = nullptr);
+    void save_optimization_stats(const OptimizationStats &stats,
+                                 const std::string &filename);
 
     /** \brief Implement the least-sqares fitting algirithm to compute the relative rotation
      * between two point sets, as described in https://ieeexplore.ieee.org/document/4767965.

@@ -121,7 +121,7 @@ ret_t load_data(std::string file_name, mic_mag_compensator_shared_ptr mag_compen
 
     MIC_LOG_DEBUG_INFO("flag_outcabin = %d", flag_outcabin);
 
-    // std::ofstream fp("igrf.txt", std::ios::out);
+    std::ofstream fp("debug.txt", std::ios::out);
     while (true)
     {
         // float64_t ts, op_value, flux_x, flux_y, flux_z,
@@ -140,12 +140,12 @@ ret_t load_data(std::string file_name, mic_mag_compensator_shared_ptr mag_compen
         float64_t flux_x = data_line[2];   // x_in
         float64_t flux_y = data_line[3];   // y_in
         float64_t flux_z = data_line[4];   // z_in
-        if(flag_outcabin==1)
+        if (flag_outcabin == 1)
         {
-            op_value=data_line[5]; // mag_out
-            flux_x=data_line[6]; // x_out 
-            flux_y=data_line[7]; // y_out 
-            flux_z=data_line[8]; // z_out 
+            op_value = data_line[5]; // mag_out
+            flux_x = data_line[6];   // x_out
+            flux_y = data_line[7];   // y_out
+            flux_z = data_line[8];   // z_out
         }
         float64_t op_truth = data_line[9]; // quspin
         // float64_t igrf_north = data_line[6];
@@ -170,7 +170,13 @@ ret_t load_data(std::string file_name, mic_mag_compensator_shared_ptr mag_compen
         }
         nav_state.attitude = quaternionf_t(rotation2NED * MicUtils::euler2dcm(ins_roll, ins_pitch, ins_yaw, euler_seq));
 
-        DateTime date("2024-12-31T00:00:00.000");
+        // for simulation:
+        // nav_state.attitude = quaternionf_t(rotation2NED * MicUtils::euler2dcm(ins_roll, ins_pitch, ins_yaw, euler_seq).inverse());
+
+        // fp << std::endl
+        //    << nav_state.attitude.matrix() << std::endl; // R_nb
+
+        DateTime date("2015-06-01T00:00:00.000");
         auto gmag = GeoMagFlux{MagFluxUnit::NanoTesla};
         auto position = Wgs84{date, Radian{lon}, Radian{lat}, alt};
         auto bf = gmag(position);
@@ -181,13 +187,15 @@ ret_t load_data(std::string file_name, mic_mag_compensator_shared_ptr mag_compen
         mag.value = op_value;
         mag_truth.time_stamp = ts;
         mag_truth.vector << b.north, b.east, b.down;
+        // for simulation:
+        // mag_truth.vector << 0, 0, op_truth;
         mag_truth.value = op_truth;
-        // fp << std::fixed << ts << "\t" << lat << "\t" << lon << "\t" << alt << "\t" << b.north << "\t" << b.east << "\t" << b.down << std::endl;
+        // fp << std::fixed << ts<< std::endl;
 
         mag_compensator_ptr->add_data(ts, mag, nav_state);
         mag_compensator_ptr->add_data_truth(ts, mag_truth); // TODO
     }
-    // fp.close();
+    fp.close();
     infile.close();
     return ret_t::MIC_RET_SUCCESSED;
 }

@@ -92,7 +92,7 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     //     MIC_LOG_DEBUG_INFO("%f", ellipsoid_coeffs[i]);
     // }
 
-    // ofstream fp("debug.txt");
+    ofstream fp("debug2.txt");
     // for (auto it = mag_n_value.begin(); it != mag_n_value.end(); ++it)
     // {
     //     fp << *it << endl;
@@ -127,6 +127,7 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     {
         p_left[i] = _D_tilde_inv * (mag_vec[i] - _o_hat) / mag_earth_intensity;
         p_right[i] = R_nb[i].transpose() * mag_n_vec[i];
+        fp << p_right[i].transpose() << std::endl;
     }
     // if (ls_fitting(p_left, p_right, R_hat) == ret_t::MIC_RET_FAILED)
     if (wahba_svd(p_left, p_right, R_hat) == ret_t::MIC_RET_FAILED)
@@ -136,11 +137,12 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     }
 
     quaternionf_t quat;
+    OptimizationStats *stats=new OptimizationStats;
     if (R_hat.determinant() > 0)
     {
-        // quat = quaternionf_t(R_hat);
-        quat = quaternionf_t(matrix_3f_t::Identity());
-        if (ceres_optimize(mag_vec, R_nb, _D_tilde_inv, _o_hat, quat) == ret_t::MIC_RET_FAILED)
+        quat = quaternionf_t(R_hat);
+        // quat = quaternionf_t(matrix_3f_t::Identity());
+        if (ceres_optimize(mag_vec, R_nb, _D_tilde_inv, _o_hat, quat,stats) == ret_t::MIC_RET_FAILED)
         {
             MIC_LOG_ERR("failed to get R_opt by ceres optimization!");
             return ret_t::MIC_RET_FAILED;
@@ -148,8 +150,8 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
 
         // debug
         _R_opt = quat.toRotationMatrix();
-        // cout << "R_opt = " << endl
-        //      << _R_opt << endl;
+        cout << "R_opt = " << endl
+             << _R_opt << endl;
     }
     else
     {
@@ -167,8 +169,8 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     // ofstream fp_R("R_hat.txt");
     // fp_R << fixed << R_hat;
     // fp_R.close();
-    // cout << "R_hat = " << endl
-    //      << R_hat << endl;
+    cout << "R_hat = " << endl
+         << R_hat << endl;
     // ofstream fp_R("R_opt.txt");
     // fp_R << fixed << _R_opt;
     // fp_R.close();
@@ -179,6 +181,8 @@ ret_t MicEllipsoidMagCompensator::do_calibrate()
     fp_mdl << fixed << R_hat << endl;
     fp_mdl << fixed << _R_opt << endl;
     fp_mdl.close();
+
+    fp.close();
 
     // notify(*this);
     return ret_t::MIC_RET_SUCCESSED;
@@ -194,6 +198,7 @@ ret_t MicEllipsoidMagCompensator::do_compenste(const float64_t ts, mic_mag_t &ou
 
     out.vector = matrix * (in.vector - offset);
     out.value = out.vector.norm();
+    std::cout << "ellipsoid: " << out.vector.transpose() << std::endl;
     // notify(*this);
     return ret_t::MIC_RET_SUCCESSED;
 }
@@ -207,18 +212,18 @@ ret_t MicEllipsoidMagCompensator::serialize(json_t &node)
     // }
     // else
     // {
-        coeff_D = _D_tilde_inv.inverse();
+    coeff_D = _D_tilde_inv.inverse();
     // }
 
-    // cout << fixed << std::setprecision(2);
-    // cout << "calibrated model coefficients:\n\n"
-    //      << "coeff_D: \n"
-    //      << coeff_D << endl
-    //      //  << _D_tilde_inv.inverse() << endl
-    //      << endl;
-    // cout << "coeff_o: \n"
-    //      << _o_hat.transpose() << endl
-    //      << endl;
+    cout << fixed << std::setprecision(2);
+    cout << "calibrated model coefficients:\n\n"
+         << "coeff_D: \n"
+         << coeff_D << endl
+         //  << _D_tilde_inv.inverse() << endl
+         << endl;
+    cout << "coeff_o: \n"
+         << _o_hat.transpose() << endl
+         << endl;
 
     std::vector<double> D(9), R(9), o(3);
     for (int i = 0; i < 3; i++)
@@ -300,12 +305,15 @@ ret_t MicEllipsoidMagCompensator::ellipsoid_fit(
     Eigen::VectorXd eval = es_m.eigenvalues().real();
 
     // debug
-    // cout << "\nM:\n"
-    //      << M << endl;
-    // cout << "\nevec:\n"
-    //      << evec << endl;
-    // cout << "\neval:\n"
-    //      << eval.transpose() << endl;
+    cout << "\nN = " << N << endl;
+    cout << "\nS:\n"
+         << S << endl;
+    cout << "\nM:\n"
+         << M << endl;
+    cout << "\nevec:\n"
+         << evec << endl;
+    cout << "\neval:\n"
+         << eval.transpose() << endl;
 
     // Find the column index of the maximum eigenvalue
     int max_column_index;
@@ -378,25 +386,25 @@ ret_t MicEllipsoidMagCompensator::compute_model_coeffs(
     J_As_evec << 1, 0, 0, 0, 1, 0, 0, 0, As_evec.determinant();
     As_evec = As_evec * J_As_evec;
 
-    // if (As_evec.determinant() < 0)
-    // {
-    //     As_evec.block<3, 1>(0, 2) *= -1;
-    // }
+    if (As_evec.determinant() < 0)
+    {
+        As_evec.block<3, 1>(0, 2) *= -1;
+    }
 
     // debug
-    // cout << "\nMatrix As_evec:\n"
-    //      << As_evec << endl;
-    // cout << "As_evec.det() = " << As_evec.determinant() << endl;
-    // cout << "\nAs_eval:\n"
-    //      << As_eval.transpose() << endl;
+    cout << "\nMatrix As_evec:\n"
+         << As_evec << endl;
+    cout << "As_evec.det() = " << As_evec.determinant() << endl;
+    cout << "\nAs_eval:\n"
+         << As_eval.transpose() << endl;
 
     matrix_3f_t sqrt_As_eval;
     sqrt_As_eval << sqrt(fabs(As_eval[0])), 0, 0, 0, sqrt(fabs(As_eval[1])), 0, 0,
         0, sqrt(fabs(As_eval[2]));
 
     D_tilde_inv = sqrt_As_eval * As_evec.transpose();
-    // std::cout << "D_tilde_inv = " << std::endl
-    //           << D_tilde_inv << std::endl;
+    std::cout << "D_tilde_inv = " << std::endl
+              << D_tilde_inv << std::endl;
     return ret_t::MIC_RET_SUCCESSED;
 }
 
@@ -481,7 +489,8 @@ ret_t MicEllipsoidMagCompensator::ceres_optimize(
     const std::vector<matrix_3f_t> &R_nb,
     const matrix_3f_t &D_tilde_inv,
     const vector_3f_t &o_hat,
-    quaternionf_t &quat)
+    quaternionf_t &quat,
+    OptimizationStats *stats)
 {
     ceres::Problem problem;
     ceres::LossFunction *loss_function = new ceres::HuberLoss(1.0);
@@ -502,6 +511,7 @@ ret_t MicEllipsoidMagCompensator::ceres_optimize(
     // }
 
     int offset = 1;
+    int num_residual_blocks = 0;
     for (size_t k = 0; k < mag.size() - offset; ++k)
     {
         vector_3f_t mag_r = mag[k + offset];
@@ -513,6 +523,7 @@ ret_t MicEllipsoidMagCompensator::ceres_optimize(
 
         problem.AddResidualBlock(cost_function, loss_function, quat.coeffs().data());
         problem.SetParameterization(quat.coeffs().data(), quat_param);
+        num_residual_blocks++;
     }
 
     // matrix_3f_t rotation_rc;
@@ -533,16 +544,107 @@ ret_t MicEllipsoidMagCompensator::ceres_optimize(
     options.trust_region_strategy_type = ceres::LEVENBERG_MARQUARDT;
     options.minimizer_progress_to_stdout = false;
 
+    auto start_time = std::chrono::high_resolution_clock::now();
     ceres::Solve(options, &problem, &summary);
-    // _ceres_report=summary.BriefReport();
-    _ceres_report=summary.FullReport();
-    // std::cout << summary.BriefReport() << std::endl;
-    // std::cout << summary.FullReport() << std::endl;
+    auto end_time = std::chrono::high_resolution_clock::now();
+    double total_time_ms = std::chrono::duration<double, std::milli>(end_time - start_time).count();
+
+    _ceres_report = summary.BriefReport();
+    _ceres_report = summary.FullReport();
+    std::cout << summary.BriefReport() << std::endl;
+    std::cout << summary.FullReport() << std::endl;
+
+    if (stats)
+    {
+        stats->iterations = summary.iterations.size();
+        stats->num_residuals = num_residual_blocks * 3;
+        stats->num_parameters = 4;
+        stats->total_time_ms = total_time_ms;
+        stats->linear_solver_time_ms = summary.linear_solver_time_in_seconds * 1000.0;
+        stats->residual_evaluation_time_ms = summary.residual_evaluation_time_in_seconds * 1000.0;
+        stats->jacobian_evaluation_time_ms = summary.jacobian_evaluation_time_in_seconds * 1000.0;
+        stats->initial_cost = summary.initial_cost;
+        stats->final_cost = summary.final_cost;
+        stats->converged = (summary.termination_type == ceres::CONVERGENCE);
+        stats->termination_type = ceres::TerminationTypeToString(summary.termination_type);
+
+        // 从 summary 中提取迭代历史
+        for (const auto &iteration : summary.iterations)
+        {
+            stats->cost_history.push_back(iteration.cost);
+            stats->gradient_norm_history.push_back(iteration.gradient_norm);
+            stats->step_norm_history.push_back(iteration.step_norm);
+
+            // 估算每次迭代的时间（平均分配）
+            static double cumulative_time = 0.0;
+            if (stats->cost_history.size() == 1)
+            {
+                cumulative_time = 0.0;
+            }
+            else
+            {
+                cumulative_time += total_time_ms / stats->iterations;
+            }
+            stats->iteration_time_history.push_back(cumulative_time);
+        }
+
+        // 保存统计信息
+        save_optimization_stats(*stats, "optimization_stats.csv");
+    }
 
     if (summary.IsSolutionUsable())
         return ret_t::MIC_RET_SUCCESSED;
     else
         return ret_t::MIC_RET_FAILED;
+}
+
+void MicEllipsoidMagCompensator::save_optimization_stats(const OptimizationStats &stats,
+                                                         const std::string &filename)
+{
+    std::ofstream file(filename);
+    if (!file.is_open())
+    {
+        std::cerr << "Failed to open file: " << filename << std::endl;
+        return;
+    }
+
+    // 写入总体统计
+    file << "SECTION: OVERALL_STATISTICS\n";
+    file << "iterations," << stats.iterations << "\n";
+    file << "num_residuals," << stats.num_residuals << "\n";
+    file << "num_parameters," << stats.num_parameters << "\n";
+    file << "total_time_ms," << stats.total_time_ms << "\n";
+    file << "linear_solver_time_ms," << stats.linear_solver_time_ms << "\n";
+    file << "residual_evaluation_time_ms," << stats.residual_evaluation_time_ms << "\n";
+    file << "jacobian_evaluation_time_ms," << stats.jacobian_evaluation_time_ms << "\n";
+    file << "initial_cost," << stats.initial_cost << "\n";
+    file << "final_cost," << stats.final_cost << "\n";
+    file << "converged," << (stats.converged ? "true" : "false") << "\n";
+    file << "termination_type," << stats.termination_type << "\n";
+    file << "cost_reduction," << (stats.initial_cost - stats.final_cost) / stats.initial_cost * 100 << "%\n";
+
+    // 写入迭代历史
+    file << "\nSECTION: ITERATION_HISTORY\n";
+    file << "iteration,cost,gradient_norm,step_norm,time_ms\n";
+    for (size_t i = 0; i < stats.cost_history.size(); ++i)
+    {
+        file << i << ","
+             << stats.cost_history[i] << ","
+             << stats.gradient_norm_history[i] << ","
+             << stats.step_norm_history[i] << ","
+             << stats.iteration_time_history[i] << "\n";
+    }
+
+    // 计算复杂度分析
+    file << "\nSECTION: COMPLEXITY_ANALYSIS\n";
+    double flops_per_iteration = stats.num_residuals * stats.num_parameters * 2; // 简化的FLOPs估算
+    file << "estimated_flops_per_iteration," << flops_per_iteration << "\n";
+    file << "total_estimated_flops," << flops_per_iteration * stats.iterations << "\n";
+    file << "flops_per_ms," << (flops_per_iteration * stats.iterations) / stats.total_time_ms << "\n";
+    file << "real_time_factor," << stats.total_time_ms / 1000.0 << "\n";
+
+    file.close();
+    std::cout << "Optimization statistics saved to: " << filename << std::endl;
 }
 
 // ret_t MicEllipsoidMagCompensator::init_value_estimate(

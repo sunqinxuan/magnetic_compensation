@@ -81,6 +81,7 @@ set(SRC_FILES
     ./src/mic_mag_compensator/impl/mic_cabin_mag_compensator.cc
     ./src/mic_mag_compensator/impl/mic_cabin_nav_mag_compensator.cc
     ./src/api/mic_compensation_api.cc
+    ./src/api/interface.cc
 )
 
 SET(DEPEND_LIBS tolles-lawson kf-gins ceres gomp lapack

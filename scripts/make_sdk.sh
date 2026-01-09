@@ -18,7 +18,7 @@ rm $curr_dir/sdk/README.md
 mkdir sdk/scripts
 mkdir sdk/include
 ln -vsf $curr_dir/etc $curr_dir/sdk/etc
-ln -vsf $curr_dir/models $curr_dir/sdk/models
+ln -s $curr_dir/models $curr_dir/sdk/models
 ln -vsf $curr_dir/3rd_party/eigen-3.3.9 $curr_dir/sdk/include/eigen
 ln -vsf $curr_dir/include/api $curr_dir/sdk/include/api
 ln -vsf $curr_dir/scripts/set_env.sh $curr_dir/sdk/scripts/set_env.sh

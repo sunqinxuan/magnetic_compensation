@@ -101,14 +101,14 @@ void MicLogger::set_log_level(mic_log_level_t log_level)
     _log_level = log_level;
 }
 
-void MicLogger::log_config()
-{
+// void MicLogger::log_config()
+// {
     // std::string config_log =
     //     MIC_CONFIG_LOG_BEGIN + std::string("\n") +
     //     mic_config_t::get_instance().to_str() + std::string("\n") +
     //     MIC_CONFIG_LOG_END + std::string("\n");
     // MIC_LOG_BASIC_INFO(config_log.c_str());
-}
+// }
 
 void MicLogger::log(
     mic_log_kind_t log_type,
@@ -121,7 +121,8 @@ void MicLogger::log(
         return;
     }
     char_t message[MIC_MAX_LOG_MSG_SIZE];
-    vsnprintf(message, MIC_MAX_LOG_MSG_SIZE, info, args);
+    message[0] = '\0';
+    // vsnprintf(message, MIC_MAX_LOG_MSG_SIZE, info, args);
     switch (log_type)
     {
     case mic_log_kind_t::MIC_LOG_ERR:
@@ -160,27 +161,45 @@ MicFileWriter::MicFileWriter(std::string filename)
 
 MicFileWriter::~MicFileWriter()
 {
-    if (_file != nullptr) fclose(_file);
+    printf("De-construct MicFileWriter\n");
+    if (_file != nullptr)
+    {
+        fclose(_file);
+    }
 }
 
 void MicFileWriter::log_info(const char_t* info)
 {
-    if (_file != nullptr) fprintf(_file, "#MIC INFO#  %s\n", info);
+    if (_file != nullptr) 
+    {
+        fprintf(_file, "#MIC INFO#  %s\n", info);
+    }
+    return;
 }
 
 void MicFileWriter::log_warn(const char_t* info)
 {
-    if (_file != nullptr) fprintf(_file, "#MIC INFO#  %s\n", info);
+    if (_file != nullptr)
+    {
+        fprintf(_file, "#MIC INFO#  %s\n", info);
+    }
+    return;
 }
 
 void MicFileWriter::log_err(const char_t* info)
 {
-    if (_file != nullptr) fprintf(_file, "#MIC INFO#  %s\n", info);
+    if (_file != nullptr)
+    {
+        fprintf(_file, "#MIC INFO#  %s\n", info);
+    }
+    return;
 }
 
 MicBashFileLogger::MicBashFileLogger(std::string filename)
 : _bash_printer(), _file_logger(filename)
-{}
+{
+    printf("Use both bash and file logger\n");
+}
 
 MicBashFileLogger::~MicBashFileLogger()
 {}

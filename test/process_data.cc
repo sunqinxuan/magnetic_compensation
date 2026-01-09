@@ -9,7 +9,7 @@
 
 using float64_t = double;
 
-bool read_data(
+bool read_data_to_map(
     std::string filename,
     std::map<float64_t, std::vector<float64_t>> &data)
 {
@@ -81,6 +81,30 @@ bool read_data(
     return true;
 }
 
+bool read_data_time_stamp(
+    std::string filename,
+    std::vector<float64_t>& time_stamps)
+{
+    std::ifstream state_file(filename);
+    if (!state_file.is_open())
+    {
+        printf("File is not existed, %s!\n", filename.c_str());
+        return false;
+    }
+
+    std::string state_line;
+    float64_t ts;
+    while (std::getline(state_file, state_line))
+    {
+        std::istringstream line_stream(state_line);
+        if (!(line_stream >> ts))
+            continue;
+
+        time_stamps.push_back(ts);
+    }
+    return true;
+}
+
 template <typename T>
 bool find_result_by_time_stamp(
     const float64_t& ts,
@@ -127,13 +151,19 @@ int main(int argc, char **argv)
     clock_t start = clock();
 
     std::vector<std::map<float64_t, std::vector<float64_t>>> all_data;
+    std::vector<float64_t> time_stamps;
     all_data.reserve(argc - 1);
 
     for (int i = 1; i < argc; ++i)
     {
         std::map<float64_t, std::vector<float64_t>> file_data;
 
-        if (read_data(argv[i], file_data))
+        if (i == 1)
+        {
+            read_data_time_stamp(argv[i], time_stamps);
+        }
+
+        if (read_data_to_map(argv[i], file_data))
         {
             all_data.emplace_back(std::move(file_data));
             std::cout << "Read " << all_data.back().size() << " points from " << argv[i] << std::endl;
@@ -160,9 +190,8 @@ int main(int argc, char **argv)
         output_files[i].open(filename);
         output_files[i] << std::fixed << std::setprecision(6);
     }
-    for (auto& it : first_data)
+    for (auto& ts : time_stamps)
     {
-        auto ts = it.first;
         std::vector<float64_t> result;
         for (size_t i = 0; i < all_data.size(); ++i)
         {

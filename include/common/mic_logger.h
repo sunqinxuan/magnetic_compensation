@@ -90,7 +90,7 @@ public:
     static void log(
         mic_log_kind_t log_type, mic_log_level_t log_level, const char_t* info, va_list args);
 
-    static void log_config();
+    // static void log_config();
 
 protected:
     MicLogger() = default;

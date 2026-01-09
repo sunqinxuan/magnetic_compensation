@@ -42,12 +42,14 @@ namespace mic
         const float64_t timestamp,
         mic_mag_t &out,
         const mic_mag_t &mag,
-        const mic_mag_t &mag_truth,
+        const mic_mag_t &mag_ref,
         const mic_nav_state_t &nav_state);
 
     // matrix_xf_t mic_get_cov();
 
-    ret_t mic_pry2navstate(MicNavState nav_state, float64_t pitch, float64_t roll, float64_t yaw);
+    ret_t mic_pry2navstate(float64_t ts, mic_nav_state_t &nav_state, mic_mag_t &mag_ref,
+                           float64_t pitch, float64_t roll, float64_t yaw,
+                           float64_t lat, float64_t lon, float64_t alt);
 }
 
 #endif

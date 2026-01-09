@@ -33,12 +33,16 @@
 // #include "mic_mag_compensator/impl/mic_cabin_nav_mag_compensator.h"
 #include "mic_mag_compensator/obeserver/mic_state_logger.h"
 #include "mic_mag_compensator/obeserver/mic_state_evaluator.h"
+#include "GeoMag/Core.hpp"
+
+using namespace geomag;
+using namespace std;
 
 namespace mic
 {
 
     // static mic_mag_compensator_shared_ptr _mic_compensator = nullptr;
-    static std::shared_ptr<mic_ellipsoid_mag_compensator_t> _mic_compensator = nullptr;
+    static std::shared_ptr<mic_ellipsoid_nav_mag_compensator_t> _mic_compensator = nullptr;
 
     static std::shared_ptr<mic_state_logger_t> _mic_logger = nullptr;
     static std::shared_ptr<mic_state_evaluator_t> _mic_evaluator = nullptr;
@@ -84,7 +88,7 @@ namespace mic
             return ret_t::MIC_RET_FAILED;
         }
         */
-        _mic_compensator = std::make_shared<mic_ellipsoid_mag_compensator_t>();
+        _mic_compensator = std::make_shared<mic_ellipsoid_nav_mag_compensator_t>();
 
         _mic_logger = std::make_shared<mic_state_logger_t>();
         _mic_compensator->subscrible(_mic_logger);
@@ -110,7 +114,7 @@ namespace mic
 
     ret_t mic_compensate(const double timestamp, mic_mag_t &out,
                          const mic_mag_t &mag,
-                         const mic_mag_t &mag_truth,
+                         const mic_mag_t &mag_ref,
                          const mic_nav_state_t &nav_state)
     {
         if (_mic_compensator == nullptr)
@@ -118,12 +122,18 @@ namespace mic
             MIC_LOG_ERR("[MIC] MIC worker is not initialized!");
             return ret_t::MIC_RET_FAILED;
         }
-        return _mic_compensator->compenste(timestamp, out, mag, mag_truth, nav_state);
+        // std::cout << "ts = " << timestamp << std::endl;
+        // std::cout << "mag = " << mag.vector.transpose() << std::endl;
+        // std::cout << "mag_ref = " << mag_ref.vector.transpose() << std::endl;
+        // std::cout << "nav_state = " << nav_state.time_stamp << "\t" << nav_state.position.transpose() << std::endl;
+        return _mic_compensator->compenste(timestamp, out, mag, mag_ref, nav_state);
     }
 
     // matrix_xf_t mic_get_cov() { return _mic_compensator->get_kf_cov(); }
 
-    ret_t mic_pry2navstate(MicNavState nav_state, float64_t pitch, float64_t roll, float64_t yaw)
+    ret_t mic_pry2navstate(float64_t ts, mic_nav_state_t &nav_state, mic_mag_t &mag_ref,
+                           float64_t pitch, float64_t roll, float64_t yaw,
+                           float64_t lat, float64_t lon, float64_t alt)
     {
         matrix_3f_t rotation2NED = matrix_3f_t::Identity();
         std::string nav_frame = MIC_CONFIG_GET(std::string, "navigation_frame");
@@ -134,11 +144,26 @@ namespace mic
                 1, 0, 0,
                 0, 0, -1;
         }
-        nav_state.attitude = quaternionf_t(rotation2NED *
-                                           MicUtils::euler2dcm(
-                                               MicUtils::deg2rad(roll),
-                                               MicUtils::deg2rad(pitch),
-                                               MicUtils::deg2rad(yaw), euler_seq));
+        nav_state.time_stamp = ts;
+        nav_state.attitude = quaternionf_t(rotation2NED * MicUtils::euler2dcm(roll, pitch, yaw, euler_seq));
+
+        // cout << endl
+        //      << "rpy: " << roll << " " << pitch << " " << yaw << endl;
+        // matrix_3f_t R_nb = rotation2NED * MicUtils::euler2dcm(roll, pitch, yaw, euler_seq);
+        // cout << endl
+        //      << "R_nb: " << endl
+        //      << R_nb << endl;
+
+        DateTime date("2024-12-31T00:00:00.000");
+        auto gmag = GeoMagFlux{MagFluxUnit::NanoTesla};
+        auto position = Wgs84{date, Radian{lon}, Radian{lat}, alt};
+        auto bf = gmag(position);
+        auto b = MagFluxComponent{bf};
+
+        mag_ref.time_stamp = ts;
+        mag_ref.vector << b.north, b.east, b.down;
+        mag_ref.value = b.total;
+
         return ret_t::MIC_RET_SUCCESSED;
     }
 

@@ -335,7 +335,7 @@ inline Ecef Eci::toEcef() const {
 	return Ecef(m_epoch, Eigen::Vector3d{x, y, z});
 }
 
-GeocentricSpherical Eci::toGeocentricSpherical() const {
+inline GeocentricSpherical Eci::toGeocentricSpherical() const {
 	return toEcef().toGeocentricSpherical();
 }
 
